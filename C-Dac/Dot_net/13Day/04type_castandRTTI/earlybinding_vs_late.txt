@@ -1,0 +1,7 @@
+
+Difference between early and late binding:
+1. Early binding can flag errors at compile time. With late binding there is a risk of run time exceptions.
+
+2. Early binding is much better for performance and should always be preferred over late binding.
+
+ Use late binding only when working with onjects that are not available at compile time.

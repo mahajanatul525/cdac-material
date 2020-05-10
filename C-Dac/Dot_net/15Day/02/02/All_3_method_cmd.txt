@@ -1,0 +1,27 @@
+
+
+SqlConnection connection = new SqlConnection("data source=.; database=Sample; integrated security=SSPI");
+-------------------------------------------------------
+above statement can be written asfollows in 3 line also
+----------------------------------------------------------------
+
+String cs="data source=.; database=Sample; integrated security=SSPI";
+SqlConnection connection = new SqlConnection();
+connection.ConnectionString=cs;
+
+
+
+
+
+
+
+
+
+
+SqlCommand cmd=new SqlComand("select * from tblproduct",con);
+-------------------------------------------------------
+above statement can be written asfollows in 3 line also
+----------------------------------------------------------------
+SqlCommand cmd=new SqlComand();
+cmd.CommandText="select * from tblproduct";
+cmd.Connection=con;

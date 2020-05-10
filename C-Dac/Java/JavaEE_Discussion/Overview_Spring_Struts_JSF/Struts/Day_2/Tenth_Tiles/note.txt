@@ -1,0 +1,1 @@
+"tiles.xml" has to be stored inside "WEB-INF" folder.

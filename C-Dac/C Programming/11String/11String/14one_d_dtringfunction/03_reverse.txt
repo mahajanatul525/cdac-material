@@ -1,0 +1,25 @@
+/*reverse string and put it into another string
+*/
+#include<stdio.h>
+void rev(char [],char []);
+void main()
+{ 
+ char name[20],revstr[20];
+    printf("enter a string");
+    gets(name);
+    rev(name,revstr);
+    printf("\nrev string %s",revstr);
+}
+void rev(char name[],char revstr[])
+{ int j,i,k;
+	for(i=0;name[i]!='\0';i++);
+
+	for(k=0,j=i-1;j>=0;j--,k++)
+              revsre[k]=name[j] ;
+     	
+}
+
+
+
+
+

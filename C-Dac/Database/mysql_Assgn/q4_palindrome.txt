@@ -1,0 +1,24 @@
+
+4.A palindrome is a word that is spelled the same forward and backward, such as level, radar, etc. Write a program to read in five letter words from the user and determine whether they are palindromes. Display the above results on the screen.
+
+
+CREATE FUNCTION `palindrome`(str varchar(100)) RETURNS varchar(100)
+ BEGIN
+
+declare str2 varchar(100);
+
+set str2:=reverse(str);
+
+
+if str=str2
+then
+
+RETURN ' is palindrome';
+
+else
+
+return 'is not palindrome';
+
+end if;
+
+END

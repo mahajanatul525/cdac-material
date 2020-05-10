@@ -1,0 +1,15 @@
+SortedDictionary is using binary search tree to store key/value pair, so for query, SortedDictionary is faster.
+
+No indexed retrieval
+
+
+SortedDictionary keeps its keys always sorted. 
+
+It allows you to avoid sorting the keys on your own. 
+
+Its lookup performance is slower than Dictionary. 
+
+It has advantages if you require a sorted lookup table in memory.
+
+No duplicate key allowed
+ A key cannot be null, but a value can be

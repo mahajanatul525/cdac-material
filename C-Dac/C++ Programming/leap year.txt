@@ -1,0 +1,269 @@
+//LEAP year
+#include<stdio.h>
+#include<conio.h>
+int main()
+{ 
+  int year;
+  printf("enter the year");
+   scanf("%d",&year);
+     if(year%100==0)
+	 {
+		 if(year%400==0)
+			 printf("%d is leap year",year);
+		 else printf("%d is not leap year",year);
+	 }
+	 else if(year%4==0)
+		 printf("%d is leap year",year);
+	 else printf("%d is not leap year",year);
+  getche();
+
+	return 0;
+}
+
+
+//Reverse character
+#include<stdio.h>
+#include<conio.h>
+int main()
+{  char i;
+  printf("enter the character");
+  scanf("%c",&i);
+  if(i>=65&&i<=90)
+  {i=i+32;
+   printf("%c is the reverse case character",i);
+  }
+  else if(i>=97&&i<=122)
+  {
+	  i=i-32;
+   printf("%c is the reverse case character",i);
+  }
+  else
+	  printf("enter the valid char");
+  getche();
+	return 0;
+}
+
+//VOWEL
+#include<stdio.h>
+#include<conio.h>
+int main()
+{  char i;
+  printf("enter the character");
+  scanf("%c",&i);
+  if((i>=65&&i<=90) || (i>=97&&i<=122))
+  {
+	  if(i=='a'||i=='e'||i=='i'||i=='o'||i=='u'||i=='A'||i=='E'||i=='I'||i=='O'||i=='U')
+		  printf("%c is vowel",i);
+	  else printf("%c is not vowel",i);
+  }
+  else printf("Enter valid character");
+
+  getche();
+	return 0;
+}
+
+
+//electricity bill
+ #include<stdio.h>
+#include<conio.h>
+int main()
+{ int i;
+  float p;
+  printf("enter the units");
+  scanf("%d",&i);
+  if(i>=0&&i<=200)
+  {
+	  p=i*0.50f;
+      printf("your electricty bill is %f",p);
+  }
+  else if(i>=201&&i<=400)
+  {
+	  p=i*0.65f+100;
+      printf("your electricty bill is %f",p);
+  }
+  else if(i>=401&&i<=600)
+  {
+	  p=i*0.80f+230;
+      printf("your electricty bill is %f",p);
+  }
+  else if(i>=601)
+  {
+	  p=i+390;
+      printf("your electricty bill is %f",p);
+  }
+
+
+  getche();
+	return 0;
+}
+
+
+//TAX
+#include<stdio.h>
+#include<conio.h>
+int main()
+{ 
+	int i;
+	float sal,r,tax;
+	char s;
+	printf("Enter your gender(m/f):");
+	scanf("%c",&s);
+	printf("Enter your salary:");
+	scanf("%f",&sal);
+	if(s=='m')
+	{
+		if(sal>8000)
+		{
+			tax=(float)sal*0.05f;
+			sal=sal-tax;
+		}
+		else {
+			tax=(float)sal*0.02f;
+			sal=sal-tax;
+		}
+		printf("Net salary of Male=%f",sal);
+	}
+	else if(s=='f')
+	{
+		if(sal>5000)
+		{
+			tax=(float)sal*0.03f;
+			sal=sal-tax;
+		}
+		else {
+			tax=(float)sal*0.01f;
+			sal=sal-tax;
+		}
+		printf("Net salary of Female=%f",sal);
+	}
+
+	getche();
+	return 0;
+}
+
+//Simple interest
+#include<stdio.h>
+#include<conio.h>
+int main()
+{ 
+	int i;
+	float s,p,r,t;
+	printf("enter the principle amount,rate,and time(month)");
+	scanf("%f%f%f",&p,&r,&t);
+	s=(p*r*t/12)/100;
+	printf("simple interest of given data %f",s);
+	
+	getche();
+	return 0;
+}
+
+//Polygon
+#include<stdio.h>
+#include<conio.h>
+int main()
+{ 
+	int a,b,c,d;
+	printf("Enter the length of the four sides: ");
+	scanf("%d%d%d%d",&a,&b,&c,&d);
+	printf("Length of sides:%d,%d,%d,%d ",a,b,c,d);
+	if(a<b+c+d && b<a+c+d && c<a+b+d && d<a+b+c)
+		printf("\nPolygon status: 1");
+	else printf("\nPolygon status: 0");
+	if(a==b && b==c && c==d)
+		printf("\nSquare status: 1");
+	else printf("\nSquare status: 0");
+	getche();
+	return 0;
+}
+
+
+//right angle triangle
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{ 
+	int a,b,c,d;
+	printf("Enter the length of the three sides: ");
+	scanf("%d%d%d",&a,&b,&c);
+	printf("Length of sides:%d,%d,%d ",a,b,c);
+	if(a*a==b*b+c*c || b*b==c*c+a*a || c*c==a*a+b*b)
+		printf("/nthis triangle is right angle triangle");
+	else
+	{  printf("/nthis is not the right angle triangle");
+	}
+	getche();
+	return 0;
+}
+
+
+//ISO or EQUI
+#include<stdio.h>
+#include<conio.h>
+int main()
+{ 
+	int a,b,c,d;
+	printf("Enter the length of the three sides: ");
+	scanf("%d%d%d",&a,&b,&c);
+	if(a==b&&b==c&&c==a)
+		printf("this is equilateral triangle");
+	else if(a==b || b==c || c==a)
+		printf("this is isosceles triangle");
+	getche();
+	return 0;
+}
+
+
+//Valid triangle
+#include<stdio.h>
+#include<conio.h>
+int main()
+{ 
+	int a,b,c;
+	printf("Enter the length of the three sides of triangle: ");
+	scanf("%d%d%d",&a,&b,&c);
+	printf("Length of sides:%d,%d,%d ",a,b,c);
+	if(a<b+c && b<a+c && c<a+b)
+		printf("\nValid Triangel");
+	else printf("\nInvalid Triangel");
+	getche();
+	return 0;
+}
+
+
+//type of Triangle
+//Valid triangle
+#include<stdio.h>
+#include<conio.h>
+int main()
+{ 
+	int a,b,c,flag=0;
+	printf("Enter the length of the three sides of triangle: ");
+	scanf("%d%d%d",&a,&b,&c);
+	printf("Length of sides:%d,%d,%d ",a,b,c);
+	if(a<b+c && b<a+c && c<a+b)
+	{printf("\nValid Triangel");
+	if(a*a==b*b+c*c || b*b==c*c+a*a || c*c==a*a+b*b)
+	{
+		if(a==b||b==c||c==a)
+		{
+			printf("\nthis triangle is iscoscales right angle triangle");
+		}
+		else printf("\nthis triangle is right angle triangle");
+		flag=1;
+	}
+	else if(a==b&&b==c&&c==a)
+	{
+		 printf("\nthis triangle is equilateral triangle");
+		 flag=1;
+	}
+	}
+	else printf("\nInvalid Triangel");
+	if(flag==0)
+		printf("\nnotspecial triangle");
+	getche();
+	return 0;
+}
+
+
+//

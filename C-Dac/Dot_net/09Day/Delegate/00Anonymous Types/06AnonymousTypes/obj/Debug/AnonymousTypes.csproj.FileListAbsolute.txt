@@ -1,0 +1,5 @@
+D:\dot_net\Day_wise\day4\Delegate\00Anonymous Types\06AnonymousTypes\bin\Debug\AnonymousTypes.exe
+D:\dot_net\Day_wise\day4\Delegate\00Anonymous Types\06AnonymousTypes\bin\Debug\AnonymousTypes.pdb
+D:\dot_net\Day_wise\day4\Delegate\00Anonymous Types\06AnonymousTypes\obj\Debug\AnonymousTypes.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day4\Delegate\00Anonymous Types\06AnonymousTypes\obj\Debug\AnonymousTypes.exe
+D:\dot_net\Day_wise\day4\Delegate\00Anonymous Types\06AnonymousTypes\obj\Debug\AnonymousTypes.pdb

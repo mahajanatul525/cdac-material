@@ -1,0 +1,84 @@
+Implement a circular queue in c++, to support "enque" and "deque" operation of a given size. Your program should support following commands as given below:
+enque N              // insert N in the Queue, if queue is full print the output as "FULL' 
+deque                 // Remove the first elements from the Queue and print the value if the Queue is empty print "EMPTY" 
+exit                     // exit the program 
+ assume the input will be always a positive integer.
+ 
+
+
+
+
+
+#include<iostream>
+#include<stdio.h>
+#include<string.h>
+
+using namespace std;
+
+int N;
+
+class CQ{
+
+        private:
+                int arr[100];
+                int first;
+                int last;
+                int size;
+        public:
+                CQ(int n) {
+                        size = n;
+                        first = last = 0;
+                }
+
+                void enque(int n) {
+                        if( !isFull() ) {
+                                arr[last % size] = n;
+                                last++;
+                        }
+                        else
+                        printf("FULL\n");
+                }
+                int deque() {
+                        if( !isEmpty() ) {
+                                int a = arr[first % size];
+                                first++;
+                                printf("%d\n",a);
+                                return a;
+                        }
+                        printf("EMPTY\n");
+                        return -1;
+                }
+                int isEmpty() {
+                        if(last == first)
+                                return 1;
+                        return 0;
+                }
+                int isFull() {
+                        if(((last + 1)  % (size + 1))   == first)
+                                return 1;
+                        return 0;
+                }
+};
+
+int main() {
+        char* str;
+        int number,flag = 1;
+        scanf("%d",&N);       
+        CQ cq(N);
+       
+        while(flag != 0) {
+                scanf("%s",str);
+                if(strcmp(str,"enque") == 0) {
+                scanf("%d",&number);
+                cq.enque(number);
+                }
+            else if(strcmp(str,"deque") == 0){
+            cq.deque();
+            }
+            else {
+            flag = 0;
+            }
+        }
+
+return 0;
+}

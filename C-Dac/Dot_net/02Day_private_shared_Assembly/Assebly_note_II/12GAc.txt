@@ -1,0 +1,9 @@
+ Global Assembly Cache (GAC)
+
+Each computer on which the Common Language Runtime is installed has a machine-wide code cache called the 'Global Assembly Cache'. The Global Assembly Cache (GAC) enables you to share assemblies across numerous applications.
+
+The GAC is automatically installed with the .NET runtime. The global assembly cache is located in 'Windows/WinNT' directory and inherits the directory's access control list that administrators have used to protect the folder.
+
+The approach of having a specially controlled central repository addresses the shared library concept and helps to avoid pitfalls of other solutions that lead to drawbacks like DLL hell.
+
+The Global Assembly Cache Tool (Gacutil.exe), that allows you to view and manipulate the contents of the Global Assembly Cache.

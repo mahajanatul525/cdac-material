@@ -1,0 +1,1 @@
+RDD is a different web project in which "MyServ" servlet is created.

@@ -1,0 +1,6 @@
+Introduction to JSF
+		JSF architecture
+		Life cycle
+		First Application of JSF
+		Introduce basic JSF Tags
+		Various Navigation methods

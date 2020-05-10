@@ -1,0 +1,11 @@
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 10\GenericDelegate\obj\Debug\ResolveAssemblyReference.cache
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 10\GenericDelegate\bin\Debug\GenericDelegate.exe
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 10\GenericDelegate\bin\Debug\GenericDelegate.pdb
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 10\GenericDelegate\obj\Debug\GenericDelegate.exe
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 10\GenericDelegate\obj\Debug\GenericDelegate.pdb
+D:\dot_net\Day_wise\Code\Chapter 10\GenericDelegate\obj\Debug\GenericDelegate.exe
+D:\dot_net\Day_wise\Code\Chapter 10\GenericDelegate\obj\Debug\GenericDelegate.pdb
+D:\dot_net\Day_wise\day6\03generic_deligates\02GenericDelegate\obj\Debug\GenericDelegate.exe
+D:\dot_net\Day_wise\day6\03generic_deligates\02GenericDelegate\obj\Debug\GenericDelegate.pdb
+C:\Users\practice\Desktop\Dot_net\day6\03generic_deligates\02GenericDelegate\obj\Debug\GenericDelegate.exe
+C:\Users\practice\Desktop\Dot_net\day6\03generic_deligates\02GenericDelegate\obj\Debug\GenericDelegate.pdb

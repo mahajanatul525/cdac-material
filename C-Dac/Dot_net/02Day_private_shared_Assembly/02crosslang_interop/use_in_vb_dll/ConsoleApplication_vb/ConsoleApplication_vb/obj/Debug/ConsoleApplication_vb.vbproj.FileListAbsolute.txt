@@ -1,0 +1,32 @@
+D:\dot_net\Day_wise\day0 corosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\bin\Debug\ConsoleApplication_vb.exe.config
+D:\dot_net\Day_wise\day0 corosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.vbprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day0 corosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.Resources.resources
+D:\dot_net\Day_wise\day0 corosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.vbproj.GenerateResource.Cache
+D:\dot_net\Day_wise\day0 corosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\bin\Debug\ConsoleApplication_vb.exe
+D:\dot_net\Day_wise\day0 corosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\bin\Debug\ConsoleApplication_vb.pdb
+D:\dot_net\Day_wise\day0 corosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\bin\Debug\ConsoleApplication_vb.xml
+D:\dot_net\Day_wise\day0 corosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\bin\Debug\sumlib.dll
+D:\dot_net\Day_wise\day0 corosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\bin\Debug\sumlib.pdb
+D:\dot_net\Day_wise\day0 corosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.exe
+D:\dot_net\Day_wise\day0 corosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.xml
+D:\dot_net\Day_wise\day0 corosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.pdb
+D:\dot_net\Day_wise\day0 crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\bin\Debug\ConsoleApplication_vb.exe.config
+D:\dot_net\Day_wise\day0 crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.exe
+D:\dot_net\Day_wise\day0 crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.xml
+D:\dot_net\Day_wise\day0 crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.pdb
+D:\dot_net\Day_wise\day1\00Framework\02crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\bin\Debug\ConsoleApplication_vb.exe.config
+D:\dot_net\Day_wise\day1\00Framework\02crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.exe
+D:\dot_net\Day_wise\day1\00Framework\02crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.xml
+D:\dot_net\Day_wise\day1\00Framework\02crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.pdb
+C:\Users\practice\Desktop\Dot_net\day1\00Framework\02crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\bin\Debug\ConsoleApplication_vb.exe.config
+C:\Users\practice\Desktop\Dot_net\day1\00Framework\02crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.exe
+C:\Users\practice\Desktop\Dot_net\day1\00Framework\02crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.xml
+C:\Users\practice\Desktop\Dot_net\day1\00Framework\02crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.pdb
+C:\Users\practice\Desktop\Dot_net\day1\00Framework\02crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\bin\Debug\ConsoleApplication_vb.exe
+C:\Users\practice\Desktop\Dot_net\day1\00Framework\02crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\bin\Debug\ConsoleApplication_vb.pdb
+C:\Users\practice\Desktop\Dot_net\day1\00Framework\02crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\bin\Debug\ConsoleApplication_vb.xml
+C:\Users\practice\Desktop\Dot_net\day1\00Framework\02crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\bin\Debug\sumlib.dll
+C:\Users\practice\Desktop\Dot_net\day1\00Framework\02crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\bin\Debug\sumlib.pdb
+C:\Users\practice\Desktop\Dot_net\day1\00Framework\02crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.vbprojResolveAssemblyReference.cache
+C:\Users\practice\Desktop\Dot_net\day1\00Framework\02crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.Resources.resources
+C:\Users\practice\Desktop\Dot_net\day1\00Framework\02crosslang_interop\use_in_vb_dll\ConsoleApplication_vb\ConsoleApplication_vb\obj\Debug\ConsoleApplication_vb.vbproj.GenerateResource.Cache

@@ -1,0 +1,16 @@
+<html>
+<?php
+    $ice_cream[0] = "Orange";
+    $ice_cream[1] = "vanilla";
+    $ice_cream[2] = "rum raisin";
+    $ice_cream[3] = "oum oasin";
+
+    print_r($ice_cream);
+    echo "<hr/>";
+    natcasesort($ice_cream);
+
+    print_r($ice_cream);
+?>
+<p> it will modify the original array case in sensitive</p>
+
+</html>

@@ -1,0 +1,18 @@
+package day4;
+
+class Calculator
+{ 
+
+	double doub(int k)throws MyException
+	{ 
+		if(k<=0)
+		{	
+			throw new MyException
+
+("zero or negative not allowed");
+		}
+		double cal=(double)k;
+		return cal;
+		
+	}	
+}

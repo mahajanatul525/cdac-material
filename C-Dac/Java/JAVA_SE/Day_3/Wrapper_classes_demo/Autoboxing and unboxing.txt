@@ -1,0 +1,41 @@
+Before JDK1.5
+
+	converting primitive to Wrapper
+
+
+	int num=10;
+
+	Integer ob=new Integer(num);
+
+
+JDK1.5 onwards
+
+	
+	int num=10;
+	Integer ob=num; // Autoboxing
+
+i.e. Autoboxing means assigning primitive to wrapper
+
+
+
+Before JDK1.5
+
+	converting Wrapper to primitive 
+
+
+	int num=10;
+
+	Integer ob=new Integer(num);
+
+	int temp=ob.intValue();
+
+
+JDK1.5 onwards
+
+
+	int num=10;
+	Integer ob=num; // Autoboxing
+	int temp=ob; // unboxing
+
+i.e. unboxing means assigning wrapper to primitive
+

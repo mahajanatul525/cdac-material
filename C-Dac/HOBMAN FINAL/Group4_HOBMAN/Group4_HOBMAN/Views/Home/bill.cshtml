@@ -1,0 +1,200 @@
+﻿@model Hobman.bill_details
+@using System.Collections
+
+@{
+    ViewBag.Title = "bill";
+}
+
+
+
+<script>
+    $(function () {
+            $.ajax({
+                type: "get",
+                contentType: "application/json; charset=utf-8",
+                url: "@Url.Action("bill","Home")",
+                datatype: "JSON",
+                data: { booking_id: $('#booking_id').val() },
+                success: function (data) {
+                    $.each(data, function (index, value) {                      
+                        $('.customer_id').val(value.customer_id);
+                        $('.check_in_date').val(value.check_in_date);
+                        $('.check_out_date').val(value.check_out_date);
+                        $('.no_of_rooms').val(value.no_of_rooms);
+                        $('.hotel_id').val(value.hotel_id);
+                    });
+                },
+
+                error: function ajaxError(response) {
+                    alert(response.status + ' ' + response.statusText);
+                }
+            });
+
+        });
+    
+
+    
+    $(function () {
+        $("#check_in_date,#check_out_date,#bill_date").datepicker({ dateFormat: 'yy-mm-dd' });
+    } );
+ 
+    </script>
+
+<div class="col-lg-12">
+                <h1 class="head headstyle"> Welcome to Imperial Hotels.. </h1>
+            </div>
+            <div class="col-md-2">
+                <div class="panel panel-default">
+                   
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading panalhead">
+                        <h4><i class="fa fa-fw fa-gift"></i>Bill</h4>
+                    </div>
+                    <div class="panel-body">
+                                                           
+@using (Html.BeginForm("bill","Home", new { id = "form"}))
+{
+    @Html.ValidationSummary(true)
+    
+       <div>
+            <div class="form-group">  
+                <div class="row">       
+                    <div class="editor-label col-xs-4">
+                      @Html.LabelFor(u => u.booking_id,"Booking ID")
+                    </div> 
+                    <div class="editor-field col-xs-4">
+                     @Html.TextBoxFor(u => u.booking_id,new{@class="form-control booking_id"})
+                     @Html.ValidationMessageFor(u => u.booking_id)
+                    </div>
+                </div>
+           </div>
+
+
+            <div class="form-group">  
+                <div class="row">       
+                    <div class="editor-label col-xs-4">
+                      @Html.LabelFor(u => u.bill_date,"Bill Date")
+                    </div> 
+                    <div class="editor-field col-xs-4">
+                     @Html.TextBoxFor(u => u.bill_date,new{@class="form-control"})
+                     @Html.ValidationMessageFor(u => u.bill_date)
+                    </div>
+                </div>
+           </div>
+
+
+            <div class="form-group">  
+                <div class="row">       
+                    <div class="editor-label col-xs-4">
+                      @Html.LabelFor(u => u.hotel_id,"Hotel ID")
+                    </div> 
+                    <div class="editor-field col-xs-4">
+                     @Html.TextBoxFor(u => u.hotel_id,new{@class="form-control hotel_id"})
+                     @Html.ValidationMessageFor(u => u.hotel_id)
+                    </div>
+                </div>
+           </div>
+
+
+           <div class="form-group">  
+                <div class="row">       
+                    <div class="editor-label col-xs-4">
+                      @Html.LabelFor(u => u.customer_id,"Customer ID")
+                    </div> 
+                    <div class="editor-field col-xs-4">
+                     @Html.TextBoxFor(u => u.customer_id,new{ @class="form-control customer_id" })
+                     @Html.ValidationMessageFor(u => u.customer_id)
+                    </div>
+                </div>
+           </div>
+
+           <div class="form-group">  
+                <div class="row">       
+                    <div class="editor-label col-xs-4">
+                      @Html.LabelFor(u => u.check_in_date,"Check-in-date")
+                    </div> 
+                    <div class="editor-field col-xs-4">
+                     @Html.TextBoxFor(u => u.check_in_date,new{@class="form-control check_in_date" })
+                     @Html.ValidationMessageFor(u => u.check_in_date)
+                    </div>
+                </div>
+           </div>
+
+     <div class="form-group">  
+                <div class="row">       
+                    <div class="editor-label col-xs-4">
+                      @Html.LabelFor(u => u.check_out_date,"Check-out-date")
+                    </div> 
+                    <div class="editor-field col-xs-4">
+                     @Html.TextBoxFor(u => u.check_out_date,new{@class="form-control check_out_date"})
+                     @Html.ValidationMessageFor(u => u.check_out_date)
+                    </div>
+                </div>
+           </div>
+
+            <div class="form-group">  
+                <div class="row">       
+                    <div class="editor-label col-xs-4">
+                      @Html.LabelFor(u => u.no_of_rooms,"No of Rooms")
+                    </div> 
+                    <div class="editor-field col-xs-4">
+                     @Html.TextBoxFor(u => u.no_of_rooms,new{@class="form-control no_of_rooms" })
+                     @Html.ValidationMessageFor(u => u.no_of_rooms)
+                    </div>
+                </div>
+           </div>
+
+           <div class="form-group">  
+                <div class="row">       
+                    <div class="editor-label col-xs-4">
+                      @Html.LabelFor(u => u.rate,"Rate")
+                    </div> 
+                    <div class="editor-field col-xs-4">
+                     @Html.TextBoxFor(u => u.rate,new{ @class="form-control rate"})
+                     @Html.ValidationMessageFor(u => u.rate)
+                    </div>
+                </div>
+           </div>
+
+           <div class="form-group">  
+                <div class="row">       
+                    <div class="editor-label col-xs-4">
+                      @Html.LabelFor(u => u.tax,"Tax")
+                    </div> 
+                    <div class="editor-field col-xs-4">
+                     @Html.TextBoxFor(u => u.tax,new{@class="form-control"})
+                     @Html.ValidationMessageFor(u => u.tax)
+                    </div>
+                </div>
+           </div>
+            
+              <div class="form-group">  
+                <div class="row">       
+                    <div class="editor-label col-xs-4">
+                      @Html.LabelFor(u => u.total_amount,"Total Amount")
+                    </div> 
+                    <div class="editor-field col-xs-4">
+                     @Html.TextBoxFor(u => u.total_amount,new{@class="form-control"})
+                     @Html.ValidationMessageFor(u => u.total_amount)
+                    </div>
+                </div>
+           </div>
+   
+     
+     
+           <input type="submit" name="Submit" id="button" class="btn btn-default btn-xl button" value="Generate" />
+    </div>
+}
+
+
+                         </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="panel panel-default">
+                    
+                </div>
+            </div>

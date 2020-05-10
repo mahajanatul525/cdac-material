@@ -1,0 +1,534 @@
+1)11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+class base
+{
+	public:
+		base(char *ptr)
+		{
+		}
+};
+class sub:public base
+{
+};
+
+Following statements should be possible
+
+sub s;
+
+sub *s1=new sub(40);
+
+sub *s2=new sub('a',4.5);
+
+ans:
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class base
+{
+	char *s;
+	public:
+		base(char *ptr)
+		{
+			s=ptr;
+		}
+		void disp1()
+		{
+			cout<<s<<endl;
+		}
+};
+class sub:base
+{
+	int num;
+	char c;
+	double d;
+public:sub():base("asd")
+	{
+		num=0;
+	}
+	sub(int n):base("bcd")
+	{
+		num=n;
+	}
+	sub(char a,double s):base("vbnvh")
+	{
+		c=a;
+		d=s;
+	}
+	void disp()
+	{
+		disp1();
+		cout<<num<<endl<<c<<endl<<d<<endl;
+	}
+		
+};
+int main()
+{
+	sub s;
+	s.disp();
+sub *s1=new sub(40);
+s1->disp();
+sub *s2=new sub('a',4.5);
+s2->disp();
+delete s1;
+delete s2;
+getch();
+}
+
+
+
+2)2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+class base1
+{
+	int num1;
+};
+class base2
+{
+	int num2;
+};
+class sub:public base1,base2
+{
+	int num3;
+};
+
+above classes are incomplete.
+You should be able to do following
+
+sub *s=new sub; (num1,num2 and num3 should be 0)
+
+sub s1(10,20,30); (num1,num2 and num3 should be 10,20 and 30 respectively)
+
+sub *s2=new sub(50,60); (num1,num2 and num3 should be 50,60 and 70 respectively)
+
+ans:
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class base1
+{
+	int num1;
+
+public:
+	base1()
+	{
+		 num1=0;
+	}
+	base1(int a)
+	{
+		num1=a;
+	}
+	void disp()
+	{
+		cout<<num1<<endl;
+	}
+};
+class base2
+{
+	int num2;
+	public:
+	base2()
+	{
+		 num2=0;
+	}
+	base2(int a)
+	{
+		 num2=a;
+	}
+	void disp1()
+	{
+		
+		cout<<num2<<endl;
+	}
+};
+class sub:public base1,base2
+{
+	int num3;
+	public:
+	sub()
+	{
+		 num3=0;
+	}
+	sub(int a,int b,int c):base1(a),base2(b)
+	{
+		 num3=c;
+	}
+	sub(int a,int b):base1(a),base2(b)
+	{
+		 num3=70;
+	}
+	void disp2()
+	{
+		disp();
+		disp1();
+		cout<<num3<<endl;
+	}
+};
+
+int main()
+{
+	sub *s=new sub; //(num1,num2 and num3 should be 0)
+	s->disp2();
+sub s1(10,20,30); //(num1,num2 and num3 should be 10,20 and 30 respectively)
+s1.disp2();
+sub *s2=new sub(50,60); //(num1,num2 and num3 should be 50,60 and 70 respectively)
+s2->disp2();
+getch();
+}
+
+
+
+
+
+3) 33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
+class parent
+{
+	public:
+		disp1()
+		disp2()
+		disp3()
+		disp4()
+};
+class sub:private parent
+{
+	public:
+		disp5()
+};
+
+make sure u can do the following
+
+sub s(30);
+s.disp5();
+s.disp3();
+s.disp1();
+
+
+ans:
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class parent
+{
+	public:
+	
+		
+		void disp1()
+		{
+			cout<<"kaka"<<endl;
+		}
+	void disp2()
+		{cout<<"hie"<<endl;}
+		void disp3()
+		{
+			cout<<"bai"<<endl;
+		}
+		void disp4()
+		{
+			cout<<"tai"<<endl;
+		}
+};
+class sub:parent
+{
+	public:
+		sub(int n)
+		{
+			cout<<"sub param const"<<n<<endl;
+		}
+		
+		
+		parent::disp3;
+		parent::disp1;
+
+		void disp5()
+		{
+			cout<<"hello"<<endl;
+		}
+};
+int main()
+{
+	//make sure u can do the following
+
+sub s(30);
+s.disp5();
+s.disp3();
+s.disp1();
+
+getch();
+}
+4) 44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
+class course
+{
+	//here
+};
+class DacCourse:public course
+{
+	// here
+};
+
+you should be able to say following
+
+course *c=new course;
+c->fees(); // course version should be called
+c=new DacCourse;
+c->fees();  // DacCourse version should be called
+
+anss...
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class course
+{
+	
+public:
+	 virtual void fees()
+	{cout<<"course fees"<<endl;
+	}
+};
+class DacCourse:public course
+{
+public:
+
+	void fees()
+	{cout<<"dac fees"<<endl;
+	}
+};
+
+//you should be able to say following
+int main()
+{
+course *c=new course;
+c->fees(); // course version should be called
+c=new DacCourse;
+c->fees();  // DacCourse version should be called
+getch();
+}
+
+
+5) 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+Create a base class FourWheeler. Declare pure virtual function “void start()” in it. 			
+Define following sub classes for this class. 
+A) Qualis b) Sumo c) Volvo 					
+Define “start” function in these classes.			In main function , create array of pointer to FourWheeler which will contain objects of these three sub classes. 
+Now traverse the array and call all the child class methods.
+
+ans....
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class fourwheeler
+
+{public:
+	virtual void start()=0;
+
+};
+class qualis:public fourwheeler
+	
+{
+public:
+
+	void start()
+	{cout<<"qualisssssssssssssss"<<endl;
+	}
+};
+class sumo: public fourwheeler
+	
+{
+public:
+
+	void start()
+	{cout<<"sumoooooo"<<endl;
+	}
+};class volvo :public fourwheeler
+	
+{
+public:
+
+	void start()
+	{cout<<"volvooooooo"<<endl;
+	}
+};
+//you should be able to say following
+int main()
+{
+	fourwheeler *f[3]={new qualis,new sumo,new volvo};
+	for(int i=0;i<3;i++)
+	f[i]->start();
+
+getch();
+}
+
+6)66666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+Define a class “MyNum” having a member variable “int num” and “void disp()”;	
+	From main function, perform following				
+	a) MyNum m1(20);						b) m1=100; //Do not use Constructor for this purpose			
+	c) int k;						
+	d) k=m1;							
+	e) cout<<endl<<k<<endl;
+
+ans...............
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class mynum
+{
+	private:
+	int num;
+public:
+void disp()
+{
+	cout<<num<<endl;
+}
+mynum(int k)
+{
+	num=k;
+}
+	void operator=(int k)
+	{		
+			 num= k;
+		 
+	}
+	 operator int()
+	 {
+       return num;
+	 }
+		
+};
+
+	
+
+
+//you should be able to say following
+int main()
+{
+	 mynum m1(20);
+
+	 m1.disp();
+	 m1=100;
+	 m1.disp();
+	 int k;						
+	 k=m1;							
+cout<<endl<<k<<endl;
+ getch();
+	return 0;
+
+
+}
+77777777777777777777777777777777777777777777777777777777777777777777777777777
+
+7) create a base1 and base2 classes in the library.
+constructors, member variables and functions you can have in the above classes of your choice.
+
+now create an application where you have to create a child class of above classes.
+in the main function create an instance of child class and try to access methods of base1 and base2.
+
+8)
+Create a base class “Subject”.Declare pure virtual function “void maxmarks()” in it.  Define following sub classes for this class. A) Maths b) History c) English.	Define “maxmarks” in these classes.
+
+now write a global function "show" which will accept "subject class pointer" as an argument. this function should be able to call "maxmarks()" of any child class which is passed.
+From main function try to call this function by passing various child classes.
+88888888888888888888888888888888888888888888888888888
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+class subject
+{ int num;
+public:
+	virtual void maxmarks()=0;
+};
+
+class maths:public subject
+{
+public:
+	void maxmarks()
+	{
+		cout<<endl<<"In Maths"<<endl;
+	}
+};
+class english:public subject
+{
+public:
+void maxmarks()
+	{
+		cout<<endl<<"In english"<<endl;
+	}
+};
+class history:public subject
+{
+public:
+void maxmarks()
+	{
+		cout<<endl<<"In history"<<endl;
+	}
+};
+void show(subject *s)
+{
+	s->maxmarks();
+}
+void main()
+{
+	show(new maths);
+	show(new english);
+	show(new history);
+}
+
+
+9) same as above except it has to be done using reference of parent class.
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+class subject
+{ int num;
+public:
+	virtual void maxmarks()=0;
+};
+
+class maths:public subject
+{
+public:
+	void maxmarks()
+	{
+		cout<<endl<<"In Maths"<<endl;
+	}
+};
+class english:public subject
+{
+public:
+void maxmarks()
+	{
+		cout<<endl<<"In english"<<endl;
+	}
+};
+class history:public subject
+{
+public:
+void maxmarks()
+	{
+		cout<<endl<<"In history"<<endl;
+	}
+};
+void show(subject &s)
+{
+	s.maxmarks();
+}
+void main()
+{
+	maths m;
+	show(m);
+	english e;
+	show(e);
+	history h;
+	show(h);
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+class base
+{
+	public:
+		 void disp()
+		{
+			cout<<"base disp"<<endl;
+		}
+};
+class sub:public base
+{
+	public:
+		void disp()
+		{
+			cout<<"sub disp"<<endl;
+		}
+};
+int main()
+{
+	base *b1,ob1;
+	sub s1;
+	b1=&ob1;
+	b1->disp();
+	b1=&s1;    // upcasting
+	b1->disp(); 
+}
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+class demo
+{ 	int v=38;
+void set()
+{ 
+	v=34;
+}
+
+void getprint()
+{
+	System.out.println(v);
+	
+}
+
+}
+
+public class demoOb
+{public static void main(String args[])
+	{
+		demo a=new demo();
+		a.getprint();
+		a.set();
+	new demo().getprint();//anonymous object
+		a.getprint();
+	}
+	
+	}
+	
+	

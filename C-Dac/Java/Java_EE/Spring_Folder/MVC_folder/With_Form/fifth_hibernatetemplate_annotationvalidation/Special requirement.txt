@@ -1,0 +1,33 @@
+for the annotation driven validation in spring
+
+following are the requirements
+
+inside spring bean configuration file
+
+xmlns:mvc="http://www.springframework.org/schema/mvc"
+
+xsi:schemaLocation http://www.springframework.org/schema/mvc
+	 http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd 
+
+<mvc:annotation-driven/>
+
+
+
+
+inside controller class
+
+@RequestMapping(method = RequestMethod.POST)
+	public String afterSubmit(@Valid @ModelAttribute("mystudent")Student student,BindingResult result)
+	{
+		if(result.hasFieldErrors())
+		{
+			return "stud";
+		}
+		sdao.add(student);
+		return "success";
+	}
+
+@ModelAttribute("mystudent")  is required with "@Valid" annotation.
+
+here "mystudent" should be same as "commandName" given inside "stud.jsp"
+

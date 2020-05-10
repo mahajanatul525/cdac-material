@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication29
+{
+    class mycar
+    {
+        public int Speed { set; get; }
+        public string PetName { set; get; }
+        public string Make { set; get; }
+        public string color { set; get; }
+
+        public static void returnspeed(List<mycar> mylist)
+        {
+            var speedgreter100 = from i in mylist where i.Speed > 100 select i;
+            foreach (mycar car in speedgreter100)
+            {
+                Console.WriteLine(car.PetName);
+            }
+        
+        }
+    }
+    class entrypoint
+    {
+        static void Main()
+        {
+            List<mycar> cars=new List<mycar>()
+            {
+                new mycar{Speed=50,PetName="alto",Make="maruti",color="red"},
+                new mycar{Speed=100,PetName="wagonR",Make="maruti",color="white"},
+                new mycar{Speed=150,PetName="ertica",Make="maruti",color="black"},
+                new mycar{Speed=50,PetName="A220",Make="BMW",color="maroon"},
+                new mycar{Speed=50,PetName="duster",Make="renold",color="red"},
+                new mycar{Speed=50,PetName="loggy",Make="reno",color="red"},
+                new mycar{Speed=50,PetName="indica",Make="tata",color="red"}
+            };
+            mycar.returnspeed(cars);
+
+            var speedonly = from i in cars select new { i.Speed };
+
+            foreach (var c in speedonly)
+            {
+                Console.WriteLine(c.);
+            }
+
+
+    
+         }
+    }
+
+}

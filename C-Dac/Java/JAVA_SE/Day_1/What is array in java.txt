@@ -1,0 +1,51 @@
+package core1;
+
+public class Demo 
+{
+	public static void main(String args[])
+	{
+		int arr1[]=new int[3];
+		System.out.println(arr1.length);
+		if(arr1 instanceof Object)
+		{
+			System.out.println("arr1 is derived from Object");
+		}		
+		System.out.println(arr1.getClass().getName());
+		
+		double arr2[]=new double[10];
+		System.out.println(arr2.length);
+		if(arr2 instanceof Object)
+		{
+			System.out.println("arr2 is derived from Object");
+		}
+		System.out.println(arr2.getClass().getName());
+		
+		Demo arr3[]=new Demo[4];
+		System.out.println(arr3.length);
+		if(arr3 instanceof Object)
+		{
+			System.out.println("arr3 is derived from Object");
+		}
+		System.out.println(arr3.getClass().getName());
+
+	}
+}	
+
+	
+
+
+output:
+
+3
+arr1 is derived from Object
+[I
+
+
+10
+arr2 is derived from Object
+[D
+
+
+4
+arr3 is derived from Object
+[Lcore1.Demo;

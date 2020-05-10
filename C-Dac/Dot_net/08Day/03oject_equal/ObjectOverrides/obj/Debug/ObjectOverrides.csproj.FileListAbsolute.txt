@@ -1,0 +1,14 @@
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 06\ObjectOverrides\obj\Debug\ResolveAssemblyReference.cache
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 06\ObjectOverrides\bin\Debug\ObjectOverrides.exe
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 06\ObjectOverrides\bin\Debug\ObjectOverrides.pdb
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 06\ObjectOverrides\obj\Debug\ObjectOverrides.exe
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 06\ObjectOverrides\obj\Debug\ObjectOverrides.pdb
+D:\Ketki_Data\dotnet\Day_wise\day1\object_equal\ObjectOverrides\obj\Debug\ObjectOverrides.exe
+D:\Ketki_Data\dotnet\Day_wise\day1\object_equal\ObjectOverrides\obj\Debug\ObjectOverrides.pdb
+D:\dot_net\Day_wise\day2\02Inheritance\03oject_equal\ObjectOverrides\obj\Debug\ObjectOverrides.exe
+D:\dot_net\Day_wise\day2\02Inheritance\03oject_equal\ObjectOverrides\obj\Debug\ObjectOverrides.pdb
+D:\dot_net\Day_wise\day2\02Inheritance\03oject_equal\ObjectOverrides\bin\Debug\ObjectOverrides.exe
+D:\dot_net\Day_wise\day2\02Inheritance\03oject_equal\ObjectOverrides\bin\Debug\ObjectOverrides.pdb
+D:\dot_net\Day_wise\day2\02Inheritance\03oject_equal\ObjectOverrides\obj\Debug\ObjectOverrides.csprojResolveAssemblyReference.cache
+C:\Users\practice\Desktop\Dot_net\day2\02Inheritance\03oject_equal\ObjectOverrides\obj\Debug\ObjectOverrides.exe
+C:\Users\practice\Desktop\Dot_net\day2\02Inheritance\03oject_equal\ObjectOverrides\obj\Debug\ObjectOverrides.pdb

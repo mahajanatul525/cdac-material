@@ -1,0 +1,16 @@
+drop procedure sp_returndname$$
+
+create procedure sp_returndname
+(v_eid int , out dname varchar(100) )
+begin
+set v_eid:=1;
+select deptname into dname
+from
+dept join emp on
+dept.deptid=emp.deptid
+where eid=v_eid;
+end 
+$$
+
+call sp_returndname(10,'ABC')
+

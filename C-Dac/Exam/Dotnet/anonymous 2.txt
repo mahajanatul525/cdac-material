@@ -1,0 +1,31 @@
+using System;
+using System.Collections;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace atul
+{
+    delegate void ADD(ref int a,ref int b );
+
+    class anodemo
+    {
+        
+       public  ADD add = delegate(ref int x,ref int y)
+        {
+
+            int ans = x + y;
+            Console.WriteLine("addtion is:== {0}", ans);
+            
+        };
+
+       public static void Main()
+       {
+           anodemo a = new anodemo();
+           int x = 10;
+           int y = 20;
+          a.add(ref x,ref y);
+       }
+        
+    }
+}

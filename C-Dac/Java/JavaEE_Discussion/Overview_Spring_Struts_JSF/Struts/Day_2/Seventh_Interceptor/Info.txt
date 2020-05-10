@@ -1,0 +1,7 @@
+in this example,we are using an interceptor.
+interceptor here is used to calculate the actual time taken by the application to complete the action.
+
+what additional things are required ?
+
+a) a class which is representing a particulare "interceptor"
+b) entry of "interceptor" in "struts.xml"

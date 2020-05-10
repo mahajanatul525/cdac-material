@@ -1,0 +1,29 @@
+<html><head><body>
+<span>
+<meter  min="20" value="20" max="100" id="percent">0%</meter>
+ggg</span>
+<input type="submit">
+<script>
+var reader;
+  var progress = document.getElementById('percent');
+  alert(progress)
+          function updateProgress() {
+    // evt is an ProgressEvent.
+    //if (evt.
+	//percentLoaded=Math.round(val/100*100);
+	a=a+10;
+	progress.value=a;
+	
+	if( a==100)
+	{alert("dd")
+	  clearInterval(x)
+	  }
+  }
+var x; 
+var a=20;
+function go(){
+x=setInterval("updateProgress()",1000)
+  }
+  go();
+  </script>
+</body>

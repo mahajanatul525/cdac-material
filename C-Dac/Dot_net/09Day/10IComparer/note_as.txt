@@ -1,0 +1,7 @@
+as operator is like a cast operation.
+if conversion not possible it will return null instead of raising exception
+
+as operator perform only
+ reference conversion
+nullable conversion
+boxing conversion

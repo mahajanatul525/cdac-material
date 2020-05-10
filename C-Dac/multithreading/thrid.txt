@@ -1,0 +1,23 @@
+package multithreading;
+
+public class th extends Thread
+{ 
+public synchronized void run()
+{
+
+for (int i=0;i<5;i++)
+{
+System.out.println("exec"+i+"\t"+Thread.currentThread());
+}
+}
+
+public static void main(String args[])
+{ 
+th t1=new th();
+th t2=new th();
+th t3=new th();
+t1.start();
+t2.start();
+t3.start();
+}
+}

@@ -1,0 +1,6 @@
+IsPostBack is a Page level property, that can be used to determine whether the page is being loaded in response to a client postback, or if it is being loaded and accessed for the first time. 
+
+In real time there are many situations where IsPostBack property is used. For example, consider the webform used to register employee details. A sample form that we will use for this example is shown below. The form has First Name, Last Name and City fields.  
+
+
+

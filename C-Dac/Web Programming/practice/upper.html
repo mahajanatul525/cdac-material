@@ -1,0 +1,25 @@
+<html>
+<head>
+<script>
+var c=0;
+function chk()
+{
+var d=document.getElementById("tx").value;
+if(d.charAt(0).match(/^[A-Z]/))
+c++;
+if(c==1)
+document.getElementById("div1").innerHTML="1st letter is capital";
+
+else
+document.getElementById("div1").innerHTML="Not a capital letter";
+
+}
+</script>
+<body>
+
+Address<textarea id="tx" rows=10 cols=30></textarea>
+<button onclick="chk()" >click</button>
+<div id="div1"></div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplicationthis
+{
+    class customer
+    {
+        public string FirstName, LastName, MiddleName;
+        public customer(string fnm):this(fnm,"","")
+        {       Console.WriteLine("1");
+        }
+        public customer(string fnm,string lnm):this(fnm,lnm,"")
+        {        Console.WriteLine("2");
+        }
+        public customer(string fnm, string lnm, string mnm)
+        {      if (fnm.Length >= 6)
+                throw new Exception(" ERRRR");
+            else
+            {    FirstName = fnm;
+                LastName = lnm;
+                MiddleName = mnm;
+            }
+        }
+        public void display()
+        { Console.WriteLine(FirstName + " " + LastName + " " + MiddleName); }
+    }
+    class Program
+    {      static void Main(string[] args)
+        {
+            customer obj1 = new customer("vita");
+            obj1.display();
+            customer obj2 = new customer("vidyasagar","Nidhi");
+            customer obj3 = new customer("Cdac","2016","Juhu");
+           obj2.display(); obj3.display();
+        }
+    }
+}

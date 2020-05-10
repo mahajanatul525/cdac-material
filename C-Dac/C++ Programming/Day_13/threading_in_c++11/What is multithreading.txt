@@ -1,0 +1,35 @@
+Multi-Threading
+
+		Multi-tasking
+
+performing more than one task simultaneously.
+
+a) process-based multi-tasking
+b) thread-based multi-tasking
+
+process - is a program in execution.
+
+thread - is one of the part of program in execution.
+
+process-based multitasking:- more than one processes are running simultaneously.  e.g.  word and excel applications are running simultaneously.
+
+thread-based multitasking :- more than one threads are running simultaneously. e.g. within a word application, you can start formatting as well as printing.
+
+whether process-based or thread-based, a cpu can handle only one task at a time, unless it is multiprocessor machine . It is just an impression given to the user. what actually cpu does is context switching , i.e. jump from one task to another and vice-versa.
+
+
+process-based vs thread-based
+
+a) threads can share the memory, processes can not
+b) context switching between threads is relatively cheaper as compare to that between processes.
+c) cost of communication bet'n threads is also low.
+
+( cheaper or cost is low  actually means less no. of system resources are used.)
+
+
+
+Applications of multi-threading:- 
+
+If we want to create a server that can serve as many concurrent connections from various clients. Here,the multithreaded server creates a new thread for each incoming connection, and creates a new socket with each new thread.
+
+Another area where we need multithreading is GUI application. The GUI runs in its own thread and additional processing takes place in other threads, and the application will have responsive GUIs even during intensive processing. In other words, we pass on the heavy-duty processing to separate secondary threads and leave the primary GUI thread free to respond to the user.

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-1.9.1.js">
+</script>
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+  a=$("#tt").val();
+  alert(a);
+    
+    $.get("choosem.php",{"nm":a},function(data,status){
+            alert("Data: " + data + "\nStatus: " + status);
+		if(status=="success"&&data!="")
+		 
+		$("#dd").html(data);
+		else  $("#dd").html("<b>err</b>")
+      
+	  
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<input id="tt" placeholder="enter geeta or vita"/>
+<button>Send an HTTP GET request to a page and get the result back</button>
+
+<div id="dd"></div>
+<h3>
+Syntax:
+
+$.get(URL,callback);
+The required URL parameter specifies the URL you wish to request.
+
+The optional callback parameter is the name of a function to be executed if the request succeeds.</h2>
+</body>
+</html>
+

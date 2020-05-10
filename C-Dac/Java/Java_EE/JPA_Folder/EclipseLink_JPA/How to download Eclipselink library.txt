@@ -1,0 +1,5 @@
+Eclipselink library you need to download once only .
+
+on other machines u just say
+
+download destination - E:\nitin\JPA on Eclipse Indigo\EclipseLink 2.3.3 - Indigo

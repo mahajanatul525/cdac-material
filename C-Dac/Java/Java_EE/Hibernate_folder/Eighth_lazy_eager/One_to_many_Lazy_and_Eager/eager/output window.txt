@@ -1,0 +1,12 @@
+log4j:WARN No appenders could be found for logger (org.hibernate.cfg.annotations.Version).
+log4j:WARN Please initialize the log4j system properly.
+Hibernate: insert into STUDENT (STUDENT_NAME) values (?)
+Hibernate: insert into PHONE (PHONE_NUMBER, PHONE_TYPE) values (?, ?)
+Hibernate: insert into PHONE (PHONE_NUMBER, PHONE_TYPE) values (?, ?)
+Hibernate: insert into STUDENT_PHONE (STUDENT_STUDENT_ID, studentPhoneNumbers_PHONE_ID) values (?, ?)
+Hibernate: insert into STUDENT_PHONE (STUDENT_STUDENT_ID, studentPhoneNumbers_PHONE_ID) values (?, ?)
+Hibernate: select student0_.STUDENT_ID as STUDENT1_0_1_, student0_.STUDENT_NAME as STUDENT2_0_1_, studentpho1_.STUDENT_STUDENT_ID as STUDENT1_3_, phone2_.PHONE_ID as studentP2_3_, phone2_.PHONE_ID as PHONE1_1_0_, phone2_.PHONE_NUMBER as PHONE2_1_0_, phone2_.PHONE_TYPE as PHONE3_1_0_ from STUDENT student0_ left outer join STUDENT_PHONE studentpho1_ on student0_.STUDENT_ID=studentpho1_.STUDENT_STUDENT_ID left outer join PHONE phone2_ on studentpho1_.studentPhoneNumbers_PHONE_ID=phone2_.PHONE_ID where student0_.STUDENT_ID=?
+1
+abc
+[Phone [phoneType=resd, phoneNumber=2500727], Phone [phoneType=mobile, phoneNumber=9270682272]]
+done with student

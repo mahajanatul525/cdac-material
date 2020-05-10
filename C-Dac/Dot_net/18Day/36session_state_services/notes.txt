@@ -1,0 +1,39 @@
+
+When the session state mode is set to StateServer, the session state variables are stored in a process, called as asp.net state service.
+
+This process is different from the asp.net worker process. The asp.net state service can be present on a web server or a dedicated machine. 
+
+Steps to follow, to configure asp.net web application to use StateServer:
+
+1. Start the ASP.NET state Service. To start the asp.net state service
+    a) Click Start > Type Run > Press Enter
+    b) In the run window, type services.msc and click OK.
+    c) In the services window, right click on ASP.NET State Service and select Start.
+
+2. In web.config set sessionState mode="StateServer"
+
+3. Set stateConnectionString="tcpip=StateServer:42424"
+
+    Example: <sessionState mode="StateServer"     stateConnectionString="tcpip=localhost:8080"  
+              timeout="20"></sessionState>
+
+
+
+Advantages of using StateServer session state mode:
+1. ASP.NET worker process independent. Survives worker process restart. 
+2. Can be used with web farms and web gardens.
+3. State server offers more scalability than InProc.
+
+Dis-advantages of using StateServer session state mode:
+1. StateServer is slower than InProc
+2. Complex objects, need to be serialized and deserialized
+3. If the StateServer, is on a dedicated machine, and if the server goes down all the sessions are lost.
+
+
+
+
+
+
+Note: 
+Web Garden - Web application deployed on a server with multiple processors
+Web Farm - Web application deployed on multiple server

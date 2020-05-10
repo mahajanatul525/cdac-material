@@ -1,0 +1,3 @@
+"faces-config.xml" and "web.xml" inside WEB-INF
+
+"messages.properties" and "messages_fr.properties" files inside "mypack"

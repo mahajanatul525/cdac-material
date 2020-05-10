@@ -1,0 +1,12 @@
+"result" is org.apache.taglibs.standard.tag.common.sql.ResultImpl@1b788dc 
+
+
+"rows" is [Ljava.util.SortedMap;@976ba 
+
+"row" is {deptno=1, dname=acc, loc=mumbai}
+
+"row" is {deptno=2, dname=mktg, loc=delhi} 
+
+"row" is {deptno=3, dname=admin, loc=banglore} 
+
+"row" is {deptno=5, dname=maintenance, loc=Kolkata} 

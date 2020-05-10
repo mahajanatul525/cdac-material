@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head>
+<script src="jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+//alert($('.container').children().length);//1
+//alert($('.container').contents().length);//3
+$('.container').contents().filter(function() {
+alert(this.nodeType);
+  return this.nodeType == 3;
+
+}).wrapAll("<h1></h1>"); //try with wrapAll
+});
+</script></head><body>
+<div class="container">data<span>this is </span>divdata</div>
+<p>
+.contents() Returns: jQuery Description: Get the children of each element in the set
+ of matched elements, including text nodes.
+
+version added: 1.2.contents()
+Given a jQuery object that represents a set of DOM elements, the .contents() method allows us to search through the immediate children of these elements in the DOM tree and construct a new jQuery object from the matching elements. The .contents() and .children() methods are similar, except that the former includes text nodes as well as HTML elements in the resulting jQuery object
+
+</p>
+
+</body>
+</html>
+

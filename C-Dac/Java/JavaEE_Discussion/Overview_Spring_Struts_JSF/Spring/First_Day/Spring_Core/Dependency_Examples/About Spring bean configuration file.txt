@@ -1,0 +1,2 @@
+right click on "src"
+	Spring bean configuration file

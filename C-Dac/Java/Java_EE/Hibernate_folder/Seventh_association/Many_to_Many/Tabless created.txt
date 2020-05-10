@@ -1,0 +1,38 @@
+
+mysql> select * from stock;
++----------+------------+------------+
+| STOCK_ID | STOCK_CODE | STOCK_NAME |
++----------+------------+------------+
+|        1 | 7052       | XYZ        |
+|        2 | s2code     | s2name     |
+|        3 | s1code     | s1name     |
++----------+------------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from category;
++-------------+--------------------+------------+
+| CATEGORY_ID | DESC               | NAME       |
++-------------+--------------------+------------+
+|           1 | CONSUMER COMPANY   | CONSUMER   |
+|           2 | INVESTMENT COMPANY | INVESTMENT |
+|           3 | cc111111           | cccccc     |
++-------------+--------------------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from stock_category;
++----------------+------------------------+
+| Stock_STOCK_ID | categories_CATEGORY_ID |
++----------------+------------------------+
+|              1 |                      1 |
+|              1 |                      2 |
++----------------+------------------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from category_stock;
++----------------------+-----------------+
+| Category_CATEGORY_ID | stocks_STOCK_ID |
++----------------------+-----------------+
+|                    3 |               2 |
+|                    3 |               3 |
++----------------------+-----------------+
+2 rows in set (0.00 sec)

@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace TypeConversions
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            NarrowingAttempt();
+           
+           Console.ReadLine();
+        }
+
+        
+
+
+        static void NarrowingAttempt()
+        {
+            byte myByte = 0;
+            int myInt = 256;
+
+            
+            myByte = (byte)myInt;
+            Console.WriteLine("Value of myByte: {0}", myByte);//0
+        }
+
+
+
+  }
+}

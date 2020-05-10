@@ -1,0 +1,37 @@
+using System;
+using System.Collections;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication14
+{
+    delegate void addmul(ref int x,ref int y);
+
+    class multidel
+    {
+        public static void add(ref int a, ref int b)
+        {
+            Console.WriteLine("addtion is {0}", a + b);
+        }
+        public static void mul(ref int a, ref int b)
+        {
+            Console.WriteLine("multipation is {0}", a * b);
+        }
+            
+    }
+
+    class enrty
+    {
+        public static void Main()
+        {
+            multidel m = new multidel();
+            addmul a = multidel.add;
+            a += multidel.mul;
+            int x = 10;
+            int y = 20;
+
+            a(ref x, ref y);
+        }
+    }
+}

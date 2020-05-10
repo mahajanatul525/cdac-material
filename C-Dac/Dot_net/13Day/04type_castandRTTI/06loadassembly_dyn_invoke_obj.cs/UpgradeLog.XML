@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="loadassembly_dyn_invoke_obj.cs">
+</Property><Property Name="Solution File" Value="\\param\Practice_K\dot_net\dotnet_notes\Day_wise\day6\type_castandRTTI\06loadassembly_dyn_invoke_obj.cs\loadassembly_dyn_invoke_obj.cs.sln">
+</Property><Property Name="User Options File" Value="\\param\Practice_K\dot_net\dotnet_notes\Day_wise\day6\type_castandRTTI\06loadassembly_dyn_invoke_obj.cs\loadassembly_dyn_invoke_obj.cs.suo">
+</Property><Property Name="Date" Value="Friday, November 28, 2014">
+</Property><Property Name="Time" Value="2:13 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="loadassembly_dyn_invoke_obj.cs.sln" Description="File successfully backed up as \\param\Practice_K\dot_net\dotnet_notes\Day_wise\day6\type_castandRTTI\06loadassembly_dyn_invoke_obj.cs\Backup\loadassembly_dyn_invoke_obj.cs.sln">
+</Event><Event ErrorLevel="0" Project="" Source="loadassembly_dyn_invoke_obj.cs.suo" Description="File successfully backed up as \\param\Practice_K\dot_net\dotnet_notes\Day_wise\day6\type_castandRTTI\06loadassembly_dyn_invoke_obj.cs\Backup\loadassembly_dyn_invoke_obj.cs.suo">
+</Event><Event ErrorLevel="0" Project="loadassembly_dyn_invoke_obj.cs" Source="loadassembly_dyn_invoke_obj.cs\loadassembly_dyn_invoke_obj.cs.csproj" Description="Project file successfully backed up as \\param\Practice_K\dot_net\dotnet_notes\Day_wise\day6\type_castandRTTI\06loadassembly_dyn_invoke_obj.cs\Backup\loadassembly_dyn_invoke_obj.cs\loadassembly_dyn_invoke_obj.cs.csproj">
+</Event><Event ErrorLevel="0" Project="loadassembly_dyn_invoke_obj.cs" Source="loadassembly_dyn_invoke_obj.cs\Program.cs" Description="File successfully backed up as \\param\Practice_K\dot_net\dotnet_notes\Day_wise\day6\type_castandRTTI\06loadassembly_dyn_invoke_obj.cs\Backup\loadassembly_dyn_invoke_obj.cs\Program.cs">
+</Event><Event ErrorLevel="0" Project="loadassembly_dyn_invoke_obj.cs" Source="loadassembly_dyn_invoke_obj.cs\Properties\AssemblyInfo.cs" Description="File successfully backed up as \\param\Practice_K\dot_net\dotnet_notes\Day_wise\day6\type_castandRTTI\06loadassembly_dyn_invoke_obj.cs\Backup\loadassembly_dyn_invoke_obj.cs\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="loadassembly_dyn_invoke_obj.cs" Source="loadassembly_dyn_invoke_obj.cs\loadassembly_dyn_invoke_obj.cs.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="loadassembly_dyn_invoke_obj.cs" Source="loadassembly_dyn_invoke_obj.cs\loadassembly_dyn_invoke_obj.cs.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="loadassembly_dyn_invoke_obj.cs.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="loadassembly_dyn_invoke_obj.cs.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="loadassembly_dyn_invoke_obj.cs" Source="loadassembly_dyn_invoke_obj.cs\loadassembly_dyn_invoke_obj.cs.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

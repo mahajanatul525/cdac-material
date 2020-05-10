@@ -1,0 +1,4 @@
+ProductId
+Name
+UnitPrice
+QtyAvailable

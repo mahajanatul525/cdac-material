@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+void disp1()
+{
+	cout<<"disp1"<<endl;
+}
+void disp2()
+{
+	cout<<"disp2"<<endl;
+}
+void disp3()
+{
+	cout<<"disp3"<<endl;
+}
+int main()
+{
+	void (*ptr[3])(); // ptr is an array of pointer to a function neither accepts anything nor returns anything
+	ptr[0]=disp1;
+	ptr[1]=disp2;
+	ptr[2]=disp3;
+
+	for(int i=0;i<3;i++)
+	{
+		ptr[i]();
+	}
+	return 0;
+}
+
+
+
+
+

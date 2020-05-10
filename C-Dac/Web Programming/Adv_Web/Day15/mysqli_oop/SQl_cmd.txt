@@ -1,0 +1,13 @@
+change databse
+use myDb
+
+display all data from table
+
+select * from myguests;
+
+display part of coloumn
+
+SELECT id, firstname, lastname FROM MyGuests";
+
+
+

@@ -1,0 +1,4 @@
+
+
+
+In visualstudio right clik- property-debug -type in command line argument box 

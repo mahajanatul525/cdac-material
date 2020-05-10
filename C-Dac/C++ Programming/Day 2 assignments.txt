@@ -1,0 +1,273 @@
+1) create a class with constructors and destructor.
+create array of instances and observe how program behaves.
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class Test
+{
+private:
+	int num;
+public:
+	Test()
+	{
+		num=0;
+		cout<<"In no-args constructor"<<num<<endl;
+	}
+	Test(int k)
+	{
+		num=k;
+		cout<<"In param-constructor"<<num<<endl;
+	}
+	~Test()
+	{
+		cout<<"In destructor"<<num<<endl;
+	}
+};
+
+int main()
+{
+	Test t[5]={10,20,30,40,50};
+	getch();
+	return 0;
+}
+
+
+2) create a class with constructors and destructor.
+create 2 instances on stack and 1 instance on heap. observe the invocation of constructors and destructors.
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class Test
+{
+private:
+	int num;
+public:
+	Test()
+	{
+		num=0;
+		cout<<"In no-args constructor"<<num<<endl;
+	}
+	Test(int k)
+	{
+		num=k;
+		cout<<"In param-constructor"<<num<<endl;
+	}
+	~Test()
+	{
+		cout<<"In destructor"<<num<<endl;
+	}
+};
+
+int main()
+{
+	Test t1,t2(10);
+	Test *t=new Test(60);
+	delete t;
+	getch();
+	return 0;
+}
+
+3) create a class "book" with
+int bookid
+char *bookname
+int price
+
+define parameterized constructor only for this class.
+define 3 getter functions.
+
+now create 2 instances
+1 on stack and 1 on heap.
+pass the necessary values while creating instances.
+call the getter functions.
+
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+using namespace std;
+class Book
+{
+private:
+	int bookid;
+	char *bookname;
+	int price;
+public:
+	Book()
+	{
+		bookid=0;
+		//*bookname=NULL;
+		price=0;
+		cout<<"In No-args constructor"<<endl;
+	}
+	Book(int id,char *str,int price)
+	{
+		bookid=id;
+		bookname=new char(strlen(str)+1);
+		strcpy(bookname,str);
+		this->price=price;
+		cout<<"In parametrized constructor"<<endl;
+	}
+
+	int getBookId()
+	{
+		return bookid;
+	}
+	char* getBookName()
+	{
+		return bookname;
+	}
+	int getPrice()
+	{
+		return price;
+	}
+};
+
+int main()
+{
+	Book b1(1,"Let us C++",452);
+	Book *b2=new Book();
+	getch();
+	return 0;
+}
+
+
+4)create a class "MyClass1"
+with members and member function "disp1().
+create another class "MyClass2"
+with members and member function "disp2().
+now try to invoke disp1() from disp2()
+in the main() function, create instances of both the classes and invoke their member functions.
+
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+using namespace std;
+
+class MyClass1
+{
+private:
+	int num1;
+public:
+	void disp1()
+	{
+		cout<<"In Disp1()"<<endl;
+	}
+};
+
+class MyClass2
+{
+private:
+	int num2;
+public:
+	void disp2(MyClass1 &ref)
+	{
+		ref.disp1();
+		cout<<"In Disp2()"<<endl;
+	}
+};
+
+int main()
+{
+	MyClass1 m1;
+	MyClass2 m2;
+	m2.disp2(m1);
+	getch();
+	return 0;
+}
+
+5) create a class.
+accept from user, how many instances are required.
+Accordingly create array of instances dynamically.
+Now make sure that u call destructor for each and every instances.
+
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+using namespace std;
+
+class Test
+{
+private:
+	int num1;
+public:
+	Test()
+	{
+		num1=0;
+		cout<<"In No-ARG"<<endl;
+	}
+	Test(int n)
+	{
+		num1=n;
+		cout<<"In parameter"<<endl;
+	}
+	~Test()
+	{
+		cout<<"In Des"<<endl;
+	}
+};
+
+int main()
+{
+	int n;
+	cout<<"Enter n:";
+	cin>>n;
+	Test *t=new Test[n];
+	delete []t;
+	getch();
+	return 0;
+}
+
+6) create a class, define different types of constructors. in main create n number of objects. At the end display how many objects are created for a class.
+
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+using namespace std;
+
+class Test
+{
+private:
+	static int count;
+	int num1,num2;
+public:
+	Test()
+	{
+		num1=0;
+		num2=0;
+		count++;
+		cout<<"In No-ARG"<<endl;
+	}
+	Test(int n)
+	{
+		num1=n;
+		num2=0;
+		count++;
+		cout<<"In parameter"<<endl;
+	}
+	Test(int n1,int n2)
+	{
+		num1=n1;
+		num2=n2;
+		count++;
+		cout<<"In parameter"<<endl;
+	}
+	~Test()
+	{
+		cout<<"In Des"<<endl;
+	}
+	static void show()
+	{
+		cout<<count<<endl;
+	}
+};
+int Test::count=0;
+
+int main()
+{
+	Test t1,t2(10),t3(10,20);
+	Test *t4=new Test();
+	Test::show();
+	getch();
+	return 0;
+}

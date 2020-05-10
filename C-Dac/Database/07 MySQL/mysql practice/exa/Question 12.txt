@@ -1,0 +1,9 @@
+create table u_trigger(user varchar(30),timest timestamp,neid int,oeid int,nsalary int,osalary int);
+
+create trigger trg_emp_Update
+after update on emp1
+for each row	
+begin
+insert into u_trigger values(current_user(),current_timestamp(),new.id,old.id,new.salary,old.salary);
+end
+$$

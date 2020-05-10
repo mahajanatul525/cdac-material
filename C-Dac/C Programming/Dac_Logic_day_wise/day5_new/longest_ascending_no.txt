@@ -1,0 +1,36 @@
+/*Accept 10digit number print longest ascending number
+a.	Eg 2156897456 o/p  156897*/
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int i,l,c=1,t,f=0,j;
+	int a[]={5,3,1,2,5,3,1,2,5,7};
+	int b[10];
+	for(i=0;i<10;i++)
+	{
+		if(a[i]<a[i+1]){
+			
+		c++;
+		}
+		if(a[i]>a[i+1]){
+		
+		if(c>f){
+		f=c;
+		c=1;
+		t=i;
+		}
+		
+		}
+	}	
+		
+	
+	
+
+	for(j=t-f+1;j<=t;j++)
+	{
+	printf("\n%d",a[j]);
+	}
+	getche();
+}

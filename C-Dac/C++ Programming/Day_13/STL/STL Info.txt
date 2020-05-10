@@ -1,0 +1,46 @@
+			STL
+		Standard Template Library
+
+it is a library of various containers such as vector,list , stack etc, iterators and algorithms.
+
+
+Container:- it allows u to store elements in a dynamic way. i.e. u can increase or decrease the size of container during runtime.
+Containers can be stored effectively  inside the file system.
+
+STL supports several container types , some of them are
+
+
+a)vector-is a sequence that you can access at random.
+you append entries to and remove entries from,the end of the vector without undue overhead.Insertion and deletion at the beginning or in the middle of the vector takes more time because they involve shifting the remaining entries to make room or to close the deleted object space.A vector is an array of contiguous objects with an instance counter or pointer that indicates the end of the container.Random access is a matter of using a subscript operation.
+
+b)list -is a sequence that you access bidirectionally.
+it enables you to perform insertions and deletions anywhere without undue performance penalties.Random access is simulated by forward or backward iteration to the target object.A list consists of noncontiguous objects linked with forward and backward pointers.
+
+
+c) Stack:- It is a data structure that exhibits pushdown,pop-up behaviour. The most recently inserted(pushed) element is the only one that can be extracted.
+
+d) Queue:- It is a data structure wherein you insert elements at the end and extract elements from the beginning.
+
+
+e) set:- container which holds unique values.
+
+f) map:- container holds objects that are key values and associate each key object with another parameterized type object. does not permit duplicate keys.
+
+
+
+
+Iterators- they provide a common method of traversing through to the containers.
+
+algorithms-they are some of the commonly performed tasks.
+e.g sort, count , max etc.
+
+
+
+
+
+
+
+
+
+
+

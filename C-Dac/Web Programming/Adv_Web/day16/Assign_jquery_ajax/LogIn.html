@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>
+Login
+</title>
+</head>
+<body>
+<script src="jquery-1.9.1.js">
+</script>
+<script>
+ $(document).ready(function(){
+  $("#buttn").click(function(){
+  var a=$("#name").val();
+  alert(a);
+    $.post("abc.php",
+	{
+      name:a,
+    },function(data,status){
+	 if(data!="false")
+		$("#div1").html(data);
+		else
+		window.location="LogIn.html"
+    });
+  });
+});
+</script>
+<form>
+Name : <input id="name">
+<input type="button" id="buttn" value="btn"></button>
+</form>
+<div id="div1"></div>
+</body>
+</html>

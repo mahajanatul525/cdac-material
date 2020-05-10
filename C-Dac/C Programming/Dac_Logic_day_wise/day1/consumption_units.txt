@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+
+	double units,u;
+
+	printf("Enter consumption units: ");
+	scanf("%lf",&units);
+
+	if(units>=0 && units<=200)
+	
+		printf("Consumption rate:%lf",units*0.50);
+	else if(units>=201 && units<=400)
+	{
+		u=units-200;
+		printf("Consumption rate:%lf",100+0.65*u);
+	}
+	else if(units>=401 && units<=600)
+	{
+		u=units-400;
+		printf("Consumption rate:%lf",230+0.80*u);
+	}
+
+	else if(units>600)
+	{
+		u=units-600;
+		printf("Consumption rate:%lf",390+1.00*u);
+	}
+
+
+	getche();
+
+}

@@ -1,0 +1,11 @@
+in java as soon as u define a class with "abstract" keyword, class becomes abstract.
+
+abstract class can not be instantiated.
+
+abstract class can contain abstract as well as non-abstract methods.
+
+abstract method is a method which is declared with "abstract" keyword. ( it can not be private)
+
+a child class of an abstract class has to provide implementation to the method which is declared "abstract" in parent class or else make child class also "abstract".
+
+a class can not be "abstract" and "final" both.

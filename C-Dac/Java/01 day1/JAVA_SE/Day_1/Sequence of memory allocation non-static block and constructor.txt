@@ -1,0 +1,24 @@
+public class MyClass
+{
+	int num=100;
+	{
+		System.out.println("in non-static block\t"+num);
+	}
+	MyClass()
+	{
+		System.out.println("in no-arg constructor\t"+num);
+	}
+	public static void main(String args[])
+	{
+		MyClass m1=new MyClass();
+	}
+}
+
+/*
+
+o/p
+
+in non-static block	100
+in no-arg constructor	100
+
+*/

@@ -1,0 +1,78 @@
+// hierarchical inheritance
+
+class base
+{
+	public:
+		virtual void disp()
+		{
+			cout<<"base disp"<<endl;
+		}
+};
+class sub1:public base
+	public:
+		void disp() // by def virtual
+		{
+			cout<<"sub1 disp"<<endl;
+		}
+};
+class sub2:public base
+{
+	public:
+		void disp()  // by def virtual
+		{
+			cout<<"sub2 disp"<<endl;
+		}
+};
+int main()
+{
+	sub1 s1;
+	base &ref1=s1;
+	ref1.disp();
+
+	sub2 s2;
+	base &ref2=s2;
+	ref2.disp();
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

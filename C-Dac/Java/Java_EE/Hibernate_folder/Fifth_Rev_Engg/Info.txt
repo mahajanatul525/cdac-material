@@ -1,0 +1,2 @@
+here we are using "Reverse Eng. Technique" of Hibernate.
+In this technique, we can create pojo with the help of existing database table.

@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int i,j,no;
+	printf("\nenter start and end range = ");
+	scanf("%d %d",&i,&j);
+	no=i;
+	while(no<=j)
+	{
+	if(no%2!=0)
+	printf("\n%d",no);
+	no++;
+	}getche();
+}

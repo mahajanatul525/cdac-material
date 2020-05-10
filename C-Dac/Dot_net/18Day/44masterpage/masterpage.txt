@@ -1,0 +1,11 @@
+Master pages in asp.net allow you to create a consistent look and behaviour for all the pages in an asp.net web application.
+
+To create a master page
+1. Right click on the "Project Name" in "Solution Explorer", and select "Add - New Item"
+2. From the "Add New Item" dialog box, select "Master Page"
+3. Give your master page a name and click OK. 
+Master pages have .master extension. Notice that there are 2 ContentPlaceHolder controls on the master page.
+1. One in the "head" section and
+2. Second one in the "body" section
+
+ContentPlaceHolder control defines a region on the master page, where the content pages can plugin page specific content.

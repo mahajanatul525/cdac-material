@@ -1,0 +1,17 @@
+q.18Write a stored procedure by the name of RECT_PROC that computes the perimeter and the area of a rectangle.
+The length and width are to be passed as parameters. (Assuming that L and W are the length and width of the rectangle, 
+Perimeter = 2*(L+W) and Area = L*W). The stored procedure should display the perimeter and the area on the screen using dbms_output.put_line. 
+Calling program for the stored procedure need not be written.
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Rect_proc`(length double,width double,out perimeter double,out area double)
+BEGIN
+set perimeter:=2*(length+width);
+set area:=length*width;
+END
+
+
+
+call Rect_proc(3,5,@perimeter,@area)
+select @perimeter
+select @area

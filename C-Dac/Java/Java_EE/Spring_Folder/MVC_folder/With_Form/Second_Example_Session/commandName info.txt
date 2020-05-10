@@ -1,0 +1,1 @@
+commandName = name of a variable in the request scope or session scope that contains the information about this form, it should be a been.

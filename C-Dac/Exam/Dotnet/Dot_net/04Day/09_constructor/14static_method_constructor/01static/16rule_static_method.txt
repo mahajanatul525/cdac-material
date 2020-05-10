@@ -1,0 +1,18 @@
+There are several restrictions that apply to static methods:
+
+• A static method does not have a this reference. This is because a static method does
+not execute relative to any object.
+
+• A static method can directly call only other static methods of its class. It cannot
+directly call an instance method of its class. The reason is that instance methods
+operate on specific objects, but a static method is not called on an object. Thus, on
+what object would the static method operate?
+
+• A similar restriction applies to static data. A static method can directly access only
+other static data defined by its class. It cannot operate on an instance variable of its
+class because there is no object to operate on.
+
+
+It is important to understand that a static method can call instance methods and access
+instance variables of its class if it does so through an object of that class. It is just that it
+cannot use an instance variable or method without an object qualification

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="login" template="/BaseLayout.jsp">
+		<put-attribute name="title" value="Welcome to Login Page" />
+		<put-attribute name="header" value="/header.jsp" />
+        	<put-attribute name="body" value="/Login.jsp" />
+		<put-attribute name="footer" value="/footer.jsp" />
+	</definition>
+        <definition name="register" extends="login">
+            <put-attribute name="title" value="Welcome to Register Page"/>
+            <put-attribute name="body" value="/Register.jsp"/>
+        </definition>
+        <definition name="shopping" extends="login">
+            <put-attribute name="title" value="Welcome to Shopping Cart"/>
+            <put-attribute name="body" value="/Shopping.jsp"/>
+        </definition>
+        <definition name="bill" extends="login">
+            <put-attribute name="title" value="Welcome to Bill Page"/>
+            <put-attribute name="body" value="/Bill.jsp"/>
+        </definition>
+</tiles-definitions>

@@ -1,0 +1,10 @@
+D:\dot_net\asp\25respnce_redirect\WebApplication1\WebApplication1\bin\WebApplication1.dll
+D:\dot_net\asp\25respnce_redirect\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+D:\dot_net\asp\25respnce_redirect\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+D:\dot_net\asp\25respnce_redirect\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\dot_net\asp\25respnce_redirect\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\25respnce_redirect\WebApplication1\WebApplication1\bin\WebApplication1.dll
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\25respnce_redirect\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\25respnce_redirect\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\25respnce_redirect\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\25respnce_redirect\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb

@@ -1,0 +1,75 @@
+using System;
+class Employee
+{
+// Field data.
+private string empName;
+private int empID;
+private float currPay;
+
+
+// Properties!
+public string Name
+{
+    get { return empName; }
+    set
+    {
+    if (value.Length > 15)
+    Console.WriteLine("Error! Name must be less than 16 characters!");
+    else
+    empName = value; //value is key word
+    }
+}
+// We could add additional business rules to the sets of these properties;
+// however, there is no need to do so for this example.
+    public int ID // Note lack of parentheses.
+    {
+        get { return empID; }
+        set { empID = value; }
+    }
+public float Pay
+{
+    get { return currPay; }
+    set { currPay = value; }
+}
+public Employee() { }
+public Employee(string name, int id, float pay)
+{
+    empName = name;
+    empID = id;
+    currPay = pay;
+}
+// Methods.
+public void GiveBonus(float amount)
+{
+    currPay += amount;
+}
+public void DisplayStats()
+{
+    Console.WriteLine("Name: {0}", empName);
+    Console.WriteLine("ID: {0}", empID);
+    Console.WriteLine("Pay: {0}", currPay);
+}
+
+
+}
+
+
+
+class entry
+{
+
+
+static void Main(string[] args)
+{
+Console.WriteLine("***** Fun with Encapsulation *****\n");
+Employee emp = new Employee("Marviiiiiiiiiiiiiiiiiin", 456, 30000);
+emp.GiveBonus(1000);
+emp.DisplayStats();
+// Set and get the Name property.
+Employee ee = new Employee();
+ee.Name = "Marvvvvvvvvvvvvvvvvvvvvvvvvvv";
+Console.WriteLine("Employee is named: {0}", ee.Name);
+Console.ReadLine();
+}
+
+}

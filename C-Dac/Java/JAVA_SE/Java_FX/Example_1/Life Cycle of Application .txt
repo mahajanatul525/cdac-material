@@ -1,0 +1,10 @@
+Life Cycle of Application [ here we are clicking twice on button ]
+
+Before calling launch
+Inside no-arg constructor
+inside init method
+Inside start method
+Hello World!
+Hello World!
+inside stop method
+After calling launch

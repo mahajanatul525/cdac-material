@@ -1,0 +1,27 @@
+Bridge Pattern Example in AWT
+
+	in AWT, where a component has a component peer which does the OS specific operations. 		
+
+
+		Component
+			ComponentPeer peer;
+
+			setVisible
+				peer.setVisible
+
+Button	Checkbox  Choice  Scrollbar
+
+
+
+
+		ComponentPeer interface
+		method- setVisible()
+
+CheckboxPeer	ChoicePeer ScrollbarPeer
+
+
+
+
+
+		
+

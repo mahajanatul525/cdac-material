@@ -1,0 +1,9 @@
+when you create new link
+
+Form will display
+
+to display form with one line
+
+type
+
+@Html.EditorForModel()

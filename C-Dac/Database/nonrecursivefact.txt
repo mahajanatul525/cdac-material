@@ -1,0 +1,17 @@
+create function udf_fact(num int)
+returns int
+begin
+declare fact int;
+declare i int;
+set fact:=1;
+set i:=num;
+myloop:loop
+if (i<1) then
+leave myloop;
+end if;
+set fact:=fact * i;
+set i:=i-1;
+end loop myloop;
+return (fact);
+end
+$$

@@ -1,0 +1,63 @@
+Properties 
+-----------
+Property is used to Modify the private variable of Class from out side of the code like 
+
+class A
+{
+private string var1;
+
+public string SetVar1
+{
+    get{return var1;}
+    set{var1 = value;}
+}
+
+}
+
+now if i want to modify var1 value from class B then you need property to modify it so that you can modify it whenever you need to like below
+
+class B
+{
+   //Modify Property
+    A obj = new A();
+     obj.SetVar1 = "hello";
+}
+
+here you will argue that we can modify the Var1 also by making it public so we can access it from out side but property modified it without making it public :)
+
+Now Constructor 
+-----------------
+Constructor is Actually a Method that has same name as Class name and that method executes When you create Instance of class .
+
+example 
+
+class A
+{
+    int x,y;
+    A(int a,int b)
+   {
+       x =a;
+       y=b;
+    }
+   
+}
+
+Now here we can use Constructor to initialize the internal variable of class when we make its instance :)
+
+so we can use it like 
+
+class B
+{
+    A obj = new A(5,10);
+}
+
+so we assigned the value to x,and y when we created Instance of class :)
+
+Constructor Vs Property 
+------------------------
+as you know You can Set Property whenever you want to change the Class Variable value 
+
+but Constructor can not be executed after Creating Instance :) thats the difference 
+
+
+

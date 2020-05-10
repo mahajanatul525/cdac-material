@@ -1,0 +1,6 @@
+Every Assembly you create contains one or more program files and a Manifest. 
+
+There are two types program files : Process Assemblies (EXE) and Library Assemblies (DLL).
+
+
+ Each Assembly can have only one entry point (that is, DllMain, WinMain, or Main).

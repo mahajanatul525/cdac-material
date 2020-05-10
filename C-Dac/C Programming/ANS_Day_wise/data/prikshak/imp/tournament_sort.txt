@@ -1,0 +1,123 @@
+In this problem, you have to implement a sorting algorithm called Tournament sort, which uses a complete binary tree. The depth D of the tree will be given as input. Also, N positive integers will be given, where N is the Dth power of 2 (ie, 2 ** D).
+Construct a complete binary tree of depth D and fill in the leaf nodes with the N given integers in the order given ie. the first integer should be at the leftmost leaf and the last integer should be at the rightmost leaf.
+Next, update all the non-leaf nodes in the tree such that each nonleaf node contains the maximum of the values in its children. Thus, the root will contain the maximum of all the N integers.
+Implement a procedure ’maxdelete’ which essentially removes the maximum value from the tree and updates the tree as follows:
+      1. traverse the tree from the root
+    2. find the leaf with the maximum value ie. the value at the root. (note that in this tree, if the value at a non-leaf node is T, either its left child or its right child will have value T).
+    3. replace the value at that leaf node with -1 and
+    4. update the rest of the non-leaf nodes such that each non-leaf node contains the maximum of the values in its children.
+Perform the ’maxdelete’ operation 3 times on the tree and print out the INORDER traversal of the tree after each operation.
+ 
+
+
+
+#include<iostream>
+
+using namespace std;
+class Stack {
+  
+    private:
+            int top;
+            int stack[100];
+    public:
+            Stack(){ top = 0;};
+            
+            void push(int no) {
+                stack[top] = no;
+                top++;
+            }
+            int pop() {
+                top--;
+                return stack[top];
+            }
+            bool isEmpty() {
+                if (top == 0)
+                    return 1;
+                return 0;
+            }
+    
+};
+void maxdelete(int array[],int N) {
+    int max = array[0];
+    for(int i = 0;i < N;i++)
+        if(array[i] > max)
+            max = array[i];
+    
+    for(int i = 0;i< N;i++)
+        if(array[i] == max)
+            array[i] = -1;
+}
+
+bool allvisited(bool visited[],int N) {
+    for(int i = 0;i < N;i++) {
+        if(visited[i] == false)
+			return false;
+	}
+	return true;
+
+}
+
+int main() {
+    Stack s;
+    int N,D,L,I;
+    int no1,no2,no3,count = 0;
+    cin>>D;
+    cin>>L;
+    N = (2 * L) - 1;
+    I = N - L;
+    int arr[N];
+    bool visited[N];
+    for(int i = I; i < N; i++) {
+        cin>>arr[i];
+    }
+    while(count != 4) {
+        for( int i = N - 1;i > 0;i = i - 2) {
+            no1 = arr[i];
+            no2 = arr[i - 1];
+            if((i/2) - 1 >= 0) {
+                if(no1 > no2) {
+                     arr[(i/2) - 1] = no1;
+                } else {
+                        arr[(i/2) - 1] = no2;
+                } 
+        }   
+        }
+        if(count != 0) {
+            for(int i = 0;i < N;i++)
+                visited[i] = false;
+                no3 = 0;
+                s.push(arr[0]);
+                visited[0] = true;
+            while( !allvisited(visited,N) ) {
+                no3 = (no3 * 2) + 1;
+                if(no3 < N) {
+			if(visited[no3] == false) {
+                   		 s.push(arr[no3]);
+				visited[no3] = true;
+			}
+			else {
+				s.push(no3 + 1);
+				visited[no3 + 1] = true;
+			}
+			
+                }
+		else {
+			cout<<s.pop()<<" ";
+			int j;
+			for(j = N -1;j>0;j= j - 2) {
+				if(visited[j] == false && visited[(j/2) - 1] == true) {
+					cout<<s.pop()<<" ";
+					s.push(arr[j]);
+					visited[j] = true;
+					break;
+				}
+			}
+			no3 = j;
+		}
+            }
+		cout<<s.pop()<<" "<<endl;
+        }
+        maxdelete(arr,N);
+        count++;  } 
+ return 0;   
+}

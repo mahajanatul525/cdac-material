@@ -1,0 +1,15 @@
+<html>
+<head>
+<body>
+<p align="center" id="pp"> My para</p>
+<script>
+y=document.getElementById("pp").getAttribute("align");
+document.write(y);
+document.write("<br />" );
+document.write("<br />" );
+node_attri=document.getElementsByTagName("p")[0].getAttributeNode("align");
+txt=node_attri.nodeValue; 
+document.write(txt);
+document.write("<br />" );
+document.write(node_attri.nodeType);
+</script>

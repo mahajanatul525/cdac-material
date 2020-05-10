@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-1.9.1.js"></script>
+
+<script>
+alert(jQuery("p").length);
+</script>
+</head>
+<body>
+<p>para 1</p>
+<p>para 2</p>
+<p>para 3</p>
+
+
+</body>
+</html>
+

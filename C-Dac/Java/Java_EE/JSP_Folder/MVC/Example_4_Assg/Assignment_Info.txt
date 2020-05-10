@@ -1,0 +1,32 @@
+create a POJO "Student"
+		name,address,age
+
+
+create a table in database
+
+	student
+rollno int primary key
+name,address  varchar
+age int
+
+
+add some records.
+
+
+StudentBean class - database connection
+
+	public Student getStudent(int rollno)
+
+
+start.jsp
+
+	Enter rollno:<textfield>
+
+on submit it should go to "StudentServ" post method.
+
+servlet will pass the rollno entered by user to "getStudent()" method of "StudentBean" class. getStudent() method will create a new instance of "Student" class based on database information and return it.
+
+when servlet will get "Student" object from "StudentBean" class, it will store it inside "request" attribute and forward the request to "List.jsp"
+
+List.jsp will display the students details using "EL".
+

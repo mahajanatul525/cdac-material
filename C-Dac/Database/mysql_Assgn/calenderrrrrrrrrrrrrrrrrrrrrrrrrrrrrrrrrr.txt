@@ -1,0 +1,17 @@
+CREATE DEFINER=`root`@`localhost` FUNCTION `_AGE`(in_dob datetime) RETURNS varchar(100) CHARSET latin1
+    NO SQL
+BEGIN
+       DECLARE l_age VARCHAR(100);
+       DECLARE YEARS INT(11);
+       DECLARE MONTHS INT(11);
+       DECLARE DAYS INT(11);
+       DECLARE DIFFS FLOAT;
+
+
+       SET DIFFS=DATEDIFF(CURRENT_DATE(),in_dob)/365;
+       SET YEARS=FLOOR(DIFFS);
+       SET MONTHS=FLOOR(((DIFFS - 365)%30)/12);
+       SET DAYS=(DIFFS - 365)%30;
+		SET l_age=CONCAT(YEARS, " Year ",MONTHS," Month ",DAYS," Days");
+       RETURN(l_age);
+       end

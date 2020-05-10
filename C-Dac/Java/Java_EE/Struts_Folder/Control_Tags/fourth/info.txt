@@ -1,0 +1,1 @@
+here we have used nested "<s:iterator>" tag.

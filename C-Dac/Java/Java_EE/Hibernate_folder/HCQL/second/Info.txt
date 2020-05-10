@@ -1,0 +1,8 @@
+once u say
+
+cr1.add(Restrictions.eq("salary", 25000.00));
+
+next time u have to say
+
+cr1=session.createCriteria(Employee.class);
+in order to add different criteria

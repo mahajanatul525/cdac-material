@@ -1,0 +1,50 @@
+package core1;
+class Sample
+{
+	static void disp1()
+	{
+		System.out.println("in disp1");
+	}
+	void disp2()
+	{
+		System.out.println("in disp2");
+	}
+}
+public class one
+{
+		
+		public static void main(String args[])
+		{
+			Sample s=null;
+			s.disp1();
+			//s.disp2();  NullPointerExeption
+			
+		}
+}
+
+
+output:
+
+	in disp1
+
+
+check "one.class" in cavaj decompiler
+
+
+public class one
+{
+
+    public one()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        Sample s = null;
+        Sample.disp1();
+    }
+}
+
+
+
+

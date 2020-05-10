@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{int s,ts;
+char ch;
+	printf("Enter sex: ");
+	scanf("%c",&ch);
+    printf("Enter salary: ");
+	scanf("%d",&s);
+	if(ch=='m'||ch=='M')
+	{if(s>8000)
+		ts=s-(5*s/100);
+	else
+		ts=s-(2*s/100);
+     }
+else if(ch=='f'||ch=='F');
+	{if(s>5000)
+		ts=s-(3*s/100);
+	else
+		ts=s-(1*s/100);
+
+     }
+	printf("NetSalary:%d",ts);
+			getche();
+
+
+}

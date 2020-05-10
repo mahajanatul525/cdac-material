@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><style>.updatedContent{color:red;}
+</style><script type="text/JavaScript" 
+src="jquery-1.9.1.js"></script>
+<input type="text" name="first_name" class="cleanup" />
+<input type="text" name="last_name" class="cleanup" />
+<script>
+(function($) {
+$(document).ready(function() {
+alert("hi")
+$('input.cleanup').blur(function() {
+alert($(this).val());
+var value = $.trim( $(this).val() );
+$(this).val( value );
+});
+});
+})(jQuery);</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+<script>
+
+var go = function (who) //observe no name to function
+{   alert('Hello '+who);      // outputs "Hello world"
+}
+go('world');
+
+document.write(typeof(go));
+alert(go);
+
+
+var go= function () {   return "This is a String";}
+
+var testCopy =go;      // testCopy is a pointer to the hello function()
+
+var testStr = go();     // testStr contians "This is a string"
+var testing = testCopy(); // testing contains "This is a string"
+
+</script>

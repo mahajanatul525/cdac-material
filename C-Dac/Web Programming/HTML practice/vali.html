@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.errormsg
+			{
+				color:red;
+				font-family:"forte"
+			}
+			.bg
+			{
+				height:500px;
+				width:1300px;
+				background-color:aqua;
+				padding:15px;
+				margin:15px;
+			}
+			
+			
+		</style>
+		<STYLE Type="text/css">
+			TABLE{Font-Size:Xlarge;Border-Style:solid;Border-Width:thick;Border-Color:red}
+			TD{Font-Weight:bold}
+			TH{Color:BLack}
+			width:900px;
+			
+	
+		</STYLE>
+
+		<script>
+		function nameval()
+		{
+			var a=document.getElementById("fname");
+			var b=a.value;
+			pattern=/^[A-Za-z]+$/
+			if(pattern.test(b))
+			{
+				document.getElementById("nmerr").innerHTML="";
+				return true;
+			}
+			else
+			
+			
+			document.getElementById("nmerr").innerHTML="name should have only characters"
+		}
+		alert("aa");
+		function nameval1()
+		{
+			var a=document.getElementById("midname");
+			var b=a.value;
+			pattern=/(^[A-Za-z]+$)/
+			if(pattern.test(b))
+			{
+			
+				document.getElementById("nmerr").innerHTML="";
+				return true;
+			}
+			else
+			
+			
+			document.getElementById("nmerr").innerHTML="name should have only characters"
+		}
+		alert("aa");
+		function nameval1()
+					return true;
+			}
+			else
+			document.getElementById("nmerr").innerHTML="name should have only characters"
+		}
+		function nameval2()
+		{
+			var a=document.getElementById("lname");
+			var b=a.value;
+			pattern=/(^[A-Za-z]+$)/
+			if(pattern.test(b))
+				return true;
+			else
+			document.getElementById("nmerr").innerHTML="name should have only characters"
+		}
+		
+		function fnameval()
+		{
+			var a=document.getElementById("ffname");
+			var b=a.value;
+			pattern=/(^[A-Za-z]+$)/
+			if(pattern.test(b))
+				return true;
+			else
+			document.getElementById("fnmerr").innerHTML="name should have only characters"
+		}
+		function fnameval1()
+		{
+			var a=document.getElementById("fmidname");
+			var b=a.value;
+			pattern=/(^[A-Za-z]+$)/
+			if(pattern.test(b))
+				return true;
+			else
+			document.getElementById("fnmerr").innerHTML="name should have only characters"
+		}
+		function fnameval2()
+		{
+			var a=document.getElementById("flname");
+			var b=a.value;
+			pattern=/(^[A-Za-z]+$)/
+			if(pattern.test(b))
+				return true;
+			else
+			document.getElementById("fnmerr").innerHTML="name should have only characters"
+		}
+		
+		function mailval()
+		{
+			var a=document.getElementById("m");
+			var b=a.value;
+			pattern=/(^[a-z][a-z_0-9\.]+@[a-z0-9]+\.[a-z]{2,3})|(\.)$/
+			if(pattern.test(b))
+				return true;
+			else
+			document.getElementById("m").value="Enter Valid Email Id"
+		}
+		
+		function mobval()
+		{
+			var a=document.getElementById("mob").value;
+			pattern=/^[789][0-9]{9}$/
+			if(pattern.test(a))
+			{
+				return true;
+			}
+			else
+			{
+				document.getElementById("moberr").innerHTML="Enter valid mob no"
+			}
+			
+		}
+		function pinval()
+		{
+			var a=document.getElementById("pin").value;
+			pattern=/^[0-9][0-9]{5}$/
+			if(pattern.test(a))
+			{
+				return true;
+			}
+			else
+			{
+				document.getElementById("pinerr").innerHTML="Enter valid pin no"
+			}
+			
+		}
+		function passval()
+		{
+			var a=document.getElementById("pass").value;
+			pattern=/^[A-Za-z0-9\W]{8}$/
+			
+			if(pattern.test(a))
+			{
+				return true;
+			}
+			else
+			{
+				document.getElementById("passerr").innerHTML="password should be alfanumaric"
+			}
+		}
+		function allval()
+		{
+			if(nameval() && nameval1() && nameval2() && fnameval()&&fnameval1()&&fnameval2()&&mailval()&&mobval()&&pinval()&&passval())
+				return true;
+			else
+				return false;
+		}
+		
+		
+		
+		
+		</script>
+	</head>
+	
+	<body>
+		<form onsubmit="return allval()">
+			<div class="bg">
+			<table align="center">
+				<tr>
+					<td>NAME</td>
+					<td>:</td>
+					<td><input type="text" placeholder="First Name" id="fname"onchange="nameval()"></td>
+					<td><input type="text" placeholder="Middle Name" id="midname"onchange="nameval1()"></td>
+					<td><input type="text" placeholder="Last Name" id="lname"onchange="nameval2()"></td>
+					<td><div class="errormsg" id="nmerr"></div></tr>
+				</tr><tr></tr>
+				<tr>
+					<td>FATHER NAME</td>
+					<td>:</td>
+					<td><input type="text" placeholder="First Name" id="ffname"onchange="fnameval()"></td>
+					<td><input type="text" placeholder="Middle Name" id="fmidname"onchange="fnameval1()"></td>
+					<td><input type="text" placeholder="Last Name" id="flname"onchange="fnameval2()"></td>
+					<td><div class="errormsg" id="fnmerr"></div></tr>
+				</tr>
+				<tr>
+					<td>GENDER</td>
+					<td>:</td>
+					<td>Male<input type="radio"  id="gender" name="male" ></input></td>
+					<td>Female<input type="radio"  id="gender" name="female" ></input></td>
+				</tr><td></td>
+				<tr>
+					<td>EMAIL</td>
+					<td>:</td>
+					<td><input type="text" placeholder="mail" id="m"onchange="mailval()"></td>
+					<td><div class="errormsg" id="mailerr"></div></tr>
+				</tr><tr></tr>
+				<tr>
+				<tr>
+					<td>MOBILE NO</td>
+					<td>:</td>
+					<td><input type="text"size="1" value="+91">&nbsp<input type="text" size="14" placeholder="mobile" id="mob"onchange="mobval()"></td>
+					<td><div class="errormsg" id="moberr"></div></tr>
+				</tr><tr></tr>
+				<tr>
+					<td>PIN CODE</td>
+					<td>:</td>
+					<td><input type="text" placeholder="PIN" id="pin"onchange="pinval()"></td>
+					<td><div class="errormsg" id="pinerr"></div></tr>
+				</tr><tr></tr>
+				<tr>
+				<tr>
+					<td>PASSWORD</td>
+					<td>:</td>
+					<td><input type="text" placeholder="Password" id="pass"onchange="passval()"></td>
+					<td><div class="errormsg" id="passerr"></div></tr>
+				</tr><tr></tr>
+				
+				<tr>
+					<td>PARAMANAT ADDRESS</td>
+					<td>:</td>
+					<td><textarea Rows="5" Cols="20"></textarea></td>
+				</tr><tr></tr>
+				<tr>
+					<td>Is mail address same as permanat address</td>
+					<td>:</td>
+				</tr>
+				<tr>
+					<td><input type="radio"  id="addr" name="yes"  ></input></td>
+					<td><input type="radio"  id="addr1" name="no" ></input></td>
+				</tr>
+					
+				<tr>
+					<td>MAILING ADDRESS</td>
+					<td>:</td>
+					<td><textarea Rows="5" Cols="20"></textarea></td>
+				</tr><tr></tr>
+				
+				<tr>
+					<td>CITY</td>
+					<td>:</td>
+					<td><input type="text" ></input></td>
+				</tr><tr></tr>
+				<tr>
+					<td>STATE</td>
+					<td>:</td>
+					<td><input type="text" ></input></td>
+				</tr><tr></tr>
+				<tr>
+					<td>CONTRY</td>
+					<td>:</td>
+					<td><input type="text" ></input></td>
+				</tr><tr></tr>
+				
+				<tr>
+					
+				
+					<td><input type="submit" ></input></td>
+				</tr><tr></tr>
+				
+			</form>
+					
+					
+					
+			</table>
+			</div>
+
+			
+		
+	</body>
+</html>
+			
+		
+	

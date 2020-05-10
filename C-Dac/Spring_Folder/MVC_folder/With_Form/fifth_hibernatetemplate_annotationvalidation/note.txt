@@ -1,0 +1,1 @@
+validations have to be on getter methods.

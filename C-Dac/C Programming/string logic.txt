@@ -1,0 +1,501 @@
+----------/*reverse string with pointer*/--------
+#include<stdio.h>
+void rev(char *);
+void main()
+{
+char str[60];
+
+
+printf("enter string to reverese");
+scanf("%[^\n]",str);
+
+rev(str);
+
+}
+void rev(char *revstr)
+{
+
+int i,count=0;
+for(i=0;*revstr!='\0';i++)
+{
+revstr++;
+count++;
+}
+printf("%d",count);
+
+for(i=count;i>=0;i--)
+{
+printf("%c",*revstr);
+revstr--;
+
+}
+printf("\n");
+
+}
+
+--------------------------------------------------------------
+
+#include<stdio.h>
+void main()
+{
+
+char str[20];
+int i,j;
+
+printf("enter string");
+scanf("%[^\n]",str);
+
+for(i=0;str[i]!='\0';i++);
+printf("%d",i);
+
+for(j=i;j>=0;j--)
+{
+printf("%c",str[j]);
+
+}
+
+
+
+
+}
+---------------------------------------------------------
+Using pointers write your own functions for the following:
+	a.	String comparison
+	b.	String concatenate
+	c.	String copy
+	d.	String length.
+	
+Note: Do not include <string.h> in your program
+
+
+#include<stdio.h>
+#include<string.h>
+
+int str_comp(char *s1, char *s2);
+void str_cat(char *t, char *s);
+void str_copy(char *t, char *s);
+int str_len(char *s);
+
+int main()
+{
+	char response, str1[40], str2[20];
+	int choice, flag, len;
+
+	do
+	{
+	
+		printf("Choose from the following menu:\n");
+		printf("1. String Comparison\n");
+		printf("2. String Concatenate\n");
+		printf("3. String Copy\n");
+		printf("4. String Length\n");
+		printf("0. Exit\n");
+
+		printf("Enter your choice: ");
+		scanf("%d",&choice);
+		fflush(stdin);
+
+		switch(choice)
+		{
+			case 1:
+					printf("Enter the first string: ");
+					gets(str1);
+					printf("Enter the second string: ");
+					gets(str2);
+					flag=str_comp(str1,str2);
+					if(flag)
+						printf("%dThe two strings are not equal.",flag);
+					else
+						printf("%dThe two strings are equal.",flag);
+					break;
+
+			case 2:
+					printf("Enter the first string: ");
+					gets(str1);
+					printf("Enter the second string: ");
+					gets(str2);
+					str_cat(str1,str2);
+					printf("The concatenated string is %s",str1);
+					break;
+
+			case 3:
+					printf("Enter the string to be copied: ");
+					gets(str1);
+					str_copy(str2,str1);
+					printf("The string entered by you is %s\n",str1);
+					printf("The copied string is %s",str2);
+					break;
+
+			case 4:
+					printf("Enter the string: ");
+					gets(str1);
+					len = str_len(str1);
+					printf("The length of the string is %d.\n",len);
+					break;
+
+			case 0:
+					exit();
+
+			default:
+					printf("Option not present in the menu...");
+		}
+
+	fflush(stdin);
+	printf("\nDo you wish to continue...(Y/N): ");
+	response=getchar();
+	}
+	while(response=='Y' || response=='y');
+
+}
+
+int str_comp(char *s1, char *s2)
+{
+	while(*s1 == *s2)
+	{
+		if(*s1=='\0')
+			return (0);
+		s1++;
+		s2++;
+	}
+	return (*s1-*s2);
+}
+
+void str_cat(char *t, char *s)
+{
+	while(*t != '\0')
+		t++;
+
+	while(*s != '\0')
+	{
+		*t = *s;
+		s++;
+		t++;
+	}
+	*t = '\0';
+}
+
+
+
+
+
+void str_copy(char *t, char *s)
+{
+	while(*s!='\0')
+	{
+		*t = *s;
+		s++;
+		t++;
+	}
+	*t = '\0';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int str_len(char *s)
+{
+	int length = 0;
+
+	while(*s != '\0')
+	{
+		length++;
+		s++;
+	}
+	return (length);
+}
+------------------------------------------------------------
+/*enter a string enter a character find  character is present in string and 
+if present the occurance of char*/
+#include<stdio.h>
+find(char *,char);
+void main()
+{
+
+int ans=0;
+char name[20];
+char c;
+
+printf("enter a string");
+gets(name);
+printf("enter a character to search");
+c=getchar();
+
+ans=find(name,c);
+
+if(ans==0)
+	
+		printf("\ncharacter not found");
+		
+	else
+		printf("\ncharacter %c repeted%d time",c,ans);
+
+
+}
+
+find(char *name,char c)
+{int cnt=0,i;
+
+	for(i=0;name[i]!='\0';i++)
+	{
+	if(*name==c)
+	{
+
+	cnt++;
+		
+	}
+		
+	name++;	
+	}
+
+	return cnt;
+}
+-------------------------------------------------------------
+/*enter a string enter a character find  character is present in string and 
+if present find the occurance of char with pointer*/
+#include<stdio.h>
+void main()
+{
+
+int i,cnt=0;
+char name[20];
+char c;
+
+printf("enter a string");
+gets(name);
+printf("enter a character to search");
+c=getchar();
+
+
+	for(i=0;name[i]!='\0';i++)
+	{
+	if(name[i]==c)
+	{
+
+	cnt++;
+		
+	}
+		
+		
+	}
+
+	if(cnt==0)
+	
+		printf("\ncharacter not found");
+		
+	else
+		printf("\ncharacter %c repeted%d time",c,cnt);
+
+}
+----------------------------------------------------------
+/*enter a string enter a character to delete and print new string without whole*/
+#include<stdio.h>
+find(char *,char);
+void main()
+{
+
+int ans=0;
+char name[20];
+char c;
+
+printf("enter a string");
+gets(name);
+printf("enter a character to search");
+c=getchar();
+
+find(name,c);
+
+
+
+}
+
+find(char *name,char c)
+{int cnt=0,i;
+char left[5];
+char *l=left;
+
+	for(i=0;*name!='\0';i++)
+	{
+	if(*name==c)
+	{
+
+	name++;
+			
+	}
+		else
+		{
+		
+		*l=*name;
+		printf("%c",*l);
+			name++;
+			l++;
+		}
+		
+		
+	}
+
+		
+
+}
+=============with array
+
+#include<stdio.h>
+void main()
+{
+
+char str[11]="vidyanidhi";
+char del='i';
+char newstr[10];
+int i,x=0;
+	
+for(i=0;str[i]!='\0';)
+{
+	if(str[i]==del)
+	{
+	str[i++];
+	}
+	else
+	{
+	newstr[x]=str[i];
+		str[i++];
+	newstr[x++];
+	
+	}
+
+}
+newstr[x]='\0';
+
+
+	printf("%s",newstr);
+
+
+}
+
+--------------------------------------------------------------
+/*Design a function instring(char *str1,char *str2), 
+where instring() searches out the existence of  string str2 in str1 
+and reports the same. It should also display the number of occurrences 
+of str2 in str1. Implement the function in a C-code.*/
+
+#include<stdio.h>
+#include<string.h>
+int instring(char *,char *);
+int main()
+{
+	char str1[80],str2[15];
+	int pos;
+
+	printf("\nEnter String:\n");
+	gets(str1);
+	printf("Enter String to Search:\n");
+	gets(str2);
+	pos=instring(str1,str2);
+	if(pos)
+	printf("\n\nWord occurs %d times.",pos);
+	else
+	printf("\n\nWord not found");
+	getch();
+}
+
+ int instring(char *str1,char *str2)
+{	int i,j,k,cnt=0;
+	int l1=strlen(str1); 9
+	int l2=strlen(str2); 2
+	for(i=0;i<=l1-l2;i++)
+	{	j=0;
+		k=i;
+		while((str1[k]==str2[j])&&(j<l2))
+		{	k++;
+			j++;
+		}
+		if(j==l2)
+{ printf("\nWord \'%s\' Found at position %d to %d",str2, i, i+(l2-1));
+			cnt++;
+		}
+
+	}
+	return cnt;
+}
+------------------------------------------------------
+Write a program to extract the portion of a string 
+and print the extracted string. 
+Assume that m characters are extracted, 
+starting from n character
+
+#include<stdio.h>
+void main()
+{
+int i,j;
+char str[20];
+int start;
+int numchar;
+
+printf("enter string");
+gets(str);
+printf("enter no character to be extracted");
+scanf("%d",&numchar);
+printf("enter starting index for extract");
+scanf("%d",&start);
+
+	for(i=0;str[i]!='\0';i++)
+	{
+
+	if(i==start)
+		for(j=start;j<start+numchar;j++)
+		{
+		
+		printf("%c",str[j]);
+		
+		
+		}
+	
+	}
+
+
+
+
+}
+
+--------------------------------------------------------------
+/*Write a program, which will read a string and rewrite it in the alphabetical order.*/
+#include<stdio.h>
+void main()
+{
+
+char str[20]="acharya";
+char sortstr[20];
+int i,j,k=0;
+int len;
+len=strlen(str);
+printf("%d",len);
+
+for(i=0;i<len-1;i++)
+{
+	for(j=i+1;j<=len-1;j++)
+	{
+		if(str[i]>str[j])
+		{
+		sortstr[k]=str[i];
+		str[i]=str[j];
+		str[j]=sortstr[k];
+		k++;
+		
+		}
+
+	}
+}
+for(i=0;str[i]!='\0';i++)
+printf("%c",str[i]);
+}

@@ -1,0 +1,41 @@
+parameters are used to send some kind of information to the servlet.	
+
+	types of parameters passed to servlet
+
+1) request
+2) init or config
+3) context
+
+request:- these parameters are limited to only a particular request
+
+init or config :- these parameters are shared by all the requests to a particular servlet
+
+context :- these parameters are shared by all the servlets in that particular context (e.g. myapp)
+
+
+request parameters are automatically set in the request.
+init and context parameters need to be explicitly set in the DD.
+
+request parameter can be read by the method "getParameter()".
+
+init or config and context parameters can be read by the method "getInitParameter()".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,130 @@
+#include<stdio.h>
+void binary(int);
+void main()
+{
+	int num;
+	printf("\n Enter no. : ");
+	scanf("%d",&num);4 
+	binary(num);
+}
+
+void binary(int num)
+{	int bin;
+	if(num<=0)
+		return;
+	bin = num % 2;
+	binary(num/2);
+	printf("%d",bin);
+}
+
+
+
+
+ print 1 to 5 using recursive function
+
+
+
+#include<stdio.h>
+void go(int no)
+{
+if(no==1)
+{  return; }
+
+go(--no); //5 4 3  2 1
+printf("%d",no);
+}
+int main()
+{go(6); 
+getch();
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int sum=0;
+void main()
+{
+int no;
+no=123;
+sumdigit(no);
+pf("%d",sum);
+
+}
+void sumdigit(int n)
+{int r;
+
+ if(n==0)
+    return;
+     r=n%10
+	sum=sum+r;
+        sumdigit(n/10);
+}
+
+
+
+int sumdigit(int);
+void main()
+{
+int no,res;
+no=123;
+res=sumdigit(no);
+pf("%d",res);
+}
+
+intsumdigit(int n)
+{
+int r;
+int sum=0;
+ if(n==0)
+   return 0;
+else{
+	 r=n%10
+   return sumdigit(n/10)+r;
+}
+
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+#include<iostream>
+using namespace std;
+class Storage_Device
+{
+public: virtual void save()=0;
+};
+class PenDrive:public Storage_Device
+{ 
+	void save()
+	{
+		cout<<"save of pen drive"<<endl;
+	}
+};
+class CD:public Storage_Device
+{
+	void save()
+	{
+		cout<<"save of cd"<<endl;
+
+	}
+};
+class HD:public Storage_Device
+{
+	void save()
+	{
+		cout<<"save of hd"<<endl;
+	}
+};
+void perform(Storage_Device &ref)
+{
+	try
+	{
+	
+	dynamic_cast<HD&>(ref);
+		 ref.save();
+	}
+	catch(bad_cast &r)
+	{
+		//cout<<"In catch block"<<endl;
+		cout<<r.what()<<endl;
+	}
+}
+void main()
+{
+	PenDrive p;
+	CD c;
+	HD hd;
+	perform(p);
+	perform(c);
+	perform(hd);
+
+getchar();
+}

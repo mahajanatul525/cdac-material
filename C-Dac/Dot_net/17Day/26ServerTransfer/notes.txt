@@ -1,0 +1,7 @@
+
+The following are the differences between Server.Transfer and Response.Redirect
+1. Just like hyperlink and Response.Redirect, Server.Transfer is used to navigate to other pages/sites running on the same web server.
+2. Server.Transfer cannot be used to navigate to sites/pages on a different web server.
+3. Server.Transfer does not change the URL in the address bar
+4. Server.Transfer is faster than Response.Redirect as the redirection happens on the server in one Request/Response cycle. Response.Redirect() involves 2 Request/Response cycles.
+5. With Server.Transfer the Form Variables from the original request are preserved

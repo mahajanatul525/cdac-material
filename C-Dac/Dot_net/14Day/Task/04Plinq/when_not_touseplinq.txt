@@ -1,0 +1,9 @@
+things to be Considered While Using PLINQ
+
+1. The golden rule is to always compare the query performance on a machine imitating the deployment server and with a similar set of production data.
+
+2. Avoid using AsOrdered because this may slow down the performance. This may even make PLINQ to perform slower than the sequential LINQ.
+
+3. Do not use PLINQ on a single core machine as this would be slower than the normal LINQ most times.
+
+4. PLINQ doesn't perform well when the collection is small and the operation delegate is light weighted. This is because PLINQ involves the extra overhead of partitioning the data, creating new threads and merging the resultant data.

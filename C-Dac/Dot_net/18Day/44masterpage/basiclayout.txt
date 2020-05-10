@@ -1,0 +1,54 @@
+<html>
+<head>
+<style type="text/css">
+div.container
+{
+width:100%;
+margin:0px;
+border:1px solid gray;
+
+}
+div.header,div.footer
+{
+padding:0.5em;
+color:white;
+background-color:gray;
+
+}
+h1.header
+{
+padding:0;
+margin:0;
+}
+div.left
+{
+float:left;
+width:160px;
+margin:0;
+padding:1em;
+}
+div.content
+{
+margin-left:190px;
+border-left:1px solid gray;
+padding:1em;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<div class="header"><h1 class="header">Vidyanidhi Infotech Academy</h1></div>
+
+<div class="left"><p>"Never increase, beyond what is necessary, Never increase, beyond what is necessary, the number of entities required to explain anything." </p></div>
+
+<div class="content">
+
+
+</div>
+<div class="footer">Copyright 1999-2005 by vita.</div>
+</div>
+
+</body>
+</html>
+

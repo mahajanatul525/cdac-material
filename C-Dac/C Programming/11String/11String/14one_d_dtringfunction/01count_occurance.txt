@@ -1,0 +1,35 @@
+/*enter a string enter a character find  character is present in string and 
+if present the occurance of char*/
+#include<stdio.h>
+int find(char [],char);
+void main()
+{ int ans=0;
+ char name[20];
+ char c;
+
+   printf("enter a string");
+    gets(name);
+    printf("enter a character to search");
+    c=getchar();
+    ans=find(name,c);
+       if(ans==0)
+	  printf("\ncharacter not found");
+		
+	else
+		printf("\ncharacter %c repeted%d time",c,ans);
+}
+int find(char name[],char c)
+{ int cnt=0,i;
+	for(i=0;name[i]!='\0';i++)
+	{     	if(name[i]==c)
+ 	       cnt++;
+		   
+         }
+
+	return cnt;
+}
+
+
+
+
+

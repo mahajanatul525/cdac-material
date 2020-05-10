@@ -1,0 +1,28 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Num_200`(num1 int,num2 int)
+
+BEGIN
+
+declare prod int;
+
+set prod:=num1*num2;
+
+
+if(prod>200) then
+ select 'Greater than 200';
+
+end if;
+
+if(prod<200) then
+
+ select 'Less than 200';
+ 
+end if;
+ 
+if(prod=200) then
+
+ select 'Equals to 200';
+ 
+end if;
+ 
+
+END

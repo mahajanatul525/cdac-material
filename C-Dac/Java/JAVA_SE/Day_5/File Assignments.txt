@@ -1,0 +1,57 @@
+1) accept as many as numbers from user till he presses "0"  and write these numbers in a file. Now Open a file and read these numbers. ( Hint :- use Scanner class for input, FileOutputStream, DataOutputStream, FileInputStream , DataInputStream)
+
+
+2) create a customer class with following attributes
+	custid
+	custname
+	address
+	age
+create one instance of it and store it in a file. (Serialization).
+now open a file, read the object and read its contents . (Deserialization)
+
+3) write a file copy program using byte streams.
+( FileOutputStream and FileInputStream )
+
+4) Write a file copy program using unicode character streams.
+( FileWriter and FileReader )
+
+5) using RandomAccessFile class create a file.
+accept a message from user and write in a file.
+now read the message which u have stored in a file.
+now again accept a message and write in a file at the end of existing message.
+now read the entire content of file . ( u should be able to read both the messages now)
+
+6) create a class "Car" with some members. ( do not implement "Serializable" for "Car")
+Derive a class "Nano" from it. have some members in "Nano" also. (implement "Serializable")
+instantiate "Nano" and store this instance in a file. (Serialization).
+read the file and read the object of "Nano" .		(Deserialiation) . 
+Observe what happens when u serialize a child class.
+is it persist ur parent class also ? 
+
+7) modify above program so that "Car" members also will be persisted when u serialize "Nano".
+
+8) accept 10 characters from a user ( use Scanner).
+store these 10 characters in a file. (FileWriter)
+Now open a file and read all these characters.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

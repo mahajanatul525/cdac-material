@@ -1,0 +1,12 @@
+D:\dot_net\Day_wise\day3\clonable 08\02CloneablePoint\bin\Debug\CloneablePoint.exe
+D:\dot_net\Day_wise\day3\clonable 08\02CloneablePoint\bin\Debug\CloneablePoint.pdb
+D:\dot_net\Day_wise\day3\clonable 08\02CloneablePoint\obj\Debug\CloneablePoint.exe
+D:\dot_net\Day_wise\day3\clonable 08\02CloneablePoint\obj\Debug\CloneablePoint.pdb
+D:\dot_net\Day_wise\day3\08CloneablePoint\obj\Debug\CloneablePoint.exe
+D:\dot_net\Day_wise\day3\08CloneablePoint\obj\Debug\CloneablePoint.pdb
+D:\dot_net\Day_wise\day3\08CloneablePoint\bin\Debug\CloneablePoint.exe
+D:\dot_net\Day_wise\day3\08CloneablePoint\bin\Debug\CloneablePoint.pdb
+C:\Users\practice\Desktop\Dot_net\day3\08CloneablePoint\obj\Debug\CloneablePoint.exe
+C:\Users\practice\Desktop\Dot_net\day3\08CloneablePoint\obj\Debug\CloneablePoint.pdb
+C:\Users\practice\Desktop\Dot_net\day3\08CloneablePoint\bin\Debug\CloneablePoint.exe
+C:\Users\practice\Desktop\Dot_net\day3\08CloneablePoint\bin\Debug\CloneablePoint.pdb

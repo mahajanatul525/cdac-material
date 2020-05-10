@@ -1,0 +1,1 @@
+Dependency Injection helps in reducing the coupling between the components.

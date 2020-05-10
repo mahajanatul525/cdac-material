@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace datatype
+{
+    class employee
+    {
+        static int id;
+        string ename;
+        int salary;
+        int eid;
+        static employee()
+        {Console.WriteLine("Vidyanidhi Infotech...");}
+
+        public employee(string ename,int salary)
+        {   eid = ++id;
+            this.ename = ename;
+            this.salary = salary;
+       }
+        public void display()
+        { Console.WriteLine("{0}  {1}  {2}", eid, ename, salary); }
+    
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+              employee e1=new employee("Raj",80000);
+            employee e2=new employee("Geeta",90000);
+            e1.display();
+            e2.display();
+            Console.ReadLine();
+        }
+
+
+
+    }
+}

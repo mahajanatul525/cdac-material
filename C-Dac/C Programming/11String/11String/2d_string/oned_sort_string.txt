@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+int main()
+{
+char t;
+int l,i,j;
+
+char ch[10]="Kavita";
+
+for(l=0;ch[l]!='\0';l++);
+
+for(i=0; i<l-1;i++)
+ {
+  for(j=0;j<l-1-i;j++)
+  { 
+     if(ch[j]>ch[j+1])
+     { 
+        t=ch[j];
+      ch[j]=ch[j+1];
+    ch[j+1]=t;
+      }
+  }
+
+
+ }
+
+
+printf("%s",ch);
+
+}

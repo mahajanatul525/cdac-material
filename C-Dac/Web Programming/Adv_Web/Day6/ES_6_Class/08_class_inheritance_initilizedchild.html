@@ -1,0 +1,44 @@
+<script>
+"use strict"
+function person(nm,ag)
+{  if(this instanceof person)
+  { this.name=nm;
+  this.age=ag;
+  alert(this.constructor)
+  this.speak=function(){return " cry";}
+ 
+ }
+else 
+throw new TypeError("Check this is not a function");
+}
+person.prototype.display=function(){ return " parent classmethod data   "; }
+person.prototype.walk=function(){ return
+ " Person can walk "}
+person.prototype.toString=function()
+{return this.name+"  "+this.age+"  "+ this.walk()}
+
+function child(nm,ag)
+{aler(this)
+person.call(this,nm,ag);
+
+ //this.speak=function(){return " uh...ooooa uh ..oooa";};
+}
+child.prototype=Object.create(person.prototype);
+child.prototype.walk=function(){ return 
+" child can crawl "}
+
+var c=new child("rohan",60); //child got access to parent method
+console.log(c.display());
+console.log(c);
+document.write(c.speak());
+document.write(c.display());
+</script>
+<pre>
+<h3> we can use
+person.call(this,nm,ag);
+ie. parent class name.call()
+1st parameter refere to current object(1st parameter has to be of type object
+and rest value to initialised
+)
+</h3>
+</pre>

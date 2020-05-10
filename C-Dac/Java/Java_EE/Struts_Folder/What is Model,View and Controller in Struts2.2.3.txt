@@ -1,0 +1,5 @@
+Model		Action classes
+
+View		Jsp files
+
+Controller	StrutsPrepareAndExecuteFilter

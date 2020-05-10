@@ -1,0 +1,39 @@
+﻿@using System.Collections
+
+
+<script>
+    $(function(){
+        $.ajax({
+            type: "get",
+            contentType:"application/json; charset=utf-8",
+            url: "@Url.Action("Getstates","Home")",
+            datatype:"JSON",
+            success: function (data) {
+                $.each(data, function (index,value) {
+                    $('#state_id').append('<option value="' + value.state_id + '">' + value.state_name + '</option>');
+                });
+            },
+            
+            error: function ajaxError(response) {
+                alert(response.status + ' ' + response.statusText);}
+        });
+        $('#state_id').change(function () {
+            $('#city_id').empty();
+           
+            $.ajax({
+                type: "get",
+                contentType: "application/json; charset=utf-8",
+                url: "@Url.Action("Getcitybystateid","Home")", datatype: "JSON",
+                data: { state_id: $('#state_id').val() },
+                success:function(data)
+                {
+                    $.each(data, function (index, value) { $('#city_id').append('<option value="' + value.city_id + '">' + value.city_name + '</option>'); });
+                },
+                error: function ajaxError(response) {
+                    alert(response.status + ' ' + response.statusText);
+                }
+            });
+        });
+    });
+    </script>
+                 

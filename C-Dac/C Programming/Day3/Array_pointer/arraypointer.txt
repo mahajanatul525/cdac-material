@@ -1,0 +1,39 @@
+#include<stdio.h>
+void main()
+{ int i,*p;
+ int arr[5]={5,7,9,2,1};
+
+ printf("%u",arr);//base address 2002
+
+ printf("%d",*arr);//5
+
+//printf("%d",++arr);//err
+
+printf("%U",&arr[0])//2002
+
+printf("%d",arr[2]);//9
+
+printf("%d",*(arr+2));//9
+
+p=arr;  
+
+for(i=0;i<5;i++)
+{
+printf("%d",arr[i]);
+printf("%d",i[arr]);
+printf("%d",*(arr+i))
+printf("%d",*p);
+p++;
+}
+
+
+}
+
+
+
+
+
+
+
+
+

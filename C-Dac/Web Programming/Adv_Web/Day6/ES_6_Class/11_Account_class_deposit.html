@@ -1,0 +1,33 @@
+<script>
+"use strict"
+function Account(nm,amt)
+{
+ Account.id=++Account.id||1
+ if(this instanceof Account)
+ {
+  this.name=nm;
+  this.balance=amt;
+  this.id=Account.id;
+  return this;
+ }
+else 
+throw new TypeError("Check this is not a function");
+}
+Account.prototype.toString=function()
+{
+return this.name + " "+this.balance+ " "
++ this.id}
+Account.prototype.deposit=function(amt){
+if(amt>0)
+this.balance+=amt;
+}
+
+var obj1=new Account("raj",8000);
+console.log(obj1);
+document.write(obj1);
+var x=new Account("mona",90);
+console.log(x);
+document.write(x);
+x.deposit(5000);
+document.write("Amount after deposit"+x);
+</script>

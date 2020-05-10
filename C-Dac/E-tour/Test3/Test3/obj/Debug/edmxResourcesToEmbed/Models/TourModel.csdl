@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="e_tourModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="e_tourEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Bills" EntityType="e_tourModel.Bill" />
+    <EntitySet Name="Costs" EntityType="e_tourModel.Cost" />
+    <EntitySet Name="Dates" EntityType="e_tourModel.Date" />
+    <EntitySet Name="Itenaries" EntityType="e_tourModel.Itenary" />
+    <EntitySet Name="Registrations" EntityType="e_tourModel.Registration" />
+    <EntitySet Name="Tours" EntityType="e_tourModel.Tour" />
+    <AssociationSet Name="FK_Bill_ToTable" Association="e_tourModel.FK_Bill_ToTable">
+      <End Role="Registration" EntitySet="Registrations" />
+      <End Role="Bill" EntitySet="Bills" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Bill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="EmailID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Contact" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SubCatID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CatID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NDays" Type="Int32" Nullable="false" />
+    <Property Name="TAdultCost" Type="Double" Nullable="false" />
+    <Property Name="TChildCost" Type="Double" />
+    <Property Name="CatName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FCost" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Registration" Relationship="e_tourModel.FK_Bill_ToTable" FromRole="Bill" ToRole="Registration" />
+  </EntityType>
+  <EntityType Name="Cost">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CatID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SubCatID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AdultCost" Type="Double" Nullable="false" />
+    <Property Name="ChildCost" Type="Double" />
+    <Property Name="CWB" Type="Double" />
+    <Property Name="CatName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Date">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CatID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SubCatID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CatName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NDays" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Itenary">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SubCatID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Itn" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CatName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CatID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Registration">
+    <Key>
+      <PropertyRef Name="EmailID" />
+    </Key>
+    <Property Name="EmailID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Contact" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Bills" Relationship="e_tourModel.FK_Bill_ToTable" FromRole="Registration" ToRole="Bill" />
+  </EntityType>
+  <EntityType Name="Tour">
+    <Key>
+      <PropertyRef Name="CatID" />
+      <PropertyRef Name="SubCatID" />
+      <PropertyRef Name="CatName" />
+    </Key>
+    <Property Name="CatID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SubCatID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CatName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ImgPath" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="YN" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Bill_ToTable">
+    <End Role="Registration" Type="e_tourModel.Registration" Multiplicity="1" />
+    <End Role="Bill" Type="e_tourModel.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registration">
+        <PropertyRef Name="EmailID" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="EmailID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

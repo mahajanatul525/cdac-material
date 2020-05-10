@@ -1,0 +1,44 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class parent
+{
+	public:
+	
+		parent(int k)
+		{
+			cout<<"parent param const"<<k<<endl;
+		}
+		disp1()
+		disp2()
+		disp3()
+		disp4()
+};
+class sub:parent
+{
+	public:
+		sub(int n)
+		{
+			cout<<"sub param const"<<n<<endl;
+		}
+		
+		
+		parent::disp3;
+		parent::disp1;
+
+		void disp5()
+		{
+			cout<<"hello"<<endl;
+		}
+};
+int main()
+{
+	//make sure u can do the following
+
+sub s(30);
+s.disp5();
+s.disp3();
+s.disp1();
+
+getch();
+}

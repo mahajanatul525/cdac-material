@@ -1,0 +1,36 @@
+class base
+{
+	public:
+		virtual void disp()
+		{
+			cout<<"base disp"<<endl;
+		}
+};
+class sub:public base
+{
+	public:
+		void disp()
+		{
+			cout<<"sub disp"<<endl;
+		}
+};
+int main()
+{
+	base *b1=new sub;
+
+	b1->disp(); // late binding
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

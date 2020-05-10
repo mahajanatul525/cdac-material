@@ -1,0 +1,28 @@
+<script>
+"use strict"
+function Account(nm,amt)
+{
+ if(this instanceof Account)
+ {
+  this.name=nm;
+  this.balance=amt;
+  return this;
+ }
+
+else 
+
+throw new TypeError("Check this is not a function");
+
+}
+Account.prototype.toString=function()
+{
+return this.name + " "+this.balance
+}
+
+var obj1=new Account("raj",8000);
+console.log(obj1);
+document.write(obj1);
+var x=new Account("mona",90);
+console.log(x);
+document.write(x);
+</script>

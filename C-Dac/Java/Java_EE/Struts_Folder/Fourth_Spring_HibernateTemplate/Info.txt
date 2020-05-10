@@ -1,0 +1,3 @@
+@Validation annotation is needed to tell Struts that actions in this class might need to be validated. 
+
+The @VisitorFieldValidator is telling Struts that the person object properties need validation. 

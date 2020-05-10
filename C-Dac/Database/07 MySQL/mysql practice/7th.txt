@@ -1,0 +1,23 @@
+CREATE DEFINER=`root`@`localhost` FUNCTION `ntodate`(i int) RETURNS varchar(50) CHARSET latin1
+BEGIN
+declare str varchar(50);
+declare j int;
+set str:='';
+
+if(i>365) then
+set j:=i/365;
+
+set str:=concat(str,j,' ','year');
+
+end if;
+set i:=i%365;
+if(i>7) then
+set j:=i/7;
+set str:=concat(str,j,' ','weeks');
+end if;
+set i:=i%7;
+if(i>0) then
+set str:=concat(str,i,' ','days');
+end if;
+RETURN str;
+END

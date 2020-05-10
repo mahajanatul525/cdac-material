@@ -1,0 +1,31 @@
+#include<stdio.h>
+int str_comp(char *,char *);
+void main()
+{ char str1[20],str2[20];
+int ans;
+	puts ("enter string");
+	gets(str1);
+	puts("enter string to compare");
+	gets(str2);
+		ans=str_comp(str1,str2);
+	if(ans==0)
+
+	printf("string are same");
+		else
+	printf(" not string are same");
+}
+
+int str_comp(char *s1, char *s2)
+{	while(*s1 == *s2)
+	{	if(*s1=='\0')
+			return (0);
+		s1++;
+		s2++;
+	}
+	return (*s1-*s2); }
+
+
+
+
+
+

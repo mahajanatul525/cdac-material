@@ -1,0 +1,38 @@
+class MyClass
+{
+	private:
+		int num;
+	public:
+		MyClass(int num)
+		{
+			this->num=num;
+		}
+		int getNum()
+		{
+			return num;
+		}
+};
+int main()
+{
+	MyClass m1(100);
+	cout<<m1.getNum()<<endl;
+	// m1.num=200; Error
+	
+	int *ptr=(int*)&m1; // address of m1 and num
+	*ptr=200;
+	cout<<m1.getNum()<<endl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

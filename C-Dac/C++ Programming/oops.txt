@@ -1,0 +1,1209 @@
+Question 1
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+In the following example how many times constructors and destructors are invoked ?
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+public:
+
+   myclass disp1()
+
+   {
+
+          return myclass();
+
+   }
+
+   myclass()
+
+   {
+
+          cout<<"in def const\n";
+
+   }
+
+   myclass(myclass &ref)
+
+   {
+
+          cout<<"in copy const";
+
+   }
+
+   ~myclass()
+
+   {
+
+          cout<<"in dest\n";
+
+   }
+
+};
+
+void main()
+
+{
+
+   myclass m1;
+
+   m1.disp1();
+
+}
+
+Select one:
+a. 3     3
+b. 2     2 Correct
+c. 4     3
+d. 2     3
+Feedback
+Your answer is correct.
+
+The correct answer is: 2     2
+Question 2
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+How to call “disp2” from “disp1”  ?
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+public:
+
+   void disp1()
+
+   {
+
+          //here
+
+   }
+
+   void disp2()
+
+   {
+
+   }
+
+};
+
+void main()
+
+{
+
+   myclass m;
+
+}
+
+Select one:
+a. m.disp2() Incorrect
+b. disp1()
+c. not possible
+d. disp1()   or  m.disp1()
+Feedback
+Your answer is incorrect.
+
+The correct answer is: disp1()
+Question 3
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+How will u call “disp” member function ?
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+public:
+
+   void disp()
+
+   {
+
+   }
+
+};
+
+void main()
+
+{
+
+   myclass m=new myclass;
+
+   // here
+
+}
+
+Select one:
+a. m.disp() Incorrect
+b. error
+c. disp()
+d. myclass.disp()
+e. m->disp()
+Feedback
+Your answer is incorrect.
+
+The correct answer is: error
+Question 4
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+In the following example how many times constructors and destructors are invoked ?
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+public:
+
+   myclass disp1()
+
+   {
+
+          myclass m;
+
+          return m;
+
+   }
+
+   myclass()
+
+   {
+
+          cout<<"in def const\n";
+
+   }
+
+   myclass(myclass &ref)
+
+   {
+
+          cout<<"in copy const";
+
+   }
+
+   ~myclass()
+
+   {
+
+          cout<<"in dest\n";
+
+   }
+
+};
+
+void main()
+
+{
+
+   myclass m1;
+
+   m1.disp1();
+
+}
+
+Select one:
+a. 2     3
+b. 2     2 Incorrect
+c. 4    3
+d. 3     3
+Feedback
+Your answer is incorrect.
+
+The correct answer is: 3     3
+Question 5
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+In the following example, how will u  call “disp2”  from  main()  and  from disp1()  respectively ?
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+public:
+
+   void disp1()
+
+   {
+
+          // here
+
+   }
+
+   void disp2()
+
+   {
+
+   }
+
+};
+
+void main()
+
+{
+
+   myclass m1;
+
+   // here
+
+}
+
+Select one:
+a. m1.disp2();     m1.disp2();
+b. disp2();          m1.disp2();
+c. disp2();          disp2();
+d. m1.disp2();        disp2(); Correct
+Feedback
+Your answer is correct.
+
+The correct answer is: m1.disp2();        disp2();
+Question 6
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will be called in the following code ?
+
+ 
+
+myclass m1;
+
+myclass m2(m1);
+
+Select one:
+a. parameterized constructor and  =operator
+b. default and copy constructor both
+c. parameterized constructor only
+d. copy constructor only Incorrect
+e. default and paramterized constructor
+Feedback
+Your answer is incorrect.
+
+The correct answer is: parameterized constructor and  =operator
+Question 7
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Which constructors are required for the following ? (do not consider “default arguments” )
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+public:
+
+   // here
+
+};
+
+void main()
+
+{
+
+   myclass m1(40);
+
+   myclass m2(10,20);
+
+   myclass *m3=new myclass;
+
+}
+
+Select one:
+a. no-arg,one parameter and two parameter
+b. no-arg, one parameter
+c. one parameter and two parameter Incorrect
+d. one parameter only
+e. two parameter only
+Feedback
+Your answer is incorrect.
+
+The correct answer is: no-arg,one parameter and two parameter
+Question 8
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What is the output ?
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+private:
+
+     static int b;
+
+public:
+
+     static void fun()
+
+     {
+
+            this->b=50;
+
+            cout<<b;
+
+     }
+
+     myclass()
+
+     {
+
+            b=100;
+
+     }
+
+};
+
+int myclass::b=200;
+
+void main()
+
+{
+
+     myclass::fun();
+
+}
+
+Select one:
+a. error
+b. 200 Incorrect
+c. 100
+d. 50
+Feedback
+Your answer is incorrect.
+
+The correct answer is: error
+Question 9
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Given the following class how many ways we can invoke “disp()” ?
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+public:
+
+   static void disp()
+
+   {
+
+          cout<<"disp";
+
+   }
+
+};
+
+(i)           myclass().disp();
+
+(ii)       myclass::disp();
+
+(iii)   myclass m;    m.disp();
+
+(iv)    myclass *m1=new myclass;    m1->disp();
+
+myclass *m2=new myclass(30);    m2->disp();
+
+Select one:
+a. i  ii  iii
+b. i  ii  iii iv
+c. i  ii
+d. i  ii  iii iv  v Incorrect
+Feedback
+Your answer is incorrect.
+
+The correct answer is: i  ii  iii iv
+Question 10
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will happen to the following code ?
+
+#include<iostream.h>
+
+class sample
+
+{
+
+private:
+
+   int num1;
+
+   const int num2;
+
+public:
+
+   sample():num2(0)
+
+   {
+
+   }
+
+   sample(int k):num2(k)
+
+   {
+
+   }
+
+   void disp()
+
+   {
+
+          // some code
+
+   }
+
+   sample(sample &ref)
+
+   {
+
+   }
+
+};
+
+void main()
+
+{
+
+   sample s1;
+
+   sample s2;
+
+}
+
+Select one:
+a. warning
+b. successful output
+c. runtime error
+d. compilation error Correct
+Feedback
+Your answer is correct.
+
+The correct answer is: compilation error
+Question 11
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What is the output ?
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+private:
+
+     static int b;
+
+public:
+
+     static void fun()
+
+     {
+
+            b=90;
+
+            cout<<b;
+
+     }
+
+     myclass()
+
+     {
+
+            this->b=100;
+
+     }
+
+};
+
+void main()
+
+{
+
+     myclass m;
+
+     m.fun();
+
+}
+
+Select one:
+a. 100
+b. Compilation error
+c. linking error
+d. 90 Incorrect
+Feedback
+Your answer is incorrect.
+
+The correct answer is: linking error
+Question 12
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+select a correct statement from the following
+
+Select one:
+a. static can access non-static
+b. copy constructor must be having class reference as an argument. Correct
+c. const need not be initialized
+d. non-static can not access static
+e. Static need not be defined outside the class
+Feedback
+Your answer is correct.
+
+The correct answer is: copy constructor must be having class reference as an argument.
+Question 13
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+In the following code which is the most appropriate way of calling disp1 and disp2 respectively ?
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+public:
+
+   void disp1()
+
+   {
+
+   }
+
+   static void disp2()
+
+   {
+
+   }
+
+};
+
+void main()
+
+{
+
+   myclass m1;
+
+   // here
+
+}
+
+Select one:
+a. myclass::disp1();    m1.disp2();
+b. m1.disp1();    myclass::disp2();
+c. m1.disp1();   m1.disp2(); Incorrect
+d. myclass() .disp2();   m1.disp1();
+Feedback
+Your answer is incorrect.
+
+The correct answer is: m1.disp1();    myclass::disp2();
+Question 14
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will be the output ?
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+private:
+
+     int num;
+
+public:
+
+     static void fun()
+
+     {
+
+            num=40;
+
+            cout<<num<<endl;
+
+     }
+
+     myclass(int num)
+
+     {
+
+            this->num=num;
+
+     }
+
+};
+
+void main()
+
+{
+
+     myclass m1(100);
+
+     m1.fun();
+
+    
+
+}
+
+Select one:
+a. 40
+b. 60
+c. 100 Incorrect
+d. error
+e. 140
+Feedback
+Your answer is incorrect.
+
+The correct answer is: error
+Question 15
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will be called in the following code ?
+
+ 
+
+myclass m2(30);
+
+m2=m1;
+
+Select one:
+a. parameterized constructor and  =operator
+b. parameterized and copy constructor both Incorrect
+c. parameterized constructor only
+d. copy constructor only
+e. paramterized and default constructor
+Feedback
+Your answer is incorrect.
+
+The correct answer is: parameterized constructor and  =operator
+Question 16
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What is the output ? (Assume 32 bit architecture)
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+private:
+
+   int num1;
+
+   int num2;
+
+};
+
+void main()
+
+{
+
+   myclass *ptr=new myclass;
+
+   cout<<sizeof(*ptr)<<endl;
+
+   cout<<sizeof(ptr)<<endl;
+
+}
+
+Select one:
+a. 8     4
+b. 4       8
+c. 4     12
+d. 4       4 Incorrect
+Feedback
+Your answer is incorrect.
+
+The correct answer is: 8     4
+Question 17
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will be the output ?
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+public:
+
+     static myclass disp1()
+
+     {
+
+            cout<<" in disp1"<<endl;
+
+            return myclass();
+
+     }
+
+     myclass(myclass &ref)
+
+     {
+
+            cout<<"in copy const";
+
+     }
+
+};
+
+void main()
+
+{
+
+     myclass::disp1();
+
+}
+
+Select one:
+a. in disp1
+b. in disp1       in copy const Incorrect
+c. error
+d. in copy const
+Feedback
+Your answer is incorrect.
+
+The correct answer is: error
+Question 18
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+How will u call “disp1()”  from  “disp2()”  ?
+
+#include<iostream.h>
+
+class myclass1
+
+{
+
+public:
+
+   void disp1()
+
+   {
+
+         
+
+   }
+
+};
+
+class myclass2
+
+{
+
+public:
+
+   void disp2()
+
+   {
+
+          //here
+
+   }
+
+};
+
+void main()
+
+{
+
+}
+
+Select one:
+a. not possible Incorrect
+b. myclass m;   m .disp1()
+c. myclass1.disp1()
+d. disp1()
+Feedback
+Your answer is incorrect.
+
+The correct answer is: myclass m;   m .disp1()
+Question 19
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What is the output ?
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+private:
+
+     static int b;
+
+public:
+
+     static void fun()
+
+     {
+
+            b=200;
+
+            cout<<b<<endl;
+
+     }
+
+     myclass()
+
+     {
+
+            this->b=50;
+
+     }
+
+};
+
+int myclass::b=300;
+
+void main()
+
+{
+
+     myclass::fun();
+
+}
+
+Select one:
+a. 300 Incorrect
+b. 50
+c. 200
+d. error
+Feedback
+Your answer is incorrect.
+
+The correct answer is: 200
+Question 20
+Incorrect
+Mark 0.00 out of 1.00
+ FlaggedRemove flag
+Question text
+What will happen ?
+
+#include<iostream.h>
+
+class myclass1
+
+{
+
+private:
+
+   int num;
+
+public:
+
+   myclass1()
+
+   {
+
+          cout<<"def const\n";
+
+   }
+
+   myclass1(int k)
+
+   {
+
+          cout<<"param const\n";
+
+   }
+
+};
+
+void main()
+
+{
+
+   myclass1 m[2]={50,60};
+
+}
+
+Select one:
+a. both the given constructors will be called.
+b. error:  there is no constructor which accepts 2 parameters Incorrect
+c. it will call parameterized const
+d. it will call def const
+Feedback
+Your answer is incorrect.
+
+The correct answer is: it will call parameterized const
+Question 21
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+What will happen ?
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+private:
+
+   int num;
+
+public:
+
+   myclass(int num)
+
+   {
+
+          num=num;
+
+   }
+
+   void disp()
+
+   {
+
+          cout<<num;
+
+   }
+
+};
+
+void main()
+
+{
+
+   myclass m1(40);
+
+   m1.disp();
+
+}
+
+ 
+
+Select one:
+a. output 40
+b. garbage
+c. warning
+d. error
+Feedback
+Your answer is incorrect.
+
+The correct answer is: garbage
+Question 22
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+which instance is invalid ?
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+public:
+
+   myclass(int k)
+
+   {
+
+   }
+
+};
+
+void main()
+
+{
+
+   myclass *m=new myclass(30);
+
+   myclass m1(40);
+
+   myclass m2;
+
+}
+
+Select one:
+a. m
+b. all are invalid
+c. all are valid
+d. m2
+e. m1
+Feedback
+Your answer is incorrect.
+
+The correct answer is: m2
+Question 23
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+Copy constructor will be called  Yes/No in the following code:
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+public:
+
+void fun(myclass &ob)
+
+{
+
+}
+
+};
+
+void main()
+
+{
+
+myclass m1;
+
+m1.fun(m1);
+
+}
+
+Select one:
+a. Yes
+b. No
+Feedback
+Your answer is incorrect.
+
+The correct answer is: No
+Question 24
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+How will u call “disp” member function ?
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+public:
+
+   void disp()
+
+   {
+
+   }
+
+};
+
+void main()
+
+{
+
+   myclass *m=new myclass;
+
+   // here
+
+}
+
+Select one:
+a. m->disp()
+b. disp()
+c. myclass.disp()
+d. m.disp()
+Feedback
+Your answer is incorrect.
+
+The correct answer is: m->disp()
+Question 25
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+How will u call “disp” member function ?
+
+#include<iostream.h>
+
+class myclass
+
+{
+
+public:
+
+   void disp()
+
+   {
+
+   }
+
+};
+
+void main()
+
+{
+
+   myclass m;
+
+   // here
+
+}
+
+Select one:
+a. m->disp()
+b. disp()
+c. myclass.disp()
+d. m.disp()
+Feedback
+Your answer is incorrect.
+
+The correct answer is: m.disp()

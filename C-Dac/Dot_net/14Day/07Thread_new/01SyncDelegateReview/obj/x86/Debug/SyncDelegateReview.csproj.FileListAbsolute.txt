@@ -1,0 +1,14 @@
+D:\dot_net\Day_wise\Code\Chapter 19\01SyncDelegateReview\bin\Debug\SyncDelegateReview.exe
+D:\dot_net\Day_wise\Code\Chapter 19\01SyncDelegateReview\bin\Debug\SyncDelegateReview.pdb
+D:\dot_net\Day_wise\Code\Chapter 19\01SyncDelegateReview\obj\x86\Debug\SyncDelegateReview.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\Code\Chapter 19\01SyncDelegateReview\obj\x86\Debug\SyncDelegateReview.exe
+D:\dot_net\Day_wise\Code\Chapter 19\01SyncDelegateReview\obj\x86\Debug\SyncDelegateReview.pdb
+D:\dot_net\Day_wise\day6\Thread_new\01SyncDelegateReview\obj\x86\Debug\SyncDelegateReview.exe
+D:\dot_net\Day_wise\day6\Thread_new\01SyncDelegateReview\obj\x86\Debug\SyncDelegateReview.pdb
+D:\dot_net\Day_wise\day6\05Thread_new\01SyncDelegateReview\obj\x86\Debug\SyncDelegateReview.exe
+D:\dot_net\Day_wise\day6\05Thread_new\01SyncDelegateReview\obj\x86\Debug\SyncDelegateReview.pdb
+D:\dot_net\Day_wise\day6\05Thread_new\01SyncDelegateReview\bin\Debug\SyncDelegateReview.exe
+D:\dot_net\Day_wise\day6\05Thread_new\01SyncDelegateReview\bin\Debug\SyncDelegateReview.pdb
+D:\dot_net\Day_wise\day6\05Thread_new\01SyncDelegateReview\obj\x86\Debug\SyncDelegateReview.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day6\07Thread_new\01SyncDelegateReview\obj\x86\Debug\SyncDelegateReview.exe
+D:\dot_net\Day_wise\day6\07Thread_new\01SyncDelegateReview\obj\x86\Debug\SyncDelegateReview.pdb

@@ -1,0 +1,123 @@
+Debugging is a vital part of programming. Whenever a program doesn't do what you expect, you should turn to the debugger to see what's really going on.
+
+A debugger provides tools to help you efficiently find bugs in your program
+
+The primary weapon at your disposal for debugging is the ability to examine the values of variables at various locations in your program. A debugger helps you with this by allowing you to stop the program mid-execution, examine a variable's value, and continue the execution from where it was stopped. Most debuggers provide the following features in some form: 
+·	breakpoints: specify one or more points where the program execution will stop 
+·	step-by-step execution: execute the program one statement at a time 
+·	view variables: examine the current value of a variable, in the middle of the program's execution 
+A typical debugging scenario involves stopping the program a location just before something goes wrong and then stepping through the program, examining the value of the relevant variables, until the problem is found
+
+
+
+Probably the most important word in debugging is breakpoint. A breakpoint is a spot in your program, a single line of code, where you would like to pause. Perhaps you are wondering how many times a loop is executed, whether control transfers inside a certain if statement, or whether a function is even called. Setting a breakpoint on a line will make execution stop when that line is about to be executed. At that point you may want the program to be off and running again or want to move through your code a line or so at a time. You may want to know some of your variables' values or see how control transferred to this point by examining the call stack. Often, you'll spot the cause of a bug and correct your code on the spot.
+
+Breakpoints are used to pause the program's execution at a particular point. 
+
+
+A breakpoint tells the debugger that an application should break (pause execution) at a certain point or when a certain condition occurs. When a break occurs, your program and the debugger are said to be in break mode. 
+
+
+
+When it's time to move along, there are a number of ways you might like execution to resume. These are explained in the following list:
+·	Go--Execute to the next breakpoint or, if there are no more breakpoints, until the program completes. 
+·	Restart--Start again from the beginning. 
+·	Step Over--Execute only the next statement, and then pause again. If it is a function call, run the whole function and pause after returning from it. 
+·	Step Into--Execute just the next statement, but if it is a function, go into it and pause before executing the first statement in the function. 
+·	Step Out--Execute the rest of the current function and pause in the function that called this one. 
+·	Run to Cursor--Start running and stop a few (or many) lines from here, where the cursor is positioned. 
+
+
+When you start debugging, the Build menu disappears and a Debug menu appears.
+
+
+Setting Breakpoints
+Probably the simplest way to set a breakpoint is to place the cursor on the line of code where you would like to pause. Then, toggle a breakpoint by pressing F9 or by clicking the Insert/Remove Breakpoint button on the Build MiniBar, which looks like an upraised hand (you're supposed to think "Stop!"). A red dot appears in the margin to indicate you have placed a breakpoint here
+
+
+You can also set conditional breakpoints, such as break on this line when i exceeds 100, that spare you from mindlessly clicking Go, Go, Go until you have been through a loop 100 times.
+
+It is also possible to set conditional breakpoints; a conditional breakpoint is a breakpoint, which has an attached condition - the breakpoint stops execution only if the condition is true when the breakpoint statement is reached. To create a conditional breakpoint: 
+·	set a breakpoint at the desired statement. 
+·	display the Breakpoint window (see above). 
+·	set the condition in the breakpoint condition field in this window by 
+·	clicking in the condition button appearing on the window and typing in the conditional expression.
+ Conditional breakpoints are useful for stopping when a variable has (or does not have) a certain value or for stopping inside a loop after a certain number of iterations. Note that the conditional expression should only involve variables which are defined within the scope containing the breakpoint statement.
+
+Viewing Breakpoints
+The current breakpoints are listed in the breakpoint dialog box (Edit->Breakpoints or alt-F9). They are also marked by large reddish dots in the source window. 
+
+Disabling and Removing Breakpoints
+Disabling a breakpoint allows the breakpoint to remain set, but no longer causes the program to stop at that point. (This is useful for temporarily removing a breakpoint.) Right-click on the breakpoint's reddish dot or on the line containing the breakpoint, and choose "Disable Breakpoint" from the menu. The reddish dot will turn white. Re-enable the breakpoint by right-clicking and choosing "Enable Breakpoint". 
+
+Remove a breakpoint when you are done with it. Right-click on the breakpoint's reddish dot or on the line containing the breakpoint, and choose "Remove Breakpoint" from the menu. The dot will disappear. 
+
+
+
+The Watch window and the Variable window make it easy to know the values of all your variables.
+You can also modify the values of variables in a watch window
+
+The Variables window shows the name and value of the variables visible at the point where the program execution is paused. (The Variables window should appear below the source window when the debugger starts - if it doesn't, use View->Debug Windows->Variables or alt-4.) 
+ 
+The three tabs at the bottom of the window let you adjust which variables are shown: 
+
+·	"Auto" shows variables used in the current statement and the previous statement. 
+·	"Locals" shows all of the variables local to the current function, that is, variables declared in the function and the function's parameters. 
+·	"This" shows the value of instance variables of the current object, when the program is paused inside a member method of a class. It is not relevant for free functions. 
+
+Recently-changed values are shown in red. 
+
+The Context box at the top of the window lets you switch between the different "contexts" of the program i.e. the current function, the caller of the current function, the caller of the caller, and so on, up to main. As you switch between contexts, the view in the source window changes to show you where the program is paused. The variables displayed are also updated accordingly. 
+
+Double-clicking a function name in the call stack or the context drop-down box of the Variables window doesn't make any code execute: It simply gives you a chance to examine the local variables and code of the functions that called the function now executing. 
+
+Adding a Watched Variable or Expression
+
+Double-click on an empty box in the Name column in the Watch window, and enter the variable or expression. A value will be displayed in the Value column when the variable or expression is in scope. 
+
+Changing a Watched Variable or Expression
+Double-click on the variable or expression in the Watch window that you want to change, and edit. 
+
+Removing a Watched Variable or Expression
+Double-click on the variable or expression in the Watch window that you want to change, and delete the text. 
+
+
+
+Quick Watch is used to display the current value of the selected expression. Available only in break mode.Use this command to check the current value of a variable, property, or other expression for which you have not defined a watch expression. Select the expression from either the Code window or the Immediate window, and then choose the Quick Watch command. To add a watch expression based on the expression in the Quick Watch dialog box, choose the Add button.
+
+Move the mouse over a variable name, like i or j. A DataTip appears, telling you the current value of this variable. You can check as many local variables as you want like this, then continue executing, and check them again. 
+
+There are other ways, though, to examine variable values.
+
+You could click on the variable (or move the cursor to it some other way) and choose Debug, QuickWatch or click the QuickWatch button (a pair of glasses) on the toolbar. This brings up the QuickWatch window, which shows you the value of a variable or expression and lets you add it to the Watch window, if you want. You're probably wondering why anyone uses this feature now that DataTips will show you a variable's value without even clicking. DataTips can't handle expressions.
+
+The QuickWatch dialog box evaluates expressions. You add them to the Watch window by clicking Add Watch.
+
+
+ 
+Running the Debug Build
+If the program is not currently running under the debugger, the debugger must be started. There are three options: 
+·	Build->Start Debug->Go (or F5) will cause the program to run until a breakpoint is encountered. If there are no breakpoints, the program will run to completion and the debugger will exit. 
+·	Build->Start Debug->Step Into (or F11) pauses the program at the first statement in main. 
+·	Build->Start Debug->Run to Cursor (or ctrl-F10) causes the program to run until it encounters the line where the cursor is. If the line is not reached, the program will run to completion and the debugger will exit. 
+If the program has been started under the debugger and is currently paused, execution can be continued in several ways: 
+·	Debug->Restart (or ctrl-shift-F5) starts the program over from the beginning, and pauses the program at the first statement in main. 
+·	Debug->Go (or F5) will cause the program to run until the next breakpoint is encountered. If there are no further breakpoints, the program will run to completion and the debugger will exit. 
+·	Debug->Run to Cursor (or ctrl-F10) causes the program to run until it encounters the line where the cursor is. If the line is not reached, the program will run to completion and the debugger will exit. 
+·	Debug->Step Into (or F11) causes the next statement in the program to be executed. If the next statement is a function call, the program is paused at the beginning of the function. 
+·	Debug->Step Over (or F10) causes the next statement in the program to be executed. If the next statement is a function call, the entire function is executed and the program is paused after the function returns. 
+·	Debug->Step Out (or shift-F11) causes the program to continue execution until the current function completes, and pauses the program after the function returns. (Note: this may be very slow if the function contains a loop.) 
+
+A yellow arrow in the left margin shows the current point of execution. In all cases, if a breakpoint is encountered before the program would otherwise stop, execution is paused at the breakpoint. 
+For step-by-step execution, you should generally use Step Over unless you want to debug a particular function call. If you find yourself in a function you don't want to step through (e.g. you used Step Into on a statement involving cout), use Step Out to get you out of it. 
+
+Stopping Program Execution
+
+You can stop the execution of the program with Debug->Break. This pauses the program at the current statement. (This is useful if the program gets stuck in an infinite loop, or is taking too long to run.) 
+
+Release build
+
+By default, a release build uses optimizations. When you use optimizations to create a release build, the compiler will not produce symbolic debugging information. The absence of symbolic debugging information, along with the fact that code is not generated for TRACE and ASSERT calls, means that the size of your executable file is reduced and will therefore be faster.
+
+
+

@@ -1,0 +1,13 @@
+#include<stdio.h>
+void main()
+{
+	int a[]={0,1,2,3,4};
+	int *p[]={a,a+1,a+2,a+3,a+4};
+
+printf("Add of p%u address of a%u
+value of a%d",p,*p,*(*p));
+
+
+printf("\n%u	%d",a,*a);
+
+}

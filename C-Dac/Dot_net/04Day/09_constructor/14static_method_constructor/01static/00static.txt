@@ -1,0 +1,48 @@
+A class can be static
+A property can be static
+A field can be static
+A method can be static
+A constructor can be static
+
+->static class
+Following are the main features of a static class:
+
+They only contain static members.
+
+They cannot be instantiated.
+
+They are sealed.
+
+They cannot contain Instance Constructors  
+
+
+
+
+When to use static class
+
+Suppose you have a CompanyInfo class that contains the following methods to get information about the company name and address
+
+Static classes are sealed and therefore cannot be inherited. They cannot inherit from any class except Object
+. Static classes cannot contain an instance constructor; however, they can have a static constructor. 
+
+
+static constructor  can not be parameterised
+only one static constructor allowes per class 
+no acess modifier allowed
+
+
+->static member
+
+A static method, field, property, or event is callable on a class even when no instance of the class has been created
+
+static methods and properties can only access static fields and static events
+
+Static methods can be overloaded but not overridden.
+
+Static members are initialized before the static member is accessed for the first time and before the static constructor, if any is called.
+
+
+
+ To access a static class member, use the name of the class instead of a variable name to specify the location of the member. 
+
+

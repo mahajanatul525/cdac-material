@@ -1,0 +1,72 @@
+
+if we have following hierarchy:
+
+package mypack;
+
+public class MyClass1 
+{
+	public MyClass1() {
+		System.out.println("in MyClass1 no-arg");
+	}
+	public void print()
+	{
+		System.out.println("in MyClass1 print");
+	}
+}
+
+
+package mypack;
+
+public class Sub extends MyClass1 {
+
+	public Sub()
+	{
+		System.out.println("in sub no-arg constr");
+	}
+	
+}
+
+
+
+
+			inject.xml
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+    <bean id="ob" class="mypack.MyClass1"></bean>  
+    <bean id="obs" class="mypack.Sub"></bean>  
+<bean id="x" class="mypack.MyClass2" autowire="byType"></bean>  
+</beans>
+
+
+ouput:
+
+in MyClass1 no-arg
+in MyClass1 no-arg
+in sub no-arg constr
+in MyClass2 no-arg
+Sep 14, 2016 10:36:46 PM org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1f37ef1: defining beans [ob,obs,x]; root of factory hierarchy
+Exception in thread "main" org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'x' defined in class path resource [inject.xml]: Unsatisfied dependency expressed through bean property 'ob1': : No unique bean of type [mypack.MyClass1] is defined: expected single matching bean but found 2: [ob, obs]; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No unique bean of type [mypack.MyClass1] is defined: expected single matching bean but found 2: [ob, obs]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1199)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1091)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at mypack.Main.main(Main.java:10)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No unique bean of type [mypack.MyClass1] is defined: expected single matching bean but found 2: [ob, obs]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:800)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1184)
+	... 13 more

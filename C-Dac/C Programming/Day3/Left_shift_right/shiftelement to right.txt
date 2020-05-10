@@ -1,0 +1,30 @@
+#include<stdio.h>
+void display(int *,int);
+void main()
+{	int i;
+	int arr[4]={1,2,3};
+	for(i=0;i<3;i++)
+	{
+	printf("arr[%d]%d",i,arr[i]);
+	}
+	display(arr,4); 
+}
+void display(int *arr,int size)
+{
+
+int i,j;
+
+
+for(i=size;i>0;i--) //shift the element to right
+{
+arr[i]=arr[i-1];
+	
+}
+arr[i]=0;
+for(j=0;j<size;j++)
+{
+
+printf("\narr[%d]-%d",j,arr[j]);
+}
+
+}

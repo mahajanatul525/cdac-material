@@ -1,0 +1,26 @@
+1) create a table "Account"
+accid int
+name varchar
+type varchar
+balance double
+
+create a jsp "Account.jsp" which will accept all the above details through form. on submit control should go to "AccountServ" servlet which will store all these details inside "Account" table.
+
+2)
+	create a class "Book" in "pack2" package with following members
+  int id
+   String subject
+String author
+double price
+
+
+ create a table "Book"
+id int
+subject varchar
+author varchar
+price decimal
+
+store 5 records.
+
+create a servlet "BookServ" which will retrieve all the records from "Book" table, while traversing through the ResultSet create objects of "Book" class per record and store them in ArrayList. now store this ArrayList inside request attribute and forward the request to "Book.jsp".
+"Book.jsp" will use JSTL tag "foreach" in order to traverse through the ArrayList.

@@ -1,0 +1,26 @@
+/*You can also use the TaskFactory.StartNew method to create and start a task in one operation. Use this method when creation and scheduling do not have to be separated and you require additional task creation options or the use of a specific scheduler, or when you need to pass additional state into the task through its AsyncState property, as shown in the following example.*/
+
+
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+public class Example
+{
+   public static void Main()
+   {
+      Thread.CurrentThread.Name = "Main";
+
+      // Better: Create and start the task in one operation. 
+      Task taskA = Task.Factory.StartNew(() => Console.WriteLine("Hello from taskA."));
+
+      // Output a message from the calling thread.
+      Console.WriteLine("Hello from thread '{0}'.", 
+                        Thread.CurrentThread.Name);
+
+      taskA.Wait();                  
+   }
+}
+// The example displays output like the following:
+//       Hello from thread 'Main'.
+//       Hello from taskA.

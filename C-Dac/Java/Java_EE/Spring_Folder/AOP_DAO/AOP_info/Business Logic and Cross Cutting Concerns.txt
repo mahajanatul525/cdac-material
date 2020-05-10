@@ -1,0 +1,82 @@
+
+				Without AOP
+
+class Account
+{
+	void deposit(double amt)	
+	{
+		// deposit logic    business logic
+		// transaction	cross-cutting concern
+		// logging	cross-cutting concern
+	}
+	double withdraw()
+	{
+		// withdraw logic   business logic
+		//transaction	cross-cutting concern
+		//logging	cross-cutting concern
+		//security	cross-cutting concern
+	}
+}
+
+
+
+				With AOP
+
+
+	class Account
+	{
+		void deposit(double amt)	
+		{
+			// deposit logic    business logic
+		}
+		double withdraw()
+		{
+			// withdraw logic   business logic
+		}
+	}
+
+
+		// cross cutting concerns
+
+		transaction()		
+		{
+
+		}
+
+		security()
+		{
+
+		}
+
+		logging()
+		{
+
+		}
+
+
+
+
+			Proxied Object
+
+class Account_Proxy
+{
+	void deposit(double amt)	
+	{
+		// deposit logic    business logic
+		// transaction	cross-cutting concern
+		// logging	cross-cutting concern
+	}
+	double withdraw()
+	{
+		// withdraw logic   business logic
+		//transaction	cross-cutting concern
+		//logging	cross-cutting concern
+		//security	cross-cutting concern
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><head><style>
+.gc {color:green;
+	height:250px;
+	border:2px solid green;
+	padding:2px;
+    width:150px;}
+</style><script src="jquery-1.9.1.js"></script><script>
+$(document).ready(function() {
+ $("#pd").mouseover(function ()
+{ var a=$("#pd").css("color");
+alert(a);
+$("#pd").css("color","blue");
+$("#pd").css({'background-color':'bisque','font-weight':'bolder'});
+}); });
+</script></head>
+<body><h1> hello this is h1 tag</h1>
+<p id="pd" class="gc"> this p tag</p>
+
+
+
+
+
+</body>
+</html>
+

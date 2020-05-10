@@ -1,0 +1,45 @@
+
+  
+
+ 
+
+To save form data, to a database table, we used the following code it should be clear that, FormCollection class will automatically receive the posted form values in the controller action method.
+[HttpPost]
+public ActionResult Create(FormCollection formCollection)
+{
+    Employee employee = new Employee();
+    // Retrieve form data using form collection
+    employee.Name = formCollection["Name"];
+    employee.Gender = formCollection["Gender"];
+    employee.City = formCollection["City"];
+    
+
+    EmployeeBusinessLayer employeeBusinessLayer = 
+        new EmployeeBusinessLayer();
+
+    employeeBusinessLayer.AddEmmployee(employee);
+    return RedirectToAction("Index");
+}
+
+The above controller "Create" action method can be re-written using simple types as shown below. Notice that, the create action method has got parameter names that match with the names of the form controls. To see the names of the form controls, right click on the browser and view page source. Model binder in mvc maps the values of these control, to the respective parameters.
+[HttpPost]
+public ActionResult Create(string name, string gender, string city)
+{
+    Employee employee = new Employee();
+    employee.Name = name;
+    employee.Gender = gender;
+    employee.City = city;
+    employee.DateOfBirth = dateOfBirth;
+
+    EmployeeBusinessLayer employeeBusinessLayer = 
+        new EmployeeBusinessLayer();
+
+    employeeBusinessLayer.AddEmmployee(employee);
+    return RedirectToAction("Index");
+}
+
+But do we really to do these mappings manually. The answer is no.
+
+Please note that, the order of the parameters does not matter. What matters is the name of the parameter. If the parameter name is different from the form control name, then the form data will not be mapped as expected. 
+
+ 

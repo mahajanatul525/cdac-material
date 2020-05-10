@@ -1,0 +1,12 @@
+var a=new Date();
+
+a.getDate()  1-31
+
+a.getDay()	0-sunday
+a.getHours()    0-23
+a.getMinutes()   0-59
+a.getSeconds()
+a.getTime()  Number of milliseconds since 1/1/1970 @ 			12:00 AM 1/1/1970
+a.getMonth()  0-11
+a.getMilliseconds()
+a.getFullYear()

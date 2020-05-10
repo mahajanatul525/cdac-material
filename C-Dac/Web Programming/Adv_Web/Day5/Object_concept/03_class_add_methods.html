@@ -1,0 +1,34 @@
+<script>
+"use strict"
+function person(nm,ag)
+{
+
+if(this instanceof person)
+{
+this.name=nm;
+this.age=ag;
+this.speak=function(){return " hello "}
+alert(this.constructor)
+return this;
+}
+
+else 
+
+throw new TypeError("Check this is not a function");
+
+}
+person.prototype.walk=function(){
+return " can walk ";
+}
+
+var obj1=new person("raj",80);
+
+console.log(obj1);
+document.write(obj1);
+var x=new person("mona",90);
+
+console.log(x);
+document.write(x);
+document.write(x.speak());
+document.write(x.walk());
+</script>

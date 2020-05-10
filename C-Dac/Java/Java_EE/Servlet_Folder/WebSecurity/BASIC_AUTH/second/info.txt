@@ -1,0 +1,2 @@
+doGet is secured by role Guest
+	username - guru  password - coder

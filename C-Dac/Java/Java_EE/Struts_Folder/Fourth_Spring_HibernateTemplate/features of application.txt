@@ -1,0 +1,15 @@
+struts2 + Spring3 + Hibernate
+
+no "struts.xml" , only annotation
+
+placement of datepicker
+
+Struts validations using annotations for name,address and date
+	
+Struts and spring integration
+
+using HibernateTemplate
+
+DAO design pattern
+
+PersonDAO and HibernateTemplate are autowired.

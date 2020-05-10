@@ -1,0 +1,14 @@
+
+Hibernate: insert into Employee (desig, name, salary) values (?, ?, ?)
+Hibernate: insert into Employee (desig, name, salary) values (?, ?, ?)
+Hibernate: insert into Employee (desig, name, salary) values (?, ?, ?)
+Hibernate: insert into Employee (desig, name, salary) values (?, ?, ?)
+
+Hibernate: select employee0_.id as id0_, employee0_.desig as desig0_, employee0_.name as name0_, employee0_.salary as salary0_ from Employee employee0_ where employee0_.name=?
+
+pqr	clerk	15000.0
+
+Hibernate: select employee0_.id as id0_, employee0_.desig as desig0_, employee0_.name as name0_, employee0_.salary as salary0_ from Employee employee0_ where employee0_.salary>?
+
+xyz	manager	35000.0
+lmn	Soft_Engineer	45000.0

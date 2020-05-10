@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+
+
+namespace FunWithStrings
+{
+    class Program
+    {
+        static void Main( string[] args )
+        {
+            Console.WriteLine("***** Fun with Strings *****\n");
+            BasicStringFunctionality();
+          
+            Console.ReadLine();
+        } 
+
+ #region Verbatim strings
+        private static void VerbatimStrings()
+        {
+            // The following string is printed verbatim
+            // thus, all escape characters are displayed.
+            Console.WriteLine(@"C:\MyApp\bin\Debug");
+
+            // White space is preserved with verbatim strings.
+            string myLongString = @"This is a very
+                 very
+                      very
+                           long string";
+            Console.WriteLine(myLongString);
+           
+        }
+        #endregion
+    }
+}

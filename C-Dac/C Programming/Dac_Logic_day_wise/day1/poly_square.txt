@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int a,b,c,d,p=0,s=0;
+	printf("Enter four sides: ");
+	scanf("%d %d %d %d",&a,&b,&c,&d);
+		if(a<b+c+d && b<a+c+d && c<b+a+d && d<a+b+c+d)
+		p=1;
+		if(a==b && b==c && c==d)
+			s=1;
+		printf("Polygon status: %d\nSquare status: %d",p,s);
+	
+	
+			getche();
+
+
+}

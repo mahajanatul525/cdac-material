@@ -1,0 +1,115 @@
+
+
+class A{
+	int num;
+	static int stat1 = 1;
+
+	public A(int num) {
+		
+		this.num = num;
+	}
+
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+	
+	static
+	{
+		System.out.println("In A static");
+	}
+	
+	static void disp()
+	{
+		System.out.println(stat1);
+	}
+}
+
+class B{
+	int num2;
+	static int stat2 = 2;
+
+	public B(int num2) {
+		
+		this.num2 = num2;
+	}
+
+	public int getnum2() {
+		return num2;
+	}
+
+	public void setnum2(int num2) {
+		this.num2 = num2;
+	}
+	static
+	{
+		System.out.println("In B static");
+	}
+	
+	static void disp()
+	{
+		System.out.println(stat2);
+	}
+}
+class C{
+	int num3;
+	static int stat3 = 3;
+
+	public C(int num3) {
+		
+		this.num3 = num3;
+	}
+
+	public int getnum3() {
+		return num3;
+	}
+
+	public void setnum3(int num3) {
+		this.num3 = num3;
+	}
+	
+	static
+	{
+		System.out.println("In C static");
+	}
+	
+	static void disp()
+	{
+		System.out.println(stat3);
+	}
+}
+	
+	
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		A a = new A(10);
+		System.out.println("In A class");
+		System.out.println(a.num);
+		a.setNum(100);
+		System.out.println(a.getNum());
+		A.disp();
+		
+		
+		B b = new B(20);
+		System.out.println("In B class");
+		System.out.println(b.num2);
+		b.setnum2(200);
+		System.out.println(b.getnum2());
+		B.disp();
+		
+		C c = new C(30);
+		System.out.println("In C class");
+		System.out.println(c.num3);
+		c.setnum3(300);
+		System.out.println(c.getnum3());
+		C.disp();
+		
+	}
+
+}

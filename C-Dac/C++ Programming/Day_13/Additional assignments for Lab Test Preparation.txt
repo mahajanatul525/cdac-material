@@ -1,0 +1,36 @@
+1)Create a base class Storage_Device. Declare pure virtual function “void save()” in it. 			
+Define following sub classes for this class.                       A) PenDrive  b) CD  c) HD		                                       	
+	Define a global function “perform” which will accept “Storage_Device’s reference as an argument. Inside this method u will check , if  “Storage_Device” contains “HD”, then only u will call “save()” method. 
+( RTTI).
+				From main function , try calling display function by passing all the child instances one by one.
+
+2)Create a base class Advertisement. Declare pure virtual function “void publish()” in it. 			
+Define following sub classes for this class.                       			A) TV  b) Banner  c) NewsPaper		                                       	
+	in main function, create an array of pointer to "Advertisement" and store addresses of all the child classes.
+now traverse through the array and check using dynamic cast , if array contains "Banner" , then only invoke "publish()" .( RTTI).
+
+3) Define a class "Player" with following members
+	int id;
+	char *name;
+	char *country
+	int score
+
+
+	in the main function, u should be able to say
+
+	
+	Player p1(1,"sachin","india",200);
+
+	cout<<p1<<endl;
+
+	p1.disp();
+
+	Player p2=p1;
+	
+	cout<<p2<<endl;
+
+	Player p3;
+
+	p3=p1;
+
+				

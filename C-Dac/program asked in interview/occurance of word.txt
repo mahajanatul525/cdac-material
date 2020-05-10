@@ -1,0 +1,34 @@
+package eee;
+
+import java.util.Scanner;
+public class testc
+{
+	public static void main(String args[])
+	{	System.out.println("enter the string"); 
+		Scanner sc=new Scanner(System.in);
+	String sen = sc.nextLine();
+    String word[] = sen.split(" ");
+    int count=0;
+    String a="hi";
+    
+    for (int i = 0; i < word.length; i++) {
+        count = 0; // reset the counter for each word
+
+        for (int j = 0; j < word.length; j++)
+        {       	
+
+            if (word[i].equals(word[j])) {
+                if (j < i) {
+                    break; // exit the inner loop, continue with the outer one
+                }
+
+                count++;
+            }
+        }
+
+        if (count > 1) {
+            System.out.println("the word " + word[i] + " occured " + count + " time");
+        }
+    }
+	}
+}

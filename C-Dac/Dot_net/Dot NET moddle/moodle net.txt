@@ -1,0 +1,379 @@
+
+How does .NET Framework alleviate "DLL Hell"?
+Select one:
+a. The Common Language Runtime (CLR) does not allow administrators to change the version of a component that an Assembly references externally.
+b. The Common Language Runtime (CLR) and Assemblies specify and enforce versioning rules and allow side-by-side execution of a software component
+c. The Common Language Runtime (CLR) and Assemblies can only use the version of a component with which they were compiled.
+d. The Common Language Runtime (CLR) only allows a single version of a component to be registered in the Global Assembly Cache (GAC). Incorrect
+Feedback
+The correct answer is: The Common Language Runtime (CLR) and Assemblies specify and enforce versioning rules and allow side-by-side execution of a software component
+Question 2
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+What is true about Managed Code(MC)?
+Select one:
+a. Managed code(MC) runs on top of Windows OS.
+b. Managed code(MC) written to target the services of the Common Language Runtime (CLR).
+c. Managed code(MC) where resources are Garbage Collected(GC)
+d. Managed code(MC) is compiled by the JIT(Just In Time) compilers. Incorrect
+Feedback
+The correct answer is: Managed code(MC) written to target the services of the Common Language Runtime (CLR).
+Question 3
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Which one of the following describes the ApplicationBase property?
+Select one:
+a. Source code compiler
+b. Verifier
+c. Class Loader Incorrect
+d. JIT Compiler
+Feedback
+The correct answer is: JIT Compiler
+Question 4
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Where is the Class Loader located?
+Select one:
+a. In the Common Language Runtime's (CLR) Virtual Execution Engine Correct
+b. In the Portable Executable File
+c. In the host operating system
+d. In the .NET source code compiler
+Feedback
+The correct answer is: In the Common Language Runtime's (CLR) Virtual Execution Engine
+Question 5
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Where is the Class Loader located?
+Select one:
+a. Verifier
+b. JIT Compiler
+c. Class Loader
+d. In the Common Language Runtime's (CLR) Virtual Execution Engine Correct
+Feedback
+The correct answer is: In the Common Language Runtime's (CLR) Virtual Execution Engine
+Question 6
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Code that targets the Common Language Runtime is known as
+Select one:
+a. Managed Code
+b. Distributed Incorrect
+c. Native Code
+d. Unmanaged
+Feedback
+The correct answer is: Managed Code
+Question 7
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+Which of the following statements correctly define .NET Framework?
+Select one:
+a. It is an environment for developing, building, deploying and executing Web Services.
+b. It is an environment for developing, building, deploying and executing Desktop Applications, Web Applications and Web Services.
+c. It is an environment for developing, building, deploying and executing Distributed Applications.
+d. It is an environment for developing, building, deploying and executing only Web Applications.
+Feedback
+The correct answer is: It is an environment for developing, building, deploying and executing Desktop Applications, Web Applications and Web Services.
+Question 8
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Which one of the following statements is true about MSIL code?
+Select one:
+a. It is compiled to native code by JIT compilers. Correct
+b. It is source code-specific.
+c. It is architecture-specific.
+d. It is only found in static assemblies.
+e. It is only stored in assembly resource files.
+Feedback
+The correct answer is: It is compiled to native code by JIT compilers.
+Question 9
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+In Private Assembly every project will have local copy
+Select one:
+a. True Correct
+b. False
+Feedback
+The correct answer is: True
+Question 10
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Command to move dll file in shared location
+Select one:
+a. gc
+b. gautyil/i
+c. gacutil/i dllfilename Incorrect
+d. none
+Feedback
+The correct answer is: none
+Question 11
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Which one of the following statements is true regarding how the .NET Framework minimizes "DLL Hell"?
+Select one:
+a. It registers all assemblies with the COM+ catalog.
+b. It only allows multiple versions of a given component to run on a machine at a time if they all are private assemblies. Incorrect
+c. It allows side-by-side execution on the same machine, at the same time, or even the same process, of any version of the same shared DLL.
+d. It enforces that only one component of a given name can run on a machine at a time.
+Feedback
+The correct answer is: It allows side-by-side execution on the same machine, at the same time, or even the same process, of any version of the same shared DLL.
+Question 12
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Choose right option(‘s) below statements about the .NET CLR? A.	Common Language Runtime provides a language-neutral development and execution environment. B.	Common Language Runtime ensures that an application would not be able to access memory that it is not authorized to access. C.	Common Language Runtime provides services to run managed applications. D.	Common Language Runtime The resources are garbage collected.
+Select one:
+a. Only A, B and D
+b. Only C And D
+c. All Statements Correct
+d. Only A and B
+Feedback
+The correct answer is: All Statements
+Question 13
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+For shared Assembly you have to generate Strong name
+Select one:
+a. False
+b. true Correct
+Feedback
+The correct answer is: true
+Question 14
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+The common language runtime can be thought of as the environment that manages code execution. It provides core services, such as___________________
+Select one:
+a. code compilation
+b. thread management, and garbage collection
+c. memory allocation
+d. All of these Correct
+Feedback
+The correct answer is: All of these
+Question 15
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Name Type of assembly
+Select one:
+a. All these
+b. Public ,protected assembly
+c. Private,shared assembly Correct
+Feedback
+The correct answer is: Private,shared assembly
+Question 16
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+John wants to look at a human readable representation of the metadata and intermediate language (IL) code contained in a .NET Portable Executable (PE) file. Given the above scenario, what tool from the .NET SDK should John use?
+Select one:
+a. ildasm.exe Correct
+b. dumpbin.exe
+c. ilasm.exe
+d. gacutil.exe
+e. al.exe
+Feedback
+The correct answer is: ildasm.exe
+Question 17
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+_______ is collection of reusable classes or type.
+Select one:
+a. File Library
+b. Base Class Library Correct
+c. All are the remaining options are correct
+Feedback
+The correct answer is: Base Class Library
+Question 18
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+Strong Name includes the
+Select one:
+a. only version number
+b. only name of the .net assembly,
+c. culture identity, and a public key token
+d. all the above
+Feedback
+The correct answer is: all the above
+Question 19
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Statement A : The Common Language Specification (CLS) defines the minimum standards to which .NET language compilers must conform. 
+
+Statement B : CLS ensures that any source code successfully compiled by a .NET compiler can interoperate with the .NET Fram
+Select one:
+a. Both statements are true Correct
+b. Statement B is True
+c. Statement A is True
+Feedback
+The correct answer is: Both statements are true
+Question 20
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+.entrypoint
+        .maxstack  3
+        .locals ([0] int32 ValueOne,
+              [1] int32 ValueTwo,
+              [2] int32 V_2,
+              [3] int32 V_3)
+        IL_0000:  ldc.i4.s   10
+        IL_0002:  stloc.0
+        IL_0003:  ldc.i4.s   20
+        IL_0005:  stl
+
+Select one:
+a. Metadata
+b. Assembly Manifest
+c. MSIL code
+d. all the above
+Feedback
+The correct answer is: MSIL code
+Question 21
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+In Shared Assembly every project will have local copy
+Select one:
+a. False Correct
+b. True
+Feedback
+The correct answer is: False
+Question 22
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Dot Net Framework consists of :
+Select one:
+a. None of above
+b. Set of class libraries
+c. Common language runtime
+d. Common language runtime and set of class libraries Correct
+Feedback
+The correct answer is: Common language runtime and set of class libraries
+Question 23
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+The .NET Framework is designed for cross-language compatibility, which means, simply, that .NET components can interact with each other no matter what supported language they were written in originally.
+Select one:
+a. None of these
+b. This level of cross-language compatibility is possible because of the Common Language Specification Incorrect
+c. This level of cross-language compatibility is possible because of the common Type System
+d. This level of cross-language compatibility is possible because of the common language runtime.
+Feedback
+The correct answer is: This level of cross-language compatibility is possible because of the common language runtime.
+Question 24
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+From which one of the following locations does the garbage collector remove objects?
+Select one:
+a. The global assembly cache
+b. The system registry
+c. The thread stack
+d. The download cache
+e. The managed heap
+Feedback
+The correct answer is: The managed heap
+Question 25
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What is the relationship between Common Type System (CTS) and Common Language Specification (CLS)?
+Select one:
+a. .NET Languages all offer the same superset of the CTS.
+b. .NET Languages each offer either the CTS set or the CLS set.
+c. .NET Languages each offer a subset of the CTS and a superset of the CLS. Correct
+d. .NET Languages each offer a superset of the CTS and a subset of the CLS.
+Feedback
+The correct answer is: .NET Languages each offer a subset of the CTS and a superset of the CLS.
+Question 26
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+To create a key pair command is
+Select one:
+a. none
+b. ns -k
+c. sn-k
+d. sn –k
+Feedback
+The correct answer is: sn –k
+Question 27
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+How many types of compilers availbale under CLR?
+Select one:
+a. 3 Correct
+b. 2
+c. 4
+d. 1
+Feedback
+The correct answer is: 3
+Question 28
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Shared Assemblies are installed at:
+Select one:
+a. System Assembly Cache
+b. Machine Assembly Cache
+c. Windows Assembly Cache
+d. Global Assembly Cache Correct
+Feedback
+The correct answer is: Global Assembly Cache
+Question 29
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+.Which of the following is the root of the .NET type hierarchy?
+Select one:
+a. System.Base
+b. System.Object Correct
+c. System.Type
+d. System.Parent
+Feedback
+The correct answer is: System.Object

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html><head><title>hello storage</title>
+<script>
+function setdata()
+{
+fname=document.getElementById("st");
+lname=document.getElementById("ln");
+ 
+if(typeof(Storage)!="undefined")
+  { localStorage.setItem("fname",fname.value) 
+	localStorage.setItem("lname",lname.value)  
+	}
+else
+  {
+  document.getElementById("result").innerHTML="Sorry, your browser does not support web storage...";
+  }
+}
+
+function getdata()
+{
+alert(Storage)
+var l=localStorage.length
+for (var i=0,k,v;i<l;i++) {
+	k = localStorage.key(i)
+	v = localStorage.getItem(k);
+	document.getElementById("result").innerHTML+= k +" "+v +"<br/>"
+  
+  }
+}
+
+function removedata()
+{
+localStorage.clear();
+}
+ 
+</script>
+</head>
+<body>
+<form>
+<input id="st" name="fn"/>
+<input id="ln" name="ln"/>
+<input type="button" value="SetLname" onclick="setdata()"/>
+<input id="gt"/>
+<input type="button" value="Get" onclick="getdata()"/>
+<input type="button" value="clear" onclick="removedata()">
+</form>
+<div id="result"></div>
+</body>
+
+
+</html>

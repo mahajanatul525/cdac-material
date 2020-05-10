@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication18
+{   
+    delegate void error(int x,int y);
+
+    class myclass 
+    {
+        public event error err;
+
+       public void oneventl(int a,int b)
+       {
+            if(err!=null)
+                err(a,b);
+       }
+    }
+
+    class myclass1
+    {
+        public void add1(int a,int b)
+        {
+            int x = a + b;
+            Console.WriteLine("add {0}",x);
+        }
+    }
+
+    class myclass2
+    {
+        public void mul1(int a,int b)
+        {
+            int x = a * b;
+            Console.WriteLine("mul {0}",x);
+        }
+    }
+
+    class entrypoint
+    {
+        public static void Main()
+        {
+            myclass m=new myclass();
+            myclass1 m1=new myclass1();
+            myclass2 m2=new myclass2();
+
+            m.err+=m1.add1;
+            m.err+=m2.mul1;
+
+            m.oneventl(10, 20);
+        }
+    }
+
+}
+

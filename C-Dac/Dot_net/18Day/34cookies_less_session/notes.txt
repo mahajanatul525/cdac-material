@@ -1,0 +1,31 @@
+At this point, webform1.aspx will be opened using google chrome. Fill in the details for Name and Email fields, and click "Go To WebForm2" button. To view the session cookie
+
+1. Right click on the browser, and select "Inspect Element"
+2. Click on the "Resources" button
+3. Expand cookies in the "Resources"
+4. Finally, select localhost
+5. You should now see a cookie with ASP.NET_SessionId
+
+Now, let's disable cookies. To disable cookies in chrome
+1. Click on the Button, next to the address bar, in the browser and select "Settings"
+2. In the "Search Setting" text box, type cookies.
+3. In the search results, click "content settings" button under privacy
+4. Under "cookies", select "Block sites from setting any data" and click OK.
+
+
+
+So, the cookies are disabled now. Run the application, and navigate to WebForm1.aspx. Fill name and email fields and navigate to WebForm2.aspx. Notice that the Name and Email fields are not displayed. This is because, cookies are disabled. When cookies are disabled, the session-id is not sent to the server. So the server has no way to figure out, if the request for WebForm2.aspx has come from the same user. That is the reason why these fields are not displayed on WebForm2.aspx.
+
+Some of the users, does not like websites writing information to their computers. So it is very common for, users to disable cookies. If that is the case, then websites using cookies, to manage sessions may not work as expected. However, to overcome this problem, cookieless sessions can be enabled. To enable cookieless sessions, set cookieless="true" in web.config as shown below.
+
+
+<sessionState mode="InProc" cookieless="true"></sessionState>
+
+With this change, navigate to WebForm1.aspx, fill in Name and Email fields, and then navigate to WebForm2.aspx, and notice that, the Name and Email, fields are displayed as expected. Notice, that the session-id is now part of the URL. This session-id is sent back and forth between the client and the web server, with every request and response. The web server, uses the session-id from the URL, to identify if the request has come from the same user or a different user.
+
+For cookieless sessions to work correctly, relative URL's must be used in the application, when redirecting users to different webforms. For example, if you are on http://vitatech.com/WebForm1.aspx and if you want to navigate to WebForm2.aspx, then use
+
+Response.Redirect("~/WebForm2.aspx") - Relative URL
+and not
+
+Response.Redirect("http://vidyanidhi.com/WebFOrm2.aspx") - Absolute URL (or Complete Path)

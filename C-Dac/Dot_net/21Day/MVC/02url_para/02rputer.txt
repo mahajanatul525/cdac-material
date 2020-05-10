@@ -1,0 +1,60 @@
+http://localhost/MVCDemo/Home/Index will invoke Index() function of HomeController class.
+
+ So, the question is, where is this mapping defined. The mapping is defined in Global.asax.
+
+ Notice that in Global.asax we have RegisterRoutes() method. 
+
+RouteConfig.RegisterRoutes(RouteTable.Routes); 
+
+
+
+Right click on this method, and select "Go to Definition". Notice the implementation of RegisterRoutes() 
+method in RouteConfig class. This method has got a default route.
+
+public static void RegisterRoutes(RouteCollection routes)
+{
+    routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+    routes.MapRoute(
+        name: "Default",
+        url: "{controller}/{action}/{id}",
+        defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+    );
+}
+
+The following URL does not have id. This is not a problem because id is optional in the default route.
+http://localhost/MVCDemo/Home/Index
+
+Now pass id in the URL as shown below and press enter. Nothing happens.
+http://localhost/MVCDemo/Home/Index/10
+
+Change the Index() function in HomeController as shown below.
+public string Index(string id)
+{
+    return "The value of Id = " + id;
+}
+
+Enter the following URL and press enter. We get the output as expected.
+http://localhost/MVCDemo/Home/Index/10
+
+In the following URL, 10 is the value for id parameter and we also have a query string "name".
+http://localhost/MVCDemo/home/index/10?name=Vita
+
+Change the Index() function in HomeController as shown below, to read both the parameter values.
+public string Index(string id, string name)
+{
+    return "The value of Id = " + id + " and Name = " + name;
+}
+
+Just like web forms, you can also use "Request.QueryString"
+public string Index(string id)
+{
+    return "The value of Id = " + id + " and Name = " + Request.QueryString["name"];
+} 
+
+in WEB.config file 
+within System.web
+
+<trace enabled ="true" pageOutput ="false " />
+
+run app with trace.axd it will show traceing information

@@ -1,0 +1,16 @@
+/*#include<iostream>
+using namespace std;
+
+template <class type1,class type2,class type3>
+int disp(type1 a,type2 b,type3 c)
+{
+	return (sizeof(a)+sizeof(b)+sizeof(c));
+}
+
+void main()
+{
+	int a;
+	a=disp(2,'k',5.5);
+	cout<<a;
+	getchar();
+}*/

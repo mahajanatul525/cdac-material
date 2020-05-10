@@ -1,0 +1,86 @@
+/*Q17.	Accept 5 number in an array and display message entered data is in ascending/descending or not sorted*/
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{int ans;
+int	a[]={9,8,7,6,5,4,3,2,1};
+	
+int asd(int[]);
+int dsd(int[]);
+
+ if(a[0]>a[1])
+	{ ans=dsd(a);
+
+      if(ans==0)
+	  printf("not sorted");
+      else if(ans==1)
+	  printf("descending");
+     }
+ else if(a[0]<a[1])
+	{  ans=asd(a);
+       
+       if(ans==0)
+	  printf("not sorted");
+	   else if(ans==1)
+	  printf("ascending");
+     }
+
+getche();
+}
+
+
+int asd(int a[])
+{
+	int i,j,flag=1;
+   for(i=0;i<8;i++)
+  { if(a[i]<a[i+1])
+  
+  continue;
+
+    else
+ {
+ flag= 0; 
+ break;
+   }
+   }
+printf("%d",i);
+if(flag==0)
+	return 0;
+else if(i==8) 
+	return 1;
+
+  }
+
+
+
+
+int dsd(int a[])
+{
+	int i,j,flag=1;
+   for(i=0;i<8;i++)
+  { if(a[i]>a[i+1])
+ 
+	continue;
+	 else
+	{
+	flag= 0; 
+	 break;
+	}
+  }
+
+if(flag==0)
+	return 0;
+else if(i==8) 
+	return 1;
+
+  }
+
+
+
+
+	
+
+
+    

@@ -1,0 +1,151 @@
+﻿@model Hobman.bill_details
+
+@{
+    ViewBag.Title = "billgenerated";
+}
+
+
+            <div class="col-lg-12">
+                <h1 class="head headstyle">
+                    Welcome to Imperial Hotels..
+                </h1>
+            </div>
+            <div class="col-md-2">
+                <div class="panel panel-default">
+                    
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading panalhead">
+                        <h4><i class="fa fa-fw fa-gift"></i>Bill</h4>
+                    </div>
+                    <div class="panel-body">
+
+
+    <table class="table table-bordered">
+    <tr>
+    <td> <div class="display-field editor-label">
+         @Html.LabelFor(model => model.booking_id,"Booking ID")
+    </div></td>
+    <td><div class="display-field editor-label">
+        @Html.DisplayFor(model => model.booking_id)
+    </div></td>
+        </tr>
+        <tr>
+     <td><div class="display-field editor-label"">
+         @Html.LabelFor(model => model.customer_id,"CUSTOMER ID")
+    </div></td>
+    <td><div class="display-field editor-label">
+        @Html.DisplayFor(model => model.customer_id)
+    </div></td>
+            </tr>
+        <tr>
+            <td>
+     <div class="display-field editor-label">
+        @Html.LabelFor(model => model.hotel_id,"Hotel ID")
+    </div></td>
+    <td><div class="display-field editor-label">
+        @Html.DisplayFor(model => model.hotel_id)
+    </div></td>
+    <tr> 
+        <td><div class="display-field editor-label">
+         @Html.LabelFor(model => model.bill_date,"Bill Date")
+    </div></td>
+    <td><div class="display-field editor-label">
+        @Html.DisplayFor(model => model.bill_date)
+    </div></td>
+        </tr>
+        <tr>
+            <td>
+                 <div class="display-field editor-label">
+        @Html.LabelFor(model => model.check_in_date,"Check In")
+    </div>
+            </td>
+    <td>
+        <div class="display-field editor-label">
+        @Html.DisplayFor(model => model.check_in_date)
+    </div>
+    </td>
+        </tr>
+        <tr>
+             <td>
+                 <div class="display-field editor-label">
+        @Html.LabelFor(model => model.check_out_date,"Check Out")
+    </div>
+             </td>
+    <td>
+        <div class="display-field editor-label">
+        @Html.DisplayFor(model => model.check_out_date)
+    </div>
+    </td>
+        </tr>
+        <tr>
+             <td>
+                 <div class="display-field editor-label">
+         @Html.LabelFor(model => model.no_of_rooms,"No Of Rooms")
+    </div>
+             </td>
+    <td>
+        <div class="display-field editor-label">
+        @Html.DisplayFor(model => model.no_of_rooms)
+    </div>
+    </td>
+        </tr>
+        <tr>
+
+            <td>
+                 <div class="display-field editor-label">
+       @Html.LabelFor(model => model.rate,"Rate")
+    </div>
+            </td>
+    <td>
+        <div class="display-field editor-label">
+        @Html.DisplayFor(model => model.rate)
+    </div>
+    </td>
+        </tr>
+        <tr>
+<td>
+                <div class="display-field editor-label">
+        @Html.LabelFor(model => model.tax,"Tax")
+    </div>
+</td>
+    <td>
+        <div class="display-field editor-label">
+        @Html.DisplayFor(model => model.tax)
+    </div>
+    </td>
+        </tr>
+        <tr>
+             <td>
+                 <div class="display-field editor-label">
+         @Html.LabelFor(model => model.total_amount,"Total Amount")
+    </div>
+             </td>
+    <td>
+        <div class="display-field editor-label">
+        @Html.DisplayFor(model => model.total_amount)
+    </div>
+        
+    </td>
+            </tr>
+    </table>
+
+   <h3>Thank You.Visit Again....</h3>
+   
+   
+                         </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading panalhead">
+                        <h4><i class="fa fa-fw fa-compass"></i>Events</h4>
+                    </div>
+                    <div class="panel-body">
+                        
+                    </div>
+                </div>
+            </div>
+

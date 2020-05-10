@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int r1,r2,r3,sum=0,no;
+	printf("enter number:");
+	scanf("%d",&no);
+	r1=no%10;
+	no=no/10;
+	r2=no%10;
+	no=no/10;
+	r3=no%10;
+	no=no/10;
+	sum=r1+r2+r3;
+	printf("sum=%d",sum);
+	getch();
+}

@@ -1,0 +1,41 @@
+
+abstract class shape
+{
+abstract void draw();
+{
+}
+}
+class triangle extends shape
+{
+void draw()
+{
+System.out.println("triangle draw");
+}
+}
+class polygon extends shape
+{
+void draw()
+{
+System.out.println("polygon draw");
+}
+}
+class circle extends shape
+{
+void draw()
+{
+System.out.println("circle draw");
+}
+}
+public class myassign1
+{
+public static void main(String args[])
+{ shape arr[]=new shape[3];
+arr[0]=new triangle();
+arr[1]= new polygon();
+arr[2]=new circle();
+for(int i=0;i<arr.length;i++)
+{
+arr[i].draw();
+}
+}
+}

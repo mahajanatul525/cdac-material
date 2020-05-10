@@ -1,0 +1,88 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication6
+{
+    class account
+    {
+        static int _acc_id;
+       protected double _balance;
+       protected int id;
+        public int ID { get { return id; } }
+        public String Name { get; set; }
+        public double Balance { get { return _balance; } }
+
+        public account(string name, double bal)
+        {
+            Name = name;
+            _balance = bal;
+            id = ++_acc_id;
+        }
+        public void deposite(int amt)
+        {
+            _balance = _balance + amt;
+            Console.WriteLine("{0} {1}  available balance{2}", id, Name, _balance);
+        }
+        virtual public void withdrow(int amt)
+        {
+
+            if (amt > _balance || (_balance - amt) <=0)
+                throw new Exception("insufficeint balance");
+
+            _balance = _balance - amt;
+        }
+
+        public void disp()
+        {
+            Console.WriteLine("------------inside account---------\n\n");
+            Console.WriteLine("{0} {1}  available balance{2}", id, Name, _balance);
+        }
+
+    }
+    class saving : account
+    {
+
+        public saving(String nm,double amt):base(nm,amt){}
+      
+         public override void withdrow(int amt)
+        {
+            if (amt > _balance || (_balance - amt) < 5000)
+                throw new Exception("insufficeint balance");
+                 
+            _balance = _balance - amt;
+            Console.WriteLine("------------saving withdrow---------");
+            Console.WriteLine("{0} {1}  available balance{2}", id, Name, _balance);
+        }
+        
+    }
+    class currunt : account
+    {
+        public currunt(String nm,double amt):base(nm,amt){}
+      
+        public override void withdrow(int amt)
+        {
+            if (amt > _balance || (_balance - amt) < 10000)
+                throw new Exception("insufficeint balance");
+            Console.WriteLine("------------current withdrow---------");
+                 
+            _balance = _balance - amt;
+            Console.WriteLine("{0} {1}  available balance{2}", id, Name, _balance);
+          
+        }
+         
+    }
+
+    class entryclass
+    {
+        public static void Main()
+        {
+            account ac1 = new account("ATUL MAHAJAN", 20000);
+            account ac2 = new saving("AJAY MORE", 200001);
+            ac2.withdrow(10000);
+            ac2.deposite(20000);  
+        }
+    }
+}

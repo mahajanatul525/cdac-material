@@ -1,0 +1,3 @@
+copy "jakarta-taglibs-jstl-1.1.2.jar" and "standard.jar" in tomcat's lib folder.
+restart the server.
+

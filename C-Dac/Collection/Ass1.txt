@@ -1,0 +1,60 @@
+111111111111111111111111111111111111111111111111
+import java.util.Scanner;
+import java.io.*;
+public class Ass1 
+{
+	static int n;
+	public static void main(String args[]){
+	try(FileOutputStream f=new FileOutputStream("abc.txt"))
+	{
+		try(DataOutputStream dos=new DataOutputStream(f))
+		{
+			
+			Scanner s=new Scanner(System.in);
+		
+			while(true)
+			{
+				System.out.println("Enter Data");
+				
+				 n=s.nextInt();
+				
+				dos.writeInt(n);
+				if(n==0)
+				break;
+				
+					
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
+	catch(Exception a)
+	{
+		a.printStackTrace();
+	}
+
+try(FileInputStream fi=new FileInputStream("abc.txt"))
+{
+	try(DataInputStream dis=new DataInputStream(fi))
+	{
+		
+		if(fi.available()>0)
+		System.out.println(dis.readInt());
+		
+	}	
+	catch(Exception e)
+	{
+		e.printStackTrace();
+	}
+	
+}
+
+catch(Exception a)
+{
+	a.printStackTrace();
+}
+}
+}

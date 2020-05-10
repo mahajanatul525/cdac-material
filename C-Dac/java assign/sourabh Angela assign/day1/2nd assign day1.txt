@@ -1,0 +1,21 @@
+import java.util.*;
+public class demoOb
+{ 	
+	public static void main(String args[])
+	{System.out.println("Enter word");					
+	Scanner sc=new Scanner(System.in);
+	String str=sc.next();
+switch(str)
+{	case"a":System.out.println("its a vowel"+" "+str);
+	break;
+	case"e":System.out.println("its a vowel"+" "+str);
+	break;
+	case"i":System.out.println("its a vowel"+" "+str);
+	break;
+	case"o":System.out.println("its a vowel"+" "+str);
+	break;
+	case"u":System.out.println("its a vowel"+" "+str);
+	break;
+}
+}
+}

@@ -1,0 +1,19 @@
+import java.util.*;
+public class hash {
+	public static void main(String[] args) {
+		HashMap<String,Double>m=new HashMap<String,Double>();
+		m.put("yogi",67.6);
+		m.put("pp",3.6);
+		m.put("rushi",420.19);
+		m.put("alu",67.7);
+		m.put("ninu",76.76);
+		Set set=m.entrySet();
+		Iterator i=set.iterator();		
+		while(i.hasNext())
+		{
+			Map.Entry ref=(Map.Entry)i.next();
+			System.out.print(ref.getKey()+":");
+			System.out.println(ref.getValue());			
+		}			
+	}
+}

@@ -1,0 +1,45 @@
+protected access modifier allows your subclasses be outside your superclass package and yet still inherit pieces of the class including methods and constructors.. 
+The only way the subclass can access the protected methods is by inheritance...
+
+
+
+2
+down vote
+Protected methods can only be accessible through inheritance in subclasses outside the package. And hence the second approach tryMeProtected(); works.
+
+As per Java Protected Access modifier definition methods which are declared protected in a superclass can be accessed only by the subclasses in other package or any class within the package of the protected members' class.
+
+you can't access protected method by creating object of class. So for accessing Protected method you have to extend the superclass.(this explains your 2nd call is correct)
+
+
+
+
+
+You use two different packages and you don't access your parent attributes by direct inheritance, but by an intermediate parent instance declared in the child class (similar to composition). => that's the not the way protected works.
+
+Only direct inheritance allows protected parent's attributes to be reach.
+
+Thus, you can do this:
+
+public class Class2 extends Class1 {
+    doNow() {
+        tryMeProtected();  // No error since direct inheritance 
+    }    
+}
+but never this:
+
+public class Class2 extends Class1 {
+    doNow() {
+        Class1 c = new Class1();
+        c.tryMeProtected(); // this is not a direct inheritance! since `c`, although a parent one is an intermediate instance created in the child instance. => bad
+    }    
+}
+
+
+
+
+
+
+You could access the protected methods either by subclassing and overriding; also when they are available in the same package.
+
+

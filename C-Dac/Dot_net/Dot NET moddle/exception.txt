@@ -1,0 +1,205 @@
+Select the statements which describe the correct usage of exception handling over conventional error handling approaches?
+Select one:
+a. Exception handling allows separation of program’s logic from error handling logic making software more reliable and maintainable
+b. try – catch – finally structure allows guaranteed cleanup in event of errors under all circumstances
+c. As errors can be ignored but exceptions cannot be ignored
+d. All of the mentioned Correct
+Feedback
+The correct answer is: All of the mentioned
+Question 2
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Which of these keywords is not a part of exception handling?
+Select one:
+a. finally Incorrect
+b. thrown
+c. try
+d. catch
+Feedback
+The correct answer is: thrown
+Question 3
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+What will be the output of given code snippet?
+
+{
+    try
+    {
+        int []a = {1, 2, 3, 4, 5};
+        for (int i = 0; i < 7; ++i)
+        Console.WriteLine(a[i]);
+    }
+    catch(IndexOutOfRangeException e)
+    {
+        Console.WriteLine("0");             
+    }
+    Console.ReadLine();
+}
+Select one:
+a. 1234500
+b. 123450
+c. Compile time error Incorrect
+d. 12345
+Feedback
+The correct answer is: 123450
+Question 4
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Choose the correct output for given set of code:
+
+  class Program
+  {
+      static void Main(string[] args)
+      {           
+          try
+          {
+              Console.WriteLine("csharp" + " " + 1/0);
+          }
+          finally
+          {
+              Console.WriteLine("Java");              
+          }
+          Console.ReadLine();
+      }
+  }
+Select one:
+a. Compile time error
+b. csharp 0
+c. Run time Exception generation Correct
+d. Java
+Feedback
+The correct answer is: Run time Exception generation
+Question 5
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Choose the correct output for the given set of code:
+ static void Main(string[] args)
+ {            
+     try 
+     {
+         Console.WriteLine("csharp" + " " + 1/Convert.ToInt32(0));
+     }
+     catch(ArithmeticException e) 
+     {
+         Console.WriteLine("Java");            
+     }
+     Console.ReadLine();
+ }
+Select one:
+a. None of the mentioned
+b. The output will be : Remaining program Incorrect
+c. The output will be : Index out of bounds Remaining program
+d. value 40 will be assigned to a[5];
+Feedback
+The correct answer is: The output will be : Index out of bounds Remaining program
+Question 6
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Which of these keywords is used to manually throw an exception?
+Select one:
+a. finally
+b. catch
+c. throw Correct
+d. try
+Feedback
+The correct answer is: throw
+Question 7
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Which among the following is NOT an exception?
+Select one:
+a. Stack Overflow
+b. Incorrect Arithmetic Expression
+c. Arithmetic Overflow or underflow Incorrect
+d. All of the mentioned
+Feedback
+The correct answer is: Incorrect Arithmetic Expression
+Question 8
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Which of these keywords must be used to monitor exceptions?
+Select one:
+a. catch
+b. try Correct
+c. throw
+d. finally
+Feedback
+The correct answer is: try
+Question 9
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Choose the correct output for the given set of code:
+ static void Main(string[] args)
+ {            
+     try 
+     {
+         Console.WriteLine("csharp" + " " + 1/Convert.ToInt32(0));
+     }
+     catch(ArithmeticException e) 
+     {
+         Console.WriteLine("Java");            
+     }
+     Console.ReadLine();
+ }
+Select one:
+a. Run time error Incorrect
+b. java
+c. csharp
+d. csharp 0
+Feedback
+The correct answer is: java
+Question 10
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+When no exception is thrown at runtime then who will catch it?
+Select one:
+a. Operating System
+b. Compiler
+c. CLR Correct
+d. Loader
+Feedback
+The correct answer is: CLR
+Question 11
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Which of the following is the correct statement about exception handling in C#.NET?
+Select one:
+a. The statement in final clause will get executed no matter whether an exception occurs or not Correct
+b. finally clause is compulsory
+c. All of the mentioned
+d. a program can contain multiple finally clauses
+Feedback
+The correct answer is: The statement in final clause will get executed no matter whether an exception occurs or not
+Question 12
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Select the correct statement about an Exception?
+Select one:
+a. It occurs during loading of program
+b. It occurs at run time
+c. All of the mentioned Incorrect
+d. It occurs during Just-In-Time compilation
+Feedback
+The correct answer is: It occurs at run time

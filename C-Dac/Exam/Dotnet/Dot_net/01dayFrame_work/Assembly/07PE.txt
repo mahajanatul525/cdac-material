@@ -1,0 +1,7 @@
+ Portable Executable (PE) File Format
+
+The Portable Executable (PE) format is a file format for executables, object code, and DLLs, used in 32-bit and 64-bit versions of Windows operating systems.
+
+The PE file format was defined to provide the best way for the Windows Operating System to execute code and also to store the essential data which is needed to run a program. 
+
+Portable Executable File Format is derived from the Microsoft Common Object File Format (COFF).

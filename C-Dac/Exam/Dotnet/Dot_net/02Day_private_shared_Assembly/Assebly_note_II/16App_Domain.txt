@@ -1,0 +1,8 @@
+
+.Net Application Domain
+
+An application domain is a virtual process and is used to isolate applications from one another. Each application domain has their own virtual address space which scopes the resources for the application domain using that address space.
+
+Each application running within its main process boundaries and its application domain boundaries. All objects created within the same application scope are created within the same application domain. Multiple application domains can exist in a single operating system process. An application running inside one application domain cannot directly access the code running inside another application domain.
+
+System.AppDomain is the main class you can use to deal with application domains.

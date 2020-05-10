@@ -1,0 +1,55 @@
+File
+	new
+		project
+			win32 console application
+add 
+	new
+		c++
+		
+		first.cpp
+
+#include<iostream>
+using namespace std;
+void disp()
+{
+	extern int num;
+	cout<<"in disp\t"<<num<<endl;
+	void fun();
+	cout<<"from disp calling fun\t";
+	fun();
+}
+
+
+compile above file. ( ctrl + f7 )
+
+
+add 
+	new
+		c++
+
+		second.cpp
+
+
+#include<iostream>
+using namespace std;
+void disp();
+int num=100;
+void fun()
+{
+	cout<<"in fun"<<endl;
+}
+void main()
+{
+	cout<<"in main\t"<<num<<endl;
+	disp();
+	cout<<"from main calling fun\t";
+	fun();
+}
+
+compile "second.cpp", ( ctrl + f7 )
+
+	build it ( f7 ) . it will create "second.exe" . 
+execute it. ( ctrl+f5)
+
+
+

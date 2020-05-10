@@ -1,0 +1,9 @@
+when u run these programs on eclipse
+
+instead of
+
+<%@taglib prefix="abc" uri="/WEB-INF/hello.tld"%>
+
+you have to write
+
+<%@taglib prefix="abc" uri="WEB-INF/hello.tld"%>

@@ -1,0 +1,29 @@
+class myassign
+{
+     	myassign()
+	{
+ 	System.out.println(" inside noarg parent");
+	}
+}
+ class inherit1 extends myassign
+{
+	inherit1()
+	{
+ 	System.out.println(" inside noarg of sub");
+
+	}
+}
+class inherit2 extends inherit1
+{
+	inherit2()
+	{
+ 	System.out.println(" inside noarg sub2");
+	}
+}
+
+class myassign1
+{
+public static void main(String[] args)
+{ inherit2 rt=new inherit2 ();	
+}	
+}

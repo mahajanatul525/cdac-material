@@ -1,0 +1,9 @@
+1) create html file "prod.html"
+
+accept proid,name,price and quantity
+
+on submit, control should go to ProdServ which will insert the values inside "Prod" table of MySQL.
+
+
+2) write a servlet which will retrieve all loc's from dept table store them in ArrayList and display it.
+

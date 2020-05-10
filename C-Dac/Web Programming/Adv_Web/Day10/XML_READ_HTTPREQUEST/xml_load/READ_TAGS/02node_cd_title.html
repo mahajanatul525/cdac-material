@@ -1,0 +1,27 @@
+<html><head>
+<script type="text/javascript" src="loadxmldomsimple.js"></script>
+</head><body><table border='2'>
+<tr> <th>TITle</th><th>Artist</th> </tr>
+<script type="text/javascript">
+xmlDoc=loadXMLDoc("cd_catalog.xml");
+alert(xmlDoc.nodeName)
+x=xmlDoc.getElementsByTagName("TITLE");
+y=xmlDoc.getElementsByTagName("ARTIST");
+for (i=0;i<x.length;i++)
+  {	document.write("<tr>")
+     document.write("<td>") 
+ document.write(x[i].childNodes[0].nodeValue);
+	 document.write("</td>") 
+     document.write("<td>") 
+  document.write(y[i].childNodes[0].nodeValue);
+     document.write("</td>") 
+
+document.write("</tr>")
+
+  }
+
+</script>
+</table>
+</body>
+</html>
+

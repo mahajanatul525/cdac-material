@@ -1,0 +1,445 @@
+/*class base
+{
+	public:
+		base(char *ptr)
+		{
+		}
+};
+class sub:public base
+{
+};
+
+Following statements should be possible
+
+sub s;
+
+sub *s1=new sub(40);
+
+sub *s2=new sub('a',4.5);*/
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class base
+{
+public:
+	base(char *ptr)
+	{
+		cout<<"in param char const"<<endl;
+	}
+	base()
+	{
+		cout<<"in no arg constructor"<<endl;
+	}
+	~base()
+	{
+		cout<<"in dest of base"<<endl;
+
+	}
+};
+
+class sub:public base
+{
+private:
+	int num;
+	float a;
+	char c;
+public:
+	sub()
+	{
+		num=0;
+		cout<<"in no arg of sub"<<endl;
+	}
+	sub(int k)
+	{
+		num=k;
+		cout<<"in param of sub"<<num<<endl;
+	}
+	sub(char d,float n)
+	{
+		c=d;
+		a=n;
+		cout<<"in 2 param of sub"<<c<<a<<endl;
+	}
+	~sub()
+	{
+		cout<<"in dest of sub"<<endl;
+	}
+};
+void main()
+{
+	{sub s;
+	sub *s1=new sub(40);
+	sub *s2=new sub('a',4.5);
+	delete s2;
+	delete s1;}
+	getch();
+}
+
+
+
+
+
+/*class base1
+{
+	int num1;
+};
+class base2
+{
+	int num2;
+};
+class sub:public base1,base2
+{
+	int num3;
+};
+
+above classes are incomplete.
+You should be able to do following
+
+sub *s=new sub; (num1,num2 and num3 should be 0)
+
+sub s1(10,20,30); (num1,num2 and num3 should be 10,20 and 30 respectively)
+
+sub *s2=new sub(50,60); (num1,num2 and num3 should be 50,60 and 70 respectively)*/
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class base1
+{
+private:
+
+	int num1;
+public:
+	base1()
+	{
+		num1=0;
+		cout<<"in no arg of base1  "<< num1<<endl;
+	}
+	base1(int k)
+	{
+		num1=k;
+		cout<<"in 1 param of base1  "<<num1<<endl;
+	}
+};
+class base2
+{
+private:
+	int num2;
+public:
+	base2()
+	{
+		num2=0;
+		cout<<"in no arg of base2  "<< num2<<endl;
+	}
+	base2(int k)
+	{
+		num2=k;
+		cout<<"in 1 param of base2  "<<num2<<endl;
+	}
+};
+class sub:public base1,base2
+{
+	int num3;
+	public:
+	sub()
+	{
+		num3=0;
+		cout<<"in no arg of base3  "<<num3<<endl;
+	}
+	sub(int k):base1(10),base2(20)
+	{
+		num3=k;
+		cout<<"in 1 param of base2 "<<num3<<endl;
+	}
+	sub(int k,int b):base1(60),base2(50)
+	{
+		num3=70;
+		cout<<"in 1 param of base2 "<<num3<<endl;
+	}
+};
+void main()
+{{
+sub *s=new sub;
+sub s1(30);
+sub *s2=new sub(60,50);
+}
+getch();
+}
+
+
+
+
+/*class parent
+{
+	public:
+		disp1()
+		disp2()
+		disp3()
+		disp4()
+};
+class sub:private parent
+{
+	public:
+		disp5()
+};
+
+make sure u can do the following
+
+sub s(30);
+s.disp5();
+s.disp3();
+s.disp1();*/
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class parent
+{
+	public:
+		void disp1(){cout<<"1";}
+		void disp2(){cout<<"2";}
+		void disp3(){cout<<"3";}
+			void disp4(){cout<<"4";}
+};
+class sub:private parent
+{
+	public:
+		sub(int k)
+		{
+		}
+		void disp5(){cout<<"5";}
+		parent::disp3;
+		parent::disp1;
+};
+void main()
+{{
+sub s(30);
+s.disp5();
+s.disp3();
+s.disp1();}
+getch();
+}
+
+
+
+
+/*4) 
+class course
+{
+	//here
+};
+class DacCourse:public course
+{
+	// here
+};
+
+you should be able to say following
+
+course *c=new course;
+c->fees(); // course version should be called
+c=new DacCourse;
+c->fees();  // DacCourse version should be called*/
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class course
+{
+public:
+	virtual void fees()
+	{
+		cout<<"123"<<endl;
+	}
+};
+class DacCourse:public course
+{
+public:
+	void fees()
+	{
+		cout<<"DacCourse";
+	}
+};
+void main()
+{{
+course *c=new course;
+c->fees(); // course version should be called
+c=new DacCourse;
+c->fees();  // DacCourse version should be called
+}
+getch();
+}
+
+
+
+/*
+
+5) 
+Create a base class FourWheeler. Declare pure virtual function “void start()” in it. 			
+Define following sub classes for this class. 
+A) Qualis b) Sumo c) Volvo 					
+Define “start” function in these classes.			In main function , create array of pointer to FourWheeler which will contain objects of these three sub classes. 
+Now traverse the array and call all the child class methods.*/
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class FourWheeler
+{
+public:
+	virtual void start()=0;
+};
+class Qualis:public FourWheeler
+{
+public:
+	void start()
+	{
+		cout<<"Qualis Has started";
+	}
+};
+class Sumo:public FourWheeler
+{
+public:
+	void start()
+	{
+		cout<<"Sumo Has started";
+	}
+};
+class Volvo:public FourWheeler
+{
+public:
+	void start()
+	{
+	cout<<"Volvo Has started";
+	}
+};
+void main()
+{
+	{
+	FourWheeler *a[3]={new Qualis,new Sumo,new Volvo};
+	
+	for(int i=0;i<3;i++)
+	{
+	a[i]->start();
+	}
+	
+	
+	}
+	getch();
+}
+
+
+
+
+
+
+
+/*Create a base class “Subject”.Declare pure virtual function “void maxmarks()” in it.  Define following sub classes for this class. A) Maths b) History c) English.	Define “maxmarks” in these classes.
+
+now write a global function "show" which will accept "subject class pointer" as an argument. this function should be able to call "maxmarks()" of any child class which is passed.
+From main function try to call this function by passing various child classes.*/
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class subject
+{
+public:
+	
+virtual void maxmarks()=0;
+};
+class maths:public subject
+{
+public:
+	void maxmarks()
+	{
+		cout<<"in max marks of maths"<<endl;
+	}
+};
+class history:public subject
+{
+public:
+	void maxmarks()
+	{
+		cout<<"in max marks of history"<<endl;
+	}
+};
+class english:public subject
+{
+public:
+	void maxmarks()
+	{
+		cout<<"in max marks of english"<<endl;
+	}
+};
+void show(subject *p)
+{
+	p->maxmarks();
+}
+void main()
+{{
+	subject *s1=new maths;
+	show(s1);
+	subject *s2=new history;
+	show(s2);
+	subject *s3=new english;
+	show(s3);
+}
+	getch();
+}
+
+
+
+
+
+
+/*Create a base class “Subject”.Declare pure virtual function “void maxmarks()” in it.  Define following sub classes for this class. A) Maths b) History c) English.	Define “maxmarks” in these classes.
+
+now write a global function "show" which will accept "subject class pointer" as an argument. this function should be able to call "maxmarks()" of any child class which is passed.
+From main function try to call this function by passing various child classes.*/
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class subject
+{
+public:
+	
+virtual void maxmarks()=0;
+};
+class maths:public subject
+{
+public:
+	void maxmarks()
+	{
+		cout<<"in max marks of maths"<<endl;
+	}
+};
+class history:public subject
+{
+public:
+	void maxmarks()
+	{
+		cout<<"in max marks of history"<<endl;
+	}
+};
+class english:public subject
+{
+public:
+	void maxmarks()
+	{
+		cout<<"in max marks of english"<<endl;
+	}
+};
+void show(subject &p)
+{
+	p.maxmarks();
+}
+void main()
+{{
+	maths m;
+	subject &ref=m;
+	show(m);
+	history h;
+	subject &ref1=h;
+	show(h);
+	english  e;
+	subject &ref2=e;
+	show(e);
+}
+	getch();
+}

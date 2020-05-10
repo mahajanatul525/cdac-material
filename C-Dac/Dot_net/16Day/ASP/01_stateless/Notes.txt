@@ -1,0 +1,4 @@
+Web Applications work on HTTP protocol. HTTP protocol is a stateless protocol, meaning it does not retain state between user requests. Let's understand the stateless nature of the HTTP protocol with an example.
+
+
+---ViewState data is serialized into base64-encoded strings, and is stored in Hidden input field __ViewState. To view this hidden input field, right click on the browser and select "View Page Source" for google chrome. In internet explorer, right click and select "View Source" 

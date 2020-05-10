@@ -1,0 +1,31 @@
+CREATE DEFINER=`root`@`localhost` FUNCTION `numtostr`(num int) RETURNS varchar(50) CHARSET latin1
+BEGIN
+	declare n int;
+    declare unit int;
+    declare str varchar(100);
+    
+    set str:='';
+    
+    myloop:loop
+    
+		if(num<=0) then
+			leave myloop;
+		end if;
+        
+		set unit:=num%10;
+        set num:=floor(num/10);
+        
+        if (unit=0) then set str:=concat('zero ',str);
+        elseif (unit=1) then set str:=concat('one ',str);
+        elseif (unit=2) then set str:=concat('two ',str);
+        elseif (unit=3) then set str:=concat('three ',str);
+        elseif (unit=4) then set str:=concat('four ',str);
+        elseif (unit=5) then set str:=concat('five ',str);
+        elseif (unit=6) then set str:=concat('six ',str);
+        elseif (unit=7) then set str:=concat('seven ',str);
+        elseif (unit=8) then set str:=concat('eight ',str);
+        elseif (unit=9) then set str:=concat('nine ',str);
+        end if;
+    end loop myloop;
+RETURN str;
+END

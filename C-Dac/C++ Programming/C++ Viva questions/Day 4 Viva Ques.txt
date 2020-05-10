@@ -1,0 +1,23 @@
+1) what is the need of providing destructor explicitly ?
+2) copy constructor
+3) what is the need of providing copy constructor explicitly ?
+4) which is the better way of collecting object inside a function ?
+5) return value optimization
+6) why copy constructor can not have object as an argument ?
+7) static members
+8) what is the use of static member functions ?
+9) static and non-static relationship
+10) is it legal to call member function from a constructor ?
+11) how to define static member outside the function ? what will happen if we don't define it ?
+12) what is friend function ?
+13) what is forward declaration ?
+14) what is operator overloading ?
+15) example where operator overloading can be achieved with only friend function .
+16) example where you can return current object reference while overloading operator.
+17) in case of binary operator how many arguments we need for member function and friend function. Explain with reason.
+18) in case of binary operator how many arguments we need for member function and friend function. Explain with reason.
+19) what is the need to provide assignment operator explicitly.
+20) How many types of conversion are there. Give examples.
+21) when do we need conversion operator function and what are the rules for it.
+22) when do we need to apply "explicit" keyword to a constructor.
+

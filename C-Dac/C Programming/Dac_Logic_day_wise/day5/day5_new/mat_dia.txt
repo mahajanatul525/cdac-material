@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+   int i,j,k,c,arr[3][3];
+   for(i=0;i<3;i++)
+   {
+	    k=i;
+		c=1;
+		for(j=0;j<=i;j++)
+		{ scanf("%d",&arr[k][j]);
+		  k--;
+		}
+
+      while(i==2)
+	  { k=i;
+	  for(j=c;j<=i;j++)
+	   {
+		  scanf("%d",&arr[k][j]);
+	     	 k--;
+	   }
+	  if(c==i)
+	    	 break;
+	  c++;
+	 }
+   }
+   
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+			printf("%d",arr[i][j]);
+		  printf("\n");
+	}
+
+   getch();
+}
+   
+
+ip:123  op:136
+   456     258 
+   789     479 

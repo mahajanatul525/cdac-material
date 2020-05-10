@@ -1,0 +1,62 @@
+arr 123
+    456
+    789
+
+o/p   3
+     56
+    789
+
+
+#include<stdio.h>
+void main()
+{
+int k=2;
+int r,c,s;
+	int arr[3][3]={ {1,2,3}, {4,5,6},{7,8,9}};
+
+	
+	for(r=0;r<=2;r++)
+	{
+		for(s=k;s>=1;s--)
+	
+		printf(" ");
+		for(c=k;c<=2;c++)
+		{	
+		
+			printf("%d",arr[r][c]);}
+		k--;
+		printf("\n");
+	}
+	
+
+}
+
+
+
+
+
+
+
+#include<stdio.h>
+void main()
+{
+
+int r,c,s;
+	int arr[3][3]={ {1,2,3}, {4,5,6},{7,8,9}};
+
+	
+	for(r=0;r<=2;r++)
+	{
+		for(s=k;s>=1;s--)
+	
+		printf(" ");
+		for(c=2-r;c<=2;c++)
+		{	
+		
+			printf("%d",arr[r][c]);}
+		
+		printf("\n");
+	}
+	
+
+}

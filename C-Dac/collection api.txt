@@ -1,0 +1,302 @@
+Collection api
+Q1
+
+package pro1;
+import java.util.*;
+import java.io.*;
+
+public class Myclass implements Serializable{
+int num;
+
+
+
+	/* (non-Javadoc)
+ * @see java.lang.Object#toString()
+ */
+@Override
+public String toString() {
+	return "Myclass [num=" + num + "]";
+}
+
+
+
+	/**
+ * @param num
+ */
+public Myclass(int num) {
+	super();
+	this.num = num;
+}
+
+
+
+
+ 
+
+
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+Myclass ob1= new Myclass(10);
+Myclass ob2= new Myclass(20);
+Myclass ob3= new Myclass(50);
+Myclass ob4= new Myclass(40);
+Myclass ob5= new Myclass(500);
+ArrayList<Myclass> a= new ArrayList <Myclass>();
+a.add(ob1);
+a.add(ob2);
+a.add(ob3);
+a.add(ob4);
+a.add(ob5);
+System.out.println(a);
+try(FileOutputStream fos= new FileOutputStream("abc.txt"))
+{
+	try(ObjectOutputStream os=new ObjectOutputStream(fos))
+	{
+	os.writeObject(a);
+	}
+}
+		catch(Exception e)
+	{
+		e.printStackTrace();		
+	}
+			
+try(FileInputStream fis=new FileInputStream ("abc.txt"))
+{
+    try(ObjectInputStream ois= new ObjectInputStream(fis))
+    {
+    	ois.readObject();
+    }
+    
+}
+    	catch(Exception ee)
+    	{
+    		ee.printStackTrace();
+    	}
+    
+	}
+	}
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+Q2
+package pro1;
+import java.util.*;
+
+public class Hashmap {
+
+	public static void main(String args[])
+	{
+	HashMap<Integer,String> h= new HashMap<Integer,String>();
+	h.put(100, "amrit");
+	h.put(002, "amrita");
+	h.put(003, "amruta");
+	h.put(004, "ammmmrit");
+	h.put(005, "aaaaaaaamrit");
+	Set set=h.entrySet();
+	Iterator i=set.iterator();
+	while(i.hasNext())
+	{
+		Map.Entry m=(Map.Entry)i.next();
+		System.out.println(m.getKey());
+		System.out.println(m.getValue());
+		
+	}
+	}
+
+}
+------------------------------------------------------------------------------------------------------------------
+Q3package pro1;
+
+public interface Game {
+	void play();
+	
+}
+     
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+package pro1;
+ class First implements Game {
+	public void play()
+	{
+		System.out.println("i m in first");
+	}
+
+}
+ class Second implements Game {
+	public void play()
+	{
+		System.out.println("i m in second");
+	}
+
+}
+ class Third implements Game {
+	public void play()
+	{
+		System.out.println("i m in third");
+	}
+
+}
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+package pro1;
+
+ class Mynew<t extends Game> {
+	t ob;
+
+	/**
+	 * @param ob
+	 */
+	public Mynew(t ob) 
+	{
+		
+		this.ob = ob;
+	}
+	public void fun()
+	{
+		ob.play();
+	}
+	
+ }
+ 
+public class generic {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+  Mynew<First>  g= new Mynew<First>(new First());
+        g.fun();
+        Mynew<Second>  g1= new Mynew<Second>(new Second());
+        g1.fun();
+        Mynew<Third>  g2= new Mynew<Third>(new Third());
+        g2.fun();
+        
+	}
+
+}
+-----------------------------------------------------------------------------------------------------------------------
+Q4
+package pro1;
+import java .util.*;
+import java.io.*;
+
+public class employee {
+private int empid;
+private String empname;
+private String desig;
+private int basic;
+
+
+
+	/**
+ * @param empid
+ * @param empname
+ * @param desig
+ * @param basic
+ */
+public employee(int empid, String empname, String desig, int basic) {
+	super();
+	this.empid = empid;
+	this.empname = empname;
+	this.desig = desig;
+	this.basic = basic;
+}
+
+
+
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "employee [empid=" + empid + ", empname=" + empname + ", desig="
+				+ desig + ", basic=" + basic + "]";
+	}
+
+
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		employee e1=new employee(1,"abc","ass",-8000);
+		employee e2=new employee(1,"pq","as",-800);
+		employee e3=new employee(1,"fd","a",-80);
+		employee e4=new employee(1,"a","b",-8);
+		ArrayList<employee> a=new ArrayList<employee>();
+		a.add(e1);
+		a.add(e2);
+		a.add(e3);
+		a.add(e4);
+		System.out.println(a);
+		try(FileOutputStream fos= new FileOutputStream("ab.txt"))
+		{
+			try(ObjectOutputStream os=new ObjectOutputStream(fos))
+			{
+			os.writeObject(a);
+			}
+		}
+				catch(Exception e)
+			{
+				e.printStackTrace();		
+			}
+					
+		try(FileInputStream fis=new FileInputStream ("ab.txt"))
+		{
+		    try(ObjectInputStream ois= new ObjectInputStream(fis))
+		    {
+		    	ois.readObject();
+		    }
+		    
+		}
+		    	catch(Exception ee)
+		    	{
+		    		ee.printStackTrace();
+		    	}
+		    
+			}
+			
+
+	}
+
+
+-----------------------------------------------------------------------------------
+Q5
+package pro1;
+import java.util.*;
+
+
+public class icc {
+	
+
+	public static void main(String args[])
+	{
+		// TODO Auto-generated method stub
+		HashMap<Integer,String> s=new HashMap<Integer,String>();
+
+		s.put(1,"a");
+		s.put(2,"b");
+		s.put(3,"c");
+		s.put(4,"d");
+		s.put(5,"e");
+		Set z=s.entrySet();
+		Iterator a=z.iterator();
+		while(a.hasNext())
+			{
+			Scanner w=new Scanner(System.in);
+			int x=w.nextInt();
+			Map.Entry d=(Map.Entry)a.next();
+			if(x==(int)d.getKey())
+			{
+				System.out.println(d.getValue());
+			}
+			
+		}
+	}			
+			
+}
+
+}

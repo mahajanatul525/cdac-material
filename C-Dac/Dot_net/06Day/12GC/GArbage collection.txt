@@ -1,0 +1,29 @@
+Garbage Collection and Destructors
+
+
+As you have seen, objects are dynamically allocated from a pool of free memory by using the new operator.
+ Of course, memory is not infinite, and the free memory can be exhausted.
+
+Thus, it is possible for new to fail because there is insufficient free memory to create the desired object.
+
+ For this reason, one of the key components of any dynamic allocation scheme is the recovery of free memory from unused objects, making that memory available for subsequent reallocation.
+
+
+ In many programming languages, the release of previously allocated memory is handled manually.
+
+
+
+garbage collection:
+.
+C#’s garbage collection system reclaims objects automatically—occurring transparently, behind the scenes, without any programmer intervention. 
+
+It works like this:
+ When no references to an object exist, that object is assumed to be no longer needed, and the memory
+occupied by the object is eventually released and collected. 
+
+This recycled memory can then be used for a subsequent allocation.
+
+Garbage collection occurs only sporadically during the execution of your program.
+
+ It will not occur simply because one or more objects exist that are no longer used. 
+Thus, you can’t know, or make assumptions about, precisely when garbage collection will take place.

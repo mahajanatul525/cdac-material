@@ -1,0 +1,98 @@
+static void LambdaExpressionSyntax()
+{
+// Make a list of integers.
+List<int> list = new List<int>();
+list.AddRange(new int[] { 20, 1, 4, 8, 9, 44 });
+
+// Now, use a C# lambda expression.
+List<int> evenNumbers = list.FindAll(i => (i % 2) == 0);
+
+Console.WriteLine("Here are your even numbers:");
+foreach (int evenNumber in evenNumbers)
+{
+Console.Write("{0}\t", evenNumber);
+}
+Console.WriteLine();
+}
+
+
+
+lambda expressions can be used anywhere
+you would have used an anonymous method or a strongly typed delegate (typically with far fewer
+keystrokes). 
+
+Under the hood, the C# compiler translates the expression into a standard anonymous
+method making use of the Predicate<T> delegate type (which can be verified using ildasm.exe or
+reflector.exe). 
+Specifically, the following code statement:
+
+// This lambda expression...
+List<int> evenNumbers = list.FindAll(i => (i % 2) == 0);
+is compiled into the following approximate C# code:
+
+// ...becomes this anonymous method.
+List<int> evenNumbers = list.FindAll(delegate (int i)
+{
+return (i % 2) == 0;
+});
+
+
+
+// Now, explicitly state the parameter type.
+List<int> evenNumbers = list.FindAll((int i) => (i % 2) == 0);
+
+
+As you have seen, if a lambda expression has a single, implicitly typed parameter, the parentheses
+may be omitted from the parameter list. If you want to be consistent regarding your use of lambda
+
+parameters, you can always wrap the parameter list within parentheses, leaving us with this expression:
+
+List<int> evenNumbers = list.FindAll((i) => (i % 2) == 0);
+
+Finally, notice that currently our expression has not been wrapped in parentheses (we have of
+course wrapped the modulo statement to ensure it is executed first before the test for equality). Lambda
+expressions do allow for the statement to be wrapped as follows:
+
+// Now, wrap the expression as well.
+List<int> evenNumbers = list.FindAll((i) => ((i % 2) == 0));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+static void LambdaExpressionSyntax()
+{
+// Make a list of integers.
+List<int> list = new List<int>();
+list.AddRange(new int[] { 20, 1, 4, 8, 9, 44 });
+// Now process each argument within a group of
+// code statements.
+List<int> evenNumbers = list.FindAll((i) =>
+{
+Console.WriteLine("value of i is currently: {0}", i);
+bool isEven = ((i % 2) == 0);
+return isEven;
+});
+Console.WriteLine("Here are your even numbers:");
+foreach (int evenNumber in evenNumbers)
+{
+Console.Write("{0}\t", evenNumber);
+}
+Console.WriteLine();
+}

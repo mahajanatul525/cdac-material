@@ -1,0 +1,18 @@
+#include<stdio.h>
+void main()
+{
+void call();
+
+call();
+call();
+call();
+printf("bye");
+
+}
+
+void call()
+{
+static int a=0;  //0
+printf("%d",a); 012
+a++; //1 2
+}

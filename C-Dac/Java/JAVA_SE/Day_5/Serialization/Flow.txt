@@ -1,0 +1,70 @@
+Object persistence
+
+	store heap-based object inside File-System
+					Serializable
+
+	""	""		""	Database
+						ORM
+
+importance of Object Persistence
+
+
+when u serialize
+
+	take heap-based object convert into sequence of bytes, write them inside File-System [ Serialization ]
+
+when u need to retrieve the state of an object
+
+	open file, read the sequence of bytes , convert them into full fledged heap-based object [ Deserialization ]
+
+
+
+
+how to serialize
+	class implement Serializable or Externalizable
+
+		members- serialized
+
+
+		Serializable - marker interface
+		
+		Externalizable extends Serializable
+			
+			readExternal and writeExternal
+
+example of Serializable
+
+	Entire object graph is serialized
+		non-static and non-transient members
+		SerialversionUID [ generated automatically by jvm if not declared explicitly by programmer ]
+
+		transient
+
+	Serialization and inheritance
+
+
+serialversion info
+
+	how does it work- InvalidClassException
+
+recommendation for SerialVersionUID
+	declare it inside ur class explicitly
+
+
+Externalizable
+	need
+
+	example
+		constructor invocation incase of deserialization
+
+
+
+		Externalizable
+
+Serialization and inner class
+
+
+
+
+
+	

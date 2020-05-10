@@ -1,0 +1,22 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+void main()
+{
+	char str1[20],str2[20];
+	cout<<"Enter first name"<<endl;
+	cin>>str1;
+	cout<<"Enter second name"<<endl;
+	cin>>str2;
+	cout<<"Before\t"<<str1<<"\t"<<str2<<endl;
+
+	char (&ref1)[20]=str1;
+	char (&ref2)[20]=str2;
+	
+	char temp[20];
+
+	strcpy(temp,ref1);
+	strcpy(ref1,ref2);
+	strcpy(ref2,temp);
+	cout<<"After\t"<<str1<<"\t"<<str2<<endl;
+}

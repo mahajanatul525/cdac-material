@@ -1,0 +1,74 @@
+Task Parallel Library
+
+Task Parallel Library (TPL) is a set of types and APIs that simplifies adding parallelism and concurrency to the applications. It handles the partitioning of the work, scheduling of the threads on the ThreadPool, cancellation support, state management and other low level details. 
+
+
+TPL introduces the concept of Data Parallelism, scenarios in which the same operation is performed concurrently on elements in a source collection or array. 
+
+Parallel.For and Parallel.ForEach methods in the System.Threading.Tasks namespace are used for this purpose. 
+
+For example, the following statement is used to concurrently process the items in a source collection;
+
+
+Parallel.ForEach(sourceCollection, item => Process(item));
+
+
+Both these methods have several overloads to let you stop or break loop execution, 
+monitor the state of the loop on other threads, 
+maintain thread-local state, 
+finalize thread-local objects, 
+control the degree of concurrency, and so on.
+
+
+TPL provides other methods and data types to implicitly or explicitly executes tasks concurrently. 
+
+The Parallel.Invoke method is used to execute any number of arbitrary statements concurrently. The method accepts variable no. of Action delegates as argument and executes these concurrently. 
+
+The easiest way to create the Action delegates is to use lambda expressions. 
+
+For example;
+
+Parallel.Invoke(() => DoSomeWork(), () => DoSomeOtherWork());
+
+
+If a greater control over task execution is required, or you need to return a value from the task TPL includes
+
+System.Threading.Tasks.Task and 
+System.Threading.Tasks.Task<TResult> classes this purpose.
+
+
+The Task object handles the infrastructure details and provides methods/properties for controlling its execution and observing its status.
+
+For example, the Status property of a Task determines whether a task has started running, ran to completion, was cancelled, or has thrown an exception. 
+The Task object accepts a delegate (named, anonymous or a lambda expression) as argument at initialization time. Calling the method Start on the Task object starts execution of the provided delegate.
+
+
+// Create a task and provide a user delegate.
+var task = new Task(() => Console.WriteLine("Hello from task."));
+
+// Start the task.
+taskA.Start();
+
+The Task object contains a static property Factory that returns an object of the TaskFactory class that provides support for creating and scheduling Task objects.
+
+// Create and start the task in one operation.
+var taskA = Task.Factory.StartNew(() => Console.WriteLine("Hello from taskA."));
+
+
+The Task class provides many other options to control the execution of operations assigned to the task. The Task.ContinueWith method let you specify a task to be started when the antecedent task completes.
+
+The user code executed using a Task can create nested detached and child Tasks. 
+
+The child tasks are created when the TaskCreationOptions.AttachedToParent is specified while creating the Task. 
+
+
+In case of  child tasks, the parent task implicitly waits for all child tasks to complete.The Task class provides support to explicitly wait for a single or an array of tasks.
+
+ The Task.Wait method let you wait for a task to complete. The
+
+Task.WaitAny and 
+Task.WaitAll
+
+ methods let you wait for any or all tasks in an array to complete. When a Task throws one or more exceptions, these are wrapped in an AggregateException and is propagated back to the joining thread.
+
+ Also the Task class supports cooperative cancellation. The Task class takes a cancellation token as argument at initialization and user can issue cancellation request at some later time.

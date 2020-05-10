@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+void reverse(char *);  
+
+
+ void main()
+	{
+		char str[10];
+		
+		printf("Enter the string\n");
+		gets(str);
+		printf("The revrse string is\n\n");
+		reverse(str);        
+		
+	}
+
+
+
+	void reverse(char *s)
+	{
+		int i,l,j=0;
+		char r[10];
+		l=strlen(s);
+		
+		for(i=l-1;i>=0;i--)
+		{
+		*(r+j)=*(s+i);
+		j++;
+		}
+		*(r+j)='\0';
+		printf("%s",r);
+		
+
+	/*for(i=l-1;i>=0;i--)
+		{
+		r[j]=s[i];
+		j++;
+		}
+		r[j]='\0';
+		printf("%s",r)  */      ;
+	}

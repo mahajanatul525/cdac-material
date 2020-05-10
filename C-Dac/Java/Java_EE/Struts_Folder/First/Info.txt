@@ -1,0 +1,8 @@
+when the control comes from action class to jsp, respective getter methods are invoked. ie.
+
+<s:textfield name="name" label="Enter your name:"></s:textfield>
+
+
+and
+
+<s:property value="name" default="Guest"/></b>

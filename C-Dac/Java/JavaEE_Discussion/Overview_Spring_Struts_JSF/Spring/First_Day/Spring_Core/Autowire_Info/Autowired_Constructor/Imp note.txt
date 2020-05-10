@@ -1,0 +1,5 @@
+no need to use <constructor-arg>
+
+in spring bean configuration file u have to specify following statement
+
+ <context:annotation-config></context:annotation-config>   

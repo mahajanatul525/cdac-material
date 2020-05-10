@@ -1,0 +1,38 @@
+1) container loads the tag handler class, when it is used for the first time
+2) it is instantiated with public no-arg constructor
+	note:- tag handlers are never reused. Each tag handler instance takes care of single invocation. tag handler object will always be initialized before any of its methods are called.
+3) container calls "setJspContext(JspContext)" method
+JspContext is a parent of PageContext
+4) if the tag is nested (invoked from within another tag), container calls "setParent(JspTag)" method.
+5) if the tag has attributes, call attribute setters.
+attribute setters are the setter methods which you define in your tag handler class for each attribute.
+6) if the tag is not declared to have a <body-content> of empty, and the tag has a body, call the "setJspBody(JspFragment)" method.
+	if the tag has a body, body comes in through this method, as an instance of JspFragment.
+7) container calls "doTag()" , which you have overridden.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

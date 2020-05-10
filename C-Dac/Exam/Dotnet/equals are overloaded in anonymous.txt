@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication13
+{
+    class myclass
+    {
+        static void Main()
+        {
+            var firstchar = new { color = "red", make = "honda" };
+            var secchar = new { color = "red", make = "honda" };
+            bool x = firstchar.Equals(secchar);
+            if (x == true)
+            {
+                Console.WriteLine("equals");//eqals
+            }
+            else
+            {
+                Console.WriteLine("not equals");
+            }
+        }
+
+    }
+
+            
+}

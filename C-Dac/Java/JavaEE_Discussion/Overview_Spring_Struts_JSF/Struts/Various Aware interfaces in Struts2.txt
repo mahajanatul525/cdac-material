@@ -1,0 +1,11 @@
+Struts 2 Aware interfaces are used to put information into the request, response, context or session object.
+
+The action class must implement these interfaces to store information so that it can be retrieved from other action class.
+
+The four aware interfaces are:
+
+    org.apache.struts2.interceptor.SessionAware
+    org.apache.struts2.util.ServletContextAware
+    org.apache.struts2.interceptor.ServletRequestAware
+    org.apache.struts2.interceptor.ServletResponseAware
+

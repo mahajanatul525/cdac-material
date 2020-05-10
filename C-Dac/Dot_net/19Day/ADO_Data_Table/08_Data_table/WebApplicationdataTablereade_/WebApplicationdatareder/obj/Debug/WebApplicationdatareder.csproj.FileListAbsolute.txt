@@ -1,0 +1,5 @@
+D:\dot_net\Day_wise\day9\examples\08\WebApplicationdatareder\WebApplicationdatareder\bin\WebApplicationdatareder.dll
+D:\dot_net\Day_wise\day9\examples\08\WebApplicationdatareder\WebApplicationdatareder\bin\WebApplicationdatareder.pdb
+D:\dot_net\Day_wise\day9\examples\08\WebApplicationdatareder\WebApplicationdatareder\obj\Debug\WebApplicationdatareder.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day9\examples\08\WebApplicationdatareder\WebApplicationdatareder\obj\Debug\WebApplicationdatareder.dll
+D:\dot_net\Day_wise\day9\examples\08\WebApplicationdatareder\WebApplicationdatareder\obj\Debug\WebApplicationdatareder.pdb

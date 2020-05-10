@@ -1,0 +1,86 @@
+.NET 4.0 introduces a lightweight struct called the CancellationToken that provides a mechanism to cancel synchronous and asynchronous operations. 
+Here are some important members of this struct:
+
+isCancellationRequested - a Boolean property that can be polled by the code to find out if it has been cancelled or the cancellation has been requested
+
+Register - to register a delegate for a callback when a cancellation request has been made
+
+We use an instance of the    CancellationTokenSource   class to get a cancellation token. cancellation token can be passed freely to the listeners. So cancelling the token is cleanly separated from the ability to consume a request for cancellation.
+
+
+ Here are the steps required to cancel a task:
+1. We first create the cancellation token(cToken) using the CancellationTokenSource class.
+
+2. The cancelable task(GenerateNumbers) is then created by passing the cancellation token to Task<>.Factory.StartNew().
+
+3. We then use the Register() method to register a delegate(cancelNotification) to notify us when a cancellation request has been made.
+
+4. On pressing 1, the request for a task to be cancelled is made using the CancellationTokenSource.Cancel() method, and the delegate notifies us that the cancellation was requested.
+
+Let us illustrate the steps shown above and understand the process of cancelling a task with the help of an example. The code has comments which explains what’s going on
+C#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace _01_console
+{
+
+       class Program
+    {
+          static void Main(string[] args)
+           {
+             Console.WriteLine("Press 1 to cancel task");
+            var cTokenSource = new CancellationTokenSource();
+            // Create a cancellation token from CancellationTokenSource
+
+
+            var cToken = cTokenSource.Token; 
+            // Create a task and pass the cancellation token
+            var t1 = Task<int>.Factory.StartNew(()
+                => GenerateNumbers(cToken), cToken);
+ 
+            // to register a delegate for a callback when a
+            // cancellation request is made
+            cToken.Register(() => cancelNotification());
+ 
+            // If user presses 1, request cancellation.
+            if (Console.ReadKey().KeyChar == '1')
+            {
+                // cancelling task
+                cTokenSource.Cancel();
+            }
+            Console.ReadLine();
+        }
+       
+ 
+        static int GenerateNumbers(CancellationToken ct)
+        {
+            int i;
+            for (i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Method1 - Number: {0}", i);
+                Thread.Sleep(1000);
+                // poll the IsCancellationRequested property
+                // to check if cancellation was requested
+                if (ct.IsCancellationRequested)
+                {
+                    break;
+                }
+ 
+            }
+            return i;
+        }
+ 
+        // Notify when task is cancelled
+        static void cancelNotification()
+        {
+            Console.WriteLine("Cancellation request made!!");
+        }
+               
+           }
+}
+

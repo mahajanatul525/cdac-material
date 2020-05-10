@@ -1,0 +1,12 @@
+D:\practice_dotnet\vertual_poly\vertual_poly\bin\Debug\vertual_poly.exe.config
+D:\practice_dotnet\vertual_poly\vertual_poly\bin\Debug\vertual_poly.exe
+D:\practice_dotnet\vertual_poly\vertual_poly\bin\Debug\vertual_poly.pdb
+D:\practice_dotnet\vertual_poly\vertual_poly\obj\Debug\vertual_poly.exe
+D:\practice_dotnet\vertual_poly\vertual_poly\obj\Debug\vertual_poly.pdb
+D:\practice_dotnet\vertual_poly\vertual_poly\obj\Debug\vertual_poly.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day2\02Inheritance\vertual_poly\vertual_poly\bin\Debug\vertual_poly.exe.config
+D:\dot_net\Day_wise\day2\02Inheritance\vertual_poly\vertual_poly\obj\Debug\vertual_poly.exe
+D:\dot_net\Day_wise\day2\02Inheritance\vertual_poly\vertual_poly\obj\Debug\vertual_poly.pdb
+C:\Users\practice\Desktop\Dot_net\day2\02Inheritance\02vertual_poly_pass_in_method\vertual_poly\bin\Debug\vertual_poly.exe.config
+C:\Users\practice\Desktop\Dot_net\day2\02Inheritance\02vertual_poly_pass_in_method\vertual_poly\obj\Debug\vertual_poly.exe
+C:\Users\practice\Desktop\Dot_net\day2\02Inheritance\02vertual_poly_pass_in_method\vertual_poly\obj\Debug\vertual_poly.pdb

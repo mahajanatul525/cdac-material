@@ -1,0 +1,6 @@
+there is no way u can specify "load-on-startup" while creating servlet inside eclipse.
+
+
+no need to specify "servlet-mapping" inside DD.
+
+in order to test this application, right click on project name and say run on server. obviously u will get error, bec there is no welcome page, but ur servlet will be loaded even before u have requested it.

@@ -1,0 +1,10 @@
+<body-content>scriptless</body-content>
+	it means tag can have a body, but the body cannot have scripting (declaration,expression,scriptlets)
+
+
+getJspBody() is a method of SimpleTagSupport
+
+it returns JspFragment
+
+	a JspFragment is an object that represents JSP code. The body of a tag that invokes a simple tag handler is encapsulated in the JspFragment object, then sent to the tag handler in the setJspBody() method.
+The imp. thing about JspFragment is that it should not contain any scripting elements (declarations,expressions,scriptlets etc.). It can contain template text,standard and custom actions, and EL expressions.

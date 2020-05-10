@@ -1,0 +1,7 @@
+ database is a collection of information that is organized so that it can easily be accessed, managed, and updated. 
+ the database management system (DBMS), is a computer software program that is designed as the means of managing all databases that are currently installed on a system hard drive or network.
+
+DBMS: just stores the data
+RDBMS: stores information about the data and how they are related
+OODBMS: data represented in the form of objects (remember the standard car example)
+ORDBMS: a combination of relational database management with object oriented 

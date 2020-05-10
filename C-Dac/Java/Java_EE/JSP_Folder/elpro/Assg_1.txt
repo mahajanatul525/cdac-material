@@ -1,0 +1,40 @@
+				Forwading1.jsp
+
+	set request attribute
+
+	forward to "Forwarded1.jsp"
+
+
+
+			Forwarded1.jsp
+
+read the request attribute using
+
+		a) java syntax
+
+		b) EL syntax
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

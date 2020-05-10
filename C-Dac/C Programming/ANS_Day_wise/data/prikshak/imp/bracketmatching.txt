@@ -1,0 +1,131 @@
+Brackets are tall punctuation marks used in matched pairs within text, to set apart or interject other text. Brackets refer to different types of brackets in different parts of the world and in different contexts.
+Write a program which reads a String, which consists of alphabets [a-z, A-Z] and 3 types of brackets listed below:
+Parentheses -	()
+Square brackets -	[]
+Braces or Curly brackets -	{}
+And determine whether every open bracket has a matching close bracket. If any open/close bracket doesn’t have a matching close/open bracket or any extra open/close bracket then it is to be treated as invalid string.
+Following are 3 examples of valid string:
+(the[is]{valid})
+{the(is[valid])}
+(this)(is)(valid)
+Following are 4 examples of invalid string:
+(the[is]{invalid))
+(the[is]{invalid}}
+(this](is}{invalid)
+[this]{is}(invalid))
+ 
+
+
+#include<iostream>
+#include<string.h>
+#include<stdio.h>
+using namespace std;
+
+int length, flag = 0;
+class Stack {
+
+ private:
+         char arr[100];
+         int top;
+         int size;
+ public:
+         Stack() {
+         this->top = 0;
+         size = 100;
+         }
+       
+         void push(char ch){
+             if( !isFull() ) {
+             arr[top] = ch;
+                  top++;
+            //printf("top of array %c and top = %d\n",arr[top - 1],top);
+             }
+             else {;}
+          // printf("Stack is Full");
+         }
+         char pop(){
+         if ( !isEmpty() ) {
+         top--;
+       // printf("top = %d",top);
+         //printf("character on top = %c\n",arr[top]);
+         
+         return arr[top];
+              }
+              else {
+               flag = 1;
+               return -99;   
+              }
+         //printf("Stack is Empty");
+           
+         }
+         bool isEmpty() {
+             if(top == 0){
+                 return 1;}
+                 else{//printf("I am here ");
+             return 0;}
+         }
+         bool isFull(){
+             if(top == size)
+                 return 1;
+                 else{
+             return 0;}
+         }
+         void setTop() {
+         this->top = 0;
+         }
+};
+
+
+int main() {  
+    Stack s;
+    int N,i,j,result;
+    char str[100];
+    char ch1;
+    scanf("%d",&N);
+    for(i = 0;i < N;i++) {
+        scanf("%s",str);
+        length = strlen(str);
+       // printf("%d\n",length);     
+         for(j = 0;j<length;j++) {
+            if(str[j] == '{' || str[j] == '(' || str[j] == '[') {
+                  // printf("pushed character = %c\n",str[j]);
+                    s.push(str[j]);
+        }
+            else if(str[j] == '}' || str[j] == ')' || str[j] == ']') {
+                  // printf("pop character = %c\n",str[j]);
+                    ch1 = s.pop();
+                      //   printf("popped character = %c\n",ch1);
+                    if(ch1 == '{' && str[j] != '}') {
+                    flag = 1;
+         
+                    }
+                     else if(ch1 == '(' && str[j] != ')') {
+                    flag = 1;
+         
+                    }
+                    if(ch1 == '[' && str[j] != ']') {
+                    flag = 1;
+             
+                    }
+           }
+    }
+   
+
+   
+    if(!s.isEmpty()){
+        flag = 1;
+    }
+  
+    if(flag == 1) {
+    printf("FALSE\n");
+    }
+    else
+    printf("TRUE\n");
+   
+    flag = 0;
+    s.setTop();
+   }
+
+
+return 0;
+}

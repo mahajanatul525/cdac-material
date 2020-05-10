@@ -1,0 +1,73 @@
+using System;
+
+class Employee
+{
+// Field data.
+private string empName;
+
+private int empID;
+private float currPay;
+// Constructors.
+public Employee() { }
+public Employee(string name, int id, float pay)
+{
+    empName = name;
+    empID = id;
+    currPay = pay;
+}
+// Methods.
+public void GiveBonus(float amount)
+{
+    currPay += amount;
+}
+public void DisplayStats()
+{
+    Console.WriteLine("Name: {0}", empName);
+    Console.WriteLine("ID: {0}", empID);
+    Console.WriteLine("Pay: {0}", currPay);
+}
+
+// Accessor (get method).
+public string GetName()
+{
+return empName;
+}
+// Mutator (set method).
+public void SetName(string name)
+{
+// Do a check on incoming value
+// before making assignment.
+if (name.Length > 16)
+Console.WriteLine("Error! Name must be less than 16 characters!");
+else
+empName = name;
+}
+}
+class entry
+{
+static void Main(string[] args)
+{
+Console.WriteLine("***** Fun with Encapsulation *****\n");
+Employee emp = new Employee("Marvin", 456, 30000);
+emp.GiveBonus(1000);
+emp.DisplayStats();
+// Use the get/set methods to interact with the object's name.
+emp.SetName("Marv");
+Console.WriteLine("Employee is named: {0}", emp.GetName());
+
+
+// Longer than 16 characters! Error will print to console.
+Employee emp2 = new Employee();
+emp2.SetName("Xena the warrior princess");
+Console.ReadKey();
+Console.ReadLine();
+Console.ReadLine();
+}
+}
+
+
+/*So far, so good. You have encapsulated the private empName field using two public methods named
+GetName() and SetName(). If you were to further encapsulate the data in the Employee class, you would
+need to add various additional methods (such as GetID(), SetID(), GetCurrentPay(), SetCurrentPay()).
+Each of the mutator methods could have within it various lines of code to check for additional business
+rules.*/

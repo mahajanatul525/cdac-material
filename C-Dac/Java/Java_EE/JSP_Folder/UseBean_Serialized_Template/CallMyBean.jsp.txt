@@ -1,0 +1,9 @@
+
+<jsp:useBean id="a1" beanName="mypack\MyBean" type="mypack.MyBean"/>   
+
+<%=a1%>    
+ 
+
+<br>
+The value is
+<jsp:getProperty name="a1" property="name"/>

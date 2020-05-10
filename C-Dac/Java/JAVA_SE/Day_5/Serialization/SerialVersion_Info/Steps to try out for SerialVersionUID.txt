@@ -1,0 +1,23 @@
+1) compile Demo1,Demo2 and Special
+
+2) run Demo1
+
+3) run Demo2
+
+4) change "Special.java" and compile
+
+5) run Demo2
+
+	java.io.InvalidClassException
+
+6) calculate SerialVersionUID
+
+7) compile Demo1,Demo2 and Special
+
+8) run Demo1
+
+9) run Demo2
+
+10) change "Special.java" and compile
+
+11) run Demo2

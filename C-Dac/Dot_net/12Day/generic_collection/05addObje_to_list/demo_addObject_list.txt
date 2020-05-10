@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication17
+{
+     class Employee
+    {
+         public string Name { get; set; }
+         public double Salary { get; set; }
+         public Employee() { }
+         public Employee(string nm, double sl)
+         {
+             Name = nm;
+             Salary = sl;
+         
+         }
+         public override string ToString()
+         {
+             return String.Format("{0} {1}", Name, Salary);
+         }
+
+     }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Employee> listemp = new List<Employee>{ new Employee {Name ="Raj",Salary =6000} ,
+                new Employee {Name ="Mona",Salary =7000} ,
+                new Employee {Name ="Het",Salary =3000} ,
+
+                         };
+
+            foreach (Employee e in listemp)
+                Console.WriteLine(e);
+        }
+    }
+}

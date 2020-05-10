@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+
+namespace ConsoleApplication16
+{
+    delegate int abc(int a);
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            abc ob = (num) =>
+            {
+                
+                for (int i = num-1; i >=1; i--)
+                {
+                    num = num * i;
+                }
+                Console.WriteLine(num);
+                return num;
+
+            };
+
+            ob(5);
+          
+        }
+        
+    }
+}

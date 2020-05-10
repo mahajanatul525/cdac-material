@@ -1,0 +1,20 @@
+void main()
+{ int i,j,n,low;
+int marks[]={50,60,20,10,30}; 
+n=5;
+	for(i=0;i<n-1;i++)
+	{         
+               for(j=i+1;j<n;j++)
+		{
+		if(marks[i]>marks[j])
+		   {	
+                       low=marks[i];		
+			marks[i]=marks[j];
+			marks[j]=low;
+		   }
+				
+		}
+	}
+	for(i=0;i<n;i++)
+	printf("%d\t",marks[i]);
+}

@@ -1,0 +1,44 @@
+
+
+ass 2 Q.5
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+using namespace std;
+
+class Number
+{
+private: int num;
+		
+
+public:	Number()
+	{
+	
+		cout<<"in cons"<<endl;
+	}
+	~Number()
+	{
+		
+		cout<<"in dest"<<endl;
+	}
+
+};
+
+void main()
+{
+	int rec;
+	cout<<"Enter records"<<endl;
+	cin>>rec;
+	Number *no = new Number[rec];
+	delete []no;
+
+	getch();
+}
+
+
+
+
+
+
+
+

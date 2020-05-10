@@ -1,0 +1,76 @@
+1) maintain a separate file "prn.txt" , to store prn no.
+	accept from user the prnnos and store them in file.
+
+	close the file.
+
+	open  the same file and confirm whether prnnos are stored properly or not.
+
+	
+2) create a structure "Product"
+	with following members
+
+	char *pcode;
+	char *name;
+	int price;
+	int qty
+
+	in main function u should be able to say
+
+	Product p1("p1","soap",100,20);
+	Product p2("p2","perfume",300,50);
+	Product p3("p3","Deo",200,100);
+
+	cout<<p1<<"\t"<<p2<<"\t"<<p3<<endl;
+
+
+3) create a file.
+	store ur names initials in the file (char by char)
+	close the file 
+open the file in read mode and display all the characters.
+( hint:- use ofstream and ifstream)
+	
+
+4) create a file
+accept numbers from user and store inside the file till user enters 0.
+without closing and reopening a file read all the numbers stored inside the file.
+(Hint: use fstream )
+
+
+5) create a class Student
+	with following members
+	char prnno[10];
+	char name[20];
+	char stream[20];
+
+	store the details of 10 students  ( create an array of 10)
+
+	write all these details into file. (fstream)
+
+	write a global function show
+	void show(char *ptr)
+
+	the above function will take prnno as argument and traverse through the file and display the result of that prnno.
+
+	
+
+6) create a structure
+	with following members
+
+	char name[20];
+	int marks;
+
+	accept how many students marks are to be stored.
+	then accept each student's name and his marks in C++;
+
+	store these details in file.
+
+	read the file and display those studets who have scored bet'n 30 to 40
+
+	
+
+
+
+
+
+
+	

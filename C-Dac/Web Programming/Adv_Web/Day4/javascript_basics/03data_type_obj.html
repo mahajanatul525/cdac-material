@@ -1,0 +1,16 @@
+<script>
+function myclass()
+{ document.write("hello"); }
+
+var obj=new myclass(); //hello
+document.write("<hr/>");
+document.write(typeof(obj)); //object
+document.write("<hr/>");
+document.write(obj); //[object Object]
+document.write("<hr/>");
+document.write(obj.toString());//[object Object]
+document.write("<hr/>");
+document.write(obj.constructor);//full function	
+myclass();
+
+</script>

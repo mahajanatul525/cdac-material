@@ -1,0 +1,44 @@
+<script>
+//object literal mthod1
+obj={}
+obj.name="raj" //setting property
+
+alert(obj);// object Object
+
+document.write(obj.constructor); //function Object
+document.write("<hr/>")
+
+//object constructor
+
+o=new Object();
+o.name="vita";
+document.write(o);
+
+document.write(o.constructor);
+
+
+
+document.write("<hr/>")
+
+//userdefine object
+function person(nm,mks)
+{	alert("hi")
+    this.name=nm
+    this.marks=mks
+	}
+ob=new person("mona",80);
+person("raj",30);
+document.write(name);
+
+document.write(ob); //object Object
+
+document.write(ob.constructor); //function Person
+document.write("<hr/>")
+document.write(ob.name+" "+ob["name"])
+document.write("<hr/>")
+for(pp in ob)
+document.write(pp+"  "+ob[pp]);
+
+
+
+</script>

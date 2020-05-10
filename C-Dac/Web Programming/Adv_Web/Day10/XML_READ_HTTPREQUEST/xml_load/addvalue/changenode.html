@@ -1,0 +1,32 @@
+<html><head><script type="text/javascript" src="loadxmldomsimple.js"> 
+</script></head><body>
+//can i create html element dynamically? yes
+<hr/>
+<script type="text/javascript">
+xmlDoc=loadXMLDoc("books.xml");
+x=xmlDoc.documentElement
+alert(xmlDoc)
+//create a book element, title element and a text node
+newNode=xmlDoc.createElement("book");
+newTitle=xmlDoc.createElement("title");
+newText=xmlDoc.createTextNode("A Notebook");
+
+//add the text node to the title node,
+newTitle.appendChild(newText);
+//add the title node to the book node
+newNode.appendChild(newTitle);
+
+y=xmlDoc.getElementsByTagName("book")[0]
+//replace the first book node with the new node
+x.replaceChild(newNode,y);
+
+z=xmlDoc.getElementsByTagName("title");
+for (i=0;i<z.length;i++)
+{
+document.write(z[i].childNodes[0].nodeValue);
+document.write("<br />");
+}
+</script>
+</body>
+</html>
+

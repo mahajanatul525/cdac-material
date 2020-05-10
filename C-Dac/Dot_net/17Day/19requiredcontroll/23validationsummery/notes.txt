@@ -1,0 +1,20 @@
+
+ValidationSummary control is used to display a summary of all validation errors occurred in a Web page, at one place. In general, in a real time applications, it is very common to display a red star symbol next to the input control where the error occurred, and then the detailed error message in the validation summary control as shown below. 
+
+ValidationSummary control example in asp.net 
+
+
+  
+
+Properties specific to the validation summary control:
+
+HeaderText - The header text for the validation summary control
+ShowSummary - Whether to display the summary text of all the validation errors
+ShowMessageBox - Whether to display a message box with all the validation errors
+DisplayMode - Display format for the summary.
+
+DisplayMode can be List, BulletList, SingleParagraph 
+
+
+  
+

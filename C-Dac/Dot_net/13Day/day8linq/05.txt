@@ -1,0 +1,26 @@
+might wonder exactly how you could return a query result to an external caller.
+The answer is, it depends. If you have a result set consisting of strongly typed data, such as an array of
+strings or a List<T> of Cars, you could abandon the use of the var keyword and use a proper
+IEnumerable<T> or IEnumerable type (again, as IEnumerable<T> extends IEnumerable). Consider the
+following example for a new Console Application named LinqRetValues:
+class Program
+{
+static void Main(string[] args)
+{
+Console.WriteLine("***** LINQ Transformations *****\n");
+IEnumerable<string> subset = GetStringSubset();
+foreach (string item in subset)
+{
+Console.WriteLine(item);
+}
+Console.ReadLine();
+}
+static IEnumerable<string> GetStringSubset()
+{
+string[] colors = {"Light Red", "Green",
+"Yellow", "Dark Red", "Red", "Purple"};
+// Note subset is an IEnumerable<string>-compatible object.
+IEnumerable<string> theRedColors = from c in colors where c.Contains("Red") select c;
+return theRedColors;
+}
+}

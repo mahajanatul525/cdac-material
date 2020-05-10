@@ -1,0 +1,38 @@
+class demo
+{ 	int var1;
+	int var2;
+
+demo()
+{
+	System.out.println("inside no arg");
+}
+
+
+demo(int k,int l)
+{ var1=k;
+	var2=l;
+	
+}
+
+void getprint()
+{
+	System.out.println(var1);
+	System.out.println(var2);
+	
+	
+}
+
+}
+
+public class demoOb
+{public static void main(String args[])
+	{
+	demo b=new demo();
+	demo c=new demo(3,4);
+	b.getprint();
+	c.getprint();
+	}
+	
+	}
+	
+	

@@ -1,0 +1,27 @@
+include<stdio.h>
+#include<conio.h>
+
+
+
+void main()
+{
+	int no,r,count=0,n;
+	printf("\nEnter the number = ");
+	scanf("%d",&no);
+	printf("Enter the digit = ");
+	scanf("%d",&n);
+
+	while(no!=0)
+	{
+		r=no%10;
+		if(n==r)
+		{
+			count++;
+		}
+		no=no/10;
+	}
+
+	printf("Given digit %d occur %d time",n,count);
+	getche();
+
+}

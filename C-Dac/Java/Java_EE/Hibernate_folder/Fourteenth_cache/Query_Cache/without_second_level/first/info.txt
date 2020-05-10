@@ -1,0 +1,7 @@
+Product emp3=(Product)session2.load(Product.class,1);  
+			    System.out.println(emp3);
+			    
+			    Query q2=session2.createQuery("from Product k where k.id=1");
+
+
+in the above case even if second level cache is not available record is taken from first level cache.

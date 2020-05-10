@@ -1,0 +1,1 @@
+i'; Delete from Product;Select * from Product where Name like 'i

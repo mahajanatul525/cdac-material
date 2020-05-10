@@ -1,0 +1,3 @@
+DBSet class represents an entity set that is used for create, read, update, and delete operations. A generic version of DBSet (DbSet<TEntity>) can be used when the type of entity is not known at build time.
+
+You can get the reference of DBSet by using DBContext

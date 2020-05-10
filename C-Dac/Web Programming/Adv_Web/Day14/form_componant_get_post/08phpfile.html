@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>
+      Entering data with file uploads
+    </title>
+  </head>
+  <body>
+    <h1>
+      Entering data with file uploads 
+    </h1>
+<h3> check enctype if input type file it has to have value
+multipart/form-data default value is application/x-www-form-urlencoded
+</h3>
+    <form
+      enctype="multipart/form-data" 
+      action="08phpfile.php" method="post">
+      Upload file: <input name="userfile" type="file" />
+      <br>
+      <br>
+      <input type="submit" value="Send File" />
+    </form>
+  </body>
+</html>
+

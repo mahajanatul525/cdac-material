@@ -1,0 +1,26 @@
+// no warning because arr is a static
+
+#include<iostream>
+using namespace std;
+
+int* disp()
+{
+	static int arr[]={100,200,300,400,500};
+	return arr;
+}
+int main()
+{
+	int *ptr;
+	ptr=disp();
+	for(int i=0;i<5;i++)
+	{
+		cout<<ptr[i]<<endl;
+	}
+	return 0;
+}
+
+
+
+
+
+

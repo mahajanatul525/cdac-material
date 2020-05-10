@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class factor
+    {
+        public int[] findfactor(int num, out int numfactor)
+        {
+            int i, j;
+            int[] fact = new int[50];
+            for (i = 2, j = 0; i < ((num / 2) + 1); i++)
+            {
+                if ((num % i) == 0)
+                {
+                    fact[j] = i;
+                    j++;
+                }
+            }
+            numfactor = j;
+            return fact;
+        }
+    }
+
+    class entry
+    {
+        public static void Main()
+        {
+            factor f = new factor();
+           // int[] arr = new int[50];
+            int f1;
+
+
+            int[] arr = f.findfactor(30, out f1);
+            foreach(int k in arr)
+            Console.WriteLine(k);
+        }
+    }
+
+}

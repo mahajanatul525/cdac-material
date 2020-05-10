@@ -1,0 +1,22 @@
+CheckBox Control is used, when you want the user to select more than one option from the available choices. For example, the education of a person. A person can have a graduate degree, post graduate degree and a doctrate. In this case the user selects all the 3 checkboxes. Where as a person, may just have a graduate degree, in which case he only selects, the graduate checkbox.
+CheckBox control example
+
+Another example, would be when you want the user to select the days of his availability.
+asp.net check box example
+
+In short, if you want to provide the user with more than one option to select from, then choose a check box Control.
+
+
+
+Important Properties of the CheckBox Control
+
+Checked - This is a boolean property, that is used to check if the check box is checked or not.
+Text - This is a string property used to get or set the text associated with the check box control
+TextAlign - right or left. On which side of the check box the text should appear
+AutoPostBack - Set this property to true, if you want the webform to be posted immediately when the checked status of the check box changes.
+
+Methods:
+Focus() - Just like TextBox, checkbox also supports, Focus() method. If you want to set the input focus, to a specific checkbox, Call this method for that check box control.
+
+Events:
+CheckedChanged - This event is fired when the checked status of the check button control is changed.

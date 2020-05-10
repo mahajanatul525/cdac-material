@@ -1,0 +1,35 @@
+http://localhost:4848
+
+	go to jdbc
+
+	create pool
+
+		name:- pool1
+
+		delete all properties which are there
+
+		add following properties
+
+		driver=com.mysql.jdbc.Driver
+	url=jdbc:mysql://localhost:3306/mydb
+	user=root
+	password=root
+
+
+now click on resources
+
+	create "source1" datasource. add "pool1" while creating it.
+
+
+
+
+write following code in an application:
+
+
+           Context ctx=new InitialContext();
+            DataSource ds=(DataSource)ctx.lookup("source1");
+            con=ds.getConnection();
+
+//	use connection 
+
+	con.close();

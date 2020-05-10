@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication14
+{
+    delegate int addition();
+    class myclass
+    {
+        public int a, b;
+      /*  public int add()
+        {
+            return a + b;
+        }*/
+
+        public myclass(int a, int b) { this.a = a; this.b = b; }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            myclass m = new myclass(6, 6);
+            addition d = () => m.a + m.b;
+           Console.WriteLine(d());
+
+
+            #region
+            //anonymous
+            //addition x = delegate { int r; r = m.a + m.b; return r; };
+            //Console.WriteLine(x());
+            #endregion
+            #region
+            //deligate
+            //  addition a=m.add;
+            //int result = a();
+            // Console.WriteLine(result);
+            #endregion
+                      Console.ReadLine();
+        }
+    }
+}

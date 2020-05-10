@@ -1,0 +1,45 @@
+Destructors
+
+It is possible to define a method that will be called just prior to an object’s final destruction by the garbage collector. This method is called a destructor, and it can be used in some highly specialized situations to ensure that an object terminates cleanly. 
+
+For example, you might
+
+use a destructor to ensure that a system resource owned by an object is released. 
+
+It must be stated at the outset that destructors are a very advanced feature that are applicable only to
+certain rare cases.
+
+ They are not normally needed. They are briefly described here for completeness.
+
+Destructors have this general form:
+
+
+~class-name( ) {
+
+
+// destruction code
+
+}
+
+Here, class-name is the name of the class. Thus, a destructor is declared like a constructor
+except that it is preceded with a ~ (tilde). Notice it has no return type and takes no
+arguments.
+
+
+
+It is important to understand that the destructor is called just prior to garbage collection.
+
+It is not called when a variable containing a reference to an object goes out of scope, 
+for example. (This differs from destructors in C++, which are called when an object goes out
+of scope.) 
+
+
+This means that you cannot know precisely when a destructor will be executed.
+
+Furthermore, it is possible for your program to end before garbage collection occurs, so a
+destructor might not get called at all
+
+manually initiating garbage collection is not recommended
+for most circumstances, because it can lead to inefficiencies. Also, because of the way the
+garbage collector works, even if you explicitly request garbage collection, there is no way
+to know precisely when a specific object will be recycled.

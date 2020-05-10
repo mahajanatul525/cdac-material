@@ -1,0 +1,61 @@
+ Java Technologies 190 Hours  
+   
+Data Types, Operators and Language
+
+Constructs
+
+Inner Classes and Inheritance
+
+Interface and Package
+
+Exceptions
+
+Collections
+
+Threads
+
+Java.lang
+
+Java.util
+
+Java.awt
+
+Java.io
+
+Java Virtual Machine
+
+Java Persistent
+
+Java Profile
+
+TCP/IP
+
+Servlets
+
+Java Server Pages
+
+JDBC
+
+JavaBeans
+
+Java Security
+
+Naming Services
+
+Java Annotations
+
+Java Server Faces (JSF)
+
+Java Mail
+
+Transactions
+
+Introduction to Struts Framework
+
+Introduction to hibernate
+
+HQL, Hibernate
+
+Spring Framework
+
+Hands on Web services – JSON/XML/oData (data format conversation)

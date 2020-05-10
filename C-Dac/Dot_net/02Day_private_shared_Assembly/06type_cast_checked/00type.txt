@@ -1,0 +1,22 @@
+sbyte(System.SByte)     	1   -127 to 128 
+byte (System.Byte)     	1   0-255
+
+short (System.Int16)    	2   -32768  - +32767 
+ushort(System.UInt16)             2  0-65535
+int(System.Int32)        	4   -2147483648 - 2147483647
+uint (System.Uint32)    	4   0 - 4294967295
+long (System.Int64)     	8    -9223372036854775808  - + -9223372036854775807
+float (System.Single)    	4    -3.402823E+38 t o 3.402823E+38
+double(System.Double)	 8   -1.79769313486232E+308 to +1.79769313486232E+308
+decimal(System.Decimal) 	16    	-79228162514264337593543950335- +								79228162514264337593543950335
+
+
+
+char (System.Char)-   	2
+bool (System.bool)		1		true/false
+date(System.DateTime)	8		1/1/0001 12.00.00am  - 12/31/9999 11.59.59 pm
+
+char+char =int
+byte+byte=int
+short+short=int
+

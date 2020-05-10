@@ -1,0 +1,8 @@
+
+
+Although ref and out participate in overload resolution, the difference between the two alone is not sufficient. 
+For example, these two versions of MyMeth( ) are invalid:
+
+// Wrong!
+public void MyMeth(out int x) { // ...
+public void MyMeth(ref int x) { // ...

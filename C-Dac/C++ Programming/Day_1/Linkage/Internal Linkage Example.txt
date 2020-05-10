@@ -1,0 +1,55 @@
+File
+	new
+		project
+			win32 console application
+add 
+	new
+		c++
+		
+		first.cpp
+
+#include<iostream>
+using namespace std;
+void disp()
+{
+	extern int num;
+	cout<<"in disp\t"<<num<<endl;
+	void fun();
+	cout<<"from disp calling fun\t";
+	fun();
+}
+
+compile above file.
+
+add
+	new
+		c++
+
+		second.cpp
+
+
+#include<iostream>
+#include "first.cpp"
+using namespace std;
+
+static int num=100;
+void fun()
+{
+	cout<<"in fun"<<endl;
+}
+void main()
+{
+	cout<<"in main\t"<<num<<endl;
+	disp();
+	cout<<"from main calling fun\t";
+	fun();
+}
+
+
+compile "second.cpp", 
+	build it . it will give "linker error", i.e. "unresolved symbols num and fun".
+
+since num and fun are static they can not be accessed from other translation unit.
+
+
+

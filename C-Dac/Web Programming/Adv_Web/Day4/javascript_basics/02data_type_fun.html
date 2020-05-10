@@ -1,0 +1,39 @@
+<html><head><script>
+function go()
+{document.write("hello"); }
+</script></head>
+<body>
+<script>
+go();
+document.write("<hr/>");
+document.write(go());
+document.write("<hr/>");
+document.write(typeof(go));
+document.write("<hr/>");
+document.write(go);
+</script>
+<hr/>
+<h1> think about following code</h1>
+<h3>
+(function()
+ {  alert( "This is a String");}())</h3>
+<script>
+var x=(function(p,q) {  
+var r=p+q;
+return "hello"+r;
+}(5,4))
+document.write(x);
+
+(function(p,q) {  
+var r=p*q;
+document.write("<br>hello"+r);
+}(5,4))
+</script>
+
+
+
+
+
+
+
+

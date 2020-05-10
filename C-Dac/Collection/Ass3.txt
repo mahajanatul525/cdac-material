@@ -1,0 +1,25 @@
+import java.io.*;
+import static java.lang.System.*;
+import java.util.*;
+
+public class Ass2
+{
+ 	
+
+	public static void main(String args[])
+	{
+		HashMap<Integer,String>h=new HashMap<Integer,String>();
+		h.put(1,"Sachin");
+		h.put(2,"Rahul");
+		Set s=h.entrySet();
+		Iterator i=s.iterator();
+		while(i.hasNext())
+		{
+			Map.Entry m=(Map.Entry)i.next();
+			System.out.println(m.getKey()+":"+m.getValue());
+		}
+		
+	}
+}
+
+

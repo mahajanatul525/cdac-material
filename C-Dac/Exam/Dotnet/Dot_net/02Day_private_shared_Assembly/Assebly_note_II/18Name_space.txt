@@ -1,0 +1,5 @@
+ Microsoft .Net Namespaces
+
+Namespaces are the way to organize .NET Framework Class Library into a logical grouping according to their functionality, usability as well as category they should belong to, or we can say Namespaces are logical grouping of types for the purpose of identification.
+
+The .NET Framework Class Library (FCL ) is a large collection of thousands of Classes. These Classes are organized in a hierarchical tree. The System Namespaces is the root for types in the .NET Framework. We can uniquely identify any Class in the .NET Framework Class Library (FCL ) by using the full Namespaces of the class .In .Net languages every program is created with a default Namespaces . Programmers can also create their own Namespaces in .Net languages.

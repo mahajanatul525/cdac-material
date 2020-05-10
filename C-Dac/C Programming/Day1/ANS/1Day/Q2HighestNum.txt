@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int a,b,c;
+	printf("Enter any three numbers\n");
+	scanf("%d\n%d\n%d", &a, &b, &c);
+	if(a>b && a>c)
+		printf("Highest number is= %d", a);
+	else if(b>c)
+		printf("Highest number is= %d", b);
+	else
+		printf("Highest number is= %d", c);
+	getch();
+}

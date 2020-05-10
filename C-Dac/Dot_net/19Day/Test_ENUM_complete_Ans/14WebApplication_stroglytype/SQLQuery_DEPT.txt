@@ -1,0 +1,12 @@
+﻿CREATE PROCEDURE stored
+       @e_id                     INT                      , 
+       @e_nm                  VARCHAR(50)   , 
+       @e_sal                    decimal ,
+       @e_dept    INT              
+AS 
+BEGIN 
+          INSERT INTO dbo.Employee
+          ( Id                   ,            Name                     ,            Salary ,
+			   Dept) 
+     VALUES          ( @e_id   ,  @e_nm     ,      @e_sal,@e_dept    )
+		  End

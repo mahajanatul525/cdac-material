@@ -1,0 +1,14 @@
+drop function udf_getname;
+create function udf_getname (v_eid int)
+returns varchar(100)
+begin
+declare dname  varchar(100);
+select deptname into dname from
+dept d join emp e
+on
+e.deptid=d.deptid
+where 
+eid=v_eid;
+return(dname);
+end
+$$

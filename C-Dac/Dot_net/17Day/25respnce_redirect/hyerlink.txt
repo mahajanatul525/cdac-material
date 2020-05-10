@@ -1,0 +1,22 @@
+What are the different page navigation techniques in asp.net?OR
+How do you move from one webform to another webform in asp.net?OR
+How do you link pages in an application?  
+
+This is a very common interview question in asp.net. There are several techniques to navigate between webforms in asp.net as listed below. 
+
+1. Hyperlink control - Is used to navigate to another page. The page you want to navigate to is specified by the NavigateURL property. 
+Using hyperlink, you can navigate to another page with in the same application or to an external web site. The hyperlink control is rendered as an HTML anchor tag.
+ 
+2. Response.Redirect --round trip
+3. Server.Transfer ----  server side and disconnect from current page  take controll to another page
+
+4. Server.Execute  ---server side it go to another page execute and controll come back to current page 
+
+5. Cross-Page postback --take you to another page similar to action in form 
+
+6. Window.Open 
+
+
+
+
+

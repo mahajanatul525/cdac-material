@@ -1,0 +1,34 @@
+// Demonstrate the HashSet<T> class.  
+
+using System;
+using System.Collections.Generic;
+
+class HashSetDemo
+{
+
+    static void Show(string msg,   SortedSet<char> set)
+    {
+        Console.Write(msg);
+        foreach (char ch in set)
+            Console.Write(ch + " ");
+        Console.WriteLine();
+    }
+
+    static void Main()
+    {
+         SortedSet<char> setA = new   SortedSet<char>();
+        
+        setA.Add('X');
+        setA.Add('C');
+        setA.Add('B');
+
+       
+
+        Show("Initial content of setA: ", setA);
+       
+     
+
+        Console.WriteLine();
+    }
+}
+

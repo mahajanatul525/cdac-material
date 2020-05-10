@@ -1,0 +1,29 @@
+//Write a function which takes int array as an argument and replaces each int in the array with its square.
+#include<stdio.h>
+#include<conio.h>
+void sqr(int[]);
+void main()
+{
+
+     int i,a[10];
+     printf("\n enter array:");
+
+     for(i=0;i<5;i++)
+     {  scanf("%d",&a[i]);
+	   
+	    //printf("\n %d",a[i]);
+	 }
+      
+        sqr(a);
+        getche();
+}
+void sqr(int s[])
+{int i;
+printf("\nNEW ARRAY:");
+for(i=0;i<5;i++)
+{
+	s[i]=s[i]*s[i];
+
+    printf("\n %d",s[i]);
+}
+}

@@ -1,0 +1,53 @@
+/*#include<iostream>
+using namespace std;
+
+template<class type1,class type2,class type3>
+class myclass
+{
+	type1 a;
+	type2 b;
+	type3 c;
+public:
+	void setT1(type1 abc)
+	{
+		a=abc;
+	}
+	type1 getT1()
+	{
+		return a;
+	}
+
+	void setT2(type2 abc)
+	{
+		b=abc;
+	}
+	type2 getT2()
+	{
+		return b;
+	}
+
+	void setT3(type3 abc)
+	{
+		c=abc;
+	}
+	type3 getT3()
+	{
+		return c;
+	}
+};
+
+void main()
+{
+	myclass<int,char,double>m1;
+	 
+	m1.setT1(10);
+	cout<<m1.getT1()<<endl;
+
+	m1.setT2('A');
+	cout<<m1.getT2()<<endl;
+	
+	m1.setT3(5.6);
+	cout<<m1.getT3()<<endl;
+	
+	getchar();
+}*/

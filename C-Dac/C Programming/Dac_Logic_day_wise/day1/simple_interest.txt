@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{float p,n,r,a;
+
+	printf("Enter principal amount,years,rate: ");
+	scanf("%f %f %f",&p,&n,&r);
+	a=(p*n*r)/100;
+	printf("Total amount is :%f",a);
+
+
+			getche();
+
+
+}

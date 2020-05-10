@@ -1,0 +1,73 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace meth_const
+{
+    class myclass
+    {
+        int speed;
+        string carname="Unknown";
+        public myclass()
+        {
+            Console.WriteLine("Default{0} {1}", speed, carname);
+        }
+
+        public myclass(int s):this(s,"")
+        {
+         
+            Console.WriteLine("para speed {0} {1}", speed, carname);
+        }
+
+        public myclass(string n):this(0,n)
+        {
+         
+            Console.WriteLine("para name:{0} {1}", speed, carname);
+
+        }
+        public myclass(int sl,string nm)
+        {
+            if (sl  >= 60)
+            {
+
+                speed = 60;
+            }
+            
+            
+            carname = nm;
+            Console.WriteLine("master  sp nm:{0} {1}", speed, carname);
+
+        }
+       
+        public void getdata()
+        {
+
+            Console.WriteLine("{0}{1}", speed ,carname );
+        }
+
+    }
+
+
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            myclass m1 = new myclass();
+
+            myclass m2 = new myclass(80);
+            myclass m3 = new myclass("Neno");
+            myclass m4 = new myclass(90,"Honda");
+            
+            m2.getdata();
+            m3.getdata();
+            m4.getdata();
+            
+            Console.ReadKey();
+
+        }
+    }
+
+}

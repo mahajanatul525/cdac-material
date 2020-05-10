@@ -1,0 +1,96 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class player
+{
+private:
+	int id,score;
+	char *name,*country;
+public:
+	player()
+	{
+		name=NULL;
+		country=NULL;
+	}
+	player(int i,char *n,char *c,int s)
+	{
+		id=i;
+		name=new char[strlen(n)+1];
+		strcpy(name,n);
+		country=new char[strlen(c)+1];
+		strcpy(country,c);
+		score=s;
+
+	}
+	player(player &p)
+	{
+         		this->id=p.id;
+		this->name=new char[strlen(p.name)+1];
+		strcpy(this->name,p.name);
+		this->country=new char[strlen(p.country)+1];
+		strcpy(this->country,p.country);
+		this->score=p.score;	
+	}
+	player& operator=(player &ref)
+	{
+		      this->id=ref.id;
+		this->name=new char[strlen(ref.name)+1];
+		strcpy(this->name,ref.name);
+		this->country=new char[strlen(ref.country)+1];
+		strcpy(this->country,ref.country);
+		this->score=ref.score;	
+	
+		return *this;
+	}
+	void disp()
+	{
+		cout<<id<<name<<country<<score<<endl;
+	}
+	~player()
+	{
+			cout<<"in destructor"<<endl;
+		if(name!=NULL)
+		{
+			delete name;
+		}
+		if(country!=NULL)
+		{
+			delete country;
+		}
+	
+	}
+	friend ostream& operator<<(ostream &,player &);
+	friend istream& operator>>(istream &,player &);
+
+};
+ ostream& operator<<(ostream &o,player &p)
+ {
+	 o<<p.id<<p.name<<p.country<<p.score<<endl;
+	 return o;
+ }
+
+ istream& operator>>(istream &i,player &p)
+ {
+	 i>>p.id>>p.name>>p.country>>p.score;
+	 return i;
+ }
+
+void main()
+{
+	
+	player p1(1,"sachin","india",200);
+
+	cout<<p1<<endl;
+
+	p1.disp();
+
+	player p2=p1;
+	
+	cout<<p2<<endl;
+
+	player p3;
+
+	p3=p1;
+	cout<<p3<<endl;
+	//getchar();
+}

@@ -1,0 +1,109 @@
+#include<iostream>
+//#include<ostream>
+using namespace std;
+class Player
+{private:int id;
+	char *name;
+	char *country;
+	int score;
+public:
+	Player(int m,char*str,char*ptr,int k)
+	{id=m;
+		name=new char(strlen(str)+1);
+	strcpy(name,str);
+	country=new char(strlen(ptr)+1);
+	strcpy(country,ptr);
+	score=k;
+	}
+	friend ostream & operator<<(ostream &,Player & );
+
+	
+	void disp()
+	{cout<<id<<"\t"<<name<<"\t"<<country<<"\t"<<score<<endl;
+	}
+	Player()
+	{name=NULL;
+	country=NULL;
+	}
+	Player(Player& ref)
+	{id=ref.id;
+	name=new char(strlen(ref.name)+1);
+	strcpy(name,ref.name);
+	country=new char(strlen(ref.country)+1);
+	strcpy(country,ref.country);
+	score=ref.score;
+	}
+	void operator=(Player& ref)
+	{
+	id=ref.id;
+	name=new char(strlen(ref.name)+1);
+	strcpy(name,ref.name);
+	country=new char(strlen(ref.country)+1);
+	strcpy(country,ref.country);
+	score=ref.score;
+	}
+	~Player()
+	{if(name!=NULL && country!=NULL)
+		delete []name;
+	 delete []country;
+	}
+	};
+ostream & operator<<(ostream& o,Player & ref)
+	{o<<ref.id<<"\t"<<ref.name<<"\t"<<ref.country<<ref.score<<endl;
+	return o;
+	}
+void main()
+{Player p1(1,"sachin","india",200);
+cout<<p1<<endl;
+p1.disp();
+Player p2=p1;
+cout<<p2<<endl;
+Player p3;
+p3=p2;
+p3.disp();
+}
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+1) using cin and cout, accept name,address,age of a person and print it.
+
+2) write a function which can accept minimum 3 characters and maximum 5 characters and display them.
+
+3) create following structure
+struct book
+{
+	char bid[5];
+	char name[30];
+	int price;
+};
+ask user how many records he wants to create and accordingly allocate memory.
+accept values from user and display.
+( Hint :-  use  "new" operator)
+
+4)write a function which will return reference of structure.
+( note:- any structure of ur choice u can define )
+
+5)write a function which takes 3 arguments
+variable, pointer and a reference.(any datatype)
+invoke this function and show how "call by value","call by address" and "call by reference" will work.
+
+6)define 3 different structures and initialize their members.
+now write 3 different functions,but with the same name.
+these functions will accept each structure respectively and display their members.
+
+7)define 2 functions
+a) function which accepts another function as an argument
+( using pointer to function )
+b) function which accepts another function as an argument
+( using reference to function )
+	try to invoke both the functions and display the output.
+
+8)accept 2 numbers and swap them using references.
+
+9)accept 2 names and swap them using references.
+
+
+
+10) create an Entity "Employee" using structure
+with members and member functions.
+now access it using
+a) array 
+b) DMA
+
+11) create a library in c in which,
+write a function which will accept 2 numbers and return the difference between 2 numbers
+write appropriate header file.
+
+write c++ client code to access this library.
+
+

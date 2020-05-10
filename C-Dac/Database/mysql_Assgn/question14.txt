@@ -1,0 +1,22 @@
+# first create table  emp1 with attribute given in select query!!!
+
+create procedure cpydata()
+begin
+declare num int;
+declare newid int;
+declare newname varchar(10);
+declare newsalary int;
+declare newdeptid int;
+declare curse1 cursor for select id,name,salary,deptid from emp1;
+declare continue handler for not found set num:=1;
+truncate table copythat;
+open curse1;
+myloop:loop
+fetch curse1 into newid,newname,newsalary,newdeptid;
+if(num=1) then
+leave myloop;
+end if;
+insert into copythat values(newid,newname,newsalary,newdeptid);
+end loop myloop;
+end
+$$

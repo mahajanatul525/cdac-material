@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication12
+{
+
+    interface I1
+    { void A(); }
+
+    interface I2
+    { void A(); }
+
+
+    class C : I1
+    {
+        void I1.A()
+        {
+            Console.WriteLine("I2.A()");
+        }
+    }
+
+
+   class Program
+    {
+        static void Main(string[] args)
+       {
+           C x = new C();
+           I1 i1 = (I1)x; 
+        
+
+           i1.A();
+          
+         //  x.A();
+
+
+        }
+    }
+}

@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+
+void disp1()
+{
+	printf("in disp1");
+}
+void disp2()
+{	printf("\nin disp2");
+}
+void disp3()
+{
+		printf("\nin disp3");
+}
+int main()
+{
+	void (*ptr[3])(); // ptr is an array of pointer to a function neither accepts anything nor returns anything
+	ptr[0]=disp1;
+	ptr[1]=disp2;
+	ptr[2]=disp3;
+
+	for(int i=0;i<3;i++)
+	{
+		ptr[i]();
+	}
+	return 0;
+}
+
+
+
+
+

@@ -1,0 +1,68 @@
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{int i,j,t,k,sum1,sum2,sum3,sum4,arr[4],maxr,maxc,max,min,minc,minr;
+int	a[4][5]={2,5,3,6,1,6,9,8,8,2,4,7,6,1,3,3,5,4,8,9};
+	
+for(i=0;i<4;i++)
+	{for(j=0;j<5;j++)
+	 printf("%d",a[i][j]);
+      printf("\n");}
+printf("\n enter index:");
+scanf("%d %d",&i,&j);
+if(j==0)
+a[i][j-1]=0;
+if(j==4)		
+a[i][j+1]=0;
+     
+	
+
+	sum1=a[i][j]+a[i][j-1];printf("\n%d",sum1);
+	sum2=a[i][j]+a[i][j+1];printf("\n%d",sum2);
+	
+	
+
+if(i==0)
+a[i-1][j]=0;
+if(i==3)
+a[i+1][j]=0;
+
+	sum3=a[i][j]+a[i-1][j];printf("\n%d",sum3);
+	sum4=a[i][j]+a[i+1][j];printf("\n%d",sum4);
+	
+	
+	if(sum1>sum2)
+	maxr=sum1;
+	else
+		maxr=sum2;
+	if(sum3>sum4)
+	maxc=sum1;
+	else
+		maxc=sum2;
+	if(maxc>maxr)
+		max=maxc;
+	else
+		max=maxr;
+
+
+
+
+	if(sum1<sum2)
+	minr=sum1;
+	else
+		minr=sum2;
+	if(sum3<sum4)
+	minc=sum3;
+	else
+		minc=sum4;
+	if(minc>minr)
+		min=minc;
+	else
+		min=minr;
+	printf("\n%d\t%d",max,min);
+
+
+getche();
+}

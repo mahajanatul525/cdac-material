@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<conio.h>
+
+
+
+
+void main()
+{
+	int no,sum=0;
+	printf("\nenter no = ");
+	scanf("%d",&no);
+	while(no!=0)
+	{
+		sum=sum+no;
+		printf("\nenter no = ");
+		scanf("%d",&no);
+	}
+	printf("sum = %d",sum);
+	getche();
+}

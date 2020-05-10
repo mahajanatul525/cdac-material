@@ -1,0 +1,26 @@
+/*compare two string*/
+#include<stdio.h>
+void append(char [],char []);
+void main()
+{ int r;
+ char name1[20],name2[10];
+     printf("enter a string");
+     gets(name1);
+      printf("enter a string");
+      gets(name2)
+  append(name1,name2);
+ printf("%s",name1);
+}
+void append
+(char name1[],name2[])
+{ int i,j,k;
+   for(i=0;name1[i]!='\0';i++);
+ 
+     for(k=0;name2[k]!='\0';k++)
+	   name1[i++]=name2[k]) ;
+name[i]='\0';
+}
+             
+
+
+

@@ -1,0 +1,4 @@
+struts.properties file inside "src" folder.
+
+"applicationContext.xml" and "web.xml" in "WEB-INF" folder.
+

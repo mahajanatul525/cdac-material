@@ -1,0 +1,261 @@
+/*write a class template , which can take any generic type display it and return the size of type passed.
+(hint : in this class template write two functions void disp() and int size() ).*/
+#include<iostream>
+#include<conio.h>
+using namespace std;
+template<class type1>
+class MyClass
+{
+	private:
+		type1 a;
+	public:
+		MyClass(type1 a)
+		{
+			this->a=a;
+		}
+		void disp()
+		{
+			cout<<endl<<a;
+		}
+		int size()
+		{
+			return sizeof(a);
+		}
+};
+void main()
+{{
+	MyClass<int>s1(10);
+	MyClass<char>s2('A');
+	MyClass<double>s3(10.5);
+	s1.disp();
+	cout<<"\t"<<s1.size();
+	s2.disp();
+	cout<<"\t"<<s2.size();
+	s3.disp();
+	cout<<"\t"<<s3.size();
+}
+getch();
+}
+
+
+
+
+
+
+
+ /*write a class template, which can take 3 different type of arguments and print them.
+a class must be having only one constructor and that is a constructor which will take 3 arguments.
+class must be having disp function which will display the data.*/
+#include<iostream>
+#include<conio.h>
+using namespace std;
+template <class type,class type1,class type2>
+class myclass
+{
+private:
+	type a;
+	type1 b;
+	type2 c;
+public:
+	myclass(type x,type1 y,type2 z)
+	{
+		a=x;
+		b=y;
+		c=z;
+		cout<<"in constructor of class"<<endl;
+	}
+	void disp()
+	{
+		cout<<"in disp of myclass"<<endl;
+		cout<<a<<endl<<b<<endl<<c<<endl;
+	}
+};
+void main()
+{{
+	myclass<int,char,double>m1(10,'a',5.8);
+	m1.disp();
+}
+getch();
+}
+
+
+
+
+
+
+
+
+
+/*write a class (not a class template) and inside it create a function template which will display one argument and display what type of argument it is.*/
+#include<iostream>
+#include<conio.h>
+#include<typeinfo>
+using namespace std;
+class myclass
+{
+private:
+	int a;
+public:
+	myclass(int k)
+	{
+		a=k;
+		cout<<"in const of myclass"<<endl;
+	}
+	template<class type>
+	void disp(type c)
+	{
+		
+		
+			cout<<typeid(c).name()<<endl;
+		
+	       cout<<c<<endl;
+	}
+};
+void main()
+{{
+	myclass m1(10);
+	m1.disp(10);
+	m1.disp('a');
+	m1.disp(32.46f);
+
+}
+	getch();
+}
+	
+
+
+
+
+
+
+
+
+/*write a class template, which can take 3 different type of arguments.
+a class should not have any constructor.
+class must be having 3 setter methods and 3 getter methods.*/
+#include<iostream>
+#include<conio.h>
+using namespace std;
+template<class type,class type1,class type2>
+class myclass
+{
+private:
+	type a;
+	type1 b;
+	type2 c;
+public:
+	void settype(type x)
+	{
+		a=x;
+	}
+void settype1(type1 y)
+	{
+		b=y;
+	}
+void settype2(type2 z)
+	{
+		c=z;
+	}
+void gettype()
+{
+	cout<<a;
+}
+void gettype1()
+{
+	cout<<b;
+}
+void gettype2()
+{
+	cout<<c;
+}
+};
+void main()
+{{
+	myclass<int,char,double>m1;
+	m1.settype(10);
+	m1.gettype();
+	m1.settype1('a');
+	m1.gettype1();
+	m1.settype2(56.788);
+	m1.gettype2();
+
+	getch();}
+}
+
+
+
+
+
+
+/*write a class template which will take 2 same type of data and compare them.
+if first is greater than second return 1 viceversa return -1. if both are same return 0;
+for that in this class template there should be 
+a compare() function.
+Also there will be a paramterized constructor.
+	Above class template u need to create in such a way that it can be reused in multiple applications.
+
+Now create first application where,*/
+
+
+template<class type>
+class myclass
+{
+private:
+type a;
+type b;
+public:
+	myclass(type c,type d)
+	{
+		a=c;
+		b=d;
+		cout<<"in 2 param of myclass"<<endl;
+	}
+	int compare(type e,type f)
+	{
+		if(e>f)
+		{
+			return 1;
+		}
+		else if(e<f)
+		{
+			return -1;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+};
+
+
+
+
+#include<iostream>
+#include<conio.h>
+#include"C:\Users\vita1\Desktop\mohit\ConsoleApplication13\ConsoleApplication13\header.h"
+using namespace std;
+void main()
+{{
+	myclass<int> m1(10,20);
+	int p=m1.compare(10,20);
+	cout<<p<<endl;
+}
+	getch();
+}
+
+
+
+
+
+#include<iostream>
+#include<conio.h>
+#include"C:\Users\vita1\Desktop\mohit\ConsoleApplication13\ConsoleApplication13\header.h"
+using namespace std;
+void main()
+{{
+	myclass <char>m2('a','b');
+	int p=m2.compare('a','b');
+	cout<<p<<endl;
+}
+getch();
+}

@@ -1,0 +1,70 @@
+#include<iostream>
+ using namespace std;
+
+ class base1
+ {
+	 int num1;
+ public:
+	 base1()
+	 {
+		num1=0;
+	 }
+	 base1(int k)
+	 {
+		num1=k;
+	 }
+	
+	void disp1()
+	{
+			cout<<num1<<endl;
+	}
+ };
+ class base2
+ {
+	 int num2;
+ public:
+	 base2()
+	 {
+			num2=0;
+	 }
+	 base2(int l)
+	 {
+	
+		 num2=l;
+	 }
+	 void disp2()
+	 {
+			cout<<num2<<endl;
+	 }
+ };
+ class sub:public base1, public base2
+ {
+	 int num3;
+ public:
+	 sub()
+	 {
+		 num3=0;
+	 }
+	 sub(int m,int n,int p): base1(m),base2(n)
+	 {
+			num3=p;
+	 }
+	 void disp3()
+	 {
+			disp1();
+			disp2();
+			cout<<num3<<endl;
+			
+	 }
+ };
+
+ void main()
+ {
+		sub *s=new sub;
+		s->disp3();
+		sub *s1=new sub(10,20,30);
+		s1->disp3();
+		sub *s2=new sub(50,60,70);
+		s2->disp3();
+		getchar();
+ }

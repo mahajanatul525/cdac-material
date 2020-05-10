@@ -1,0 +1,56 @@
+#include<iostream>
+using namespace std;
+
+class Advertisement
+{
+public:
+	virtual void publish()=0;
+
+};
+
+class TV:public Advertisement
+{
+	void publish()
+	{
+	cout<<"In TV"<<endl;
+	}
+};
+class Banner:public Advertisement
+{
+	void publish()
+	{
+	cout<<"In Banner"<<endl;
+	}
+	
+};
+class Newspaper:public Advertisement
+{
+	void publish()
+	{
+	cout<<"In Newspaper"<<endl;
+	}
+	
+};
+
+void main()
+{
+	Advertisement *arr[3];
+	
+	arr[0]= new TV;
+	arr[1]= new Banner;
+	arr[2]= new Newspaper;
+
+	for(int i=0;i<3;i++)
+	{
+		if(dynamic_cast<Banner*>(arr[i]))
+		{
+			arr[i]->publish();
+		}
+		else
+		{
+		cout<<"NOPE"<<endl;
+		}
+	}
+
+	getchar();
+}*/

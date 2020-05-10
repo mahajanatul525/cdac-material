@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int m,i,n;
+printf("\n range is 1to: ");
+scanf("%d",&n);
+printf("\nenter m=");
+scanf("%d",&m);
+printf("\nDivision by %d",m);
+for(i=1;i<=n;i++)
+{if(i%m==0)
+{
+	if(i%2==0)
+	printf("\nEven no %d",i);
+	else if (i%2!=0)
+		printf("\nOdd no %d",i);
+}
+}
+getche();

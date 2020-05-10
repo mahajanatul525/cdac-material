@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<conio.h>
+
+void count(int, int *,int *,int *);
+void main()
+{
+	int a,i,z,n,p;
+         p=0,z=0,n=0;
+	printf("ENter  a no");
+	for(i=1;i<=10;i++)
+	{
+		scanf("%d",&a);
+	count(a,&z,&n,&p);
+	}
+	printf("%d %d %d",z,n,p);
+	
+	getch();
+	
+}
+
+void count(int a,int *z,int *n, int *p)
+{  
+	
+	if(a==0)
+		(*z)++;
+	else if(a<0)
+		(*n)++;
+	else 
+	(*p)++;
+}

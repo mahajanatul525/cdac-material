@@ -1,0 +1,18 @@
+drop procedure sp_loademp$$
+create procedure sp_loademp(numrows int)
+begin
+declare i int;
+set i:=0;
+truncate table emp;
+start transaction;
+myloop:loop
+if (i>=numrows) then
+leave myloop;
+end if;
+insert into emp (eid,ename,salary,deptid)
+values (i+1,concat(char((i%26)+97),i+1),rand()*100000,(i%3)+1);
+set i:=i+1;
+end loop myloop;
+commit;
+end
+$$

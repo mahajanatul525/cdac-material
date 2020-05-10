@@ -1,0 +1,6 @@
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\shared_assembly\shared_assembly\useemethdll\useemethdll\bin\Debug\useemethdll.exe.config
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\shared_assembly\shared_assembly\useemethdll\useemethdll\bin\Debug\useemethdll.exe
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\shared_assembly\shared_assembly\useemethdll\useemethdll\bin\Debug\useemethdll.pdb
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\shared_assembly\shared_assembly\useemethdll\useemethdll\obj\Debug\useemethdll.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\shared_assembly\shared_assembly\useemethdll\useemethdll\obj\Debug\useemethdll.exe
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\shared_assembly\shared_assembly\useemethdll\useemethdll\obj\Debug\useemethdll.pdb

@@ -1,0 +1,78 @@
+Write a program to print two different sequences 
+	1 to 30  even numbers
+
+	and 
+
+	1 to 30 odd numbers
+
+ using the concept of Multithreading. Create two threads , one thread will print "even" numbers and other thread will print "odd" numbers. also make sure that either all even numbers will be displayed first or all odd numbers.
+
+
+package mypack;
+
+ class multithread
+{
+	synchronized public void even()
+	{
+		for(int i=1;i<10;i++)
+		{
+			if(i%2==0)
+			{
+				System.out.println(i);
+			}
+		}
+	}
+	
+	synchronized public void odd()
+	{
+		for(int i=1;i<10;i++)
+		{
+			if(i%2!=0)
+			{
+				System.out.println(i);
+			}
+		}
+	}
+	
+}
+ class even implements Runnable
+ { 
+	 multithread m=new multithread();
+
+	@Override
+	public void run() 
+	{
+		m.even();
+		
+	}
+	 
+ }
+ class odd implements Runnable
+ { 
+	 multithread m=new multithread();
+
+	@Override
+	public void run() 
+	{
+		m.odd();
+		
+	}
+	 
+ }
+public class multithread1 
+{
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		even e1=new even();
+		Thread t1=new Thread(e1);
+		t1.start();
+        
+		odd o1=new odd();
+		Thread t2=new Thread(o1);
+		t2.start();
+
+	}
+
+}

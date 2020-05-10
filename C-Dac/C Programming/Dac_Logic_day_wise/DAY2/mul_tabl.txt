@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int no,i,j,ans;
+	printf("Enter no.= ");
+	scanf("%d",&no);
+	for(i=1;i<=no;i++)
+	{
+		for(j=1;j<=10;j++)
+		{
+			ans=i*j;
+			printf("\n%d * %d = %d",i,j,ans);
+		}
+		printf("\n");}
+		getche();
+	
+}

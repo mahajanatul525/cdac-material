@@ -1,0 +1,5 @@
+"\n"  and "endl"  both cause a new line to be printed.
+
+	The difference between two is
+	"endl" not only inserts a newline character, but it also flushes the output buffer,before sending the value which u actually wants to print. Hence "endl" is more reliable than "\n".
+

@@ -1,0 +1,86 @@
+we will learn about, binding data from a database table, to a dropdownlist. We will be using tblCity table for this demo. Please find the script below, to create and populate the table.
+
+Create table tblCity
+(
+ CityId int primary key,
+ CityName nvarchar(50),
+ Country nvarchar(50)
+)
+
+Insert into tblCity values(101, 'Delhi', 'India')
+Insert into tblCity values(102, 'London', 'UK')
+Insert into tblCity values(103, 'New York', 'US')
+Insert into tblCity values(104, 'Tokyo', 'Japan') 
+
+
+  
+
+Create an ASP.NET web application. Drag and drop a DropDownList control onto the webform. Copy and paste the following code in the code behind page. 
+protected void Page_Load(object sender, EventArgs e)
+{
+    if (!IsPostBack)
+    {
+        string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+        using (SqlConnection con = new SqlConnection(CS))
+        {
+            SqlCommand cmd = new SqlCommand("Select CityId, CityName, Country from tblCity", con);
+            con.Open();
+            SqlDataReader rdr = cmd.ExecuteReader();
+            DropDownList1.DataSource = rdr;
+            DropDownList1.DataBind();
+        }
+    }
+} 
+
+
+  
+
+Run the application. Notice that, the DropDownList displays,
+
+ System.Data.Common.DataRecordInternal 
+
+
+
+
+
+
+
+
+
+
+
+
+instead of the City names. This is because, we haven't specified the DataTextField and DataValueField properties of the DropDownList.
+
+ The code below specifes both the properties.
+protected void Page_Load(object sender, EventArgs e)
+{
+    if (!IsPostBack)
+    {
+        string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+        using (SqlConnection con = new SqlConnection(CS))
+        {
+            SqlCommand cmd = new SqlCommand("Select CityId, CityName, Country from tblCity", con);
+            con.Open();
+            SqlDataReader rdr = cmd.ExecuteReader();
+            DropDownList1.DataTextField = "CityName";
+            DropDownList1.DataValueField = "CityId";
+            DropDownList1.DataSource = rdr;
+            DropDownList1.DataBind();
+        }
+    }
+}
+
+Run the application now. The city names are displayed as expected. But make sure to set the properties(DataTextField, DataValueField) before calling DataBind() method. Also, note that, these properties can be set in the HTML of the aspx page as well.
+
+<asp:DropDownList ID="DropDownList1" DataTextField="CityName" 
+    DataValueField="CityId" runat="server">
+</asp:DropDownList> 
+
+
+<connectionStrings>
+<add name="DBCS" connectionString="data source=.; database=Sample; Integrated Security=SSPI" providerName ="System.Data.SqlClient"  />
+</connectionStrings>
+-----------------------
+NOTE:Make sure DataTextField and DataValueField properties are set before a call to DataBind() method.
+

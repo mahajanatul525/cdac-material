@@ -1,0 +1,132 @@
+
+
+
+
+
+
+
+
+
+Brackets are tall punctuation marks used in matched pairs within text, to set apart or interject other text. Brackets refer to different types of brackets in different parts of the world and in different contexts.
+Write a program which reads a String, which consists of alphabets [a-z, A-Z] and 3 types of brackets listed below:
+Parentheses -	()
+Square brackets -	[]
+Braces or Curly brackets -	{}
+And determine whether every open bracket has a matching close bracket. If any open/close bracket doesn’t have a matching close/open bracket or any extra open/close bracket then it is to be treated as invalid string.
+Following are 3 examples of valid string:
+(the[is]{valid})
+{the(is[valid])}
+(this)(is)(valid)
+Following are 4 examples of invalid string:
+(the[is]{invalid))
+(the[is]{invalid}}
+(this](is}{invalid)
+[this]{is}(invalid))
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<iostream>
+#include<string.h>
+
+using namespace std;
+class Stack
+{
+        private:
+                char str[30];
+                int toutput;
+        public:
+                Stack()
+                {
+                        toutput=0;
+                }
+                void push(char value)
+                {
+                        if(toutput==10)
+                        {
+                               
+                                return;
+                        }
+                        str[toutput++]= value;
+                     
+                }
+                int poutput()
+                {
+                        if(toutput==0)
+                        {
+                             
+                                return -99999;
+                        }
+                        return str[--toutput];
+                }
+                bool isEmpty()
+                {
+                        if(toutput==0)
+                                return 1;
+                        return 0;
+                }
+ void print()
+                {
+                        int i;
+                        for(i=0;i<toutput;i++)
+                                cout<<str[toutput];
+                        cout<<endl;
+                }
+};
+int main()
+{
+        Stack s1;
+        int n,i;
+        string input[20],output[20];
+      
+        cin>>n;
+        for(i=0;i<n;i++)
+        {
+                cin>>input[i];
+        }
+        cout<<endl;
+        for(i=0;i<n;i++)
+        {
+                int len=input[i].length();
+                for(int j=0;j<len;j++)
+                {
+                        if(input[i][j]=='('|| input[i][j]=='[' || input[i][j]=='{')
+                        {
+                                s1.push(input[i][j]);
+                        }
+                        if(input[i][j]==')'|| input[i][j]==']' || input[i][j]=='}')
+                        {
+                                char ch=s1.poutput();
+                               
+                    if((ch=='(' && input[i][j]==')')||(ch=='[' && input[i][j]==']')||(ch=='{' &&input[i][j]=='}'));  
+                                else
+                                {
+                                        output[i]="FALSE";break;
+                                }
+                        }
+                        if(s1.isEmpty())
+                        {
+                                output[i]="TRUE";
+                        }
+                        else
+                                output[i]="FALSE";
+                }
+        }
+        for(i=0;i<n;i++)        {
+                cout<<output[i]<<endl;
+        }
+        return 0;
+}

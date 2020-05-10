@@ -1,0 +1,67 @@
+#include<iostream.h>
+class Electronic_Appliance
+{
+	public:
+		void virtual on()=0;
+		void virtual off()=0;
+};
+class TV:public Electronic_Appliance
+{
+	public:
+		void on()
+		{
+			cout<<"TV on"<<endl;
+		}
+		void off()
+		{
+			cout<<"TV off"<<endl;
+		}
+};
+class Iron:public Electronic_Appliance
+{
+	public:
+		void on()
+		{
+			cout<<"Iron on"<<endl;
+		}
+		void off()
+		{
+			cout<<"Iron off"<<endl;
+		}
+};
+class Refrigerator:public Electronic_Appliance
+{
+	public:
+		void on()
+		{
+			cout<<"Refrigerator on"<<endl;
+		}
+		void off()
+		{
+			cout<<"Refrigerator off"<<endl;
+		}
+};
+void perform_on(Electronic_Appliance *ptr)
+{
+	ptr->on();
+}
+void perform_off(Electronic_Appliance *ptr)
+{
+	ptr->off();
+}
+void main()
+{
+	perform_on(new Iron);
+	// some code
+	perform_off(new Iron);
+
+	perform_on(new Refrigerator);
+	// some code
+	perform_off(new Refrigerator);
+
+	perform_on(new TV);
+	// some code
+	perform_off(new TV);
+}
+
+	

@@ -1,0 +1,21 @@
+Use out
+
+Sometimes you will want to use a reference parameter to receive a value from a method, but
+not pass in a value. For example, you might have a method that performs some function,
+such as opening a network socket, that returns a success/fail code in a reference parameter.
+In this case, there is no information to pass into the method, but there is information to pass
+back out. The problem with this scenario is that a ref parameter must be initialized to a
+value prior to the call. Thus, to use a ref parameter would require giving the argument a
+dummy value just to satisfy this constraint. Fortunately, C# provides a better alternative:
+the out parameter.
+
+
+
+the out parameter.
+An out parameter is similar to a ref parameter with this one exception: It can only be
+used to pass a value out of a method. It is not necessary (or useful) to give the variable used
+as an out parameter an initial value prior to calling the method. The method will give the
+variable a value. Furthermore, inside the method, an out parameter is considered unassigned;
+that is, it is assumed to have no initial value. This implies that the method must assign the
+parameter a value prior to the method’s termination. Thus, after the call to the method, an
+out parameter will contain a value.

@@ -1,0 +1,233 @@
+  1
+ 121
+12121
+
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+
+{ 
+	int j,i,s,k=1;
+		
+		for(i=1;i<=3;i++)
+			{for(s=i;s<3;s++)
+			printf(" ");
+				for(j=1;j<=k;j++)
+				{
+				if(j%2!=0)
+					printf("1");
+				else
+					printf("2");
+				
+				}k=k+2;
+				printf("\n");}
+		getche();
+		}
+
+1
+23
+456
+78910
+#include<stdio.h>
+void main()
+{
+int i,j,k=1;
+	for(i=1;i<=4;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+		printf("%d",k++);
+		
+		}
+		printf("\n");
+	}
+
+
+
+
+}
+
+
+                                    1
+                                2       2
+                         3         3         3
+                    4         4         4         4
+              5         5          5          5         5
+
+
+
+#include<stdio.h>
+void main()
+{
+int i,j,k;
+for(i=1;i<=5;i++)
+{
+	for(k=5;k>i;k--)
+
+	printf(" ");
+	for(j=1;j<=i;j++)
+	{printf("%d ",i);
+		}
+	printf("\n");
+	}
+
+}
+
+
+  1
+ 121
+12121
+void main()
+{
+	
+	for(int i=1;i<=4;i++)
+	{
+		for(int s=3;s>=i;s--)
+			printf(" ");
+		int k=2;
+		for(int j=1;j<=(i*2)-1;j++)
+		{
+			if(k==1)
+				k=2;
+			else
+				k=1;
+			printf("%d",k);
+		}
+		printf("\n");
+	}
+}
+
+
+111112
+322222
+333334
+544444
+555556
+766666
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int i,j;
+   for(i=1;i<=6;i++)
+
+ {  
+	 if(i%2!=0)
+
+       { 
+		for(j=1;j<6;j++)
+	    printf("%d",i);
+        printf("%d",i+1);
+	   }
+		
+
+
+     if(i%2==0)
+    
+
+	{   printf("%d",i+1);
+	    for(j=1;j<6;j++)
+		printf("%d",i);
+         
+      }
+   printf("\n");
+}
+getche();
+}
+
+
+1
+24
+369
+24
+1
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int i,j;
+   for(i=1;i<=3;i++)
+	  { 
+		  for(j=1;j<=i;j++)
+		   printf("%d",i*j);
+   printf("\n");
+   }
+   for(j=2;j>=1;j--)
+	  { 
+	 for(i=1;i<=j;i++)
+	   printf("%d",i*j);
+         printf("\n");
+        }
+   getche();
+}
+
+20)
+
+	 1
+        232
+       34543
+      4567654
+     567898765
+    67890109876
+   7890123210987
+  890123454321098
+ 90123456765432109
+0123456789876543210
+
+ans:
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int i,j,r,k,s;
+	for(i=1;i<=10;i++)
+	{
+		for(s=9;s>=i;s--)
+			printf(" ");
+		for(j=i,k=1;k<=i;j++,k++)
+		{
+			if(j<10)
+				printf("%d",j);
+			else
+				printf("%d",j%10);
+		}
+		for(r=j-2,k=1;k<i;r--,k++)!
+		{
+			if(r<10)
+				printf("%d",r);
+			else
+				printf("%d",r%10);
+		}
+		printf("\n");
+	}
+	
+	getche();
+}
+
+
+
+
+
+
+1   1
+ 2 2 
+  3
+ 4 4
+5   5
+
+for(i=1;i<=5;i++)
+{ for(k=1;k<=5;k++)
+	{ if(i==k||k==6-i)
+		printf("%d",i);
+		else
+	   printf(" ");
+
+
+	}
+
+
+
+}

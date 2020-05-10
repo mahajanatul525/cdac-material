@@ -1,0 +1,54 @@
+file
+	new 
+		java project
+			reveng
+		right click on "project"
+		properties
+			build path
+				add external jar
+
+				add all reqd. jar files
+
+			right click on "src"
+
+		hibernate configuration
+		hibernate console configuration
+		hibernate reverse eng
+
+	hibernate code generation configuration
+
+output directory  -  \reveng\src
+
+select "reverse eng from JDBC"
+
+package - mypack
+reveng.xml -  \reveng\src\hibernate.reveng.xml
+
+	"Exporters" tab
+
+using Ejb3 Annotations
+
+	select "Domain code(.java)"	
+
+	
+
+	"Refresh" tab
+	select "Refresh resource upon completion"
+	select "The project containing" selected source"
+
+	click on "apply" and "run"
+
+	make sure "Dept.java" is created in "mypack".
+
+	copy "HibernateUtil.java" and "Main.java" in "mypack"
+
+	in src you must be having "hibernate.cfg.xml" and "hibernate.reveng.xml"
+
+	go to "hibernate.cfg.xml" and add following line
+
+	<mapping class="mypack.Dept"/>
+
+	right click on "project" say refresh
+
+	run "Main.java"
+

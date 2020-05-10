@@ -1,0 +1,26 @@
+<HTML><head> <style> .tc{color:red;}</style><script>
+function callme()
+{var tt=document.frm.nm;
+var a=document.frm.nm.value
+alert(tt)
+var sub=1
+	if(a.length==0)
+	{alert("name cannot be blank")
+  document.getElementById("dd").innerHTML="name cannot be blank";
+	sub=0
+	//tt.focus()	
+	}
+	if(sub==0)
+	  return false
+	else
+          return true;
+}
+</script></head><BODY>
+<FORM name="frm" onsubmit="return callme()" action="copy.html">
+<input type="text" name="name" onkeypress="return false">
+<input type="text" name="nm">
+<span id="dd" class="tc"></span>
+<input type="submit"></FORM></body></HTML>
+
+
+

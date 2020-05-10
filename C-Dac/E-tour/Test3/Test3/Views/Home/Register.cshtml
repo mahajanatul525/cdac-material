@@ -1,0 +1,68 @@
+﻿@model Test3.Models.Registration
+
+<link rel="stylesheet" href="~/Content/style.css">
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <div class="login-page">
+        <div class="container">
+            <legend style="text-align:center">Registration</legend>
+             <div class="login-body">
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmailID)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.EmailID)
+            @Html.ValidationMessageFor(model => model.EmailID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Password)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Password)
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Contact)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Contact)
+            @Html.ValidationMessageFor(model => model.Contact)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Address)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Address)
+            @Html.ValidationMessageFor(model => model.Address)
+        </div>
+
+        <p>
+            <input type="submit" value="Register" />
+        </p>
+        <div>
+    @Html.ActionLink("Go To Login", "Login")
+    @Html.ActionLink("Go Back", "Index")
+</div>
+    </fieldset>
+        </div>
+        </div>
+        </div>
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

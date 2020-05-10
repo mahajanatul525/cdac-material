@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	float u;
+	printf("Enter Consumption unit\n");
+	scanf("%f", &u);
+	if(u<=200)
+		printf("\nCharges= %f", u*0.5);
+	else if(u<=201 && u<=400)
+		printf("\nCharges= %f", 100+(u-200)*0.65);
+	else if(u<=401 && u<=600)
+		printf("\nCharges= %f", 230+(u-400)*0.8);
+	else 
+		printf("\nCharges= %f", 390+(u-600)*1);
+	getch();
+}

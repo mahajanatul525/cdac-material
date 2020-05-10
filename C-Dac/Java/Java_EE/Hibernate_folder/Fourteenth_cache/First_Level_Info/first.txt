@@ -1,0 +1,105 @@
+package mypack;
+
+import java.util.Scanner;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Session session = HibernateUtil.getSessionFactory().openSession(); 
+        Transaction transaction = null; 
+        try { 
+            transaction = session.beginTransaction(); 
+            Product p=new Product();
+            p.setId(1);
+            p.setName("soap");
+            p.setQty(75);
+            p.setPrice(90);
+        
+            session.save(p);
+            transaction.commit();
+ 
+          
+            System.out.println("done with product");
+           // session.evict(p);
+            Scanner sc=new Scanner(System.in);
+            sc.nextInt();
+            System.out.println("now loading");
+      
+            Product ref2=(Product)session.load(Product.class,1);   
+            System.out.println(ref2);
+         // session.evict(ref2);
+         Product ref3=(Product)session.load(Product.class,1);  
+            System.out.println(ref3);
+             }
+        catch(Exception ee)
+        {
+        	System.out.println("in catch\t"+ee);
+        }
+}
+}
+
+/*
+run above program
+output is
+
+Hibernate: insert into Product (name, price, qty) values (?, ?, ?)
+done with product
+
+
+now don't enter any number
+
+go to MYSQL 
+mysql> select * from product;
++----+------+-------+------+
+| id | name | price | qty  |
++----+------+-------+------+
+|  1 | soap |    90 |   75 |
++----+------+-------+------+
+1 row in set (0.00 sec)
+
+mysql> update product set price=120 where id=1;
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from product;
++----+------+-------+------+
+| id | name | price | qty  |
++----+------+-------+------+
+|  1 | soap |   120 |   75 |
++----+------+-------+------+
+1 row in set (0.00 sec)
+
+now come back to Eclipse
+enter some number (because of sc.nextInt() )
+
+and now the output is
+
+4
+now loading
+Product [name=soap, qty=75, price=90.0]
+Product [name=soap, qty=75, price=90.0]
+
+if session.evict is not commented
+
+output will be 
+
+Hibernate: insert into Product (name, price, qty, id) values (?, ?, ?, ?)
+done with product
+1
+now loading
+Hibernate: select product0_.id as id0_0_, product0_.name as name0_0_, product0_.price as price0_0_, product0_.qty as qty0_0_ from Product product0_ where product0_.id=?
+
+mypack.Product@3c1606
+
+Hibernate: select product0_.id as id0_0_, product0_.name as name0_0_, product0_.price as price0_0_, product0_.qty as qty0_0_ from Product product0_ where product0_.id=?
+
+mypack.Product@19fae86
+
+
+*/

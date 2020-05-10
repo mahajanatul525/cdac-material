@@ -1,0 +1,397 @@
+Question 1
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+what will happen
+
+ 
+
+#include <iostream.h>
+
+int a=20;
+
+void main()
+
+{
+
+        int *ptr;
+
+        int *const retA();
+
+        ptr=retA();
+
+        cout<<*ptr;
+
+}
+
+ int *const retA()
+
+{
+
+        return &a;
+
+}
+
+
+Select one:
+a. runtime error
+b. neither compile ,nor runtime error Correct
+c. compiletime error
+Feedback
+Your answer is correct.
+The correct answer is: neither compile ,nor runtime error
+Question 2
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+)  what will happen to the following code?
+
+#include<iostream.h>
+
+void accept(int x,int y)
+
+{
+
+       cout<<"in value method\n";
+
+}
+
+void accept(const int &p,const int &q)
+
+{
+
+       cout<<"in referece method\n";
+
+}
+
+void main()
+
+{
+
+       accept(45,55);
+
+}
+
+
+Select one:
+a. compilation error
+b. output “in value method” Incorrect
+c. output “in value method in reference method”
+d. output “in reference method”
+Feedback
+Your answer is incorrect.
+The correct answer is: compilation error
+Question 3
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+what will happen to the following?
+
+#include<iostream.h>
+
+void main()
+
+{
+
+       cout<<30<<endl;
+
+       int &ref=30;
+
+       ref=60;
+
+       cout<<ref<<endl;
+
+}
+
+
+Select one:
+a. output 30 30 Incorrect
+b. output 30 60
+c. compilation error
+Feedback
+Your answer is incorrect.
+The correct answer is: compilation error
+Question 4
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+what will happen to the following?
+
+#include<iostream.h>
+
+void accept(int x,int y)
+
+{
+
+       cout<<"in value method\n";
+
+}
+
+void accept(int &p,int &q)
+
+{
+
+       cout<<"in referece method\n";
+
+}
+
+void main()
+
+{
+
+       accept(45,55);
+
+}
+
+
+Select one:
+a. compilation error
+b. output “in value method in reference method” Incorrect
+c. output “in referece method”
+d. output “in value method”
+Feedback
+Your answer is incorrect.
+The correct answer is: output “in value method”
+Question 5
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+what is the output ?
+
+   #include<iostream.h>
+
+const int a=124;
+
+void main()
+
+{
+
+const int* sample();
+
+int  const*  p;
+
+p=sample();
+
+}
+
+const int* sample()
+
+{
+
+return (&a);
+
+}
+
+
+Select one:
+a. compile time error Incorrect
+b. runtime error
+c. neither compilation nor runtime error
+Feedback
+Your answer is incorrect.
+The correct answer is: neither compilation nor runtime error
+Question 6
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+what will happen to the following ?
+
+#include<iostream.h>
+
+void main()
+
+{
+
+       int val=300;
+
+       int * const ptr;
+
+       ptr=&val;
+
+       *ptr=600;
+
+       cout<<endl<<*ptr;
+
+}
+
+
+Select one:
+a. compilation error
+b. output, garbage value
+c. output 300
+d. output 600 Incorrect
+Feedback
+Your answer is incorrect.
+The correct answer is: compilation error
+Question 7
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+what will happen to the following code?
+
+#include<iostream.h>
+
+int num=200;
+
+void main()
+
+{
+
+       int const *ptr;
+
+       int* retNum();
+
+       ptr=retNum();
+
+       cout<<*ptr;
+
+}
+
+int* retNum()
+
+{
+
+       return &num;
+
+}
+
+
+Select one:
+a. output 200
+b. compilation error
+c. Runtime Error Incorrect
+Feedback
+Your answer is incorrect.
+The correct answer is: output 200
+Question 8
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+what will happen to the following code ?
+
+#include<iostream.h>
+
+int var=200;
+
+void main()
+
+{
+
+   int& fun();
+
+   cout<<var<<endl;
+
+   fun()=100;
+
+   cout<<var<<endl;
+
+}
+
+int& fun()
+
+{
+
+   static int var=30;
+
+   return var;
+
+}
+
+
+Select one:
+a. warning
+b. compilation erro
+c. neither compilation error nor warning output 200 100
+d. neither compilation error nor warning ,output 200 200 Correct
+Feedback
+Your answer is correct.
+The correct answer is: neither compilation error nor warning ,output 200 200
+Question 9
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+what is the output?
+
+#include<iostream.h>
+
+void main()
+
+{
+
+       int num=20;
+
+       void disp(int,int);
+
+       disp(num,++num);
+
+}
+
+void disp(int a,int b)
+
+{
+
+       cout<<a<<"\t"<<b<<endl;
+
+}
+
+
+Select one:
+a. 20 21 Incorrect
+b. 20 20
+c. 21 21
+d. 21 20
+Feedback
+Your answer is incorrect.
+The correct answer is: 21 21
+Question 10
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+what will happen
+
+ 
+
+#include <iostream.h>
+
+const int a=20;
+
+void main()
+
+{
+
+        int *ptr;
+
+        int *const retA();
+
+        ptr=retA();
+
+        cout<<*ptr;
+
+}
+
+ int *const retA()
+
+{
+
+        return &a;
+
+}
+
+
+Select one:
+a. runtime error
+b. compiletime error Correct
+c. neither compile ,nor runtime error
+Feedback
+Your answer is correct.
+The correct answer is: compiletime error

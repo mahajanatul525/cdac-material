@@ -1,0 +1,15 @@
+CACHE MANIFEST
+#019-02-21v3.0.0 
+#// nay date if u modify in future it will recache
+theme.css 
+#//client side storing
+img/logo.gif
+main.js
+
+NETWORK:
+02_app_Cache/login.asp 
+
+#//only online
+FALLBACK:
+go.html  
+#default page when u r offlineee

@@ -1,0 +1,17 @@
+
+
+To successfully store and retrieve objects from a hashtable, the objects used 
+as keys must implement the hashCode method and the equals method.
+In a nutshell, since null isn't an object, you can't call .equals() or .hashCode() on it, so the Hashtable can't compute a hash to use it as a key.
+
+
+
+Apart from all the details given in other answers, this is how hashmap allow NULL Keys. If you look at the method putForNullKey() in Hashmap (JDK 5) , it reserves the index "0" for the null key. All values for the null key are kept inside the "0" index of the array.
+
+There is nothing special about storing NULL value as all the put and lookup operations work based on the Key object.
+
+In hashtable, Java does not have these mechanisms and hence hashtable does not support NULL key or values.
+
+Consider the example of using a Map to represent a row of data from a database. Databases often have nullable columns. Because Map allows null values, our map can have a key/value pair:
+
+

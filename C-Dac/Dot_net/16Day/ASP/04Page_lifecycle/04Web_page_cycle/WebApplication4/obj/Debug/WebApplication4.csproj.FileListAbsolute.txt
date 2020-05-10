@@ -1,0 +1,15 @@
+D:\WebApplication4\WebApplication4\bin\WebApplication4.dll
+D:\WebApplication4\WebApplication4\bin\WebApplication4.pdb
+D:\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csprojResolveAssemblyReference.cache
+D:\WebApplication4\WebApplication4\obj\Debug\WebApplication4.dll
+D:\WebApplication4\WebApplication4\obj\Debug\WebApplication4.pdb
+D:\dot_net\asp\04Page_lifecycle\04Web_page_cycle\WebApplication4\bin\WebApplication4.dll
+D:\dot_net\asp\04Page_lifecycle\04Web_page_cycle\WebApplication4\bin\WebApplication4.pdb
+D:\dot_net\asp\04Page_lifecycle\04Web_page_cycle\WebApplication4\obj\Debug\WebApplication4.csprojResolveAssemblyReference.cache
+D:\dot_net\asp\04Page_lifecycle\04Web_page_cycle\WebApplication4\obj\Debug\WebApplication4.dll
+D:\dot_net\asp\04Page_lifecycle\04Web_page_cycle\WebApplication4\obj\Debug\WebApplication4.pdb
+C:\Users\practice\Desktop\Dot_net\ASP\04Page_lifecycle\04Web_page_cycle\WebApplication4\bin\WebApplication4.dll
+C:\Users\practice\Desktop\Dot_net\ASP\04Page_lifecycle\04Web_page_cycle\WebApplication4\bin\WebApplication4.pdb
+C:\Users\practice\Desktop\Dot_net\ASP\04Page_lifecycle\04Web_page_cycle\WebApplication4\obj\Debug\WebApplication4.csprojResolveAssemblyReference.cache
+C:\Users\practice\Desktop\Dot_net\ASP\04Page_lifecycle\04Web_page_cycle\WebApplication4\obj\Debug\WebApplication4.dll
+C:\Users\practice\Desktop\Dot_net\ASP\04Page_lifecycle\04Web_page_cycle\WebApplication4\obj\Debug\WebApplication4.pdb

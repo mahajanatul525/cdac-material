@@ -1,0 +1,27 @@
+#include<stdio.h>
+void str_copy(char *, char *);
+void main()
+{	char str1[40], str2[20];
+
+printf("Enter the string to be copied: ");
+gets(str1);//vidya
+
+str_copy(str2,str1);
+
+printf("The string entered by you is %s\n",str1);
+printf("The copied string is %s",str2);
+
+}
+void str_copy(char *t, char *s)
+{
+	while(*s!='\0')
+	{
+		*t = *s;
+		s++;
+		t++;
+	}
+	*t = '\0';
+}
+
+
+

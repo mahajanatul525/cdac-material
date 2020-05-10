@@ -1,0 +1,3 @@
+for doGet  authentication is Guest
+
+for doPost authentication is member

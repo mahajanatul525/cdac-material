@@ -1,0 +1,97 @@
+#include<iostream>
+
+using namespace std;
+
+int main() {
+    int R,C,i,j,s,e,count = 0,temp,temp1,temp3,temp4,temp5,flag = 0,count1 = 0;
+    cin>>R>>C;
+    int ele[400];
+    string arr[R][C];
+    int visited[R][C];
+    for( i = 0; i < R;i++) {
+        for( j = 0; j < C;j++) {
+            cin>>arr[i][j];
+            visited[i][j] = 0;
+        }
+    }
+
+      for( i = 0; i < R;i++) {
+        for( j = 0; j < C;j++) {
+            if(arr[i][j] == "#") {
+                s = i;
+                e = j;
+            }
+                
+        }
+    }
+    temp4 = ele[count1++] = s;
+    temp5 =ele[count1++] = e;
+    while(true) {
+        flag = 0;
+        if( (e + 1) < C && arr[s][e+1] == "@") {
+            count++;
+            break;
+            }
+        else if(  (e - 1) >= 0 && arr[s][e-1] == "@") {
+            count++;
+            break;
+            }
+        else if( (s - 1) >= 0 && arr[s-1][e] == "@") {
+            count++;
+            break;
+            }
+        else if( (s + 1) < R && arr[s+1][e] == "@") {
+            count++;
+            break;
+            }
+    //*********************************************************
+         if((e + 1) < C && arr[s][e+1] == "1" && visited[s][e + 1] == 0) {
+             temp3 = count;
+             count++;
+            visited[s][e + 1] = 1;
+            ele[count1++] = s;
+            ele[count1++] = e;
+            e = e + 1;
+            
+            flag = 1;
+            }
+        else if((e - 1) >= 0 && arr[s][e-1] == "1" &&  visited[s][e - 1] == 0) {
+            temp3 = count;
+            count++;
+            visited[s][e - 1] = 1;
+            ele[count1++] = s;
+            ele[count1++] = e;
+            
+            e = e - 1;
+           flag = 1;
+            }
+        else if((s - 1) >= 0 && arr[s-1][e] == "1" &&  visited[s - 1][e] == 0) {
+            temp3 = count;
+            count++;
+            visited[s - 1][e] = 1;
+            ele[count1++] = s;
+            ele[count1++] = e;
+            
+            s = s - 1;
+            flag = 1;
+            }
+        else if((s + 1) < R && arr[s+1][e] == "1" &&  visited[s + 1][e] == 0) {
+            temp3 = count;
+            count++;
+            visited[s + 1][e] = 1;
+            ele[count1++] = s;
+            ele[count1++] = e;
+            s = s + 1;
+            flag = 1;
+            }
+        if(flag == 0) {
+            e = ele[--count1];
+            s = ele[--count1];
+            count--;
+            
+        }
+           
+    }
+    cout<<count<<endl;
+ return 0;   
+}

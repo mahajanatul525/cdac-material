@@ -1,0 +1,18 @@
+1) How many ways we can achieve re-usability?
+	a) inheritance (is-a)  b) composition (has-a)
+
+2) how many types of inheritance are there in C++? 
+3) how many types of inheritance modes are there in C++?
+3) Explain inheritance table.
+4) explain constructor invocation in case of inheritance.
+5) explain destructor invocation in case of inheritance.
+6) what is diamond problem? how do we solve it?
+7) what is the difference between "Re-definition" and "overriding"?
+8) What is upcasting? Why do we need it?
+9) what is the use of "virtual" method?
+10) how do we achieve "late binding" in C++?
+11) how many things are not inherited in sub class?
+ans:-	constructors,destructor and operator=
+12) what is the concept of copy constructor in inheritance?
+ans:- implicitly provided copy constructor in sub class, invokes base class copy constructor. 
+if u provide copy constructor explicitly inside sub class, u have to invoke base class copy constructor explicitly. Failing to which sub class copy constructor invokes no-arg constructor of base.

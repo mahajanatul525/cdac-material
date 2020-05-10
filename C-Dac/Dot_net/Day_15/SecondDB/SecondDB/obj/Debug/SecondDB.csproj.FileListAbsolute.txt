@@ -1,0 +1,6 @@
+F:\C++ PRO\Day_15\SecondDB\SecondDB\bin\Debug\SecondDB.exe.config
+F:\C++ PRO\Day_15\SecondDB\SecondDB\bin\Debug\SecondDB.exe
+F:\C++ PRO\Day_15\SecondDB\SecondDB\bin\Debug\SecondDB.pdb
+F:\C++ PRO\Day_15\SecondDB\SecondDB\obj\Debug\SecondDB.csprojResolveAssemblyReference.cache
+F:\C++ PRO\Day_15\SecondDB\SecondDB\obj\Debug\SecondDB.exe
+F:\C++ PRO\Day_15\SecondDB\SecondDB\obj\Debug\SecondDB.pdb

@@ -1,0 +1,27 @@
+#include<stdio.h>
+void main()
+{
+int n,i,flag=0;
+int arr[5]={5,8,9,1,2};
+
+printf("enter number to be search");
+scanf("%d",&n);
+
+for(i=0;i<5;i++)
+{
+	if(n==arr[i])
+	{pf("found");
+	 break;
+         }
+	
+	
+}
+	if(i==5)
+	pf("not");
+}
+
+
+
+
+
+

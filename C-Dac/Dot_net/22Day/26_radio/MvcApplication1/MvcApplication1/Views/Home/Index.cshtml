@@ -1,0 +1,22 @@
+﻿@model MvcApplication1.Models.Company
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+@using (Html.BeginForm())
+{
+    foreach (var department in Model.Departments)
+    {
+        @Html.RadioButtonFor(m => m.SelectedDepartment, department.Id) @department.Name
+     <br />
+   
+    }
+    <br />
+
+    <br />
+    @Html.RadioButton("rd","yes", true); <span>Yes</span>
+   @Html.RadioButton("rd","No", false); <span>No</span>
+  <input type = "submit" value = "Submit" />
+}
+

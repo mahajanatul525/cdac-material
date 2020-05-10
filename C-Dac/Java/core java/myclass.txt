@@ -1,0 +1,91 @@
+c) create a class "MyClass".
+create 5 different objects of it.
+add them in a ArrayList.
+store ArrayList in file.
+Now open a file, read ArrayList and display all objects.
+==============================
+package mypack;
+
+import java.io.*;
+import java.io.Serializable;
+import java.util.*;
+
+public class MyClass implements Serializable
+{
+	int num;
+	String name;
+	
+	
+
+	public MyClass(int num, String name) 
+	{
+		super();
+		this.num = num;
+ 		this.name = name;
+	}
+
+
+
+	public static void main(String[] args) 
+	{
+		MyClass m1=new MyClass(1,"abc");
+		MyClass m2=new MyClass(2,"xyz");
+		MyClass m3=new MyClass(3,"pqr");
+		MyClass m4=new MyClass(4,"lmn");
+	
+		
+		Scanner sc=new Scanner(System.in);
+		
+		List<Object> a=new ArrayList<Object>();
+		a.add(m1);
+		a.add(m2);
+		a.add(m3);
+		a.add(m4);
+		
+		/*Iterator i=a.iterator();
+		while(i.hasNext())
+		{
+			System.out.println(i.next());
+		}
+		*/
+		try
+		{
+			FileOutputStream fos=new FileOutputStream("D:\\serialize.txt");
+			ObjectOutputStream oos=new ObjectOutputStream(fos);
+			oos.writeObject(a);
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		try
+		{
+			FileInputStream fis=new FileInputStream("D:\\serialize.txt");
+			ObjectInputStream ois=new ObjectInputStream(fis);
+			ArrayList<Object> a1=(ArrayList<Object>)ois.readObject();
+			
+			Iterator i1=a1.iterator();
+			while(i1.hasNext())
+			{
+				System.out.println(i1.next());
+			}
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "MyClass [num=" + num + ", name=" + name + "]";
+	}
+
+}

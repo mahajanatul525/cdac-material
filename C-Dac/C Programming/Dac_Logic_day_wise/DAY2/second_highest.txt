@@ -1,0 +1,23 @@
+#include<stdio.h>
+void main()
+{
+	int i,max,no,max1;
+	printf("Enter the no = ");
+	scanf("%d",&max);
+
+	for(i=1;i<=9;i++)
+	{
+		printf("Enter the no = ");
+		scanf("%d",&no);
+
+		if(no>max)
+		{
+			max1=max;
+			max=no;
+		}
+
+	}
+
+	printf("Highest number = %d and second highest number = %d",max,max1);
+
+}

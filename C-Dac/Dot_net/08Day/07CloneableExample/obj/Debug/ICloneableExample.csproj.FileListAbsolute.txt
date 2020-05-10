@@ -1,0 +1,12 @@
+D:\dot_net\Day_wise\day3\clonable 08\01ICloneableExample\bin\Debug\ICloneableExample.exe
+D:\dot_net\Day_wise\day3\clonable 08\01ICloneableExample\bin\Debug\ICloneableExample.pdb
+D:\dot_net\Day_wise\day3\clonable 08\01ICloneableExample\obj\Debug\ICloneableExample.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day3\clonable 08\01ICloneableExample\obj\Debug\ICloneableExample.exe
+D:\dot_net\Day_wise\day3\clonable 08\01ICloneableExample\obj\Debug\ICloneableExample.pdb
+D:\dot_net\Day_wise\day3\07CloneableExample\obj\Debug\ICloneableExample.exe
+D:\dot_net\Day_wise\day3\07CloneableExample\obj\Debug\ICloneableExample.pdb
+D:\dot_net\Day_wise\day3\07CloneableExample\bin\Debug\ICloneableExample.exe
+D:\dot_net\Day_wise\day3\07CloneableExample\bin\Debug\ICloneableExample.pdb
+D:\dot_net\Day_wise\day3\07CloneableExample\obj\Debug\ICloneableExample.csprojResolveAssemblyReference.cache
+C:\Users\practice\Desktop\Dot_net\day3\07CloneableExample\obj\Debug\ICloneableExample.exe
+C:\Users\practice\Desktop\Dot_net\day3\07CloneableExample\obj\Debug\ICloneableExample.pdb

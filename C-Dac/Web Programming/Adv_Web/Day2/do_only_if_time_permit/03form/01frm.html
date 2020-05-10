@@ -1,0 +1,193 @@
+<html>
+<head>
+<title>form</title>
+</head>
+
+<body>
+<fieldset>
+<legend align="center">Form</legend>
+
+<form action="02.html" onsubmit="return false">
+<lable for="enterfirst name">First Name:</lable>
+<input name="fnm" size="40" value="enter name"/>
+
+
+
+<lable>Last Name:</lable><input name="lnm" maxlength="3" disabled/>
+
+<lable>Password:</lable><input type="password" name="lm" maxlength="3"/>
+
+<input type="submit" value="go"/>
+</form>
+
+</fieldset>
+
+
+
+
+
+
+
+
+
+<form action="">
+
+
+
+
+
+
+<lable>Sex:</lable>
+
+<lable>Male:</lable><input type="radio" name="mf" value="M"/>
+
+<lable>Female:</lable>
+
+<input  type="radio" name="mf" maxlength="3" value="F" checked="checked"/>
+
+
+
+
+
+
+
+
+
+
+
+<lable>Hobbies</lable>
+
+<input type="checkbox" name="chk1" value="sports"  checked="checked"/>
+<lable>sports</lable>
+
+<input type="checkbox" name="chk2" value="swimings"/>
+<lable>swiming</lable>
+
+
+<input type="checkbox" name="chk3" value="music"/>
+<lable>music</lable>
+
+
+
+
+
+
+<input type="submit"/>
+</form>
+<hr/>
+
+<form>
+
+
+
+<select name="sl[]" multiple>
+<option>education</option>
+<option selected="selected">BE</option>
+<option>BSc. IT</option>
+<option>MSc. IT</option>
+</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<select name="dsp[]" multiple="multiple" size="2">
+<option>education</option>
+<option>BE</option>
+<option>BSc. IT</option>
+<option>MSc. IT</option>
+<option>Com.Sce</option>
+</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<lable>Comment</lable><textarea rows="3" cols="20" name="cmt"> enter  address</textarea>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<input type="submit"/>
+</form>
+
+
+
+
+<hr/>
+
+<form enctype="multipart/form-data"  action="a.php" method="post">
+
+<input type="file" name="f"/>
+<input type="hidden" name="raz" value="good customer"/>
+
+<input type="submit"/>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

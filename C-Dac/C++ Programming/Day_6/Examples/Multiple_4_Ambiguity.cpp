@@ -1,0 +1,35 @@
+#include<iostream>
+#pragma pack(1)
+using namespace std;
+
+class base1
+{
+public:
+	void disp()
+	{
+		cout<<"base1 disp"<<endl;
+	}
+};
+class base2
+{
+public:
+	void disp()
+	{
+		cout<<"base2 disp"<<endl;
+	}
+};
+class sub:base1,base2
+{
+public:
+	void fun()
+	{
+		disp();  // Ambiguity
+		cout<<"fun"<<endl;
+	}
+};
+int main()
+{
+	sub s;
+	s.fun();
+	return 0;
+}

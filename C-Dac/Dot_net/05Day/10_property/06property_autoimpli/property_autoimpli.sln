@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "property_autoimpli", "property_autoimpli\property_autoimpli.csproj", "{F1F22362-75AE-42D7-960E-794C0CD960AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1F22362-75AE-42D7-960E-794C0CD960AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F22362-75AE-42D7-960E-794C0CD960AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F22362-75AE-42D7-960E-794C0CD960AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F22362-75AE-42D7-960E-794C0CD960AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

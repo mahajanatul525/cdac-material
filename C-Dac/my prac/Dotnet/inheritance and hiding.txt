@@ -1,0 +1,70 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication6
+{
+    class employee
+    {
+        static int id;
+       public  string name;
+       public  int salary;
+       public int eid;
+
+        public employee(string nm, int sal)
+        {
+            name = nm;
+            salary = sal;
+            eid = ++id;
+        }
+        public void disp()
+        {
+            Console.WriteLine("{0} {1} {2}", eid, name, salary);
+        }
+    }
+
+    class per_emp : employee
+    {
+        public int bonus;
+
+        public per_emp(String name, int salary, int bonus)
+            : base(name, salary)
+        {
+            this.bonus = bonus;
+        }
+        new public void disp()
+        {
+            Console.WriteLine("{0} {1} {2} {3}", eid, name, salary,bonus);
+        }
+    }
+
+    class contract : employee
+    {
+        int insentive;
+        public contract(string name, int salary, int ins):base(name,salary)
+        {
+            insentive = ins;
+        }
+        new public void disp()
+        {
+            Console.WriteLine("{0} {1} {2} {3}", eid, name, salary,insentive);
+        }
+    }
+
+    class entrypoint
+    {
+        public static void Main()
+        {
+            employee e1 = new employee("ATUL", 200000);
+            e1.disp();
+            per_emp pe1 = new per_emp("PRASHANT", 200000, 5000);
+            pe1.disp();
+            contract c = new contract("ABHISHEK", 30000, 25000);
+            c.disp();
+
+        }
+    }
+
+}

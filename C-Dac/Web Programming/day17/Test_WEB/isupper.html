@@ -1,0 +1,20 @@
+<script>
+function chk()
+{var c=0;
+var result="";
+var data=document.getElementById("nm").value;
+
+     if (data.charAt(0).match(/^[A-Z]/))
+            c++;
+
+    
+  if(c==1)
+  document.getElementById("cpy").innerHTML="1st letter is in upper case";
+  else
+  document.getElementById("cpy").innerHTML="not---in upper case 1st letter";
+}
+
+</script>
+<textarea id="nm" rows=10 cols=50/></textarea>
+<button onclick="chk()">check data</button>
+<div id="cpy"></div>

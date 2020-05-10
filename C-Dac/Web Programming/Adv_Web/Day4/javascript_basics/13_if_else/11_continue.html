@@ -1,0 +1,28 @@
+<html>
+
+continue;<br/>
+it is used in a loop<br/>
+it continue the current loop<br/>
+<hr/>
+
+<script>
+var no,i,cp,cn;
+cp=0;
+cn=0;
+document.write("enter only possitive no");
+document.write("<hr/>");
+for(i=1;i<5;i++)
+	{no=prompt();   //5,-2,8,-9
+		if(no<0)
+		{document.write("no is nagetive");
+			document.write("<hr/>");
+			cn++;
+			continue;
+		}
+		cp++;
+	}
+document.write("total  positive no"+cp);
+document.write("<hr/>");
+document.write("total negative no"+cn);
+
+</script>

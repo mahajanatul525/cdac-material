@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="e_tourModelStoreContainer" CdmEntityContainer="e_tourEntities">
+    <EntitySetMapping Name="Bills">
+      <EntityTypeMapping TypeName="e_tourModel.Bill">
+        <MappingFragment StoreEntitySet="Bill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SubCatID" ColumnName="SubCatID" />
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="NDays" ColumnName="NDays" />
+          <ScalarProperty Name="TAdultCost" ColumnName="TAdultCost" />
+          <ScalarProperty Name="TChildCost" ColumnName="TChildCost" />
+          <ScalarProperty Name="CatName" ColumnName="CatName" />
+          <ScalarProperty Name="FCost" ColumnName="FCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Costs">
+      <EntityTypeMapping TypeName="e_tourModel.Cost">
+        <MappingFragment StoreEntitySet="Cost">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+          <ScalarProperty Name="SubCatID" ColumnName="SubCatID" />
+          <ScalarProperty Name="AdultCost" ColumnName="AdultCost" />
+          <ScalarProperty Name="ChildCost" ColumnName="ChildCost" />
+          <ScalarProperty Name="CWB" ColumnName="CWB" />
+          <ScalarProperty Name="CatName" ColumnName="CatName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dates">
+      <EntityTypeMapping TypeName="e_tourModel.Date">
+        <MappingFragment StoreEntitySet="Dates">
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SubCatID" ColumnName="SubCatID" />
+          <ScalarProperty Name="CatName" ColumnName="CatName" />
+          <ScalarProperty Name="NDays" ColumnName="NDays" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Itenaries">
+      <EntityTypeMapping TypeName="e_tourModel.Itenary">
+        <MappingFragment StoreEntitySet="Itenary">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SubCatID" ColumnName="SubCatID" />
+          <ScalarProperty Name="Itn" ColumnName="Itn" />
+          <ScalarProperty Name="CatName" ColumnName="CatName" />
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registrations">
+      <EntityTypeMapping TypeName="e_tourModel.Registration">
+        <MappingFragment StoreEntitySet="Registration">
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tours">
+      <EntityTypeMapping TypeName="e_tourModel.Tour">
+        <MappingFragment StoreEntitySet="Tour">
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+          <ScalarProperty Name="SubCatID" ColumnName="SubCatID" />
+          <ScalarProperty Name="CatName" ColumnName="CatName" />
+          <ScalarProperty Name="ImgPath" ColumnName="ImgPath" />
+          <ScalarProperty Name="YN" ColumnName="YN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

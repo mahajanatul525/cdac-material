@@ -1,0 +1,7 @@
+Q1)create timer(stop watch)
+
+Q2)textbox and two button start and clear onclick of start button it should diplay number(1,2,3---) onclick of clear text box should get value 0
+
+Q3)image with next and previous button onclick of next button it should display
+next image
+

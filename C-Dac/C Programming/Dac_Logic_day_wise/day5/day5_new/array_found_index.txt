@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int a[5]={5,1,9,1,2},b[5];
+	int s,i,j;
+	printf("Enter a number to be searched: ");
+	scanf("%d",&s);
+		for(i=0,j=0;i<5;i++)
+	{	if(s==a[i])
+		{b[j]=i;j++;
+		}
+		}
+		printf("%d found %d times",s,j);
+			for(i=0;i<j;i++)
+			printf("\n%d found at %d index",s,b[i]);		
+			
+			
+		
+getche();
+}

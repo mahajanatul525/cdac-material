@@ -1,0 +1,102 @@
+In the HTML below, TextBox txtAge captures age of the person. If the user enter's any number that is not between 1 & 100 the validation fails. The minimum and maximum value for the age is specified by MinimumValue and MaximumValue properties. Since, age is an integer, the Type is specified as integer.
+<asp:TextBox ID="txtAge" runat="server"></asp:TextBox>
+
+<asp:RangeValidator ID="RangeValidator1" runat="server" 
+
+    ErrorMessage="Age must be between 1 & 100"
+
+    MinimumValue="1" MaximumValue="100"
+
+    ControlToValidate="txtAge" Type="Integer" >
+
+</asp:RangeValidator>
+
+
+
+Properties specific to Rangevalidator control:
+Type - This property, specifies the data type of the value to check. Data types supported include - Currency, Date, Double, Integer, String.
+MinimumValue - The minimum value allowed
+MaximumValue - The maximum value allowed
+
+Comple HTML of the aspx page used in the Demo: Rangevalidator only checks if the entered data is within the allowed range.
+
+ If you want to check for a required field, use RequiredFieldValidator.
+
+ For the age field, we are using both RequiredFieldValidator and RangeValidator. 
+
+Also notice that, in this example we are using the Display property. If the Display property is not set, or, if it is set to static, then the error message will be rendered, with style visibility:hidden. 
+
+Because of this, the error message will always occupy the space on the screen even if the validation passes. This pushes "Age is Required" error message to the right. To correct this we have set Display="Dynamic". 
+
+This renders the error message with style display:none. If a tag has this style, it will not occupy space when not visible.
+<table>
+    <tr>
+        <td>
+            <b>Age</b>
+        </td>
+        <td>
+            :<asp:TextBox ID="txtAge" runat="server" Width="150px">
+                </asp:TextBox>
+            <asp:RangeValidator ID="RangeValidatorAge" runat="server" 
+                ErrorMessage="Age must be between 1 & 100"
+                MinimumValue="1" MaximumValue="100"
+                ControlToValidate="txtAge" Type="Integer" 
+                ForeColor="Red" Display="Dynamic">
+            </asp:RangeValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidatorAge" 
+            runat="server" ErrorMessage="Age is required" 
+            ControlToValidate="txtAge" ForeColor="Red"
+            Display="Dynamic" >
+            </asp:RequiredFieldValidator>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Date Available</b>
+        </td>
+        <td>
+            :<asp:TextBox ID="txtDateAvailable" runat="server" Width="150px">
+            </asp:TextBox>
+            <asp:RangeValidator ID="RangeValidatorDateAvailable" runat="server" 
+                ErrorMessage="Date must be between 01/01/2012 & 31/12/2012"
+                MinimumValue="01/01/2012" MaximumValue="31/12/2012"
+                ControlToValidate="txtDateAvailable" Type="Date" 
+                ForeColor="Red">
+            </asp:RangeValidator>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <asp:Button ID="btnSave" runat="server" Text="Save" Width="100px" 
+                onclick="btnSave_Click" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <asp:Label ID="lblStatus" runat="server" Font-Bold="true">
+            </asp:Label>
+        </td>
+    </tr>
+</table>
+
+
+
+Code-Behind page code:
+protected void btnSave_Click(object sender, EventArgs e)
+{
+    if (Page.IsValid)
+    {
+        lblStatus.ForeColor = System.Drawing.Color.Green;
+        lblStatus.Text = "Data Saved successfully";
+    }
+    else
+    {
+        lblStatus.ForeColor = System.Drawing.Color.Red;
+        lblStatus.Text = "Validation Failed! Data not saved";
+    }
+}
+
+Display property is supported by all validation controls.
+None - Error message not rendered and displayed next to the control. Used to show the error message only in the ValidationSummary control
+Static - The error message is displayed next to the control if validation fails. Space is reserved on the page for the message even if validation succeeds. The span tag is rendered with style visibility:hidden
+Dynamic - The error message is displayed next to the control if validation fails. Space is not reserved on the page for the message if the validation succeeds. The span tag is rendered with style display:none. 

@@ -1,0 +1,23 @@
+class DelegateTest {   
+  static void Main() {  
+    StringOps so = new StringOps(); // create an instance of StringOps 
+ 
+    // Initialize a delegate. 
+    StrMod strOp = so.ReplaceSpaces; 
+    string str; 
+ 
+    // Call methods through delegates. 
+    str = strOp("This is a test."); 
+    Console.WriteLine("Resulting string: " + str); 
+    Console.WriteLine(); 
+      
+    strOp = so.RemoveSpaces; 
+    str = strOp("This is a test."); 
+    Console.WriteLine("Resulting string: " + str); 
+    Console.WriteLine(); 
+ 
+    strOp = so.Reverse; 
+    str = strOp("This is a test."); 
+    Console.WriteLine("Resulting string: " + str); 
+  } 
+}

@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication29
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+ 
+            int[] arr = { 10, 20, 14, 54, 68, 78, 95, 6, 5 };
+
+            int[] set = (from i in arr where i > 50 select i).ToArray<int>();
+
+            foreach(int i in set)
+            {
+                Console.WriteLine(i);
+            }
+        
+        
+        }
+    }
+}

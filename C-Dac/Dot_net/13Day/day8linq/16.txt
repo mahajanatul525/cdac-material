@@ -1,0 +1,14 @@
+the Concat() extension method returns a result set that is a direct concatenation of LINQ
+result sets. For example, the following method prints out the results “Yugo”, “Aztec”, “BMW”, “BMW”,
+“Saab”, and “Aztec”:
+static void DisplayConcat()
+{
+List<string> myCars = new List<String> { "Yugo", "Aztec", "BMW" };
+List<string> yourCars = new List<String> { "BMW", "Saab", "Aztec" };
+var carConcat = (from c in myCars select c)
+.Concat(from c2 in yourCars select c2);
+// Prints:
+// Yugo Aztec BMW BMW Saab Aztec.
+foreach (string s in carConcat)
+Console.WriteLine(s);
+}

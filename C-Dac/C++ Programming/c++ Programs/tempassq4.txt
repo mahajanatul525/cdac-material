@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+class A
+{
+public:A()
+	   {}
+	template<class type>
+	void display(type a)
+	{
+		cout<<endl<<typeid(a).name()<<"\t"<<a<<endl;
+	}
+};
+void main()
+{
+	A a;
+	a.display(10);
+	a.display('A');
+
+	getchar();
+}

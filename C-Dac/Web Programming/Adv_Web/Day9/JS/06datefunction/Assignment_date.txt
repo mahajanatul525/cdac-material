@@ -1,0 +1,5 @@
+Q1-accept date from the user with - eg25-12-2009
+check wehter it is valid date
+Q2 Accept date of birth from user and find out his age.
+Q3 accept date of investment and period of investment(eg.3yr) print the date of maturity.
+Q4 accept date of birth if person has to retire at age of 58 print the date of retirement

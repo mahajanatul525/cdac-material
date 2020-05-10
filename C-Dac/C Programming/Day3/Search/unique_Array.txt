@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+int i,j,l,n;
+n=6;
+int arr[6]={5,4,4,4,2,6};
+for(i=0;i<n-1;j++)
+{  for(j=i+1;j<n;j++)
+   { if(arr[i]==arr[j])
+        {  for(l=j;l<n-1;l++)
+             arr[l]=arr[l+1];
+              n--;
+              j--;
+           }
+     }
+  }
+  for(i=0;i<n;i++)
+  printf("%d",arr[i]);
+
+  }
+
+
+
+
+}

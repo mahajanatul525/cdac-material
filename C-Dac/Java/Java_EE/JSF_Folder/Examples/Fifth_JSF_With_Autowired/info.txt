@@ -1,0 +1,3 @@
+we need to remove @ManagedBean, so that JSF container will not interfere,
+
+we have to use @Autowired in order to get IOC container to work.

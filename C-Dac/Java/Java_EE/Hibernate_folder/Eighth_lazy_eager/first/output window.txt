@@ -1,0 +1,19 @@
+Hibernate: insert into sp (name) values (?)
+
+Hibernate: insert into sp_properties (sp_id, mapkey, element) values (?, ?, ?)
+
+Hibernate: insert into sp_properties (sp_id, mapkey, element) values (?, ?, ?)
+
+Hibernate: select supportpro0_.id as id0_, supportpro0_.name as name0_ from sp supportpro0_
+
+After getProperties	
+p1 is not null
+
+p1 is	org.hibernate.collection.PersistentMap
+
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: mypack.SupportProperty.properties, no session or session was closed
+	at org.hibernate.collection.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:380)
+	at org.hibernate.collection.AbstractPersistentCollection.throwLazyInitializationExceptionIfNotConnected(AbstractPersistentCollection.java:372)
+	at org.hibernate.collection.AbstractPersistentCollection.readElementByIndex(AbstractPersistentCollection.java:173)
+	at org.hibernate.collection.PersistentMap.get(PersistentMap.java:169)
+	at mypack.SupportPropertyTest.main(SupportPropertyTest.java:48)

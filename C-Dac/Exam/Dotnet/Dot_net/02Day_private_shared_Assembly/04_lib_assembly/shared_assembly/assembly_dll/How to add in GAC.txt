@@ -1,0 +1,9 @@
+start
+program
+visualstudio 2012
+visualstudio tool
+right click on cmd run as administrator
+
+and type
+
+gacutil -i path of dll file

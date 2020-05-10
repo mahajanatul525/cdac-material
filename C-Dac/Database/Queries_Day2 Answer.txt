@@ -1,0 +1,37 @@
+Queries:
+
+1. Display the name of all employees whose salary is between 500 and 1300???
+ans->SELECT ename,salaray FROM emp WHERE salaray>100 and salaray<30000;
+
+2. Display the name of all employees who are in HR dept??
+ans->select * from(SELECT ename,deptname FROM emp emp join dept where emp.deptid=dept.deptid) t where deptname='hr';
+
+3. Display the name of all the dept and count of all the employees in that dept??
+->select dept,count(ename) counts from emp group by dept;
+
+select dept,count(ename) counts from emp where dept='clerk';
+                                                   ....................................................
+(by join )
+select deptname,count(ename) from emp join dept on emp.deptid=dept.deptid group by deptname
+
+4. Display the name , deptname and  salary of the employee whose salary is highest??
+->select ename,dept,salary from emp order by salary desc limit 1; 
+
+5. Display the name , deptname and  salary of the employee whose salary is lowest.
+->select ename,dept,salary from emp order by salary  limit 1;
+
+6. Display the name , deptname of employee whose salary is second highest.
+->select * from
+(select ename,dept,salary from emp order by salary desc  limit 2)t order by salary limit 1;
+
+7. display the name, deptname of top five earning employees.
+->select ename,dept,salary from emp order by salary desc  limit 5;
+
+8. Display the deptname, name of top 5 earning employees from each dept.
+
+9. Display the avg salary of each dept.
+->select dept,avg(salary) averagesal from emp group by dept;
+
+10.Display the min and max salary of each dept.
+->
+select dept,min(salary),max(salary) from emp group by dept ;

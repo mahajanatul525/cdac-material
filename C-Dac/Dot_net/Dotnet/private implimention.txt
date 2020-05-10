@@ -1,0 +1,55 @@
+
+
+using System;
+
+namespace atul
+{
+
+    interface Imyif_A
+    {
+        int sqr(int a);
+    }
+
+    interface Imyif_B
+    {
+        int sqr(int b);
+    }
+    class Myclass : Imyif_A, Imyif_B
+    {
+        int Imyif_A.sqr(int x)
+        {
+            return x * x;
+        }
+        int Imyif_B.sqr(int y)
+        {
+            return y * y;
+        }
+
+        public int fun1(int x)
+        {
+            Imyif_A f;
+            f=this;
+            return f.sqr(x);
+        }
+         public int fun2(int x)
+        {
+            Imyif_B f;
+            f=this;
+            return f.sqr(x);
+        }
+    }
+    class program
+    {
+        public static void Main()
+        {
+            Myclass m = new Myclass();
+            int x = m.fun1(3);
+            Console.WriteLine(x);
+            int y = m.fun2(5);
+            Console.WriteLine(y);
+        }
+    }
+        
+        
+}
+

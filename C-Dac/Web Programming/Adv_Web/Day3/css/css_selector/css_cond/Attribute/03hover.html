@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Hover and Focus Pseudo-Class Example</title>
+
+<style type="text/css" media="screen">
+
+.annoy:hover {border-style: dashed; background-color: yellow;}
+
+
+input[type="text"]:enabled {background-color: blue;}
+
+input[type="text"]:disabled {background-color: red;}
+
+
+</style>
+</head>
+
+<body>
+<p class="annoy">Roll over me.</p>
+
+
+<p>Now <span class="annoy">roll over</span> that bit of text.</p>
+
+<form action="#">
+<div>
+<input type="text" size="40" value="Hover and then click into this field"></div>
+
+<div>
+<input type="text" size="40" value="Hover and then click into this field" disabled></div>
+
+</form>
+</body>
+</html>

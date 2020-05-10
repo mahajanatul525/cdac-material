@@ -1,0 +1,15 @@
+<script>
+var add = (function () {
+    var counter = 5;
+    return function () 
+		   {
+            return counter += 1;
+		   }
+		   
+		   })();
+
+document.write(add()+" "+counter);
+document.write(add())
+document.write(add())
+
+</script>

@@ -1,0 +1,41 @@
+using System;
+using System.Collections;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+//problem with return multicast delegate
+namespace ConsoleApplication14
+{
+    delegate int addmul(ref int x,ref int y);
+
+    class multidel
+    {
+         public int add(ref int a, ref int b)
+        {
+            //Console.WriteLine("addtion is {0}", a + b);
+            return a + b;
+        }
+        public int mul(ref int a, ref int b)
+        {
+           // Console.WriteLine("multipation is {0}", a * b);
+            return a * b;
+
+        }
+            
+    }
+
+    class enrty
+    {
+        public static void Main()
+        {
+            multidel m = new multidel();
+            addmul a = m.add;
+            a += m.mul;
+            int x = 10;
+            int y = 20;
+
+           int ans= a(ref x, ref y);
+           Console.WriteLine(ans);
+        }
+    }
+}

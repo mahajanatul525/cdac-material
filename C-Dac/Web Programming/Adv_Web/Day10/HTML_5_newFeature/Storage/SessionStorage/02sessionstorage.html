@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><head><script>
+function clickCounter()
+{
+if(typeof(Storage)!="undefined")
+  {
+
+    sessionStorage.myname="vita"
+   
+  document.getElementById("result").innerHTML="Your  name" + sessionStorage.myname;
+  }
+else
+  {
+  document.getElementById("result").innerHTML="Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+</head>
+<body>
+Check what value is set in key myname of sessionStorage
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+
+</body>
+</html>
+

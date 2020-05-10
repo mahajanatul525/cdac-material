@@ -1,0 +1,15 @@
+D:\asp_net_trining_examples\10radiobutton\bin\10radiobutton.dll
+D:\asp_net_trining_examples\10radiobutton\bin\10radiobutton.pdb
+D:\asp_net_trining_examples\10radiobutton\obj\Debug\ResolveAssemblyReference.cache
+D:\asp_net_trining_examples\10radiobutton\obj\Debug\10radiobutton.dll
+D:\asp_net_trining_examples\10radiobutton\obj\Debug\10radiobutton.pdb
+D:\dot_net\Day_wise\day13asp\10radioButton\10radiobutton\bin\10radiobutton.dll
+D:\dot_net\Day_wise\day13asp\10radioButton\10radiobutton\bin\10radiobutton.pdb
+D:\dot_net\Day_wise\day13asp\10radioButton\10radiobutton\obj\Debug\10radiobutton.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day13asp\10radioButton\10radiobutton\obj\Debug\10radiobutton.dll
+D:\dot_net\Day_wise\day13asp\10radioButton\10radiobutton\obj\Debug\10radiobutton.pdb
+C:\Users\practice\Desktop\Dot_net\ASP\10radioButton\10radiobutton\bin\10radiobutton.dll
+C:\Users\practice\Desktop\Dot_net\ASP\10radioButton\10radiobutton\bin\10radiobutton.pdb
+C:\Users\practice\Desktop\Dot_net\ASP\10radioButton\10radiobutton\obj\Debug\10radiobutton.csprojResolveAssemblyReference.cache
+C:\Users\practice\Desktop\Dot_net\ASP\10radioButton\10radiobutton\obj\Debug\10radiobutton.dll
+C:\Users\practice\Desktop\Dot_net\ASP\10radioButton\10radiobutton\obj\Debug\10radiobutton.pdb

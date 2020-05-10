@@ -1,0 +1,63 @@
+4)select sname,amt,odate from
+ (select  sname,amt,odate from salespeople s 
+ join orders o on s.snum=o.snum 
+ order by o.amt desc)t group by odate;
+
+5)select * from orders o order by CNUM desc;
+
+6)select s.sname from salespeople s join orders o
+ on o.snum=s.snum where o.odate=current_date();
+
+7)select cname,s.sname from customers c join salespeople s on c.snum=s.snum 
+where c.snum=s.snum;
+
+8)select s.sname,s.snum,count(c.snum) cust_count
+from customers c join salespeople s on c.snum=s.snum group by s.sname
+having count(c.SNUM)>1;
+
+
+9)select s.sname,count(o.amt) cust from orders o join salespeople s on s.snum=o.snum group by s.sname 
+order by cust desc;
+
+11)select c.cname,s.sname,s.city from customers c join salespeople s on c.city=s.city;
+
+12)select s.sname,o.amt from orders o join salespeople s on s.snum=o.snum order by amt desc limit 1;
+
+13)
+select * from customers where city='san jose'and rating>200;
+
+14)select sname,comm from salespeople where city='london';
+
+15)
+select * from orders o join salespeople s on o.snum=s.snum
+where sname='motika';
+
+17)select sum(amt) from orders group by odate having sum(amt)>(2000+max(amt))
+
+18)select * from orders where amt > (select min(amt) from orders where odate='10/06/96');
+
+41)select onum ,amt from orders o join customers s on o.snum=s.snum where o.amt<(select min(amt)  from orders o1
+join customers s1 on o1.snum=s1.snum  where city='san jose') group by amt;
+
+42*)select wi.snum from orders wi join customers we on wi.snum=we.snum
+ where amt>(select avg(amt) from orders t1 join customers t2 on t1.snum=t2.snum) group by wi.snum;
+
+43)select max(rating)rating,city from customers group by city;
+
+51)select  o.onum,c.cname from orders o join customers c on o.cnum=c.cnum;
+
+53)select cname from customers c join salespeople o on c.snum=o.snum 
+where rating >=(select rating from customers t join salespeople e on t.snum=e.snum where e.snum=1002 
+order by rating desc limit 1);
+
+select cname from customers c join salespeople o on c.snum=o.snum 
+where rating >=any(select rating from customers t join salespeople e on t.snum=e.snum 
+where e.snum=1002 
+order by rating );
+
+61)select * from customers join salespeople where  rating<200 order by CNAME asc;
+
+62)select sname ,comm from salespeople;
+
+63)
+select c.cname,c.city from customers c join customers s on s.rating=c.rating where s.cname='hoffman' and s.cname!=c.cname;

@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int sqr(int k)
+{
+	return k*k;
+}
+int main()
+{
+	int (*ptr)(int); // ptr is pointer to a function accepting int and returning int
+	ptr=sqr;
+	int num;
+	cout<<"Enter number"<<endl;
+	cin>>num;
+	cout<<ptr(num)<<endl;
+	return 0;
+}
+
+
+
+
+

@@ -1,0 +1,32 @@
+
+
+  
+
+What is AJAX
+AJAX stands for Asynchronous JavaScript And XML. AJAX enable web applications to retrieve data from the server asynchronously. Web application using AJAX enables partial page updates, ie. only the related section of the page is updated, without reloading the entire page.
+
+Advantages of AJAX
+1. AJAX applications are non blocking. As AJAX requests are asynchronous, the user doesn't have to wait for the request processing to complete. Even while the request is still being processed by the server, the application remains responsive and the user can interact with the application. When the request processing is complete, the user interface is automatically updated. This is not the case with, synchronous requests. The user interface is blocked and the user cannot do anything else until the request has completed processing.
+
+2. Better performance and reduced network traffic. AJAX enables an application to send and receive only the data that is required. As a result, there is reduced traffic between the client and the server and better peofrmance.
+
+3. No screen flicker. An AJAX response consists of only the data that is relevant to the request. As a result, only a portion of the page is updated avoiding full page refresh and screen flickers.
+
+Disadvantages of AJAX:
+1. AJAX requests cannot be bookmarked easily
+2. AJAX relies on JavaScript. If JavaScript is disabled, AJAX application won't work.
+3. Harder to debug
+4. Search Engine like Google, Bing, Yahoo etc cannot index AJAX pages.
+
+Applications using AJAX
+1. Many web sites like Google, bing, youtube, yahoo use AJAX to implement AutoComplete feature.
+2. Gmail use AJAX to implement AutoSave feature
+3. Gmail use AJAX to implement RemoteValidation i.e to validate if a user name is already in use, when creating a gmail account. We discussed remote validation in Parts 89, 90 & 91.
+4. Facebook use AJAX, to load data as you keep scrolling down.
+
+AJAX is generally used to implement features like 
+1. AutoComplete
+2. AutoSave
+3. Remote validation etc. 
+
+ 

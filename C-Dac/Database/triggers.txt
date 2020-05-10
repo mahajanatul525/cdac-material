@@ -1,0 +1,44 @@
+create table emp_audit
+(user varchar(100),
+ dt_upt timestamp,
+old_eid int,
+new_eid int,
+old_salary int,
+new_salary int);
+drop trigger trg_emp_audit$$
+create trigger trg_emp_audit
+after update  on emp
+for each row
+begin
+insert into emp_audit
+(user,dt_upt,old_eid,new_eid,old_salary,new_salary)
+values(current_user(),current_timestamp(),
+old.eid,new.eid,old.salary,new.salary);
+end
+$$
+
+
+
+create trigger trg_emp_audit_ins
+after insert on emp
+for each row
+begin
+insert into emp_audit
+(user,dt_upt,new_eid,new_salary)
+values(current_user(),current_timestamp(),
+new.eid,new.salary);
+end
+$$
+
+
+
+create trigger trg_emp_audit_del
+before delete on emp
+for each row
+begin
+insert into emp_audit
+(user,dt_upt,old_eid,old_salary)
+values(current_user(),current_timestamp(),
+old.eid,old.salary);
+end
+$$

@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class myclass
+    {
+        string Name;
+        double salary;
+        private myclass(string nm,double sal)
+        {
+            Name = nm;
+            salary = sal;
+              
+        }
+    
+    public static myclass getobj(string nm,double sal)
+    {  myclass obj = new myclass(nm, sal);
+        return obj;
+        }
+    public override string ToString()
+    {
+        return Name + " " + salary;
+    
+      }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            myclass ob=myclass.getobj("DAC", 80000);
+
+            Console.WriteLine(ob);
+        }
+    }
+}

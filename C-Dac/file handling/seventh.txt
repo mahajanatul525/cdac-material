@@ -1,0 +1,84 @@
+package vardha;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+/*7) modify above program so that "Car" members also will be persisted when u serialize "Nano". */
+
+ class Car implements Serializable
+{
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+String name;
+ int number;
+ Car()
+ {
+ }
+ 
+ Car(String name,int number)
+ {this.name=name;
+ this.number=number;
+ }
+
+}
+ class Nano extends Car
+{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+String model;
+String class1;
+int modelNo;
+Nano(String model,String class1,int modelNo)
+{
+ this.model=model;
+  this.class1=class1;
+  this.modelNo=modelNo;
+}
+}
+public class Serial
+{
+public static void main(String arg[])
+{
+Nano s=new Nano("super1","ae",889);
+Car c=new Car("Audi",556);
+try(FileOutputStream fos=new FileOutputStream("d://sourabh.txt"))
+{
+try(ObjectOutputStream oos=new ObjectOutputStream(fos))
+{
+oos.writeObject(s);
+oos.writeObject(c);
+}
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+try(FileInputStream fis=new FileInputStream("d://sourabh.txt"))
+		{
+			try(ObjectInputStream ois=new ObjectInputStream(fis))
+			{
+				Nano e=(Nano)ois.readObject();
+				Car e1=(Car)ois.readObject();
+				System.out.println(e.modelNo+ "\t"+e.class1+"\t"+e.model);
+				System.out.println(e1.name+ "\t"+e1.number);
+				
+				
+			}
+			
+			
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+	}
+	
+
+}
+

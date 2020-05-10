@@ -1,0 +1,43 @@
+<html>
+<body>
+<script type="text/javascript">
+function record(nm,mks1,mks2)
+{
+record.center="vita";
+ record.sid=++record.sid||1;
+ 
+this.name=nm;
+this.marks1=mks1;
+this.marks2=mks2
+this.id=record.sid
+this.per=function()
+  {  var r=(this.marks1+this.marks2)*100/200; return r; };
+}
+
+record.prototype.toString=function()
+{  return this.id +" " +this.name + " "+this.marks1+ " "+this.marks2;
+}
+
+var name,marks1,marks2;
+
+m1=new record("raj",80,60);
+m2=new record("geeta",90,70);
+m3=new record("mona",65,45);
+m4=new record("anita",30,90);
+
+document.write(m1 + "percent % "+ m1.per());
+document.write("<hr/>");
+document.write(m2+ "percent % "+ m2.per());
+document.write("<hr/>");
+document.write(m3+ "percent %"+m3.per());
+document.write("<hr/>");
+document.write(m4 +"percent %"+m4.per());
+m2=m1; //shellow copy
+m2.name="Ravina";
+document.write(m1 + "  "+ m2);
+document.write(m1  instanceof record);
+</script>
+
+</body>
+</html>
+

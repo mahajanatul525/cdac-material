@@ -1,0 +1,15 @@
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 10\ActionAndFuncDelegates\bin\Debug\ActionAndFuncDelegates.exe.config
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 10\ActionAndFuncDelegates\obj\Debug\ResolveAssemblyReference.cache
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 10\ActionAndFuncDelegates\bin\Debug\ActionAndFuncDelegates.exe
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 10\ActionAndFuncDelegates\bin\Debug\ActionAndFuncDelegates.pdb
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 10\ActionAndFuncDelegates\obj\Debug\ActionAndFuncDelegates.exe
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 10\ActionAndFuncDelegates\obj\Debug\ActionAndFuncDelegates.pdb
+D:\dot_net\Day_wise\day6\03generic_deligates\03ActionAndFuncDelegates\bin\Debug\ActionAndFuncDelegates.exe.config
+D:\dot_net\Day_wise\day6\03generic_deligates\03ActionAndFuncDelegates\obj\Debug\ActionAndFuncDelegates.exe
+D:\dot_net\Day_wise\day6\03generic_deligates\03ActionAndFuncDelegates\obj\Debug\ActionAndFuncDelegates.pdb
+D:\dot_net\Day_wise\day6\03generic_deligates\03ActionAndFuncDelegates\bin\Debug\ActionAndFuncDelegates.exe
+D:\dot_net\Day_wise\day6\03generic_deligates\03ActionAndFuncDelegates\bin\Debug\ActionAndFuncDelegates.pdb
+D:\dot_net\Day_wise\day6\03generic_deligates\03ActionAndFuncDelegates\obj\Debug\ActionAndFuncDelegates.csprojResolveAssemblyReference.cache
+C:\Users\practice\Desktop\Dot_net\day6\03generic_deligates\03ActionAndFuncDelegates\bin\Debug\ActionAndFuncDelegates.exe.config
+C:\Users\practice\Desktop\Dot_net\day6\03generic_deligates\03ActionAndFuncDelegates\obj\Debug\ActionAndFuncDelegates.exe
+C:\Users\practice\Desktop\Dot_net\day6\03generic_deligates\03ActionAndFuncDelegates\obj\Debug\ActionAndFuncDelegates.pdb

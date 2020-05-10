@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<conio.h>
+int special(int);
+int fact(int);
+void main()
+{
+	int no;
+	printf("ENter  a no.");
+	scanf("%d",&no);
+	if(special(no))
+		printf("no. is special");
+	else
+		printf("Not special");
+
+getch();
+}
+int special(int n)
+{
+int s,sum=0,r,f;
+s=n;
+while(n!=0)
+{
+r=n%10;
+f=fact(r);
+sum=sum+f;
+n=n/10;
+}
+if(sum==s)
+	return 1;
+else 
+	return 0;
+}
+int fact(int r)
+{
+int f=1,i;
+for(i=2;i<=r;i++)
+	f=f*i;
+	return f; 
+}

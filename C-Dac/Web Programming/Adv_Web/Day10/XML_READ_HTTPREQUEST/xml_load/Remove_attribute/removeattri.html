@@ -1,0 +1,25 @@
+<html><head>
+<script type="text/javascript" src="loadxmldomsimple.js"> 
+</script></head><body>
+<script type="text/javascript">
+xmlDoc=loadXMLDoc("book.xml");
+
+x=xmlDoc.getElementsByTagName('book');
+
+document.write(x[0].getAttribute('category'));
+
+document.write("<br />");
+
+x[0].setAttribute("category","food"); 
+document.write("<br />");
+
+document.write(x[0].getAttribute('category'));
+
+x[0].removeAttribute('category');
+document.write("<br />");
+document.write(x[0].getAttribute('category'));
+
+</script>
+</body>
+</html>
+

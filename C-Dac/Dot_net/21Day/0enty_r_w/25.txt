@@ -1,0 +1,66 @@
+ Insert update delete in mvc using entity framework 
+
+
+
+In this  we will discuss, selecting, inserting, updating and deleting data in mvc using entity framework. 
+
+
+
+Step 1: Create a new asp.net mvc 4 web application.
+
+Step 2: Right click on the "Models" folder and add "ADO.NET Entity Data Model". Set Name = EmployeeDataModel.edmx.  
+ 
+right click add entity
+Employee
+add scaler property
+
+right click add entity
+Department
+add scaler property
+
+
+Give association
+
+On the subsequent screen, select "Empty Model" option and click "Next".
+
+On "Choose your data connection screen", click on "New Connection" button.
+
+Specify the sql server name. In my case, I have sql server installed on my local machine. So I have set "Server Name=(local)". From "Select or enter a database name" dropdownlist, select the Database name and click "OK".
+ 
+
+Click "Next".
+
+Observe TT file on edmx gile rightclick "update model from database"
+
+Build the solution.
+
+Step 3: Right click on the "Controllers" folder and select Add - Controller. Set 
+Name = EmployeeController
+Template = MVC controller with read/write actions and views, using Entity Framework
+Model class = Employee(MVCDemo.Models)
+Data Context Class = EmployeeContext(MVCDemo.Models)
+Views = Razor
+
+Finally click "Add".
+
+At this point you should have the following files automatically added.
+1. EmployeeController.cs file in "Controllers" folder
+2. Index, Create, Edit, Detail and Delete views in "Employee" folder.
+
+Observe
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+At this point, if you run the application by pressing CTRL + F5, you will get an error stating - The resource cannot be found. This is because, by default, the application goes to "HOME" controller and "Index" action.
+
+To fix this, 
+1. Open "RouteConfig.cs" file from "App_Start" folder
+2. Set Controller = "Employee"
+
+Run the application again. Notice that, all the employees are listed on the index view. We can also create a new employee, edit an employee, view their full details and delete an employee as well. However, there are few issues, with each of the views, . 
+
+ 
+ 
+
+

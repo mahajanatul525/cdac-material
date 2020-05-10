@@ -1,0 +1,35 @@
+
+				.page
+				{
+					min-width:1300px;
+					margin:0 60 auto 60;
+					border:2px solid #B22222;
+					background-color: #FFC0CB
+				}
+				.banner
+				{
+					background-image:url("jay.png");
+					background-color:#FFEFFD5;
+					width:1339px;
+					height:150px;
+					border:2px solid #FFC0CB
+				}
+				.container
+				{
+					
+					width:1080px;
+					margin:0 0 10px auto;
+					min-height:400px;
+					border:1px solid #000000;
+					
+				}
+				.nav
+				{
+					float:left;
+				
+					width:250px;
+					margin:0 auto 10px auto;
+					min-height:400px;
+					border:1px solid #000000;
+				}
+				

@@ -1,0 +1,68 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+class Employee
+{
+private: char *ename;
+		 char *empid;
+		 char *desig;
+public:
+	  Employee()
+	  {
+	  }
+	  Employee(char *empid,char *ename,char *desig)
+	  {
+		  this->empid=new char[strlen(empid)+1];
+		 strcpy(this->empid,empid);
+		  
+		 this->ename=new char[strlen(ename)+1];
+		 strcpy(this->ename,ename);
+		 
+		 this->desig=new char[strlen(desig)+1];
+		 strcpy(this->desig,desig);
+	  }
+         char* geteid()
+	     {
+		   return empid;
+	     }
+		 char* getename()
+		 {
+			 return ename;
+		 }
+		 char* getedesig()
+		 {
+			 return desig;
+		 }
+		 Employee(Employee &ref)
+		 {
+			 this->empid=new char[strlen(ref.empid)+1];
+			 strcpy(this->empid,ref.empid);
+
+			 this->ename=new char[strlen(ref.ename)+1];
+			 strcpy(this->ename,ref.ename);
+
+			 this->desig=new char[strlen(ref.desig)+1];
+			 strcpy(this->desig,ref.desig);
+		 }
+		 ~Employee()
+		 {
+			 delete []ename;
+			 delete []empid;
+			 delete []desig;
+		 }
+
+};
+void main()
+{
+	Employee e1("E1","Pratik","Developer");
+	cout<<e1.geteid()<<endl;
+	cout<<e1.getename()<<endl;
+	cout<<e1.getedesig()<<endl;
+	Employee e2=e1;
+	cout<<e2.geteid()<<endl;
+	cout<<e2.getename()<<endl;
+	cout<<e2.getedesig()<<endl;
+	//delete e1;
+	getchar();
+}

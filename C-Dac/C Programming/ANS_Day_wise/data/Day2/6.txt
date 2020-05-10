@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<conio.h>
+
+int rev(int );
+void main()
+{
+	int a;
+         printf("ENter  a no");
+		scanf("%d",&a);
+
+	if(rev(a))
+	printf("no is palindrome");
+	else
+		printf("not palindrome");
+	getch();
+	
+}
+
+int rev(int a)
+{  
+	int s,r,rev1=0;
+	s=a;
+	while(a!=0)
+	{
+
+	r=a%10;
+	rev1=rev1*10+r;
+	a=a/10;
+	}
+	if(s==rev1)
+		return 1;
+	else
+		return 0;
+}

@@ -1,0 +1,16 @@
+mysql> select *  from sp;
++----+------+
+| id | name |
++----+------+
+|  1 | anil |
++----+------+
+1 row in set (0.00 sec)
+
+mysql> select * from sp_properties;
++-------+---------+--------+
+| sp_id | element | mapkey |
++-------+---------+--------+
+|     1 | A       | grade  |
+|     1 | 50      | score  |
++-------+---------+--------+
+2 rows in set (0.00 sec)

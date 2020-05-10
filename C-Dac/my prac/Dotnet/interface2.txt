@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication10
+{
+    interface Imsg
+    {
+        void sendmsg();
+    }
+    class mobile : Imsg
+    {
+        public void sendmsg()
+        {
+            Console.WriteLine("msg thr mobile");
+        }
+    }
+    class postcard : Imsg
+    {
+       public void sendmsg()
+        {
+            Console.WriteLine("msg thr post");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Imsg[] i = new Imsg[2];
+            i[0]=new mobile();
+            i[1] = new postcard();
+            i[0].sendmsg();
+            i[1].sendmsg();
+          
+         }
+    }
+}

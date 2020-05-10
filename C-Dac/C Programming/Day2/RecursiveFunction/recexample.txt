@@ -1,0 +1,55 @@
+int Num(int no)
+      { return ( no/2= =0) ?1 : Num(no/2)*10 + no%2;
+       }
+
+       If we call Num(11) ; what will it return?
+
+
+1) 11	 2) 101	 	3) 1011		4) 1110
+
+no=11
+
+int Num(int no)
+{
+if(no/2==0)
+return 1;
+
+else
+
+return  Num(no/2)*10+no%2;
+
+}
+
+
+
+
+
+
+
+
+int main()
+{
+int bin[10];
+int c=0
+int no=4;
+
+ while(no!=0)
+ { r=no%2;
+  printf("%d" ,r); 0 0 1
+ 
+  bin[c++]=r;
+
+   no=no/2;
+ }
+
+for(i=c-1;i>=0;i--)
+printf("%d",bin[i]);
+
+}
+
+
+
+
+
+
+

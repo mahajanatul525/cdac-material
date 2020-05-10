@@ -1,0 +1,67 @@
+Foreground Threads and Background Threads
+
+Now that you have seen how to programmatically create new threads of execution using the
+System.Threading namespace, let’s formalize the distinction between foreground threads and
+background threads.
+• Foreground threads have the ability to prevent the current application from
+terminating. The CLR will not shut down an application (which is to say, unload
+the hosting AppDomain) until all foreground threads have ended.
+
+• Background threads (sometimes called daemon threads) are viewed by the CLR as
+expendable paths of execution that can be ignored at any point in time (even if
+they are currently laboring over some unit of work). Thus, if all foreground threads
+have terminated, any and all background threads are automatically killed when
+the application domain unloads.
+
+It is important to note that foreground and background threads are not synonymous with primary
+and worker threads. By default, every thread you create via the Thread.Start() method is automatically
+a foreground thread. 
+
+Again, this means that the AppDomain will not unload until all threads of execution
+have completed their units of work. In most cases, this is exactly the behavior you require.
+For the sake of argument, however, assume that you want to invoke Printer.PrintNumbers() on a
+secondary thread that should behave as a background thread. Again, this means that the method
+pointed to by the Thread type (via the ThreadStart or ParameterizedThreadStart delegate) should be able
+to halt safely as soon as all foreground threads are done with their work. Configuring such a thread is as
+simple as setting the             IsBackground property to true,
+
+
+
+
+
+
+public class Printer
+{
+public void PrintNumbers()
+{
+...
+for (int i = 0; i < 10; i++)
+{
+// Put thread to sleep for a random amount of time.
+Random r = new Random();
+Thread.Sleep(1000 * r.Next(5));
+Console.Write("{0}, ", i);
+}
+Console.WriteLine();
+}
+}
+
+
+
+
+static void Main(string[] args)
+{
+Console.WriteLine("***** Background Threads *****\n");
+Printer p = new Printer();
+Thread bgroundThread =new Thread(new ThreadStart(p.PrintNumbers));
+// This is now a background thread.
+bgroundThread.IsBackground = true;
+bgroundThread.Start();
+}
+
+
+
+
+Notice that this Main() method is not making a call to Console.ReadLine() to force the console to
+remain visible until you press the Enter key. Thus, when you run the application, it will shut down
+immediately because the Thread object has been configured as a background thread.

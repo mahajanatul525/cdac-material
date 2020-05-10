@@ -1,0 +1,83 @@
+@import url(http://fonts.googleapis.com/css?family=Tenor+Sans);
+html {
+  background-color: rgb(252, 243, 220);
+  font-family: "Tenor Sans", sans-serif;
+}
+
+.container {
+  width: 500px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.login {
+  margin-top: 50px;
+  width: 450px;
+}
+
+.login-heading {
+  font: 1.8em/48px "Tenor Sans", sans-serif;
+  color: #0a0101;
+}
+
+.input-txt {
+  width: 100%;
+  padding: 20px 10px;
+  background: rgb(252, 243, 220);
+  border: none;
+  font-size: 1em;
+  color: white;
+  border-bottom: 1px rgb(252, 243, 220);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: background-color rgb(252, 243, 220) ease-in-out;
+  -o-transition: background-color rgb(252, 243, 220) ease-in-out;
+  -webkit-transition: background-color rgb(252, 243, 220) ease-in-out;
+  transition: background-color rgb(252, 243, 220) ease-in-out;
+}
+.input-txt:-moz-placeholder {
+  color: #0a0101;
+}
+.input-txt:-ms-input-placeholder {
+  color: #0a0101;
+}
+.input-txt::-webkit-input-placeholder {
+  color: #030608;
+}
+.input-txt:focus {
+  background-color: rgb(252, 243, 220);
+}
+
+.login-footer {
+  margin: 10px 0;
+  overlow: hidden;
+  float: left;
+  width: 100%;
+}
+
+.btn {
+  padding: 15px 30px;
+  border: none;
+  background: rgb(252, 243, 220);
+  color: #0a0101;
+}
+
+.btn--right {
+  float: right;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.icon--min {
+  font-size: .9em;
+}
+
+.lnk {
+  font-size: .8em;
+  line-height: 3em;
+  color: #0a0101;
+  text-decoration: none;
+}

@@ -1,0 +1,13 @@
+Net Framework Class Library (FCL)
+
+The .Net Framework class library (FCL) provides the core functionality of .Net Framework architecture . The .Net Framework Class Library (FCL) includes a huge collection of reusable classes ,
+ interfaces, and 
+value types that expedite and optimize the development process and provide access to system functionality.
+
+The .Net Framework class library (FCL) organized in a hierarchical tree structure and it is divided into Namespaces.
+
+ Namespaces is a logical grouping of types for the purpose of identification. Framework class library (FCL) provides the consistent base types that are used across all .NET enabled languages.
+
+ The Classes are accessed by namespaces, which reside within Assemblies. The System Namespace is the root for types in the .NET Framework. 
+
+The .Net Framework class library (FCL) classes are managed classes that provide access to System Services . The .Net Framework class library (FCL) classes are object oriented and easy to use in program developments. Moreover, third-party components can integrate with the classes in the .NET Framework.

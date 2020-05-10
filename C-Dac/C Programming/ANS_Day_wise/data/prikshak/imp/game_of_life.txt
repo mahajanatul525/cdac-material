@@ -1,0 +1,122 @@
+
+
+
+
+#include<stdio.h>
+#include<stdlib.h>
+ 
+int main() {
+
+    int R,C,i,j,k,l,m, NoofGenerations,NoofAliveCells = 0;
+
+    scanf("%d",&R);
+    scanf("%d",&C);
+    
+    char ch[R][C+C];
+    char* str = (char *)malloc(sizeof(char) * 30);
+    
+    for(i = 0; i < R;i++) {
+    scanf("%s",str);
+        for(j = 0; j < C; j++) {
+        ch[i][j] = str[j];
+
+          }
+         
+    }
+    scanf("%d",&NoofGenerations);
+   
+    for(i = 0; i < R;i++) {
+                
+                for(j = 0;j < C;j++) {
+                
+                ch[i][j+C] = '#';
+                
+                
+                }
+            }
+
+    for(i = 0;i <= NoofGenerations;i++) {
+            if(i > 0) {
+            
+            for(l = 0; l < R;l++) {
+                
+                for(m = 0;m < C;m++) {
+                ch[l][m] = ch[l][m+C];
+                ch[l][m+C] = '#';
+                
+                }
+            }
+            
+         }
+            
+        for(j = 0;j < R; j++) {
+        
+            for(k = 0;k < C;k++) {
+            
+                if(ch[j][k] == '@') {
+                
+                if(ch[j][k+1] == '@' && (k+1) < C) 
+                NoofAliveCells++;
+                if(ch[j][k-1] == '@' && (k-1) >= 0) 
+                NoofAliveCells++; 
+       if(ch[j+1][k] == '@' && ((j+1) < R)) 
+                NoofAliveCells++;
+       if(ch[j+1][k+1] == '@' && ((j+1) < R) && ((k+1) < C)) 
+                 NoofAliveCells++; 
+       if(ch[j+1][k-1] == '@' && ((j+1) < R) && ((k-1) >= 0)) 
+                 NoofAliveCells++; 
+       if(ch[j-1][k] == '@' && (j-1) >= 0) 
+                NoofAliveCells++;        
+       if(ch[j-1][k+1] == '@' && ((j-1) >= 0) && ((k+1) < C)) 
+                NoofAliveCells++; 
+       if(ch[j-1][k-1] == '@' && ((j-1) >= 0) && ((k-1) >= 0)) 
+                 NoofAliveCells++;
+       
+       if(NoofAliveCells == 2 || NoofAliveCells == 3) 
+       ch[j][k+C] = '@';
+       else if(NoofAliveCells >= 4)
+       ch[j][k+C] = '#';
+       else if(NoofAliveCells == 0 || NoofAliveCells == 1)
+       ch[j][k+C] = '#';
+       }
+                else
+                {
+                if(ch[j][k+1] == '@' && (k+1) < C) 
+                NoofAliveCells++; 
+                if(ch[j][k-1] == '@' && (k-1) >= 0) 
+                NoofAliveCells++; 
+                if(ch[j+1][k] == '@' && (j+1) < R) 
+                NoofAliveCells++;
+       if(ch[j+1][k+1] == '@' && ((j+1) < R) && ((k+1) < C)) 
+                 NoofAliveCells++;
+       if(ch[j+1][k-1] == '@' && ((j+1) < R) && ((k-1) >= 0)) 
+                 NoofAliveCells++; 
+       if(ch[j-1][k] == '@' && (j-1) >= 0) 
+                NoofAliveCells++;
+       if(ch[j-1][k+1] == '@' && ((j-1) >= 0) && ((k+1) < C)) 
+                NoofAliveCells++; 
+       if(ch[j-1][k-1] == '@' && ((j-1) >= 0) && ((k-1) >= 0)) 
+                 NoofAliveCells++;
+                 
+                 if(NoofAliveCells == 3) 
+                 ch[j][k+C] = '@';
+                }
+                 NoofAliveCells = 0;
+            }
+            
+        }
+   
+    }
+     NoofAliveCells = 0;
+    for(i = 0;i < R;i++) {
+    
+        for(j = 0;j < C;j++) { 
+        
+        if(ch[i][j] == '@')
+        NoofAliveCells++;
+        }
+    }
+printf("%d",NoofAliveCells);
+return 0;
+
+}

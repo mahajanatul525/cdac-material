@@ -1,0 +1,115 @@
+1) class First
+   {
+      char str1[20];
+   };
+   class Second
+   {
+      char str2[20];
+   };
+write a friend function,which will create a  new string containing str1,str2 and also display it.
+
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+using namespace std;
+class Second;
+class First
+{
+private:
+   char str1[20];
+public:
+	First(char str[])
+	{
+		strcpy(str1,str);
+	}
+   friend void disp(First &,Second &);
+};
+class Second
+{
+private:
+   char str2[20];
+public:
+	Second(char str[])
+	{
+		strcpy(str2,str);
+	}
+   friend void disp(First &,Second &);
+};
+
+void disp(First &f,Second &d)
+{
+	char *s=new char(strlen(f.str1)+strlen(d.str2)+1);
+	strcpy(s,f.str1);
+	strcat(s,d.str2);
+	cout<<s<<endl;
+}
+
+int main()
+{
+	First f("fjnsdjf");
+	Second s("kjiuh");
+	disp(f,s);
+	getch();
+	return 0;
+}
+
+2) 
+class First
+{
+	int a;
+};
+class Second
+{
+	public:
+		void fun1(){}
+		void fun2(){}
+		void fun3(){}
+};
+
+Above code is incomplete.
+Make sure that all the member functions of "Second" will access "a".
+
+
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+using namespace std;
+class First
+{
+private:
+	int a;
+public:
+	First(int d)
+	{
+		a=d;
+	}
+	friend class Second;
+};
+
+class Second
+{
+	public:
+		void fun1(First &f)
+		{
+			cout<<"Fun1="<<f.a<<endl;
+		}
+		void fun2(First &f)
+		{
+			cout<<"Fun2="<<f.a<<endl;
+		}
+		void fun3(First &f)
+		{
+			cout<<"Fun3="<<f.a<<endl;
+		}
+};
+
+int main()
+{
+	Second s;
+	First f(45);
+	s.fun1(f);
+	s.fun2(f);
+	s.fun3(f);
+	getch();
+	return 0;
+}

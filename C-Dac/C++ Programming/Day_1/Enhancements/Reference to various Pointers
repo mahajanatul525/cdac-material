@@ -1,0 +1,12 @@
+	int num=100;
+	int * const ptr=&num;
+	 int * const &ref3=ptr;
+
+
+	 int num1=200;
+	 const int *ptr1=&num1;
+	 int const * &ref4=ptr1;
+
+	 int num2=300;
+	 const int * const ptr2=&num2;
+	 int const*const &ref5=ptr2;

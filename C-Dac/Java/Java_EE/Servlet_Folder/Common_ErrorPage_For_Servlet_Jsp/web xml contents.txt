@@ -1,0 +1,12 @@
+	<error-page>
+<exception-type>java.lang.Exception</exception-type>
+		<location>/Err.html</location>
+	</error-page>
+<servlet>
+	<servlet-name>FirstServ</servlet-name>
+	<servlet-class>FirstServ</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>FirstServ</servlet-name>
+	<url-pattern>/FS</url-pattern>
+</servlet-mapping>

@@ -1,0 +1,37 @@
+Nevertheless, dynamic languages/runtimes do
+provide some interesting features, including the following:
+
+• An extremely flexible code base. You can refactor code without making numerous
+changes to data types.
+
+• A very simple way to interoperate with diverse object types built in different
+platforms and programming languages.
+
+• A way to add or remove members to a type, in memory, at runtime.
+
+One role of the DLR is to enable various dynamic languages to run with the .NET runtime and give
+them a way to interoperate with other .NET code. 
+
+Two popular dynamic languages that make use of the DLR are IronPython and IronRuby.
+
+ These languages live in a dynamic universe, where type is discovered
+solely at runtime. And yet, these languages have access to the richness of the .NET base class libraries.
+Even better, their codebases can interoperate with C# (or vice versa), thanks to the inclusion of the           dynamic keyword.
+
+string firstName="Vita";
+
+firstName.ToUpper() //this  is library function covert string  to uppercase
+
+
+Now 
+ dynamic firstName="Vita";
+
+firstName.Toupper() //observe U small case ,no compile time error
+raise only runtime error as this will resolves at runtime
+
+
+
+
+
+
+

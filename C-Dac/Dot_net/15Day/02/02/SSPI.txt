@@ -1,0 +1,5 @@
+SSPI stands for Security Support Provider Interface. The SSPI allows an application to use any of the available security packages on a system without changing the interface to use security services. The SSPI does not establish logon credentials because that is generally a privileged operation handled by the operating system.
+
+
+
+Other than SSPI you can also use "true". Integrated Security actually ensures that you are connecting with SQL Server using Windows Authentication, not SQL Authentication; which requires username and password to be provided with the connecting string.

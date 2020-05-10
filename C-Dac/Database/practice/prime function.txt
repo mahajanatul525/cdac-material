@@ -1,0 +1,19 @@
+CREATE DEFINER=`root`@`localhost` FUNCTION `prime`(num int) RETURNS varchar(100) CHARSET latin1
+BEGIN
+declare j int;
+declare i int;
+declare res int;
+set j:=num;
+set i:=j/2;
+myloop:loop
+if(i<2)
+then
+leave myloop;
+end if;
+if (j%i)=0 then
+return 'number is not prime';
+end if;
+set i=i-1;
+end loop myloop;
+return 'number is prime';
+END

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+<!-- Advices -->
+<bean id="beforeCall" class="mypack.LogBeforeCall"/>
+<bean id="afterCall" class="mypack.LogAfterReturning"/>
+<bean id="throwCall" class="mypack.LogAfterThrows"/>
+<bean id="aroundCall" class="mypack.LogAround"/>
+
+<!-- Implentation Class -->
+<bean id="productImpl" class="mypack.ProductImpl"/>
+
+<!-- Proxy Implementation Class -->
+<bean id="product" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="target">
+        <ref bean="productImpl"/>
+    </property>
+    <property name="interceptorNames">
+        <list>
+            <value>beforeCall</value>
+            <value>afterCall</value>
+            <value>throwCall</value>
+            <value>aroundCall</value>
+         </list>
+     </property>
+     <property name="proxyInterfaces">
+         <value>mypack.Product</value>
+     </property>
+</bean>
+</beans>
+
+
+
+
+
+

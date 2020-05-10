@@ -1,0 +1,25 @@
+public class demoOb {
+	int var1;	
+	public demoOb(int k)
+	{
+		var1=k;
+		System.out.println("in param");
+	}	
+	public void disp()
+	{
+		System.out.println(var1);
+	}
+	
+	public void fun(demoOb ref)
+	{
+		ref.var1=300;
+		System.out.println(ref.var1);
+	}
+	public static void main(String[] args) {
+		
+		demoOb s= new demoOb(200);
+		s.disp();
+		s.fun(s); 
+		s.disp();
+	}
+}

@@ -1,0 +1,158 @@
+<DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Online Admission</TITLE>
+<STYLE Type="text/css">
+TABLE{Font-Size:xx-small;Border-Style:solid;Border-Width:thin;Border-Color:Black}
+TD{Font-Weight:bold}
+TH{Color:BLack}
+	
+</STYLE>
+
+<script type="text/javascript">
+	
+
+function validation(){
+
+	var FName= document.getElementById("FName");
+	var TFName=FName.value;
+
+	var LName = document.getElementById("LName");
+	var TLName=LName.value;
+
+	var FHName = document.getElementById("FHName");
+	var TFHName=FHName.value;
+
+	var CAddress = document.getElementById("CAddress");
+	var TCAddress = CAddress.value;
+
+	var PCode = document.getElementById("PCode");
+	var TPCode = PCode.value;
+	
+
+	var CNumber = document.getElementById("CNumber");
+	var TCNumber = CNumber.value;
+
+	var DD = document.getElementById("DD");
+	
+	var MM = document.getElementById("MM");
+
+	var YY = document.getElementById("YY");
+
+	var Pr = document.getElementById("Pr");
+
+	var Email = document.getElementById("Email");
+	var TEmail = Email.value.indexOf('@',0);	
+	var TEmail1 = Email.value.indexOf('.',0);	
+	var TEmail2 = Email.value.indexOf('@',TEmail+1);
+
+	var flag;
+
+
+	if(TFName.length==0){
+		flag=false;
+		FName.focus();
+		FName.value = "ERROR" 
+	}else if(TLName.length==0){
+		flag=false;
+		LName.focus();
+		LName.value = "ERROR"
+	}else if(TFHName.length == 0 ){
+		flag = false;
+		FHName.focus();
+		FHName.value = "ERROR"
+	}else if(DD.value == "DD"){
+		flag = false;	
+		DD.focus();
+	}else if(MM.value == "MM"){
+		flag = false;	
+		MM.focus();
+	}else if(YY.value == "YY"){
+		flag = false;	
+		YY.focus();
+	}else if(TCAddress.length == 0){
+		flag = false;
+		CAddress.focus();
+		CAddress.value = "ERROR"
+	}else if(TPCode.length != 6){
+		flag = false;
+		PCode.focus();
+	}else if(isNaN(PCode.value)){
+		flag = false;
+		PCode.focus();
+	}else if(TCNumber.length > 15){ 
+		flag = false;
+		CNumber.focus();
+ 	}else if(isNaN(CNumber.value)){
+		flag = false;
+		CNumber.focus();
+	}else if(Pr.value == "SC"){
+		flag = false;	
+		Pr.focus();
+	}else if((TEmail == -1) || (TEmail1 == -1) || (TEmail == 0) || (TEmail1 == 0) || (TEmail1 == 2) || (TEmail2>2)) {
+		flag = false;
+		Email.focus();
+		Email.value = "ERROR"
+	}
+	else{
+		flag=true;
+	}
+
+	
+	if(flag == false){
+		alert("Some Mandetory fields are empty");
+	}
+	return flag;
+}
+
+</script>
+</HEAD>
+
+<BODY background="pa1050.jpg">
+	
+	
+
+ 
+
+<TABLE cellpadding="10" align="center">
+	<FORM action="insert.asp" method = "get" onsubmit="return validation()">
+	<TR><TH align = left><H3><U>Personal Details</U></H3></TH></TR>
+	<TR><TD><big><big>First Name</big></big><FONT Color="red">*</FONT>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp </TD><TD><INPUT Type="text" Maxlength="20"size="25" id="FName">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </TD></TR>
+	<TR><TD><big><big>Last Name</big></big><FONT Color="red">*</FONT></TD><TD><INPUT Type="text" Maxlength="20" size="25" id="LName"></TD>
+	<TR><TD><big><big>Father's / Husband's Name</big></big><FONT Color="red">*</FONT></TD><TD><INPUT Type="text" Maxlength="20" size="25" id="FHName"></TD>
+	<TR><TD><big><big>Date of Birth</big></big><FONT Color="red">*</FONT></TD><TD>
+<SELECT id = "DD"><OPTION value = "DD">DD
+	<OPTION>01	<OPTION>02	<OPTION>03	<OPTION>04	<OPTION>05	<OPTION>06	<OPTION>07	<OPTION>08	<OPTION>09  <OPTION>10	<OPTION>11	<OPTION>12
+	<OPTION>13	<OPTION>14	<OPTION>15	<OPTION>16	<OPTION>17	<OPTION>18	<OPTION>19	<OPTION>20	<OPTION>21  <OPTION>22	<OPTION>23	<OPTION>24
+	<OPTION>25	<OPTION>26	<OPTION>27	<OPTION>28	<OPTION>29	<OPTION>30	<OPTION>31	</Select>  /  
+
+<SELECT id = "MM"> <OPTION value = "MM">MM
+	<OPTION>Jan	<OPTION>Feb	<OPTION>Mar	<OPTION>Apr	<OPTION>May	<OPTION>Jun	<OPTION>Jul	<OPTION>Aug	<OPTION>Sep  <OPTION>Oct	<OPTION>Nov	<OPTION>Dec</SELECT>  /  
+
+<SELECT id = "YY" ><OPTION value = "YY">YY
+	<OPTION>1975	<OPTION>1976	<OPTION>1978	<OPTION>1979	<OPTION>1980	<OPTION>1981	<OPTION>1982	<OPTION>1983	<OPTION>1984	<OPTION>1985	<OPTION>1986  <OPTION>1987	</Select></TD>
+
+	<TR><TD><big><big>Sex</big></big></TD><TD><INPUT Type="radio" name="sex" checked>Male<INPUT Type="radio" name="sex">Female</TD></tr>
+	<TR><TD><big><big>Contact Address</big></big><FONT Color="red">*</FONT></TD><TD><TEXTAREA Rows="5" Cols="20" value = ""id="CAddress"></TEXTAREA></TD>
+
+	<TR><TD><big><big>Permanant Address</big></big>:</TD><TD><TEXTAREA Rows="5" Cols="20"></TEXTAREA></TD>
+	
+	<TR><TD><big><big>City</big></big></TD><TD><INPUT Type="text" Maxlength="20"size="25"></TD>
+	<TR><TD><big><big>State</big></big></TD><TD><INPUT Type="text" Maxlength="20"size="25"></TD></TR>
+	<TR><TD><big><big>Country</big></big></TD><TD><INPUT Type="text" Maxlength="20"size="25"></TD></TR>
+	<TR><TD><big><big>Postal Code</big></big><FONT Color="red">*</FONT></TD><TD><INPUT Type="text" Maxlength="6"size="25" ID = "PCode"></TD></TR>
+	<TR><TD><big><big>Contact Number</big></big><FONT Color="red">*</FONT></TD><TD><INPUT Type="text" Maxlength="15"size="25" ID = "CNumber"></TD></TR>
+	<TR><TD><big><big>Nationality</big></big></TD><TD><INPUT Type="text" Maxlength="20"size="25"></TD></TR>
+	<TR><TD><big><big>E-mail</big></big><FONT Color="red">*</FONT></TD><TD><INPUT Type="text" Maxlength="50"size="25" ID = "Email"></TD></TR>
+	<TR><TD><big><big>Alternate E-mail</big></big></TD><TD><INPUT Type="text" Maxlength="50"size="25" ></TD></TR>
+
+	
+
+<BLOCKQUOTE>
+	<th> <input type = "reset"  name = reset value = "RESET" ></th>
+<th><input type = "submit" name =Submit value = "SUBMIT"></th>
+</BLOCKQUOTE>
+</table>
+</form>
+</BODY>
+</HTML>

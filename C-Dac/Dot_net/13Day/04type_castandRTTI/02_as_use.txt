@@ -1,0 +1,7 @@
+Using as
+Sometimes you will want to try a conversion at runtime, but not throw an exception if the
+conversion fails (which is the case when a cast is used). To do this, use the as operator,
+If the conversion succeeds, then a
+reference to type is returned. Otherwise, a null reference is returned. The as operator can be
+used to perform only reference, boxing, unboxing, or identity conversions.
+The as operator offers a streamlined alternative to is in some cases

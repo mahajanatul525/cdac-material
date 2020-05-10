@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html><head><style>.topnav {color:red;}
+</style><script src="jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+$( "li" ).filter(function( index ) {
+  alert($("strong",this).length)
+    return $("strong",this).length === 1;
+  }).css( "background-color", "red" );})
+  </script>
+<body>
+<ul>
+  <li><strong>list</strong> item 1 - one strong tag</li>
+  <li><strong>list</strong> item <strong>2</strong> -
+    two <span>strong tags</span></li>
+  <li>list item 3</li>
+  <li>list item 4</li>
+  <li>list item 5</li>
+  <li>list item 6</li>
+</ul></body>

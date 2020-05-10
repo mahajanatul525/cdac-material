@@ -1,0 +1,109 @@
+#include<iostream>
+using namespace std;
+class base
+{
+	int a;
+public:
+	base()
+	{
+		a=10;
+	}
+	virtual void disp()
+	{
+		cout<<"base disp"<<endl;
+	}
+};
+class base1
+{
+	int b;
+public:
+	base1()
+	{
+		b=20;
+	}
+	virtual void disp1()
+	{
+		cout<<"in disp1"<<endl;
+	}
+};
+class sub:public base,public base1
+{
+	int c;
+public:
+	sub()
+	{
+		c=30;
+	}
+	virtual void disp2()
+	{
+		cout<<"in disp2"<<endl;
+	}
+	
+};
+class child:public sub
+{
+	int d;
+public:
+	child()
+	{
+		d=40;
+	}
+	virtual void disp3()
+	{
+		cout<<"in disp3 of child"<<endl;
+	}
+	void invoker()
+	{
+		int *ptr=(int*)this;
+		ptr=(int*)*ptr; // vptr of base
+		ptr=(int*)*ptr; // address of base disp
+		void (*fun)()=(void(*)())ptr;
+		fun(); // base disp
+
+		ptr=(int*)this;
+		ptr=(int*)*ptr; // vptr of base
+		ptr++;
+		ptr=(int*)*ptr; // address of sub disp2
+		fun=(void(*)())ptr;
+		fun(); // sub disp2
+
+		ptr=(int*)this;
+		ptr=(int*)*ptr; // vptr of base
+		ptr+=2;
+		ptr=(int*)*ptr; // address of child disp3
+		fun=(void(*)())ptr;
+		fun(); // child disp3
+
+		ptr=(int*)this;
+		ptr++; // location of 'a'
+		cout<<"Value of a is\t"<<*ptr<<endl;
+		ptr++; // location of vptr
+		ptr=(int*)*ptr; 
+		ptr=(int*)*ptr; // address of base1 disp1
+		fun=(void(*)())ptr;
+		fun(); // base1 disp1
+
+		ptr=(int*)this;
+		ptr+=3; // location of b
+		cout<<"Value of b is\t"<<*ptr<<endl;
+		ptr++;  // location of c
+		cout<<"Value of c is\t"<<*ptr<<endl;
+		ptr++;  // location of d
+		cout<<"Value of d is\t"<<*ptr<<endl;
+	}
+};
+void main()
+{
+	child c;
+	cout<<"Sizeof s is\t"<<sizeof(c)<<endl;  // ans 24
+	c.invoker();
+}
+
+
+
+
+
+
+
+
+

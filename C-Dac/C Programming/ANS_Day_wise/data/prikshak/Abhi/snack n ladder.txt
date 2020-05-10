@@ -1,0 +1,89 @@
+Snakes and ladders is a very popular game. It's a 10x10 maze, with cells numbered from 0 to 99, and filled with snakes and ladders, as shown below in the figures. Every player gets a chance to play and advance in the maze, depending on the number they get on the dice when thrown.
+
+The advancement is in the increasing order from 0 to 99. All players start from cell numbered 0 (zero) and attempt to reach to cell numbered 99. The player who reaches first to cell number 99, is the winner. If the game is stopped in between, the player closest to cell 99 in number is the winner. Assume that both players will never be on the same cell when the game is stopped.
+
+If a player after tossing the dice lands on a cell, where the snake opens it's mouth, then the player gets a penalty to retreat to the tail of the snake. While, if the player reaches the foot of a ladder, then the player climbs directly to the top of the ladder. In the example figure here, the snake has its mouth on cell 96 and its tail on cell 13, while the ladder has foot on cell 26 while its top is on cell 87.
+
+If there is another snake (or ladder) waiting at the tail of a snake, a player slide down (or climb up) that second snake (or ladder), and so on as required. A cell will never have a mouth of a snake and a foot of a ladder simultaneously.
+
+As such, the snake and ladder are similar, in that when a player lands on a particular cell, they transport the player to another cell. Except for the fact that, snake take a player away from finishing line, while ladder takes a player closer.
+Write a program to simulate the game. There will be two players, named A and B, who toss the dice alternately. The program should output the name of the player at the highest position (closest to 99), along with the player's cell number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+struct play{
+int start;
+int end;
+}
+play[50];
+
+
+int main()
+{
+int n,i,m,input[100],A_position=0,B_position=0,j;
+                scanf("%d",&n);
+                
+        while(i<n)
+        {
+                scanf("%d%d",&play[i].start,&play[i].end);
+        i++;
+        }
+                scanf("%d",&m);
+        for(i=0;i<m;i++)
+        {
+        scanf("%d",&input[i]);
+        }
+        for(i=0;i<m;i++)
+        {
+                if(A_position+input[i]<=99)
+                {
+                        A_position+=input[i];
+                }
+                i++;
+                if(B_position+input[i]<=99)
+                {
+                        B_position+=input[i];
+		        }
+                for(j=0;j<n;j++)
+                {
+                        if(A_position==play[j].start)
+                        {
+                                A_position=play[j].end;
+                                j=-1;
+                        
+                        }
+                }
+
+                for(j=0;j<n;j++)
+                {
+                        if(B_position==play[j].start)
+                        {
+                                B_position=play[j].end;
+                                j=-1;                            
+                        }
+                }
+        }
+        if(A_position>B_position)
+        {
+            printf("A %d\n", A_position);
+        }
+        else  
+        {
+        printf("B %d\n",B_position);
+        }
+return 0;
+}

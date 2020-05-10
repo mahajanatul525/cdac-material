@@ -1,0 +1,407 @@
+A family tree is a chart representing family relationships in a conventional hierarchical tree structure. Family trees are often presented with the oldest generations at the top and the newer generations at the bottom.
+
+Family tree can have many relations. Given the family tree and a relation among two family members you need to write a program to print whether the relation is true or false.
+
+Definitions:
+Parent: Person A is parent of B, if A and B are directly connected and B is exactly one level below to A in the family tree. E.g. In Fig 1. Motilal is parent of Jawahar, Jawahar is parent of Indira, etc.
+Sibling: Siblings are members that have the same immediate parent. E.g. In Fig.1 Rahul & Priyanka are Siblings, Sanjay & Rajeev are siblings, etc
+Descendant: Person A is a descendant of Person B, if A is connected to B either directly or through any other person but is atleast one level below B in the family tree. E.g. In Fig 1. The descendants of Jawahar are Indira, Sanjay, Rajeev, Varun, Rahul & Priyanka. Kamala does not have any descendants.
+Ancestor: Person A is a ancestor of Person B, if A is connected to B either directly or through any other person but is atleast one level above B in the family tree. E.g in Fig 1. Indira is ancestor of Sanjay, Rajeev, Varun, Rahul & Priyanka
+
+
+
+#include<iostream>
+
+using namespace std;
+
+int flag = 0;
+string gs;
+
+class TreeNode {
+    private:
+            string name;
+            TreeNode* left;
+            TreeNode* right;
+    public:
+            TreeNode() {
+                name="";
+                left = right = 0;
+                
+            }
+            TreeNode(string name) {
+                    this->name = name;
+                    left = right = 0;
+            }
+            string getName() {
+                return name;
+            }
+            TreeNode* getLeft() {
+                return left;
+            }
+            TreeNode* getRight() {
+                return right;
+            }        
+            void setName(string name) {
+                this->name = name;
+            }
+            void setLeft(TreeNode* left) {
+                this->left = left;
+            }
+            void setRight(TreeNode* right) {
+                this->right = right;
+            }
+            void print() {
+                cout<<name<<" ";
+            }
+            
+};
+
+
+class Queue {
+    private:
+            TreeNode* names[100];
+            int first;
+            int last;
+            int size;
+    public:
+            Queue() {
+                first = last = 0;
+                size = 100;
+            }
+            int isEmpty() {
+                if(first == last)
+                        return 1;
+                return 0;
+            }
+            void enque(TreeNode* name) {
+                    names[last] = name;
+                    last++;
+            }
+            TreeNode* deque() {
+                first++;
+                TreeNode* temp = names[first - 1];
+                return temp;
+            }
+};
+
+class LinkedList {
+    
+    private:
+            TreeNode* root;
+            
+    public:
+            LinkedList() {
+                root = NULL;
+            }
+            
+            void insert(string ParentName) {
+                    TreeNode* temp;
+                    string Child1,Child2;
+                    if(root == NULL) {
+                        temp = new TreeNode(ParentName);
+                        root = temp;
+                        }
+                    else {
+                        temp = searchName(ParentName);
+                    }
+                        if(temp->getLeft() == NULL) {
+                            cin>>Child1;
+                            TreeNode* newNode1 = new TreeNode(Child1);
+                            temp->setLeft(newNode1);
+                            }
+                        else if(temp->getRight() == NULL) {
+                            cin>>Child2;
+                            TreeNode* newNode1 = new TreeNode(Child2);
+                            temp->setRight(newNode1);
+                            }
+            }
+            
+            void insertRightFirst(string ParentName) {
+                    TreeNode* temp;
+                    string Child1,Child2;
+                        temp = searchName(ParentName);
+                    
+                         if(temp->getRight() == NULL) {
+                            cin>>Child2;
+                            TreeNode* newNode1 = new TreeNode(Child2);
+                            temp->setRight(newNode1);
+                            }
+                        else if(temp->getLeft() == NULL) {
+                            cin>>Child1;
+                            TreeNode* newNode1 = new TreeNode(Child1);
+                            temp->setLeft(newNode1);
+                            }
+                        
+            }
+            
+            void preorder() {
+                preorder(root);
+            }
+            
+            void preorder(TreeNode *root){
+        	if( root != NULL){
+				root->print();
+				preorder(root->getLeft());
+				preorder(root->getRight());
+			}
+		}
+        TreeNode* searchName(string ParentName) {
+            
+            Queue qq;
+            qq.enque(root);
+            TreeNode* temp;
+            while(! qq.isEmpty() ) {
+                temp = qq.deque();
+                if(temp->getName() == ParentName)
+                    return temp;
+                if(temp->getLeft() != NULL) {
+                    qq.enque(temp->getLeft());
+                }
+                if(temp->getRight() != NULL) {
+                    qq.enque(temp->getRight());
+                }
+            }
+            return NULL;
+        }
+        
+         int searchNameExists(string ParentName) {
+            Queue qq;
+            qq.enque(root);
+            TreeNode* temp;
+            while(! qq.isEmpty() ) {
+                temp = qq.deque();
+                if(temp->getName() == ParentName)
+                    return 1;
+                if(temp->getLeft() != NULL) {
+                    qq.enque(temp->getLeft());
+                }
+                if(temp->getRight() != NULL) {
+                    qq.enque(temp->getRight());
+                }
+            }
+            return 0;
+        }
+        
+        string searchAncestor(TreeNode* name,string name2) {
+            
+            Queue qq;
+            qq.enque(name);
+            TreeNode* temp;
+    
+            
+            while(! qq.isEmpty() ) {
+                
+                temp = qq.deque();
+                if(temp->getName() == name2)        
+                    return "ancestor";
+                if(temp->getLeft() != NULL) {
+                    qq.enque(temp->getLeft());
+                }
+                if(temp->getRight() != NULL) {
+                    qq.enque(temp->getRight());
+                }
+            }
+            return "";
+        }
+        string searchDescendent(TreeNode* name,string name2) {
+            
+            Queue qq;
+            qq.enque(name);
+            TreeNode* temp;
+    
+            
+            while(! qq.isEmpty() ) {
+                
+                temp = qq.deque();
+            
+                if(temp->getName() == name2)        
+                    return "descendant";
+                if(temp->getLeft() != NULL) {
+                    qq.enque(temp->getLeft());
+                }
+                if(temp->getRight() != NULL) {
+                    qq.enque(temp->getRight());
+                }
+            }
+            return "";
+        }       
+        string searchChild(TreeNode* name,string name2) {
+            
+            Queue qq;
+            qq.enque(name);
+            TreeNode* temp;
+            int count = 0;
+            
+            while(! qq.isEmpty() ) {
+                
+                temp = qq.deque();
+            
+                if(temp->getName() == name2 && count == 1)        
+                    return "child";
+                if(temp->getLeft() != NULL) {
+                    qq.enque(temp->getLeft());
+                }
+                if(temp->getRight() != NULL) {
+                    qq.enque(temp->getRight());
+                }
+                count++;
+            }
+            return "";
+        }       
+
+        string postorder(TreeNode *root,string name1,string name2){
+            if( root != NULL){
+                TreeNode *temp1 = root->getLeft();
+                TreeNode *temp2 = root->getRight();
+    		    if(temp1 != NULL && temp2 != NULL)
+                   if(temp1->getName() == name1 || temp1->getName() == name2) 
+                          if(temp2->getName() == name1 || temp2->getName() == name2)
+                                return "sibling";
+                  gs = postorder(root->getLeft(),name1,name2);
+                  if(gs == "sibling")
+                    flag = 1;
+				gs = postorder(root->getRight(),name1,name2);
+					if(gs == "sibling")
+                        flag = 1;
+            }
+            return "";
+		}
+
+        
+        string searchSibling(string name1,string name2) {
+            
+            string relation;
+            flag = 0;
+           relation = postorder(root,name1,name2);
+            if(flag == 1)
+                    relation = "sibling";
+                if(relation == "sibling") 
+                    return relation;
+                return "";
+        }
+
+       
+        string searchParent(string name1,string name2) { // Name1 - Jawahar Name2 - Indira root - Motilal
+            
+            TreeNode* temp = searchName(name1);
+            if(temp->getLeft() != NULL) {
+                TreeNode* child1 = temp->getLeft();
+                if(child1->getName() == name1 || child1->getName() == name2)
+                    return "parent";
+            }
+            
+            if(temp->getRight() != NULL) {
+            TreeNode* child2 = temp->getRight();
+            if(child2->getName() == name1 || child2->getName() == name2)
+                    return "parent";
+            }
+                return "";
+        }
+        
+        void findRelation(string name1,string relation,string name2) {
+            
+            string relationship;
+            TreeNode* temp;
+            
+            if(relation == "ancestor") {
+                temp = searchName(name1);
+                relationship = searchAncestor(temp,name2);
+            }
+            else if(relation == "descendant") {
+                temp = searchName(name2);
+                relationship = searchDescendent(temp,name1);
+            }
+            else if(relation == "child") {
+                temp = searchName(name2);
+                relationship = searchChild(temp,name1);
+            
+            }
+            else if(relation == "sibling") {
+             
+                relationship = searchSibling(name1,name2);
+            }
+            else if(relation == "parent")
+                relationship = searchParent(name1,name2);
+                
+            if(relationship == relation) {
+                cout<<"T"<<" ";
+            }
+            else
+                cout<<"F"<<" ";
+        }
+        
+        void insertParentAndChild(string Parent,string child) {
+            TreeNode* temp = searchName(Parent);
+            TreeNode* newNode = new TreeNode(child);
+            if(temp->getLeft() == NULL)
+                temp->setLeft(newNode);
+                else
+                temp->setRight(newNode);
+        }
+
+};
+
+
+
+int main() {
+
+    LinkedList LL;
+    int check = 0,check1 = 0,k = 0,rightfirst = 0;
+    string ParentName,Name1,Name2,relation,child;
+    int no,i = 0,j = 0,change = 0;
+    string names[50];
+    
+    cin>>no;
+    
+    while(i < no) {
+        cin>>ParentName;
+        if(i != 0) {
+                check =  LL.searchNameExists(ParentName);
+        }
+        if(check != 0 || i == 0){
+            for(k = 0;k < j;k = k + 2) {
+                if(ParentName == names[k])
+                    rightfirst = 1;
+            }
+                if(rightfirst != 1)
+                LL.insert(ParentName);
+                else
+                LL.insertRightFirst(ParentName);
+        }
+        else {
+                names[j] = ParentName;
+                j++;
+                cin>>child;
+                names[j] = child;
+                j++;
+        }
+            i++;
+    }
+    while(true) {
+                change = 0;
+        for(i = 0;i < j;i = i + 2) {
+                check =  LL.searchNameExists(names[i]);
+                check1 = LL.searchNameExists(names[i + 1]);
+                 if(check != 0) {
+                        if(check1 != 1) {
+                   LL.insertParentAndChild(names[i],names[i+1]);
+                   change = 1;
+                        }
+           }
+        }
+        if(change == 0)
+                break;
+    }
+    cin>>no;
+    for( i = 0;i < no;i++) {
+        cin>>Name1;
+        cin>>relation;
+        cin>>Name2;
+        LL.findRelation(Name1,relation,Name2);
+    }
+    cout<<endl;
+    
+    LL.preorder();
+    cout<<endl;
+ return 0;   
+}

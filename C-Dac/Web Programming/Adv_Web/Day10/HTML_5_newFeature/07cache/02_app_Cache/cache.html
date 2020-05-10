@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+ <html manifest="a.appcache">
+<head> <script>
+alert(window.applicationCache.status);
+function onUpdateReady() {
+alert('found new version!');
+}
+window.applicationCache.addEventListener( 'updateready',onUpdateReady);
+if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+
+onUpdateReady();}
+</script>
+<script src="main.js"></script>
+<link rel="stylesheet" href="theme.css">
+</head>
+ <body>
+ The content of the document......
+
+here
+<h1> here is the data which is visible of line also</h1>
+ </body>
+
+ </html>

@@ -1,0 +1,22 @@
+make sure internet is on
+
+go to eclipse -> Help - Eclipse Marketplace
+
+enter "Kepler SR2" in Find dialog box and press enter
+
+	select "Java 8 support for Kepler SR2"
+
+	click on "install"
+
+restart Eclipse
+
+after restarting Eclipse
+go to "windows"
+	preferences
+		java
+		compiler - double click
+change compiler compliance level to "1.8"
+apply
+rebuild - yes
+syso
+

@@ -1,0 +1,18 @@
+Expression Lambdas
+In an expression lambda, the expression on the right side of the => acts on the parameter (or
+parameters) specified by the left side. The result of the expression becomes the result of the
+lambda operator and is returned.
+
+n => n % 2 == 0
+In this case, this expression returns true if n is even and false if it is odd.
+
+To use a lambda expression involves two steps.
+ First, declare a delegate type that
+is compatible with the lambda expression. 
+
+Second, declare an instance of the delegate,
+assigning to it the lambda expression. 
+
+Once this has been done, the lambda expression can
+be executed by calling the delegate instance. The result of the lambda expression becomes
+the return value.

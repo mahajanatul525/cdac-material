@@ -1,0 +1,32 @@
+create an Entity "Tour"
+	int id
+	String type
+	String name
+	double cost
+
+		setters and getters
+
+create a class "TourController".
+
+	TourDAO
+
+		void addTour(Tour ref);
+
+		List getTours();
+
+	TourDAOImpl
+
+
+AddTour.jsp		ViewTours.jsp
+
+
+index.jsp - welcome page
+
+	inside "index.jsp" u need to have two links
+
+	add Tour   and view Tours
+
+when u click on add Tour , u should be able to add Tour inside database
+
+when u click on view Tours, u should be able to view Tours available.
+	

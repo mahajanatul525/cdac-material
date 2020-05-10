@@ -1,0 +1,25 @@
+1
+2 5
+3 6 8
+4 7 9 10
+
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+int i,j,n,p;
+
+	for(i=1;i<=4;i++)
+	{
+	n=0;
+	p=3;
+		for(j=i;j>=1;j--)
+		{
+		printf("%d",i+n);
+		n=n+p--;
+		}
+	printf("\n");
+	}getche();
+}

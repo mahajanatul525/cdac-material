@@ -1,0 +1,169 @@
+C++ folder: Enhancement Assignment 
+
+
+3) create following structure
+struct book
+{
+	char bid[5];
+	char name[30];
+	int price;
+};
+ask user how many records he wants to create and accordingly allocate memory.
+accept values from user and display.
+( Hint :-  use  "new" operator)
+
+PROGRAM:
+
+#include<iostream>
+using namespace std;
+#include<conio.h>
+int main()
+{
+struct book
+{
+	char bid[5];
+	char name[30];
+	int price;
+};
+cout<<"enter the size"<<endl;
+int rec;
+cin>>rec;
+book *ptr;
+ptr=new book[rec];
+cout<<"id name price";
+for(int i=0;i<rec;i++)
+{
+	cin>>ptr[i].bid>>ptr[i].name>>ptr[i].price;
+}
+for(int i=0;i<rec;i++)
+{
+	cout<<ptr[i].bid<<ptr[i].name<<ptr[i].price;
+}
+
+getch();
+return 0;
+}
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+4)write a function which will return reference of structure.
+( note:- any structure of ur choice u can define )
+
+PROGRAM:
+
+#include<iostream>
+using namespace std;
+#include<conio.h>
+struct book
+{
+	char bid[5];
+	char name[30];
+	int price;
+} b;
+ book& sample()
+{
+	return b;
+}
+int main()
+{
+	book t={"idno","ninad",60};
+sample()=t;
+getch();
+return 0;
+}
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+5)write a function which takes 3 arguments
+variable, pointer and a reference.(any datatype)
+invoke this function and show how "call by value",
+"call by address" and "call by reference" will work.
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+void disp(int a,int *ptr,int &s)
+{
+	a=20;
+	*ptr=*ptr+20;
+	s=30;
+}
+void main()
+{
+	int a=10,b=20,c=1;
+	disp(a,&b,c);
+	cout<<a<<b<<c<<endl;
+	getch();
+}
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+7)define 2 functions
+a) function which accepts another function as an argument
+( using pointer to function )
+b) function which accepts another function as an argument
+( using reference to function )
+	try to invoke both the functions and display the output.
+
+
+PROGRAM:
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int sqr(int);
+int disp(int (*ptr) (int));
+int main()
+{
+	int a=disp(sqr);
+	//disp(sqr1);
+	cout<<a;
+	getch();
+	return 0;
+}
+int disp(int (*ptr) (int))
+{
+	int b=ptr(10);
+	return b;
+}
+
+int sqr(int a)
+{
+	return a*a;
+}
+
+**************************OUTPUT******************************
+100
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+8)accept 2 numbers and swap them using references.
+
+
+PROGRAM:
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a=5,b=6;
+	swap(a,b);
+	cout<<"a="<<a<<"\n"<<"b="<<b;
+	getch();
+	return 0;
+}
+
+
+void swap(int &x,int &y)
+{
+	int z=x;
+	x=y;
+	y=z;
+}
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+

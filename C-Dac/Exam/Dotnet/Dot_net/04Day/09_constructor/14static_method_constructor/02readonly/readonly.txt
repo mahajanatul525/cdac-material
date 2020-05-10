@@ -1,0 +1,25 @@
+
+Rules
+Declaration Context. You can use ReadOnly only at module level. This means the declaration context for a ReadOnly element must be 
+a class, structure, and cannot be a source file, namespace, or procedure.
+
+Combined Modifiers.
+
+Assigning a Value. Code consuming a ReadOnly property cannot set its value. 
+But code that has access to the underlying storage can assign or change the value at any time.
+
+You can assign a value to a ReadOnly variable only in its declaration or in the constructor of a class or structure 
+in which it is defined.
+
+
+
+
+When to Use a ReadOnly Variable
+
+There are situations in which you cannot use a Const Statement (Visual Basic) to declare and assign a constant value.
+
+ For example, the Const statement might not accept the data type you want to assign, or
+ you might not be able to compute the value at compile time with a constant expression. 
+ You might not even know the value at compile time.
+ In these cases, you can use a ReadOnly variable to hold a constant value.
+

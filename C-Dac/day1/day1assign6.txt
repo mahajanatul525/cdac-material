@@ -1,0 +1,20 @@
+class demo
+{ 	int v=10;
+void print()
+{
+	System.out.println(v);
+	
+}
+
+}
+
+public class demoOb
+{public static void main(String args[])
+	{
+		demo a=new demo();
+		a.print();
+	}
+	
+	}
+	
+	

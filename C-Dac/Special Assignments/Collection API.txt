@@ -1,0 +1,23 @@
+a) Create Course class with id,name,duration and fees. 
+now accept int from user as a choice 1 , 2 , 3 or 4
+
+Using switch case statement, perform the
+following using ArrayList
+
+(1) Add Course
+(2) Delete Course
+(3) Show all Course
+(4) Sort all Courses in ascending order of fees.
+
+
+
+b) create a HashMap.
+store  prn no. and students name of 10 students inside the HashMap.
+display it using iterator.
+
+
+c) create a class "MyClass".
+create 5 different objects of it.
+add them in a ArrayList.
+store ArrayList in file.
+Now open a file, read ArrayList and display all objects.

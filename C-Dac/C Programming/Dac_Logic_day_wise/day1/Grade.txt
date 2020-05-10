@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int mks;
+printf("Enter marks: ");
+scanf("%d",&mks);
+	if(mks>=75)
+		printf("A");
+	else if(mks>=55)
+		printf("B");
+	else if(mks>=35)
+		printf("C");
+	else 
+		printf("Fail");
+	getche();
+
+
+}

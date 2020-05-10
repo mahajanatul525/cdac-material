@@ -1,0 +1,22 @@
+create a table Module with
+	id  int
+	name	varchar
+	duration  int
+	fees	int
+
+add atleast 5 records.
+
+write a spring MVC application where,
+
+using Reverse Engineering generate an Entity "Module".
+
+as soon as application starts u need to show all the modules with name,duration and fees. along with this also show a link "delete".
+
+when user clicks on "delete" , that particular record should be deleted and control should come to the same jsp page.
+
+[ for any doubt , refer "Sixth_Example_delete_hyperlink" example from "with form" ]
+
+
+
+
+	

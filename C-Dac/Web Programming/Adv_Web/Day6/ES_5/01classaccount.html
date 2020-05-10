@@ -1,0 +1,25 @@
+<script>
+'use strict'
+class Account
+{
+   constructor(name,amt)
+  {
+  this.name=name;
+  this.balance=amt;
+  alert(this.constructor)
+    }
+	deposit(amt)
+	{this.balance+=amt;
+	}
+	toString()
+	{return this.name+ "  " +this.balance}*/
+}
+var obj1=new Account();
+console.log(obj1);
+document.write(typeof obj1);
+obj1.name="geeta";
+console.log(obj1);
+document.write(obj1);
+var obj2=new Account("Mona",50000);
+console.log(obj2);
+</script>

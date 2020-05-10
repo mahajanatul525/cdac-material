@@ -1,0 +1,28 @@
+#include<stdio.h>
+void app(char *,char *);
+void main()
+{
+char str1[30],str2[10];
+puts("enter str1");
+gets(str1);
+puts("enter str2");
+gets(str2);
+
+app(str1,str2);
+
+printf("%s",str1);
+}
+
+void app(char *str1,char *str2)
+{
+while(*str1!='\0')
+	str1++;
+while(*str2!='\0')
+{
+*str1=*str2;
+str1++;
+str2++;
+}
+*str1='\0';
+
+}

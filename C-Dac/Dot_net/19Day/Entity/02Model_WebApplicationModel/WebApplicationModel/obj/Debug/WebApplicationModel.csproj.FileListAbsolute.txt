@@ -1,0 +1,15 @@
+D:\practice_dotnet\WebApplicationModel\WebApplicationModel\bin\WebApplicationModel.dll
+D:\practice_dotnet\WebApplicationModel\WebApplicationModel\bin\WebApplicationModel.pdb
+D:\practice_dotnet\WebApplicationModel\WebApplicationModel\bin\EntityFramework.dll
+D:\practice_dotnet\WebApplicationModel\WebApplicationModel\bin\EntityFramework.xml
+D:\practice_dotnet\WebApplicationModel\WebApplicationModel\obj\Debug\WebApplicationModel.dll
+D:\practice_dotnet\WebApplicationModel\WebApplicationModel\obj\Debug\WebApplicationModel.pdb
+D:\dot_net\Day_wise\entity\entity\WebApplicationModel\WebApplicationModel\bin\WebApplicationModel.dll
+D:\dot_net\Day_wise\entity\entity\WebApplicationModel\WebApplicationModel\bin\WebApplicationModel.pdb
+D:\dot_net\Day_wise\entity\entity\WebApplicationModel\WebApplicationModel\bin\EntityFramework.dll
+D:\dot_net\Day_wise\entity\entity\WebApplicationModel\WebApplicationModel\bin\EntityFramework.xml
+D:\dot_net\Day_wise\entity\entity\WebApplicationModel\WebApplicationModel\obj\Debug\WebApplicationModel.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\entity\entity\WebApplicationModel\WebApplicationModel\obj\Debug\WebApplicationModel.dll
+D:\dot_net\Day_wise\entity\entity\WebApplicationModel\WebApplicationModel\obj\Debug\WebApplicationModel.pdb
+D:\dot_net\Day_wise\day14entity\entity\Model_WebApplicationModel\WebApplicationModel\obj\Debug\WebApplicationModel.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day14entity\entity\Model_WebApplicationModel\WebApplicationModel\obj\Debug\WebApplicationModel.dll

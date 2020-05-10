@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+
+var t;
+
+function st()
+{
+
+t=setInterval('alert("go")',500);
+
+}
+
+
+
+function tp()
+{
+alert(t);
+clearInterval(t);
+
+
+}
+
+</script>
+</head>
+
+<body>
+<form name="frm">
+
+<input type="button" value="start" onclick="st()"/>
+<input type="button" onclick="tp()" value="stop">
+</form>
+</body>
+</html>

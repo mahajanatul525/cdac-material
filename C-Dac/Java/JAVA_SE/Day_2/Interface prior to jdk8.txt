@@ -1,0 +1,15 @@
+	interface in java
+
+interfaces are abstract in nature. i.e. they can not be instantiated.
+
+interface can contain methods declaration. Method which is declared inside interface is by default "public" and "abstract".
+
+variable which is declared in interface is by default "public","static" and "final".
+
+a class can be derived from one or more interfaces. ("implements" keyword)
+
+child class has to define all the methods of parent interface/s otherwise u need to make child class as "abstract".
+
+one interface can be derived from one or more other interfaces. ("extends" keyword)
+
+if a class is derived from some other class and some interfaces, "extends" keyword should precede "implements".

@@ -1,0 +1,10 @@
+no need to use <property>
+
+
+in spring bean configuration file u have to specify following statement
+
+ <context:annotation-config></context:annotation-config>  
+
+
+
+ 

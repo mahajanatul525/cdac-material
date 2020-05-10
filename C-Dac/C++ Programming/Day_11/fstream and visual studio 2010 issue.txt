@@ -1,0 +1,4 @@
+Also since you are using a fstream(), the default open mode which is ios::in | ios::out will only open an existing file, it will not create a new file. This is also true for the ios::ate open mode. The only time a file will be created is when you use either the ios::app or the ios::trunc open modes.
+
+
+fstream ff("d:\\temp\\one.txt",ios::in | ios::app);

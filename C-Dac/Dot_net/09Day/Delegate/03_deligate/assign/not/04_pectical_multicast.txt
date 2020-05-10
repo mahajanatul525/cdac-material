@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication14
+{
+    delegate void message(int t, int y,String smg); 
+    class myclass
+    {
+        int a, b;
+       public message  mm;
+        public int add(int p,int q)
+       {
+           
+           int r = p + q;
+           Console.WriteLine("add");
+           if (mm != null)
+           mm(p, q, "added");
+           return r;              
+             }
+        public int mul(int p,int q)
+        {
+            mm(p, q, "multyply");
+            return p * q;
+        }
+        public myclass(int a, int b) { this.a = a; this.b = b; }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            myclass ob = new myclass(6,6);
+             ob.mm =go;
+           Console.WriteLine(ob.add(5, 6));
+          ob.mm = multydone;
+          Console.WriteLine(ob.mul(5, 6)); 
+            Console.ReadLine();
+        }
+        static void go(int x,int y,string sm)
+        {
+            Console.WriteLine("{0},{1},{2}", x, y, sm);
+        }
+        static void multydone(int x, int y, string sm)
+        {
+            Console.WriteLine("{0},{1},{2}", x, y, sm);
+        }
+    }
+}

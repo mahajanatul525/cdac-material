@@ -1,0 +1,6 @@
+<body>
+<s:iterator status="stat" value="list">
+<s:property value="name"/>     <s:property value="age"/>  
+<s:property value="birthDate"/>  <s:property value="contactNumber"/>
+</s:iterator>
+</body>

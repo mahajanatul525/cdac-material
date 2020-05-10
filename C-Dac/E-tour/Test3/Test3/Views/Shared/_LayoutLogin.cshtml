@@ -1,0 +1,29 @@
+﻿<header id="home">
+    <!--/#home-slider-->
+    <div class="main-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            <h1>India Tour</h1><!--add our logo....-->
+          </a>                    
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">                 
+            @if (Request.Cookies["LoginCookie"] == null)
+                {
+           <li class="scroll">@Html.ActionLink("Tours", "Index", "Home", new {@Href="#section-3" , @class = "scroll"})
+            </li>
+                 <li class="scroll">@Html.ActionLink("About Us", "About", "Home")</li>                     
+               <li class="scroll">@Html.ActionLink("Team", "Index", "Home")</li>
+                 <li class="scroll">@Html.ActionLink("Contact", "Contact", "Home")</li>   
+                
+                    <li> @Html.ActionLink("Sign In", "Login")</li> 
+                   }
+          </ul>
+        </div>
+      </div>
+    </div><!--/#main-nav-->
+  </header><!--/#home-->
+  
+
+

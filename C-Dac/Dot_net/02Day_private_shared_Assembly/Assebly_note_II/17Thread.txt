@@ -1,0 +1,7 @@
+Net Threading
+
+Thread in computer science means a sequence of execution instructions that can run independently , that is a single flow of execution in a process. Thread is like a process, at least one thread exists within each process. Single Thread (normal programs) in computer science means that only one task can execute and at the same time the other tasks have to wait for the completion of the current task like in a queue. Single thread resulted in systems idle time and application performance.
+
+Multithreading allows multiple process to execute concurrently within a single program .That is more than one task in a program can execute at the same time and each thread run independently of its own. If multiple threads can exist within a process, typically share the state information of a process, and share memory and other resources directly. Each thread maintains exception handlers, a scheduling priority, and a set of structures the system uses to save the thread context until it is scheduled.
+
+In multiple threaded programming we can use system's idle time, so it leads improved application performance . Also we can set priority in each Threads . Threads with higher priority are executed in preference to threads with lower priority. It is recommended that you use as few threads as possible, thereby minimizing the use of Operating System resources .

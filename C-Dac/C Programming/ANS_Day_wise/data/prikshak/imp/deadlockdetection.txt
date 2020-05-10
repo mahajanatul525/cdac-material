@@ -1,0 +1,105 @@
+Deadlock detection is an important consideration in operating systems of computers. In this problem you will be given a directed graph representing the state of a system. Your program should detect whether there are any deadlocks in the system. ( A deadlock can be detected by checking for cycles in the graph) The input will be in the form 
+ Process X holds resource Ri and wants resource Rj (X holds Ri means an edge Ri->X and X wants Rj means an edge X->Rj). Note that both processes and resources form nodes of the graph.
+Use depth first traversal to determine whether there are any cycles in the graph. The graph contains a cycle if while expanding a node, you encounter a child that is present in the path from the root of the current tree to the node being expanded. You can assume that the maximum number of nodes in the graph will not exceed 50.
+ 
+
+
+
+
+#include <iostream>
+
+using namespace std;
+int vertex;
+class Graph{
+	private:
+		
+		int graph[50][50];
+		string names[50];
+		bool visited[50];
+		int dis[50];
+		int pred[50];
+	public:
+		Graph(){ }
+		
+
+		int getIndex(string name){
+			for( int i = 0; i < 50; i++){
+				if( names[i].length() == 0){
+					names[i] = name;
+					return i;
+				}else if( names[i] == name)
+					return i;
+			}
+			return -1;		
+		}
+
+		void input(){
+			int N,no,index,index1,index2;
+			cin>>N;
+			string process,resource1,resource2;
+			for(int i = 0;i < N;i++) {
+				cin>> process;
+				index = getIndex(process);
+				cin>>resource1;
+                if(resource1 != "-1") {
+                    index1 = getIndex(resource1);
+                    graph[index1][index] = 1;
+                }
+				cin>>resource2;		
+                if(resource2 != "-1") {
+				index2 = getIndex(resource2);
+                graph[index][index2] = 1;
+                }
+			}
+			vertex = 0;
+			while(names[vertex].length() != 0) {
+				vertex++;			
+			}
+           
+			
+		}
+        
+		bool dfs(int i){
+			visited[i] = true;
+		//	cout<<names[i]<<" ";
+			for(int j = 0; j < vertex; j++){
+				if( graph[i][j] > 0 ){
+					if( visited[j] == true){
+						return true;
+					}else{
+						if( dfs(j) )
+							return true;
+					}
+				}
+			}
+			visited[i] = false;
+			return false;
+		}
+        
+			void cycle(){
+                int flag = 0;
+		    for(int i = 0;i < vertex;i++) {
+    	        visited[i] = false;   
+		    }
+			for(int i = 0; i < vertex; i++){
+				if( visited[i] == false)
+					if( dfs(i) ){
+						cout<<"YES"<<endl;
+						break;
+					}else{
+					flag++;
+					}
+			}
+            if(flag == vertex)
+                cout<<"NO"<<endl;
+			cout<<endl;	
+		}	
+};
+
+int main(){
+	
+	Graph graph;
+	graph.input();
+    graph.cycle();
+	return 0;
+}

@@ -1,0 +1,27 @@
+using System;
+using System.Collections;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace atul
+{
+    delegate void countit();
+
+    class anodemo
+    {
+       public  countit counter = delegate()
+        {
+            int i;
+            for (i = 0; i < 5; i++) 
+            Console.WriteLine(i);
+        };
+
+       public static void Main()
+       {
+           anodemo a = new anodemo();
+          a.counter();
+       }
+        
+    }
+}

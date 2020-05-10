@@ -1,0 +1,27 @@
+<script>
+"use strict"
+function person(nm,ag)
+{  if(this instanceof person)
+  {this.name=nm;
+   this.age=ag;
+   this.speak=function(){return "hello"}
+   alert(this.constructor)
+ }
+ else throw new TypeError("Check this is not a function");
+}
+person.prototype.display=function()
+     { return "parent classmethod data"; }
+person.prototype.toString=function(){
+       return "hello from parent string"}
+function child(){ }
+child.prototype=Object.create(person.prototype);
+
+
+var c=new child(); //child got access to parent method
+console.log(c.display());
+document.write(c)
+document.write(c.display());
+document.write(c instanceof person);
+document.write(c instanceof child);
+document.write(c instanceof Object)
+</script>

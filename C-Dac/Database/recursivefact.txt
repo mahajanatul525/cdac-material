@@ -1,0 +1,10 @@
+create function udf_rfact(num int)
+returns int
+begin
+declare fact int;
+if num <1 then
+return (fact);
+end if;
+set fact:=num * udf_rfact(num-1);
+end
+$$

@@ -1,0 +1,36 @@
+Validation controls are used to ensure if, the data, entered by the user is valid. Microsoft asp.net framework, provides 6 built-in validation controls. 
+1. RequiredFieldValidator
+2. RangeValidator 
+3. RegularExpressionValidator
+4. CompareValidator
+5. CustomValidator    
+6. ValidationSummary 
+
+RequiredField validator control in asp.net 
+
+
+  
+
+These validation controls can be used to perform both client side and server side validation.
+
+Browser's understand only client scripts and HTML. In the past to perform client side validation, developers had to write themselves the required javascript code. With validation controls, we don't have to write javascript, we can use the built-in validation controls, which will generate the required javascript for us.
+
+Client scripts can spread viruses and cause security concerns. Because of this, users may disable JavaScript on their browser. If this happens, client side validation is skipped. That is why, it is always a good practice to have server side validation as well.
+
+The validation control's also perform server side validation. Server side validation is always performed, irrespective of whether the client side validation is done or not.
+
+ we will discuss about RequiredField validator control. This control, ensures that the required field is entered by the user. Let us understand with an example. 
+
+
+  
+
+Run the project, and notice that the client side validation is performed. Now, disable Javascript. To disable javascript in, internet explorer
+1. Click on Tools on the Menu Bar. If the Menu bar is not visible, press ALT+T.
+2. From the Tools menu, select Internet Options
+3. Click on the Security tab, on the internet options window
+4. Select Local Intranet icon and click on Cutom Level button
+5. Scroll down in the Security Settings window, and find Scripting option in the list.
+6. Click Disable radiobutton under active scripting
+7. Click OK and click Yes on the warning.
+
+The above steps should disable javascript. Run the project now, and click Save button, without entering any data. Notice, that the client side validation is skipped, but the server side validation is performed. 

@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int num, no, i, sum=0;
+	printf("Enter a number: ");
+	scanf("%d", &num);
+	for(i=1; i<=10; i++)
+	{
+		sum=num*i;
+		printf("\n%d * %d = %d", num, i, sum);
+	}
+	getch();
+}

@@ -1,0 +1,28 @@
+package eee;
+
+import java.util.*;
+
+
+public class palin
+{
+	public static void main(String args[])
+	{	System.out.println("enter a word");
+		Scanner sc=new Scanner(System.in);
+		String inpt=sc.next();
+		String inpt2="";
+		
+		for(int i=inpt.length()-1;i>=0;i--)
+		{
+			inpt2+=inpt.charAt(i);
+		}
+		System.out.println(inpt2);
+		if(inpt2.equalsIgnoreCase(inpt))
+		{
+			System.out.println("string is palindrome");
+		}
+		else 
+		{
+			System.out.println("not palindrome");
+		}
+}
+}

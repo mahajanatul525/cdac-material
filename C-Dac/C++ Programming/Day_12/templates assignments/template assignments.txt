@@ -1,0 +1,66 @@
+1) write a function template,which can accept anything as an argument and display it.
+It can also accept "Emp" class object as an argument.
+
+
+2) write a function template,which can accept argument as any type of array( char,int or double) and sort it in ascending order.
+
+3) write a function template which will accept 3 different types of argument and return the total size of arguments passed.
+
+4) write a class (not a class template) and inside it create a function template which will display one argument and display what type of argument it is.
+
+5) write a class template , which can take any generic type display it and return the size of type passed.
+(hint : in this class template write two functions void disp() and int size() ).
+
+6) write a class template, which can take 3 different type of arguments and print them.
+a class must be having only one constructor and that is a constructor which will take 3 arguments.
+class must be having disp function which will display the data.
+
+7) write a class template, which can take 3 different type of arguments.
+a class should not have any constructor.
+class must be having 3 setter methods and 3 getter methods.
+
+8)write a class template which will take 2 same type of data and compare them.
+if first is greater than second return 1 viceversa return -1. if both are same return 0;
+for that in this class template there should be 
+a compare() function.
+Also there will be a paramterized constructor.
+	Above class template u need to create in such a way that it can be reused in multiple applications.
+
+Now create first application where,
+
+class MyNum
+{	
+	private:
+		int num;
+	// other code
+};
+void main()
+{
+	// call compare function by passing 2 instances of MyNum
+}
+
+second application where,
+
+class MyChar
+{
+	private:
+		char ch;
+	// other code
+};
+void main()
+{
+	// call compare function by passing 2 instances of MyChar
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

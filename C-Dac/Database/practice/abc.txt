@@ -1,0 +1,6 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `pro_cur`(in fg int,out dname varchar(100))
+BEGIN
+select ename into dname
+from
+emp where eid=fg;
+END

@@ -1,0 +1,21 @@
+When EnableViewState is false for Textbox
+
+
+ the data for the TextBox is coming from the System.Web.UI.WebControls.TextBox class, that is one of several classes that implement the IPostBackDataHandler interface. This interfac requires the LoadPostData method. 
+
+
+
+
+After page initialization is completed but before the Load event loading of ViewState data is invoked (LoadViewState), then if the control implements IPostBackDataHandler, the loading of the form data is invoked (LoadPostData). The Text property of a TextBox control can therefore be set even if the View State mechanism is disabled
+
+Completely disable the View State mechanism for TextBox controls and the like
+
+
+
+
+The View State mechanism for TextBox controls and the like cannot be completely disabled. For example, View State is useful when the TextChanged event is handled (for comparing the current and previous values). It can also be used when the value that is being set is other than the one related to the Control's value (for example ForeColor, FontSize and so on).
+
+
+
+
+

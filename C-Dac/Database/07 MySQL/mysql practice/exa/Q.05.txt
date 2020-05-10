@@ -1,0 +1,125 @@
+5.Write a function which takes two strings as a parameters and prints whether the two strings are palindrome or not
+
+
+ delimiter $$
+
+create function strrev1(str1 char(100),str2 char(100))
+
+returns varchar(100) 
+
+begin
+
+declare srev1, srev2 char(100);
+
+declare rev1,rev2 char(100);
+
+declare l,c,c1,l1 int;
+d
+eclare flag1,flag2 int;
+
+set l:=length(str1);
+
+set l1:=length(str2);
+
+set c:=1;
+
+set c1:=1;
+
+set rev1:=str1;
+
+set rev2:=str2;
+
+set flag1:=0;
+
+set flag2:=0;
+
+set srev1:='';
+
+set srev2:='';
+
+
+
+myloop:loop
+
+if(c>l)
+ then 
+  
+leave myloop;
+
+  end if;
+
+set srev1:=concat(srev1,substring(rev1,l+1-c,1));
+
+set c:=c+1;
+  
+end loop myloop;
+  
+  
+myloop1:loop
+
+if(c1>l1) 
+then 
+  
+leave myloop1;
+ 
+ end if;
+
+set srev2:=concat(srev2,substring(rev2,l1+1-c1,1));
+
+set c1:=c1+1;
+
+end loop myloop1;
+
+
+if(rev1=srev1) 
+ then
+
+set flag1:=1;
+
+else
+
+set flag1:=2 ;
+
+end if;
+
+
+if(rev2=srev2) 
+then
+
+set flag2:=1;
+
+else
+
+set flag2:=2;
+
+end if;
+
+if(flag1=1) and (flag2=1)
+then
+
+return 'both are palindrom';
+
+end if;
+
+if(flag1=1) and (flag2=2)
+then
+
+return 'str1 is palindrom str2 is not palindrom';
+
+end if;
+
+if(flag1=2) and (flag2=1)then
+return 'str1 is not palindrom str2 is  palindrom';
+
+end if;
+
+if(flag1=2) and (flag2=2)then
+return 'str1 is not palindrom str2 is not palindrom';
+
+end if;
+
+end
+
+$$
+ 
+select strrev1('abadfh','batst')

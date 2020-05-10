@@ -1,0 +1,47 @@
+interface Game1 
+{
+	public void play();
+}
+class cricket implements Game1
+{
+	public void play()
+	{
+		System.out.println("in cric disp");
+	}
+}
+class football implements Game1
+{
+	public void play()
+	{
+		System.out.println("in football disp");
+	}
+}
+class tennis implements Game1
+{
+	public void play()
+	{
+		System.out.println("in tennis disp");
+	}
+}
+class demo<t extends Game1>
+{
+	public demo(t g)
+	{
+	System.out.println("in demo");
+	}
+	void perform(t g)
+	{
+		
+		g.play();
+	}
+
+}
+public class Game
+{
+	public static void main(String args[])
+	{
+		demo<cricket>c=new demo<cricket>(new cricket());
+		c.perform(new cricket());
+	}
+
+}

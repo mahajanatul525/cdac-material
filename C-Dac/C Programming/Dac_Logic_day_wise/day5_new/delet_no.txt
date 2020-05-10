@@ -1,0 +1,15 @@
+//Q9.	Accept 10 number in an array accept a number to be deleted from array and print new array
+#include<stdio.h>
+#include<conio.h>
+void unique(int [],int *);
+void main()
+{int i,j,n;
+	int a[]={5,4,6,7,1,3,0,11,9,8};
+	printf("\n no.to be deleted is:");
+	scanf("%d",&n);
+    for(i=0;i<10;i++)
+	{	if (a[i]==n)
+			i++;
+	printf("\n %d",a[i]);}
+	getch();
+}

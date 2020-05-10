@@ -1,0 +1,80 @@
+
+
+
+package mypack;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import java.util.*;
+public class Main 
+{
+	public static void main(String[] args) {
+		Session session = HibernateUtil.getSessionFactory().openSession(); 
+        Transaction transaction = null; 
+        try { 
+            transaction = session.beginTransaction(); 
+            Product p=new Product();
+          //  p.setId(1);
+            p.setName("soap");
+            p.setQty(75);
+            p.setPrice(90);
+            session.save(p);      
+            transaction.commit(); 
+            session.close();
+            System.out.println("before changing qty\t"+p);
+            p.setQty(180); // detached
+            System.out.println("after changing qty\t"+p);
+            Scanner sc=new Scanner(System.in);
+            System.out.println(sc.nextInt()); // go and check the database, u wont find changes
+            session=HibernateUtil.getSessionFactory().openSession();
+            transaction=session.beginTransaction();
+            transaction.begin();
+            //session.update(p); //reassociate detached entity with a new session
+            session.saveOrUpdate(p); //reassociate detached entity with a new session
+            transaction.commit(); 
+            session.close();
+            }
+        catch(Exception ee)
+        {
+        	System.out.println("in catch\t"+ee);
+        }
+}
+}
+
+output
+Hibernate: insert into Product (name, price, qty, id) values (?, ?, ?, ?)
+
+before changing qty	Product [name=soap, qty=75, price=90.0]
+after changing qty	Product [name=soap, qty=180, price=90.0]
+
+go and check database
+
+mysql> select * from product;
++----+------+-------+------+
+| id | name | price | qty  |
++----+------+-------+------+
+|  0 | soap |    90 |   75 |
++----+------+-------+------+
+1 row in set (0.00 sec)
+
+now come back in eclipse and type some number say "24"
+
+output
+
+24
+Hibernate: select product_.id, product_.name as name0_, product_.price as price0_, product_.qty as qty0_ from Product product_ where product_.id=?
+
+Hibernate: update Product set name=?, price=?, qty=? where id=?
+
+go and check database
+
+mysql> select * from product;
++----+------+-------+------+
+| id | name | price | qty  |
++----+------+-------+------+
+|  0 | soap |    90 |  180 |
++----+------+-------+------+
+1 row in set (0.00 sec)
+
+
+
+

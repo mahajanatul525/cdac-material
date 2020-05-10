@@ -1,0 +1,3 @@
+enter one number in first textbox
+enter second number in second textbox.
+when u press tab on second textbox total of two numbers is displayed in third textbox.

@@ -1,0 +1,49 @@
+/*Write a file copy program using unicode character streams.
+( FileWriter and FileReader )*/
+package mypack;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.Scanner;
+
+public class test4
+{
+	public static void main(String []args)
+	{   Scanner sc=new Scanner(System.in);
+	    
+		try(FileWriter fw=new FileWriter("d:\\abc3.txt"))
+		{
+			char arr[]=new char[5];
+			for(int i=0;i<5;i++)
+			{
+			
+			char ch=sc.next().charAt(0);
+			 arr[i]=ch;
+			 fw.write(arr[i]);
+			// System.out.println(arr[i]);
+			}
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		try(FileReader fr=new FileReader("d:\\abc3.txt"))
+		{ 
+			char a[]=null;
+		
+			a=new char[(int)new File("d:\\abc3.txt").length()];
+			fr.read(a);
+			for(int i=0;i<a.length;i++)
+			{
+				System.out.println(a[i]);
+			}
+		}
+			
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
+
+}

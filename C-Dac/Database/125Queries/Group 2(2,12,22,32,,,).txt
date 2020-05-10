@@ -1,0 +1,49 @@
+﻿#2. List all customers with a rating of 100.
+	select * from customers where rating=100;
+
+#12. Find the largest order taken by each salesperson.
+	select max(amt),sname from salespeople s join orders o on o.snum=s.snum group by sname;
+
+#22. Give the salespeople’s commissions as percentages instead of decimal numbers.
+	select sname,round(comm*100) from salespeople;
+
+#32. Write a query that uses a subquery to obtain all orders for the customer named Cisneros.
+#Assume you do not know his customer number.
+
+	select * from orders where cnum = ( select cnum from customers where cname='Cisneros'); 
+
+#42. Find all orders with above average amounts for their customers.
+	select * from orders where amt > (select avg(amt) from orders);
+	
+#52. Write 2 queries that select all salespeople (by name and number) who have customers in their
+#cities who they do not service, one using a join and one a corelated subquery. Which solution
+#is more elegant?
+
+	#a.select s.snum,sname from salespeople s join customers c where c.city=s.city and s.snum != 		c.snum;
+	#b.select s.snum,sname from salespeople s where s.snum in
+	  (select s.snum from customers c where s.city=c.city and s.snum !=c.snum);
+
+
+#62. List all Salespeople’s names and the Commission they have earned.
+	select sname,comm from salespeople;
+ 
+#72. Write a query using the EXISTS operator that selects all salespeople with customers located in
+#their cities who are not assigned to them.
+
+	select snum,sname from salespeople s where exists 
+	(select 1 from customers c where s.city=c.city and s.snum !=c.snum);
+ 
+ 
+#82. Write a query that lists customers in descending order of rating. Output the rating field first,
+#followed by the customer’s names and numbers.
+ 
+	select rating,cname,cnum from customers order by rating desc;
+ 
+ 
+#92. What would be the output from the following query?
+	SELECT * FROM ORDERS
+	WHERE NOT (odate = 10/03/96 OR snum > 1006) AND amt >=
+	1500;
+ 
+# 102.List all customers in descending order of customer rating.
+	select * from customers order by rating desc;

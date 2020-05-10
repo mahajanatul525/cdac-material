@@ -1,0 +1,47 @@
+Q1 ...Create a simple ASP.NET Application to Sign In Account holder for Bank Of Vidyanidhi. Allow Successful Signed In Account holder to Change his password using
+
+Change Password screen Account holder has first name, last name, age, email, and password attributes.
+
+Use proper validation controls controls.
+Use any .NET language
+Use any database .
+
+
+
+Q2. Create Employee Table with following field 
+
+Id
+FirstName
+Age
+Email
+Salary
+Personal Web site
+Mobile
+Create database and use entity framework. Give peoper validation...
+and perform index/edit/delete 
+Use MVC
+
+Q3.. Create Class Party Having Property
+
+Name
+Email
+Phone
+bool Will Attend..
+
+when you load index page display hyperlink which will take you to partyinvitation form
+let your fillyp data and display user data in new page with is name and some message...
+use MVC
+
+
+
+
+
+Q3...Create an asp.net web application for a new user to register in shadi.com--- search site. 
+
+Create a registration form
+consisting of details like:
+
+First name, Last name, Address, Contact No., Educational details, Current and last job responsibilities if any.
+
+All data should be entered with proper validation (using validation controls) into database.
+Also upload the resume of the user and store it in database. Uploaded resume should be within size limit of 250 KB

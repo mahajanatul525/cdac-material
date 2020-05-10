@@ -1,0 +1,18 @@
+CREATE DEFINER=`root`@`localhost` FUNCTION `yrs`(d1 date,d2 date) RETURNS int(11)
+BEGIN
+
+declare big int;
+declare small int;
+declare trunc int;
+if(d1>d2) then
+set big:=year(d1);
+set small:=year(d2);
+else
+set big:=year(d2);
+set small:=year(d1);
+end if;
+
+set trunc := big-small;
+
+RETURN trunc;
+END

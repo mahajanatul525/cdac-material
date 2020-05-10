@@ -1,0 +1,20 @@
+#include<stdio.h>
+void main()
+{
+	int no,r,sum=0,n;
+	printf("\nEnter the number = ");
+	scanf("%d",&no);
+	n=no;
+
+	while(no!=0)
+	{
+		r=no%10;
+		sum = sum*10 + r;
+		no=no/10;
+	}
+
+	if(n==sum)
+		printf("It is Palindrome Number");
+	else
+		printf("It is not Palindrome Number");
+}

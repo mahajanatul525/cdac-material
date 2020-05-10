@@ -1,0 +1,28 @@
+	managed bean
+
+		ProductBean
+
+			private String name; // setters and getters
+
+			private List<String> mylist; // getter method
+
+				
+
+Add.xhtml
+
+Enter Product name: 
+
+	add to cart- 
+
+when u click on "add to cart", control should go to "success.xhtml" where u will be having 2 links
+
+
+		add more
+
+		view cart
+
+if u click on "add more", control should go to "Add.xhtml"
+
+if u click on "view cart", control should go to "View.xhtml" which should display all the products added till that time.
+
+

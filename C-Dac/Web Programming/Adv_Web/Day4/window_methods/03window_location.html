@@ -1,0 +1,21 @@
+<html>
+<head>
+<script type="text/javascript">
+
+window.status="hello";
+function newLocation()
+{
+alert(location.pathname)
+window.location="p.html";
+alert(window.status)
+//window.location.href="p.html";
+}
+</script>
+</head>
+
+<body>
+
+<input type="button" onclick="newLocation()" value="Change URL">
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+2 links
+
+	Employees
+
+	modules
+
+when u click on "Employees", it should display details of all the employees
+
+empid	name	address
+
+when u click on "modules" it will display total modules conducted for training.
+e.g.
+database
+javase
+javaee
+
+[ create "Employee" class with empid,name ,address, setters and getters]

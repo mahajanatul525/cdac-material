@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Group4_HOBMAN", "Group4_HOBMAN\Group4_HOBMAN.csproj", "{9A6CF129-5EB4-4846-ABFA-A358A26B726C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A6CF129-5EB4-4846-ABFA-A358A26B726C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A6CF129-5EB4-4846-ABFA-A358A26B726C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A6CF129-5EB4-4846-ABFA-A358A26B726C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A6CF129-5EB4-4846-ABFA-A358A26B726C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,55 @@
+You have to write a program to count the number of words in the input. The program should read in the input text till end_of_file (EOF) and output the number of words found. A word can be taken to be a sequence of alphanumeric characters terminated by a space or by a newline. Assume that there will not be any characters other than alphanumeric (a-z, A-Z, 0-9) and white spaces (blank, tabs and newlines) in the input.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h> 
+int main()
+{
+    int wordStarted = 0;
+    int wordCount = 0;
+    char alpha;
+
+    while ((alpha=getchar()) != EOF) {
+        if ( alpha=='\r'  || alpha=='\t' || alpha=='\n' ) {
+            wordStarted = 0;
+        } else if ((alpha!='\t' && alpha!='\r' && alpha!='\n') && !wordStarted) {
+            wordStarted = 1;
+            wordCount++;
+        }
+    }
+
+    printf("%d\n", wordCount);
+
+    return 0;
+}
+
+
+
+
+
+
+
+Input:
+This is a sample line of text
+  This is another line of text
+    This line is the 3rd line
+  This junk line contains 989902 99dsaWjJ8    015
+This is the fifth and the last line of input
+Output:
+36
+Input:
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+Output:
+1
+ 

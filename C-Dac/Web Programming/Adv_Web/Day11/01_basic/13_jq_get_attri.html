@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head><style>
+#dd{color:green;}
+</style><script src="jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+var b=$("#aa").attr("href");
+alert(b);
+$("#aa").attr("href","b.html")
+alert($("#aa").attr("href"));
+  /* $("#nn").attr(
+    {  "href":"b.html",
+      "title":"go"}       )
+alert($("#nn").attr("title"))*/
+});
+</script></head>
+<body>
+<a href="01.html" id="aa"/>click</a>
+<a href="01.html" id="nn"/>click</a>
+</body>
+</html>
+
+
+

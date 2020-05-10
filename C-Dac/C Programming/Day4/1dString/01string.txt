@@ -1,0 +1,69 @@
+#include<stdio.h>
+void main()
+{
+
+char ch[10];
+
+printf("enter name"); 
+scanf("%s",ch); //vita
+printf("%s",ch);//vita
+
+printf("enter full name");
+scanf("%s",ch)  //vidya nidhi
+printf("%s",ch);// vidya
+
+puts("enter name"); //vidya nidhi
+gets(ch);
+puts(ch); //vidya nidhi
+
+puts("enter name");
+scanf("%[^\n]",ch);vidya nidhi
+printf("%s",ch);// vidya nidhi
+
+}
+
+
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+void main()
+{int i,l,c=0;
+char ch[]="vita";
+
+printf("%d",sizeof(ch));//5
+
+printf("%d",strlen(ch));
+printf("%u",ch);//2002
+
+printf("%c",*ch);//v
+
+printf("%c",*(ch+1));//i
+
+printf("%s",(ch+1));//ita
+l=strlen(ch);
+for(i=0;i<l;i++)
+{
+printf("%c",ch[i]);
+
+}
+for(i=0;ch[i]!='\0';i++)
+{
+printf("%c",ch[i]);//vita
+c++
+}
+printf("%d"c);
+
+for(i=0;ch[i]!='\0';i++);
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+log4j:WARN No appenders could be found for logger (org.hibernate.cfg.annotations.Version).
+log4j:WARN Please initialize the log4j system properly.
+
+Hibernate: insert into Product (name, price, qty) values (?, ?, ?)
+
+3
+3
+
+Before refresh	Product [name=soap, qty=75, price=90.0]
+
+Hibernate: select product0_.id as id0_0_, product0_.name as name0_0_, product0_.price as price0_0_, product0_.qty as qty0_0_ from Product product0_ where product0_.id=?
+
+After refresh	Product [name=soap, qty=75, price=200.0]

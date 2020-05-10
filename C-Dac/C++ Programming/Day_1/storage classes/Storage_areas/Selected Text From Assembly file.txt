@@ -1,0 +1,286 @@
+_BSS	SEGMENT
+?k@@3HA	DD	01H DUP (?)				; k
+_BSS	ENDS
+
+_BSS	SEGMENT
+_?val@?1??fun@@YAXXZ@4HA DD 01H DUP (?)
+_BSS	ENDS
+
+_DATA	SEGMENT
+?num@@3HA DD	0aH					; num
+_?val1@?1??fun@@YAXXZ@4HA DD 032H
+_DATA	ENDS
+
+
+
+EXTRN	?fun@@YAXXZ:NEAR				; fun
+;	COMDAT _main
+
+
+
+
+_TEXT	SEGMENT
+_var$ = -4
+_main	PROC NEAR					; COMDAT
+
+; 5    : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 44	 sub	 esp, 68			; 00000044H
+  00006	53		 push	 ebx
+  00007	56		 push	 esi
+  00008	57		 push	 edi
+  00009	8d 7d bc	 lea	 edi, DWORD PTR [ebp-68]
+  0000c	b9 11 00 00 00	 mov	 ecx, 17			; 00000011H
+  00011	b8 cc cc cc cc	 mov	 eax, -858993460		; ccccccccH
+  00016	f3 ab		 rep stosd
+
+; 6    : 	void fun();
+; 7    : 	int var=20;
+
+  00018	c7 45 fc 14 00
+	00 00		 mov	 DWORD PTR _var$[ebp], 20 ; 00000014H
+
+; 8    : 	fun();
+
+  0001f	e8 00 00 00 00	 call	 ?fun@@YAXXZ		; fun
+
+; 9    : }
+
+  00024	5f		 pop	 edi
+  00025	5e		 pop	 esi
+  00026	5b		 pop	 ebx
+  00027	83 c4 44	 add	 esp, 68			; 00000044H
+  0002a	3b ec		 cmp	 ebp, esp
+  0002c	e8 00 00 00 00	 call	 __chkesp
+  00031	8b e5		 mov	 esp, ebp
+  00033	5d		 pop	 ebp
+  00034	c3		 ret	 0
+_main	ENDP
+_TEXT	ENDS
+
+
+
+
+
+
+_TEXT	SEGMENT
+_i$ = -4
+?fun@@YAXXZ PROC NEAR					; fun, COMDAT
+
+; 11   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 44	 sub	 esp, 68			; 00000044H
+  00006	53		 push	 ebx
+  00007	56		 push	 esi
+  00008	57		 push	 edi
+  00009	8d 7d bc	 lea	 edi, DWORD PTR [ebp-68]
+  0000c	b9 11 00 00 00	 mov	 ecx, 17			; 00000011H
+  00011	b8 cc cc cc cc	 mov	 eax, -858993460		; ccccccccH
+  00016	f3 ab		 rep stosd
+
+; 12   : 	static int val;
+; 13   : 	static int val1=50;
+; 14   : 	for(int i=0;i<4;i++)
+
+  00018	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  0001f	eb 09		 jmp	 SHORT $L1299
+$L1300:
+  00021	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00024	83 c0 01	 add	 eax, 1
+  00027	89 45 fc	 mov	 DWORD PTR _i$[ebp], eax
+$L1299:
+  0002a	83 7d fc 04	 cmp	 DWORD PTR _i$[ebp], 4
+  0002e	7d 28		 jge	 SHORT $L1301
+
+; 16   : 		cout<<"hello\t"<<i<<endl;
+
+  00030	68 00 00 00 00	 push	 OFFSET FLAT:?endl@@YAAAVostream@@AAV1@@Z ; endl
+  00035	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  00038	51		 push	 ecx
+  00039	68 00 00 00 00	 push	 OFFSET FLAT:??_C@_06FHBE@hello?7?$AA@ ; `string'
+  0003e	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?cout@@3Vostream_withassign@@A
+  00043	e8 00 00 00 00	 call	 ??6ostream@@QAEAAV0@PBD@Z ; ostream::operator<<
+  00048	8b c8		 mov	 ecx, eax
+  0004a	e8 00 00 00 00	 call	 ??6ostream@@QAEAAV0@H@Z	; ostream::operator<<
+  0004f	8b c8		 mov	 ecx, eax
+  00051	e8 00 00 00 00	 call	 ??6ostream@@QAEAAV0@P6AAAV0@AAV0@@Z@Z ; ostream::operator<<
+
+; 17   : 	}
+
+  00056	eb c9		 jmp	 SHORT $L1300
+$L1301:
+
+; 18   : 	cout<<"in fun\t"<<endl;
+
+  00058	68 00 00 00 00	 push	 OFFSET FLAT:?endl@@YAAAVostream@@AAV1@@Z ; endl
+  0005d	68 00 00 00 00	 push	 OFFSET FLAT:??_C@_07LLID@in?5fun?7?$AA@ ; `string'
+  00062	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?cout@@3Vostream_withassign@@A
+  00067	e8 00 00 00 00	 call	 ??6ostream@@QAEAAV0@PBD@Z ; ostream::operator<<
+  0006c	8b c8		 mov	 ecx, eax
+  0006e	e8 00 00 00 00	 call	 ??6ostream@@QAEAAV0@P6AAAV0@AAV0@@Z@Z ; ostream::operator<<
+
+; 19   : }
+
+  00073	5f		 pop	 edi
+  00074	5e		 pop	 esi
+  00075	5b		 pop	 ebx
+  00076	83 c4 44	 add	 esp, 68			; 00000044H
+  00079	3b ec		 cmp	 ebp, esp
+  0007b	e8 00 00 00 00	 call	 __chkesp
+  00080	8b e5		 mov	 esp, ebp
+  00082	5d		 pop	 ebp
+  00083	c3		 ret	 0
+?fun@@YAXXZ ENDP					; fun
+_TEXT	ENDS
+_BSS	SEGMENT
+_?val@?1??fun@@YAXXZ@4HA DD 01H DUP (?)
+_BSS	ENDS
+;	COMDAT ??6ostream@@QAEAAV0@P6AAAV0@AAV0@@Z@Z
+_TEXT	SEGMENT
+__f$ = 8
+_this$ = -4
+??6ostream@@QAEAAV0@P6AAAV0@AAV0@@Z@Z PROC NEAR		; ostream::operator<<, COMDAT
+
+; 112  : inline ostream& ostream::operator<<(ostream& (__cdecl * _f)(ostream&)) { (*_f)(*this); return *this; }
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 44	 sub	 esp, 68			; 00000044H
+  00006	53		 push	 ebx
+  00007	56		 push	 esi
+  00008	57		 push	 edi
+  00009	51		 push	 ecx
+  0000a	8d 7d bc	 lea	 edi, DWORD PTR [ebp-68]
+  0000d	b9 11 00 00 00	 mov	 ecx, 17			; 00000011H
+  00012	b8 cc cc cc cc	 mov	 eax, -858993460		; ccccccccH
+  00017	f3 ab		 rep stosd
+  00019	59		 pop	 ecx
+  0001a	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  0001d	8b f4		 mov	 esi, esp
+  0001f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00022	50		 push	 eax
+  00023	ff 55 08	 call	 DWORD PTR __f$[ebp]
+  00026	83 c4 04	 add	 esp, 4
+  00029	3b f4		 cmp	 esi, esp
+  0002b	e8 00 00 00 00	 call	 __chkesp
+  00030	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00033	5f		 pop	 edi
+  00034	5e		 pop	 esi
+  00035	5b		 pop	 ebx
+  00036	83 c4 44	 add	 esp, 68			; 00000044H
+  00039	3b ec		 cmp	 ebp, esp
+  0003b	e8 00 00 00 00	 call	 __chkesp
+  00040	8b e5		 mov	 esp, ebp
+  00042	5d		 pop	 ebp
+  00043	c2 04 00	 ret	 4
+??6ostream@@QAEAAV0@P6AAAV0@AAV0@@Z@Z ENDP		; ostream::operator<<
+_TEXT	ENDS
+PUBLIC	?flush@@YAAAVostream@@AAV1@@Z			; flush
+PUBLIC	??6ostream@@QAEAAV0@D@Z				; ostream::operator<<
+;	COMDAT ?endl@@YAAAVostream@@AAV1@@Z
+_TEXT	SEGMENT
+__outs$ = 8
+?endl@@YAAAVostream@@AAV1@@Z PROC NEAR			; endl, COMDAT
+
+; 144  : inline _CRTIMP ostream& __cdecl endl(ostream& _outs) { return _outs << '\n' << flush; }
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 40	 sub	 esp, 64			; 00000040H
+  00006	53		 push	 ebx
+  00007	56		 push	 esi
+  00008	57		 push	 edi
+  00009	8d 7d c0	 lea	 edi, DWORD PTR [ebp-64]
+  0000c	b9 10 00 00 00	 mov	 ecx, 16			; 00000010H
+  00011	b8 cc cc cc cc	 mov	 eax, -858993460		; ccccccccH
+  00016	f3 ab		 rep stosd
+  00018	68 00 00 00 00	 push	 OFFSET FLAT:?flush@@YAAAVostream@@AAV1@@Z ; flush
+  0001d	6a 0a		 push	 10			; 0000000aH
+  0001f	8b 4d 08	 mov	 ecx, DWORD PTR __outs$[ebp]
+  00022	e8 00 00 00 00	 call	 ??6ostream@@QAEAAV0@D@Z	; ostream::operator<<
+  00027	8b c8		 mov	 ecx, eax
+  00029	e8 00 00 00 00	 call	 ??6ostream@@QAEAAV0@P6AAAV0@AAV0@@Z@Z ; ostream::operator<<
+  0002e	5f		 pop	 edi
+  0002f	5e		 pop	 esi
+  00030	5b		 pop	 ebx
+  00031	83 c4 40	 add	 esp, 64			; 00000040H
+  00034	3b ec		 cmp	 ebp, esp
+  00036	e8 00 00 00 00	 call	 __chkesp
+  0003b	8b e5		 mov	 esp, ebp
+  0003d	5d		 pop	 ebp
+  0003e	c3		 ret	 0
+?endl@@YAAAVostream@@AAV1@@Z ENDP			; endl
+_TEXT	ENDS
+EXTRN	??6ostream@@QAEAAV0@E@Z:NEAR			; ostream::operator<<
+;	COMDAT ??6ostream@@QAEAAV0@D@Z
+_TEXT	SEGMENT
+__c$ = 8
+_this$ = -4
+??6ostream@@QAEAAV0@D@Z PROC NEAR			; ostream::operator<<, COMDAT
+
+; 115  : inline  ostream& ostream::operator<<(char _c) { return operator<<((unsigned char) _c); }
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 44	 sub	 esp, 68			; 00000044H
+  00006	53		 push	 ebx
+  00007	56		 push	 esi
+  00008	57		 push	 edi
+  00009	51		 push	 ecx
+  0000a	8d 7d bc	 lea	 edi, DWORD PTR [ebp-68]
+  0000d	b9 11 00 00 00	 mov	 ecx, 17			; 00000011H
+  00012	b8 cc cc cc cc	 mov	 eax, -858993460		; ccccccccH
+  00017	f3 ab		 rep stosd
+  00019	59		 pop	 ecx
+  0001a	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  0001d	8a 45 08	 mov	 al, BYTE PTR __c$[ebp]
+  00020	50		 push	 eax
+  00021	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00024	e8 00 00 00 00	 call	 ??6ostream@@QAEAAV0@E@Z	; ostream::operator<<
+  00029	5f		 pop	 edi
+  0002a	5e		 pop	 esi
+  0002b	5b		 pop	 ebx
+  0002c	83 c4 44	 add	 esp, 68			; 00000044H
+  0002f	3b ec		 cmp	 ebp, esp
+  00031	e8 00 00 00 00	 call	 __chkesp
+  00036	8b e5		 mov	 esp, ebp
+  00038	5d		 pop	 ebp
+  00039	c2 04 00	 ret	 4
+??6ostream@@QAEAAV0@D@Z ENDP				; ostream::operator<<
+_TEXT	ENDS
+EXTRN	?flush@ostream@@QAEAAV1@XZ:NEAR			; ostream::flush
+;	COMDAT ?flush@@YAAAVostream@@AAV1@@Z
+_TEXT	SEGMENT
+__outs$ = 8
+?flush@@YAAAVostream@@AAV1@@Z PROC NEAR			; flush, COMDAT
+
+; 143  : inline _CRTIMP ostream& __cdecl flush(ostream& _outs) { return _outs.flush(); }
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 40	 sub	 esp, 64			; 00000040H
+  00006	53		 push	 ebx
+  00007	56		 push	 esi
+  00008	57		 push	 edi
+  00009	8d 7d c0	 lea	 edi, DWORD PTR [ebp-64]
+  0000c	b9 10 00 00 00	 mov	 ecx, 16			; 00000010H
+  00011	b8 cc cc cc cc	 mov	 eax, -858993460		; ccccccccH
+  00016	f3 ab		 rep stosd
+  00018	8b 4d 08	 mov	 ecx, DWORD PTR __outs$[ebp]
+  0001b	e8 00 00 00 00	 call	 ?flush@ostream@@QAEAAV1@XZ ; ostream::flush
+  00020	5f		 pop	 edi
+  00021	5e		 pop	 esi
+  00022	5b		 pop	 ebx
+  00023	83 c4 40	 add	 esp, 64			; 00000040H
+  00026	3b ec		 cmp	 ebp, esp
+  00028	e8 00 00 00 00	 call	 __chkesp
+  0002d	8b e5		 mov	 esp, ebp
+  0002f	5d		 pop	 ebp
+  00030	c3		 ret	 0
+?flush@@YAAAVostream@@AAV1@@Z ENDP			; flush
+_TEXT	ENDS

@@ -1,0 +1,526 @@
+Question 1
+Not answered
+Marked out of 1.00
+ FlaggedRemove flag
+Question text
+Readonly variable required data at compile time
+Select one:
+a. False
+b. True
+Feedback
+The correct answer is: False
+Question 2
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+constant variable are by default static
+Select one:
+a. False
+b. True Correct
+Feedback
+The correct answer is: True
+Question 3
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+using System; class Test { static void Main() {
+
+F();
+
+F()   } } class A { static A() {
+
+      Console.WriteLine("Init A");
+
+   }    public static void F() {       Console.WriteLine("A.F");
+
+   } } class B {  static B() {
+
+    Console.WriteLine("Init B");
+
+   }    public static void F() {       Console.WriteLine("B.F");
+
+   }
+
+}
+
+ 
+
+What will be the output
+
+Select one:
+a. Error
+b.
+Init A A.F
+
+Init B
+B.F
+
+c. None
+d.
+Init B
+
+B.F
+
+Init A
+
+A.F
+
+Feedback
+The correct answer is:
+Init A A.F
+
+Init B
+B.F
+
+Question 4
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Const variable required data at runtime
+Select one:
+a. False Incorrect
+b. True
+Feedback
+The correct answer is: True
+Question 5
+Correct
+Mark 1.00 out of 1.00
+ FlaggedRemove flag
+Question text
+using System; using System.Collections.Generic;
+namespace ConsoleApplication7
+{
+   abstract class shape     {   public int H;         public int W;
+        public shape(int h, int w)
+        {   H = h;
+            W = w;     }         public abstract double area();
+    }
+        class rectangle :shape
+        { public rectangle(int p, int q) : base(p, q) { }           public  override double area()
+           {  return H * W;       }
+        }
+    class triangle:shape 
+    {   public   triangle(int p, int q) : base(p, q) { }         public  override double area()
+           {  return (H * W)/2.0;       }
+    }
+    class Program
+    { static void Main(string[] args)
+        {   shape s1 = new rectangle (5, 5);             Console.WriteLine (s1.area());             shape s2 = new triangle (6, 6);
+            Console.WriteLine(s2.area());
+            Console.ReadLine ();
+        }
+    }
+Select one:
+a. None
+b. 0,0
+c. 0,15
+d. 25,18 Correct
+Feedback
+The correct answer is: 25,18
+Question 6
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+class program
+
+{ const int a=5; 
+
+   Static void Main()
+
+   { program C= new program();   Console.WriteLine(C.a);
+
+    }
+
+}
+
+ 
+
+Select one:
+a. None
+b. run time error
+c. 5
+d. Compile time Error Correct
+Feedback
+The correct answer is: Compile time Error
+Question 7
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+using System;
+
+interface I1          
+
+{ void A();}  interface I2 { void I1.A();}
+
+  class C : I1, I2
+
+{   void I2.A()
+
+    { Console.WriteLine("I2.A()"); }    Void A() { Console.WriteLine("I1.A()");}
+
+}
+
+Class entry
+
+{ static void main(){
+
+ 
+
+I1 x=new C(); I2 p=new c();  
+
+x.A();
+
+p.A();
+
+}}
+Select one:
+a. Error
+b. I1.A(),I2.A() Correct
+c. I1.A();
+d. None
+Feedback
+The correct answer is: I1.A(),I2.A()
+Question 8
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+class program { const int a=5; 
+
+   Static void main()
+
+   { program C= new program();
+
+  Console.WriteLine(program.a);
+
+    }
+
+}
+
+Select one:
+a. Compile time Error
+b. run time error
+c. 5 Correct
+d. None
+Feedback
+The correct answer is: 5
+Question 9
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+using System;
+
+interface I1          
+
+{   void A();} interface I2 { void A();} class C : I1, I2 {    void I2.A()
+
+    { Console.WriteLine("I2.A()");  }
+
+    Void A() { Console.WriteLine("I1.A()");}
+
+}
+
+Class entry
+
+{ static void main(){
+
+C c = new C(); I2 x=new C();
+
+c.A();   
+
+x.A();}}
+Select one:
+a. Error
+b. I1.A(),I2.A() Correct
+c. I2.A(),I1.A()
+d. None
+Feedback
+The correct answer is: I1.A(),I2.A()
+Question 10
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+ using System;
+
+    class shape
+
+    {
+
+        public int H;
+
+        public int W; 
+       public shape(int h, int w)
+
+        {  H = h;
+
+            W = w;
+
+        }
+
+        public double area()
+
+        {  return 0;     }
+
+    }
+
+        class rectangle :shape
+
+        { public rectangle(int p, int q) : base(p, q) { }           public double area()
+
+           {  return H * W;       }
+
+        }
+
+    class triangle:shape 
+
+    {  public triangle(int p, int q) : base(p, q) { }           public double area()            {  return (H * W)/2.0;       }
+
+    }
+
+    class Program
+
+    {   static void Main(string[] args)
+
+        {  shape s1 = new triangle(5, 5);             Console.WriteLine (s1.area());             shape s2 = new rectangle (5, 5);             Console.WriteLine(s2.area());
+
+            Console.ReadLine ();       }
+
+    }
+
+What will be the output
+
+Select one:
+a. 0,0 Correct
+b. 25,12
+c. None
+d. 12.00
+Feedback
+The correct answer is: 0,0
+Question 11
+Not answered
+Marked out of 1.00
+ FlaggedRemove flag
+Question text
+Readonly variable must be initialised at time of declaration
+Select one:
+a. False
+b. True
+Feedback
+The correct answer is: False
+Question 12
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+You can not declare static variable inside method
+Select one:
+a. False
+b. True Correct
+Feedback
+The correct answer is: True
+Question 13
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+using System;     class shape     {  public int H;         public int W;
+        public shape(int h, int w)
+        {      H = h;
+            W = w;     }         public virtual double area()
+        {       return 0;     }
+    }
+        class rectangle :shape
+        { public rectangle(int p, int q) : base(p, q) { }           public double area()
+           {  return H * W;       }
+        }
+    class triangle:shape 
+    {
+        public triangle(int p, int q) : base(p, q) { }           public double area()            {  return (H * W)/2.0;       }
+    }
+    class Program
+    {  static void Main(string[] args)
+        {      shape s1 = new triangle(5, 5);             Console.WriteLine (s1.area());             shape s2 = new rectangle (5, 5);
+            Console.WriteLine(s2.area());
+            Console.ReadLine ();
+        }
+    }
+Select one:
+a. 25,12.00
+b. 0,0 Correct
+c. 12.05,25
+d. None
+Feedback
+The correct answer is: 0,0
+Question 14
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+You can not declare constant variable inside method
+Select one:
+a. True Incorrect
+b. False
+Feedback
+The correct answer is: False
+Question 15
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+using System; using System.Collections.Generic;
+    class shape     {  public int H;         public int W;         public shape(int h, int w)
+        {   H = h;
+            W = w;      }         public virtual double area()
+        {          return 0;       }
+    }
+        class rectangle :shape
+        { public rectangle(int p, int q) : base(p, q) { }           public override double area()
+           {  return H * W;       }
+        }
+    class triangle:shape 
+    {  public   triangle(int p, int q) : base(p, q) { }         public override double area()
+           {  return (H * W)/2.0;       }
+    }
+    class Program
+    {    static void Main(string[] args)
+        {    shape s1 = new rectangle(5, 5);             Console.WriteLine (s1.area());             shape s2 = new triangle(6, 6);             Console.WriteLine(s2.area());
+            Console.ReadLine ();
+        }
+    }
+Select one:
+a. 0,25
+b. 25 ,18
+c. 0
+d. 25,18.000000 Incorrect
+Feedback
+The correct answer is: 25 ,18
+Question 16
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+using System;
+
+interface I1          
+
+{ void A();}  interface I2
+
+{  void A();}
+
+ 
+
+class C : I1, I2
+
+{   void I1.A()
+
+    { Console.WriteLine("I1.A()");  }
+
+}
+
+Class entry
+
+{ static void main(){
+
+ C c = new C();
+
+c.A();   
+
+}}
+
+Select one:
+a. none
+b. I2.A()
+c. Compile time Error Correct
+d. Run time Error
+Feedback
+The correct answer is: Compile time Error
+Question 17
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+using System;
+
+interface I1          
+
+{ void A(); }  interface I2 { void A(); }  class C : I1, I2 {  public void A()  
+
+    {  Console.WriteLine("C.A()");  }
+
+     void I1.A() 
+
+    { Console.WriteLine("I1.A()");  }
+
+}
+
+Class entry
+
+{ static void main(){
+
+ C c = new C();
+
+c.A();    I2 i2 = c;
+
+c.A();}}
+
+Select one:
+a. I1.A(),C.A()
+b. C.A(),C.A() Correct
+c. None
+d. C.A(),I1.A()
+Feedback
+The correct answer is: C.A(),C.A()
+Question 18
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Readonly variable must be either initialised at time of declaration or in constructor
+Select one:
+a. False
+b. True Correct
+Feedback
+The correct answer is: True
+Question 19
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+using System;
+namespace ConsoleApplication7
+{
+   abstract class shape
+    {
+        public int H;         public int W;         public shape(int h, int w)
+        {   H = h;
+            W = w;       }         public virtual double area()
+        {          return 0;       }
+    }
+    class rectangle :shape
+        { public rectangle(int p, int q) : base(p, q) { }           public  double area()
+           {  return H * W;       }
+        }
+    class triangle:shape 
+    {
+        public   triangle(int p, int q) : base(p, q) { }         public  double area()            {  return (H * W)/2.0;       }
+    }
+    class Program
+    {
+        static void Main(string[] args)         {   shape s1 = new rectangle(5, 5);             Console.WriteLine (s1.area());             shape s2 = new triangle (6, 6);
+            Console.WriteLine(s2.area());
+            Console.ReadLine ();
+        }     }
+Select one:
+a. 15,18.000000
+b. None
+c. 0,0 Correct
+d. 25,18
+Feedback
+The correct answer is: 0,0

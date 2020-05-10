@@ -1,0 +1,43 @@
+using System;
+// Using Traditional Accessors and Mutators
+class Employee
+{
+    // Field data.
+    private string empName;
+    private int empID;
+    private float currPay;
+    // Constructors.
+    public Employee() { }
+    public Employee(string name, int id, float pay)
+    {
+        empName = name;
+        empID = id;
+        currPay = pay;
+    }
+    // Methods.
+    public void GiveBonus(float amount)
+    {       currPay += amount;     }
+    public void DisplayStats()
+    {
+        Console.WriteLine("Name: {0}", empName);
+        Console.WriteLine("ID: {0}", empID);
+        Console.WriteLine("Pay: {0}", currPay);
+    }
+}
+
+class entry
+{
+
+    static void Main(string[] args)
+    {
+        // Error! Cannot directly access private members
+        // from an object!
+        Employee emp = new Employee();
+        //emp.empName = "Marv";
+        Employee em = new Employee("vita",5,90000);
+        em.DisplayStats();
+        Console.ReadKey();
+
+    }
+
+}

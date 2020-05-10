@@ -1,0 +1,34 @@
+// at "here" try to access num directly
+class MyClass
+{
+	private:
+		int num;
+	public:
+		MyClass(int num)
+		{
+			this->num=num;
+		}
+		int getNum()
+		{
+			return num;
+		}
+	friend void disp(MyClass&);
+};
+void disp(MyClass &ref)
+{
+	cout<<ref.num<<endl;
+}
+int main()
+{
+	MyClass m;
+	disp(m);
+}
+
+
+
+
+
+
+
+
+

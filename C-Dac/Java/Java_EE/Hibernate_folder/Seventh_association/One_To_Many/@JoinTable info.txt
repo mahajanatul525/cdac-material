@@ -1,0 +1,12 @@
+even if u don't mention
+
+@JoinTable(name="student_phone")
+inside
+
+Student.java,
+
+hibernate will by-default create an association table "student_phone"
+
+@JoinTable can be used explicitly to give a different name to association table . e.g.
+
+@JoinTable(name="stud_ph")

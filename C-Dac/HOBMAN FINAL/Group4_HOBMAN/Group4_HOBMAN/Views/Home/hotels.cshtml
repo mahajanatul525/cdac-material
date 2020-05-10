@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Hobman.hotel_details>
+
+@{
+    ViewBag.Title = "hotels";
+}
+
+<h2>Hotel Details</h2>
+
+    <table class="table table-bordered">
+       <thead class="display-field editor-label"> <tr>
+            <th>
+        HOTEL ID
+                </th>
+            <th>
+                HOTEL NAME
+             </th>
+            <th>
+               HOTEL ADDRESS
+            </th>
+            <th>
+                AVAILABLE ROOMS
+            </th>
+            <th>
+                BOOKED ROOMS
+            </th>
+            <th>
+               RATE
+            </th>
+            <th>
+               BOOK
+            </th>
+
+            </tr>
+           </thead>
+        @foreach(var list in Model)
+        {
+            <tr>
+                <td>
+    
+    <div class="display-field editor-label">
+        @Url.Content(list.hotel_id.ToString())
+    </div>
+                      </td>
+                 <td>
+                           
+    <div class="display-field editor-label">
+        @Url.Content(list.hotel_name)
+    </div>
+                      </td>
+                 <td>
+    <div class="display-field editor-label">
+        @Url.Content(list.hotel_address)
+    </div>
+                           </td>   
+                 <td>
+    <div class="display-field editor-label">
+        @Url.Content(list.available_rooms.ToString())
+    </div>
+                      </td>
+                 <td>
+    <div class="display-field editor-label">
+        @Url.Content(list.booked_rooms.ToString())
+    </div>
+                      </td>
+                 <td>
+    <div class="display-field editor-label">
+        @Url.Content(list.rate.ToString())
+    </div>
+                      </td>
+                <td>
+                    <div class="display-field editor-label">
+                 @Html.ActionLink("select", "custbookRoom","Home",new {@class="btn btn-default btn-xl button"})
+                
+                        </div></td>
+                </tr>
+        }
+            
+        </table>
+
+

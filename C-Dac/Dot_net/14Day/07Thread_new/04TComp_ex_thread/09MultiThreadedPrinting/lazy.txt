@@ -1,0 +1,21 @@
+Synchronization Using the [Synchronization] Attribute
+The final synchronization primitive examined here is the [Synchronization] attribute, which is a
+member of the System.Runtime.Remoting.Contexts namespace. 
+
+
+In essence, this class-level attribute
+effectively locks down all instance member code of the object for thread safety. When the CLR allocates
+objects attributed with [Synchronization], it will place the object within a synchronized context.  Therefore, if you want to make the Printer class type thread safe
+(without explicitly writing thread-safe code within the class members), you could update the definition
+as follows:
+using System.Runtime.Remoting.Contexts;
+...
+// All methods of Printer are now thread safe!
+[Synchronization]
+public class Printer : ContextBoundObject
+{
+public void PrintNumbers()
+{
+...
+}
+}

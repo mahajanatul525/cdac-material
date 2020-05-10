@@ -1,0 +1,28 @@
+class vehicle
+{
+public void start()
+{
+System.out.println("inside vehicle");
+}
+}
+class fourwheeler extends vehicle
+{
+public void start()
+{
+System.out.println("inside fourwheeler");
+}
+}
+
+class myassign1
+{
+public static void main(String args[])
+{ fourwheeler f1=new fourwheeler();
+	f1.start();
+	
+	vehicle ref=new fourwheeler();
+	if(ref instanceof vehicle)
+	{
+	ref.start();
+	}
+}
+}

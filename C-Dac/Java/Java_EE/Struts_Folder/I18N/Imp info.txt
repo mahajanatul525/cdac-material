@@ -1,0 +1,11 @@
+<constant name="struts.custom.i18n.resources" value="global"/>
+
+this is given so that struts2 can read various properties file starting with "global".
+
+e.g.
+
+	global.properties
+
+	global_fr.properties
+
+	......

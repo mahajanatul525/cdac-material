@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+
+{
+
+	int i , j,a;
+	char mat[4][4] , trans[4][4];
+	printf("enter your elements");
+
+	for(i=0;i<4;i++)
+	{
+		for(j=0;j<4;j++)
+		{
+			
+				scanf("%d",&mat[i][j]);
+
+		}
+		printf("\n");
+
+	}
+
+	for(i=0;i<4;i++)
+	{
+		for(j=0;j<4;j++)
+		{
+			trans[i][j] = mat[j][i];
+			printf("%2d" ,trans[i][j]);
+		}
+		printf("\n");
+	}
+
+	getch();

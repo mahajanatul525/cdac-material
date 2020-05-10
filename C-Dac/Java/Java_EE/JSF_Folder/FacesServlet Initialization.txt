@@ -1,0 +1,21 @@
+FacesServlet will perform following as part of its initialization part i.e. (init() method of FacesServlet will perform following :)
+
+	a) loading and parsing of faces-config.xml
+	b) FacesServlet will prepare lifecycle object
+
+	in lifecycle object number of phases are available:
+
+Restore view
+Apply request values
+process validators
+update model values
+invoke applications
+render response
+
+
+
+
+
+
+it just creates a lifecycle object, it does not perform any lifecycle. The entire process happens at server startup and not at the first request.
+

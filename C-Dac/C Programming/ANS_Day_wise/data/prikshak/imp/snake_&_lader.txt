@@ -1,0 +1,54 @@
+#include<stdio.h>
+
+int main() {
+    int N,D,i,j,posA = 0,posB = 0,A = 0,B = 0,count = 0;
+    scanf("%d",&N);
+    int arr[N+N];
+    for(i = 0;i < (2*N);i++)
+        scanf("%d ",&arr[i]);
+    scanf("%d",&D);
+        
+        while( count < D ) {
+        if((count%2) == 0) {
+    if(count == D - 2)
+        scanf("%d",&posA);
+        else
+        scanf("%d ",&posA);
+        //printf("posA = %d",posA);
+        A = A + posA;
+              for( j = 0;j<(2*N);j = j + 2) {
+                    if(A == arr[j]){
+                        A = arr[j+1];
+                        j = -2;
+                       //  printf("A %d",A);
+       
+                      }
+                }
+                if( A == 99)break;
+            }
+        else {
+        if(count == D -1)
+            scanf("%d",&posB);
+            else
+        scanf("%d ",&posB);
+        B = B + posB;
+        for( j = 0;j < (2 * N);j = j + 2){
+                if(B == arr[j]) {
+                     B = arr[j+1];
+                     j = -2;
+                    //  printf("B %d",B);
+       
+                 }
+            }
+       if(B == 99)break;
+        }
+        count++;
+     }
+        
+        if(A > B)
+        printf("A %d",A);
+        else
+        printf("B %d",B);
+        
+return 0;
+}

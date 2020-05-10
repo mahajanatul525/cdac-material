@@ -1,0 +1,12 @@
+. Server.Execute method
+2. Difference between Server.Transfer and Server.Execute
+
+Server.Transfer and Server.Execute are similar in many ways.
+1. The URL in the browser remains the first page URL.
+2. Server.Transfer and Server.Execute can only be used to navigate to sites/pages on the same web server. Trying to navigate to sites/pages on a different web server, causes runtime exception.
+3. Server.Transfer and Server.Execute preserves the Form Variables from the original request.
+
+The major difference between Server.Transfer and Server.Execute is that, Server.Transfer terminates the execution of the current page and starts the execution of the new page, where as
+
+ Server.Execute process the second Web form without leaving the first Web form. After completing the execution of the second webform, the control returns to the first webform.
+

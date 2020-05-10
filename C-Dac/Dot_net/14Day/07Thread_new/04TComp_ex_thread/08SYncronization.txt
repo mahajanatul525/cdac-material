@@ -1,0 +1,17 @@
+When using multiple threads, you will sometimes need to coordinate the activities of two
+or more of the threads. The process by which this is achieved is called synchronization. The
+most common reason for using synchronization is when two or more threads need access
+to a shared resource that can be used by only one thread at a time. For example, when one
+thread is writing to a file, a second thread must be prevented from doing so at the same
+time. Another situation in which synchronization is needed is when one thread is waiting
+for an event that is caused by another thread. In this case, there must be some means by
+which the first thread is held in a suspended state until the event has occurred. Then the
+waiting thread must resume execution.
+The key to synchronization is the concept of a lock, which controls access to a block of
+code within an object. When an object is locked by one thread, no other thread can gain
+access to the locked block of code. When the thread releases the lock, the object is available
+for use by another thread.
+The lock feature is built into the C# language. Thus, all objects can be synchronized.
+Synchronization is supported by the keyword lock. Since synchronization was designed
+into C# from the start, it is much easier to use than you might first expect. In fact, for many
+programs, the synchronization of objects is almost transparent.

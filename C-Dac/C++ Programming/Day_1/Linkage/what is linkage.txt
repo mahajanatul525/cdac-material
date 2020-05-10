@@ -1,0 +1,2 @@
+In programming languages, particularly C++, linkage describes how names can or can not refer to the same entity throughout the whole program or one single translation unit.
+linkage refers only to elements that have addresses at link or load time, thus class declarations and local variables have no linkage.

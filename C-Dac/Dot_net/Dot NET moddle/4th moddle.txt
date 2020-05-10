@@ -1,0 +1,195 @@
+Question 1
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+The process of defining a method in subclass having same name & type signature as a method in its superclass is known as?
+Select one:
+a. Method overriding Correct
+b. Method overloading
+c. Method hiding
+d. None of the mentioned
+Feedback
+The correct answer is: Method overriding
+Question 2
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+The capability of an object in Csharp to take number of different forms and hence display behaviour as according is known as:
+Select one:
+a. Encapsulation
+b. Abstraction
+c. None of the mentioned
+d. Polymorphism Correct
+Feedback
+The correct answer is: Polymorphism
+Question 3
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will be the output for the given set of code?
+ class A
+ {
+     public virtual void display()
+     {
+         Console.WriteLine("A");
+     }   
+ }   
+ class B: A
+ {
+    public override void display()
+    {
+        Console.WriteLine(" B ");
+    }
+ }   
+class Program
+{
+    static void Main(string[] args)
+    {
+        A obj1 = new A();
+        B obj2 = new B();
+        A r;
+        r = obj1;
+        r.display();
+        r = obj2;
+        r.display();    
+        Console.ReadLine();
+    }
+}
+
+Select one:
+a. B, B
+b. Compile time error
+c. A, B Correct
+d. A, A
+Feedback
+The correct answer is: A, B
+Question 4
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+If no access modifier for amember of a class is specified,then class member accessibility is defined as?
+Select one:
+a. protected
+b. internal
+c. private Correct
+d. public
+Feedback
+The correct answer is: private
+Question 5
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Which keyword is used to declare a base class method while performing overidding of base class methods?
+Select one:
+a. this
+b. override
+c. extend
+d. virtual Correct
+Feedback
+The correct answer is: virtual
+Question 6
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Which procedure among the following should be used to implement a ‘Has a’ or a ‘Kind of’ relationship between two entities?
+Select one:
+a. Templates
+b. Polymorphism Incorrect
+c. Inheritance
+Feedback
+The correct answer is: Inheritance
+Question 7
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+In Inheritance concept, which of the following members of base class are accessible to derived class members?
+Select one:
+a. shared
+b. private
+c. static
+d. protected Correct
+Feedback
+The correct answer is: protected
+Question 8
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+The modifier used to hide the base class methods is ?
+Select one:
+a. Sealed
+b. Virtual
+c. New Correct
+d. Override
+Feedback
+The correct answer is: New
+Question 9
+Correct
+Mark 1.00 out of 1.00
+ FlaggedRemove flag
+Question text
+What will be the output for the given set of code?
+ class a
+ {
+     public  void fun()
+     {
+         Console.WriteLine("base method");
+     }
+ }
+ class b: a
+ {
+     public new void fun()
+     {
+         Console.WriteLine(" derived method ");
+     }
+ }
+ class Program
+ {
+     static void Main(string[] args)
+     {
+         b k = new b();
+         k.fun();
+         Console.ReadLine();
+     }
+ }
+
+Select one:
+a. Compile time error
+b. Code runs successfully prints nothing
+c. derived method Correct
+d. base method
+Feedback
+The correct answer is: derived method
+Question 10
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Which of the given modifiers can be used to prevent Method overriding?
+Select one:
+a. final
+b. Sealed Correct
+c. Constant
+d. Static
+Feedback
+The correct answer is: Sealed
+Question 11
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Which form of inheritance is not supported directly by C# .NET?
+Select one:
+a. Multilevel inheritance
+b. Multiple inheritance Correct
+c. Single inheritance
+d. Hierarchical inheritance
+Feedback
+The correct answer is: Multiple inheritance

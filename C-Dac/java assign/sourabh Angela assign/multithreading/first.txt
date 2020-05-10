@@ -1,0 +1,22 @@
+package multithreading;
+
+public class th1 extends Thread
+{
+	public void run()
+	{
+		for(char i=65;i<75;i++)
+		{
+			System.out.println("Hello"+i
+
++"\t"+Thread.currentThread());
+		}
+	}
+	public static void main(String args[])
+	{
+		th1 t1=new th1();
+		th1 t2=new th1();
+//if threads are inherited then no need of creating object of thread class
+		t1.start();
+		t2.start();
+	}
+}

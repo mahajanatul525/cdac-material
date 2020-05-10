@@ -1,0 +1,9 @@
+Parallel Computing as a form of computation in which many calculations are carried out simultaneously, operating on the principle that large problems can often be divided into smaller ones, which are then solved concurrently ("in parallel"). In the past concurrency was virtually achieved by   time slicing the processor,  i.e., OS would rapidly switch between running programs after a fixed interval called time slice.
+
+That would enable the OS to execute multiple programs simultaneously. 
+
+
+These days most computers have more than   one cores/CPUs    that enable
+  multiple threads to execute simultaneously.   
+
+Using these cores you can parallelize your code to distribute work across multiple processors.

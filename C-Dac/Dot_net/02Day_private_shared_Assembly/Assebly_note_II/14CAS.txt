@@ -1,0 +1,5 @@
+Net Code Access Security
+
+The .NET Security Model provides code access permissions and code identity permissions. Code Access Security is the part of the .NET security model that determines whether or not the code is allowed to run, and what resources it can use when it is running. Code Access Security policy uses evidence to help grant the right permissions to the right assembly.
+
+An administrator can configure Code Access Security policy to restrict the resource types that code can access and the other privileged operations it can perform. Code Access Security allows code to be trusted to varying degrees depending on where the code originates and on other aspects of the code's identity. Code Access Security can also help minimize the damage that can result from security vulnerabilities in your code.

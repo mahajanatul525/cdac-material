@@ -1,0 +1,36 @@
+pointer as a member of class
+
+destructor
+
+copy constructor
+
+
+class template in header file
+
+function template in header file
+
+operator << overload
+
+operator >> overload
+
++ ,- , +=, operator=  operators overload
+
+abstract class
+
+late binding with pointer
+		  reference
+
+base class array of pointer pointing to child classes
+
+global function having "base class pointer" as argument.
+
+dynamic_cast (with pointer and reference ) in late binding.(RTTI)
+
+
+
+
+
+
+
+
+

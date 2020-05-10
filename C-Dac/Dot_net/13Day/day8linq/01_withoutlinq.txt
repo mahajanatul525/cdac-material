@@ -1,0 +1,94 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            QueryOverStringsLongHand();
+        }
+        static void QueryOverStringsLongHand()
+        {
+            // Assume we have an array of strings.
+            string[] currentVideoGames = {"Morrowind", "Uncharted 2",
+"Fallout 3", "Daxter", "System Shock 2"};
+            string[] gamesWithSpaces = new string[5];
+            for (int i = 0; i < currentVideoGames.Length; i++)
+            {
+                if (currentVideoGames[i].Contains(" "))
+                    gamesWithSpaces[i] = currentVideoGames[i];
+            }
+            // Now sort them.
+            Array.Sort(gamesWithSpaces);
+            // Print out the results.
+            foreach (string s in gamesWithSpaces)
+            {
+                if (s != null)
+                    Console.WriteLine("Item: {0}", s);
+            }
+            Console.WriteLine();
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Once Again, Without LINQ
+To be sure, LINQ is never mandatory. If you so choose, you could have found the same result set by
+forgoing LINQ altogether and making use of programming primitives such as if statements and for
+loops. Here is a method that yields the same result as the QueryOverStrings() method, but in a much
+more verbose manner:
+static void QueryOverStringsLongHand()
+{
+// Assume we have an array of strings.
+string[] currentVideoGames = {"Morrowind", "Uncharted 2",
+"Fallout 3", "Daxter", "System Shock 2"};
+string[] gamesWithSpaces = new string[5];
+for (int i = 0; i < currentVideoGames.Length; i++)
+{
+if (currentVideoGames[i].Contains(" "))
+gamesWithSpaces[i] = currentVideoGames[i];
+}
+// Now sort them.
+Array.Sort(gamesWithSpaces);
+// Print out the results.
+foreach (string s in gamesWithSpaces)
+{
+if( s != null)
+Console.WriteLine("Item: {0}", s);
+}
+Console.WriteLine();
+}
+While I am sure you can think of ways

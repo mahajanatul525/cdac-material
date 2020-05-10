@@ -1,0 +1,13 @@
+Anonymous Functions
+You will often find that the method referred to by a delegate is used only for that purpose.
+In other words, the only reason for the method is so it can be invoked via a delegate. The
+method is never called on its own. In such a case, you can avoid the need to create a
+separate method by using an anonymous function. An anonymous function is, essentially, an
+unnamed block of code that is passed to a delegate constructor. One advantage to using an
+anonymous function is simplicity. There is no need to declare a separate method whose only
+purpose is to be passed to a delegate.
+
+Beginning with version 3.0, C# defines two types of anonymous functions: anonymous
+methods and lambda expressions. The anonymous method was added by C# 2.0. 
+The lambda expression was added by C# 3.0.
+

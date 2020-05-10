@@ -1,0 +1,25 @@
+// Demonstrate a SortedList<TK, TV>.  
+using System;
+using System.Collections.Generic;
+class Employee
+{  public int id { get; set; }
+    public string Name { get; set; } 
+}
+class GenSLDemo
+{ static void Main()
+    {  // Create a sorted SortedList<T> for 
+        // employee names and salaries. 
+       Employee e1= new Employee{id=101,Name="raj"};
+         Employee e2= new Employee{id=109,Name="Geeta"};
+        SortedList<int, Employee> sl = new SortedList<int, Employee>() {
+           { e1.id,e1}     };        // Add elements to the collection. 
+        sl.Add(e2.id, e2);       // Get a collection of the keys.  
+        ICollection<int> c = sl.Keys;
+         // Use the keys to obtain the values.  
+        foreach (int str in c)
+            Console.WriteLine("{0}, Salary: {1:C}", str, sl[str]);
+
+        Console.WriteLine();
+    }
+}
+

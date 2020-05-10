@@ -1,0 +1,25 @@
+Delegates have the following properties:
+Delegates are like C++ function pointers but are type safe.
+Delegates allow methods to be passed as parameters.
+Delegates can be used to define callback methods.
+Delegates can be chained together; for example, multiple methods can be called on a single event.
+
+
+Delegate types are derived from the Delegate class in the .NET Framework. Delegate types are sealed—they cannot be derived from— and it is not possible to derive custom classes from Delegate. Because the instantiated delegate is an object, it can be passed as a parameter, or assigned to a property. 
+
+This allows a method to accept a delegate as a parameter, and call the delegate at some later time. This is known as an asynchronous callback, and is a common method of notifying a caller when a long process has completed. When a delegate is used in this fashion, the code using the delegate does not need any knowledge of the implementation of the method being used.
+
+
+Another important C# feature is built upon the foundation of delegates: the event. 
+An event is, essentially, an automatic notification that some action has occurred. Events work like this:
+
+An object that has an interest in an event registers an event handler for that event.
+When the event occurs, all registered handlers are called.
+
+Event handlers are represented by delegates.
+
+Events are members of a class and are declared using the event keyword
+
+By convention, event handlers in the .NET Framework always return void and take two parameters. The first parameter is the "source" of the event (that is, the publishing object). The second parameter is an object derived from EventArgs. Your event handlers will need to follow this design pattern.
+
+Delegates decouple the class that declares the delegate from the class that uses the delegate.

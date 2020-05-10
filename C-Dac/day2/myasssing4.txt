@@ -1,0 +1,48 @@
+class top1
+{
+void disp2()
+{
+System.out.println("in base");
+}
+}
+
+class bottom1 extends top1
+{
+void disp2()
+{
+System.out.println("in bottom1");
+}
+}
+
+class bottom2 extends top1
+{
+void disp2()
+{
+System.out.println("in bottom2");
+}
+}
+
+class bottom3 extends top1
+{
+
+void disp2()
+{
+System.out.println("in bottom3");
+}
+}
+
+public class myassign1
+{
+public static void main(String args[])
+{
+	top1 t=new bottom3();
+	t.disp2();
+	top1 t1=new bottom2();
+	t1.disp2();
+	top1 t2=new bottom1();
+	t2.disp2();
+	
+	
+}
+}
+

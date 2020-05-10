@@ -1,0 +1,26 @@
+
+CompareValidator control is used to compare the value of one control with the value of another control or a constant value. The comparison operation can be any of the following.
+1. Equal
+2. GreaterThan
+3. GreaterThanEqual
+4. LessThan
+5. LessThanEqual
+6. NotEqual
+7. DataTypeCheck 
+
+CompareValidator control in asp.net 
+
+
+  
+
+CompareValidator can also be used for DataType checking.
+
+The following are the properties that are specific to the compare validator
+
+1. ControlToCompare - The control with which to compare
+2. Type - The DataType of the value to compare. String, Integer etc.
+3. Operator = The comparison operator. Equal, NotEqual etc.
+4. ValueToCompare - The constant value to compare with.
+
+SetFocusOnError property is supported by all validation controls. If this property is set to true, then the control will automatically receive focus, when the validation fails. 
+

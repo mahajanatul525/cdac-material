@@ -1,0 +1,1 @@
+accept name and age and display on the same page.

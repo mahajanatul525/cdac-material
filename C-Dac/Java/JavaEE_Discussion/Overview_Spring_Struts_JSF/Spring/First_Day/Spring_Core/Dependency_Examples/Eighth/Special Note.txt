@@ -1,0 +1,26 @@
+if the beans are created in the following way:
+
+ <bean id="a1" class="mypack.ParentBean"/>
+        
+    
+       <bean id="a3" class="mypack.MyClass"/>
+    <bean id="a2" class="mypack.AnotherBean">
+
+
+
+then the output will be:
+
+
+
+ParentBean no-arg constructor
+inside myinit of ParentBean
+Inside MyClass no-arg constructor
+inside myinit of MyClass
+inside AnotherBean no-arg constr
+inside myinit of AnotherBean
+
+inside mydestroy of AnotherBean
+inside mydestroy of MyClass
+inside mydestroy of ParentBean
+
+

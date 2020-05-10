@@ -1,0 +1,49 @@
+we will explore the static method Parallel.For.  difference between the C# for loop statement and the Parallel.For.
+ The difference is that with the C# for statement, the loop is run from a single thread.
+
+ However the Parallel class uses multiple threads. Moreover the order of the iteration in the parallel version is not necessarily in order.
+
+Let us see an example:
+
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+ 
+namespace ParallelFor
+{
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Using C# For Loop \n");
+ 
+        for(int i=0; i <=10; i++){
+            Console.WriteLine("i = {0}, thread = {1}",
+                i, Thread.CurrentThread.ManagedThreadId);
+            Thread.Sleep(10);
+        }
+ 
+        Console.WriteLine("\nUsing Parallel.For \n");
+ 
+        Parallel.For(0, 10, i =>
+        {
+            Console.WriteLine("i = {0}, thread = {1}", i,
+            Thread.CurrentThread.ManagedThreadId);
+            Thread.Sleep(10);
+        });
+           
+        Console.ReadLine();
+    }
+}
+}
+
+
+As you can see, the Parallel.For method is defined as Parallel.For Method (Int32, Int32, Action(Of Int32)). Here the first param is the start index (inclusive), the second param is the end index (exclusive) and the third param is the Action<int> delegate that is invoked once per iteration.
+
+Parallel.For Loop 
+
+As you can see, with the C# for loop statement, the results are printed sequentially and the loop is run from a single thread. However with the Parallel.For method uses multiple threads and the order of the iteration is not in order.
+
+The Parallel.For() construct is useful if you have a set of data that is to be processed independently. The construct splits the task over multiple processor.
+
+

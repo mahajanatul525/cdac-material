@@ -1,0 +1,26 @@
+<html>
+<style>
+.percent{background-color:bisque;}
+</style>
+<head><body><p>
+<progress  value="0.50" max="1.0" class="percent">0%</progress></p>
+<input type="submit">
+<script>
+var x; 
+var a=0.0;
+var reader;
+  var progress = document.querySelector('.percent');
+  alert(progress.nodeName)
+  alert(progress.nodeType)
+  function updateProgress() 
+  {   	a=a+0.10;
+	  progress.value=a ;
+	  //alert(a)
+	  if(a>1)
+	  	{  clearInterval(x); 
+		alert(x)}
+		console.log(progress.value)  
+		}
+function go(){  x=setInterval("updateProgress()",100);  }
+go();  </script>
+</body>

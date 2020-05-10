@@ -1,0 +1,25 @@
+<script>
+class Account
+{   constructor(name,amt)
+   {       this._name=name;
+	   this._balance=amt;
+	}
+     get Aname(){ alert("in get")
+	   return this._name; }
+      set Aname(value) { alert(value)
+	  this._name=value; }
+ 	  get Abalance() { return this._balance; }
+	deposit(amt)
+	{this._balance+=amt;	
+	}
+	toString()
+{return this._name+ "  " +this._balance}
+}
+var obj=new Account("raju",50000);
+document.write(obj.Aname)
+obj.Aname="rajesh";
+obj.deposit(5000);
+document.write(obj.Abalance)
+obj.Abalance=6000;
+document.write(obj.Abalance)
+</script>

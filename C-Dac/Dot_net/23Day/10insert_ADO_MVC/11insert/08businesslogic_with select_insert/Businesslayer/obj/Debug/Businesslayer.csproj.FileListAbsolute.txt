@@ -1,0 +1,15 @@
+D:\practice_dotnet\web\08businesslogic\Businesslayer\bin\Debug\Businesslayer.dll
+D:\practice_dotnet\web\08businesslogic\Businesslayer\bin\Debug\Businesslayer.pdb
+D:\practice_dotnet\web\08businesslogic\Businesslayer\obj\Debug\Businesslayer.csprojResolveAssemblyReference.cache
+D:\practice_dotnet\web\08businesslogic\Businesslayer\obj\Debug\Businesslayer.dll
+D:\practice_dotnet\web\08businesslogic\Businesslayer\obj\Debug\Businesslayer.pdb
+D:\practice_dotnet\web\08businesslogic_with select\Businesslayer\bin\Debug\Businesslayer.dll
+D:\practice_dotnet\web\08businesslogic_with select\Businesslayer\bin\Debug\Businesslayer.pdb
+D:\practice_dotnet\web\08businesslogic_with select\Businesslayer\obj\Debug\Businesslayer.csprojResolveAssemblyReference.cache
+D:\practice_dotnet\web\08businesslogic_with select\Businesslayer\obj\Debug\Businesslayer.dll
+D:\practice_dotnet\web\08businesslogic_with select\Businesslayer\obj\Debug\Businesslayer.pdb
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\Businesslayer\bin\Debug\Businesslayer.dll
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\Businesslayer\bin\Debug\Businesslayer.pdb
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\Businesslayer\obj\Debug\Businesslayer.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\Businesslayer\obj\Debug\Businesslayer.dll
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\Businesslayer\obj\Debug\Businesslayer.pdb

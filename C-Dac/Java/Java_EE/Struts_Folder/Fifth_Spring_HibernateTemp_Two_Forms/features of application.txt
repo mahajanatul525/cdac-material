@@ -1,0 +1,19 @@
+struts2 + Spring3 + Hibernate
+
+no "struts.xml", only annotations
+
+Struts validations using annotations
+	validation error messages through properties file
+
+confirm password checking
+
+Struts and spring integration
+
+@Transient to ignore a field for database persistence.
+
+placement of jquery datepicker
+
+same action class for 2 different forms
+
+DAO design pattern
+

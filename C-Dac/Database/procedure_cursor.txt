@@ -1,0 +1,16 @@
+create procedure sp_printename()
+begin
+declare name varchar(100);
+declare done int;
+declare c1 cursor for select ename from emp limit 1000;
+declare continue handler for not found set done=1;
+open c1;
+cr:loop
+fetch c1 into name;
+if (done=1) then
+leave  cr;
+end if;
+select name;
+end loop cr;
+end 
+$$

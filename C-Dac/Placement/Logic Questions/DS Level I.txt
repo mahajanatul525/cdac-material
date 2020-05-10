@@ -1,0 +1,14 @@
+
+Q1 Accept 5 number in an arrayand sort it (bubble sort)
+
+Q2 Accept 5 number in an array and sort it (selection sort)
+
+Q3 Accept 5 number in an array and sort it (insertion sort)
+
+Q4 Accept two set of array each having 5 element sort it and put it in new array
+
+Q5 Accept 5 number in an array, accept a number from user and check if given number is there in an array or not use binary search
+
+Q6 Write program for merge sort
+
+

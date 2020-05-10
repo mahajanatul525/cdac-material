@@ -1,0 +1,4 @@
+Hibernate template
+@Autowired
+DAO
+Validation using annotation

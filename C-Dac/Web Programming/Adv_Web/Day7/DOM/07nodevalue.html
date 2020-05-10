@@ -1,0 +1,20 @@
+<html>
+<head>
+<script>
+function callme()
+{
+alert(document.getElementById("pr").childNodes[0].nodeValue)
+
+alert(document.getElementById("pr").parentNode.nodeName)
+alert(document.getElementById("pr").childNodes[0].nodeName)
+alert(document.nodeName)
+}
+</script>
+</head>
+
+<body>
+s<p  align="center" onMouseOver="callme()" id="pr">which tag
+<b>am I</b>
+</p>
+</body>
+</html>

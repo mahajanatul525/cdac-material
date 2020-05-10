@@ -1,0 +1,32 @@
+class vehicle
+{
+vehicle()
+{
+System.out.println("inside vehicle");
+}
+}
+class fourwheeler extends vehicle
+{
+fourwheeler()
+{
+System.out.println("inside fourwheeler");
+}
+}
+
+class twowheeler extends vehicle
+{
+twowheeler()
+{
+System.out.println("inside 2wheeler");
+}
+}
+
+public class myassign1
+{
+public static void main(String args[])
+
+{ twowheeler n=new twowheeler();
+fourwheeler j=new fourwheeler();
+}
+}
+

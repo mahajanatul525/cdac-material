@@ -1,0 +1,17 @@
+in init
+
+Jun 29, 2015 3:32:30 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-83"]
+Jun 29, 2015 3:32:30 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-apr-8009"]
+Jun 29, 2015 3:32:30 PM org.apache.catalina.startup.Catalina start
+
+INFO: Server startup in 4897 ms
+
+Next Action name is	com.opensymphony.xwork2.ActionSupport
+
+Action com.opensymphony.xwork2.ActionSupport took 1935 milisecs
+
+Next Action name is	mypack.RegisterAction
+
+Action mypack.RegisterAction took 324 milisecs

@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{int i,j,flag=0;
+char ch[]="nitin";
+
+for(i=0;ch[i]!=\0';i++);
+
+for(j=0;j<i/2;j++)
+{
+if(ch[j]!=ch[i-1-j])
+   {  flag=1;
+     break;
+ }
+if(flag==0)
+printf("string is pallandrom");
+else
+printf("string is not pallandrom");
+}
+
+
+reverse string
+#include<stdio.h>
+int main()
+{int i,j,flag=0;
+char ch[]="nitin";
+char t;
+for(i=0;ch[i]!=\0';i++);
+
+for(j=0;j<i/2;j++)
+{ t=ch[j];
+ ch[j]=ch[i-1-j];
+ch[i-l-j]=t;
+ }
+
+printf("%s",ch);
+}
+
+
+
+}

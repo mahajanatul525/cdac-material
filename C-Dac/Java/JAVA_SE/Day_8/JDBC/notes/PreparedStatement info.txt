@@ -1,0 +1,19 @@
+PreparedStatement
+
+An object that represents a precompiled SQL statement. 
+
+A SQL statement is precompiled and stored in a PreparedStatement object. This object can then be used to efficiently execute this statement multiple times.
+
+For SQL statements that are executed repeatedly, using a PreparedStatement object would almost always be faster than using a Statement object. This is because creating a PreparedStatement object by explicitly giving the SQL statement causes the statement to be precompiled within the database immediately. Thus, when the PreparedStatement is later executed, the DBMS does not have to recompile the SQL statement and prepared an execution plan - it simply runs the statement. 
+Typically, PreparedStatement objects are used for SQL statements that take parameters. However, they can also be used with repeatedly executed SQL statements that do not accept parameters. 
+
+
+
+When to Use a PreparedStatement Object ?
+
+If you want to execute a Statement object many times, it will normally reduce execution time to use a PreparedStatement object instead. 
+
+The main feature of a PreparedStatement object is that, unlike a Statement object, it is given an SQL statement when it is created. The advantage to this is that in most cases, this SQL statement will be sent to the DBMS right away, where it will be compiled. As a result, the PreparedStatement object contains not just an SQL statement, but an SQL statement that has been precompiled. This means that when the PreparedStatement is executed, the DBMS can just run the PreparedStatement 's SQL statement without having to compile it first. 
+
+Although PreparedStatement objects can be used for SQL statements with no parameters, you will probably use them most often for SQL statements that take parameters. The advantage of using SQL statements that take parameters is that you can use the same statement and supply it with different values each time you execute it. 
+

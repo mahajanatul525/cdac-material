@@ -1,0 +1,3 @@
+<!ELEMENT document (greeting, message)>
+<!ELEMENT greeting (#PCDATA)>
+<!ELEMENT message (#PCDATA)>

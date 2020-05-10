@@ -1,0 +1,33 @@
+Projecting New Data Types
+It is also possible to project new forms of data from an existing data source. Let’s assume that you want
+to take the incoming ProductInfo[] parameter and obtain a result set that accounts only for the name
+and description of each item. To do so, you can define a select statement that dynamically yields a new
+anonymous type:
+
+static void GetNamesAndDescriptions(ProductInfo[] products)
+{
+Console.WriteLine("Names and Descriptions:");
+var nameDesc = from p in products select new { p.Name, p.Description };
+foreach (var item in nameDesc)
+{
+// Could also use Name and Description properties directly.
+Console.WriteLine(item.ToString());
+}
+}
+
+
+
+Transfer to caller
+static Array GetProjectedSubset(ProductInfo[] products)
+{
+var nameDesc = from p in products select new { p.Name, p.Description };
+// Map set of anonymous objects to an Array object.
+return nameDesc.ToArray();
+}
+
+you could invoke and process the data from Main() as follows:
+Array objs = GetProjectedSubset(itemsInStock);
+foreach (object o in objs)
+{
+Console.WriteLine(o); // Calls ToString() on each anonymous object.
+}

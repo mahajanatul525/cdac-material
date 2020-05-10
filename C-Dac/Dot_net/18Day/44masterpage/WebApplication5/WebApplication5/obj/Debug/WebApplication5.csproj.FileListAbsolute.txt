@@ -1,0 +1,15 @@
+D:\WebApplication5\WebApplication5\bin\WebApplication5.dll
+D:\WebApplication5\WebApplication5\bin\WebApplication5.pdb
+D:\WebApplication5\WebApplication5\obj\Debug\WebApplication5.csprojResolveAssemblyReference.cache
+D:\WebApplication5\WebApplication5\obj\Debug\WebApplication5.dll
+D:\WebApplication5\WebApplication5\obj\Debug\WebApplication5.pdb
+D:\dot_net\Day_wise\day13asp\44masterpage\WebApplication5\WebApplication5\bin\WebApplication5.dll
+D:\dot_net\Day_wise\day13asp\44masterpage\WebApplication5\WebApplication5\bin\WebApplication5.pdb
+D:\dot_net\Day_wise\day13asp\44masterpage\WebApplication5\WebApplication5\obj\Debug\WebApplication5.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day13asp\44masterpage\WebApplication5\WebApplication5\obj\Debug\WebApplication5.dll
+D:\dot_net\Day_wise\day13asp\44masterpage\WebApplication5\WebApplication5\obj\Debug\WebApplication5.pdb
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\44masterpage\WebApplication5\WebApplication5\bin\WebApplication5.dll
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\44masterpage\WebApplication5\WebApplication5\bin\WebApplication5.pdb
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\44masterpage\WebApplication5\WebApplication5\obj\Debug\WebApplication5.csprojResolveAssemblyReference.cache
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\44masterpage\WebApplication5\WebApplication5\obj\Debug\WebApplication5.dll
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\44masterpage\WebApplication5\WebApplication5\obj\Debug\WebApplication5.pdb

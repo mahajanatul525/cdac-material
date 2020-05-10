@@ -1,0 +1,16 @@
+java project
+	mypack
+		MyBean
+
+	default
+		MyClass
+
+run MyClass and check the location of "MyBean.ser" and MyBean.class
+
+
+web project
+	mypack 
+
+		copy "MyBean.ser" and MyBean.class , inside it
+
+	run jsp

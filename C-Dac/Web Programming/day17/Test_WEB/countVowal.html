@@ -1,0 +1,26 @@
+<script>
+function chk()
+{var c=0;
+var result="";
+var data=document.getElementById("nm").value;
+for(i=0;i<data.length;i++)
+{ data = data.toLowerCase();
+   
+    
+        if(data[i] === "a" || 
+           data[i] === "e" || 
+           data[i] === "i" ||
+           data[i] === "o" ||
+           data[i] === "u"){
+            c++;
+        }
+    }
+    
+  
+  document.getElementById("cpy").innerHTML=c;
+}
+
+</script>
+<textarea id="nm" rows=10 cols=50/></textarea>
+<button onclick="chk()">check data</button>
+<div id="cpy"></div>

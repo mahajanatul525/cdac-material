@@ -1,0 +1,77 @@
+
+Hibernate: insert into Employee (desig, name, salary) values (?, ?, ?)
+Hibernate: insert into Employee (desig, name, salary) values (?, ?, ?)
+Hibernate: insert into Employee (desig, name, salary) values (?, ?, ?)
+Hibernate: insert into Employee (desig, name, salary) values (?, ?, ?)
+
+Hibernate: select this_.id as id0_0_, this_.desig as desig0_0_, this_.name as name0_0_, this_.salary as salary0_0_ from Employee this_
+
+[abc	accountant	25000.0, xyz	manager	35000.0, pqr	clerk	15000.0, lmn	Soft_Engineer	45000.0]
+
+Using Restrictions
+
+Hibernate: select this_.id as id0_0_, this_.desig as desig0_0_, this_.name as name0_0_, this_.salary as salary0_0_ from Employee this_ where this_.salary=?
+
+[abc	accountant	25000.0]
+
+Hibernate: select this_.id as id0_0_, this_.desig as desig0_0_, this_.name as name0_0_, this_.salary as salary0_0_ from Employee this_ where this_.salary>?
+
+[xyz	manager	35000.0, lmn	Soft_Engineer	45000.0]
+
+Hibernate: select this_.id as id0_0_, this_.desig as desig0_0_, this_.name as name0_0_, this_.salary as salary0_0_ from Employee this_ where this_.salary<?
+
+[abc	accountant	25000.0, pqr	clerk	15000.0]
+
+Hibernate: select this_.id as id0_0_, this_.desig as desig0_0_, this_.name as name0_0_, this_.salary as salary0_0_ from Employee this_ where this_.name like ?
+
+[pqr	clerk	15000.0]
+
+Hibernate: select this_.id as id0_0_, this_.desig as desig0_0_, this_.name as name0_0_, this_.salary as salary0_0_ from Employee this_ where lower(this_.name) like ?
+
+[pqr	clerk	15000.0]
+
+Hibernate: select this_.id as id0_0_, this_.desig as desig0_0_, this_.name as name0_0_, this_.salary as salary0_0_ from Employee this_ where this_.salary between ? and ?
+
+[xyz	manager	35000.0, lmn	Soft_Engineer	45000.0]
+
+Hibernate: select this_.id as id0_0_, this_.desig as desig0_0_, this_.name as name0_0_, this_.salary as salary0_0_ from Employee this_ where (this_.salary>? and this_.desig=?)
+
+[xyz	manager	35000.0]
+
+Hibernate: select this_.id as id0_0_, this_.desig as desig0_0_, this_.name as name0_0_, this_.salary as salary0_0_ from Employee this_ where (this_.salary>? or this_.name=?)
+
+[xyz	manager	35000.0, pqr	clerk	15000.0, lmn	Soft_Engineer	45000.0]
+
+Hibernate: select this_.id as id0_0_, this_.desig as desig0_0_, this_.name as name0_0_, this_.salary as salary0_0_ from Employee this_ order by this_.salary desc
+
+lmn	Soft_Engineer	45000.0
+xyz	manager	35000.0
+abc	accountant	25000.0
+pqr	clerk	15000.0
+
+Hibernate: select this_.id as id0_0_, this_.desig as desig0_0_, this_.name as name0_0_, this_.salary as salary0_0_ from Employee this_ order by this_.salary asc
+
+pqr	clerk	15000.0
+abc	accountant	25000.0
+xyz	manager	35000.0
+lmn	Soft_Engineer	45000.0
+
+Hibernate: select count(*) as y0_ from Employee this_
+
+[4]
+
+Hibernate: select avg(this_.salary) as y0_ from Employee this_
+
+[30000.0]
+
+Hibernate: select max(this_.salary) as y0_ from Employee this_
+
+[45000.0]
+
+Hibernate: select min(this_.salary) as y0_ from Employee this_
+
+[15000.0]
+
+Hibernate: select sum(this_.salary) as y0_ from Employee this_
+
+[120000.0]

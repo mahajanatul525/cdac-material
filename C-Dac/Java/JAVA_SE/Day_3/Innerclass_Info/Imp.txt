@@ -1,0 +1,2 @@
+An instance of a non-static member class can only exist with an instance of its enclosing class. This means that an instance of a non-static member class must be created in the context of an instance of the enclosing class. This also means that a non-static member class cannot have static members. In other words,
+the non-static member class does not provide any services, only instances of the class do. However, final static variables are allowed, as these are constants.

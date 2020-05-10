@@ -1,0 +1,16 @@
+Hibernate: insert into Product (name, price, qty) values (?, ?, ?)
+
+Hibernate: select product0_.id as id0_0_, product0_.name as name0_0_, product0_.price as price0_0_, product0_.qty as qty0_0_ from Product product0_ where product0_.id=?
+
+Product [name=soap, qty=30, price=100.0]
+
+Hibernate: select product0_.id as id0_, product0_.name as name0_, product0_.price as price0_, product0_.qty as qty0_ from Product product0_ where product0_.id=1
+
+[Product [name=soap, qty=30, price=100.0]]
+0
+0
+
+Product [name=soap, qty=30, price=100.0]
+[Product [name=soap, qty=30, price=100.0]]
+2
+1

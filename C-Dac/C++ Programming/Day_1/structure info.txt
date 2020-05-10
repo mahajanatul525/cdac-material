@@ -1,0 +1,269 @@
+		structure
+
+user defined data type.
+allowes us to store dissimilar data in a contingous memory location.
+
+what is the need/application of storing dissimilar data in a contingous memory location ?
+
+	to define datastructures e.g
+		Employee
+		Student
+		Course
+
+syntax
+
+struct <structname>
+{
+	members....
+};
+
+e.g.
+
+struct emp
+{
+	char name[20];
+	int age;
+};
+here no memory is allocated because it is just a definition of structure.
+Unless and untill variable of a structure is declared , memory is not allocated to structure memebers.
+
+how to declare structure variables ?
+
+struct <structurename> <variablename>;
+
+e.g.
+
+struct emp e1;
+	e1 is a variable of "struct emp" type.
+
+since structure members are allocated memory only after variable is created, in order to access structure members u need to use structure variable.
+
+how to access structure members ?
+structurevariable.member
+
+
+void main()
+{
+	struct emp
+	{
+		char name[20];
+		int age;
+	};
+	struct emp e1;
+	printf("Enter name and age");
+	scanf("%s%d",e1.name,&e1.age);
+	printf("%s\t%d\n",e1.name,e1.age);
+	printf("%d\n",sizeof(e1));
+}
+
+//#pragma pack(1)
+do the packing on 1 byte basis
+void main()
+{
+	struct emp
+	{
+		double val;
+		char ch;
+	};
+	struct emp e1;
+	printf("%d\n",sizeof(e1));
+}
+
+structure members can not be initialized inside the structure.
+
+how to initialize structure members ?
+
+void main()
+{
+	struct emp
+	{
+		char name[20];
+		int age;
+	};
+	struct emp e1={"abc",20};
+}
+
+typedef
+	keyword is used to create alias name for a datatype.
+
+syntax
+	typedef <datatype> <aliasname>;
+
+e.g.
+	typedef long unsigned int  ul;
+
+	instead of saying
+	long unsigned int   num=10;
+	now you can say
+	ul num=10;
+
+
+struct EmployeeDetails
+{
+	char ecode[20];
+};
+
+struct EmployeeDetails e1;
+
+
+or
+
+typedef struct EmployeeDetails
+{
+	char ecode[20];
+}emp;
+
+emp e1;
+
+Nested structure
+
+struct dob
+{
+	int dd;
+	int mm;
+	int yy;
+};
+
+struct emp
+{
+	char name[20];
+	struct dob d;
+	char desig[20];
+	int basic;
+};
+
+struct emp e1;
+
+
+
+// DMA and  structure 
+void main()
+{
+	struct emp
+	{
+		char name[20];
+		int age;
+	};
+	struct emp *ptr;
+	int i,rec;
+	puts("How many records");
+	scanf("%d",&rec);
+	ptr=(struct emp *)malloc(rec*sizeof(struct emp));
+	printf("Enter %d records\n",rec);
+	for(i=0;i<rec;i++)
+	{
+		scanf("%s%d",ptr[i].name,&ptr[i].age);
+	}
+	puts("displaying data");
+	for(i=0;i<rec;i++)
+	{
+		printf("%s\t%d\n",ptr[i].name,ptr[i].age);
+	}
+}
+
+
+//how to  access structure members using structure pointer
+
+
+void main()
+{
+	struct emp
+	{
+		char name[20];
+		int age;
+	}e1={"abc",20};
+	struct emp *ptr=&e1;
+	printf("%s\t%d\n",e1.name,e1.age);
+	printf("%s\t%d\n",ptr->name,ptr->age);
+	printf("%s\t%d\n",(*ptr).name,(*ptr).age);
+}
+
+
+
+// structure member can be a pointer
+
+void main()
+{
+	struct mystruct
+	{
+		int *ptr;
+	};
+	int cnt=30;
+	struct mystruct m1;
+	m1.ptr=&cnt;
+	printf("%d\n",*m1.ptr);
+
+}
+
+// can we have function as a member of structure ?
+
+in C directly no.
+But we can achieve it using function pointer inside structure.
+
+
+void main()
+{
+	struct mystruct
+	{
+		void (*ptr)();
+	};
+	struct mystruct m1;
+	void disp();
+	m1.ptr=disp;
+	m1.ptr();
+}
+void disp()
+{
+	puts("in disp");
+}
+
+
+
+
+
+// sometimes structure contains "Pointer to itself" as a member. 
+
+e.g.
+
+struct mystruct
+{
+	struct mystruct *ptr;
+};
+
+such a structure is called as "Self Referential Structure". It is used in case of Data Structure (Linked List, Stack, binary tree etc.)
+
+structure and function
+
+a) Given following structure
+
+struct emp
+{
+	char name[20];
+	int age;
+};
+struct emp e1={"abc",20};
+
+Define a function which will accept address of entire structure and display them.
+
+
+
+
+
+	struct emp
+	{
+		char name[20];
+		int age;
+	};
+void main()
+{
+	
+	struct emp e1={"abc",20};
+
+	void disp(struct emp);
+	disp(e1);
+}
+void disp(struct emp k)
+{
+	printf("%s\t%d\n",k.name,k.age);
+}
+

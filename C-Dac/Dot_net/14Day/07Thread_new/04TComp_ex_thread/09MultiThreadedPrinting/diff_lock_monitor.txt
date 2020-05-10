@@ -1,0 +1,10 @@
+First, notice that the Monitor.Enter() method is the ultimate recipient of the thread token you
+specified as the argument to the lock keyword. Next, all code within a lock scope is wrapped within a try
+block. The corresponding finally clause ensures that the thread token is released (via the
+Monitor.Exit() method), regardless of any possible runtime exception. If you were to modify the
+MultiThreadPrinting program to make direct use of the Monitor type (as just shown), you would find the
+output is identical.
+Now, given that the lock keyword seems to require less code than making explicit use of the
+System.Threading.Monitor type, you might wonder about the benefits of using the Monitor type directly.
+The short answer is control. If you make use of the Monitor type, you are able to instruct the active thread
+to wait for some duration of time (via the static Monitor.Wait() method),

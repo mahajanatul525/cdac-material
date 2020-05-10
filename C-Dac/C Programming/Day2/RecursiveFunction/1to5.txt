@@ -1,0 +1,20 @@
+#include<stdio.h>
+void call(int n)
+{
+	if(n==1)
+		return;
+	--n;
+	call(n);
+	printf("%d",n);
+
+
+}
+int main()
+{
+
+int no=6;
+call(no);
+
+getche();
+return 0;
+}

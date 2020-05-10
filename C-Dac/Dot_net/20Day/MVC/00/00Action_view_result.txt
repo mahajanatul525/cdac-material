@@ -1,0 +1,23 @@
+ActionResult is an abstract class.
+
+ViewResult derives from ActionResult. Other derived classes include JsonResult and PartialViewResult.
+
+You declare it this way so you can take advantage of polymorphism and return different types in the same method.
+
+e.g:
+
+public ActionResult Foo()
+{
+   if (someCondition)
+     return View(); // returns ViewResult
+   else
+     return Json(); // returns JsonResult
+}
+
+
+
+Inheritance Hierarchy
+System.Object
+  System.Web.Mvc.ActionResult
+      System.Web.Mvc.JsonResult
+        System.Web.Mvc.ViewResultBase

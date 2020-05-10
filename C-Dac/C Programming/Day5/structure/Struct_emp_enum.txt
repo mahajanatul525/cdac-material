@@ -1,0 +1,38 @@
+#include<stdio.h>
+
+enum dept{Mkt, Adv, Admin};
+struct employee
+{
+	int id;
+	int Salry;
+	char name[20];
+	enum dept d;
+
+};
+int main()
+{int i,j,dno;
+	struct employee Emp[2];
+	for(i=0;i<2;i++)
+	{
+printf("enter Id ,Salary,Name");
+ scanf("%d %d %s",&Emp[i].id,&Emp[i].Salry,Emp[i].name);
+ printf("enter deptment no 0- Mkt, 1-Adv,2- Admin");
+ scanf("%d",&dno);
+ switch(dno)
+ {
+ case 0:Emp[i].d=Mkt;
+	 break;
+case 1:Emp[i].d=Adv;
+	break;
+case 2:Emp[i].d=Admin;
+	break;
+ }
+	
+	}
+
+for(i=0;i<2;i++)
+	{
+ printf("%d %d %s",Emp[i].id,Emp[i].Salry,Emp[i].name)	;
+}
+getche();
+}

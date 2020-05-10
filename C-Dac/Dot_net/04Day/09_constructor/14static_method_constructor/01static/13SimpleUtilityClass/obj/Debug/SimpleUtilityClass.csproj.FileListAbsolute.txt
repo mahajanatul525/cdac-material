@@ -1,0 +1,5 @@
+C:\Users\practice\Desktop\Dot_net\day1\09_constructor\14static_method_constructor\01static\13SimpleUtilityClass\bin\Debug\SimpleUtilityClass.exe
+C:\Users\practice\Desktop\Dot_net\day1\09_constructor\14static_method_constructor\01static\13SimpleUtilityClass\bin\Debug\SimpleUtilityClass.pdb
+C:\Users\practice\Desktop\Dot_net\day1\09_constructor\14static_method_constructor\01static\13SimpleUtilityClass\obj\Debug\SimpleUtilityClass.csprojResolveAssemblyReference.cache
+C:\Users\practice\Desktop\Dot_net\day1\09_constructor\14static_method_constructor\01static\13SimpleUtilityClass\obj\Debug\SimpleUtilityClass.exe
+C:\Users\practice\Desktop\Dot_net\day1\09_constructor\14static_method_constructor\01static\13SimpleUtilityClass\obj\Debug\SimpleUtilityClass.pdb

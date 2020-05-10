@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class pass_ref_of_object
+    {
+        public int a, b;
+        public pass_ref_of_object(int i, int j)
+        {
+            a = i;
+            b = j;
+
+        }
+        
+        public void change(ref pass_ref_of_object obj)
+        {
+            obj.a += 5;
+            obj.b += 5;
+        }
+    }
+
+    class program
+    {
+        static void Main()
+        {
+            int num1, num2;
+
+            Console.WriteLine("Enter two no");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+            pass_ref_of_object c = new pass_ref_of_object(num1, num2);
+            Console.WriteLine("BEFORE CALL change{0}{1}", c.a, c.b);
+            c.change(ref c);
+            Console.WriteLine("After CALL change{0}{1}", c.a, c.b);
+        }
+
+    }
+}

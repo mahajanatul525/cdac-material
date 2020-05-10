@@ -1,0 +1,22 @@
+Static Versus Dynamic Library
+A static library is linked into your executable code. It is part of the executable, thus creating a larger executable 
+file. A larger executable file requires more RAM and disk space. On the other hand, a static library is faster than a DLL because it has already linked into the executable and loaded into memory when the executable is first run. 
+
+Before it can be used, a programmer-defined DLL must be loaded into memory, if that has not already loaded. 
+
+Static library has to have a link into every executable that needs it. Consequently, if you have three different 
+executables that need a static library, this static library must be linked into all three executables. Whereas dynamic library if u need in three different executables ,they all can share the same dll file.
+A dynamic link library is loaded only at runtime. And only one copy of the library needs to get loaded into the memory space,which saves memory and disk space. 
+Primarily, a DLL works to reduce the load of an EXE, as well as share resources across multiple executables or instances of an executable. You can update 
+these DLLs without re-linking because the executable contains references and not the actual code.
+
+NOTE
+Static libraries offer better performance. DLLs offer better memory management.
+
+
+
+
+
+
+
+

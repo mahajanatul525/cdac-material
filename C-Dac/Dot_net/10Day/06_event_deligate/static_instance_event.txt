@@ -1,0 +1,12 @@
+Instance Methods vs. Static Methods as Event Handlers
+Although both instance methods and static methods can be used as event handlers, they do
+differ in one important way. 
+When a static method is used as a handler, an event notification applies to the      class. 
+
+When an instance method is used as an event handler, events are sent to
+specific object instances. 
+Thus,   each object of a class    that wants to receive an event notification must register individually.
+
+ In practice, most event handlers are instance methods, but, of
+course, this is subject to the specific application. 
+

@@ -1,0 +1,4 @@
+To display data
+
+write one line code
+DisplayForModel()

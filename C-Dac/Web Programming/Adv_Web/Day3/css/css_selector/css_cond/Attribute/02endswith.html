@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<HTML><HEAD><title>attribute</title>
+<style>
+.group[title^="match"] {background-color: red;}
+p.group4[title$="match end"] {background-color: red;}
+.group4[title="match"] {background-color: green;}
+</style>
+
+</head>
+<body>
+<p class="group4" title="This should match end">This should be red.</p>
+<p class="group4" title="This won't match end!">This shouldn't be red.</p>
+<div class="group4" title="match">hello check this is perfact match</div>
+<div class="group" title="match">hello check this is perfact match</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+#include<stdio.h>#include<string.h>
+void main()
+{ int i,j;
+
+	struct rec
+	{ int roll;
+	  int mks;
+	  char name[10];
+	};
+
+	struct rec b[5],t;
+
+        for(i=0;i<5;i++)
+	{
+         printf("enter roll number mks and name") ;
+         scanf("%d %d %s",&b[i].roll,&b[i].mks,b[i].name);
+	}
+	  for(i=0;i<5;i++)
+	   printf("%d %d %s",b[i].roll,b[i].mks,b[i].name); 	     
+	
+
+for(i=0;i<4;i++)
+	{
+	 for(j=0;j<4-i;j++)
+ 	 { 
+          if(strcmp(b[j].name,b[j+1].name)>0)
+		{ t=b[j];
+		 b[j]=b[j+1];
+                 b[j+1]=t;
+		}
+        
+
+          }
+        }
+
+for(i=0;i<5;i++)
+	   printf("%d %d %s",b[i].roll,b[i].mks,b[i].name); 
+
+
+}
+
+
+
+
+
+
+

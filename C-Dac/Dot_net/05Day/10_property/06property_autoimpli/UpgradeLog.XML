@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="property_autoimpli">
+</Property><Property Name="Solution File" Value="\\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\06property_autoimpli\property_autoimpli.sln">
+</Property><Property Name="User Options File" Value="\\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\06property_autoimpli\property_autoimpli.suo">
+</Property><Property Name="Date" Value="Monday, November 24, 2014">
+</Property><Property Name="Time" Value="22:22 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="property_autoimpli.sln" Description="File successfully backed up as \\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\06property_autoimpli\Backup\property_autoimpli.sln">
+</Event><Event ErrorLevel="0" Project="" Source="property_autoimpli.suo" Description="File successfully backed up as \\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\06property_autoimpli\Backup\property_autoimpli.suo">
+</Event><Event ErrorLevel="0" Project="property_autoimpli" Source="property_autoimpli\property_autoimpli.csproj" Description="Project file successfully backed up as \\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\06property_autoimpli\Backup\property_autoimpli\property_autoimpli.csproj">
+</Event><Event ErrorLevel="0" Project="property_autoimpli" Source="property_autoimpli\Program.cs" Description="File successfully backed up as \\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\06property_autoimpli\Backup\property_autoimpli\Program.cs">
+</Event><Event ErrorLevel="0" Project="property_autoimpli" Source="property_autoimpli\Properties\AssemblyInfo.cs" Description="File successfully backed up as \\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\06property_autoimpli\Backup\property_autoimpli\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="property_autoimpli" Source="property_autoimpli\property_autoimpli.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="property_autoimpli" Source="property_autoimpli\property_autoimpli.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="property_autoimpli.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="property_autoimpli.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="property_autoimpli" Source="property_autoimpli\property_autoimpli.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

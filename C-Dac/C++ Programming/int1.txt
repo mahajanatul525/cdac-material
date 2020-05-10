@@ -1,0 +1,166 @@
+111111111111111111111111111111111111111111111
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class base
+{
+	public:
+	base()
+	{
+		cout<<"\n inside base const\n";	
+	}
+	base(char *ptr)
+	{
+		cout<<"\n inside base const\n";
+	}
+};
+class sub:public base
+{ 
+public:
+	sub()//:base("hello")
+	{
+		cout<<"\n inside sub const\n";	
+	}
+	sub(int k)//:base("hello")
+	{
+		cout<<"\n inside int_sub const\n";			
+	}
+	sub(char c,double k)//:base("hello")
+	{
+		cout<<"\n inside char_double__sub const\n";			
+	}
+};
+void main()
+{
+sub s;
+sub *s1=new sub(40);
+sub *s2=new sub('a',4.5);
+}
+2222222222222222222222222222222222222222
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class base
+{
+	int num1;
+public:
+	base()
+	{
+		num1=0;
+		//cout<<"\n inside def base\n"<<num1;
+	}
+	base(int k)
+	{
+		num1=k;
+		//cout<<"\n inside para base\n";
+	}
+	void disp()
+	{
+		cout<<"\n"<<num1;
+	}
+};
+class base1
+{
+	int num2;
+	public:
+	base1()
+	{
+		num2=0;
+		//cout<<"\n inside def base1\n";
+	}
+	base1(int l)
+	{
+		num2=l;
+		//cout<<"\n inside para base1\n";
+	}
+	void disp1()
+	{
+		cout<<"\n"<<num2;
+	}
+};
+class sub:public base,public base1
+{
+	int num3;
+	public:
+	sub()
+	{
+		num3=0;
+		//cout<<"\n inside def sub\n"<<num3;
+	}
+	sub(int k,int l,int m):base(k),base1(l)
+	{
+		num3=m;
+		//cout<<"\n inside para sub\n";
+	}
+	sub(int k,int l):base(k),base1(l)
+	{
+		num3=70;//cout<<"\n inside para sub\n";
+	}
+	void disp2()
+	{
+		disp();
+		disp1();
+		cout<<"\n"<<num3<<endl;
+	}
+};
+int main()
+{
+sub *s=new sub;
+s->disp2();						//(num1,num2 and num3 should be 0)
+sub *s1=new sub(10,20,30);				//(num1,num2 and num3 should be 10,20 and 30 respectively)
+s1->disp2();
+sub *s2=new sub(50,60);			 //(num1,num2 and num3 should be 50,60 and 70 respectively)
+s2->disp2();
+return 0;
+}
+3333333333333333333333333333333333333333333333333333333
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class parent
+{
+	public:
+		void disp1()
+			{
+			cout<<"in disp 1"<<endl;
+			}
+		void disp2()
+			{
+			cout<<"in disp 2"<<endl;
+			}
+		void disp3()
+			{
+			cout<<"in disp 3"<<endl;
+			}
+		void disp4()
+			{
+			cout<<"in disp 4"<<endl;
+			}
+};
+class sub:private parent
+{
+	int num;
+	public:
+		sub(int k)
+		{
+			num=k;
+			cout<<endl<<num<<endl;
+		}
+		void disp5()
+		{
+			cout<<"in disp 5"<<endl;
+		}
+		parent::disp1;
+		parent::disp2;
+		parent::disp3;
+		parent::disp4;
+};
+
+void main()
+{
+
+sub s(30);
+s.disp5();
+s.disp3();
+s.disp1();
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="05prop_const">
+</Property><Property Name="Solution File" Value="\\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\05prop_const\05prop_const.sln">
+</Property><Property Name="User Options File" Value="\\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\05prop_const\05prop_const.suo">
+</Property><Property Name="Date" Value="Monday, November 24, 2014">
+</Property><Property Name="Time" Value="22:18 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="05prop_const.sln" Description="File successfully backed up as \\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\05prop_const\Backup\05prop_const.sln">
+</Event><Event ErrorLevel="0" Project="" Source="05prop_const.suo" Description="File successfully backed up as \\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\05prop_const\Backup\05prop_const.suo">
+</Event><Event ErrorLevel="0" Project="05prop_const" Source="05prop_const\05prop_const.csproj" Description="Project file successfully backed up as \\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\05prop_const\Backup\05prop_const\05prop_const.csproj">
+</Event><Event ErrorLevel="0" Project="05prop_const" Source="05prop_const\Program.cs" Description="File successfully backed up as \\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\05prop_const\Backup\05prop_const\Program.cs">
+</Event><Event ErrorLevel="0" Project="05prop_const" Source="05prop_const\Properties\AssemblyInfo.cs" Description="File successfully backed up as \\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\05prop_const\Backup\05prop_const\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="05prop_const" Source="05prop_const\05prop_const.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="05prop_const" Source="05prop_const\05prop_const.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="05prop_const.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="05prop_const.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="05prop_const" Source="05prop_const\05prop_const.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

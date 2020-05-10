@@ -1,0 +1,54 @@
+/*
+ write a file copy program using byte streams.
+( FileOutputStream and FileInputStream )
+ */
+package mypack;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+public class test3 {
+	public static void main(String args[])
+	{
+		
+		
+		File f=new File("d:\\test1.txt");
+		try(FileOutputStream fos=new FileOutputStream(f))
+		{
+			 byte[] p=new byte[50];
+			 
+			int k=System.in.read(p);  //or b.length
+			fos.write(p,0,k);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		
+		File f1=new File("d:\\test2.txt");
+		
+		try(FileInputStream fis=new FileInputStream(f)
+		)
+		{
+			byte[]b=new byte[(int)f.length()];
+			fis.read(b);
+			
+			try(FileOutputStream fos=new FileOutputStream(f1))
+			{
+				fos.write(b);				
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+	}
+
+}

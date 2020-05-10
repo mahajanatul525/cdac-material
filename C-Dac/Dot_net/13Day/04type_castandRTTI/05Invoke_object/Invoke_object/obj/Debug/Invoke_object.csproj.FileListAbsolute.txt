@@ -1,0 +1,12 @@
+D:\Ketki_Data\Day_wise\day6\type_castandRTTI\Invoke_object\Invoke_object\bin\Debug\Invoke_object.exe
+D:\Ketki_Data\Day_wise\day6\type_castandRTTI\Invoke_object\Invoke_object\bin\Debug\Invoke_object.pdb
+D:\Ketki_Data\Day_wise\day6\type_castandRTTI\Invoke_object\Invoke_object\obj\Debug\ResolveAssemblyReference.cache
+D:\Ketki_Data\Day_wise\day6\type_castandRTTI\Invoke_object\Invoke_object\obj\Debug\Invoke_object.exe
+D:\Ketki_Data\Day_wise\day6\type_castandRTTI\Invoke_object\Invoke_object\obj\Debug\Invoke_object.pdb
+D:\dot_net\Day_wise\day6\04type_castandRTTI\05Invoke_object\Invoke_object\obj\Debug\Invoke_object.exe
+D:\dot_net\Day_wise\day6\04type_castandRTTI\05Invoke_object\Invoke_object\obj\Debug\Invoke_object.pdb
+D:\dot_net\Day_wise\day6\04type_castandRTTI\05Invoke_object\Invoke_object\bin\Debug\Invoke_object.exe
+D:\dot_net\Day_wise\day6\04type_castandRTTI\05Invoke_object\Invoke_object\bin\Debug\Invoke_object.pdb
+D:\dot_net\Day_wise\day6\04type_castandRTTI\05Invoke_object\Invoke_object\obj\Debug\Invoke_object.csprojResolveAssemblyReference.cache
+C:\Users\practice\Desktop\Dot_net\day6\04type_castandRTTI\05Invoke_object\Invoke_object\obj\Debug\Invoke_object.exe
+C:\Users\practice\Desktop\Dot_net\day6\04type_castandRTTI\05Invoke_object\Invoke_object\obj\Debug\Invoke_object.pdb

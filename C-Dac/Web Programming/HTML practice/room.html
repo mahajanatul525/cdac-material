@@ -1,0 +1,73 @@
+<html><head><script type="text/javascript">
+
+var MM;
+function d()
+{
+var s=document.getElementById("p2");
+var ar=new Array();
+var no3=prompt("enter 2d length")
+ar[0]=new Array();
+ar[1]=new Array();
+for(var i=0;i<=no3-1;i++)
+{
+for(var j=0;j<=no3-1;j++)
+{ var k=prompt("enter no.");
+ar[i][j]=k;
+}
+}
+s.innerHTML+=ar[0];
+s.innerHTML+=ar[1];
+}
+
+function you()
+{
+
+var l1=document.getElementById("p");
+var no2=prompt("enter the length");
+var arr = new Array(no2);
+for(var i=0;i<=no2-1;i++)
+{var a=prompt("enter no.");
+arr[i]=a;
+}
+mm=arr;
+l1.innerHTML+=arr;
+}
+function we()
+{var l=document.getElementById("p1");
+alert(mm);
+var a=prompt("enter no. for push");
+mm.push(a);
+l.innerHTML+=mm;
+}
+function pop()
+{var g=document.getElementById("p3");
+mm.pop();
+g.innerHTML+=mm;
+}
+function shift()
+{var m=document.getElementById("p4");
+mm.shift()
+m.innerHTML+=mm;
+}
+function unshift()
+{var n=document.getElementById("p5");
+var f=prompt("enter to add");
+mm.unshift(f+" ");
+n.innerHTML+=mm;
+}
+</script>
+</head>
+<body>
+<form name="dd">
+<input type="button" value="create array" onclick="you()"/>
+<input type="button" value="push in array" onclick="we()"/>
+<input type="button" value="2d array" onclick="d()"/>
+<input type="button" value="pop" onclick="pop()"/>
+<input type="button" value="shift" onclick="shift()"/>
+<input type="button" value="unshift" onclick="unshift()"/><br/>
+<span id="p">original</span><br/><span id="p1">2 after_push</span><br/>
+<span id="p2">__2d </span><br/><span id="p3">pop </span><br/>
+<span id="p4">shift </span><br/><span id="p5">unshift </span><br/>
+</form>
+</body>
+</html>

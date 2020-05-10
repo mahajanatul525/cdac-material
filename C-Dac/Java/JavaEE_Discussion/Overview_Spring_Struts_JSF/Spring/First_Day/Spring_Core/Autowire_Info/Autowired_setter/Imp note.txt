@@ -1,0 +1,17 @@
+no need to use bytype or byname
+
+
+in spring bean configuration file u have to specify following statement
+
+ <context:annotation-config></context:annotation-config>  
+
+
+@Autowired can also be used on any method to automatically wire in bean reference.
+
+e.g
+	@Autowired
+	public void includeAuthor(Author author)
+	{
+		this.author=author.
+	}
+ 

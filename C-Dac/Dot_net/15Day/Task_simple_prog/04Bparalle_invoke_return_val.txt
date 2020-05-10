@@ -1,0 +1,76 @@
+We used the System.Threading.Tasks.Parallel.Invoke() to call methods that did not return a value. However for methods that return a value, you would need to use the Task(TResult) class which represents an asynchronous operation that can return a value
+
+C#
+using System.Threading;
+using System.Threading.Tasks;
+C#
+static int GenerateNumbers()
+{
+    int i;
+    for (i = 0; i < 7; i++)
+    {
+        Console.WriteLine("Method1 - Number: {0}", i);
+        Thread.Sleep(1000);
+    }
+    return i;
+}
+ 
+static string PrintCharacters()
+{
+    string str = "dotnet";
+    for (int i = 0; i < str.Length; i++)
+    {
+        Console.WriteLine("Method2 - Character: {0}", str[i]);
+        Thread.Sleep(1000);
+    }
+    return str;
+}
+ 
+static int PrintArray()
+{
+    int[] arr = { 1, 2, 3, 4, 5 };
+    foreach (int i in arr)
+    {
+        Console.WriteLine("Method3 - Array: {0}", i);
+        Thread.Sleep(1000);
+    }
+    return arr.Count();
+}
+
+
+Approach 1: Use the constructor of the Task(Of TResult) class to initialize the task but execute it later. Here’s an example
+C#
+static void Main(string[] args)
+{
+    // Create the Tasks
+    Task<int> t1 = new Task<int>(GenerateNumbers);
+    Task<string> t2 = new Task<string>(PrintCharacters);
+    Task<int> t3 = new Task<int>(PrintArray);
+    // Start the tasks
+    t1.Start();
+    t2.Start();
+    t3.Start();
+    //Print Return Value
+    Console.WriteLine("Numbers generated till {0}", t1.Result);
+    Console.WriteLine("Original String {0}", t2.Result);
+    Console.WriteLine("Array Count {0}", t3.Result);
+    Console.ReadLine();
+}
+
+
+Approach 2: We can save a step here and also improve performance by using Task<>.Factory.StartNew() to initialize and execute the task at the same time. Here’s an example
+C#
+static void Main(string[] args)
+{
+    // Create and execute the Tasks
+    var t1 = Task<int>.Factory.StartNew(() => GenerateNumbers());
+    var t2 = Task<string>.Factory.StartNew(() => PrintCharacters());
+    var t3 = Task<int>.Factory.StartNew(() => PrintArray());
+   
+    //Print Return Value
+    Console.WriteLine("Numbers generated till {0}", t1.Result);
+    Console.WriteLine("Original String {0}", t2.Result);
+    Console.WriteLine("Array Count {0}", t3.Result);
+    Console.ReadLine();
+}
+ 

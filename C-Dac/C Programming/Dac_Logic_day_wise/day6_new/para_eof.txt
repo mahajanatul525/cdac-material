@@ -1,0 +1,46 @@
+/*Q14
+you have to write a program to count the number of words in the input. 
+The program should read in the input text till end_of_file (EOF) and output the number of words found. 
+A word can be taken to be a sequence of alphanumeric characters terminated by a space or by a newline. 
+Assume that there will not be any characters other than alphanumeric (a-z, A-Z, 0-9) and white spaces (blank, tabs and newlines) in the input.
+
+Input:
+This is a sample line of text
+This is another line of text
+This line is the 3rd line
+This junk line contains 989902 99dsaWjJ8    015
+This is the fifth and the last line of input
+Output:
+36
+Input:
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+Output:
+1
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{ int i ,j,c=0;
+char s[50];
+printf("\nenter para:\n") ;
+	scanf("%[a-zA-Z0-9\t\n] ",s);
+
+	getche();
+}
+*/#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+	int i,j,c=0;
+   char s[50];
+printf("\nenter para:\n") ;
+scanf("%[^*]",s); //  * is for eof
+printf("\n %s",s);
+for(i=0;i<=strlen(s);i++)
+	if(s[i]==' '|s[i]=='\n')
+	{	c++;}
+printf("%d %d",i,c+1);
+
+	getche();
+}

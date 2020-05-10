@@ -1,0 +1,1 @@
+how to use HttpSession in controller class

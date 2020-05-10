@@ -1,0 +1,1 @@
+how to use useBean in case of serialized objects

@@ -1,0 +1,13 @@
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 13\SimpleGC\obj\Debug\ResolveAssemblyReference.cache
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 13\SimpleGC\bin\Debug\SimpleGC.exe
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 13\SimpleGC\bin\Debug\SimpleGC.pdb
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 13\SimpleGC\obj\Debug\SimpleGC.exe
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 13\SimpleGC\obj\Debug\SimpleGC.pdb
+\\param\Practice_K\dot_net\dotnet_notes\Day_wise\Code\Chapter 13\SimpleGC\obj\Debug\SimpleGC.exe
+\\param\Practice_K\dot_net\dotnet_notes\Day_wise\Code\Chapter 13\SimpleGC\obj\Debug\SimpleGC.pdb
+\\param\Practice_K\dot_net\dotnet_notes\Day_wise\Code\Chapter 13\SimpleGC\bin\Debug\SimpleGC.exe
+\\param\Practice_K\dot_net\dotnet_notes\Day_wise\Code\Chapter 13\SimpleGC\bin\Debug\SimpleGC.pdb
+C:\Users\practice\Desktop\Dot_net\day1\12GC\SimpleGC\obj\Debug\SimpleGC.exe
+C:\Users\practice\Desktop\Dot_net\day1\12GC\SimpleGC\obj\Debug\SimpleGC.pdb
+C:\Users\practice\Desktop\Dot_net\day1\12GC\SimpleGC\bin\Debug\SimpleGC.exe
+C:\Users\practice\Desktop\Dot_net\day1\12GC\SimpleGC\bin\Debug\SimpleGC.pdb

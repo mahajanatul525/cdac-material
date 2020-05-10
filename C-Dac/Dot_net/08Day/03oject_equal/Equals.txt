@@ -1,0 +1,44 @@
+----ReferencEquals()---:it is a static method that tests two reference are same or not.you can not override this method;
+
+eg1. Employee emp1=new Employee();
+   Employee emp2=new Employee();
+
+ReferenceEquals(emp1,emp2);
+
+ans: false;
+
+
+eg2. Employee emp1=new Employee()
+Employee emp2=emp1;
+
+ReferenceEquals(emp1,emp2);
+ans True
+
+Employee emp1=new Emplyee();
+Employee emp2=new Emplyee();
+
+emp1=null;
+emp2=null;
+ReferenceEquals(emp1,emp2);
+
+ans: true
+
+if you try reference equals() for value type it will always give false as it will be boxed into object type.
+referenceEquals(v,v) where v is variable of some value type will give you always  false
+
+
+
+
+--virtual Equals()--:This also check reference equality,How ever this method is virtual you can override it. if you override virtual equals you should override virtual GetHasCode() method other wise when you use dictinary class you will not get expected result as it use hashcode intalnally.
+
+---static Equals(a,b) ---:(a and b is object) it is same as vitual Equals except it is static and take two argument. Advantage of this method is that it is able to cope when either of the objects is null. static overload 1st check wether the references it has been passed are null. If both are null it will return true else false.
+
+
+
+This method is able to cope when either of the objects is null , and, therefore, provides an extra safeguard againstthrowing exceptions if there is a risk that an object might be null .  
+
+if both the reference refer to something it calls the virtual instance virsion of Equals().
+
+== this also check two references only. This is overridden in string class so it check value and not reference.
+
+ 

@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<conio.h>
+int special(int);
+int cube(int);
+void main()
+{
+	int no;
+	printf("ENter  a no.");
+	scanf("%d",&no);
+	if(special(no))
+		printf("no. is Armgstrong");
+	else
+		printf("Not Armgstrong");
+
+getch();
+}
+int special(int n)
+{
+int s,sum=0,r,f;
+s=n;
+while(n!=0)
+{
+r=n%10;
+f=cube(r);
+sum=sum+f;
+n=n/10;
+}
+if(sum==s)
+	return 1;
+else 
+	return 0;
+}
+int cube(int r)
+{
+	return r*r*r; 
+}

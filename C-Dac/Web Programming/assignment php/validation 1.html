@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.mohit
+{
+color:red;
+
+}
+</style>
+<script>
+function namevali()
+{
+var y=document.nm.nm1.value;
+pattern=/(^[A-Z]{1})([a-z]{7})/;
+if(pattern.test(y))
+return true;
+else
+document.getElementById("qq").innerHTML="name should have 8 block characters";
+
+}
+function uservali()
+{
+var y=document.nm.nm2.value;
+pattern=/^[0-9]{5}/;
+if(pattern.test(y))
+return true;
+else
+document.getElementById("ww").innerHTML="userid should have 5 numbers";
+
+}
+function callme()
+{
+
+document.nm.nm1.value="";
+document.nm.nm2.value="";
+document.nm.nm3.value="";
+
+
+document.getElementById("qq").innerHTML="";
+document.getElementById("ww").innerHTML="";
+}
+
+</script>
+</head>
+<body>
+<form name="nm" action="valshu.php" method="REQUEST">
+NAME <input name="nm1" type="text" id="ab" placeholder="enter name" onchange="namevali()"/><span name="span"id="qq" class="mohit" ></span><br/><br/>
+USERID<input name="nm2" type="text" id="cd" placeholder="enter user id" onchange="uservali()" /><span name="span2"id="ww" class="mohit" ></span><br/><br/>
+PASSWORD <input name="nm3"  type="password" id="bc" placeholder="enter password"/><span id="ee"class="mohit" ></span><br/><br/>
+<input name="nm4"  type="submit" value="submit" /><br/><br/>
+<input name="nm5" type="button"  value="resuet" onclick= "callme()" /><br/><br/>
+</form>
+</body>
+</html>

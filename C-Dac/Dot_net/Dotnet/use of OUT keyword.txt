@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class demo
+    {
+        public int parts(double num, out double fac)
+        {
+            int whole = (int)num;
+            fac = num - whole;
+            return whole;
+        }
+    }
+
+    class useout
+    {
+        static void Main()
+        {
+            demo d = new demo();
+            double f;
+            int num = d.parts(10.23, out f);
+
+            Console.WriteLine("int part{0}", num);
+            Console.WriteLine("fact part{0}", f);
+        }
+    }
+}

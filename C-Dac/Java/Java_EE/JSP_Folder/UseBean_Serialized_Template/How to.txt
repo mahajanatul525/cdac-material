@@ -1,0 +1,30 @@
+1) go to "d:\temp"
+
+create a package "mypack"
+
+store "MyBean.class" inside it.
+
+2) inside "d:\temp"
+	create a class "MyClass.java"
+
+3) compile and run "MyClass"
+
+4) notice that "MyBean.ser" file is created inside "d:\temp" folder.
+
+4) go to myapp on tomcat server
+
+create a folder "mypack" inside "classes" folder.
+
+5) inside "mypack" copy
+	"MyBean.ser" and "MyBean.class"
+
+6) copy "CallMyBean.jsp" inside "myapp" and run.
+
+
+<jsp:useBean id="a1" beanName="mypack\MyBean" type="mypack.MyBean"/>
+
+
+inside "beanName", "mypack\MyBean" is actually a name of ".ser" file.
+
+inside "type", "mypack.MyBean" is a name of a bean.
+

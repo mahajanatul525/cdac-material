@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head><style>
+#dd{color:green;}
+</style>
+<script src="jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+$("#btn").click(function(){
+  var a=$("#dd").text();
+    alert(a);
+	  // $("#pp").text(a);
+    $("#pp").append("<h1>"+a+"<h1/>");
+   });
+});
+</script></head>
+<body>
+<div id="dd">hello</div>
+<input type="button" id="btn" value="cpy"/>
+<p id="pp">para 1</p>
+
+
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+#include<stdio.h>
+void main()
+{
+int i,num=1;
+
+while(num<=10)
+{
+i=2;
+while(i<=num)
+{
+	printf("\nif%d%%%d==0",num,i);
+if(num%i==0)
+break;
+i++;
+printf("\ti=%d",i);
+}
+if(i==num)
+{
+printf("%d==%d",i,num);
+printf("\n\t\t%d is Prime",num);
+}
+num++;
+}}

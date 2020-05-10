@@ -1,0 +1,46 @@
+/* class sample
+   {
+	private:
+		char ch;
+	public:
+		sample(char ch)
+		{
+			this->ch=ch;
+		}
+  };
+
+given above class.
+ 
+write a global function "display" which will access "ch" directly and display it.
+call this function from main function.*/
+
+/*#include<iostream>
+using namespace std;
+
+class sample
+{
+	char ch;
+public:
+	sample()
+	{
+	}
+	sample(char ch)
+	{
+		this->ch=ch;
+	}
+
+	friend void display(sample &);
+};
+
+void display(sample &b)
+{
+	cout<<b.ch;
+}
+
+void main()
+{
+	sample s1('A');
+	display(s1);
+	getchar();
+
+}*/

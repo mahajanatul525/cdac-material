@@ -1,0 +1,11 @@
+ Common Type System - CTS
+
+Common Type System (CTS) describes a set of types that can be used in different .Net languages in common . That is , the Common Type System (CTS) ensure that objects written in different .Net languages can interact with each other. For Communicating between programs written in any .NET complaint language, the types have to be compatible on the basic level .
+
+These types can be Value Types or Reference Types . 
+
+The Value Types are passed by values and stored in the stack.
+ The Reference Types are passed by references and stored in the heap.
+ Common Type System (CTS) provides base set of Data Types which is responsible for cross language integration. 
+
+The Common Language Runtime (CLR) can load and execute the source code written in any .Net language, only if the type is described in the Common Type System (CTS) .Most of the members defined by types in the .NET Framework Class Library (FCL) are Common Language Specification (CLS) compliant Types.

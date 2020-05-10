@@ -1,0 +1,11 @@
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\private_assembly\useassembly\useassembly\bin\Debug\useassembly.exe.config
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\private_assembly\useassembly\useassembly\bin\Debug\useassembly.exe
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\private_assembly\useassembly\useassembly\bin\Debug\useassembly.pdb
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\private_assembly\useassembly\useassembly\bin\Debug\meth_lib.dll
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\private_assembly\useassembly\useassembly\bin\Debug\meth_lib.pdb
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\private_assembly\useassembly\useassembly\obj\Debug\useassembly.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\private_assembly\useassembly\useassembly\obj\Debug\useassembly.exe
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\private_assembly\useassembly\useassembly\obj\Debug\useassembly.pdb
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\private_assembly\00useassembly\useassembly\bin\Debug\useassembly.exe.config
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\private_assembly\00useassembly\useassembly\obj\Debug\useassembly.exe
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\private_assembly\00useassembly\useassembly\obj\Debug\useassembly.pdb

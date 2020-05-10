@@ -1,0 +1,2 @@
+Accept a sentence from user and count number of vowel.
+Accept a sentence from user and check 1st letter is capital or not

@@ -1,0 +1,14 @@
+Create table tblEmp with coloumn  Id Name Salary DeptId
+Create store proceedures 
+
+CREATE PROCEDURE store
+       @e_id                     INT                      , 
+       @e_nm                       VARCHAR(50)   , 
+       @e_sal                    decimal   ,      
+	   @e_dept           int         
+AS 
+BEGIN 
+          INSERT INTO dbo.tblemp
+          ( Id                   ,            Name                     ,            Salary ,  DeptId) 
+     VALUES          ( @e_id   ,  @e_nm     ,      @e_sal  , @e_dept  )
+		  End

@@ -1,0 +1,28 @@
+<html><head><script type="text/javascript">
+function call()
+{var s=document.getElementById("pr")
+var t=document.getElementById("tt")
+alert(t.value)
+alert(s);
+alert(s.nodeName) //name of node here is p tag
+alert(s.nodeType) //1st childe ka data
+var d=document.getElementById("dd")
+d.innerHTML+=s.innerHTML; //entire data between tag
+alert(s.childNodes[0].nodeName)
+alert(s.childNodes[0].nodeValue)
+alert(s.childNodes[1].childNodes[0].nodeValue)
+alert(s.childNodes[2].nodeValue)
+}
+</script></head><body>
+<p id="pr" onclick="call()">Welcome<b>to world of</b>
+Dom</p>
+<div id="dd"></div>
+<p  id="p">Welcome<b>to world of</b>hello<strong>Dom</strong>
+</p>
+<input id="tt">
+</body>
+</html>
+
+
+
+

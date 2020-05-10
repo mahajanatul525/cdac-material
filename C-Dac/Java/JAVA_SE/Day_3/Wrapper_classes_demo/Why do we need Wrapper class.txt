@@ -1,0 +1,26 @@
+suppose we have a method in java
+
+	void add(Object)
+
+in which we want to store any primitive value, we can not pass primitive directly to Object as they are not compatible. e.g. Object class and int are not compatible.
+
+solution here is to convert int to Integer (autoboxing) and pass Integer to "add" method. This is acceptable because Integer is a child class of Object.
+
+
+Wrapper class is also used in following case
+
+String str="125";
+
+System.out.println(str); // output  125
+
+str+=10;
+
+System.out.println(str);  // output  12510  ( concatenation )
+
+solution:
+	int temp=Integer.parseInt(str);
+	temp+=10;
+
+	System.out.println(temp); // output   135
+
+

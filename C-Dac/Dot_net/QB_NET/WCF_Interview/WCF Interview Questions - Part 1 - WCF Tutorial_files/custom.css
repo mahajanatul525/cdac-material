@@ -1,0 +1,32 @@
+/*
+Theme Name: Iconic One
+Custom CSS Template for Iconic One.
+*/
+
+.custom-table-container{
+    display:table;
+    width:100%;
+    border-collapse: collapse;
+    }
+.custom-table-row{  
+     display:table-row;
+}
+.custom-column1{
+	display:table-cell;
+	text-align: left;
+}
+.custom-column2{
+	display:table-cell;
+	text-align: right;
+        vertical-align: middle;
+}
+
+.TableWithBorder
+{
+	border: 1px solid #EDEDED;
+}
+
+.TDWithBorder
+{
+	border: 1px solid #EDEDED;
+}

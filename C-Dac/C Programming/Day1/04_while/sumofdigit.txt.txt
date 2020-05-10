@@ -1,0 +1,141 @@
+#include<stdio.h>
+void main()
+{ int no,r1,r2;
+
+printf("enter 3 digit number")
+scanf("%d",&no);
+
+ if(no>99&&no<1000)
+ { r1=no%10;
+   no=no/10;
+   r2=no%10;
+   no=no/10;
+   printf("%d",r1+r2+no)
+
+
+  }
+
+ else
+ printf("u have not entered 3 digit no...");
+
+
+}
+
+
+
+for(no=123;no!=0;no=no/10)
+
+#include<stdio.h>
+void main()
+{ int no,r,sum=0;
+  no=123;
+
+  while(no!=0) 123  12 1 0
+  { r=no%10; 3 2 1
+    sum=sum+r;
+    no=no/10;	
+  }
+
+printf("%d",sum);
+
+}
+
+sum=6 r 1,no 0
+
+
+
+
+
+
+
+#include<stdio.h>
+void main()
+{ int no,r,s;rev=0;
+
+  no=123;
+
+  s=no;
+  while(no!=0)       123 12 1 0
+  {   r=no%10;       3 2 1
+      rev=rev*10+r;  3 32 321
+     no=no/10;	
+  }
+
+printf("%d",rev);  no-0  r1 rev321 
+
+if(rev==s)
+printf("pllandrom");
+else
+printf("not");
+
+}
+
+
+1221 2 2
+
+
+
+
+
+#include<stdio.h>
+void main()
+{ int no,r,s,sum=0;
+  no=153;
+   s=no;
+  while(no!=0)
+  { r=no%10;
+  sum=sum+(r*r*r);
+  no=no/10;	
+  }
+
+if(sum==s)
+printf("armstrong number");
+else
+printf("not");
+}
+
+
+
+
+Count number of digit
+
+
+#include<stdio.h>
+void main()
+{ int no,r,c=0;
+  no=123;
+
+  while(no!=0) 123  12 1 0
+  { 
+    no=no/10; 12 1	0
+  c++; 1 2 3
+  }
+
+printf("%d",c);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

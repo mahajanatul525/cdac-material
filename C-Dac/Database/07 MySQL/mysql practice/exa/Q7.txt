@@ -1,0 +1,29 @@
+Convert a given number of days to a measure of time given in years, weeks, and days. For example, 375 days equals 1 year, 1 week and 3 days. (Ignore leap years). Display the above output on the screen. Data has to be input by the user.
+
+
+CREATE DEFINER=`root`@`localhost` FUNCTION `cal`(days int) RETURNS varchar(100) CHARSET latin1
+BEGIN
+declare ans varchar(100);
+declare i int;
+declare y int;
+declare w int;
+declare d int;
+declare temp int;
+declare x varchar(100);
+
+set i = days;
+if(i>365)then
+set y = floor(i/365);
+else
+set y = 0;
+end if;
+
+if(i>365)then
+set temp = i-(365*y);
+else
+set temp = i;
+end if;
+set w = floor(temp/7);
+set d = temp-(w*7);
+set x = '_';
+

@@ -1,0 +1,56 @@
+import java.util.*;
+import java.io.*;
+
+public class First implements Serializable
+{
+	int num;
+	String name;
+	String sub;
+	String city;
+	public String toString()
+	{
+		return "First num=" + num + "name="+name+" "+"sub="+sub+" "+"city="+city;
+	}
+public First(int num,String name,String sub,String city)
+{
+	this.num=num;
+	this.name=name;
+	this.sub=sub;
+	this.city=city;
+}
+public static void main(String args[])
+{
+	ArrayList<First> a= new ArrayList <First>();
+	First m[]=new First[5];
+	for(int i=0;i<5;i++)
+	{ m[i]=new First(i,"Sourabh","java","Chandrapur");
+		a.add(m[i]);
+	}
+	try(FileOutputStream fos=new FileOutputStream ("d://FirstS.txt"))
+		{
+		try(ObjectOutputStream oos=new ObjectOutputStream(fos))
+		{
+				oos.writeObject(a);
+			}
+		}
+		catch(Exception ee)
+		{ ee.printStackTrace();
+			}
+		
+		try(FileInputStream fis=new FileInputStream ("d://FirstS.txt"))
+		{
+		    try(ObjectInputStream ois= new ObjectInputStream(fis))
+		    {
+		    	ArrayList<First>aa=(ArrayList<First>)ois.readObject();
+		    	System.out.println(aa);
+		    }
+		    
+		}
+		    	catch(Exception ee)
+		    	{
+		    		ee.printStackTrace();
+		    	}
+		    
+			}
+}
+

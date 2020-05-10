@@ -1,0 +1,49 @@
+﻿@model Test3.Models.Registration
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<link rel="stylesheet" href="/Content/style.css">
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+   <div class="login-page">
+     <div class="container">
+         <legend style="text-align:center" >Login</legend>
+         <div class="login-body">
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmailID)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.EmailID)
+            @Html.ValidationMessageFor(model => model.EmailID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Password)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Password)
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+        
+        <div>
+            <button type="submit"  class="btn-success">Login</button>
+        </div>
+    </fieldset>
+             </div>
+         </div>
+        </div>
+}
+
+<div style="text-align:center">
+    @Html.ActionLink("New User Register Here", "Register")&nbsp
+    @Html.ActionLink("Forgot Password", "Register")
+
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

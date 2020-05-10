@@ -1,0 +1,21 @@
+
+17. Write a stored procedure by the name of Simp_intr to calculate the amount of interest on a bank account. The formulae are:-
+Intr = p*t*r/100
+Amt = p + Intr
+where:-
+Intr is the total interest earned.
+p is the principal,
+t is the number of years the money is earning interest, and
+r is the rate of interest.
+Your stored procedure should accept the values of p, t and r as parameters and display the Interest and Total amount on the screen. Display the results on the screen using dbms_output.put_line. Calling program for the stored procedure need not be written.
+
+***************************************************************************************************************************************************
+
+create procedure Simp_Intr(p int,t int ,r int)
+begin
+declare Intr int;
+declare Amt int;
+set Intr:= p*t*r/100;
+set Amt:= p + Intr;
+select 'interest is',Intr  ,'Amount is',Amt;
+end

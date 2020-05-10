@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<!DOCTYPE document SYSTEM "05GREET.DTD">
+
+
+<document>
+	<greeting>Hello from XML</greeting>
+	<message>Welcome to the world of XML</message>
+
+</document>

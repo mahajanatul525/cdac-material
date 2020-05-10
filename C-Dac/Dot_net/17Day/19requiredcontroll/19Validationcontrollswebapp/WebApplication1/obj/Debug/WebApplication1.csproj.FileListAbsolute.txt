@@ -1,0 +1,9 @@
+D:\dot_net\Day_wise\day13asp\19requiredcontroll\WebApplication1\WebApplication1\bin\WebApplication1.dll
+D:\dot_net\Day_wise\day13asp\19requiredcontroll\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+D:\dot_net\Day_wise\day13asp\19requiredcontroll\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\dot_net\Day_wise\day13asp\19requiredcontroll\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\19requiredcontroll\19Validationcontrollswebapp\WebApplication1\bin\WebApplication1.dll
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\19requiredcontroll\19Validationcontrollswebapp\WebApplication1\bin\WebApplication1.pdb
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\19requiredcontroll\19Validationcontrollswebapp\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\19requiredcontroll\19Validationcontrollswebapp\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\19requiredcontroll\19Validationcontrollswebapp\WebApplication1\obj\Debug\WebApplication1.pdb

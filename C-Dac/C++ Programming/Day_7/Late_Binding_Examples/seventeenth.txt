@@ -1,0 +1,74 @@
+class Shape  // abstract
+{
+	public:
+		virtual void draw()=0; // pure virtual
+		
+};
+class Triangle:public Shape
+{
+	public:
+		void draw()
+		{
+			cout<<"Triangle draw";
+		}
+};
+
+class Circle:public Shape
+{
+	public:
+		void draw()
+		{
+			cout<<"Circle draw";
+		}
+};
+class Poly:public Shape
+{
+	public:
+		void draw()
+		{
+			cout<<"Poly draw";
+		}
+	
+};
+void perform(Shape *s) // most generic
+{
+	s->draw();
+}
+
+int main()
+{
+
+	Circle r;
+	Triangle t;
+	perform(&r);
+	perform(&t);
+	perform(new Poly); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+global function
+
+	which will invoke "draw()" based on user's choice
+
+
+
+
+
+
+

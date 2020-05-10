@@ -1,0 +1,124 @@
+Implement a circular queue in c++, to support "enque" and "deque" operation of a given size. Your program should support following commands as given below:
+enque N              // insert N in the Queue, if queue is full print the output as "FULL' 
+deque                 // Remove the first elements from the Queue and print the value if the Queue is empty print "EMPTY" 
+exit                     // exit the program 
+ assume the input will be always a positive integer.
+ 
+
+
+
+
+
+
+#include<iostream>
+#include<string.h>
+using namespace std;
+class Queue
+{
+        private:
+                int item;
+                int cqueue[10];
+                int head,tail,pointer;
+          public:
+                Queue()
+                {
+                        head=-1;
+                        tail=-1;
+               
+                }
+                void enque(int N,int max)
+                {
+                        if((head==0 && tail==max-1) || (head==max+1))
+                            cout<<"FULL\n";
+                        else
+                        {
+                            if(head==-1)
+                            {
+                              
+                                head=0;
+                                tail=0;
+                            }
+                            else
+                            {
+                                if(tail==max-1)
+                                    tail=0;
+                                else
+                                    tail++;
+                            }
+                      
+                      
+                            cqueue[tail]=N;
+           
+                        }
+                }
+                void deque(int max)
+                {
+                    int item;
+                    if(head==-1)
+                       cout<<"EMPTY"<<endl;
+                    else
+                    {
+                        item=cqueue[head];
+                     cout<<item<<endl;
+                        if(head==tail)
+                        {
+                            head=-1;
+                            tail=-1;
+                        }
+                        else
+                        {
+                            if(head==max-1)
+                                head=0;
+                            else
+                                head++;
+                        }
+                    }
+                }
+                void show(int max)
+                {
+                    if(head==-1)
+                  cout<<"EMPTY"<<endl;
+                    else
+                    {
+                        if(tail<head)
+                        {
+                            for(pointer=head;pointer<=max-1;pointer++)
+                            {
+                                cout<<cqueue[pointer];
+                                pointer++;
+                            }
+                            for(pointer=0;pointer<=tail;pointer++)
+                            {
+                                cout<<cqueue[pointer];
+                            }
+                        }
+                   
+                    else
+                    {
+                        for(pointer=head;pointer<=tail;pointer++)
+                        cout<<cqueue[pointer];
+                    }
+                }
+            }   
+      };              
+               
+int main()
+{
+    int max;string str;
+Queue q1;
+cin>>max;
+
+  do  {
+    cin>>str;
+ 
+    if(str=="enque")
+    {
+        int no;
+        cin>>no;
+      
+    q1.enque(no,max);
+    }else if(str=="deque")  {q1.deque(max);}
+   else if(str=="exit"){break;}
+    }while(1);
+return 0;
+}

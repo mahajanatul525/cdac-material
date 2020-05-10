@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication5.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <style type="text/css">
+div.container
+{
+width:100%;
+margin:0px;
+border:1px solid gray;
+
+}
+div.header,div.footer
+{
+padding:0.5em;
+color:white;
+background-color:gray;
+
+}
+h1.header
+{
+padding:0;
+margin:0;
+}
+div.left
+{
+float:left;
+width:160px;
+margin:0;
+padding:1em;
+}
+div.content
+{
+margin-left:190px;
+border-left:1px solid gray;
+padding:1em;
+}
+</style>
+
+    <title></title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        Heading
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <div class="container">
+<form id="form1" runat="server">
+        
+<div class="header"><h1 class="header">Vidyanidhi Infotech Academy</h1>
+
+</div>
+         <asp:Button ID="Button1" runat="server" Text=" Contect us" PostBackUrl="~/WebForm2.aspx"/>
+    <asp:Button ID="Button2" runat="server" Text=" About us" PostBackUrl="~/WebForm3.aspx"/>
+    <asp:Button ID="Button3" runat="server" Text="Home" PostBackUrl="~/WebForm1.aspx"/>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <div>
+
+This is page specific data
+            </div>
+
+        </asp:ContentPlaceHolder>
+    </div>
+       
+
+
+    </form>
+
+
+         <div class="footer">Copyright 1999-2005 by vita.</div>
+</div>
+
+</body>
+</html>

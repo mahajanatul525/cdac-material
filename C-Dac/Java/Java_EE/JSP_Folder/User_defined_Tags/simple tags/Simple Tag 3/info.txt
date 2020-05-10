@@ -1,0 +1,1 @@
+same as Simple Tag 2 , but here we are writing the body content of tag into file.

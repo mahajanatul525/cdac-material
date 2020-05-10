@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html -->
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class=" js"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>WCF Interview Questions - Part 3 - WCF Tutorial</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://www.topwcftutorials.net/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://www.topwcftutorials.net/wp-content/themes/iconic-one/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<!-- This site is optimized with the Yoast SEO plugin v2.3.5 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Major focus area of WCF Interview Questions including WCF Faults, WCF Security, Reliable Messaging and Sessions, RESTful services.">
+<link rel="canonical" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/WCF Interview Questions - Part 3 - WCF Tutorial.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WCF Interview Questions - Part 3 - WCF Tutorial">
+<meta property="og:description" content="Major focus area of WCF Interview Questions including WCF Faults, WCF Security, Reliable Messaging and Sessions, RESTful services.">
+<meta property="og:url" content="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html">
+<meta property="og:site_name" content="WCF Tutorial">
+<meta property="article:tag" content="Fault Contract">
+<meta property="article:tag" content="Interview Questions">
+<meta property="article:tag" content="Reliable Messaging">
+<meta property="article:tag" content="Reliable Sessions">
+<meta property="article:tag" content="WCF Bindings">
+<meta property="article:tag" content="WCF Data Services">
+<meta property="article:tag" content="WCF RESTful Services">
+<meta property="article:tag" content="WCF Security">
+<meta property="article:section" content="Uncategorized">
+<meta property="article:published_time" content="2012-10-16T05:18:00+00:00">
+<meta property="article:modified_time" content="2015-07-25T18:28:28+00:00">
+<meta property="og:updated_time" content="2015-07-25T18:28:28+00:00">
+<meta property="og:image" content="http://www.topwcftutorials.net/wp-content/uploads/2012/05/WCF-Fault-300x277.jpg">
+<meta property="og:image" content="http://www.topwcftutorials.net/wp-content/uploads/2012/10/WCF-Security.png">
+<meta property="og:image" content="http://www.topwcftutorials.net/wp-content/uploads/2012/10/basicVsws1.png">
+<meta property="og:image" content="http://www.topwcftutorials.net/wp-content/uploads/2014/02/RESTful-Service.png">
+<meta property="og:image" content="http://www.topwcftutorials.net/wp-content/uploads/2012/10/wcf.png">
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="WCF Tutorial » Feed" href="http://www.topwcftutorials.net/feed">
+<link rel="alternate" type="application/rss+xml" title="WCF Tutorial » Comments Feed" href="http://www.topwcftutorials.net/comments/feed">
+<link rel="alternate" type="application/rss+xml" title="WCF Tutorial » WCF Interview Questions – Part 3 Comments Feed" href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html/feed">
+		<script src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/ca-pub-9997101014530813.js"></script><script src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/plusone.js" gapi_processed="true"></script><script type="text/javascript" async="" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/ga.js"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.topwcftutorials.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.2"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/wp-emoji-release.min.js" type="text/javascript"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="collapseomatic-css-css" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/light_style.css" type="text/css" media="all">
+<link rel="stylesheet" id="swpm.common-css" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/swpm.common.css" type="text/css" media="all">
+<link rel="stylesheet" id="validationEngine.jquery-css" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/validationEngine.jquery.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpProQuiz_front_style-css" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/wpProQuiz_front.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="tx-fontawesome-css" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="tx-bs-accordion-css" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/accordion.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="themonic-fonts-css" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="themonic-style-css" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="custom-style-css" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/custom.css" type="text/css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='themonic-ie-css'  href='http://www.topwcftutorials.net/wp-content/themes/iconic-one/css/ie.css?ver=20130305' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="jetpack-top-posts-widget-css" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/style(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="cpsh-shortcodes-css" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/shortcodes.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/jetpack.css" type="text/css" media="all">
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal disabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-32905935-1']);
+	_gaq.push(['_gat._forceSSL']);
+	_gaq.push(['_trackPageview']);
+
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type="text/javascript" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/jquery.js"></script>
+<script type="text/javascript" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/jquery.validationEngine-en.js"></script>
+<script type="text/javascript" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/jquery.validationEngine.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.topwcftutorials.net/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.topwcftutorials.net/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.3.2">
+<link rel="shortlink" href="http://wp.me/p4FbTn-v">
+<script type="text/javascript">
+window.___gcfg = {lang: 'en'};
+(function() 
+{var po = document.createElement('script');
+po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/plusone.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(po, s);
+})();</script><meta data-pso-pv="1.2.0" data-pso-pt="singlePost" data-pso-th="fd2237f96e044618737fc0f4b6fe86fa"><script async="" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/adsbygoogle.js"></script><script pagespeed_no_defer="" data-pso-version="20160112_160743">window.dynamicgoogletags={config:[]};dynamicgoogletags.config=["ca-pub-9997101014530813",[[[["ARTICLE",0,,[],2],["10px","24px",0],0,[0],"3960230289",0],[["ARTICLE",0,,[],-1],["4px","20px",0],3,[0],"6298358287",0]]],[[[],[[["BODY",0,,[]],["10px","10px",1],1,[4],,0,,,2],[["NAV",0,,[]],["10px","10px",1],3,[2],,0,,,5],[["DIV",,"disqus_thread",[]],["10px","28px",1],0,[1],,0,,,7],[["DIV",,"disqus_thread",[]],["10px","10px",1],3,[1],,0,,,7],[["DIV",,"indeed_widget_wrapper",[]],["10px","12px",1],0,[1],,0,,,8],[["DIV",,"indeed_widget_wrapper",[]],["10px","10px",1],3,[1],,0,,,8],[["ASIDE",,"top-posts-2",[]],["10px","20px",1],3,[1],,0,,,6],[["ASIDE",,"text-7",[]],["10px","20px",1],3,[1],,0,,,6],[["ASIDE",,"recent-posts-2",[]],["10px","20px",1],3,[1],,0,,,6],[["ASIDE",,"tag_cloud-2",[]],["10px","20px",1],3,[3],,0,,,6],[["ASIDE",,"rss_links-2",[]],["10px","20px",1],3,[3],,0,,,6],[["DIV",,"secondary",[]],["10px","10px",1],3,[5],,0,,,5],[["DIV",,,["site-info"]],["10px","10px",1],0,[5],,0,,,5],[["DIV",,,["site-info"]],["10px","10px",1],3,[5],,0,,,5],[["DIV",,,["site-wordpress"]],["10px","10px",1],0,[5],,0,,,4],[["BODY",0,,[]],["10px","10px",1],2,[5],,0,,,2],[["ARTICLE",0,,[],0],["10px","20px",0],0,[0],,0,,,9],[["ARTICLE",0,,[],1],["10px","24px",0],0,[0],,0,,,9],[["ARTICLE",0,,[],2],["10px","24px",0],0,[0],,0,,,9],[["ARTICLE",0,,[],-1],["10px","10px",0],3,[0],,0,,,11],[["DIV",,"headingOne",[]],["10px","10px",1],1,[1],,0,,,10],[["ASIDE",,"text-12",[]],["10px","20px",1],3,[1],,0,,,6],[["ASIDE",,"text-6",[]],["10px","20px",1],3,[3],,0,,,6]],["7419897485","8896630682","1373363888","2850097083","4326830285"],["ARTICLE",,,[]],"20160114_041236",1]],"WordPressSinglePost","4042895880",,0.01,,[,1454192706167],0.01,0,,,"http://www.topwcftutorials.net"];(function(){var h=this,aa=function(a){var b=typeof a;if("object"==b)if(a){if(a instanceof Array)return"array";if(a instanceof Object)return b;var c=Object.prototype.toString.call(a);if("[object Window]"==c)return"object";if("[object Array]"==c||"number"==typeof a.length&&"undefined"!=typeof a.splice&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("splice"))return"array";if("[object Function]"==c||"undefined"!=typeof a.call&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("call"))return"function"}else return"null";
+else if("function"==b&&"undefined"==typeof a.call)return"object";return b},r=function(a){return"number"==typeof a},t=function(a,b){function c(){}c.prototype=b.prototype;a.wa=b.prototype;a.prototype=new c;a.prototype.constructor=a;a.qa=function(a,c,f){for(var g=Array(arguments.length-2),k=2;k<arguments.length;k++)g[k-2]=arguments[k];return b.prototype[c].apply(a,g)}};var ba=String.prototype.trim?function(a){return a.trim()}:function(a){return a.replace(/^[\s\xa0]+|[\s\xa0]+$/g,"")},ca=function(a,b){return a<b?-1:a>b?1:0};var u=function(){},w=function(a,b,c){a.b=null;b||(b=[]);a.va=void 0;a.J=-1;a.g=b;a:{if(a.g.length){b=a.g.length-1;var d=a.g[b];if(d&&"object"==typeof d&&"array"!=aa(d)){a.P=b-a.J;a.G=d;break a}}a.P=Number.MAX_VALUE}if(c)for(b=0;b<c.length;b++)d=c[b],d<a.P?(d+=a.J,a.g[d]=a.g[d]||v):a.G[d]=a.G[d]||v},v=[],x=function(a,b){if(b<a.P){var c=b+a.J,d=a.g[c];return d===v?a.g[c]=[]:d}d=a.G[b];return d===v?a.G[b]=[]:d},y=function(a,b,c){b<a.P?a.g[b+a.J]=c:a.G[b]=c},z=function(a,b,c){a.b||(a.b={});if(!a.b[c]){var d=
+x(a,c);d&&(a.b[c]=new b(d))}return a.b[c]},A=function(a,b,c){a.b||(a.b={});if(!a.b[c]){for(var d=x(a,c),e=[],f=0;f<d.length;f++)e[f]=new b(d[f]);a.b[c]=e}b=a.b[c];b==v&&(b=a.b[c]=[]);return b},da=function(a,b,c){a.b||(a.b={});c=c||[];for(var d=[],e=0;e<c.length;e++)d[e]=c[e].g;a.b[b]=c;y(a,b,d)};u.prototype.toString=function(){return this.g.toString()};
+var B=function(a){return new a.constructor(ea(a.g))},ea=function(a){var b;if("array"==aa(a)){for(var c=Array(a.length),d=0;d<a.length;d++)null!=(b=a[d])&&(c[d]="object"==typeof b?ea(b):b);return c}c={};for(d in a)null!=(b=a[d])&&(c[d]="object"==typeof b?ea(b):b);return c};var C=function(a){w(this,a,fa)};t(C,u);var fa=[4];C.prototype.o=function(){return B(this)};var E=function(a){return x(a,5)},F=function(a){w(this,a,null)};t(F,u);F.prototype.o=function(){return B(this)};var ga=function(a){w(this,a,null)};t(ga,u);ga.prototype.o=function(){return B(this)};var G=function(a){return z(a,C,1)},H=function(a){w(this,a,ha)};t(H,u);var ha=[1];H.prototype.o=function(){return B(this)};H.prototype.i=function(){return A(this,ga,1)};H.prototype.ea=function(a){da(this,1,a)};var I=function(a){w(this,a,ia)};t(I,u);var ia=[2];I.prototype.o=function(){return B(this)};I.prototype.ca=function(){return x(this,3)};var ja=function(a){w(this,a,null)};t(ja,u);ja.prototype.o=function(){return B(this)};
+var J=function(a){w(this,a,ka)};t(J,u);var ka=[1,2,3];J.prototype.o=function(){return B(this)};J.prototype.i=function(){return A(this,ga,2)};J.prototype.ea=function(a){da(this,2,a)};var K=function(a){w(this,a,la)};t(K,u);var la=[3];K.prototype.o=function(){return B(this)};K.prototype.u=function(){return x(this,1)};K.prototype.B=function(){return z(this,H,2)};K.prototype.O=function(){return x(this,4)};K.prototype.ca=function(){return x(this,5)};K.prototype.N=function(){return z(this,ma,9)};
+var ma=function(a){w(this,a,null)};t(ma,u);ma.prototype.o=function(){return B(this)};var qa=function(a,b){var c=b||document,d=null,e=x(a,3);if(e)if(d=c.getElementById(e))d=[d];else return[];if(e=x(a,1))if(d){for(var f=[],g=0;g<d.length;++g)d[g].tagName&&d[g].tagName.toUpperCase()==e.toUpperCase()&&f.push(d[g]);d=f}else{d=c.getElementsByTagName(e);e=[];for(f=0;f<d.length;++f)e.push(d[f]);d=e}if((e=x(a,4))&&0<e.length)if(d)for(c=d,d=[],f=0;f<c.length;++f)na(c[f],e)&&d.push(c[f]);else{if(!c.body)return[];d=oa(e,c.body)}c=x(a,2);if(r(c)&&d)if(0>c&&(c+=d.length),d.length>c)d=[d[c]];else return[];
+c=E(a);if(r(c)&&d){e=[];for(f=0;f<d.length;f++)g=pa(d[f]),0>c&&(c+=g.length),0<=c&&c<g.length&&e.push(g[c]);d=e}c=x(a,6);if(void 0!==c&&d)switch(c){case 0:return d.slice(1);case 1:return d.slice(0,d.length-1);case 2:return d.slice(1,d.length-1)}return d?d:[]},ra=function(a){return"INS"==a.tagName&&na(a,["adsbygoogle-placeholder"])},pa=function(a){var b=[];a=a.getElementsByTagName("p");for(var c=0;c<a.length;++c)100<=sa(a[c])&&b.push(a[c]);return b},ta=function(a,b){if(a==b)return!0;if(!a||!b||x(a,
+1)!=x(b,1)||x(a,2)!=x(b,2)||x(a,3)!=x(b,3)||E(a)!=E(b)||x(a,6)!=x(b,6))return!1;var c=x(a,4),d=x(b,4);if(c||d)if(c&&d&&c.length==d.length)for(var e=0;e<c.length;e++){if(c[e]!=d[e])return!1}else return!1;return!0},sa=function(a){if(3==a.nodeType)return a.length;if(1!=a.nodeType||"SCRIPT"==a.tagName)return 0;for(var b=0,c=0;c<a.childNodes.length;++c)b+=sa(a.childNodes[c]);return b},oa=function(a,b){if(b.getElementsByClassName){for(var c=b.getElementsByClassName(a.join(" ")),d=[],e=0;e<c.length;++e)d.push(c[e]);
+return d}c=[];na(b,a)&&c.push(b);for(e=0;e<b.childNodes.length;++e)1==b.childNodes[e].nodeType&&(c=c.concat(oa(a,b.childNodes[e])));return c},na=function(a,b){for(var c=a.className?a.className.split(/\s+/):[],d={},e=0;e<c.length;++e)d[c[e]]=!0;for(e=0;e<b.length;++e)if(!d[b[e]])return!1;return!0};var L;a:{var ua=h.navigator;if(ua){var va=ua.userAgent;if(va){L=va;break a}}L=""}var M=function(a){return-1!=L.indexOf(a)};var wa=M("Opera")||M("OPR"),N=M("Trident")||M("MSIE"),xa=M("Edge"),ya=M("Gecko")&&!(-1!=L.toLowerCase().indexOf("webkit")&&!M("Edge"))&&!(M("Trident")||M("MSIE"))&&!M("Edge"),za=-1!=L.toLowerCase().indexOf("webkit")&&!M("Edge"),Aa=function(){var a=L;if(ya)return/rv\:([^\);]+)(\)|;)/.exec(a);if(xa)return/Edge\/([\d\.]+)/.exec(a);if(N)return/\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/.exec(a);if(za)return/WebKit\/(\S+)/.exec(a)},Ba=function(){var a=h.document;return a?a.documentMode:void 0},Ca=function(){if(wa&&
+h.opera){var a;var b=h.opera.version;try{a=b()}catch(c){a=b}return a}a="";(b=Aa())&&(a=b?b[1]:"");return N&&(b=Ba(),b>parseFloat(a))?String(b):a}(),Da={},Ea=function(a){if(!Da[a]){for(var b=0,c=ba(String(Ca)).split("."),d=ba(String(a)).split("."),e=Math.max(c.length,d.length),f=0;0==b&&f<e;f++){var g=c[f]||"",k=d[f]||"",m=RegExp("(\\d*)(\\D*)","g"),l=RegExp("(\\d*)(\\D*)","g");do{var n=m.exec(g)||["","",""],p=l.exec(k)||["","",""];if(0==n[0].length&&0==p[0].length)break;b=ca(0==n[1].length?0:parseInt(n[1],
+10),0==p[1].length?0:parseInt(p[1],10))||ca(0==n[2].length,0==p[2].length)||ca(n[2],p[2])}while(0==b)}Da[a]=0<=b}},Fa=h.document,Ga=Fa&&N?Ba()||("CSS1Compat"==Fa.compatMode?parseInt(Ca,10):5):void 0;var Ha;if(!(Ha=!ya&&!N)){var Ia;if(Ia=N)Ia=9<=Number(Ga);Ha=Ia}Ha||ya&&Ea("1.9.1");N&&Ea("9");var O=function(a,b,c,d){this.top=a;this.right=b;this.bottom=c;this.left=d};O.prototype.contains=function(a){return this&&a?a instanceof O?a.left>=this.left&&a.right<=this.right&&a.top>=this.top&&a.bottom<=this.bottom:a.x>=this.left&&a.x<=this.right&&a.y>=this.top&&a.y<=this.bottom:!1};O.prototype.floor=function(){this.top=Math.floor(this.top);this.right=Math.floor(this.right);this.bottom=Math.floor(this.bottom);this.left=Math.floor(this.left);return this};var Ja=function(a,b){for(var c in a)Object.prototype.hasOwnProperty.call(a,c)&&b.call(void 0,a[c],c,a)},Ka=function(a,b){var c=a.length;if(0==c)return 0;for(var d=b||305419896,e=0;e<c;e++)d^=(d<<5)+(d>>2)+a.charCodeAt(e)&4294967295;return 0<d?d:4294967296+d};var Oa=function(a,b,c,d){var e=La;try{if((c?e.pa:Math.random())<(d||e.ja)){var f=e.ia+a+Ma(b),f=f.substring(0,2E3);h.google_image_requests||(h.google_image_requests=[]);var g=h.document.createElement("img");g.src=f;h.google_image_requests.push(g)}}catch(k){}},Ma=function(a){var b="";Ja(a,function(a,d){if(0===a||a)b+="&"+d+"="+encodeURIComponent(String(a))});return b};var Pa=window;var Qa=/(^| )adsbygoogle($| )/;var Ra=function(a,b){for(var c=a.google_ad_modifications=a.google_ad_modifications||{},c=c.loeids=c.loeids||[],d=0;d<b.length;d++)c.push(b[d])};var Sa=function(a,b,c){this.T=a;this.la=c?c:new ma};Sa.prototype.N=function(){return this.la||new ma};var P=function(a){return a.dynamicgoogletags=a.dynamicgoogletags||{}};var Ta=function(a){a=a.document;return("CSS1Compat"==a.compatMode?a.documentElement:a.body)||{}},Ua=function(a){return void 0===a.pageYOffset?(a.document.documentElement||a.document.body.parentNode||a.document.body).scrollTop:a.pageYOffset},Va=function(a){return void 0===a.pageXOffset?(a.document.documentElement||a.document.body.parentNode||a.document.body).scrollLeft:a.pageXOffset};var Wa=function(){this.document=document};var Xa=function(a,b,c){switch(a){case 0:b.parentNode&&b.parentNode.insertBefore(c,b);break;case 3:if(a=b.parentNode){var d=b.nextSibling;if(d&&d.parentNode!=a)for(;d&&8==d.nodeType;)d=d.nextSibling;a.insertBefore(c,d)}break;case 1:b.insertBefore(c,b.firstChild);break;case 2:b.appendChild(c)}ra(b)&&(b.style.display="block")};var Ya=function(a){return!!a.nextSibling||!!a.parentNode&&Ya(a.parentNode)},Za=function(a,b){var c=G(b);if(!c)return null;c=qa(c,a);return 0<c.length?c[0]:null},ab=function(a,b){var c=$a(a,b,!0);return r(c)&&!(c<=Ta(a).clientHeight)},bb=function(a,b){return a.body?b-a.body.getBoundingClientRect().top:b},$a=function(a,b,c){if(!c||!r(x(b,8))){var d=Za(a.document,b);if(d){var e=z(b,F,2);c=a.document.createElement("div");c.className="googlepublisherpluginad";var f=c.style;f.textAlign="center";f.width=
+"100%";f.height="0px";f.clear=e&&x(e,3)?"both":"none";Xa(x(b,3),d,c);d=c.getBoundingClientRect().top+Ua(a);c.parentNode.removeChild(c);y(b,8,d)}}b=x(b,8);return r(b)?b-Ua(a):null},eb=function(a,b,c){switch(b){case 0:return!!cb(a,db(c));case 3:return!!cb(a,c);case 1:return!1;case 2:return b=c.lastChild,!!cb(a,b?1==b.nodeType?b:db(b):null);default:return!1}},cb=function(a,b){if(!b)return!1;var c;c=a.getComputedStyle?a.getComputedStyle(b,null):b.currentStyle;if(!c)return!1;c=c.cssFloat||c.styleFloat;
+return"left"==c||"right"==c},fb=function(a){return a.adsbygoogle=a.adsbygoogle||[]},gb=function(a){switch(a){case 0:return"auto";case 1:return"horizontal";case 2:return"vertical";case 3:return"rectangle";default:return"auto"}},db=function(a){for(a=a.previousSibling;a&&1!=a.nodeType;)a=a.previousSibling;return a?a:null},hb=function(a,b){a.sort(function(a,d){var e=$a(b,a,!0),e=r(e)?e:Number.POSITIVE_INFINITY,f=$a(b,d,!0),f=r(f)?f:Number.POSITIVE_INFINITY;return e-f})};var ib=function(a){this.m=a;this.ha=[]};ib.prototype.f=function(){return 0<A(this.m,J,3).length?A(this.m,J,3)[0]:null};var jb=function(a,b){var c=a.google_ad_modifications=a.google_ad_modifications||{};(c.ad_channels=c.ad_channels||[]).push(b)},mb=function(a){a+=kb;var b=Ka(a);return((b%512*2+1)*lb+Ka(a,b)%1024)%1024},nb=function(a,b,c){var d=a.length;c-=0;return 0>c||c>=b*d?null:a[c%d]};var La;La=new function(){this.ia="http"+("http:"===Pa.location.protocol?"":"s")+"://pagead2.googlesyndication.com/pagead/gen_204?id=";this.ja=.01;this.pa=Math.random()};var ob={"120x90":!0,"160x90":!0,"180x90":!0,"200x90":!0,"468x15":!0,"728x15":!0};var pb=function(a,b){var c;c=Ta(a).clientWidth;var d=Ta(a).clientHeight;if(!r(c)||!r(d))throw Error("No VP width and/or height.");var e=Va(a),f=Ua(a);c=new O(f,c+e,d+f,e);return(b.left<c.right&&c.left<b.right&&b.top<c.bottom&&c.top<b.bottom?new O(Math.max(b.top,c.top),Math.min(b.right,c.right),Math.min(b.bottom,c.bottom),Math.max(b.left,c.left)):null)||new O(0,0,0,0)};var qb=function(a){this.j=a;this.X=null;this.A=[];this.K={};this.D=this.S=null},rb=function(a){if(!a.j.ownerDocument)throw Error("Wrapped node should have an owner document.");return a.j.ownerDocument},sb=function(a){a=rb(a);return a.defaultView||a.parentWindow};qb.prototype.getParent=function(){return this.X};qb.prototype.removeChild=function(a){for(var b=0;b<this.A.length;++b)if(this.A[b]==a){this.A[b].X=null;this.A.splice(b,1);break}};
+var ub=function(a){if(!a.aa){var b;if(!a.S){b=Va(sb(a));var c=Ua(sb(a));if(a.j.getBoundingClientRect){var d=a.j.getBoundingClientRect();b=new O(d.top+c,d.right+b,d.bottom+c,d.left+b)}else d=rb(a).createRange(),d.selectNodeContents(a.j),d.collapsed?b=new O(0,0,0,0):(d=d.getBoundingClientRect(),b=new O(d.top+c,d.right+b,d.bottom+c,d.left+b));a.S=b}b=a.S;c=Q(a,"position");if("fixed"==c)b=pb(sb(a),b);else if(a.getParent()){if(d=tb(a.getParent(),0,"absolute"==c)){var d=ub(d),e=d.left,d=d.right;b=b.left>=
+d||b.right<=e?null:new O(b.top,Math.min(b.right,d),b.bottom,Math.max(b.left,e))}b&&(c=tb(a.getParent(),1,"absolute"==c))&&(d=ub(c),c=d.top,d=d.bottom,b=b.top>=d||b.bottom<=c?null:new O(Math.max(b.top,c),b.right,Math.min(b.bottom,d),b.left));b=b&&vb(a)&&"fixed"==Q(vb(a),"position")?pb(sb(a),b):b||new O(0,0,0,0)}a.aa=b}return a.aa},vb=function(a){if(void 0!==a.V)return a.V;var b;b=Q(a,"position");if("fixed"==b)b=a;else{var c=a.getParent();b=c&&"BODY"!=a.j.tagName?(c=vb(c))||"absolute"!=b&&"relative"!=
+b?c:a:null}a.V=b;return a.V},tb=function(a,b,c){if(void 0!==a.K[b])return a.K[b];a.K[b]=wb(a,b,c);return a.K[b]},wb=function(a,b,c){var d=Q(a,"position"),e;a:switch(b){case 0:e="hidden"==Q(a,"overflow")||"scroll"==Q(a,"overflow")||"hidden"==Q(a,"overflow-x")||"scroll"==Q(a,"overflow-x");break a;case 1:e="hidden"==Q(a,"overflow")||"scroll"==Q(a,"overflow")||"hidden"==Q(a,"overflow-y")||"scroll"==Q(a,"overflow-y");break a;default:throw"Unknown pageAxis: "+b;}switch(d){case "fixed":if(e)return a;break;
+case "static":case "":if(e&&!c)return a;if(a.getParent())return tb(a.getParent(),b,c);break;case "absolute":case "relative":if(e)return a;if(a.getParent())return tb(a.getParent(),b,"absolute"==d);break;default:window.console.error("Unknown position value.")}return null},Q=function(a,b){if(1!=a.j.nodeType)return null;a.D=a.D||sb(a).getComputedStyle(a.j);return a.D?a.D[b]||a.D.getPropertyValue(b)||"":""},xb=function(a,b){if(b&&3==a.nodeType?!/\S/.test(a.data):1!=a.nodeType&&3!=a.nodeType||a.tagName&&
+("SCRIPT"==a.tagName.toUpperCase()||"STYLE"==a.tagName.toUpperCase()))return null;for(var c=new qb(a),d=0;d<a.childNodes.length;++d){var e=xb(a.childNodes[d],b);if(e){var f=c;e.X=f;f.A.push(e)}}return c};var zb=function(a){this.ga=a;this.L=null;a={};var b=this.ga.ta;try{if(b&&"function"==typeof b.oa)for(var c=b.oa().sa(),b=0;b<c.length;b++){var d=c[b].ra();a[d]=!0}}catch(e){Oa("ladd_evt",{ok:0,err:e.toString()},!0,.1)}this.ma=a;this.M=[];this.ba=[];this.fa=!0;yb(this)},Ab=function(a,b){var c=a.id;return!!c&&!!c.indexOf&&"function"===typeof c.indexOf&&0===c.indexOf(b)},Bb=function(a){yb(a);return 0<a.M.length},yb=function(a){if(a.fa){a.fa=!1;if(!a.L){var b;b=(b=a.ga.document.body)?xb(b):null;a.L=b}a.L&&
+Cb(a,a.L,a.M,a.ba)}},Cb=function(a,b,c,d){var e;if(e=1===b.j.nodeType){e=b.j;var f;(f="INS"==e.tagName&&Qa.test(e.className))||(f=e.id,f=a.ma[f]?!0:"DIV"==e.tagName&&0==f.indexOf("div-gpt-ad"));e=f||Ab(e,"google_ads_frame")||Ab(e,"aswift_")||e.classList.contains("lru_res")}e&&(c.push(b),e=b.j,"IFRAME"!=e.tagName||!Ab(e,"google_ads_frame")&&!Ab(e,"aswift_")?e=!1:(e=ub(b),f=e.bottom-e.top,e=!(ob[e.right-e.left+"x"+f]&&50>f)),e&&d.push(b));b=b.A;for(e=0;e<b.length;e++)Cb(a,b[e],c,d)};var R=function(a){this.a=a;this.l=[];this.Z=0;this.F=[];this.R=[];this.$=this.U=null;this.da=!1},Db=function(a,b){var c;c=a.f();c=z(c,C,4);if(!(c&&b&&x(b,1)==x(c,1)&&x(b,3)==x(c,3)&&r(x(b,2))&&r(E(b))))return!1;c=x(c,4);var d=x(b,4);if(c.length!=d.length)return!1;for(var e=0;e<c.length;++e)if(d[e]!=c[e])return!1;return!0},Eb=function(a){var b=r(void 0)?void 0:20,c=a.f(),d=c.i(),e=z(c,C,4);if(!(a.da||0>=b)&&e&&0!=qa(e,a.a.document).length){a.da=!0;for(var c=[],f=0;f<d.length;++f){var g=d[f],k=G(g);
+if(Db(a,k)){var m=x(k,2),k=E(k);null!=m&&null!=k&&0<=m&&0<=k&&(!c[m]||E(G(c[m]))<k)&&(c[m]=g)}}k=0;d=qa(e,a.a.document);for(m=0;m<c.length&&k<b;++m){var e=k,f=a,l=d[m],g=c[m],k=b-k,n=f.f().i(),p=0;if(l&&g){var l=pa(l).length,q=G(g);switch(x(q,6)){case 0:case 1:--l;break;case 2:l-=2}for(q=E(G(g))+1;q<l&&p<k;++q){var D=g.o(),Na=G(D);y(Na,5,q);n.push(D);p++}}p&&f.f().ea(n);k=e+p}}},S=function(a,b){for(var c=0;c<a.F.length;++c)if(a.F[c]==b)return;a.F.push(b)},Fb=function(a,b){for(var c=0;c<a.R.length;++c)if(a.R[c]==
+b)return;a.R.push(b)},Gb=function(a,b,c){var d=Za(a.a.document,b);if(d){var e=x(b,3),f;if(f=G(b))f=G(b),f=void 0!==x(f,2);if(!f||!eb(a.a,e,d))if(2!=e||c||Ya(d))if(c=1==e||2==e?d:d.parentNode,!(c&&0>=c.offsetWidth)||ra(c))a:if(null==a.$||a.$.ua(a.a,b))if(x(b,7))Fb(a,8);else{b:if(x(b,5))c=x(b,5);else{if(c=T(a).f())if(c=x(c,3),a.Z<c.length){c=c[a.Z++];break b}S(a,4);c=null}if(null!=c){y(b,7,!0);e=[];(f=a.O())&&e.push(f);f=T(a).ha;for(var g=0;g<f.length;++g)e.push(f[g]);r(x(b,9))&&e.push("pso-lv-"+x(b,
+9));var k=a.a.document;f=a.u();var g=c,m=x(b,6),l=z(b,F,2),n,p,q;l&&(n=x(l,1),p=x(l,2),q=!!x(l,3));var l=k.createElement("div"),D=l.style;D.textAlign="center";D.width="100%";D.height="auto";D.clear=q?"both":"none";q=k.createElement("ins");k=q.style;k.display="block";k.margin="auto";k.backgroundColor="transparent";n&&(k.marginTop=n);p&&(k.marginBottom=p);l.appendChild(q);l.className="googlepublisherpluginad";q.className="adsbygoogle";q.setAttribute("data-ad-client",f);g&&q.setAttribute("data-ad-slot",
+g);q.setAttribute("data-ad-format",gb(m));e.length&&q.setAttribute("data-ad-channel",e.join("+"));q.setAttribute("data-tag-origin","pso");Xa(x(b,3),d,l);try{fb(a.a).push({})}catch(Na){x(b,5)!=c&&a.Z--;y(b,7,!1);Fb(a,6);l.parentNode&&l.parentNode.removeChild(l);break a}a.l.push(l)}}}},Hb=function(a,b){for(var c=Number.POSITIVE_INFINITY,d=0;d<a.l.length;++d)var e=a.l[d].getBoundingClientRect().top,f=a.l[d].getBoundingClientRect().bottom,c=Math.min(c,b<e?e-b:f<b?b-f:0);return c},T=function(a){a=P(a.a).ps||
+null;if(!a)throw Error("No placementState");return a},Ib=function(a,b){var c=T(a).m;if(!c||!c.u())return S(a,5),!1;c=A(c,J,3)[0];return c?x(c,3).length<b?(S(a,4),S(a,5),!1):!0:(S(a,5),!1)};R.prototype.u=function(){return T(this).m.u()||""};R.prototype.O=function(){return T(this).m.O()||void 0};R.prototype.B=function(){return T(this).m.B()||new H};R.prototype.f=function(){var a=T(this).f();if(!a)throw Error("No mConfig");return a};var Jb=function(a){a=a.f();a=x(a,6);return null!=a&&0<a};var U=function(a){R.call(this,a)};t(U,R);U.prototype.apply=function(a){var b;(b=T(this).m)&&b.u()&&b.B()?b=!0:(S(this,5),b=!1);if(b){b=this.B().i();for(var c=0;c<b.length;c++){var d=b[c];x(d,7)||Gb(this,d,a)}}};U.prototype.v=function(){return(0==this.B().i().length||0<this.l.length)&&0==this.F.length};var Kb=function(a){R.call(this,a);if(Ib(this,0)){a=this.B().i();for(var b=this.f().i(),c=0;c<a.length;c++){var d=a[c],e;a:{e=d;var f=b;if(e&&G(e))for(var g=0;g<f.length;g++){var k=f[g];if(x(e,3)==x(k,3)&&ta(G(e),G(k))){e=k;break a}}e=null}e&&z(e,F,2)&&(e=z(e,F,2),d.b||(d.b={}),f=e?e.g:e,d.b[2]=e,y(d,2,f))}}};t(Kb,U);var V=function(a){R.call(this,a)};t(V,R);V.prototype.apply=function(){};V.prototype.v=function(){return Jb(this)?Bb(new zb(this.a)):!0};var Lb=function(a){R.call(this,a);this.C=null};t(Lb,R);
+Lb.prototype.apply=function(a){if(a&&Ib(this,2)){Eb(this);a=Ta(this.a).clientHeight||640;null==this.C&&(this.C=new zb(this.a));var b=this.C.ba.length;if(!(5<=b)){var b=Math.min(2,5-b),c=this.f().i();hb(c,this.a);for(var d=0;d<c.length&&this.l.length<b;++d){var e=c[d];if(ab(this.a,e)){var f=$a(this.a,e,!0);if(void 0!==f){var g;a:{g=this.C;for(var k=f,m=a,l=0;l<g.M.length;l++){var n=ub(g.M[l]);if(Math.abs(n.top-k)<m||Math.abs(n.bottom-k)<m){g=!0;break a}}g=!1}g||Hb(this,f)<a||Gb(this,e,!0)}}}0==this.l.length&&
+Fb(this,1)}}};Lb.prototype.v=function(){return Jb(this)?Bb(this.C):!0};var Mb=function(a){R.call(this,a);this.W=!1};t(Mb,V);
+Mb.prototype.apply=function(a){if(a&&!this.W){var b;a:{var c=this.a.document;b=c.body;if(a&&b){a=this.u();var d=c.createElement("div");d.className="googlepublisherpluginad";d.style.display="block";c=c.createElement("ins");c.className="adsbygoogle";c.setAttribute("data-ad-client",a);c.setAttribute("data-reactive-ad-format","1");c.setAttribute("data-tag-origin","pso");c.style.display="none";d.appendChild(c);Xa(2,b,d);try{fb(this.a).push({})}catch(e){Fb(this,6);d.parentNode&&d.parentNode.removeChild(d);
+b=5;break a}this.l.push(d);b=0}else b=4}this.W=0==b}};Mb.prototype.v=function(){return this.W&&V.prototype.v.call(this)};var Nb=function(a){R.call(this,a);a=Ta(a).clientHeight;this.ka=.1*a;this.na=.75*a};t(Nb,R);
+Nb.prototype.apply=function(a){if(!Ib(this,3))return!1;Eb(this);var b=this.f().i();hb(b,this.a);var c;c=this.ka;var d;d=document;d=d.querySelectorAll?d.querySelectorAll("header,#header,#masthead,.header,.site-header"):[];for(var e=d.length,f=0<e?d[0]:null,g=1;g<e;g++)d[g].getBoundingClientRect().top<f.getBoundingClientRect().top&&(f=d[g]);(d=f)&&(d=d.getBoundingClientRect())&&d.top!=d.bottom&&d.left!=d.right&&(c=Math.min(c,bb(document,d.bottom)));for(d=0;d<b.length&&3>this.l.length;d++){e=b[d];var f=
+c,g=this.a.document,k=$a(this.a,e,!1);!r(k)||bb(g,k)<f?f=!1:(f=Hb(this,k),f=this.na<f);f&&(f=ab(this.a,e),g=x(e,6)||0,f&&0==g&&y(e,6,3),!f&&a||Gb(this,e,a))}return this.v()};Nb.prototype.v=function(){return 3==this.l.length};var W={};W[16]=U;W[17]=U;W[19]=V;W[29]=Lb;W[33]=V;W[30]=Mb;W[28]=Nb;W[32]=Kb;W[1]=U;W[8]=V;W[11]=U;var Ob=[19,29,33,30,16,32,17],Pb=[16,19,33,30,17,1,6,8,11];var Qb=function(a){return 0>a||99<a?null:10>a?"0"+a:""+a};var Rb=function(){this.H=this.I=this.Y=null};var Sb=function(a,b,c,d,e,f){var g=P(window).ss||null,k=P(window).ps||null,m;k&&(m=k.m);var l=a?"pso_success":"pso_failure",n;m&&(n=a?x(m,10):x(m,7));null!=n||(n=.01);a={};var p;a:{p=(new Wa).document.getElementsByTagName("script");for(var q=0;q<p.length;++q)if(p[q].hasAttribute("data-pso-version")){p=p[q].getAttribute("data-pso-version");break a}p=null}a.sv=p;a.wpc=f||m&&m.u();a.su=m&&x(m,14);k&&m&&(a.tn=m.O(),f=k.f(),a.ev=f&&x(f,5));g&&(a.s=g.I,a.st=g.Y);a.c=b;a.w=0<window.innerWidth?window.innerWidth:
+null;a.h=0<window.innerHeight?window.innerHeight:null;a.err=c.join();a.warn=d.join();if(e){a.excp_n=e.name;a.excp_m=e.message&&e.message.substring(0,512);if(b=e.stack){e=e.stack;try{-1==e.indexOf("")&&(e="\n"+e);for(var D;e!=D;)D=e,e=e.replace(/((https?:\/..*\/)[^\/:]*:\d+(?:.|\n)*)\2/,"$1");b=e.replace(/\n */g,"\n")}catch(Na){b=""}}a.excp_s=b}0<n&&Oa(l,a,"jserror"!=l,n)};var Tb=function(a){var b=X;a:if(r(a)){for(var c=0;c<Ob.length;++c)if(a==Ob[c]){a=!1;break a}a=!0}else a=!1;a&&(b=b.google_ad_modifications=b.google_ad_modifications||{},b.remove_ads_by_default=!0,b.ad_whitelist=[{ad_tag_origin:"pso"}],b.ad_blacklist=[],b.space_collapsing="slot")},Yb=function(){var a=X,b=Ub,c=Vb,d=b.f();if(!d)return Wb(16);var e;a:{e=A(d,I,1);for(var f=0;f<e.length;++f){for(var g=!0,k=0;k<Pb.length;++k)x(e[f],4)==Pb[k]&&(g=!1);if(g){e=[];0==d.i().length&&e.push("PsoInvalidVariant");
+0==x(d,3).length&&e.push("PsoNoAdSlotCodes");break a}}e=[]}if(0<e.length){a=e;for(c=0;c<a.length;++c)b.ha.push(a[c]);return Wb(16)}a:{e=A(d,I,1);f=c.T;if(r(f))for(g=0;g<e.length;g++)if(k=e[g],W[x(k,4)])for(var m=A(k,ja,2),l=0;l<m.length;l++){var n=m[l],p=x(n,1),n=x(n,2);if(r(p)&&r(n)&&f>=p&&f<=n){e=k;break a}}e=null}if(!e){f=A(d,I,1);e={};for(g=0;g<f.length;g++)e[x(f[g],4)]=!0;f=null;e[19]||e[8]?f=19:e[16]||e[1]?f=16:0<d.i().length&&0<x(d,3).length&&(f=28);null!=f?(e=new I,y(e,6,3),y(e,4,f)):e=null}if(!e)return Wb(16);
+2==x(e,6)&&((f=e.ca())&&jb(a,f),f=x(e,1),null!=f&&Ra(a,[""+f]));f=!0;g=c.N();if(g=x(g,2))g=Date.now?Date.now():+new Date,k=c.N(),k=x(k,2),g=g<k;g||(jb(a,"pso-ama-exd"),f=!1);x(b.m,11)&&(jb(a,"pso-ama-stl-tmp"),f=!1);f&&jb(a,"pso-ama-elig");if(f&&(2==x(e,6)||1==x(e,6))&&(f=e,d=A(d,I,1),null!==c.T)){c={};b=[];for(g=0;g<d.length;g++)k=Xb(d[g]),null==k||c[k]||(c[k]=!0,b.push(k));d=Xb(f);if(null!=d){c=[];d=Qb(d);f=!1;if(d)for(g=0;g<b.length;g++)k=Qb(b[g]),d==k&&(f=!0),k&&c.push("950"+d+k);f||(c=[]);Ra(a,
+c)}}a=new Rb;a.Y=x(e,5);a.I=x(e,4);return a},Wb=function(a){var b=new Rb;b.I=a;return b},Xb=function(a){var b;switch(x(a,6)){case 1:b=x(a,4);break;case 2:b=x(a,7)}return null!=b?b:null};var Zb=null,$b=!1,cc=function(a){var b=ac,c=bc;b.addEventListener?(a&&b.addEventListener("DOMContentLoaded",a,!1),c&&b.addEventListener("load",c,!1)):b.attachEvent&&c&&b.attachEvent("onload",c)},ec=function(){var a=window;r(Zb)&&a.clearInterval&&(a.clearInterval(Zb),Zb=null);$b||dc(!1);dc(!0)},bc=function(){try{ec();var a=P(window).ss||null;if(a&&a.H){var b=a.H,c=b.v(),d=b.F,e=b.R,f=b.U,g=b.l.length;c||0!=g||d.push(6);c&&0==d.length&&null===f?Sb(!0,g,[],e,null):Sb(!1,g,d,e,f)}else Sb(!1,0,[2],[],
+null,void 0)}catch(k){Sb(!1,null,[1],[],k)}P(window).loaded=!0},dc=function(a){a||($b=!0);var b=P(window).ss||null;if(b&&b.H){b=b.H;try{b.apply(a)}catch(c){S(b,1),null===b.U&&(b.U=c)}}};try{var X=window,fc,gc=P(X).config;fc=gc?new K(gc):null;if(!fc)throw Error("No config");var Ub=new ib(fc),hc=Ub;P(X).ps=hc;var Y,Vb;if(M("iPad")||M("Android")&&!M("Mobile")||M("Silk")||!(M("iPod")||M("iPhone")||M("Android")||M("IEMobile")))Y=Wb(16);else{var ic,jc=/^#([^=]*)=(\d+)$/.exec(X.location.hash);if((ic=jc&&3==jc.length&&"pso_strategy"==jc[1]?+jc[2]:null)&&W[ic])Y=Wb(ic),Tb(ic);else{var kc=X,lc=Ub.m.N(),Z;try{var mc=parseInt(kc.localStorage.getItem("PSO_EXP0"),10);Z=isNaN(mc)?null:mc}catch(a){Z=
+null}if(null==Z){Z=Math.floor(1024*Math.random());try{kc.localStorage.setItem("PSO_EXP0",Z.toString())}catch(a){}}Vb=new Sa(Z,0,lc);Y=Yb()}1==Y.Y&&Tb(Y.I)}if(!Y)throw Error("No strategyState created!");var nc=Y;P(X).ss=nc;var oc=X,pc=Y,qc=pc.I;if(r(qc)){var rc=W[qc];qc&&rc&&(pc.H=new rc(oc))}if(Vb){var sc=X,lb=Vb.T,kb=X.location.hostname,tc=[],uc=nb(["17415655","17415656"],1,mb("unif1"));null===uc||tc.push(uc);var vc=nb(["17415657","17415658"],10,mb("unif2"));null===vc||tc.push(vc);var wc=nb(["17415659",
+"17415660"],100,mb("unif3"));null===wc||tc.push(""+wc);0<tc.length&&Ra(sc,tc)}var ac=X;switch(ac.document.readyState){case "complete":bc();break;case "interactive":ec();cc();break;default:var xc=dc,yc=fb(ac);yc.loaded||(yc.onload=xc);Zb=ac.setInterval(dc,10);cc(ec)}}catch(a){Sb(!1,null,[],[],a)};})();
+</script><script async="" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/jwidget.js"></script><script async="" type="text/javascript" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/count.js"></script><script src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/count-data.js"></script><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/services.css"></head>
+<body class="single single-post postid-31 single-format-standard custom-font-enabled">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+					
+<div class="custom-table-container">
+   	<div class="custom-table-row">
+         <div class="custom-column1">
+		<div class="themonic-logo">
+        <a href="http://www.topwcftutorials.net/" title="WCF Tutorial" rel="home"><img src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/LogoReference-316x90.png" alt="WCF Tutorial" scale="0"></a>
+		</div>
+	 </div>
+	 <div class="custom-column2"><a href="http://www.webdevelopmenthelp.net/free-online-test"><img src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/Top_Banner.png" alt="MCSD Certification Exam: 70-486" scale="0"></a>&nbsp;&nbsp;</div>
+    </div>	
+</div>
+		
+
+		
+		<nav id="site-navigation" class="themonic-nav" role="navigation">
+			<a class="assistive-text" href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#content" title="Skip to content">Skip to content</a>
+			<div class="menu-menu-1-container"><ul id="menu-top" class="nav-menu"><li id="menu-item-146" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-146"><a href="http://www.topwcftutorials.net/">Home</a></li>
+<li id="menu-item-284" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-284"><a href="http://www.topwcftutorials.net/tag/wcf-restful-services">WCF RESTful Services</a></li>
+<li id="menu-item-285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-285"><a href="http://www.topwcftutorials.net/tag/wcf-4-5">WCF 4.5</a></li>
+<li id="menu-item-283" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-283"><a href="http://www.topwcftutorials.net/tag/interview-questions">Interview Questions</a></li>
+<li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a title="Contact Me" href="http://www.topwcftutorials.net/141-2">Contact Me</a></li>
+<li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="http://www.topwcftutorials.net/wcf-jobs">WCF Jobs</a></li>
+<li id="menu-item-982" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-982"><a href="http://www.topwcftutorials.net/wcf-online-test">WCF Online Test</a></li>
+</ul><select class="selectnav" id="selectnav1"><option value="">Menu</option><option value="http://www.topwcftutorials.net/">HOME</option><option value="http://www.topwcftutorials.net/tag/wcf-restful-services">WCF RESTFUL SERVICES</option><option value="http://www.topwcftutorials.net/tag/wcf-4-5">WCF 4.5</option><option value="http://www.topwcftutorials.net/tag/interview-questions">INTERVIEW QUESTIONS</option><option value="http://www.topwcftutorials.net/141-2">CONTACT ME</option><option value="http://www.topwcftutorials.net/wcf-jobs">WCF JOBS</option><option value="http://www.topwcftutorials.net/wcf-online-test">WCF ONLINE TEST</option></select></div>		</nav><!-- #site-navigation -->
+		<div class="clear"></div>
+	</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-31" class="post-31 post type-post status-publish format-standard hentry category-uncategorized tag-fault-contract tag-interview-questions tag-reliable-messaging tag-reliable-sessions tag-wcf-bindings tag-wcf-data-services tag-wcf-restful-services tag-wcf-security">
+				<header class="entry-header">
+						<h1 class="entry-title">WCF Interview Questions – Part 3</h1>
+									
+	<div class="below-title-meta">
+		<div class="adt">
+		By        <span class="author">
+         <a href="http://www.topwcftutorials.net/author/wcfadmin" title="Posts by IMRAN ABDUL GHANI" rel="author">IMRAN ABDUL GHANI</a>        </span>
+         <span class="meta-sep">|</span> 
+         October 16, 2012 
+         </div>
+		 <div class="adt-comment">
+		 <a class="link-comments" href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#disqus_thread" data-disqus-identifier="31 http://www.topwcftutorials.net/2012/10/wcf-interview-questions-part-3.html"><span class="dsq-postid" data-dsqidentifier="31 http://www.topwcftutorials.net/2012/10/wcf-interview-questions-part-3.html">0 Comment</span></a> 
+         </div>       
+     </div><!-- below title meta end -->
+			
+						
+			</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<blockquote><p>This WCF tutorial is part-3 in series of WCF Interview Questions and Answers. Other&nbsp;parts in this series are as follows:</p>
+<ol style="text-align: left;">
+<li><a title="WCF Service Interview Questions - Part 1" href="http://www.topwcftutorials.net/2012/08/wcf-interview-questions-part-1.html">WCF Service Interview Questions&nbsp;– Part 1</a></li>
+<li><a title="WCF Interview Questions – Part 2" href="http://www.topwcftutorials.net/2012/09/wcf-faqs-part2.html">WCF Service&nbsp;Interview Questions&nbsp;– Part 2</a></li>
+<li>WCF Service&nbsp;Interview Questions&nbsp;– Part 3</li>
+<li><a title="WCF Interview Questions – Part 4" href="http://www.topwcftutorials.net/2012/11/wcf-faq-part4.html">WCF Service&nbsp;Interview Questions&nbsp;– Part 4</a></li>
+</ol>
+</blockquote>
+<p><a name="top"></a></p>
+<h3>WCF Interview Questions List – Part 3</h3>
+<div dir="ltr" style="text-align: left;">
+<ol>
+<li><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#Q1">What is a fault contract?</a></li>
+<li><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#Q2">A user has a service with a one-way operation that includes a fault contract, and he gets an exception when he tries to host the service. Why?</a></li>
+<li><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#Q3">What are the core security concepts supported by WCF?</a></li>
+<li><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#Q4">Difference between Message Level security and Transport Level security?</a></li>
+<li><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#Q5">Can you please explain which security mode supported by various WCF bindings?</a></li>
+<li><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#Q6">Difference between BasicHttpBinding and WsHttpBinding w.r.t Security?</a></li>
+<li><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#Q7">Please explain about authorization options supported in WCF?</a></li>
+<li><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#Q8">What is Reliable Messaging in WCF?</a></li>
+<li><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#Q9">What are Reliable Sessions in WCF?</a></li>
+<li><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#Q10">Briefly explain WCF RESTfull services?</a></li>
+<li><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#Q11">Explain the differences between SOAP and REST approaches w.r.t common CRUD operations?</a></li>
+<li><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#Q12">Briefly explain WCF Data Services?</a></li>
+<li><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#Q13">WCF Data Services Vs&nbsp;ASP.NET Web API OData?</a></li>
+</ol>
+</div>
+<div dir="ltr" style="text-align: left;">
+<h3><a id="Q1"></a>What is a fault contract?</h3>
+<p>Normally, by default, when some exception occurs at a WCF service level, it will not expose as it is to client. Reason is that WCF exception is a CLR exception and it doesn’t make sense to expose it outside CLR because it contains internal details of service code like stack trace. So, WCF handles and returns error details to client using Fault Contract.“<em>So, fault contract is a contract that contains the details of possible exception(s) that might occur in a service code.</em>”<a href="http://www.topwcftutorials.net/wp-content/uploads/2012/05/WCF-Fault.jpg"><img class="aligncenter wp-image-975 size-medium" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/WCF-Fault-300x277.jpg" alt="WCF Fault" width="300" height="277" scale="0"></a></p>
+<div style="background-color: lightgrey;"><em>&nbsp;[ServiceContract]</em><br>
+<em>&nbsp;public interface IService1</em><br>
+<em>&nbsp;{</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp; [OperationContract]</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp; [FaultContract(typeof(MyFaultDetails))]</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp; int MyOperation1();</em><br>
+<em>&nbsp;}</em></div>
+<div style="background-color: lightgrey;"></div>
+<div style="background-color: lightgrey;"><em>&nbsp;[DataContract]</em><br>
+<em>&nbsp; public class MyFaultDetails</em><br>
+<em>&nbsp; {</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp; [DataMember]</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp; public string ErrorDetails { get; set; }</em><br>
+<em>&nbsp; }</em></div>
+<p>In implementing service…..</p>
+<div style="background-color: lightgrey;"><em>&nbsp; public int MyOperation1()</em><br>
+<em>&nbsp; {</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp;Try{</em><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//Do something……</em><em>&nbsp; &nbsp; &nbsp; &nbsp;}catch()</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp;{</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MyFaultDetails ex = new MyFaultDetails();</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ex.ErrorDetails = “Specific error details here.“;</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; throw new FaultException(ex,“Reason: Testing…..“);</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp;}</em><br>
+<em>&nbsp; }</em></div>
+<p>For understanding detailed difference between .NET Exception and WCF Fault, <a title=".NET Exceptions Vs WCF Faults" href="http://www.topwcftutorials.net/2012/05/net-exceptions-vs-faults.html" target="_blank">Click here</a>.<br>
+<a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#top">Back to top</a></p>
+<h3><a id="Q2"></a>A user has a service with a one-way operation that includes a fault contract, and he&nbsp;gets an exception when he tries to host the service. Why?</h3>
+<div class="googlepublisherpluginad" style="text-align: center; width: 100%; height: auto; clear: none;"><ins class="adsbygoogle" data-ad-client="ca-pub-9997101014530813" data-ad-slot="3960230289" data-ad-format="auto" data-ad-channel="WordPressSinglePost" data-tag-origin="pso" data-adsbygoogle-status="done" style="display: block; margin: 10px auto 24px; height: 60px; background-color: transparent;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:537px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:537px;background-color:transparent"><iframe width="537" height="60" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins></div><p>This is true, because, to return faults, the service requires some form of a two-way communication channel, which is not there with one-way operations.<br>
+<a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#top">Back to top</a></p>
+<h3><a id="Q3"></a>What are the core security concepts supported by WCF?</h3>
+<p>There are four core security Features<img class="aligncenter size-full wp-image-1228" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/WCF-Security.png" alt="WCF Security Concepts" width="653" height="132" scale="0"></p>
+<ul>
+<li><b>Confidentiality</b>: It’s a confirmation about the recipient. Only the valid recipient can read the message when it passed between service and client.</li>
+<li><b>Integrity</b>: is to ensure that message received is not being tempered or changed during exchange.</li>
+<li><b>Authentication</b>: is a way for the parties (sender and receiver) to identify each other.</li>
+<li><b>Authorization</b>: ensures that what actions an authenticated user can perform?</li>
+</ul>
+<p><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#top">Back to top</a></p>
+<h3><a id="Q4"></a>Difference between Message Level security and Transport Level security?</h3>
+<p>Security can be configured at two different levels in Windows Communication Foundation:</p>
+<ol style="text-align: left;">
+<li><strong>Transport Level Security<br>
+</strong>secures the&nbsp;transport (the&nbsp;pipe) over which the message passes through from client to a service.&nbsp;<strong><br>
+</strong></li>
+<li><strong>Message Level Security</strong><br>
+secures the message that is being transported from one end&nbsp;to another.</li>
+</ol>
+<p>WCF Supports following <strong>Transfer Security Modes</strong>:</p>
+<ul>
+<li><strong>None</strong> –&nbsp;No security at all. Very risky to choose.</li>
+<li><strong>Transport</strong> –&nbsp;Securing message transfer with transport protocol like TCP, IPs, HTTPs, MSMQ. &nbsp;It’s Ideal for Intranet scenarios having point to point communication.</li>
+<li><strong>Message</strong> –&nbsp;Securing message by encrypting it. Good for scenarios even when multiple intermediaries involved.</li>
+<li><strong>Mixed</strong> –&nbsp;<em>TransportWithMessageCredential</em> uses transport for message privacy and service authentication with client authentication handled at message level.</li>
+<li><strong>Both</strong> -Using both Message as well as transport security. In this case a secured encrypted message travel over a secure transport (pipe) only supported by MSMQ Binding.</li>
+</ul>
+<div style="background-color: lightgrey;"><em>&lt;wsHttpBinding&gt;</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp;&lt;binding name=”SecurityModeDemo”&gt;</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;security mode=”[None|Transport|Message|….]”/&gt;</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp;&lt;/binding&gt;</em><br>
+<em> &lt;/wsHttpBinding&gt;</em></div>
+<blockquote><p>Details comparison of both Security Levels are given in other post <a title="Transport Level Security Vs Message Level Security in WCF" href="http://www.topwcftutorials.net/2014/09/transport-level-security-vs-message-level-security-wcf.html" target="_blank">Transport Level Security Vs Message Level Security</a>.</p></blockquote>
+<p><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#top">Back to top</a></p>
+<h3><a id="Q5"></a>Can you please explain which security mode supported by various WCF Bindings?</h3>
+<p>Following table illustrates in details about support for security mode in Windows Communication Foundation for various WCF Bindings.</p>
+<table class="TableWithBorder" width="90%" align="center">
+<tbody>
+<tr>
+<td class="TDWithBorder" width="25%">
+<h4>WCF Binding</h4>
+</td>
+<td class="TDWithBorder" width="15%">
+<h4>None</h4>
+</td>
+<td class="TDWithBorder" width="15%">
+<h4>Transport</h4>
+</td>
+<td class="TDWithBorder" width="15%">
+<h4>Message</h4>
+</td>
+<td class="TDWithBorder" width="15%">
+<h4>Mixed</h4>
+</td>
+<td class="TDWithBorder" width="15%">
+<h4>Both</h4>
+</td>
+</tr>
+<tr>
+<td class="TDWithBorder" width="25%"><strong>BasicHttpBinding</strong></td>
+<td class="TDWithBorder" width="15%">Default</td>
+<td class="TDWithBorder" width="15%">Yes</td>
+<td class="TDWithBorder" width="15%">Yes</td>
+<td class="TDWithBorder" width="15%">Yes</td>
+<td class="TDWithBorder" width="15%">No</td>
+</tr>
+<tr>
+<td class="TDWithBorder" width="25%"><strong>WSHttpBinding</strong></td>
+<td class="TDWithBorder" width="15%">Yes</td>
+<td class="TDWithBorder" width="15%">Yes</td>
+<td class="TDWithBorder" width="15%">Default</td>
+<td class="TDWithBorder" width="15%">Yes</td>
+<td class="TDWithBorder" width="15%">No</td>
+</tr>
+<tr>
+<td class="TDWithBorder" width="25%"><strong>WSDualHttpBinding</strong></td>
+<td class="TDWithBorder" width="15%">Yes</td>
+<td class="TDWithBorder" width="15%">No</td>
+<td class="TDWithBorder" width="15%">Default</td>
+<td class="TDWithBorder" width="15%">Yes</td>
+<td class="TDWithBorder" width="15%">No</td>
+</tr>
+<tr>
+<td class="TDWithBorder" width="25%"><strong>NetTcpBinding</strong></td>
+<td class="TDWithBorder" width="15%">Yes</td>
+<td class="TDWithBorder" width="15%">Default</td>
+<td class="TDWithBorder" width="15%">Yes</td>
+<td class="TDWithBorder" width="15%">Yes</td>
+<td class="TDWithBorder" width="15%">No</td>
+</tr>
+<tr>
+<td class="TDWithBorder" width="25%"><strong>NetNamedPipeBinding</strong></td>
+<td class="TDWithBorder" width="15%">Yes</td>
+<td class="TDWithBorder" width="15%">Default</td>
+<td class="TDWithBorder" width="15%">No</td>
+<td class="TDWithBorder" width="15%">No</td>
+<td class="TDWithBorder" width="15%">No</td>
+</tr>
+<tr>
+<td class="TDWithBorder" width="25%"><strong>NetMsmqBinding</strong></td>
+<td class="TDWithBorder" width="15%">Yes</td>
+<td class="TDWithBorder" width="15%">Default</td>
+<td class="TDWithBorder" width="15%">Yes</td>
+<td class="TDWithBorder" width="15%">No</td>
+<td class="TDWithBorder" width="15%">Yes</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#top">Back to top</a></p>
+<h3><a id="Q6"></a>Difference between BasicHttpBinding and WsHttpBinding w.r.t Security?</h3>
+<p>WsHttpBinding supports advanced WS-* specification, it has a lot more security options available. For example, It provides message-level security i.e. message is not sent in plain text. Also it supports for WS-Trust and WS-Secure conversation.<br>
+While in case of BasicHttpBinding, it has fewer security options, or we can say, there is no security provided, by default. At transport level, it can provide confidentiality through SSL.</p>
+<p>Following is detailed comparison of both WCF bindings:</p>
+<p><a href="http://www.topwcftutorials.net/2012/08/basichttpbinding-vs-wshttpbinding.html" target="_blank"><img class="aligncenter wp-image-1235 size-full" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/basicVsws1.png" alt="basicHttpBinding Vs wsHttpBinding" width="763" height="462" scale="0"></a></p>
+<p>Please follow <a href="http://www.topwcftutorials.net/2012/08/difference-between-basichttpbinding-and-wshttpbinding.html" target="_blank">differences between BasicHttpBinding and WsHttpBinding</a> for more detailed.<br>
+<a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#top">Back to top</a></p>
+<h3><a id="Q7"></a>Please explain about authorization options supported in WCF?</h3>
+<p>Authorization as a core feature of security in WCF supports different authorization types.</p>
+</div>
+<ul>
+<li><b>Role-based authorization</b> is the most common authorization approach being used. In this approach, authenticated user has assigned roles and system checks and verifies that either a specific assigned role can perform the operation requested.</li>
+<li><b>Identity-based authorization</b> approach basically provides support for identity model feature which is considered to be an extension to role-based authorization option. In this approach, service verifies client claims against authorization policies and accordingly grant or deny access to operation or resource.<br>
+For more details on Authorization with Identity Model, please <a href="http://msdn.microsoft.com/en-us/library/ms729851(v=vs.110).aspx" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;http://msdn.microsoft.com/en-us/library/ms729851(v=vs.110).aspx&#39;, &#39;follow here&#39;]);" target="_blank">follow here</a>.</li>
+<li><b>Resource-based authorization</b> approach is a bit different because it’s applied on individual resources and secure those using windows access control lists (ACLs).</li>
+</ul>
+<p><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#top">Back to top</a></p>
+<h3><a id="Q8"></a>What is Reliable Messaging in WCF?</h3>
+<p>We know that networks are not perfect enough and those might drop signals or in some scenarios there can be a possibility of wrong order of messages during message exchange.<br>
+WCF allows us to ensure the reliability of messaging by implementing WS-ReliableMessaging protocol.&nbsp; Here is how you can configure reliable messaging in WCF.</p>
+<div style="background-color: lightgrey;"><em>&nbsp; &lt;wsHttpBinding&gt;</em><br>
+<em>&nbsp; &nbsp; &lt;binding name=”Binding1″&gt;</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;reliableSession</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;enabled=”true”</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ordered=”true”</em><br>
+<em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; inactivityTimeout=”00:02:00″ /&gt;</em><br>
+<em>&nbsp; &nbsp; &nbsp;&lt;/binding&gt;</em><br>
+<em>&nbsp; &lt;/wsHttpBinding&gt;</em><em><br>
+</em></div>
+<p><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#top">Back to top</a></p>
+<h3><a id="Q9"></a>What are Reliable Sessions in WCF?</h3>
+<p>Reliable sessions actually ensure that the caller for messages will know about the lost message(s) but it can’t guarantee about the delivery of message(s).<br>
+There is a misconception about reliable sessions that it ensures the session will never expire or stays for a very long time. This we can achieve by using timeout for sessions.<br>
+<a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#top">Back to top</a></p>
+<h3><a id="Q10"></a>Briefly explain WCF RESTfull services?</h3>
+<p>RESTful services are those which follow the REST (Representational State Transfer) architectural style. As we know that WCF allows us to make calls and exchange messages using SOAP over a variety of protocols i.e. HTTP, TCP, NamedPipes and MSMQ etc. In a scenario, if we are using SOAP over HTTP, we are just utilizing HTTP as a transport. But Http is much more than just a transport. So When we talk about REST architectural style, it dictates that:</p>
+<blockquote><p>Instead of using complex mechanisms like CORBA, RPC or SOAP for communication, simply HTTP should be used for making calls</p></blockquote>
+<p>RESTful architecture uses HTTP for all CRUD operations like (Read/CREATE/Update/Delete) using simple HTTP verbs like (GET, POST, PUT, and DELETE). It’s simple as well as lightweight.<img class="aligncenter size-full wp-image-68" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/RESTful-Service.png" alt="WCF RESTful Service" width="769" height="431" scale="0"><br>
+For a practical example, you can follow <a href="http://www.topwcftutorials.net/2013/09/5-simple-steps-to-create-your-first-restful-service.html" target="_blank">5 simple steps to create your first RESTful service</a>.<br>
+<a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#top">Back to top</a></p>
+<h3><a id="Q11"></a>Explain the differences between SOAP and REST approaches w.r.t common CRUD operations?</h3>
+<p>For common CRUD(Create, Retrieve, Update, Delete) operations, both SOAP and REST approaches are different as follows:</p>
+<table class="TableWithBorder" width="100%" align="center">
+<tbody>
+<tr>
+<td class="TDWithBorder" width="25%">
+<h4>CRUD Operation</h4>
+</td>
+<td class="TDWithBorder" width="45%">
+<h4>RESTful approach</h4>
+</td>
+<td class="TDWithBorder" width="30%">
+<h4>SOAP approach</h4>
+</td>
+</tr>
+<tr>
+<td class="TDWithBorder" width="25%"><strong>Get Product By Id</strong></td>
+<td class="TDWithBorder" width="45%">/product.svc/{id} (using GET HTTP Method)</td>
+<td class="TDWithBorder" width="30%">GetProduct(string id)</td>
+</tr>
+<tr>
+<td class="TDWithBorder"><strong>Get All Products</strong></td>
+<td class="TDWithBorder">/product.svc &nbsp; &nbsp; &nbsp; (using GET HTTP Method)</td>
+<td class="TDWithBorder">GetProducts()</td>
+</tr>
+<tr>
+<td class="TDWithBorder"><strong>Create Product</strong></td>
+<td class="TDWithBorder">/product.svc/{id} &nbsp;(using PUT HTTP Method)</td>
+<td class="TDWithBorder">CreateProduct(string id, string name)</td>
+</tr>
+<tr>
+<td class="TDWithBorder"><strong>Update Product</strong></td>
+<td class="TDWithBorder">/product.svc/{id} &nbsp;(using PUT HTTP Method)</td>
+<td class="TDWithBorder">UpdateProduct(string id)</td>
+</tr>
+<tr>
+<td class="TDWithBorder"><strong>Delete Product</strong></td>
+<td class="TDWithBorder">/product.svc/{id} &nbsp;(using DELETE HTTP Method)</td>
+<td class="TDWithBorder">DeleteProduct(string id)</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#top">Back to top</a></p>
+<h3><a id="Q12"></a>Briefly explain WCF Data Services?</h3>
+<p>WCF Data services previously known as ADO.NET data services are basically based on OData (Open Data Protocol) standard which is a REST (Representational State Transfer) protocol.<img class="aligncenter size-full wp-image-1253" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/wcf.png" alt="WCF Data Services" width="597" height="311" scale="0"></p>
+<p>&nbsp;</p>
+<p>You can follow <a title="Step by Step approach to create a WCF Data Service" href="http://www.topwcftutorials.net/2015/04/create-wcf-data-service.html" target="_blank">here</a>&nbsp;to understand and create your first <a title="Step by Step approach to create a WCF Data Service" href="http://www.topwcftutorials.net/2015/04/create-wcf-data-service.html" target="_blank">WCF Data Service</a> by using a step by step approach.</p>
+<p>According to <a href="http://www.odata.org/" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;http://www.odata.org/&#39;, &#39;http://www.odata.org/&#39;]);" target="_blank">http://www.odata.org/</a></p>
+<blockquote><p><em>The Open Data Protocol (OData) is a Web protocol for querying and updating data that provides a way to unlock your data and free it from silos that exist in applications today. OData does this by applying and building upon Web technologies such as HTTP, Atom Publishing Protocol (AtomPub) and JSON to provide access to information from a variety of applications, services, and stores. The protocol emerged from experiences implementing AtomPub clients and servers in a variety of products over the past several years.&nbsp; OData is being used to expose and access information from a variety of sources including, but not limited to, relational databases, file systems, content management systems and traditional Web sites.Next part in this WCF Tutorial series is focused on Interview Questions regarding Service-Oriented Architecture and Transactions.</em></p></blockquote>
+<p><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#top">Back to top</a></p>
+<h3><a id="Q13"></a>WCF Data Services Vs&nbsp;ASP.NET Web API OData?</h3>
+<table class="TableWithBorder" width="100%" align="center">
+<tbody>
+<tr>
+<td class="TDWithBorder" width="50%">
+<h4>WCF Data Services</h4>
+</td>
+<td class="TDWithBorder" width="50%">
+<h4>ASP.NET Web API OData</h4>
+</td>
+</tr>
+<tr>
+<td class="TDWithBorder" width="50%">Not truly&nbsp;Extensible.</td>
+<td class="TDWithBorder" width="50%">Truly Extensible.</td>
+</tr>
+<tr>
+<td class="TDWithBorder" width="50%">Although it’s called WCF Data Services but it doesn’t required WCF Knowledge. Any HTTP Client (including PHP, JAVA, AJAX, WCF etc.) can consume WCF Data Services.</td>
+<td class="TDWithBorder" width="50%">Web API OData is added later&nbsp;to ASP.NET Web API and it’s basically a REST-based data access protocol.</td>
+</tr>
+<tr>
+<td class="TDWithBorder" width="50%">Supports all OData Operations.</td>
+<td class="TDWithBorder" width="50%">&nbsp;Not all OData Operations supported so far.</td>
+</tr>
+<tr>
+<td class="TDWithBorder" width="50%">A bit complicated when using with non-LINQ provider data.</td>
+<td class="TDWithBorder" width="50%">Easier Programming Model.</td>
+</tr>
+<tr>
+<td class="TDWithBorder" width="50%">Thorough and Complete implementation according to lastest OData Specification.</td>
+<td class="TDWithBorder" width="50%">As compared with data services, Web API OData&nbsp;gives better control over data sources.</td>
+</tr>
+<tr>
+<td class="TDWithBorder" width="50%">We&nbsp;can expose whole data store with minimum logic.</td>
+<td class="TDWithBorder" width="50%">As it’s extensible, so it supports mixing OData with non-OData Services.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#top">Back to top</a><br>
+<b>Previous: <a href="http://www.topwcftutorials.net/2012/09/wcf-interview-questions-part-2.html">WCF Service FAQs Part-2</a></b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>Next: <a href="http://www.topwcftutorials.net/2012/11/wcf-interview-questions-part-4.html" target="">WCF Service FAQs Part-4</a></b></p>
+<div>
+<ul>
+<li><a href="http://www.topwcftutorials.net/2013/09/3-techniques-for-instance-management-in-wcf.html" target="_blank">3 techniqtues for WCF Instance Management</a></li>
+<li><a href="http://www.topwcftutorials.net/2012/05/wcf-service-what-is-a-knowntype.html" target="_blank">What is a Known Type?</a></li>
+<li><a href="http://www.webdevelopmenthelp.net/2013/09/7-jQuery-Code-Snippet.html" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;http://www.webdevelopmenthelp.net/2013/09/7-jQuery-Code-Snippet.html&#39;, &#39;7 jQuery code snippets every web developer must have&#39;]);" target="_blank">7 jQuery code snippets every web developer must have</a></li>
+<li><a href="http://www.webdevelopmenthelp.net/2013/09/ASP-Web-API-Service.html" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;http://www.webdevelopmenthelp.net/2013/09/ASP-Web-API-Service.html&#39;, &#39;3 simple steps to create your first ASP.NET Web API service&#39;]);" target="_blank">3 simple steps to create your first ASP.NET Web API service</a></li>
+</ul>
+</div>
+<h3>Top 10 Interview Questions and Answers Series:</h3>
+<ul>
+<li><a title="Top 10 WCF Interview Questions" href="http://www.topwcftutorials.net/2012/06/wcf-top-10-interview-questions.html">Top 10 WCF Interview Questions</a></li>
+<li><a title="WCF Interview Questions – Part 1" href="http://www.topwcftutorials.net/2012/08/wcf-faqs-part1.html">Comprehensive Series of WCF Interview Questions</a></li>
+<li><a href="http://www.webdevelopmenthelp.net/2013/04/html5-interview-questions.html" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;http://www.webdevelopmenthelp.net/2013/04/html5-interview-questions.html&#39;, &#39;Top 10 HTML5 Interview Questions&#39;]);" title="Top 10 HTML5 Interview Questions">Top 10 HTML5 Interview Questions</a></li>
+<li><a href="http://www.webdevelopmenthelp.net/2013/12/asp-net-interview-questions-and-answers.html" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;http://www.webdevelopmenthelp.net/2013/12/asp-net-interview-questions-and-answers.html&#39;, &#39;Top 10 ASP.NET Interview Questions&#39;]);" title="Top 10 ASP.NET Interview Questions and Answers">Top 10 ASP.NET Interview Questions</a></li>
+<li><a href="http://www.webdevelopmenthelp.net/2014/03/asp-net-interview-questions-part1.html" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;http://www.webdevelopmenthelp.net/2014/03/asp-net-interview-questions-part1.html&#39;, &#39;Comprehensive Series of ASP.NET Interview Questions&#39;]);" title="ASP.NET Interview Questions for Beginners and Professionals – Part 1">Comprehensive Series of ASP.NET Interview Questions</a></li>
+<li><a href="http://www.webdevelopmenthelp.net/2013/09/top-asp-net-mvc-interview-questions.html" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;http://www.webdevelopmenthelp.net/2013/09/top-asp-net-mvc-interview-questions.html&#39;, &#39;Top 10 ASP.NET MVC Interview Questions&#39;]);" title="Top 10 ASP.NET MVC Interview Questions">Top 10 ASP.NET MVC Interview Questions</a></li>
+<li><a href="http://www.webdevelopmenthelp.net/2014/05/asp-net-web-api-interview-questions.html" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;http://www.webdevelopmenthelp.net/2014/05/asp-net-web-api-interview-questions.html&#39;, &#39;Top 10 ASP.NET Web API Interview Questions&#39;]);" title="Top 10 ASP.NET Web API Interview Questions">Top 10&nbsp;ASP.NET Web API&nbsp;Interview Questions</a></li>
+<li><a href="http://www.webdevelopmenthelp.net/2014/04/asp-net-interview-questions-part5.html" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-article&#39;, &#39;http://www.webdevelopmenthelp.net/2014/04/asp-net-interview-questions-part5.html&#39;, &#39;Top 10 ASP.NET AJAX Interview Questions&#39;]);" title="Top 10 ASP.NET AJAX Interview Questions">Top 10&nbsp;ASP.NET AJAX&nbsp;Interview Questions</a></li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+		<span>Category: <a href="http://www.topwcftutorials.net/category/uncategorized" rel="category tag">Uncategorized</a></span> <span>Tags: <a href="http://www.topwcftutorials.net/tag/fault-contract" rel="tag">Fault Contract</a>, <a href="http://www.topwcftutorials.net/tag/interview-questions" rel="tag">Interview Questions</a>, <a href="http://www.topwcftutorials.net/tag/reliable-messaging" rel="tag">Reliable Messaging</a>, <a href="http://www.topwcftutorials.net/tag/reliable-sessions" rel="tag">Reliable Sessions</a>, <a href="http://www.topwcftutorials.net/tag/wcf-bindings" rel="tag">WCF Bindings</a>, <a href="http://www.topwcftutorials.net/tag/wcf-data-services" rel="tag">WCF Data Services</a>, <a href="http://www.topwcftutorials.net/tag/wcf-restful-services" rel="tag">WCF RESTful Services</a>, <a href="http://www.topwcftutorials.net/tag/wcf-security" rel="tag">WCF Security</a></span> 
+           								<div class="author-info">
+					<div class="author-avatar">
+						<img alt="" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/432c033b9cbb6303542d4ab02038dfb7" srcset="http://1.gravatar.com/avatar/432c033b9cbb6303542d4ab02038dfb7?s=136&amp;d=mm&amp;r=g 2x" class="avatar avatar-68 photo grav-hashed grav-hijack" height="68" width="68" originals="68" src-orig="http://1.gravatar.com/avatar/432c033b9cbb6303542d4ab02038dfb7?s=68&amp;d=mm&amp;r=g" scale="1.5" id="grav-432c033b9cbb6303542d4ab02038dfb7-0">					</div><!-- .author-avatar -->
+					<div class="author-description">
+						<h2>About IMRAN ABDUL GHANI</h2>
+						<p>Imran Abdul Ghani is working as Software Developer(Senior) with extensive knowledge in Web development technologies especially C#, ASP.NET, MVC, WCF, Web API, ADO.NET Entity Framework, jQuery etc. He has several years of experience in designing/developing enterprise level applications. He is Microsoft Certified Solution Developer for .NET (MCSD.NET) since 2005. You can reach his blogging at www.webdevelopmenthelp.net, www.topwcftutorials.net, and www.sharepointfordummies.net.</p><div class="googlepublisherpluginad" style="text-align: center; width: 100%; height: auto; clear: none;"><ins class="adsbygoogle" data-ad-client="ca-pub-9997101014530813" data-ad-slot="6298358287" data-ad-format="auto" data-ad-channel="WordPressSinglePost" data-tag-origin="pso" data-adsbygoogle-status="done" style="display: block; margin: 4px auto 20px; height: 280px; background-color: transparent;"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:457px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:457px;background-color:transparent"><iframe width="457" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins></div>
+						<div class="author-link">
+							<a href="http://www.topwcftutorials.net/author/wcfadmin" rel="author">
+								View all posts by IMRAN ABDUL GHANI <span class="meta-nav">→</span>							</a>
+						</div><!-- .author-link	-->
+					</div><!-- .author-description -->
+				</div><!-- .author-info -->
+					</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+				<nav class="nav-single">
+					<div class="assistive-text">Post navigation</div>
+					<span class="nav-previous"><a href="http://www.topwcftutorials.net/2012/09/wcf-faqs-part2.html" rel="prev"><span class="meta-nav">←</span> WCF Interview Questions – Part 2</a></span>
+					<span class="nav-next"><a href="http://www.topwcftutorials.net/2012/11/wcf-faq-part4.html" rel="next">WCF Interview Questions – Part 4 <span class="meta-nav">→</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="text-11" class="widget widget_text">			<div class="textwidget"><div style="text-align: center;">
+<script async="" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/adsbygoogle.js"></script>
+<!-- TopRight336by280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9997101014530813" data-ad-slot="7261743485" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div>
+		</aside><aside id="text-12" class="widget widget_text">			<div class="textwidget"><div class="panel-group xa-grey" id="accordion-1" role="tablist" aria-multiselectable="true">
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion-1" href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#acc-2" aria-expanded="true" aria-controls="collapseOne">
+                            <i class="fa fa-caret-right"></i> Beginning WCF - MUST HAVE
+                        </a>
+                    </h4>
+                </div>
+                <div id="acc-2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+<div class="su-list su-list-style-">
+<ul>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2012/08/wcf-faqs-part1.html">WCF Basics - FAQs Series</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2012/06/wcf-vs-asmx-web-services.html">WCF Vs ASMX</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2014/03/wcf-data-contract-known-types.html">WCF Known Types</a></strong></li>	
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2014/02/datacontract-vs-messagecontract-in-wcf.html">WCF Contracts</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2012/06/understanding-wcf-bindings-and-channel.html">WCF Bindings</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2013/09/3-techniques-instance-management-wcf.html">Instance Management</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2014/06/3-ways-generate-proxy-wcf-service.html">WCF Proxy</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/tag/wcf-hosting">Hosting in WCF</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2012/06/4-simple-steps-to-enable-tracing-in-wcf.html">WCF Tracing</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2012/07/enable-transactions-in-wcf-service.html">WCF Transactions</a></strong></li>
+</ul>
+</div>
+</div>
+                </div>
+            </div>
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion-1" href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#acc-3" aria-expanded="true" aria-controls="collapseOne">
+                            <i class="fa fa-caret-right"></i> FREE WCF Tests
+                        </a>
+                    </h4>
+                </div>
+                <div id="acc-3" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+<div class="su-list su-list-style-">
+<ul>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/wcf-online-test">WCF Free Online Test</a></strong></li>	
+</ul>
+</div>
+</div>
+                </div>
+            </div>
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion-1" href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#acc-4" aria-expanded="true" aria-controls="collapseOne">
+                            <i class="fa fa-caret-right"></i> WCF REST Service
+                        </a>
+                    </h4>
+                </div>
+                <div id="acc-4" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+<div class="su-list su-list-style-">
+<ul>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2013/09/simple-steps-for-restful-service.html">Your First WCF REST Service</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2013/10/consume-rest-service-using-jquery.html">Consuming REST Service using jQuery</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2014/01/crud-wcf-restful-service.html">WCF RESTful Service CRUD Operations</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2014/02/post-json-to-wcf-restful-service.html">Post JSON data WCF REST Service</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2014/02/automatic-format-selection-wcf-restful-service.html">Automatic Format Selection</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2014/01/error-handling-wcf-restful-service.html">Exception Handling in WCF</a></strong></li>	
+</ul>
+</div>
+</div>
+                </div>
+            </div>
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion-1" href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#acc-5" aria-expanded="true" aria-controls="collapseOne">
+                            <i class="fa fa-caret-right"></i> WCF 4.5
+                        </a>
+                    </h4>
+                </div>
+                <div id="acc-5" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+<div class="su-list su-list-style-">
+<ul>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2014/03/whats-new-in-wcf-v45.html">WCF 4.5 Overview</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2014/03/wcf3-5-vs-wcf4-0-vs-wcf4-5.html">Consuming REST Service using jQuery</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> 
+		<strong><a href="http://www.topwcftutorials.net/2014/03/new-features-in-wcf-4-5-part-1.html">Simplified Config</a></strong> | 
+		<strong><a href="http://www.topwcftutorials.net/2014/03/new-features-in-wcf-4-5-part-1.html">Config Validation</a></strong>
+	</li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> 
+		<strong><a href="http://www.topwcftutorials.net/2014/04/new-features-in-wcf-45-part-2.html">Tooltip &amp; Intellisense</a></strong> | 
+		<strong><a href="http://www.topwcftutorials.net/2014/04/new-features-in-wcf-45-part-2.html">Single WSDL</a></strong>
+	</li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> 
+		<strong><a href="http://www.topwcftutorials.net/2014/04/new-features-in-wcf-4-5-part-3.html">ASP.NET Compatibility Mode</a></strong> | 
+		<strong><a href="http://www.topwcftutorials.net/2014/04/new-features-in-wcf-4-5-part-3.html">BasicHttpsBinding</a></strong>
+	</li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2014/04/new-features-in-wcf-4-5-part-4.html">Task-based Programming Model</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2014/04/new-features-in-wcf-4-5-part-5.html">ChannelFactory Cache</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> 
+		<strong><a href="http://www.topwcftutorials.net/2014/05/new-features-in-wcf-4-5-part-6.html">Multiple Authentication</a></strong> | 
+		<strong><a href="http://www.topwcftutorials.net/2014/05/new-features-in-wcf-4-5-part-6.html">Contract First Development</a></strong>
+	</li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> 
+		<strong><a href="http://www.topwcftutorials.net/2014/05/new-features-in-wcf-4-5-part-7.html">UDP Binding</a></strong> | 
+		<strong><a href="http://www.topwcftutorials.net/2014/05/new-features-in-wcf-4-5-part-7.html">Binary Encoder Compression</a></strong>
+	</li>
+</ul>
+</div>
+</div>
+                </div>
+            </div>
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion-1" href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#acc-6" aria-expanded="true" aria-controls="collapseOne">
+                            <i class="fa fa-caret-right"></i> WCF Interview Questions
+                        </a>
+                    </h4>
+                </div>
+                <div id="acc-6" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+<div class="su-list su-list-style-">
+<ul>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2012/06/wcf-top-10-interview-questions.html">Top 10 WCF Interview Questions</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2012/08/wcf-faqs-part1.html">WCF Interview Questions - Part 1</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2012/09/wcf-faqs-part2.html">WCF Interview Questions - Part 2</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/WCF Interview Questions - Part 3 - WCF Tutorial.html">WCF Interview Questions - Part 3</a></strong></li>
+	<li><i class="fa fa-arrow-right" style="color:#16A1E7"></i> <strong><a href="http://www.topwcftutorials.net/2012/11/wcf-faq-part4.html">WCF Interview Questions - Part 4</a></strong></li>
+</ul>
+</div>
+</div>
+                </div>
+            </div>
+</div></div>
+		</aside><aside id="blog_subscription-2" class="widget jetpack_subscription_widget"><p class="widget-title">Subscribe to Blog via Email</p>
+			<form action="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-2">
+				<div id="subscribe-text"><p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
+</div><p>Join 258 other subscribers</p>
+					<p id="subscribe-email">
+						<label id="jetpack-subscribe-label" for="subscribe-field" style="clip: rect(1px 1px 1px 1px); position: absolute; height: 1px; width: 1px; overflow: hidden;">
+							Email Address						</label>
+						<input type="email" name="email" required="required" class="required" value="" id="subscribe-field-blog_subscription-2" placeholder="Email Address">
+					</p>
+
+					<p id="subscribe-submit">
+						<input type="hidden" name="action" value="subscribe">
+						<input type="hidden" name="source" value="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html">
+						<input type="hidden" name="sub-type" value="widget">
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-2">
+												<input type="submit" value="Subscribe" name="jetpack_subscriptions_widget">
+					</p>
+							</form>
+
+			<script>
+			/*
+			Custom functionality for safari and IE
+			 */
+			(function( d ) {
+				// Creates placeholders for IE
+				if ( ( 'placeholder' in d.createElement( 'input' ) ) ) {
+					var label = d.getElementById( 'jetpack-subscribe-label' );
+						label.style.clip 	 = 'rect(1px, 1px, 1px, 1px)';
+						label.style.position = 'absolute';
+						label.style.height   = '1px';
+						label.style.width    = '1px';
+						label.style.overflow = 'hidden';
+				}
+
+				// Make sure the email value is filled in before allowing submit
+				var form = d.getElementById('subscribe-blog-blog_subscription-2'),
+					input = d.getElementById('subscribe-field-blog_subscription-2'),
+					handler = function( event ) {
+						if ( '' === input.value ) {
+							input.focus();
+
+							if ( event.preventDefault ){
+								event.preventDefault();
+							}
+
+							return false;
+						}
+					};
+
+				if ( window.addEventListener ) {
+					form.addEventListener( 'submit', handler, false );
+				} else {
+					form.attachEvent( 'onsubmit', handler );
+				}
+			})( document );
+			</script>
+				
+</aside><aside id="text-5" class="widget widget_text">			<div class="textwidget"><style type="text/css">#indJobContent{padding-bottom: 5px;}#indJobContent .company_location{font-size: 11px;overflow: hidden;display:block;}#indJobContent.wide .job{display:block;float:left;margin-right: 5px;width: 135px;overflow: hidden}#indeed_widget_wrapper{position: relative;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 13px;font-weight: normal;line-height: 18px;padding: 10px;height: auto;overflow: hidden;}#indeed_widget_header{font-size:18px; padding-bottom: 5px; }#indeed_search_wrapper{clear: both;font-size: 12px;margin-top: 0px;padding-top: 2px;}#indeed_search_wrapper label{font-size: 12px;line-height: inherit;text-align: left; margin-right: 5px;}#indeed_search_wrapper input[type='text']{width: 100px; font-size: 11px; }#indeed_search_wrapper #qc{float:left;}#indeed_search_wrapper #lc{float:right;}#indeed_search_wrapper.stacked #qc, #indeed_search_wrapper.stacked #lc{float: none; clear: both;}#indeed_search_wrapper.stacked input[type='text']{width: 150px;}#indeed_search_wrapper.stacked label{display: block;padding-bottom: 5px;}#indeed_search_footer{width:295px; padding-top: 5px; clear: both;}#indeed_link{position: absolute;bottom: 1px;right: 5px;clear: both;font-size: 11px; }#indeed_link a{text-decoration: none;}#results .job{padding: 1px 0px;}#pagination { clear: both; }</style>
+<style type="text/css">
+#indeed_widget_wrapper{ width: 300px; height: 250px; background: #F2F2F2;}
+#indeed_widget_wrapper{ border: 1px solid #AAAAAA; }
+#indeed_widget_wrapper, #indeed_link a{ color: #000000;}
+#indJobContent, #indeed_search_wrapper{ border-top: 1px solid #AAAAAA; }
+#indJobContent a { color: #00c; }
+#indeed_widget_header{ color: #000000; }
+</style>
+<p><script type="text/javascript">
+var ind_pub = '5094030215600821';
+var ind_el = 'indJobContent';
+var ind_pf = '';
+var ind_q = '.NET';
+var ind_l = '';
+var ind_chnl = 'none';
+var ind_n = 4;
+var ind_d = 'http://www.indeed.com';
+var ind_t = 40;
+var ind_c = 30;
+var ind_pgn = 1;
+var ind_pgnCnt = 5;
+</script><br>
+<script type="text/javascript" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/jobroll-widget-v3.js"></script></p>
+<div id="indeed_widget_wrapper" style="">
+<div id="indeed_widget_header">Jobs from Indeed</div>
+<div id="indJobContent" class=""><div id="results">
+<div id="job_0" class="job">
+    <a target="_blank" href="http://www.indeed.com/viewjob?t=Software+Developer&amp;c=Oracle&amp;l=Redwood+Shores%2C+CA&amp;jk=09e38f3ebe363fa4&amp;indpubnum=5094030215600821&amp;atk=&amp;chnl=none" class="jobtitle">Software Developer 4</a><br>
+    <span class="company_location">
+        <span class="company">Oracle</span> -
+        <span class="location">Redwood Shores, CA</span>
+   </span>
+</div>
+<div id="job_1" class="job">
+    <a target="_blank" href="http://www.indeed.com/viewjob?t=Software+Developer&amp;c=Oracle&amp;l=Redwood+City%2C+CA&amp;jk=267b53e4eee15f4a&amp;indpubnum=5094030215600821&amp;atk=&amp;chnl=none" class="jobtitle">Software Developer 4</a><br>
+    <span class="company_location">
+        <span class="company">Oracle</span> -
+        <span class="location">Redwood City, CA</span>
+   </span>
+</div>
+<div id="job_2" class="job">
+    <a target="_blank" href="http://www.indeed.com/viewjob?t=Web+Software+Developer&amp;c=Engility+Corporation&amp;l=Chantilly%2C+VA&amp;jk=b70368ce1bc3c31c&amp;indpubnum=5094030215600821&amp;atk=&amp;chnl=none" class="jobtitle">Web Software Developer 4</a><br>
+    <span class="company_location">
+        <span class="company">Engility Corporation</span> -
+        <span class="location">Chantilly, VA</span>
+   </span>
+</div>
+<div id="job_3" class="job">
+    <a target="_blank" href="http://www.indeed.com/viewjob?t=Application+Developer&amp;c=Oracle&amp;l=Orlando%2C+FL&amp;jk=5d0d4609b9fe13b4&amp;indpubnum=5094030215600821&amp;atk=&amp;chnl=none" class="jobtitle">Applications Developer 4</a><br>
+    <span class="company_location">
+        <span class="company">Oracle</span> -
+        <span class="location">Orlando, FL</span>
+   </span>
+</div>
+    <div id="pagination">
+                <span>1</span>
+                <a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#" onclick="return indeedJobroll[&#39;getJobs&#39;](4);">2</a>
+                <a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#" onclick="return indeedJobroll[&#39;getJobs&#39;](8);">3</a>
+                <a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#" onclick="return indeedJobroll[&#39;getJobs&#39;](12);">4</a>
+                <a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#" onclick="return indeedJobroll[&#39;getJobs&#39;](16);">5</a>
+                <a href="http://www.topwcftutorials.net/2012/10/wcf-faqs-part3.html#" onclick="return indeedJobroll[&#39;getJobs&#39;](4);">Next&nbsp;»</a>
+    </div>
+</div></div>
+<div id="indeed_search_wrapper">
+<script type="text/javascript">
+function clearDefaults() {
+var formInputs = document.getElementById('indeed_jobform').elements;
+for(var i = 0; i < formInputs.length; i++) {
+if(formInputs[i].value == 'title, keywords' || formInputs[i].value == 'city, state, or zip') {
+formInputs[i].value = '';
+}
+}
+}
+</script><p></p>
+<form onsubmit="clearDefaults();" method="get" action="http://www.indeed.com/jobs" id="indeed_jobform" target="_new">
+<div id="qc"><label>What:</label><input type="text" onfocus="this.value=&quot;&quot;" value="title, keywords" name="q" id="q"></div>
+<div id="lc"><label>Where:</label><input type="text" onfocus="this.value=&quot;&quot;" value="city, state, or zip" name="l" id="l"></div>
+<div id="indeed_search_footer">
+<div style="float:left"><input type="submit" value="Find Jobs" class="findjobs"></div>
+</div>
+<p><input type="hidden" name="indpubnum" id="indpubnum" value="5094030215600821"><br>
+</p></form>
+</div>
+<div id="indeed_link">
+<a href="http://www.indeed.com/" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-widget&#39;, &#39;http://www.indeed.com/&#39;, &#39;jobs by \n&#39;]);" title="Job Search" target="_new">jobs by <img alt="Indeed" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/jobsearch.gif" style="border: 0;vertical-align: bottom;" scale="0"><br>
+</a>
+</div>
+</div>
+</div>
+		</aside><aside id="top-posts-2" class="widget widget_top-posts"><p class="widget-title">Top Posts &amp; Pages</p><ul>				<li>
+										<a href="http://www.topwcftutorials.net/2013/09/simple-steps-for-restful-service.html" class="bump-view" data-bump-view="tp">
+						5 simple steps to create your first RESTful service					</a>
+									</li>
+							<li>
+										<a href="http://www.topwcftutorials.net/" class="bump-view" data-bump-view="tp">
+						Welcome to WCF Tutorial					</a>
+									</li>
+							<li>
+										<a href="http://www.topwcftutorials.net/2012/06/wcf-top-10-interview-questions.html" class="bump-view" data-bump-view="tp">
+						Top 10 WCF Interview Questions					</a>
+									</li>
+							<li>
+										<a href="http://www.topwcftutorials.net/2012/08/wcf-faqs-part1.html" class="bump-view" data-bump-view="tp">
+						WCF Interview Questions - Part 1					</a>
+									</li>
+							<li>
+										<a href="http://www.topwcftutorials.net/2014/06/3-ways-generate-proxy-wcf-service.html" class="bump-view" data-bump-view="tp">
+						3 Ways to generate proxy for WCF Service					</a>
+									</li>
+							<li>
+										<a href="http://www.topwcftutorials.net/2014/01/crud-wcf-restful-service.html" class="bump-view" data-bump-view="tp">
+						CRUD Operations using WCF RESTful Service - Part 1					</a>
+									</li>
+							<li>
+										<a href="http://www.topwcftutorials.net/2012/06/wcf-vs-asmx-web-services.html" class="bump-view" data-bump-view="tp">
+						WCF Vs ASMX Web Services					</a>
+									</li>
+							<li>
+										<a href="http://www.topwcftutorials.net/2014/02/post-json-to-wcf-restful-service.html" class="bump-view" data-bump-view="tp">
+						Post JSON data to WCF RESTful Service using jQuery					</a>
+									</li>
+							<li>
+										<a href="http://www.topwcftutorials.net/2012/09/wcf-faqs-part2.html" class="bump-view" data-bump-view="tp">
+						WCF Interview Questions - Part 2					</a>
+									</li>
+							<li>
+										<a href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/WCF Interview Questions - Part 3 - WCF Tutorial.html" class="bump-view" data-bump-view="tp">
+						WCF Interview Questions - Part 3					</a>
+									</li>
+			</ul></aside><aside id="text-7" class="widget widget_text">			<div class="textwidget"><div style="text-align: center;background-color: #e6e6e6; padding: 10px 0px 10px 10px;"><a href="http://www.topitjobsite.com/" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-widget&#39;, &#39;http://www.topitjobsite.com&#39;, &#39;Top IT Jobs in USA&#39;]);" style="color: #508EDC; font: bold 16px verdana;" target="_blank">Top IT Jobs in USA</a></div></div>
+		</aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<p class="widget-title">Recent Posts</p>		<ul>
+					<li>
+				<a href="http://www.topwcftutorials.net/2015/12/8-of-the-best-ajax-frameworks-worth-considering.html">8 Of The Best AJAX Frameworks Worth Considering</a>
+						</li>
+					<li>
+				<a href="http://www.topwcftutorials.net/2015/11/child-theme-to-a-new-wordpress-site.html">Moving Your Child Theme to a New WordPress Site</a>
+						</li>
+					<li>
+				<a href="http://www.topwcftutorials.net/2015/11/web-development-skills-for-information-architects.html">Web Development Skills To Be Preferred For Information Architects</a>
+						</li>
+					<li>
+				<a href="http://www.topwcftutorials.net/2015/11/understanding-odata.html">Understanding OData in simplest way</a>
+						</li>
+					<li>
+				<a href="http://www.topwcftutorials.net/2015/09/how-to-guide-for-joomla-website.html">How to Guide for Making the Most of Your Joomla Website</a>
+						</li>
+				</ul>
+		</aside><aside id="tag_cloud-2" class="widget widget_tag_cloud"><p class="widget-title">Tags</p><div class="tagcloud"><a href="http://www.topwcftutorials.net/tag/net" class="tag-link-45" title="1 topic" style="font-size: 8pt;">.NET</a>
+<a href="http://www.topwcftutorials.net/tag/net-collections" class="tag-link-20" title="1 topic" style="font-size: 8pt;">.NET Collections</a>
+<a href="http://www.topwcftutorials.net/tag/ajax" class="tag-link-17" title="2 topics" style="font-size: 10.8636363636pt;">AJAX</a>
+<a href="http://www.topwcftutorials.net/tag/asp-net" class="tag-link-42" title="1 topic" style="font-size: 8pt;">ASP.NET</a>
+<a href="http://www.topwcftutorials.net/tag/channelfactory" class="tag-link-29" title="1 topic" style="font-size: 8pt;">ChannelFactory</a>
+<a href="http://www.topwcftutorials.net/tag/channels" class="tag-link-40" title="1 topic" style="font-size: 8pt;">Channels</a>
+<a href="http://www.topwcftutorials.net/tag/data-contacts" class="tag-link-10" title="4 topics" style="font-size: 14.3636363636pt;">Data Contacts</a>
+<a href="http://www.topwcftutorials.net/tag/exception-handling" class="tag-link-14" title="1 topic" style="font-size: 8pt;">Exception Handling</a>
+<a href="http://www.topwcftutorials.net/tag/fault-contract" class="tag-link-26" title="1 topic" style="font-size: 8pt;">Fault Contract</a>
+<a href="http://www.topwcftutorials.net/tag/iis" class="tag-link-37" title="2 topics" style="font-size: 10.8636363636pt;">IIS</a>
+<a href="http://www.topwcftutorials.net/tag/interview-questions" class="tag-link-38" title="11 topics" style="font-size: 20.4090909091pt;">Interview Questions</a>
+<a href="http://www.topwcftutorials.net/tag/jquery" class="tag-link-15" title="3 topics" style="font-size: 12.7727272727pt;">jQuery</a>
+<a href="http://www.topwcftutorials.net/tag/json" class="tag-link-16" title="1 topic" style="font-size: 8pt;">JSON</a>
+<a href="http://www.topwcftutorials.net/tag/message-contracts" class="tag-link-11" title="1 topic" style="font-size: 8pt;">Message Contracts</a>
+<a href="http://www.topwcftutorials.net/tag/reliable-messaging" class="tag-link-27" title="1 topic" style="font-size: 8pt;">Reliable Messaging</a>
+<a href="http://www.topwcftutorials.net/tag/reliable-sessions" class="tag-link-25" title="1 topic" style="font-size: 8pt;">Reliable Sessions</a>
+<a href="http://www.topwcftutorials.net/tag/serialization" class="tag-link-35" title="2 topics" style="font-size: 10.8636363636pt;">Serialization</a>
+<a href="http://www.topwcftutorials.net/tag/service-oriented-architecture" class="tag-link-22" title="1 topic" style="font-size: 8pt;">Service Oriented Architecture</a>
+<a href="http://www.topwcftutorials.net/tag/service-proxy" class="tag-link-32" title="1 topic" style="font-size: 8pt;">Service Proxy</a>
+<a href="http://www.topwcftutorials.net/tag/soap" class="tag-link-33" title="3 topics" style="font-size: 12.7727272727pt;">SOAP</a>
+<a href="http://www.topwcftutorials.net/tag/transactions" class="tag-link-23" title="1 topic" style="font-size: 8pt;">Transactions</a>
+<a href="http://www.topwcftutorials.net/tag/uncategorized" class="tag-link-63" title="1 topic" style="font-size: 8pt;">Uncategorized</a>
+<a href="http://www.topwcftutorials.net/tag/wcf" class="tag-link-3" title="4 topics" style="font-size: 14.3636363636pt;">WCF</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-3-5" class="tag-link-8" title="1 topic" style="font-size: 8pt;">WCF 3.5</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-4-0" class="tag-link-7" title="1 topic" style="font-size: 8pt;">WCF 4.0</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-4-5" class="tag-link-6" title="9 topics" style="font-size: 19.1363636364pt;">WCF 4.5</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-basics" class="tag-link-19" title="14 topics" style="font-size: 22pt;">WCF basics</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-bindings" class="tag-link-5" title="10 topics" style="font-size: 19.7727272727pt;">WCF Bindings</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-concurrency" class="tag-link-30" title="1 topic" style="font-size: 8pt;">WCF Concurrency</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-configuration" class="tag-link-13" title="2 topics" style="font-size: 10.8636363636pt;">WCF Configuration</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-data-services" class="tag-link-24" title="3 topics" style="font-size: 12.7727272727pt;">WCF Data Services</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-hosting" class="tag-link-2" title="5 topics" style="font-size: 15.6363636364pt;">WCF Hosting</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-instance-management" class="tag-link-18" title="3 topics" style="font-size: 12.7727272727pt;">WCF Instance Management</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-restful-services" class="tag-link-12" title="10 topics" style="font-size: 19.7727272727pt;">WCF RESTful Services</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-security" class="tag-link-28" title="2 topics" style="font-size: 10.8636363636pt;">WCF Security</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-serialization" class="tag-link-34" title="1 topic" style="font-size: 8pt;">WCF Serialization</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-service" class="tag-link-9" title="3 topics" style="font-size: 12.7727272727pt;">WCF service</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-service-intancing" class="tag-link-31" title="1 topic" style="font-size: 8pt;">WCF Service Intancing</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-tracing" class="tag-link-43" title="1 topic" style="font-size: 8pt;">WCF Tracing</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-transaction" class="tag-link-51" title="1 topic" style="font-size: 8pt;">WCF Transaction</a>
+<a href="http://www.topwcftutorials.net/tag/wcf-transactions" class="tag-link-36" title="1 topic" style="font-size: 8pt;">WCF Transactions</a>
+<a href="http://www.topwcftutorials.net/tag/web-development" class="tag-link-68" title="2 topics" style="font-size: 10.8636363636pt;">Web Development</a>
+<a href="http://www.topwcftutorials.net/tag/web-services" class="tag-link-41" title="2 topics" style="font-size: 10.8636363636pt;">web services.</a>
+<a href="http://www.topwcftutorials.net/tag/web-services-security" class="tag-link-44" title="1 topic" style="font-size: 8pt;">Web Services Security</a>
+<a href="http://www.topwcftutorials.net/tag/windows-communication-foundation" class="tag-link-4" title="6 topics" style="font-size: 16.75pt;">windows communication foundation</a></div>
+</aside><aside id="rss_links-2" class="widget widget_rss_links"><p class="widget-title">RSS Feed</p><ul><li><a target="_self" href="http://www.topwcftutorials.net/feed" title="Subscribe to Posts">RSS - Posts</a></li><li><a target="_self" href="http://www.topwcftutorials.net/comments/feed" title="Subscribe to Comments">RSS - Comments</a></li></ul>
+</aside><aside id="text-6" class="widget widget_text">			<div class="textwidget"><a href="http://www.copyscape.com/online-copyright-protection/" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-widget&#39;, &#39;http://www.copyscape.com/online-copyright-protection/&#39;, &#39;&#39;]);"><img src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/cs-bl-234x16.gif" alt="Protected by Copyscape Online Copyright Search" title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page." width="234" height="16" border="0" scale="0"></a></div>
+		</aside><aside id="text-13" class="widget widget_text">			<div class="textwidget"><a href="http://click.linksynergy.com/fs-bin/click?id=s8waqo9RNjU&amp;offerid=323058.704&amp;type=4&amp;subid=0" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;outbound-widget&#39;, &#39;http://click.linksynergy.com/fs-bin/click?id=s8waqo9RNjU&amp;offerid=323058.704&amp;type=4&amp;subid=0&#39;, &#39; &#39;]);"> <img alt="Curl Up With a New Course - $15 Sitewide 300x250" border="0" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/show" scale="0"></a></div>
+		</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+		<div class="footercopy">Copyright 2015</div>
+		<div class="footercredit">WCF Tutorial</div>
+		<div class="clear"></div>
+		</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+		<div class="site-wordpress">
+				<a href="http://themonic.com/iconic-one/">Iconic One</a> Theme | Powered by <a href="http://wordpress.org/">Wordpress</a>
+				</div><!-- .site-info -->
+				<div class="clear"></div>
+</div><!-- #page -->
+
+        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'wcftutorial';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); 
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        <script type="text/javascript">
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+</script>	<div style="display:none">
+	<div class="grofile-hash-map-432c033b9cbb6303542d4ab02038dfb7">
+	</div>
+	</div>
+<link rel="stylesheet" id="font-awesome-css" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/font-awesome.min(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="su-content-shortcodes-css" href="./WCF Interview Questions - Part 3 - WCF Tutorial_files/content-shortcodes.css" type="text/css" media="all">
+<script type="text/javascript" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/collapse.js"></script>
+<script type="text/javascript" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/transition.js"></script>
+<script type="text/javascript" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/collapse(1).js"></script>
+<script type="text/javascript" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/devicepx-jetpack.js"></script>
+<script type="text/javascript" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/wpgroho.js"></script>
+<script type="text/javascript" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/selectnav.js"></script>
+<script type="text/javascript" src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/e-201603.js" async="" defer=""></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:3.7.2',blog:'68922509',post:'31',tz:'4',srv:'www.topwcftutorials.net'} ]);
+	_stq.push([ 'clickTrackerInit', '68922509', '31' ]);
+</script>
+
+
+<!-- Dynamic page generated in 0.682 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2016-01-18 15:01:52 -->
+
+<!-- super cache --><img src="./WCF Interview Questions - Part 3 - WCF Tutorial_files/g.gif" id="wpstats" scale="0"></body></html>

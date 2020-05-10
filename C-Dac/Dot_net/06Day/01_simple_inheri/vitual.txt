@@ -1,0 +1,177 @@
+The virtual keyword is used to modify a method, property, indexer, or event declaration and allow for it to be overridden in a derived class. For example, this method can be overridden by any class that inherits it:
+
+The implementation of a virtual member can be changed by an overriding member in a derived class
+
+When a virtual method is invoked, the run-time type of the object is checked for an overriding member. The overriding member in the most derived class is called, which might be the original member, if no derived class has overridden the member.
+
+By default, methods are non-virtual. You cannot override a non-virtual method.
+
+You cannot use the virtual modifier with the static, abstract, private, or override modifiers.
+
+Virtual properties behave like abstract methods, except for the differences in declaration and invocation syntax.
+
+It is an error to use the virtual modifier on a static property.
+
+A virtual inherited property can be overridden in a derived class by including a property declaration that uses the override modifier.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Override:
+The override modifier is required to extend or modify the abstract or virtual implementation of an inherited method, property, indexer, or event.
+
+An override method provides a new implementation of a member that is inherited from a base class. The method that is overridden by an override declaration is known as the overridden base method. The overridden base method must have the same signature as the override method. 
+
+You cannot override a non-virtual or static method. The overridden base method must be virtual, abstract, or override.
+
+An override declaration cannot change the accessibility of the virtual method. Both the override method and the virtual method must have the same access level modifier.
+
+You cannot use the new, static, virtual, or abstract modifiers to modify an override method.
+
+An overriding property declaration must specify exactly the same access modifier, type, and name as the inherited property, and the overridden property must be virtual, abstract, or override.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+new :
+
+The C# language is designed so that versioning between base and derived classes in different libraries can evolve and maintain backward compatibility. This means, for example, that the introduction of a new member in a base class with the same name as a member in a derived class is completely supported by C# and does not lead to unexpected behavior. It also means that a class must explicitly state whether a method is intended to override an inherited method, or whether a method is a new method that hides a similarly named inherited method.
+
+In C#, derived classes can contain methods with the same name as base class methods.
+
+The base class method must be defined virtual.
+
+If the method in the derived class is not preceded by new or override keywords, the compiler will issue a warning and the method will behave as if the new keyword were present.
+
+If the method in the derived class is preceded with the new keyword, the method is defined as being independent of the method in the base class.
+
+If the method in the derived class is preceded with the override keyword, objects of the derived class will call that method instead of the base class method.
+
+The base class method can be called from within the derived class using the base keyword.
+
+The override, virtual, and new keywords can also be applied to properties, indexers, and events.
+
+By default, C# methods are not virtual. If a method is declared as virtual, any class inheriting the method can implement its own version. To make a method virtual, the virtual modifier is used in the method declaration of the base class. The derived class can then override the base virtual method by using the override keyword or hide the virtual method in the base class by using the new keyword. If neither the override keyword nor the new keyword is specified, the compiler will issue a warning and the method in the derived class will hide the method in the base class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

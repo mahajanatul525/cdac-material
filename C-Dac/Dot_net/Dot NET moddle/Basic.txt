@@ -1,0 +1,202 @@
+Question 1
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+C# is case sensitive language.
+Select one:
+a. False
+b. True Correct
+Feedback
+The correct answer is: True
+Question 2
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+A reference to a reference-type instance requires how many bytes?
+Select one:
+a. 16 bytes
+b. 2 bytes
+c. 8 bytes
+d. 4 bytes
+Feedback
+The correct answer is: 4 bytes
+Question 3
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+________ pops up a list of methods that can be called on that object,instead of typing the full method Name.
+Select one:
+a. intellisense Correct
+b. goodsense
+c. intelligency
+d. intelligence
+Feedback
+The correct answer is: intellisense
+Question 4
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Which of the following is not a method of System.Object?
+Select one:
+a. ToString
+b. GetType
+c. Clone Incorrect
+d. Equals
+Feedback
+The correct answer is: GetType
+Question 5
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+________ method can by called creating an instance of a class.
+Select one:
+a. All of the above
+b. Static
+c. Non Static Correct
+Feedback
+The correct answer is: Non Static
+Question 6
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Benefit of .NET framework is/are___________.
+Select one:
+a. All of these Correct
+b. Language Interoperability
+c. Consistent programming Model
+d. Automatic management of resources
+Feedback
+The correct answer is: All of these
+Question 7
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+What will be the o/p ?
+
+ class Test
+
+ {
+
+  static void Main(string[] args)
+
+  { int a;    a = 1;    if(a)
+
+    System.Console.WriteLine("I can use c# wrongly");    else
+
+    System.Console.WriteLine("I can take chances");
+
+  }  }
+
+Select one:
+a. I can take chances
+b. I can use c# wrongly Incorrect
+c. Runtime Error
+d. Compile Time Error
+Feedback
+The correct answer is: Compile Time Error
+Question 8
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Which statement is used to replace multiple if statement in code?
+Select one:
+a. Select – Case Incorrect
+b. None of these
+c. Switch – Case
+Feedback
+The correct answer is: Switch – Case
+Question 9
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What is the work of JIT compiler in .NET framework?
+Select one:
+a. It translates the MSIL code of assembly and uses the CPU architecture of the machine to execute a .NET application.
+b. It translates the code in the machine language. Correct
+c. It complies the assemblies.
+d. It translates the assembly code of MSIL and uses the CPU architecture of the machine to execute a .NET application.
+Feedback
+The correct answer is: It translates the code in the machine language.
+Question 10
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+C# provides us with two predefined references types _______ and _____.
+Select one:
+a. int ,float Incorrect
+b. bool,int
+c. Object,String
+Feedback
+The correct answer is: Object,String
+Question 11
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+In an enum type each of the name constant should necessarily have an ___ type.
+Select one:
+a. string Incorrect
+b. int
+c. double
+Feedback
+The correct answer is: int
+Question 12
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+We use the _______ function to write a string to the screen.
+Select one:
+a. Console.Write()
+b. Console.PrintLine()
+c. Console.WriteLine() Correct
+d. Console.Wrileln()
+Feedback
+The correct answer is: Console.WriteLine()
+Question 13
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What is Boxing?
+Select one:
+a. The conversion of a value type to reference type.
+b. The conversion of a value type to an object instance Correct
+c. The conversion of a reference type to a value type
+d. The conversion of an object instance to a value type.
+Feedback
+The correct answer is: The conversion of a value type to an object instance
+Question 14
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+C# supports all the key object oriented concepts such as encapsulation inheritence and polimorphism
+Select one:
+a. False
+b. True Correct
+Feedback
+The correct answer is: True
+Question 15
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+In C#, what character is used to indicate a verbatim string literal?
+Select one:
+a. @ Correct
+b. !
+c. #
+d. "
+Feedback
+The correct answer is: @

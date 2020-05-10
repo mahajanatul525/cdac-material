@@ -1,0 +1,53 @@
+Creating an enumeration can save you a lot of time and headaches in the long run. At least three benefits
+
+exist to using enumerations instead of plain integers:
+
+? As mentioned, enumerations make your code easier to maintain by helping to ensure that your
+variables are assigned only legitimate, anticipated values.
+
+? Enumerations make your code clearer by allowing you to refer to integer values by descriptive
+names rather than by obscure “ magic ” numbers.
+
+
+? Enumerations make your code easier to type, too. When you go to assign a value to an instance of an enumerated type, the Visual Studio .NET IDE will, through IntelliSense, pop up a list box of acceptable values in order to save you some keystrokes and to remind you of what the possible options are.
+
+enum is strongly typed data
+it is used when you want to give option to the user from the available list.
+data are strored as index(0 to --);
+eg select Mr/Miss,file open/close(0-1),
+cources offered to students,
+in bank tpes of account,
+mobile catagory.
+
+
+
+can I declare enum within a class ??
+yes 
+then access it by classname.enum name
+eg.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    
+    public class myclass
+    {
+       public  enum day { Monday, tuesday }
+        
+    
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            myclass obj = new myclass();
+           myclass.day d = myclass.day.Monday;
+           Console.WriteLine(d);
+
+        }
+    }
+}

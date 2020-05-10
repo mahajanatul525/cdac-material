@@ -1,0 +1,25 @@
+
+		An idea about Generated Proxy based on inceptors given
+
+public class ProductImpl_Proxy implements Product
+{
+    public int multiply(int a, int b)
+    {
+	// before
+	// invoke
+		// if both args are 0 throw exception
+			afterThrowing
+	    // else
+	// proceed
+    	System.out.println("inside multiply");
+        return a*b;
+	// back to invoke
+	// after returning
+    }
+}
+
+
+
+			main
+
+

@@ -1,0 +1,115 @@
+Consider a service counter. People waiting for service form a queue. At the start, the queue is empty and time is 0. The service time per person is 3 minutes.
+
+Your program must simulate the queue and print out the following:
+The number of customers waiting in the queue at time = N minutes from the start of simulation.
+The arrival times of the customers in the queue at that time, in increasing order.
+
+Each integer must be separated by a space. Terminate your output with a newline character.
+
+For doing the computation, you can assume that if the counter is expected to be vacant at time t, the first person in the queue will be scheduled for service, before the counting is done for time t. You must use the queue data structure to solve this problem.
+
+
+
+#include<stdio.h>
+#include<iostream>
+
+using namespace std;
+
+class Q{
+
+        private:
+                int arr[100];
+                int first;
+                int last;
+                int size;
+        public:
+                Q(int n) {
+                        size = 100;
+                        first = last = 0;
+                        }
+                void enque(int n) {
+                        if( !isFull() ) {
+                                arr[last] = n;
+                               // printf("Enqued int is %d\n",arr[last]);
+                                last++;
+                        }
+                        else {
+                                printf("Queue is Full\n");
+                        }
+                }
+
+                int deque(){
+                        if( !isEmpty() ) {
+                                first++;
+                                if(first == last) {
+                                        first = last = 0;
+                                }
+                            //    printf("Dequed int is %d\n",arr[first - 1]);
+                                  return arr[first - 1];
+                        }
+                        else {
+                                printf("Queue is Empty\n");
+                                return -1;
+                        }
+
+                }
+                bool isEmpty() {
+                        if(first == last)
+                                return 1;
+                        return 0;
+
+                }
+                bool isFull() {
+                        if(last == size)
+                                return 1;
+                        return 0;
+                        }
+                 void display_queue() {
+                     int i;
+                     if(last - (first + 1) > 0)
+                     printf("%d ",(last - (first + 1)));
+                     else
+                     printf("0");
+                     for ( i = first + 1; i < last;i++) {
+                             printf("%d ",arr[i]);
+                     }
+                     printf("\n"); 
+                 }
+       };
+
+
+int main() {
+    int N,flag = 0,length = 0,i,count = 0,flag1 = 0;
+    int a[100];
+    Q q(0);
+    scanf("%d",&N);
+    while(flag == 0) {
+        scanf("%d",&a[length]);
+        if(a[length] == -1)
+        flag = 1;
+        else
+        length++;
+    }
+    //printf("length = %d",length);
+   flag = 0;
+   while(flag <= N) {
+       for( i = 0; i < length;i++) {
+           if( flag == a[i] ) {
+               q.enque(a[i]);
+               //count++;
+               flag1 = 1 ;         
+                }
+       }if(flag1 == 1){
+      // printf("count = %d and flag = %d\n",count,flag);
+               if(count % 3 == 0 && count > 0)
+                {
+                   q.deque();
+                  // count = 0;
+                }
+            count++;
+        }
+       flag++;
+   }
+   q.display_queue();
+return 0;
+}

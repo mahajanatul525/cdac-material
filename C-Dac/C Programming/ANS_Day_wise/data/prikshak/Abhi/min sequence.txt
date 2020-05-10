@@ -1,0 +1,52 @@
+Write a complete program to find the length of  minimum subsequence of '1' in the given string as '0' & '1' 
+ 
+if there is no subsequence of '1' print '-1'
+
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int main()
+
+{
+    int n=0,len;
+    int currcount=0;
+    int mincount=99;
+
+   char *ch=(char*)malloc(sizeof(char)*100);
+   scanf("%s",ch);
+   len=strlen(ch);
+
+    while(n<len)
+    {
+    if(ch[n]=='1')
+    {
+          while(ch[n]=='1')
+        {
+            currcount++;
+          
+            n++;
+            
+}
+if (currcount < mincount )
+             mincount =currcount;
+            currcount=0;
+     }
+     else
+     {
+            while(ch[n]=='0')
+            {        
+           n++;
+              }          
+    
+    }        
+    } 
+    if (mincount!=99&&mincount!=0)
+       printf("%d",mincount);
+    else
+         printf("-1");
+         return 0;
+    }

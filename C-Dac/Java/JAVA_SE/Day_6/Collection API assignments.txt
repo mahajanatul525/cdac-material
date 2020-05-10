@@ -1,0 +1,50 @@
+1) create a class "MyClass".
+create 5 different objects of it.
+add them in a ArrayList.
+store ArrayList in file.
+Now open a file, read ArrayList and display all objects.
+
+2) create a HashMap.
+store  prn no. and students name of 10 students inside the HashMap.
+display it using iterator.
+
+3) create a hierarchy as follows
+	interface Game- play() method
+	Derive at least 3 classes from it.
+Now Create generic class which can take Game type (i.e. any sub type of Game) as parameter.
+In this class try to call the play() method of the class which is passed to it.
+
+4) Define a class "Employee" with following members
+empid, empname, desig, basic.
+Define a parameterised constructor which will take all these values while creating an instance.
+Also define "disp()" method which will display all these details.
+create 4 employees and save them in "ArrayList".
+Now save this "ArrayList" in a file.
+Open file , read "ArrayList" , traverse ArrayList and call "disp()" for all the objects.
+
+5) maintain ICC ranking of at least 5 batsmen in the "HashMap".
+list should be maintain as "rank" "name"
+e.g. "1" "Sachin Tendulkar".
+Now ask any rank bet'n 1 to 5 from user. ( user input).
+if user asks for a particular rank , retrieve batsman name for that rank from the HashMap.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

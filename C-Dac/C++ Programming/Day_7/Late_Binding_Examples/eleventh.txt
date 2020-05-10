@@ -1,0 +1,67 @@
+class base
+{
+	public:
+		virtual void disp()
+		{
+			cout<<"base disp"<<endl;
+		}
+};
+class sub1:public base
+{
+	/*public:
+		void disp() // by def virtual
+		{
+			cout<<"sub1 disp"<<endl;
+		}*/
+};
+class sub2:public sub1
+{
+	/*public:
+		void disp()  // by def virtual
+		{
+			cout<<"sub2 disp"<<endl;
+		}*/
+};
+int main()
+{
+	base *b1=new sub2;
+	b1->disp(); // base disp
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

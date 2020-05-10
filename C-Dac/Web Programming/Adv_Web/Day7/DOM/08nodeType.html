@@ -1,0 +1,16 @@
+<html><head></head>
+<script type="text/javascript">
+function callme()
+{
+alert(document.nodeType) //9
+alert(document.getElementById("pr").nodeType) //1
+alert(document.getElementById("pr").firstChild.nodeType) //3
+alert(document.nodeName) //#document
+alert(document.getElementById("pr").firstChild.nodeName) //#text
+alert(document.getElementById("pr").tagName) //p
+alert(document.getElementById("pr").nodeName) //p
+}
+</script><body>
+<p onmouseOver="callme()" id="pr">Welcome<b> to world of</b> Dom</p>
+</body>
+</html>

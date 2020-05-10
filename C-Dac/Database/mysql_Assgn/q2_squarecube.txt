@@ -1,0 +1,35 @@
+
+2. Write a function to take a numbers as input and return its square and cube
+
+ CREATE FUNCTION `sq_cb`(num int)
+ RETURNS varchar(50) 
+
+
+BEGIN
+
+declare s int;
+
+declare c int;
+
+declare sqr varchar(40);
+
+declare cb varchar(40);
+
+set sqr:='square is = ';
+
+set cb:=' and cube is = ';
+
+set s:=num*num;
+
+set c:=num*num*num;
+
+set sqr:=concat(sqr,s);
+
+set cb:=concat(cb,c);
+
+
+return concat(sqr,cb);
+
+
+
+END

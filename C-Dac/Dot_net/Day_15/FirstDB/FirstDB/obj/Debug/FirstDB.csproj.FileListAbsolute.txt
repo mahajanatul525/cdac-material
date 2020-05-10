@@ -1,0 +1,6 @@
+F:\C++ PRO\Day_15\FirstDB\FirstDB\bin\Debug\FirstDB.exe.config
+F:\C++ PRO\Day_15\FirstDB\FirstDB\bin\Debug\FirstDB.exe
+F:\C++ PRO\Day_15\FirstDB\FirstDB\bin\Debug\FirstDB.pdb
+F:\C++ PRO\Day_15\FirstDB\FirstDB\obj\Debug\FirstDB.csprojResolveAssemblyReference.cache
+F:\C++ PRO\Day_15\FirstDB\FirstDB\obj\Debug\FirstDB.exe
+F:\C++ PRO\Day_15\FirstDB\FirstDB\obj\Debug\FirstDB.pdb

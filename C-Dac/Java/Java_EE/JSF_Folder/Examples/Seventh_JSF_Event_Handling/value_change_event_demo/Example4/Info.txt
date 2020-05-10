@@ -1,0 +1,3 @@
+when u select any item from one dropdown list, second dropdown list will be filled with respective values.when u select any item from second dropdown list, third dropdown list will be filled with respective values.
+
+at the end on click of submit , application will be able to keep a track of the values selected in each dropdown list.

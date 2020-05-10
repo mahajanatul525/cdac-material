@@ -1,0 +1,65 @@
+<script>
+"use strict"
+function Account(nm,amt)
+{
+ Account.id=++Account.id||1
+ if(this instanceof Account)
+ {
+  this.name=nm;
+  this.balance=amt;
+  this.id=Account.id;
+  return this;
+ }
+else 
+throw new TypeError("Check this is not a function");
+}
+Account.prototype.toString=function()
+{
+return this.name + " "+this.balance+ " "+ this.id
+}
+
+Account.prototype.deposit=function(amt){
+if(amt>0)
+this.balance+=amt;
+}
+
+function SavingAccount(nm,amt)
+{
+Account.call(this,nm,amt);
+}
+SavingAccount.prototype=Object.create(Account.prototype);
+SavingAccount.prototype.widthrow=function(amt)
+{
+  var b=this.balance-amt;
+  if(b<10000)
+  throw new Error("insufficent balance");
+this.balance-=amt;
+}
+
+var obj1=new SavingAccount("Raj",10000);
+document.write(obj1);
+obj1.deposit(20000)
+document.write(obj1);
+obj1.widthrow(10000)
+document.write(obj1);
+
+
+
+
+function CurrentAccount(nm,amt)
+{
+Account.call(this,nm,amt);
+}
+CurrentAccount.prototype=Object.create(Account.prototype);
+CurrentAccount.prototype.widthrow=function(amt)
+{
+this.balance -=amt;
+}
+
+var obj2=new CurrentAccount("BusinessMan",10000);
+document.write(obj2);
+obj2.deposit(20000)
+document.write(obj2);
+obj2.widthrow(40000)
+document.write(obj2);
+</script>

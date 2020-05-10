@@ -1,0 +1,14 @@
+start
+program
+visualstudio 2012
+visualstudio tool
+right click on cmd run as------------------ administrator------
+
+and type
+
+gacutil -i path of dll file
+
+D:\practice_dotnet\callib\callib\bin\Debug\ gacutil -i  lib. dll 
+
+
+add reference to your project C:\Windows\Microsoft.NET\assembly\GAC_MSIL\ClassLibrary1

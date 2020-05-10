@@ -1,0 +1,21 @@
+mysql> create table product(pid int primary key,pname varchar(20),cost int );
+Query OK, 0 rows affected (0.13 sec)
+
+mysql> insert into product values(1,'soap',100);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into product values(2,'deo',200);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into product values(3,'perfume',300);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from product;
++-----+---------+------+
+| pid | pname   | cost |
++-----+---------+------+
+|   1 | soap    |  100 |
+|   2 | deo     |  200 |
+|   3 | perfume |  300 |
++-----+---------+------+
+3 rows in set (0.00 sec)

@@ -1,0 +1,16 @@
+mysql> select * from employee;
++----+--------------+-------------+
+| id | employeeName | employer_id |
++----+--------------+-------------+
+|  1 | Abc          |           1 |
+|  2 | Xyz          |           1 |
++----+--------------+-------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from employer;
++----+--------------+
+| id | employerName |
++----+--------------+
+|  1 | Principal    |
++----+--------------+
+1 row in set (0.00 sec)

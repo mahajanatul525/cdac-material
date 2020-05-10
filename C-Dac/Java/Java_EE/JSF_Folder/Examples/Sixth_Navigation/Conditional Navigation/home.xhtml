@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+            xmlns:f="http://java.sun.com/jsf/core"
+             xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+ 
+     <head><title>JSF Hello World</title></head>
+     <body>
+<h:form>
+
+   <h:commandLink action="#{navigationController.showPage}" value="java8">
+      <f:param name="pageid" value="1" />
+   </h:commandLink>
+   <br></br><br></br><br></br>
+   <h:commandLink action="#{navigationController.showPage}" value="c++">
+      <f:param name="pageid" value="2" />
+   </h:commandLink>
+     <br></br><br></br><br></br>
+   <h:commandLink action="#{navigationController.showPage}" value="database">
+      <f:param name="pageid" value="3" />
+   </h:commandLink>
+</h:form>
+</body>
+</html>

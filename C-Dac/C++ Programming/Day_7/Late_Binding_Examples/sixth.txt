@@ -1,0 +1,65 @@
+class base
+{
+	public:
+		virtual void disp()
+		{
+			cout<<"base disp"<<endl;
+		}
+};
+class sub:public base
+{
+	public:
+		void disp()
+		{
+			cout<<"sub disp"<<endl;
+		}
+		void print()
+		{
+			cout<<"sub print"<<endl;
+		}
+};
+int main()
+{
+	base *b1=new sub;
+	b1->disp();
+	b1->print(); // error
+
+}
+
+// using parent class pointer or reference u can invoke only those methods which are available in parent class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

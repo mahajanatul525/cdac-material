@@ -1,0 +1,13 @@
+#include<stdio.h>
+void main()
+{
+	int i,no,ans,n;
+	printf("\nenter no = ");
+	scanf("%d",&no);
+	n=no;
+	for(i=1;i<=n;i++)
+	{
+		no = no+1;
+		printf("\n%d",no);
+	}
+}

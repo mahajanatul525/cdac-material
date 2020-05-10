@@ -1,0 +1,65 @@
+//package core1;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.Comparator;
+
+public class Demo 
+{
+	public static void main(String[] args) 
+	{
+		List<String> items = new ArrayList<String>();
+
+		items.add("one");
+		items.add("two");
+		items.add("three");
+
+		Stream<String> stream = items.stream();
+		
+	    stream.filter(item -> item.startsWith("o")).forEach(System.out::println);
+	    
+	    stream=items.stream();
+	    
+	   stream.map(item -> item.toUpperCase()).forEach(System.out::println);
+
+	    
+	    
+	    
+	    List<String> filtered = items.stream()
+	    	    .filter( item -> item.startsWith("t") )
+	    	    .collect(Collectors.toList());
+	    
+	    filtered.stream().forEach(System.out::println);
+	    
+	   
+	    	    
+	    
+	   String shortest = items.stream()
+	            .min(Comparator.comparing(item -> item.length()))
+	            .get();
+
+	    System.out.println(shortest);
+	    
+	    
+	   
+	    long count = items.stream()
+	    	     .filter( item -> item.startsWith("t")).count();
+System.out.println("count is\t"+count);
+	    
+	    String reduced2 = items.stream()
+	            .reduce((acc, item) -> acc + " " + item)
+	            .get();
+	    System.out.println("reduced2 is\t"+reduced2);
+
+	   
+	    String reduced = items.stream()
+	    	    .filter( item -> item.startsWith("o"))
+	    	    .reduce("", (acc, item) -> acc + " " + item);
+	    System.out.println("reduced is\t"+reduced);
+
+
+
+	}
+}

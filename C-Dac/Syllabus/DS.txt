@@ -1,0 +1,196 @@
+   
+Define the problem
+
+·         Identify the problem
+
+·         Introduction to Problem Solving
+
+·         Problem solving basics
+
+·         Defining creativity v/s innovation
+
+Find Creative Solutions using creativity tools
+
+·         Effective problem solving approaches
+
+·         Critical thinking and information analysis
+
+·         Brainstorming, Reverse Brainstorming, Imagineering, Mind Mapping,
+
+·         Six Thinking Hats: A Tool to Strengthen Critical Thinking, Collaboration, Communication, and Creativity Skills
+
+·         Analyzing the situation, Gathering information, Identifying solution criteria
+
+·         Decision Making Methods
+
+·         Charts and Diagrams
+
+·         Applying outcome-based thinking
+
+Evaluate and Select solution
+
+·         Pro’s and Con’s, Force field analysis, Feasibility/Capability Analysis,
+
+·         Decision analysis, evaluating problems
+
+·         Choosing among alternatives
+
+·         Qualitative analysis, discussing qualitative analysis techniques
+
+·         Establishing objectives
+
+·         Assigning weight to objectives in order to make the best decision
+
+·         Creating a satisfaction scale to choose between alternatives
+
+Implementing Decisions
+
+·         Create an action plan
+
+·         Break solution into action steps
+
+·         Prioritize actions and assign roles (setting priorities for taking action)
+
+·         Follow-up at milestones
+
+Algorithm & Data Structures
+
+·         Introductory Concepts
+
+·         Algorithm Constructs
+
+·         OO design: Abstract Data Types (ADTs)
+
+Basic Data Structures
+
+·         Arrays
+
+·         Stacks
+
+·         Queues
+
+·         Priority Queues
+
+·         Deques
+
+·         Linked lists
+
+Trees and hierarchical orders
+
+·         Introduction to trees
+
+·         Abstract trees
+
+·         Tree traversals
+
+·         Forests
+
+·         Ordered trees
+
+·         Binary trees
+
+·         Perfect binary trees
+
+·         Complete binary trees
+
+·         Search trees
+
+·         Binary search trees
+
+·         AVL trees
+
+Searching & Sorting algorithms
+
+·         Objectives of Searching
+
+·         The Sequential Search
+
+·         Analysis of Sequential Search
+
+·         The Binary Search
+
+·         Analysis of Binary Search
+
+·         Introduction to sorting
+
+·         Insertion sort
+
+·         Bubble sort
+
+·         Heap sort
+
+·         Merge sort
+
+·         Quick sort
+
+Hash functions and hash tables
+
+·         Hashing & Introduction to hash tables
+
+·         Hash functions
+
+·         Mapping down to 0 ... M - 1
+
+·         Chained hash tables
+
+·         Scatter tables
+
+·         Open addressing
+
+·         Linear probing
+
+·         Quadratic probing
+
+·         Double hashing
+
+·         Poisson distribution
+
+·         Collision Resolution
+
+·         Analysis of Hashing
+
+Graph algorithms
+
+Introduction to graph theory
+
+·         Graph data structures
+
+·         Graph traversals
+
+·         Connectedness, Single source un-weighted path length, identifying bipartite graphs
+
+·         Minimum spanning tree algorithms, Prim's algorithm, Kruskal's algorithm,
+
+·         Single-source shortest path algorithms, Dijkstra's algorithm, A* search algorithm, Bellman-Ford algorithm
+
+·         All-pairs shortest path, Floyd-Warshall algorithm, Johnson's algorithm
+
+·         Maximum flow algorithms, Ford-Fulkerson algorithms
+
+Algorithm design
+
+·         Introduction to algorithm design techniques
+
+·         Greedy algorithms
+
+·         Divide-and-conquer algorithms
+
+·         Dynamic programming
+
+·         Backtracking algorithms
+
+·         Branch-and-bound algorithms
+
+·         Stochastic algorithms
+
+·         Analysis of different Algorithms
+
+o   Asymptotic analysis
+
+o   Algorithm analysis
+
+·         Complexity
+
+o   Complexity Analysis
+
+·         Application of Data structures

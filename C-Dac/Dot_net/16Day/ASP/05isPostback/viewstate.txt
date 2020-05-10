@@ -1,0 +1,2 @@
+
+---ViewState data is serialized into base64-encoded strings, and is stored in Hidden input field __ViewState. To view this hidden input field, right click on the browser and select "View Page Source" for google chrome. In internet explorer, right click and select "View Source" 

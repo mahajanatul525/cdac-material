@@ -1,0 +1,9 @@
+<listener>
+	<listener-class>listpack.RequestEventListener</listener-class>
+<listener-class>listpack.RequestAttributeListener</listener-class>
+<listener-class>listpack.MyContextListener</listener-class>
+<listener-class>listpack.MyContextAttributeListener</listener-class>
+<listener-class>listpack.MySessionAttributeListener</listener-class>
+<listener-class>listpack.MySessionListener</listener-class>
+<listener-class>listpack.MyClass</listener-class>
+</listener>

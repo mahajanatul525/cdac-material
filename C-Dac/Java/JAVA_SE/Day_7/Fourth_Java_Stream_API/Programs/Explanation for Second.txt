@@ -1,0 +1,46 @@
+List
+	stream()
+		Returns a sequential Stream with this collection as its source. 
+
+Interface Stream<T>
+
+	filter(Predicate<? super T> predicate) 
+
+Returns a stream consisting of the elements of this stream that match the given predicate. 
+
+list.stream().filter(i-> i>10)
+
+here we are passing child class of "Predicate" 		[i-> i>10] which implements "test(T t)" method which returns boolean.
+
+filter() method returns
+	Stream
+		we are invoking "mapToInt()" method of stream which takes the argument as
+child class of "ToIntFunction" functional interface .
+this child class of "ToIntFunction" implements following function
+
+applyAsInt(T value) 
+
+Applies this function to the given argument
+
+"maptoInt()" function returns "Interface IntStream
+"
+
+that is implementation of "IntStream"
+
+now we are invoking following function on that implementation:
+
+int sum()
+
+Returns the sum of elements in this stream. 
+
+
+
+
+
+
+
+
+
+
+
+	

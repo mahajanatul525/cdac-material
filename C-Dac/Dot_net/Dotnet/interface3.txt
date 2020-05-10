@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication10
+{
+    interface Imsg
+    {
+        void sendmsg();
+    }
+    class mobile : Imsg
+    {
+        public void sendmsg()
+        {
+            Console.WriteLine("msg thr mobile");
+        }
+    }
+    class postcard : Imsg
+    {
+       public void sendmsg()
+        {
+            Console.WriteLine("msg thr post");
+        }
+    }
+    class poly
+    {
+       public  void call(Imsg i)
+        {
+            i.sendmsg();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            poly p=new poly();
+            Console.WriteLine("enter the type of msg:-  0 for mobile and 1 for postcard");
+            int x =Convert.ToInt32( Console.ReadLine());
+            if (x == 0)
+                p.call(new mobile());
+            else if (x == 1)
+                p.call(new postcard());
+            else
+                Console.WriteLine("enter valid choice");
+
+         }
+    }
+}

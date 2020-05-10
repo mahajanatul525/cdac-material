@@ -1,0 +1,1 @@
+HashSet is an optimized set collection. It helps eliminates duplicate strings or elements in an array. It provides a simple syntax for taking the union of elements in a set. 

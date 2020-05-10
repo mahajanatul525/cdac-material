@@ -1,0 +1,30 @@
+/*recerse string and put it into another string
+*/
+#include<stdio.h>
+void rev(char []);
+void main()
+{ 
+ char name[20],revstr[20];
+    printf("enter a string");
+    gets(name);
+    rev(name);
+    printf("\nrev string %s",name);
+}
+void rev(char name[])
+{ int i,k;
+  char t;
+	for(i=0;name[i]!='\0';i++);
+
+	       for(k=0;k<i/2;k++)
+              { t=name[i];
+                name[i]=name[i-1-i];
+              name[i-1-i]=t ;
+             }
+      
+     	
+}
+
+
+
+
+

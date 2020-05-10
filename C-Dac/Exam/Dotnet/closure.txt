@@ -1,0 +1,36 @@
+using System;
+using System.Collections;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace atul
+{
+    delegate int countit (int end);
+    class myclass
+    {
+        public static countit counter()
+        {
+            countit obj = delegate(int x)
+            {
+                int sum = 0;
+                for (int i = 0; i < x; i++)
+                {
+                    sum += i;
+                }
+                return sum;
+            };
+            return obj;
+        }
+    }
+    class entrypoint
+    {
+        public static void Main()
+        {
+            myclass m = new myclass();
+            countit count = myclass.counter();
+            int x = count(3);
+            Console.WriteLine(x);
+        }
+    }
+}

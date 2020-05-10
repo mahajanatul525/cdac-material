@@ -1,0 +1,16 @@
+Because it is a bit inconvenient to operate on IEnumerable<T>, you could make use of immediate
+execution. For example, rather than returning IEnumerable<string>, you could simply return a string[],
+provided that you transform the sequence to a strongly typed array. Consider this new method of the
+Program class, which does this very thing:
+
+
+static string[] GetStringSubsetAsArray()
+{
+string[] colors = {"Light Red", "Green",
+"Yellow", "Dark Red", "Red", "Purple"};
+
+var theRedColors = from c in colors
+where c.Contains("Red") select c;
+// Map results into an array.
+return theRedColors.ToArray();
+}

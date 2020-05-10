@@ -1,0 +1,10 @@
+simple tags and tag files can have only these three values in body-content
+empty
+scriptless
+tagdependent
+
+but classic tags can have all four values in body-content.
+empty
+scriptless
+tagdependent
+JSP

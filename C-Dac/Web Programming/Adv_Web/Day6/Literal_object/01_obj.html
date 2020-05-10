@@ -1,0 +1,26 @@
+<script>
+obj={name:"raj", 
+  age:25,
+  math:function()
+  { this.age+=5; return this.age;},
+  s:function sum(p,q)
+  { return p+q;}, 
+
+  toString:function str()
+{ return this.name +"  "+this.age;}
+
+}
+var x;
+x=obj
+document.write(obj)
+document.write("<hr/>");
+document.write(obj.constructor)
+document.write("<hr/>");
+document.write(obj.name+ " "+obj.age);
+document.write("<hr/>");
+document.write(obj.math());
+document.write("<hr/>");
+document.write(obj.s(5,6));
+document.write("<hr/>");
+document.write(obj.name+ " "+obj.age);
+</script>

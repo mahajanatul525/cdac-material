@@ -1,0 +1,106 @@
+Define a class "Player" with following members
+	int id;
+	char *name;
+	char *country
+	int score
+
+
+/*#include<iostream>
+#include<conio.h>
+#include<string.h>
+using namespace std;
+class Player
+{
+private:
+	int id;
+	char *name;
+	char *country;
+	int score;
+public:
+	Player()
+	{
+		cout<<"in def const"<<endl;
+	}
+
+	Player(int i,char *n,char *c,int s)
+	{
+		id=i;
+		name=new char[strlen(n)+1];
+		strcpy(name,n);
+		country=new char[strlen(c)+1];
+		strcpy(country,c);
+		score=s;
+	}
+	Player(Player &ref)
+	{
+		id=ref.id;
+		name=new char[strlen(ref.name)+1];
+		strcpy(name,ref.name);
+		country=new char[strlen(ref.country)+1];
+		strcpy(country,ref.country);
+		score=ref.score;
+	}
+	void disp()
+	{
+		cout<<"in disp"<<endl;
+	}
+friend	ostream& operator<<(ostream &,Player &);
+	
+	void operator =(Player &ref)
+	{
+		id=ref.id;
+		name=new char[strlen(ref.name)+1];
+		strcpy(name,ref.name);
+		country=new char[strlen(ref.country)+1];
+		strcpy(country,ref.country);
+		score=ref.score;
+		
+	}
+	~Player()
+	{
+		delete []name;
+		delete []country;
+	}
+
+
+
+};
+ostream& operator<<(ostream &o,Player &ref)
+	{
+		o<<ref.id<<ref.name<<ref.country<<ref.score<<endl;
+		return o;
+	}
+
+void main()
+{
+	Player p1(1,"mangesh","india",100);
+	cout<<p1<<endl;
+
+	p1.disp();
+
+	Player p2=p1;
+	
+	cout<<p2<<endl;
+
+	Player p3;
+
+	p3=p1;
+	cout<<p3<<endl;
+
+	_getch();
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

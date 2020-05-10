@@ -1,0 +1,12 @@
+D:\dot_net\Day_wise\day01a_Assembly\Console_basic_ref\Console_basic_ref\bin\Debug\Console_basic_ref.exe.config
+D:\dot_net\Day_wise\day01a_Assembly\Console_basic_ref\Console_basic_ref\bin\Debug\Console_basic_ref.exe
+D:\dot_net\Day_wise\day01a_Assembly\Console_basic_ref\Console_basic_ref\bin\Debug\Console_basic_ref.pdb
+D:\dot_net\Day_wise\day01a_Assembly\Console_basic_ref\Console_basic_ref\obj\Debug\Console_basic_ref.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day01a_Assembly\Console_basic_ref\Console_basic_ref\obj\Debug\Console_basic_ref.exe
+D:\dot_net\Day_wise\day01a_Assembly\Console_basic_ref\Console_basic_ref\obj\Debug\Console_basic_ref.pdb
+D:\dot_net\Day_wise\day1\00Framework\01how it compile\00_ex1\Console_basic_ref\Console_basic_ref\bin\Debug\Console_basic_ref.exe.config
+D:\dot_net\Day_wise\day1\00Framework\01how it compile\00_ex1\Console_basic_ref\Console_basic_ref\obj\Debug\Console_basic_ref.exe
+D:\dot_net\Day_wise\day1\00Framework\01how it compile\00_ex1\Console_basic_ref\Console_basic_ref\obj\Debug\Console_basic_ref.pdb
+D:\dot_net\Day_wise\day1\00Framework\01how it compile\00_ex1\Console_basic_ref\Console_basic_ref\bin\Debug\Console_basic_ref.exe
+D:\dot_net\Day_wise\day1\00Framework\01how it compile\00_ex1\Console_basic_ref\Console_basic_ref\bin\Debug\Console_basic_ref.pdb
+D:\dot_net\Day_wise\day1\00Framework\01how it compile\00_ex1\Console_basic_ref\Console_basic_ref\obj\Debug\Console_basic_ref.csprojResolveAssemblyReference.cache

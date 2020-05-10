@@ -1,0 +1,17 @@
+class base{ void disp(){}}
+class sub:public base{}
+
+base *ptr=new sub;
+
+typeid(*ptr).name() - base  // type
+
+	vs
+
+class base{ virtual void disp(){}}
+class sub:public base{}
+
+base *ptr=new sub;
+
+typeid(*ptr).name() - sub  // content
+
+

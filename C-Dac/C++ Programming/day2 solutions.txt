@@ -1,0 +1,194 @@
+11111111111111111111111111111111111111111111
+
+
+1) create a class with constructors and destructors.
+create array of instances and observe how program behaves.
+
+ 
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class MyClass
+{
+	int num;
+public:
+	MyClass()						//no arg constructor
+	{
+		cout<<"In default constructor"<<endl;
+	}
+	MyClass(int k)					//param. constructor
+	{
+		num=k;
+	cout<<"param construct"<<endl;
+	}
+	~MyClass()					//destructor
+	{
+		cout<<"in dist"<<endl;
+	}
+	void setnum(int k)
+	{
+		num=k;
+	}
+	void getnum()
+	{
+		cout<<num<<endl;
+	}
+};
+int main()
+{
+	MyClass *m=new MyClass[3];				//heap based object
+		cout<<"enter 3 numbers"<<endl;
+
+	for(int i=0;i<3;i++)
+	{ int n;
+	cin>>n;
+		m[i].setnum(n);
+	}
+
+	for(int i=0;i<3;i++)
+		m[i].getnum();
+	
+MyClass c[3]={MyClass(10),MyClass(10),MyClass(10)}; 		//stack based objects
+// MyClass *a[3]={new MyClass(10),new MyClass(10),new MyClass(10)};	//heap based objects
+//MyClass b[3]={10,20,30};					//stack based objects
+//MyClass c[3];						//stack based objects
+
+delete []a;
+delete []m;
+	getch();
+}
+
+
+
+22222222222222222222222222222222222222222222222222222222222222222222
+same as prog 1 
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+333333333333333333333333333333333333333333333333333333333333333333
+3) create a class "book" with
+int bookid
+char *bookname
+int price
+
+define parameterized constructor only for this class.
+define 3 getter functions.
+
+now create 2 instances
+1 on stack and 1 on heap.
+pass the necessary values while creating instances.
+call the getter functions.
+ 
+
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class Book
+{
+	int bookid,price;
+	char *name;
+
+public:
+	Book(int bookid,char *name, int price)
+	{
+		this->bookid=bookid;
+		this->name=name;
+		this->price=price;
+	}
+	
+	int getbookid()
+	{
+		return bookid;
+	}
+
+	int getprice()
+	{
+		return price;
+	}
+	char* getname()
+	{
+		return name;
+	}
+};
+int main()
+{
+	Book b(10,"yogita",500);
+	Book *c=new Book(20,"alita",700);
+	cout<<b.getbookid()<<endl<<b.getname()<<endl<<b.getprice()<<endl;
+	
+	cout<<c->getbookid()<<endl<<c->getname()<<(*c).getprice()<<endl;
+	
+
+	getch();
+}
+
+
+
+
+555555555555555555555555555555555555555
+5) create a class.
+accept from user, how many instances are required.
+Accordingly create array of instances dynamically.
+Now make sure that u call destructor for each and every instances.
+
+
+
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class MyClass
+{
+	int num;
+public:
+	MyClass()						//no arg constructor
+	{
+		cout<<"In default constructor"<<endl;
+	}
+	MyClass(int k)					//param. constructor
+	{
+		num=k;
+	cout<<"param construct"<<endl;
+	}
+	~MyClass()					//destructor
+	{
+		cout<<"in dist"<<endl;
+	}
+	void setnum(int k)
+	{
+		num=k;
+	}
+	void getnum()
+	{
+		cout<<num<<endl;
+	}
+};
+int main()
+{int req;
+cout<<"enter req"<<endl;
+cin>>req;
+	MyClass *m=new MyClass[req];				//heap based object(array of instance created dynamically)
+		cout<<"enter"<<req<<" numbers"<<endl;
+
+	for(int i=0;i<req;i++)
+	{ int n;
+	cin>>n;
+		m[i].setnum(n);
+	}
+
+	for(int i=0;i<req;i++)
+		m[i].getnum();
+	
+	delete []m;
+	getch();
+}
+
+
+66666666666666666666666666666666666666666666666666666666666666
+ create a class, define different types of constructors. in main create n number of objects. At the end display how many constructors are created for a class.
+
+
+same as 5th program.

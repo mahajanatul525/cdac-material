@@ -1,0 +1,106 @@
+
+h1 {
+	font-size: 18px;
+	color: #782609;
+	font-weight: bold;
+	background: url(images/hotel_h1.jpg) no-repeat;
+	height: 27px;
+	padding-top: 40px;
+	padding-left: 70px;
+}
+p{
+	color: white;
+	font-size: 12px;
+	font-family:Century;
+	line-height: 1.5em;
+}
+
+h2 {
+	
+	font-size: 13px;
+	font-weight: bold;
+	color: #fff;
+	height: 22px;
+	width:150px;
+	padding-top: 8px;
+	padding-left: 5px;
+	background: url(images/hotel_h2.jpg) no-repeat;
+}
+h4{
+	font-size: 13px;
+	font-weight: bold;
+	color: #fff;
+	height: 22px;
+	width:150px;
+	padding-top: 8px;
+	padding-left: 5px;
+	background: url(images/hotel_link.jpg) no-repeat;
+	
+	
+}
+h5{
+	color: Black;
+	font-size: 12px;
+	font-family:Century;
+	line-height: 1.8em;
+
+}
+#hotel_title{
+	margin-top:1px;
+	padding-left:30px;
+	color: #FFFFFF;
+	font-size: 30px;
+	font-weight: bold;
+	font-family:algerian;
+}
+
+#hotel_slogan {
+	margin-top: 10px;
+	padding-top: 6px;
+	padding-left: 30px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #ff9a59;
+	font-family:forte;
+}
+#hotel_topbookmsg{
+	margin: 0;
+	padding-top: 10px;
+	padding-left: 840px;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	font-family:Century;
+}
+#hotel_toplink{
+	margin: 1;
+	padding-top: 8px;
+	padding-left: 840px;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	font-family:Century;
+}
+h3{
+	color:black ;
+	padding-left:20px;
+	font-size: 16px;
+	font-family:Century;
+	line-height: 1.5em;
+	
+}
+
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 10s slidy infinite; 
+}
+
+
+

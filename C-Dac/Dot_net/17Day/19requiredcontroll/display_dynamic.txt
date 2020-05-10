@@ -1,0 +1,19 @@
+ The display property for the ASP.NET validation controls has 3 settings: 
+None,
+Static(default), and 
+Dynamic. 
+
+‘Static’ outputs HTML code (related to error) at all times even when no error has occurred. So when there is more than one validation control placed next to the field, the first validation control occupies screen space even when there is no error. 
+
+In case the second validation control fires an error message, the message is pushed away from the control since the first validation control is occupying screen space. 
+
+Set the ‘display’ property of a validation control to ‘Dynamic’. This property renders the error message with the attribute display:none; It helps you to display the error message next to the control .
+
+To prevent validation to occur on the click of the Cancel button, set the ‘CausesValidation’ property to false
+
+The validation controls provide both Server and Client Side validation. 
+
+To turn off client-side validation, set the ‘EnableClientScript = false’
+
+<asp:RequiredFieldValidator ID="RequiredFieldValidator2" Runat="server"
+   Text="Error" ControlToValidate="TextBox1" EnableClientScript="false"/>

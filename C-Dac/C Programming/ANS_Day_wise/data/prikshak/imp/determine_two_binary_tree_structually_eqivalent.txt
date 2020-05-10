@@ -1,0 +1,198 @@
+In this problem you have to write a program to check if two given binary trees are structurally equivalent.
+
+Two trees are structurally equivalent if they are both null or if the left and right children of one are structurally equivalent to the RESPECTIVE children of the other. In other words, when you draw the trees on paper, they should LOOK alike (ignoring the values at the nodes).
+
+Construct a binary search tree with the input in the second line and use this as the basis-tree. For each of the remaining N-1 lines, construct a binary search tree and compare against the basis tree for equivalence. If the trees are equivalent, print YES else print NO. Also print the depth difference between the two trees (ie, depth of the bigger tree minus the depth of the smaller tree). Both these for a given tree pair must be on one line separated by a space.
+
+The answers for the different pairs must be on separate lines.
+
+
+
+#include<iostream>
+
+using namespace std;
+int arr1[100];
+int arr2[100];
+int index1 = 0;
+int index2 = 0;
+class TreeNode {
+    private:
+            int number;
+            TreeNode* left;
+            TreeNode* right;
+    public:
+            TreeNode() {
+                number =  0;
+                left = right = 0;
+            }
+            TreeNode(int number) {
+                this->number = number;
+                left = right = 0;
+            }
+            int getNumber() {
+                return number;
+            }
+            TreeNode* getLeft() {
+                return left;
+            }
+            TreeNode* getRight() {
+                return right;
+            }
+            void setLeft(TreeNode* left) {
+                this->left = left;
+            }
+            void setRight(TreeNode* right) {
+                this->right = right;
+            }
+            void print() {
+                cout<<number<<" ";
+            }
+          
+            
+};
+
+class Bst {
+    
+    private:
+            TreeNode* root;
+    public:
+            Bst() {
+               root = NULL; 
+            }
+           void insert(int number) {
+               TreeNode* newNode = new TreeNode(number);
+               TreeNode* temp = root;
+               TreeNode* prev = NULL;
+               if(root == NULL) {
+                   root = newNode;
+               }
+               else {
+                   while(temp != NULL){
+                       prev = temp;
+                       if(temp->getNumber() > newNode->getNumber()) {
+                           temp = temp->getLeft();
+                       }else {
+                           temp = temp->getRight();
+                       }
+                   }
+                   if(number > prev->getNumber()) {
+                       prev->setRight(newNode);
+                   }
+                   else
+                        prev->setLeft(newNode);
+               }
+        }
+       
+        void preorder() {
+            preorder(root);
+        }
+        
+    
+        
+        void preorder(TreeNode* root) {
+            if( root != NULL){
+             
+                arr1[index1] = 1;
+                index1++;
+        
+    			preorder(root->getLeft());
+				preorder(root->getRight());
+			}
+            else {
+            arr1[index1] = 0;
+            index1++;
+            }
+        }
+        
+        void preorder1() {
+            preorder1(root);
+        }
+        void preorder1(TreeNode* root) {
+            if(root != NULL) {
+              
+                arr2[index2] = 1;
+                index2++;
+               
+                preorder1(root->getLeft());
+                preorder1(root->getRight());
+            }
+            else {
+            arr2[index2] = 0;
+            index2++;
+            }
+        }
+        
+        int maxHeight() {
+            int depth;
+            depth = maxHeight(root);
+            return depth;
+    }
+        int maxHeight(TreeNode* t) {
+            
+            if (!t) return 0;
+            int left_height = maxHeight(t->getLeft());
+            int right_height = maxHeight(t->getRight());
+            return (left_height > right_height) ? left_height + 1 : right_height + 1;
+        }
+     
+        int compare() {
+            int i = 0;
+          
+           
+            if(index1 != index2)
+                return 0;
+            else {
+            for(i = 0;i<index1;i++) {
+              
+                if(arr1[i] != arr2[i])
+                    return 0;
+            }
+            return 1;
+        }
+        }
+};
+int main() {
+    int number,N,i,result;
+    Bst* B;
+    Bst* C;
+    cin>>N;
+    B = new Bst[N];
+    for(i = 0;i<N;i++) {
+    while(true) {
+        cin>>number;
+        if(number == -1) break;
+        else
+        B[i].insert(number);
+    }
+    }
+   
+    
+    for(i = 1;i < N;i++){
+        index1 = index2 = 0;
+        B[0].preorder();
+        B[i].preorder1();
+        result = C->compare();   
+        if(result == 1){
+           cout<<"YES"<<" ";
+           if(B[0].maxHeight() > B[i].maxHeight()) {
+               cout<<(B[0].maxHeight() - B[i].maxHeight())<<endl;
+           }
+           else
+           cout<<(B[i].maxHeight() - B[0].maxHeight())<<endl;
+       }
+       else {
+           cout<<"NO"<<" ";
+           if(B[0].maxHeight() > B[i].maxHeight()) {
+               cout<<(B[0].maxHeight() - B[i].maxHeight())<<endl;
+           }
+           else {
+               cout<<(B[i].maxHeight() - B[0].maxHeight())<<endl;
+           }
+       }
+       
+    }
+    
+    
+   
+ return 0;   
+}

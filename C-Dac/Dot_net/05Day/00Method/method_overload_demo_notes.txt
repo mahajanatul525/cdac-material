@@ -1,0 +1,132 @@
+Polymorphism is one of the fundamental concepts of OOP.
+ 
+Polymorphism provides following features: 
+
+It allows you to invoke methods of derived class through base class reference during runtime.
+
+It has the ability for classes to provide different implementations of methods that are called through the same name.
+
+Polymorphism is of two types: 
+
+Compile time polymorphism/Overloading
+
+Runtime polymorphism/Overriding
+
+Compile Time Polymorphism
+ 
+Compile time polymorphism is method and operators overloading. 
+
+It is also called early binding.
+ 
+In method overloading method performs the different task at the different input parameters.
+ 
+Runtime Time Polymorphism
+ 
+Runtime time polymorphism is done using inheritance and virtual functions. Method overriding is called runtime polymorphism. It is also called late binding.
+ 
+When overriding a method, you change the behavior of the method for the derived class. Overloading a method simply involves having another method with the same prototype.
+ 
+Caution: Don't confused method overloading with method overriding, they are different, unrelated concepts. But they sound similar.
+ 
+Method overloading has nothing to do with inheritance or virtual methods.
+ 
+Following are examples of methods having different overloads:
+ 
+void area(int side);
+void area(int l, int b);
+void area(float radius);
+ 
+Practical example of Method Overloading (Compile Time Polymorphism)
+ 
+using System;
+ 
+namespace method_overloading
+{
+    class Program
+    {
+        public class Print
+        {
+           
+            public void display(string name)
+            {
+                Console.WriteLine("Your name is : " + name);
+            }
+ 
+            public void display(int age, float marks)
+            {
+                Console.WriteLine("Your age is : " + age);
+                Console.WriteLine("Your marks are :" + marks);
+            }
+        }
+       
+        static void Main(string[] args)
+        {
+ 
+            Print obj = new Print();
+            obj.display("George");
+            obj.display(34, 76.50f);
+            Console.ReadLine();
+        }
+    }
+}
+ 
+Note: In the code if you observe display method is called two times. Display method will work according to the number of parameters and type of parameters.
+ 
+When and why to use method overloading
+ 
+Use method overloading in situation where you want a class to be able to do something, but there is more than one possibility for what information is supplied to the method that carries out the task.
+ 
+You should consider overloading a method when you for some reason need a couple of methods that take different parameters, but conceptually do the same thing.
+ 
+Method Overloading showing many forms.
+ 
+using System;
+ 
+namespace method_overloading_polymorphism
+{
+    class Program
+    {
+        public class Shape
+        {
+            public void Area(float r)
+            {
+                float a = (float)3.14 * r;
+                // here we have used funtion overload with 1 parameter.
+                Console.WriteLine("Area of a circle: {0}",a);
+            }
+ 
+            public void Area(float l, float b)
+            {
+                float x = (float)l* b;
+                // here we have used funtion overload with 2 parameters.
+                Console.WriteLine("Area of a rectangle: {0}",x);
+ 
+            }
+ 
+            public void Area(float a, float b, float c)
+            {
+                float s = (float)(a*b*c)/2;
+                // here we have used funtion overload with 3 parameters.
+                Console.WriteLine("Area of a circle: {0}", s);
+            }
+        }
+ 
+        static void Main(string[] args)
+        {
+            Shape ob = new Shape();
+            ob.Area(2.0f);
+            ob.Area(20.0f,30.0f);
+            ob.Area(2.0f,3.0f,4.0f);
+            Console.ReadLine();
+        }
+    }
+}
+ 
+Things to keep in mind while method overloading
+ 
+If you use overload for method, there are couple of restrictions that the compiler imposes.
+ 
+The rule is that overloads must be different in their signature, which means the name and the number and type of parameters.
+ 
+There is no limit to how many overload of a method you can have. You simply declare them in a class, just as if they were different methods that happened to have the same name.
+ 

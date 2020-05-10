@@ -1,0 +1,52 @@
+Pointer to Constant
+
+	syntax
+
+	datatype const *pointervar;
+
+		or
+	const datatype *pointervar;
+
+can point to 
+	const as well as non-const member.
+using pointer u can not manipulate the member to which it is pointing to.
+pointer can be incremented or decremented.
+
+
+Constant Pointer
+
+	syntax
+
+	datatype *const pointervar=&member;
+
+must be initialized
+can point to 
+	 non-const member only.
+using pointer u can manipulate the member to which it is pointing to.
+pointer can not be incremented or decremented.
+
+
+Constant Pointer to a constant
+
+	syntax
+
+	datatype const *const pointer=&member;
+
+
+must be initialized
+can point to 
+	 const as well as non-const member.
+using pointer u can not manipulate the member to which it is pointing to.
+pointer can not be incremented or decremented.
+
+
+
+
+
+
+
+
+
+
+
+

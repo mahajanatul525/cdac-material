@@ -1,0 +1,57 @@
+Consider a service counter. People waiting for service form a queue. At the start, 
+the queue is empty and time is 0. The service time per person is 3 minutes.
+
+Your program must simulate the queue and print out the following:
+The number of customers waiting in the queue at time = N minutes from the
+start of simulation.
+The arrival times of the customers in the queue at that time, in increasing order.
+
+Each integer must be separated by a space. Terminate your output with a newline character.
+
+For doing the computation, you can assume that if the counter is expected to be 
+vacant at time t, the first person in the queue will be scheduled for service, 
+before the counting is done for time t. You must use the queue data structure to 
+solve this problem.
+
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int time=-1,Arr_time=0,te=0;
+    int i=0,n,j,arr[10];
+  
+    do{
+            cin>>n;
+            if(n==-1)
+                 break;
+            if(time==-1)
+                 time=n;
+            else if(n<=time)
+            {
+                if(te<=time)
+                {
+                    if(te<n)
+                    te=n;
+                }
+                else
+                {
+                    arr[i]=n;
+                    i++;                    
+                }
+                te+=3;
+            }
+            }while(true);
+        
+        cout<<i<<" ";
+    
+        j=0;
+        while(j<i)
+        {
+            cout<<arr[j]<<" ";
+            j++;
+        }
+return 0;
+}

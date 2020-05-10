@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+
+
+namespace BasicDataTypes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***** Fun with Basic Data Types *****\n");
+            ObjectFunctionality();
+
+
+            Console.ReadLine();
+        }
+
+
+        #region Object level functionality
+        static void ObjectFunctionality()
+        {
+            Console.WriteLine("=> System.Object Functionality:");
+
+            // A C# int is really a shorthand for System.Int32.
+            // which inherits the following members from System.Object.
+            Console.WriteLine("12.GetHashCode() = {0}", 12.GetHashCode());//12
+
+            Console.WriteLine("12.Equals(12) = {0}", 12.Equals(12));//true
+            Console.WriteLine("12.ToString() = {0}", 12.ToString());//12
+            Console.WriteLine("12.GetType() = {0}", 12.GetType());//System.Int32
+            Console.WriteLine("12.GetType() = {0}", 12.GetType().Name);//Int32
+            
+            Console.WriteLine();
+        }
+        #endregion
+
+
+    }
+}

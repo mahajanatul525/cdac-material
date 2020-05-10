@@ -1,0 +1,51 @@
+1) html create <option> i.e. drop-down list.
+values should be java,C++, Oracle.
+when user will select, a particular option and click on submit button, request should go to servlet.
+In servlet u read the request parameter.
+if the value is "java" forward to j2seServ,
+if the value is "C++" forward to cplusplusServ
+if the value is "oracle" forward to oraServ
+
+
+2) 
+
+It is a program of Servlet1->Servlet2
+
+in your servlet1,
+Retrieve the loc from dept table.
+store these loc's in ArrayList
+
+store ArrayList inside request attribute and forward the request to servlet2.
+
+in servlet2
+retrieve  the ArrayList from request attribute and display the contents of that ArrayList.
+
+
+
+3) create a table "Product" with
+pid,pname,price,qty
+enter 5/6 records.
+	
+write a FirstServ which will retrieve all the records.
+while retrieving records it will create ArrayList and store only productnames inside it.
+This ArrayList should be now stored inside "request" attribute.
+
+FirstServ will now forward to ShopServ which will display all the product names using checkbox. 
+
+after selecting products when user will enter submit button ("add to cart"), control will go to SecondServ.
+
+SecondServ will get all the selected products, store them in ArrayList. Store this ArrayList inside session attribute.
+SecondServ should display the message "Items added inside Cart".
+
+now user should invoke "BillServ" which will 
+retrieve session and ArrayList from it.
+display all the selected products.
+
+
+
+
+
+
+
+
+ 

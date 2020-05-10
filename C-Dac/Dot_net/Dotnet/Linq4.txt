@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication29
+{
+    class Program
+    {
+        public static List<string> ReturnMovieList()
+        {
+            string[] names = { "ironman 1", "ironman 2", "ironman 3", "Avrnger 1", "Avenger 2", "captain ameriaca 1", "captain america 2", "thor 1", "thor 2", "hulk" };
+
+            List<string> lst = (from i in names where i.Contains("1") select i).ToList<String>();
+
+            return lst;
+        
+        }
+        static void Main(string[] args)
+        {
+            List<string> part1 = ReturnMovieList();
+            foreach (string name in part1)
+            {
+                Console.WriteLine(name);
+            }
+        
+        }
+
+    }
+}

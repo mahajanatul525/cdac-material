@@ -1,0 +1,1 @@
+copy "MyClass.java","SingletonCon.java" and "myproperty.properties" inside "default package" folder.

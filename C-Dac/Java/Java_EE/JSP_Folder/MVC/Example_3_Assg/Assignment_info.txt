@@ -1,0 +1,32 @@
+create a table "CreditCardDetails" with
+
+
+accno int primary key
+bankname varchar
+c_c_no	varchar
+
+add some records
+
+Entry.jsp
+
+Enter accno:-  <textfield>
+Enter credit_card_no:- <textfield>
+
+	<submit>
+
+on submit, control should go to "BankServ", which will pass accno and credit card no to "BankBean".
+
+BankBean class
+
+	boolean validate(int accno,String credit_card_no)
+
+this method will check credit_card_no for the given accno inside table if it is there it will return true otherwise false.
+
+if it returns true, servlet will forward the control to "success.jsp" otherwise to "fail.jsp".
+
+inside "fail.jsp" there should be a link "Retry" which should take u to "Entry.jsp".
+
+
+
+
+

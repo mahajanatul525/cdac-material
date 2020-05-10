@@ -1,0 +1,62 @@
+60 Hours  
+ OOPs with C++ Programming 60 Hours  
+   
+Revision of C Programming, Pointers, Functions (Call by value and reference), Recursion, Arrays using Pointers, Structures, Union, Enumeration and Typedef, File handling
+
+Discussion on Object oriented concepts
+
+Classes and Objects, Access Specifiers, Overloading, Inheritance, Polymorphism
+
+Beginning with C++
+
+C++ Tokens, Initialization, C++ Operators
+
+Static Members, Constant Members
+
+Expressions
+
+Control Structure
+
+Functions in C++
+
+Constructors, Encapsulating into an object
+
+Destructors
+
+Associations, Inner Classes
+
+Memory Management and pointers
+
+Inheritance, Virtual Functions, Polymorphism
+
+Interfaces
+
+Exception Handling
+
+Managing Console I/O Operations
+
+Working with files
+
+Advance Topics in C++
+
+Object Design and Templates
+
+STL (Standard Type Libraries)
+
+RTTI (Run Time Type Identification)
+
+Advanced Typecasting
+
+new data types
+
+new operators
+
+class implementation
+
+namespace scope
+
+operator keywords
+
+new headers
+
+C++ Containers

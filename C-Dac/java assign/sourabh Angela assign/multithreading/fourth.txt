@@ -1,0 +1,29 @@
+package multithreading;
+
+public class th implements Runnable
+{ static Class cs;
+static void disp()
+{
+synchronized(cs)
+{
+for (int i=0;i<10;i++)
+{
+System.out.println("exec"+i+"\t"+Thread.currentThread());
+}
+}
+}
+public void run()
+{
+disp();
+}
+
+public static void main(String args[])throws Exception
+{ cs=Class.forName("multithreading.th"); 
+th t1=new th();
+th t2=new th();
+Thread t3=new Thread(t1);
+Thread t4=new Thread(t2);
+t3.start();
+t4.start();
+}
+}

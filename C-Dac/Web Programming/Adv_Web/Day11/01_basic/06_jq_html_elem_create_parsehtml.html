@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html><head><script src="jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+var str='hello<p id="test">My <em>new</em>text</p>data';
+  $($.parseHTML(str)).appendTo('body');
+});
+</script></head>
+<body>
+<div>
+<p>div2 para 1</p>
+<p>div2 para 2</p>
+</div>
+
+</body>
+</html>
+

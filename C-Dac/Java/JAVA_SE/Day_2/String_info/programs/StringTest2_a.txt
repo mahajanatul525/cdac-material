@@ -1,0 +1,77 @@
+package core1;
+public class StringTest2_a
+{
+	public static void main(String args[])
+	{
+		String str1="hello";
+		String str2="hello";
+		if(str1==str2)
+		{
+			System.out.println("both are ==");
+		}
+		else
+		{
+			System.out.println("both are not ==");
+		}
+		String str3=new String("hello");
+		if(str1==str3)
+		{
+			System.out.println("both are ==");
+		}
+		else
+		{
+			System.out.println("both are not ==");
+		}
+		String str4="hel"+"lo";
+		if(str1==str4)
+		{
+			System.out.println("both are ==");
+		}
+		else
+		{
+			System.out.println("both are not ==");
+		}
+		if(str1.equals(str4))
+		{
+			System.out.println("both are equals");
+		}
+		else
+		{
+			System.out.println("both are not equals");
+		}
+		String str5="hel";
+		String str6="lo";
+
+		String temp1=str5+str6;
+		if(str1==(temp1))
+		{
+			System.out.println("str1 and temp1 are ==");
+		}
+		else
+		{
+			System.out.println("str1 and temp1 are not ==");
+		}
+		
+		String temp2=str5+str6;
+		
+		if(temp1==temp2)
+		{
+			System.out.println("temp1 and temp2 are ==");
+		}
+		else
+		{
+			System.out.println("temp1 and temp2 are not ==");
+		}
+		
+		if(temp1.equals(temp2))
+		{
+			System.out.println("temp1 and temp2 are equals");
+		}
+		else
+		{
+			System.out.println("temp1 and temp2 are not equals");
+		}
+		
+		
+	}
+}

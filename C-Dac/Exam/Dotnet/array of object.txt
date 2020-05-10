@@ -1,0 +1,79 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication7
+{
+   abstract class account
+    {
+        static int _id;
+        protected double _balance;
+        int accid;
+        public string Name { get; set; }
+        public abstract void withdraw(double amt);
+        public account(String name, double amt)
+        {
+            _balance = _balance + amt;
+            accid=++_id;
+        }
+        public void deposite(double amt)
+        {
+            _balance = _balance + amt;
+        }
+
+        public override string ToString()
+        {
+           return (""+accid+ "" +Name+""+ _balance);
+        }
+
+
+    }
+    class saving : account
+    {
+        public saving(string name, double amt) : base(name, amt) { }
+        public override void withdraw(double amt)
+        {
+            _balance = _balance + amt;
+            Console.WriteLine("Success....withdraw balance from saving account", _balance);
+        }
+       new public void deposite(double amt)
+        {
+            _balance = _balance + amt;
+            Console.WriteLine("Success....deposite balance to saving account", _balance);
+        }
+    }
+    class current : account
+    {
+        public current(string name, double amt) : base(name, amt) { }
+        public override void withdraw(double amt)
+        {
+            _balance = _balance + amt;
+            Console.WriteLine("Success....withdraw balance from current account", _balance);
+        }
+       new  public void deposite(double amt)
+        {
+            _balance = _balance + amt;
+            Console.WriteLine("Success....deposite balance to current account", _balance);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            account[] ac=new account[2];
+            ac[0] = new saving("ATUL", 200000.00);
+            ac[1] = new current("RAHUL", 10000.00);
+            for (int i = 0; i < ac.Length; i++)
+            {
+                ac[i].deposite(100000);
+                Console.WriteLine(ac[i]);
+                ac[i].withdraw(50000);
+                Console.WriteLine(ac[i]);
+            }
+
+
+        }
+    }
+}

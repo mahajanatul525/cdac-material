@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int cnt,*ptr,morecnt=0;
+	char ans;
+	cout<<"How many numbers u want to store ?"<<endl;
+	cin>>cnt;
+	ptr=new int[cnt];
+	cout<<"Enter "<<cnt<<" numbers"<<endl;
+	for(int i=0;i<cnt;i++)
+	{
+		cin>>ptr[i];
+	}
+	for(int i=0;i<cnt;i++)
+	{
+		cout<<ptr[i]<<endl;
+	}
+	cout<<"do u want to enter more numbers ?"<<endl;
+	cin>>ans;
+	if(ans=='y')
+	{
+		cout<<"how many more numbers u want to enter ?"<<endl;
+		cin>>morecnt;
+		ptr=(int*)realloc(ptr,(cnt+morecnt)*sizeof(int));
+		cout<<"Enter "<<morecnt<<" more numbers"<<endl;
+		for(int i=cnt;i<cnt+morecnt;i++)
+		{
+			cin>>ptr[i];
+		}
+	}
+	cout<<"Now displaying all the numbers"<<endl;
+	for(int i=0;i<cnt+morecnt;i++)
+		{
+			cout<<ptr[i]<<endl;
+		}
+	delete []ptr;
+	return 0;
+}
+
+
+
+
+

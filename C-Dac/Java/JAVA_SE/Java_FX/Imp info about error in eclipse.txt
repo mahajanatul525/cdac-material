@@ -1,0 +1,19 @@
+while creating java fx application if u get following error in eclipse
+
+"type Application is not accessible due to restriction on required library C:\Program Files\Java\jre1.8.0_25\lib\ext\jfxrt.jar"
+
+solution is 
+
+right click on project
+	properties
+		build path
+
+remove the configured jre library
+and 
+set
+
+workbench default jre library 
+
+refresh.....
+
+error will be removed

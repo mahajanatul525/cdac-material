@@ -1,0 +1,50 @@
+Scrollable and Updatable ResultSet are provided in JDBc2
+
+By def.ResultSet is not scrollable .It is forward only.
+
+Statement st=con.createStatement(ResultSet type value,ResultSet concurrency value)
+
+Following values of ResultSet makes it Scrollable as well as Updatable
+
+ResultSet type values
+
+TYPE_FORWARD_ONLY	The ResultSet is not scrollable
+
+TYPE_SCROLL_INSENSITIVE	  The ResultSet is scrollble but not sensitive to database changes
+
+TYPE_SCROLL_SENSITIVE	The ResultSet is scrollble and sensitive to database changes
+
+ResultSet Concurrency values
+
+CONCUR_READ_ONLY    The ResultSet cannot be used to update the database
+
+CONCUR_UPDATABLE     The ResultSet can be used to update the database
+
+
+e.g.
+
+Statement st=con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+ResultSet rs=st.executeQuery("select * from dept");
+rs.absolute(3);
+System.out.println(rs.getObject(1));
+rs.previous();
+System.out.println(rs.getObject(1));
+
+rs.absolute(1);
+rs.updateString("dname","edp");
+rs.updateRow();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

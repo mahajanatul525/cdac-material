@@ -1,0 +1,3 @@
+The declspec tells the compiler that the function lives in a DLL. If you are writing a function that will be exposed 
+from a DLL you need to add declspec(dllexport) and if you are consuming a function or class from a DLL you would add 
+declspec(dllimport). Generally the import part of this is done for you in the header file.

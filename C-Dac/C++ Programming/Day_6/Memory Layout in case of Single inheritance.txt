@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+
+class base
+{
+private:
+	int a;
+public:
+	base()
+	{
+		a=10;
+	}
+	void baseDisp()
+	{
+		cout<<a<<endl;
+	}
+};
+class sub:private base
+{
+private:
+	int num;
+public:
+	sub()
+	{
+		num=20;
+	}
+	void subDisp()
+	{
+		cout<<num<<endl;
+		baseDisp();
+	}
+};
+void main()
+{
+	sub s;
+	s.subDisp();
+	cout<<"size of s is\t"<<sizeof(s)<<endl;
+	cout<<"Experiment"<<endl;
+	int *ptr=(int*)&s; // address of s and base and a
+	*ptr=100;
+	ptr++; // address of num
+	*ptr=200;
+	s.subDisp();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+13.Write a procedure to take a sentence as an input and display all the words in the sentences (one word per line)
+
+create procedure sp_splitwords(str varchar(1000))
+begin
+declare word varchar(100);
+declare tmp_word varchar(1000);
+declare i int;
+set word:='';
+set i:=1;
+myloop:loop
+if (i>length(str)) then
+leave myloop;
+end if;
+if (substr(str,i,1)=' ') then
+select word;
+set word:='';
+else
+set word:=concat(word,substr(str,i,1));
+end if;
+set i:=i+1;
+end loop myloop;
+select word;
+end
+$$

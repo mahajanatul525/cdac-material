@@ -1,0 +1,34 @@
+
+output will be
+
+Now with default-lazy=true, but retrieving child before session close
+After getProperties	
+p1 is not null
+50
+A
+it is all over
+
+
+u won't get any exception even if "default-lazy=true"
+
+this is because
+
+	first we retrieve child by saying
+
+			System.out.println(p1.get("score")); 
+			System.out.println(p1.get("grade"));
+
+	and then we close the session
+			session.close()
+
+
+
+
+
+
+
+
+
+
+
+

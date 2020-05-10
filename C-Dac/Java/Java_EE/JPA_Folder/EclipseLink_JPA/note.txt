@@ -1,0 +1,4 @@
+while creating JPA project, do not select any library.
+and there after right click on project build path 
+
+add these jar files to the project.

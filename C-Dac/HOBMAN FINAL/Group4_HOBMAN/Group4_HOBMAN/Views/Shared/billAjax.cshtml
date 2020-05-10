@@ -1,0 +1,28 @@
+﻿<script>
+    $(function () {
+        $('#booking_id').change(function () {
+            $.ajax({
+                type: "get",
+                contentType: "application/json; charset=utf-8",
+                url: "@Url.Action("Getbill","Home")",
+                datatype: "JSON",
+                data: { booking_id: $('#booking_id').val() },
+                success: function (data) {
+                    $.each(data, function (index, value) {
+                        alert(value);
+                        $('.customer_id').val(value.customer_id);
+                        $('.check_in_date').val(value.check_in_date);
+                        $('.check_out_date').val(value.check_out_date);
+                        $('.no_of_rooms').val(value.no_of_rooms);
+                        $('.hotel_id').val(value.hotel_id);
+                    });
+                },
+
+                error: function ajaxError(response) {
+                    alert(response.status + ' ' + response.statusText);
+                }
+            });
+
+        });
+    });
+    </script>

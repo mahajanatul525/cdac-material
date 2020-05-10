@@ -1,0 +1,58 @@
+if we make following changes in "struts.xml"
+
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+     <package name="mypack"   extends="struts-default"> 
+        <interceptors>
+            <interceptor name="actiontimer" class="mypack.ActionTimer"/>
+     
+            <interceptor-stack name="mystack">
+                <interceptor-ref name="defaultStack"/>
+                <interceptor-ref name="actiontimer"/>
+                
+            </interceptor-stack>
+        </interceptors>
+     <!-- <default-interceptor-ref name="mystack"/> -->
+         <action name="Reg1">
+            <result>RegisterEntry.jsp</result>
+            
+        </action>
+        <action name="Reg2" class="mypack.RegisterAction">
+          <interceptor-ref name="mystack"/>
+               <result name="success">RegisterView.jsp</result>
+       			<result name="input">RegisterEntry.jsp</result>        
+         </action>
+     </package>
+</struts>
+
+
+
+
+
+
+
+
+
+
+output will be
+
+in init
+
+Jun 29, 2015 3:43:48 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-83"]
+Jun 29, 2015 3:43:48 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-apr-8009"]
+Jun 29, 2015 3:43:48 PM 
+
+org.apache.catalina.startup.Catalina start
+
+INFO: Server startup in 3978 ms
+
+Next Action name is	mypack.RegisterAction
+
+Action mypack.RegisterAction took 19 milisecs

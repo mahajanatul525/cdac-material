@@ -1,0 +1,9 @@
+public ModelAndView helloworld(HttpServletRequest request)
+
+here "helloworld()" method can be w/o parameter also. 
+
+e.g.
+public ModelAndView helloworld()
+
+
+since we have given "HttpServletRequest" parameter to it, HttpServletRequest implementation will be passed to "helloworld()" during runtime.

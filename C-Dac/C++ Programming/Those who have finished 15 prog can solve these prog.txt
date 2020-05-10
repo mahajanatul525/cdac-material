@@ -1,0 +1,32 @@
+Q. A perfect square is an integer, which is the square of another integer. Write a program that reads a number and computes the first perfect square larger than this number.
+
+
+Q. Write a program to sort all the elements of 4 by 4 matrix.
+
+Q. Define a structure to represent time in hours (0-23), minutes (0-59), and seconds (0-59), and then write a function that accepts as an argument a time represented by this structure and updates it by one minute & 30 seconds.
+
+Q. Write a program to accept the day and the year , and print the date along with the month.
+For eg:If the input is 59 1999 , the output should be 28 February
+
+Q write a program for sudoku
+
+Q data in 3*3 matrix is
+
+C A T
+A d A
+T A C
+
+Check how many time CAT is there in matrix
+
+
+
+Q Accept a sentences fromuser accept a word and index prom user and add that word at that index.
+
+eg. Welcome to CDAC center
+word vita
+index 12
+o/p Welcome to Vita CDAC center
+
+
+
+

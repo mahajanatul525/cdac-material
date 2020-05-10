@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+
+namespace ConsoleApplication16
+{
+    delegate bool abc(string a);
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            abc ob = (str1) =>
+            {
+                string str2;
+                int x = str1.Length-1;
+                str2 = str1;
+                string temp = "";
+                for (int i=x; x>= 0; i--)
+                {
+                    temp = temp + str1[x];
+                    x--;
+                }
+                if(temp == str2)
+                    return true;
+                else
+                    return false;
+
+            };
+      
+           Console.WriteLine("Enter the string:===  ");
+            string inpu = Console.ReadLine();
+            if (ob(inpu)== true)
+                Console.WriteLine("String is palindrom");
+            else
+                Console.WriteLine("string is not pelindrom");
+
+         
+        }
+        
+    }
+}

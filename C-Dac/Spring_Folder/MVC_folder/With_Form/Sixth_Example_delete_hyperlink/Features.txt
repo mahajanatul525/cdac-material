@@ -1,0 +1,3 @@
+Example of Reverse Engineering
+
+how to redirect from controller

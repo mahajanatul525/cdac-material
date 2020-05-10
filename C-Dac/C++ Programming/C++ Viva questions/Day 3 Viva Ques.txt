@@ -1,0 +1,46 @@
+1) drawbacks of procedure oriented programming
+
+2) what is object ?
+Objects are the basic runtime entities in an object-oriented system. They may represent a person, a place, a bank account or any item that the program must handle.
+
+3) encapsulation
+	The wrapping up of data and functions into a single unit (called class) is known as encapsulation. 
+
+4) data hiding
+	The data is not accessible to the outside world and only those functions which are wrapped in the class can access it. These functions provide the interface between the object’s data and the program. This insulation of the data from direct access by the program is called data hiding.
+
+5) abstraction
+	Abstraction refers to the act of representing essential features without including the background details or explainations. 
+
+6) polymorphism
+
+polymorphism means the ability to take more than one form.
+
+
+Dynamic polymorphism or Late Binding:- In this the binding that takes place 
+at run-time. Dynamic Polymorphism can be achieved using Virtual function.
+
+7) what is early binding?
+ans:- resolving function call with the function definition is known as binding. If it happens during linking time, it is known as early binding. If it happens during runtime it is known as runtime or late binding AKA Polymorphism.
+
+8) this pointer and its use
+9) difference bet'n member function defined within class and outside the class.
+10) difference bet'n structure and class in c++.
+11) why member functions are called as interface bet'n data and the program ?
+12) what is constructor ? 
+13) how many types of constructor are there in c++ ?
+14) does compiler provide any constructor by default ? when ?
+15) what is destructor ?
+16) what is anonymous object ? 
+17) difference bet'n object created on stack and heap
+18) difference bet'n anonymous object created on stack and heap.
+19) what will happen if constructor is defined as private ?
+20) what do u mean by size of an object or instance ?
+21) if array of object created on heap, how will u make sure that destructor for all the objects will be called.
+22) what is the size of object of an empty class ?
+23) Explain the concept of existence of no-arg and copy constructor inside class definition.
+ans:- a) a class has not defined no-arg and copy constructor explicitly, compiler provides it implicitly.
+	b) a class has defined no-arg constructor explicitly, compiler provides copy constructor implicitly.
+	c) a class has defined copy constructor explicitly, compiler will not provide no-arg constructor implicitly.
+
+

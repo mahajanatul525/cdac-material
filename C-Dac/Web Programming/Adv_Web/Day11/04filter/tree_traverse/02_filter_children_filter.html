@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html><head><style>
+.topnav {color:red;}
+</style><script src="jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+$("div").children(".selected").css("color","blue");
+});
+</script></head><body>
+<div>
+    <span>Hello</span>
+    <p class="selected">Hello Again</p>
+    <div class="selected">And Again</div>
+    <p>And One Last Time</p>
+  </div>
+
+Given a jQuery object that represents a set 
+of DOM elements, the .children()
+ method allows us to search through the
+ immediate children of these elements in 
+ the DOM tree and construct a new 
+ jQuery object from the matching elements.
+ The .find() and .children() methods are similar, 
+ except that the latter only travels a single level
+ down the DOM tree.
+
+</p>
+</body>
+</html>
+

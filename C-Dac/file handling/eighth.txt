@@ -1,0 +1,41 @@
+package vardha;
+
+import java.io.*;
+import java.util.*;
+public class Filepro
+{
+	public static void main(String args[])
+	{
+		char arr1[]=null;
+		try(FileWriter fw=new FileWriter("d:\\abc22.txt"))
+		{
+		char arr[]=new char[10]; // array of references to MyClass
+		
+		for(int i=0,j=10;i<arr.length;i++,j+=10)
+		{ System.out.println("Enter data");
+		Scanner sc=new Scanner(System.in);
+		  char j1=(char) sc.nextInt();
+			arr[i]=j1; // object creation
+		}
+		fw.write(arr);
+		}
+		catch(IOException ie)
+		{
+			ie.printStackTrace();
+		}
+		try(FileReader fr=new FileReader("d:\\abc22.txt"))
+		{
+		arr1=new char[(int)new File("d:\\abc22.txt").length()];
+		fr.read(arr1);
+		}
+		catch(Exception ee)
+		{
+			ee.printStackTrace();
+		}
+		
+		for(int i=0;i<arr1.length;i++)
+		{
+			System.out.println(arr1[i]);
+		}
+	}
+}			

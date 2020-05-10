@@ -1,0 +1,89 @@
+package coe1;
+interface emp1
+{
+	default void disp()
+	{
+		System.out.println("in emp1 disp");
+	}
+}
+interface emp2
+{
+	default void disp()
+	{
+		System.out.println("in emp2 disp");
+	}
+}
+class EmpImpl implements emp1,emp2
+{
+	public void disp() // must
+	{
+		System.out.println("in empImpl disp");
+	}
+}
+public class Demo
+{
+	public static void main(String args[])
+	{
+		EmpImpl ob=new EmpImpl();
+		ob.disp();
+	}
+}
+
+
+			vs
+
+
+package coe1;
+interface emp1
+{
+	default void disp()
+	{
+		System.out.println("in emp1 disp");
+	}
+}
+interface emp2
+{
+	void disp();
+}
+class EmpImpl implements emp1,emp2  // error
+{
+}
+public class Demo
+{
+	public static void main(String args[])
+	{
+		EmpImpl ob=new EmpImpl();
+	}
+}
+
+
+
+				vs
+
+package coe1;
+interface emp1
+{
+	default void disp()
+	{
+		System.out.println("in emp1 disp");
+	}
+}
+interface emp2
+{
+	void disp();
+}
+class EmpImpl implements emp1,emp2  
+{
+	public void disp()
+	{
+		System.out.println("EmpImpl disp");
+	}
+}
+public class Demo
+{
+	public static void main(String args[])
+	{
+		EmpImpl ob=new EmpImpl();
+		ob.disp();
+	}
+}

@@ -1,0 +1,27 @@
+Method overloading supports polymorphism because it is one way that C#
+implements the “one interface, multiple methods” paradigm. To understand how,
+consider the following. In languages that do not support method overloading, each
+method must be given a unique name. However, frequently you will want to implement
+essentially the same method for different types of data. Consider the absolute value
+function. In languages that do not support overloading, there are usually three or more
+versions of this function, each with a slightly different name. For instance, in C, the
+function abs( ) returns the absolute value of an integer, labs( ) returns the absolute value of a long integer, and 
+fabs( ) returns the absolute value of a floating-point value.
+
+Since C does not support overloading, each function must have its own unique name,
+even though all three functions do essentially the same thing. This makes the situation more
+complex, conceptually, than it actually is. Although the underlying concept of each function
+is the same, you still have three names to remember. This situation does not occur in C#
+because each absolute value method can use the same name. Indeed, the .NET Framework
+class library includes an absolute value method called Abs( ). This method is overloaded by
+the System.Math class to handle the numeric types. C# determines which version of Abs( )
+to call based upon the type of argument.
+
+A principal value of overloading is that it allows related methods to be accessed by use
+of a common name. Thus, the name Abs represents the general action that is being performed.
+
+It is left to the compiler to choose the right specific version for a particular circumstance. 
+ You,the programmer, need only remember the general operation being performed. Through the
+application of polymorphism, several names have been reduced to one. Although this
+example is fairly simple, if you expand the concept, you can see how overloading can help
+manage greater complexity

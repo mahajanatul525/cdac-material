@@ -1,0 +1,5 @@
+D:\dot_net\Day_wise\day9\examples\06\Webinsert_textdata\Webinsert_textdata\obj\Debug\Webinsert_textdata.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day9\examples\06\Webinsert_textdata\Webinsert_textdata\bin\Webinsert_textdata.dll
+D:\dot_net\Day_wise\day9\examples\06\Webinsert_textdata\Webinsert_textdata\bin\Webinsert_textdata.pdb
+D:\dot_net\Day_wise\day9\examples\06\Webinsert_textdata\Webinsert_textdata\obj\Debug\Webinsert_textdata.dll
+D:\dot_net\Day_wise\day9\examples\06\Webinsert_textdata\Webinsert_textdata\obj\Debug\Webinsert_textdata.pdb

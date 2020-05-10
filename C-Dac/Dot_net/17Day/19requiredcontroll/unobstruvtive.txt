@@ -1,0 +1,11 @@
+<appSettings>
+    <add key="ValidationSettings:UnobtrusiveValidationMode" value="None" />
+  </appSettings>
+
+
+
+.axd files are typically implemented as HTTP Handlers. They don't exist as an ASP.NET web page, but rather as a class that implements the IHttpHandler interface.
+
+If you look in the root Web.config (%WINDIR%\Microsoft.NET\Framework\version\Config\Web.config) you'll find the following entry:
+
+<add path="WebResource.axd" verb="GET" type="System.Web.Handlers.AssemblyResourceLoader" validate="True" />

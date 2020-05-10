@@ -1,0 +1,14 @@
+INSERT INTO tbl (Name,UnitPrice,QtyAvailable)
+   VALUES ('Laptop', 35000,12);
+INSERT INTO tbl (Name,UnitPrice,QtyAvailable)
+   VALUES ('Desktop', 45000,22);
+INSERT INTO tbl (Name,UnitPrice,QtyAvailable)
+   VALUES ('Server', 75000,2);
+
+Select * from tbl;
+
+Table column
+ProductId
+Name
+UnitPrice
+QtyAvailable

@@ -1,0 +1,38 @@
+<html><script>
+function check()
+{var bool=true
+var data=document.frm.nm.value
+var len=data.length
+	if(len==0)
+	{	bool=false
+		alert("enter  data")	
+		document.frm.nm.focus()
+		}
+if(bool==true)
+document.frm.submit();
+}
+function chk()
+{var bool=true
+var data=document.frm.nm.value
+var len=data.length
+if(len<8||data="")
+	  {	alert("enter  data")	
+		document.frm.nm.focus()
+		return 0;
+		}
+		return 1;
+}
+function setcur()
+{document.frm.nm.focus()} 
+</script>
+<body onLoad="setcur()">
+<form name="frm" action="blur.html">
+<input type="text" name="nm" onchange="chk()">
+<input type="text" name="t1" onchange="go()">
+<input type="button" value="submit" onclick="check()">
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+#include<stdio.h>
+void main()
+{
+	int no,n,sum=0,f,r,i;
+	printf("\nEnter no = ");
+	scanf("%d",&no);
+	n=no;
+	while(no!=0)
+	{
+		r=no%10;
+		sum = sum + r*r*r;
+		no=no/10;
+	}
+	printf("sum = %d", sum);
+	if(n==sum)
+		printf("\nArmstrong number");
+	else
+		printf("\nNot a Armstrong number");
+	getche();
+}

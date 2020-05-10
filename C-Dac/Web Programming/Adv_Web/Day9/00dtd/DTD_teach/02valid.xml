@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v2.5 NT  - http://www.xmlspy.com -->
+<!--one characterspace required between two words-->
+
+<!DOCTYPE document [
+	<!ELEMENT document (greeting, message)>
+	<!ELEMENT greeting(#PCDATA)>
+	<!ELEMENT message (#PCDATA)>
+]>
+<document>
+	<greeting>Hello from XML</greeting>
+	<message>Welcome to the world of XML</message>
+</document>

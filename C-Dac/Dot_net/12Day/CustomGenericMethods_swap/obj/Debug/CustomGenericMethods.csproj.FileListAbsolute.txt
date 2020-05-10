@@ -1,0 +1,12 @@
+D:\dot_net\Day_wise\day6\01intro_gen_non_genric\day8_generic\CustomGenericMethods\bin\Debug\CustomGenericMethods.exe
+D:\dot_net\Day_wise\day6\01intro_gen_non_genric\day8_generic\CustomGenericMethods\bin\Debug\CustomGenericMethods.pdb
+D:\dot_net\Day_wise\day6\01intro_gen_non_genric\day8_generic\CustomGenericMethods\obj\Debug\CustomGenericMethods.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day6\01intro_gen_non_genric\day8_generic\CustomGenericMethods\obj\Debug\CustomGenericMethods.exe
+D:\dot_net\Day_wise\day6\01intro_gen_non_genric\day8_generic\CustomGenericMethods\obj\Debug\CustomGenericMethods.pdb
+D:\dot_net\Day_wise\day6\01intro_gen_non_genric\day8_generic\CustomGenericMethods_swap\obj\Debug\CustomGenericMethods.exe
+D:\dot_net\Day_wise\day6\01intro_gen_non_genric\day8_generic\CustomGenericMethods_swap\obj\Debug\CustomGenericMethods.pdb
+C:\Users\practice\Desktop\Dot_net\day6\01intro_gen_non_genric\day8_generic\CustomGenericMethods_swap\obj\Debug\CustomGenericMethods.exe
+C:\Users\practice\Desktop\Dot_net\day6\01intro_gen_non_genric\day8_generic\CustomGenericMethods_swap\obj\Debug\CustomGenericMethods.pdb
+C:\Users\practice\Desktop\Dot_net\day6\01intro_gen_non_genric\day8_generic\CustomGenericMethods_swap\bin\Debug\CustomGenericMethods.exe
+C:\Users\practice\Desktop\Dot_net\day6\01intro_gen_non_genric\day8_generic\CustomGenericMethods_swap\bin\Debug\CustomGenericMethods.pdb
+C:\Users\practice\Desktop\Dot_net\day6\01intro_gen_non_genric\day8_generic\CustomGenericMethods_swap\obj\Debug\CustomGenericMethods.csprojResolveAssemblyReference.cache

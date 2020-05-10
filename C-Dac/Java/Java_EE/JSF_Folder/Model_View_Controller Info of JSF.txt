@@ -1,0 +1,5 @@
+Model		- ManagedBean
+
+View		- facelets [ xhtml files ]
+
+Controller	- FacesServlet

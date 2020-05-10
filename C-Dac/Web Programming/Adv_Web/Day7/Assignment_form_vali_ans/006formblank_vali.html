@@ -1,0 +1,86 @@
+<html><script>
+var bool
+function check()
+{
+
+var b=namevali();
+var c=passvali();
+alert(b)
+alert(c)
+
+if(b==false||c==false)
+return false
+else
+return true;
+}
+
+function namevali()
+{alert("nn")
+bool=true
+var data=document.frm.nm.value
+var len=data.length
+		if(len==0)
+		{	bool=false
+		
+		document.getElementById("sn").innerHTML="err";
+                 return bool;
+		}
+ else
+	document.getElementById("sn").innerHTML="";
+alert(bool)
+if(bool==false)
+return false
+else
+return true;
+}
+
+
+
+function passvali()
+{
+alert("p")
+
+bool=true
+var data=document.frm.pass.value
+var len=data.length
+		if(len==0)
+		{	bool=false
+		
+		document.getElementById("sp").innerHTML="err";
+                 return bool;
+		}
+           else
+ document.getElementById("sp").innerHTML="";
+
+if(bool==false)
+return false
+else
+return true;
+
+}
+
+
+
+
+function setcur()
+{document.frm.nm.focus()} 
+</script>
+<body onload="setcur()">
+<form name="frm" action="blur.html" onsubmit="return check()">
+
+<input type="text" name="nm" placeholder="enter name" onchange="namevali()"> <span id="sn"></span>
+
+
+<input type="password" name="pass" placeholder="password"  onchange="passvali()"><span id="sp"></span>
+
+
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
+
+
+
+
+
+

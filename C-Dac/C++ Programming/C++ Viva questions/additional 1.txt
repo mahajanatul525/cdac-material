@@ -1,0 +1,33 @@
+can we derive struct from class ?   - yes
+
+can we derive class from struct ?   - yes
+static member
+
+what is copy constructor
+
+need  ''''
+
+what is destructor
+
+need '''
+
+why copy const needs reference as an argument
+
+what is reference ? reference vs pointer
+
+const member function
+
+
+what happens when u instantiate a class or create an object ?
+
+what happens when object goes out of scope ?
+
+difference between stack based object and heap based object ?
+
+define class and object with example.
+
+true/false
+	a) const pointer can point to const member - f
+	b) const reference can refer to const member - t
+
+

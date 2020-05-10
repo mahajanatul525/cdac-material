@@ -1,0 +1,54 @@
+What is java
+Where java is used
+java version codenames
+about java8 platform
+difference between jdk jre and jvm
+features of Java
+What is Automatic Garbage Collection
+What is the difference between C++ and Java
+types of java applications
+how to check whether java is installed on your system
+go to
+	C:\Program Files 
+	u will get a folder "Java"
+		inside "java"
+	u will get "jdk1.8.0_20" folder
+
+
+Sample program- how to compile and run on notepad+cmd
+how to set path and classpath
+how does java work?
+what happens at compile time?
+what happens at run time?
+source file declaration rules
+Can you have multiple classes in a java source file
+Can you save a java source file by other name than the class name
+datatypes and identifiers in java
+variables and datatypes in java
+local member must be initialized before use
+unicode character info
+control flow, switch with String
+labeled loops
+
+reserved keywords demo
+object oriented java
+how to create object,reference
+Default value of each datatype
+member fun,instance members
+default values of each datatype
+call be value
+more than one class in java
+constructor
+finalized method
+all about static
+final
+array
+array of instances
+non-static block
+what are the classloaders
+what is class "Class" in java
+Process of creating object
+java execution flow
+lazy and eager resolutions
+
+Java on eclipse

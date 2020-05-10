@@ -1,0 +1,6 @@
+Location of files
+
+
+1) Jsp (will be in jsp folder)
+2) Java and class (will be in package of classes)
+3) tld (will be in WEB-INF folder)

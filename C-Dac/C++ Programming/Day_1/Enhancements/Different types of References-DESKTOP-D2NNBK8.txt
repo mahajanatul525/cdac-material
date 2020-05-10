@@ -1,0 +1,72 @@
+// reference to one dim. array
+
+	int arr[4]={10,20,30,40};
+	int (&ref)[4]=arr;
+	for(int i=0;i<4;i++)
+	{
+		cout<<ref[i]<<endl;
+	}
+
+// reference to two dim array
+
+
+	int arr[3][2]={10,20,30,40,50,60};
+	int (&ref)[3][2]=arr;
+	for(int i=0;i<3;i++)
+	{
+		for(int j=0;j<2;j++)
+		{
+			cout<<ref[i][j]<<endl;
+		}
+	}
+
+// reference to pointer
+
+	int num=20;
+	int *ptr=&num;
+	int* &ref=ptr;
+	cout<<num<<endl;
+	cout<<*ptr<<endl;
+	cout<<*ref<<endl;
+
+
+// reference to function
+
+int main()
+{
+	void disp();
+	void (&ref)()=disp;
+	disp();
+	ref();
+	return 0;
+}
+void disp()
+{
+	cout<<"inside disp"<<endl;
+}
+
+
+
+// reference to string
+
+int main()
+{
+	char str[]="hello";
+	 char* const &ref=str;  // constant reference to char*
+	 cout<<str<<endl;
+	 cout<<ref<<endl;
+	// str++; not possible
+	// ref++; not possible
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

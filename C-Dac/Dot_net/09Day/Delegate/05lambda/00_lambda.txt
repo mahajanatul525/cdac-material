@@ -1,0 +1,41 @@
+A lambda expression is the second way that an anonymous function can be created.
+(The other type of anonymous function is the anonymous method, described in the
+preceding section.) Thus, a lambda expression can be assigned to a delegate. 
+
+Because a
+lambda expression is more streamlined than the equivalent anonymous method, lambda
+expressions are now the recommended approach in almost all cases.
+
+The Lambda Operator
+All lambda expressions use the lambda operator, which is =>. 
+
+This operator divides a lambda expression into two parts. 
+
+On the left the input parameter (or parameters) is specified.
+
+ On the right is the lambda body. 
+
+The => operator is sometimes verbalized as  “goes to” or “becomes.”
+
+Lambda expression
+If the lambda body consists of a single expression, then an
+expression lambda is being created. In this case, the body is free-standing—it is not enclosed
+between braces.
+ex count => count + 2
+
+  lambda statement
+
+If the lambda body consists of a block of statements enclosed by braces,
+then a statement lambda is being created. 
+
+A statement lambda can contain multiple statements
+and include such things as loops, method calls, and if statements. The following sections
+describe both kinds of lambdas.
+
+ex
+ IntOp fact = n => {
+int r = 1;
+for(int i=1; i <= n; i++)
+r = i * r;
+return r;
+};

@@ -1,0 +1,7 @@
+here "Product.java" is generated based on product table
+sequence
+
+	a) hibernate confg file
+	b) console configuration
+	c) reverse engg.
+	d) code generation- Pojo creation

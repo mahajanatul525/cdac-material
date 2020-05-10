@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.topnav {color:red;}
+</style>
+<script src="jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+$('li.third-item').siblings().css('background-color', 'red');
+});
+</script>
+
+</head>
+<body>
+<ul>
+   <li>list item 1</li>
+   <li>list item 2</li>
+   <li class="third-item">list item 3</li>
+   <li>list item 4</li>
+   <li>list item 5</li>
+</ul>
+
+
+<h3>
+The original element is not included among the siblings, which is important to remember when we wish to find all elements at a particular level of the DOM tree.</h3>
+</body>
+</html>
+

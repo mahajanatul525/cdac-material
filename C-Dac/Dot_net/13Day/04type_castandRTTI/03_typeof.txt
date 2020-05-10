@@ -1,0 +1,20 @@
+Using typeof
+
+Although useful in their own ways, the as and is operators simply test the compatibility of
+two types. Often, you will need to obtain information about a type. 
+
+To do this, C# suppliesthe typeof operator.
+
+ It retrieves a System.Type object for a given type. Using this object, you can determine the type’s characteristics.
+
+The GetType function, which is used to get the type of an object based on that object that is the instance of that class. It means that, this function needs parameter as an argument of object rather than class name.
+
+But in case of typeOf , we have to pass that class name as a parameter. This function is used to get the type based on a class. That is suppose you will use typeOf function with an object as a argument, then it will give you error.
+
+Example-
+
+string str = “Hello”;
+
+Type val1 = str.GetType();
+
+Type val2 = typeof(string);

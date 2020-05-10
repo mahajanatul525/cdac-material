@@ -1,0 +1,46 @@
+What is _ViewStart.cshtml file?
+ASP.NET MVC 3, has introduced _ViewStart.cshtml. Specify the Layout property in this file and place it in the Views folder. All the views will then use the layout file that is specified in _ViewStart.cshtml. This eliminates the need to specify Layout property on each and every view, and making them more cleaner and maintainable.
+_ViewStart in asp.net mvc 3 
+
+If you want a set of views in a specific folder, to use a different layout file, then you can include another _ViewStart.cshtml file in that specific folder. 
+
+When I use _ViewStart.cshtml file, can I still set Layout property on individual views?
+Yes, if you want to use a layout file that is different from what is specified in _ViewStart.cshtml
+
+Where else can I specify a layout file?
+Layout file can also be specified in a controller action method or in an action filter.
+
+In Controller Action Method:
+Specify which layout to use  when returning a view inside a controller action
+public ActionResult Create()
+{
+    return View("Create", "_Layout");
+}
+
+
+Can we write some logic in "_ViewStart.cshtml" to dynamically specify which layout file to use?
+Yes, the following code will change the layout file to use based on the browser type. 
+If the browser is google chrome, 
+    then "_Layout.cshtml" layout file is used
+Else
+    "_DifferentLayout.cshtml" layout file is used
+
+Code in "_ViewStart.cshtml" file
+@{
+    Layout = Request.Browser.IsBrowser("Chrome") ? "~/Views/Shared/_Layout.cshtml" : "~/Views/Shared/_DifferentLayout.cshtml" ;
+}
+
+All partial views in my application are now using the layout file specified in "_ViewStart.cshtml". How do I prevent these partial views from using a layout file?
+Details action method below, returns "_Employee" partial view, and is using the layout file specified in "_ViewStart.cshtml"
+public ActionResult Details(int id)
+{
+    Employee employee = db.Employees.Single(e => e.Id == id);
+    return View("_Employee", employee);
+}
+
+To prevent this partial view from using the layout file, specified in "_ViewStart.cshtml", return "PartialViewResult" from the controller action method as shown below.
+public PartialViewResult Details(int id)
+{
+    Employee employee = db.Employees.Single(e => e.Id == id);
+    return PartialView("_Employee", employee);
+}

@@ -1,0 +1,63 @@
+void call();
+void main()
+{
+call();
+call();
+call();
+
+
+}
+
+
+void call()
+{
+
+static int a;
+
+printf("%d",a);
+a++;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void call(int);
+void main()
+{
+static int a;
+call(a);
+call(a);
+call(a);
+}
+
+
+void call(int a)
+{
+printf("%d",a);0 0 0
+a++;1
+
+}
+
+
+

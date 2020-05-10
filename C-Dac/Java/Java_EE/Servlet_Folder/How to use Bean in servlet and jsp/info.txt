@@ -1,0 +1,16 @@
+in "classes" folder , create folder "pack" folder.
+
+in "pack" folder, save "Bean1.java","Bean2.java" and compile.
+
+open command prompt ,go to "classes" folder and create jar using following command
+
+	jar cf first.jar pack
+
+copy "first.jar" in "myapp\WEB-INF\lib" folder.
+
+you can now delete "pack" folder from "classes" folder.
+
+compile servlet . while compiling servlet set the classpath of "first.jar".
+
+run servlet.
+

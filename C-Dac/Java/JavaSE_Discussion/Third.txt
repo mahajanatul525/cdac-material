@@ -1,0 +1,295 @@
+which Applet method is first called by browser
+	init
+
+API full form
+	Application Programming Interface
+	
+
+Exception class from which package
+	java.lang
+
+how many classes a class can extend in java
+	only 1
+
+what is Garbage collection
+	reclaiming unreferenced memory from heap area.
+
+what is finally block
+	finally block gets always executed irrespective of whether exception is raised or not.
+
+condition which cause runtime error is called as
+	exception
+
+Thread priority in java is of type
+	Integer - correct ans
+	Float
+	Double
+	long
+
+what is the output in following code:
+
+Object ob=new Object();
+S.o.p(ob.getClass());
+
+	java.lang.Object - correct ans
+	java.lang.Output
+	compilation error
+	runtime error
+
+which one of the following is valid thead transition
+	ready to running - correct ans
+	ready to waiting
+	....
+
+which one of the following is static member of Thread class?
+	sleep
+	currentThread
+
+
+method to clear output buffer
+	flush 
+	close - close invokes flush()
+	
+
+what are the things we can do with reflection api
+	finding the method signatures
+	creating object dynamically
+	invoking methods dynamically
+	all of the above - correct ans
+
+
+which interface- to serialize an object over a socket 
+	- Serializable
+
+String str="420"
+str.concat("42");
+S.o.p(str);
+	output- 420 - string is immutable
+
+
+given "file" as file class object,how to create a new file
+	FileOutputStream fos=new FileOutputStream(file);
+	FileWriter fw=new FileWriter(file);
+	RandomAccessFile rf=new RandomAccessFile(file);
+		all of the above
+
+
+
+
+javah stands for
+	header file
+
+two threads can not enter in to the object which is shared by them if the method is
+	synchronized
+
+super class of all the exceptions
+	Exception - correct ans
+	Object
+	Throwable
+
+ 
+
+
+which one of the following is not from java.io.package
+String - correct ans
+StringReader
+Writer
+File
+
+
+String s1="hello"
+String s2="there"
+String s3;
+
+which one of the following is valid
+
+s3=s1+s2; // correct ans
+s3=s1-s2;
+s3=s1&s2;
+s3=s1&&2;
+
+
+class A
+{
+	public abstract void fun();
+}
+
+what is required in the above code?
+	class A must be declared as abstract
+
+when does thread die?
+	when run method is over
+
+
+File f=new File("/java/system");
+S.o.p(f.getName());
+	output- system
+
+
+JDBC stands for
+
+types of multitasking
+
+	thread based
+	process based
+	thread and process based  - correct ans
+	none of these
+
+what will happen if wait() is called on a Thread without ensuring that thread is holding a lock?
+	ans-illegalmonitorstateexception will come
+
+
+collection which allows key,value and is thread safe  - HashTable
+ 
+""        					unsafe - HashMap
+
+
+how to invoke parent constructor from child
+	super() at first line of child constructor
+
+
+Employee emp1,emp2,emp3;
+
+emp3=new Employee();
+
+Employee emp4=new Employee();
+
+	in the above code
+		2 objects and 4 references will be created.
+
+
+how to create global variable in java
+	within a class as public static member
+
+
+while using Thread, which is incorrect
+
+	u invoke run() - correct ans
+	u invoke start()
+	u implement Runnable
+	u extend Thread
+
+class to implement a stream which will read character array as input source
+	BufferedReader
+	FileReader
+	CharacterArrayReader - correct ans
+	FileArrayReader
+
+
+what is the output?
+
+class A
+{
+	int i,j;
+	A()
+	{
+		i=1;j=2;
+	}
+}
+public class Abc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		A obj1=new A();
+		A obj2=new A();
+		System.out.println(obj1.equals(obj2));
+	}
+
+}
+
+true
+false - correct ans
+compiler error
+runtime error
+
+
+what is the output?
+
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int x=0;
+		int y=10;
+		do
+		{
+			y--;
+			++x;
+		}while(x<5);
+		System.out.println(x+"\t"+y);
+		}
+	
+output- 5  5
+
+
+how does readObject() of ObjectInputStream indicate end of file?
+	returns null
+	""	-1
+	throws java.io.EOFException   - correct ans
+	closes automatically
+
+
+
+
+
+Question:
+Which is true about a method-local inner class?
+A.
+It must be marked final.
+B.
+It can be marked abstract.  - correct ans
+C.
+It can be marked public.
+D.
+It can be marked static.
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

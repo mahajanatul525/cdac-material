@@ -1,0 +1,23 @@
+1. simple resume using single file
+2. resume using internal link
+eg.
+objective
+Personal detail
+Acedamic detail
+
+3. resume using frame and link
+Left side frame display link
+
+objective
+Personal detail
+Acedamic detail
+
+right side frame display detail
+
+
+4. onclick image should open in new browser with bigersize
+
+5. site navigation page and related link data
+
+6. Form : Login form
+7. Form : create form like in yahoo for creating email.

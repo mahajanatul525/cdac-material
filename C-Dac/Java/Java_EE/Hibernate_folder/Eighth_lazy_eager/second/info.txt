@@ -1,0 +1,29 @@
+@CollectionOfElements(fetch=FetchType.EAGER)
+	public Map<String, String> getProperties() {
+		return this.properties;
+	}
+
+we are setting fetch=FetchType.EAGER, that means when parent is loaded, all childrens are also loaded.
+
+
+output will be
+
+50
+A
+it is all over
+
+
+u won't get any exception 
+
+this is because
+
+	inside "SupportProperty.hbm.xml"
+we have specified
+
+	 default-lazy="false"
+this leads to eager loading and hence, even if the session is closed,
+
+we can say
+
+		System.out.println(p1.get("score")); 
+			System.out.println(p1.get("grade"));

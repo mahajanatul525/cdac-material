@@ -1,0 +1,45 @@
+
+Applet
+	JApplet
+
+
+Container
+	JComponent
+		JPanel
+
+Frame
+	JFrame
+
+
+
+Dialog
+	JDialog
+
+
+Container
+	JComponent
+		AbstractButton
+			JButton 
+
+
+Container
+	JComponent
+		JTextComponent
+			JTextField
+
+
+Container
+	JComponent
+		AbstractButton  + MenuContainer [interface]
+			JMenuItem 
+				JMenu 
+
+
+Container
+	JComponent
+		AbstractButton  + MenuContainer [interface]
+			JMenuItem 
+
+Container
+	JComponent + MenuContainer [interface]
+			JMenuBar

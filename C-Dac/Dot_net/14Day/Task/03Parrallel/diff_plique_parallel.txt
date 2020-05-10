@@ -1,0 +1,4 @@
+One difference between Parallel and PLINQ is
+that PLINQ assumes it can use all the cores on the computer, 
+
+while Parallel will dynamically react to changing CPU c onditions.

@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class CallbyValue
+    {
+       public void swap(ref int x, ref int y)
+        {
+            int temp;
+            temp = x;
+            x = y;
+            y = temp;
+        }
+    }
+
+    class program
+    {
+        static void Main()
+        {
+            int num1, num2;
+
+            Console.WriteLine("Enter two no for Swapping");
+            num1 = Convert.ToInt32(Console.ReadLine()); 
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+            CallbyValue c = new CallbyValue();
+            Console.WriteLine("BEFORE CALL SWAP{0} {1}", num1, num2);
+            c.swap(ref num1, ref num2);
+            Console.WriteLine("After CALL SWAP{0} {1}", num1, num2);
+        }
+    }
+
+     
+}

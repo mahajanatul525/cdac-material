@@ -1,0 +1,8 @@
+The const keyword is used to modify a declaration of a field or local variable. 
+It specifies that the value of the field or the local variable is constant, which means it cannot be modified
+
+A constant expression is an expression that can be fully evaluated at compile time
+
+
+
+the readonly field can be used for run-time constants

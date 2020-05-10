@@ -1,0 +1,21 @@
+Notice that the static constructor does not have any access modifiers.
+
+It ’ s never called by any other C# code, but always by the--- .NET runtime-- when the class is loaded, 
+
+so any access modifier like public or private would be meaningless. 
+
+For this same reason, the static constructor can never take any parameters, and there can be only --one--- static constructor for a class. 
+
+It should also be obvious that a static constructor can access only static members, not instance members, of the class.
+
+Note that it is possible to have a static constructor 
+and  a zero - parameter instance constructor defined in the same class. Although the parameter lists are identical, there is no conflict. That ’ s because the static constructor is executed when the class is loaded, 
+but the instance constructor is executed whenever an instance is created — so there won ’ t be any confusion about which constructor gets executed when.
+
+
+Note that if you have more than one class that has a static constructor, the static constructor that will be
+executed first is --undefined--. 
+
+This means that you should not put any code in a static constructor that
+depends on other static constructors having been or not having been executed. However, if any static
+fields have been given default values, these will be allocated before the static constructor is called.

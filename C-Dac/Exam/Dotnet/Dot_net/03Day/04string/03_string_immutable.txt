@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+
+
+namespace FunWithStrings
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***** Fun with Strings *****\n");
+            StringEquality();
+            StringsAreImmutable();
+           
+            Console.ReadLine();
+        }
+
+        
+        #region Strings and equality
+        static void StringEquality()
+        {
+            Console.WriteLine("=> String equality:");
+            string s1 = "Hello!";
+            string s2 = "Hello!";
+            Console.WriteLine("s1 = {0}", s1);
+            Console.WriteLine("s2 = {0}", s2);
+            Console.WriteLine("s1 =Hascode {0}", s1.GetHashCode());
+            Console.WriteLine("s2 = Hascode{0}", s2.GetHashCode ());
+            
+            Console.WriteLine();
+
+            
+            // Test these strings for equality.
+            Console.WriteLine("s1 == s2: {0}", s1 == s2);
+            Console.WriteLine("s1 == Hello!: {0}", s1 == "Hello!");
+            Console.WriteLine("s1 == HELLO!: {0}", s1 == "HELLO!");
+            Console.WriteLine("s1 == hello!: {0}", s1 == "hello!");
+            Console.WriteLine("s1.Equals(s2): {0}", s1.Equals(s2));
+            Console.WriteLine("Yo.Equals(s2): {0}", "Yo!".Equals(s2));
+            Console.WriteLine();
+        }
+        #endregion
+
+        #region Immutability
+        static void StringsAreImmutable()
+        {
+            // Set initial string value.
+            string s1 = "This is my string.";
+            Console.WriteLine("s1 = {0}", s1);
+
+            // Uppercase s1?
+            string upperString = s1.ToUpper();
+            Console.WriteLine("upperString = {0}", upperString);
+
+            // Nope! s1 is in the same format!
+            Console.WriteLine("s1 = {0}", s1);
+        }
+
+       
+
+        #endregion
+
+  }
+}

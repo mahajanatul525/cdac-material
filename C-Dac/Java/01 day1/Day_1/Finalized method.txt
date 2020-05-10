@@ -1,0 +1,6 @@
+Java does not have destructor.
+
+Just before object gets garbage collected, "protected void finalized()" method gets called.
+Since actual garbage collection is not guaranteed across different implementations of java, u can not rely upon "finalized()" method in order to release any resources.
+
+You can not force Garbage Collection in java, but u can make a request for Garbage Collection by using "System.gc()"

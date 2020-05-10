@@ -1,0 +1,21 @@
+package day4;
+import java.util.*;
+
+public class MyCalcApp {
+	public static void main(String []args)
+	{
+		Calculator c=new Calculator();
+		
+		try {
+			Scanner sc=new Scanner(System.in);
+			int i=sc.nextInt();	
+			double a=c.doub(i);
+			System.out.println(a);
+			} 
+		catch (MyException e) {
+			e.printStackTrace();
+		}
+		System.out.println("done");
+	}
+
+}

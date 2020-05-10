@@ -1,0 +1,55 @@
+class
+new
+static
+		i.calss
+		ii member variable --A,B
+		ii constructor
+		ii method
+base--- A,B
+
+abstract --class,method
+
+this
+
+const---static
+readonly---
+get,set
+
+
+interface 
+
+sealed
+
+virtual 
+
+override
+
+checked
+
+ref, out,var, dynamic, para ms
+
+public,internal toplevel class,struct,enum
+member of class--
+private,protected,internal,public, protected internal
+
+
+polymorphism--
+
+encapsulation  
+
+inheritance 
+
+abstraction
+
+
+
+
+
+
+
+
+
+
+
+
+

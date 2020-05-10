@@ -1,0 +1,167 @@
+
+ResultSet- concurupdatebale and sensitive means
+
+minimum scope requied in redirect is request- wrong
+
+redirect vs forward
+	in forward client can see the url of first page
+
+callbacks in stateless session bean - PostConstruct() and PreDestroy()
+
+lifecycle of stateless session bean
+
+ans:
+A stateless session bean instance’s life starts when the container invokes the newInstance method on the session bean class to create a new session bean instance.
+Next, the container performs any dependency injection as specified by metadata annotations on the bean class or by the deployment descriptor.
+The container then calls the PostConstruct lifecycle callback interceptor methods for the bean, if any.
+The container can perform the instance creation at any time.
+The session bean instance is now ready to be delegated a business method call from any client or a call from the container to a timeout callback method.
+When the container no longer needs the instance (usually when the container wants to reduce the number of instances in the method-ready pool), the container invokes the PreDestroy lifecycle callback interceptor methods for it, if any. This ends the life of the stateless session bean instance.
+
+
+${abc}
+	web container will check "abc" in page,request,session and then application scope respectively till it finds
+
+what is the state of pojo when get() returns null- transient
+
+
+struts2 interceptors and action class
+		both r thread safe
+		''		unsafe
+		interceptors are thread safe , action class is not
+		action class is thread safe , interceptors are not
+
+ans:
+Struts2 Action classes are thread safe because an object is instantiated for every request to handle it.
+
+Struts2 interceptors are singleton classes and a new thread is created to handle the request, so it’s not thread safe and we need to implement them carefully to avoid any issues with shared data.
+
+
+
+
+
+in JSF which annotation is used for dependency injection- @ManagedProperty
+
+
+what is the role of Model driven interceptor
+	ans- populate the fields of respective action object with the request parameters,
+
+
+JSF lifecycle
+ans:
+Restore view phase
+
+Apply request values phase; process events
+
+Process validations phase; process events
+
+Update model values phase; process events
+
+Invoke application phase; process events
+
+Render response phase
+
+
+
+Action class- which method is necessary
+	ans:- execute()
+
+
+load vs get
+
+ans:
+1. Behavior when Object is not found in Session Cache 
+get method of Hibernate Session class returns null if object is not found in cache as well as on database while load() method throws ObjectNotFoundException if object is not found on cache as well as on database 
+
+2. Database hit
+Get method always hit database while load() method may not always hit the database.
+
+3. Proxy
+Get method never returns a proxy, it either returns null or fully initialized Object, while load() method may return proxy, which is the object with ID but without initializing other properties, which is lazily initialized. 
+
+4. Performance
+get method will return a completely initialized object if  Object is not on the cache but exists on Database, which may involve multiple round-trips to database based upon object relational mappings while load() method of Hibernate can return a proxy which can be initialized on demand (lazy initialization) when a non identifier method is accessed. Due to above reason use of load method will result in slightly better performance.
+
+
+
+which is thread safe
+	session - no
+	sessionfactory - yes
+	transaction - no
+	query - no
+
+which method is static and synchronized in jdbc api- ans - getConnection()
+
+what is PreparedStatement
+
+if a stored procedure has IN OUT parameters what is recommended
+	Set IN parameter
+	and then register OUT parameter
+
+Class.forName("driver")
+	not only loads the driver class but also automatically register it with DriverManager
+
+
+
+
+<%! String str="hello";%>
+
+	what will happen to the above statement when it goes to generated servlet?
+	it will go as an instance member.
+
+
+
+
+which of the following variables are thread-safe?
+
+	session-scoped
+	application-scoped
+	servlet instance
+	request-scoped - correct ans
+
+<servlet>
+	<servlet-name>myserv</servlet-name>
+	<servlet-class>Test.MyServlet</servlet-class>
+	<load-on-startup>10</load-on-startup>
+</servlet>
+
+	internal name of servlet is "myserv"
+	web container will locate "MyServlet.class" inside "WEB-INF\classes\Test" folder
+	web container will load this servlet on startup
+	all of the above - correct ans
+
+
+setContentType() is in which class
+	HttpServletResponse
+
+
+<error-page>
+	<exception-type>java.lang.Exception</exception-type>
+	<location>/err.jsp</location>
+</error-page>
+	
+	what is the meaning of above code
+
+
+
+
+
+	
+
+
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+
+

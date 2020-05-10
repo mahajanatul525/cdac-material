@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+            xmlns:f="http://java.sun.com/jsf/core"
+             xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+   <h:head>
+      <title>JSF tutorial</title>		
+      <h:outputStylesheet library="css" name="styles.css"  /> 	
+   </h:head>
+   <h:body> 
+   <h2>DataTable Example</h2>
+  
+   <h:form>
+      <h:dataTable value="#{emplbeanaction.employees}" var="employee"
+         styleClass="employeeTable"
+         headerClass="employeeTable-header"
+         rowClasses="employeeTable-odd-row,employeeTable-even-row">
+         <h:column>    				
+            <f:facet name="header">Name</f:facet>    				
+            #{employee.name}
+         </h:column>
+         <h:column>
+            <f:facet name="header">Department</f:facet>
+            #{employee.desig}
+         </h:column>
+         <h:column>
+            <f:facet name="header">Salary</f:facet>
+            #{employee.salary}
+         </h:column>
+      </h:dataTable>
+      <h3>Add Employee</h3>
+      <hr/>
+      <table>
+      <tr>
+            <td>Name :</td>
+            <td><h:inputText size="10" value="#{emplbeanaction.employee.name}" /></td>
+      </tr>
+      <tr>
+            <td>Desig :</td>
+            <td><h:inputText size="20" value="#{emplbeanaction.employee.desig}" /></td>
+      </tr>
+      <tr>
+            <td>Salary :</td>
+            <td><h:inputText size="5" value="#{emplbeanaction.employee.salary}" /></td>
+      </tr>
+      <tr>
+            <td> </td>
+            <td><h:commandButton value="Add Employee" action="#{emplbeanaction.addEmp}" /></td>
+      </tr>
+      </table>	  
+   </h:form>
+  
+   </h:body>
+</html>
+
+
+
+
+
+
+
+

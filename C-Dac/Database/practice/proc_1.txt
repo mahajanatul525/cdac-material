@@ -1,0 +1,16 @@
+SELECT * FROM dbmodule.orders;
+alter table orders add sum_tat int after snum;
+call proc_sum_tat(1002);
+select * from orders;
+---------------------------------------------------
+
+CREATE DEFINER=`root`@`localhost` 
+PROCEDURE `proc_sum_tat`(in cid int )
+
+BEGIN
+
+update orders
+set sum_tat=(select sum(rating) from customers where snum=cid)
+where snum =cid;
+
+END

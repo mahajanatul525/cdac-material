@@ -1,0 +1,5 @@
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\shared_assembly\assembly_dll\Math_Add\Math_Add\bin\Debug\Math_Add.dll
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\shared_assembly\assembly_dll\Math_Add\Math_Add\bin\Debug\Math_Add.pdb
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\shared_assembly\assembly_dll\Math_Add\Math_Add\obj\Debug\Math_Add.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\shared_assembly\assembly_dll\Math_Add\Math_Add\obj\Debug\Math_Add.dll
+D:\dot_net\Day_wise\day1\00Framework\04_lib_assembly\shared_assembly\assembly_dll\Math_Add\Math_Add\obj\Debug\Math_Add.pdb

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.errormsg
+			{
+				color:red;
+				font-family:"forte"
+			}
+			.bg
+			{
+				height:500px;
+				width:1200px;
+				background-color:aqua;
+				padding:15px;
+				margin:15px;
+			}
+			
+		</style>
+		<script>
+		function mailval()
+		{
+			var a=document.getElementById("m");
+			var b=a.value;
+			alert(b);
+			pattern=/^[a-z][a-z_0-9]+@[a-z0-9]+\.[a-z]{2,3}$/;
+			if(pattern.test(b)
+			{
+				return true;
+			}
+			else
+				document.getElementById("mailerr").innerHTML="Enter Valid E-mail ID"
+		}
+		
+		</script>
+	</head>
+	
+	<body>
+		
+					
+					<input type="text" placeholder="Enter email" id="m" onchange="mailval()"></input>
+					<div class="errormsg" id="mailerr"></div>
+			
+
+		
+		
+	</body>
+</html>
+			
+		
+	

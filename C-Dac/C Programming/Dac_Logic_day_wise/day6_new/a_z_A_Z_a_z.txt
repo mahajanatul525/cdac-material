@@ -1,0 +1,42 @@
+/*Q15 Accept an alphabet from user and display next 5 alphabets. E.g. If user enters 'D' then output should be E F G H I.
+If the character entered is X, then output should be  Y Z a b c. ( it should not display non alphabets).
+If entered character is not an alphabet,display proper error message*/
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+	char c;
+	int n=0,i;
+	printf("enter character");
+	scanf("%c",&c);
+	for(i=c+1;n<5;i++)
+	{	if(i==('Z'+1))
+			{i='a';
+	       printf("%c",i);
+			 n++;
+			}
+	else if(i<=90&&i>=65)
+		   {  printf("%c",i);
+			    n++;
+	        }
+	     
+   	else if(i<=122&&i>=97)
+		     {	
+			printf("%c",i);
+			n++;
+	          }
+
+	else	if(i==('z'+1))
+			{
+				i='A';
+	       printf("%c",i);
+		   n++;
+	         }
+
+		 
+
+	}
+
+	getche();
+}

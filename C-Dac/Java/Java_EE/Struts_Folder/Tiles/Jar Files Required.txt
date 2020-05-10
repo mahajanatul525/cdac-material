@@ -1,0 +1,21 @@
+Following additional jar files should be there in library :
+
+commons-beanutils-1.7.0.jar
+
+commons-logging-1.0.4.jar
+
+commons-digester-1.8.jar
+
+struts2-tiles-plugin-2.0.14.jar
+
+tiles-core-2.0.4.jar
+
+tiles-api-2.0.4.jar
+
+tiles-jsp-2.0.4.jar
+
+xwork-2.0.4.jar
+
+ognl-2.6.11.jar
+
+

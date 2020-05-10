@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head><style>.topnav {color:red;}
+</style>
+<script src="jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+//$('li.third-item').next().css('background-color', 'red');
+//$('li.third-item').prev().css('background-color', 'green');
+$('li.my').nextAll().css('background-color', 'bisque');
+
+//$('li.pr').prevAll().css('background-color', 'aqua');
+});
+</script>
+
+</head>
+<body>
+<ul>
+   <li>list item 1</li>
+   <li>list item 2</li>
+   <li class="third-item">list item 3</li>
+   <li>list item 4</li>
+   <li>list item 5</li>
+</ul>
+
+<ul>
+   <li>list item 1</li>
+   <li>list item 2</li>
+   <li class="my">list item 3</li>
+   <li>list item 4</li>
+   <li>list item 5</li>
+</ul>
+
+
+<ul>
+   <li>list item 1</li>
+   <li>list item 2</li>
+   <li class="pr">list item 3</li>
+   <li>list item 4</li>
+   <li>list item 5</li>
+</ul>
+</body>
+</html>
+

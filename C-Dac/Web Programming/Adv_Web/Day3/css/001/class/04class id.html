@@ -1,0 +1,40 @@
+<html>
+<head>
+<style type="text/css">	
+#header {
+	background-color: Olive;
+	} 
+
+#content {
+	border : medium dotted;
+	}
+
+/*Then you can define the H1 tag as it should appear in those sections:*/
+
+#header h1 {
+
+	color:red;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	}
+
+#content h1 {
+//put specific styles for content-h1 in here.
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:red
+}
+</style>
+</head>
+<body>
+/*Then on your page you put a DIV tag around the "header area", when you use the H1 tag inside that area.. it'll look like the HEADER version. And the same with the content are
+a:*/
+<div id="header">
+<h1> HEADER STYLE HEADLINE </h1>
+</div>
+
+<div id="content">
+<h1>CONTENT STYLE HEADLINE </h1>
+</div>
+<body>
+

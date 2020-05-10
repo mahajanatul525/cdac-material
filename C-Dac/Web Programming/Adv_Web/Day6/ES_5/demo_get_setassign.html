@@ -1,0 +1,26 @@
+<script>
+class Employee
+{   constructor(name,amt)
+   {   this._name=name;
+	   this._salary=amt;
+	}
+     get Aname(){ alert("in get")
+	             return this._name; }
+      set Aname(value) { alert(value)
+	        this._name=value; }
+	   
+ 	  get ASalary() { return this._Salary; }
+
+	{var r=this._Salary- this._Salary*10/100	;
+	return r;
+	}
+	toString()
+{return this._name+ "  " +this._balance}
+}
+var obj=new Employee("raju",50000);
+document.write(obj.Aname)
+obj.Aname="rajesh";
+document.write(obj)
+document.write(obj.netsal());
+
+</script>

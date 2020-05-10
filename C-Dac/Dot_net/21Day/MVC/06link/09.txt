@@ -1,0 +1,51 @@
+We want to display all the employees in a bulletted list as shown below. Notice that all the employee names are rendered as hyperlinks.
+Adding Links between pages using html helpers 
+
+When the hyperlink is clicked, the user will be redirected to employee details page, displaying the full details of the employee as shown below.
+Generate links using Html.ActionLink html helper 
+
+Copy and paste the following Index() action method in EmployeeController class. This method retrieves the list of employees, which is then passed on to the view for rendering.
+public ActionResult Index()
+{
+    EmployeeContext employeeContext = new EmployeeContext();
+    List<Employee> employees = employeeContext.Employees.ToList();
+
+    return View(employees);
+}
+
+At the moment, we don't have a view that can display the list of employees. To add the view
+1. Right click on the Index() action method
+2. Set
+View name = Index
+View engine = Razor
+Select, Create a stronlgy-typed view checkbox
+Select "Employee" from "Model class" dropdownlist
+3. Click Add
+
+At this point, "Index.cshtml" view should be generated. Copy and paste the following code in "Index.cshtml".
+@model IEnumerable<MVCDemo.Models.Employee>
+
+@using MVCDemo.Models;
+
+<div style="font-family:Arial">
+@{
+    ViewBag.Title = "Employee List";
+}
+
+<h2>Employee List</h2>
+<ul>
+@foreach (Employee employee in @Model)
+{
+    <li>@Html.ActionLink(employee.Name, "Details", new { id = employee.EmployeeId })</li>
+}
+</ul>
+</div>
+
+Points to Remember:
+1. @model is set to IEnumerable<MVCDemo.Models.Employee>
+2. We are using Html.ActionLink html helper to generate links
+
+Copy and paste the following code in Details.cshtml
+@Html.ActionLink("Back to List", "Index") 
+
+ 

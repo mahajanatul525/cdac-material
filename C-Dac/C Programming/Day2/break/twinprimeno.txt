@@ -1,0 +1,29 @@
+#include<stdio.h>
+void main()
+{
+int p1=0,p2=1;
+int n=20,i,no;
+no=2;
+while(no<n)
+{i=2;
+
+	while(i<no)
+	{if(no%i==0)
+	break;
+	i++;
+	}
+	if(i==no)
+	{//printf("%d",no);
+	p1=no;
+		if(p1-p2==2)
+		{
+		printf("\n%d\t %d",p1,p2);
+		}
+		p2=p1;	
+	}
+
+
+no++;
+}
+
+}

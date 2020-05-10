@@ -1,0 +1,8 @@
+D:\dot_net\Day_wise\day13asp\19requiredcontroll\20CompareValidator\WebApplic\WebApplic\bin\WebApplic.dll
+D:\dot_net\Day_wise\day13asp\19requiredcontroll\20CompareValidator\WebApplic\WebApplic\bin\WebApplic.pdb
+D:\dot_net\Day_wise\day13asp\19requiredcontroll\20CompareValidator\WebApplic\WebApplic\obj\Debug\WebApplic.dll
+D:\dot_net\Day_wise\day13asp\19requiredcontroll\20CompareValidator\WebApplic\WebApplic\obj\Debug\WebApplic.pdb
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\19requiredcontroll\21Regularexpression\21RegularExpressionWebApp\WebApplic\bin\WebApplic.dll
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\19requiredcontroll\21Regularexpression\21RegularExpressionWebApp\WebApplic\bin\WebApplic.pdb
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\19requiredcontroll\21Regularexpression\21RegularExpressionWebApp\WebApplic\obj\Debug\WebApplic.dll
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\19requiredcontroll\21Regularexpression\21RegularExpressionWebApp\WebApplic\obj\Debug\WebApplic.pdb

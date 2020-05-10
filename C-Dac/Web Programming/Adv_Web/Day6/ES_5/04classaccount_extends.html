@@ -1,0 +1,58 @@
+<script>
+'use strict'
+class Account
+{  
+
+static accid()
+	{ 
+	this.dd=++this.dd||1;
+	   return this.dd;
+	}
+
+constructor(name,amt)
+  {  if (new.target === Account) {
+      throw new TypeError("Cannot construct Abstract instances directly");
+	         }  
+  
+      this._name=name;
+	  this._balance=amt;
+	  this._id=  Account.accid();
+  }
+      get Aname(){ return this._name; }
+	  set Aname(value) { this._name=value; }
+ 	
+	  get Abalance() { return this._balance; }
+	  get Aid() { return this._id; }
+	deposit(amt)
+	{this.balance+=amt;
+	
+	}
+	toString()
+	{return this.Aname+ "  " +this.Abalance+"id="+ this.Aid}
+}
+class SavingAccount extends Account
+{  
+	
+	constructor(name,amount)
+	 { 	 super(name,amount);
+	}
+
+	withdrow(amt)
+	{ const minbal=10000;
+	
+	var b=this._balance-amt 
+	 if(b<minbal)
+	 {throw new Error("insufficiant balance");}
+		this._balance-=amt;
+	}
+	
+}
+var sa1=new SavingAccount("Raj",50000);
+console.log(sa1);
+
+var sa2=new SavingAccount("manali",90000);
+console.log(sa2);
+sa2.Aname="vita";
+console.log(sa2.hasOwnProperty("Aname"));
+
+</script>

@@ -1,0 +1,420 @@
+1)
+class base
+{
+	public:
+		base(char *ptr)
+		{
+		}
+};
+class sub:public base
+{
+};
+
+Following statements should be possible
+
+sub s;
+
+sub *s1=new sub(40);
+
+sub *s2=new sub('a',4.5);
+
+Solution:
+#include<iostream>
+using namespace std;
+class base
+{
+public:
+		base(char *ptr)
+		{
+			cout<<"In Base with ptr="<<ptr<<endl;
+		}
+};
+
+class sub:public base
+{
+public:
+	sub():base("Pakya1")
+	{
+		cout<<"In Sub no- args"<<endl;
+	}
+	sub(int x):base("pakya2")
+	{
+		cout<<"In Sub with param x="<<x<<endl;
+	}
+	sub(char a,double x):base("pakya3")
+	{
+		cout<<"In Sub with param a="<<a<<"\tdouble x="<<x<<endl;
+	}
+};
+
+int main()
+{
+	sub s;
+	sub *s1=new sub(40);
+	sub *s2=new sub('a',4.5);
+}
+
+Output:
+In Base with ptr=Pakya1
+In Sub no- args
+In Base with ptr=pakya2
+In Sub with param x=40
+In Base with ptr=pakya3
+In Sub with param a=a   double x=4.5
+Press any key to continue . . .
+
+
+
+2)
+class base1
+{
+	int num1;
+};
+class base2
+{
+	int num2;
+};
+class sub:public base1,base2
+{
+	int num3;
+};
+
+above classes are incomplete.
+You should be able to do following
+
+sub *s=new sub; (num1,num2 and num3 should be 0)
+
+sub s1(10,20,30); (num1,num2 and num3 should be 10,20 and 30 respectively)
+
+sub *s2=new sub(50,60); (num1,num2 and num3 should be 50,60 and 70 respectively)
+
+Solution:
+#include<iostream>
+using namespace std;
+class base1
+{
+private:
+	int num1;
+public:
+	base1(int k)
+	{
+		num1=k;
+		cout<<"In base1 with 1 param and num1="<<num1<<endl;
+	}
+};
+class base2
+{
+private:
+	int num2;
+public:
+	base2(int k)
+	{
+		num2=k;
+		cout<<"In base2 with 1 param and num2="<<num2<<endl;
+	}
+};
+class sub:public base1,base2
+{
+private:
+	int num3;
+public:
+	sub():base1(0),base2(0)
+	{
+		num3=0;
+		cout <<"In No-args of SUB and num3="<<num3<<endl;
+	}
+	sub(int i,int j,int k):base1(i),base2(j)
+	{
+		num3=k;
+		cout<<"In Sub with 3 param and num3="<<num3<<endl;
+	}
+	sub(int i,int j):base1(i),base2(j)
+	{
+		num3=70;
+		cout<<"In Sub with 2 param and num3="<<num3<<endl;
+	}
+};
+int main()
+{
+	sub *s=new sub;
+	sub s1(10,20,30);
+	sub *s2=new sub(50,60);
+}
+
+Output:
+In base1 with 1 param and num1=0
+In base2 with 1 param and num2=0
+In No-args of SUB and num3=0
+In base1 with 1 param and num1=10
+In base2 with 1 param and num2=20
+In Sub with 3 param and num3=30
+In base1 with 1 param and num1=50
+In base2 with 1 param and num2=60
+In Sub with 2 param and num3=70
+Press any key to continue . . .
+
+
+3) 
+class parent
+{
+	public:
+		disp1()
+		disp2()
+		disp3()
+		disp4()
+};
+class sub:private parent
+{
+	public:
+		disp5()
+};
+
+make sure u can do the following
+
+sub s(30);
+s.disp5();
+s.disp3();
+s.disp1();
+
+Solution:
+#include<iostream>
+
+using namespace std;
+
+class parent
+{
+	public:
+		void disp1()
+		{
+			cout<<"Disp1"<<endl;
+		}
+		void disp2()
+		{
+			cout<<"Disp2"<<endl;
+		}
+		void disp3()
+		{
+			cout<<"Disp3"<<endl;
+		}
+		void disp4()
+		{
+			cout<<"Disp4"<<endl;
+		}
+};
+class sub:private parent
+{
+	public:
+		sub(int k){
+			cout<<"In Sub with 1 param "<<k<<endl;
+		}
+		parent::disp1;
+		parent::disp3;
+		void disp5()
+		{
+			cout<<"Disp5"<<endl;
+		}
+};
+
+int main()
+{
+	sub s(30);
+	s.disp5();
+	s.disp3();
+	s.disp1();
+}
+
+
+Output:
+In Sub with 1 param 30
+Disp5
+Disp3
+Disp1
+Press any key to continue . . .
+
+4) 
+class course
+{
+	//here
+};
+class DacCourse:public course
+{
+	// here
+};
+
+you should be able to say following
+
+course *c=new course;
+c->fees(); // course version should be called
+c=new DacCourse;
+c->fees();  // DacCourse version should be called
+
+Solution:
+#include<iostream>
+using namespace std;
+ class course
+ {
+ public:
+	 virtual void fees()
+	 {
+		 cout<<"course fees"<<endl;
+	 }
+ };
+
+ class Daccourse: public course
+ {
+ public:
+	 void fees()
+	 {
+		 cout<<"Daccourse fees"<<endl;
+	 }
+ };
+
+ int main()
+ {
+	 course *c=new course;
+	 c->fees();
+	 c=new Daccourse;
+	 c->fees();
+	 return 0;
+ }
+
+Output:
+course fees
+Daccourse fees
+Press any key to continue . . .
+
+
+5) 
+Create a base class FourWheeler. Declare pure virtual function “void start()” in it. 			
+Define following sub classes for this class. 
+A) Qualis b) Sumo c) Volvo 					
+Define “start” function in these classes.			In main function , create array of pointer to FourWheeler which will contain objects of these three sub classes. 
+Now traverse the array and call all the child class methods.
+
+Solution:
+#include<iostream>
+using namespace std;
+
+class Fourwheeler
+{
+public:
+	virtual void start()=0;
+};
+
+class Qualis:public Fourwheeler
+{
+public:
+	void start()
+	{
+		cout<<"Start Qualis"<<endl;
+	}
+};
+class Sumo:public Fourwheeler
+{
+public:
+	void start()
+	{
+		cout<<"Start Sumo"<<endl;
+	}
+};
+
+class Volvo:public Fourwheeler
+{
+public:
+	void start()
+	{
+		cout<<"Start Volvo"<<endl;
+	}
+};
+
+int main()
+{
+
+	Fourwheeler *ptr[3];
+	ptr[0]=new Qualis;
+	ptr[1]=new Sumo;
+	ptr[2]=new Volvo;
+	for(int i=0;i<3;i++)
+		ptr[i]->start();
+}
+
+output:
+Start Qualis
+Start Sumo
+Start Volvo
+Press any key to continue . . .
+
+
+6)
+Define a class “MyNum” having a member variable “int num” and “void disp()”;	
+	From main function, perform following				
+	a) MyNum m1(20);						b) m1=100; //Do not use Constructor for this purpose			
+	c) int k;						
+	d) k=m1;							
+	e) cout<<endl<<k<<endl;
+
+Solution:
+#include<iostream>
+using namespace std;
+
+class Mynum
+{
+private: 
+	int num;
+public:
+	void display()
+	{
+	}
+	explicit Mynum(int k)
+	{
+		num=k;
+		cout<<"In Mynum Param constructor"<<num<<endl;
+	}
+	void operator=(int k)
+	{
+		num=k;
+		cout<<"In operator="<<num<<endl;
+	}
+	operator int()
+	{
+		return num;
+	}
+};
+int main()
+{
+	Mynum m1(20);
+	m1=100;
+	int k;
+	k=m1;
+	cout<<endl<<k<<endl;
+}
+
+Output:
+In Mynum Param constructor20
+In operator=100
+
+100
+Press any key to continue . . .
+
+
+7) create a base1 and base2 classes in the library.
+constructors, member variables and functions you can have in the above classes of your choice.
+
+now create an application where you have to create a child class of above classes.
+in the main function create an instance of child class and try to access methods of base1 and base2.
+
+Solution:
+
+
+Output:
+
+
+
+8)
+Create a base class “Subject”.Declare pure virtual function “void maxmarks()” in it.  Define following sub classes for this class. A) Maths b) History c) English.	Define “maxmarks” in these classes.
+
+now write a global function "show" which will accept "subject class pointer" as an argument. this function should be able to call "maxmarks()" of any child class which is passed.
+From main function try to call this function by passing various child classes.
+
+
+9) same as above except it has to be done using reference of parent class.

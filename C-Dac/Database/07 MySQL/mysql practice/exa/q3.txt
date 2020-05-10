@@ -1,0 +1,75 @@
+3. Write a function which takes a string as parameter and returns the reverse of the string
+
+sol:
+
+CREATE DEFINER=`root`@`localhost` FUNCTION `reverse2`(str varchar(100))
+ RETURNS varchar(100) CHARSET latin1
+
+begin
+
+declare n int;
+
+declare rev varchar(50);
+
+declare finl varchar(50);
+
+set finl:="";
+
+set n:=length(str);
+
+resloop:loop
+
+if n<1 then
+
+leave resloop;
+
+end if;
+
+
+set rev:=substr(str,n,1);
+
+set n:=n-1;
+
+
+set finl:=concat(finl,rev);
+
+
+end loop resloop;
+
+return finl;
+
+end
+
+
+--------------------------------------------------------------
+
+create function rev(str varchar(100)) returns varchar(100)
+begin
+declare str1 varchar(30);
+declare len int;
+set str1:='';
+set len:=length(str);
+myloop:loop
+if(1>len)
+leave loop myloop;
+end if;
+set str1:=concat(str1,substr(str,len,1));
+set len:=len-1;
+return str1;
+end loop myloop;
+end
+$$
+
+
+---------------------------------------------------------------
+
+create function pal(str varchar(100)) returns varchar(100)
+begin 
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+step 1
+start visual studio
+select c# on  left
+select Class Library on right
+save and compile
+
+step 2
+start visual studio 
+select c# on  left
+select Console Application
+
+in solution explorer right click on references -
+add references and selct your dll file from bin folder which you created in step 1
+
+add using (namespace)
+compile and run

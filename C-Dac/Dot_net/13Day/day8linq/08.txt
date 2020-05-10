@@ -1,0 +1,22 @@
+Filtering Data Using OfType<T>()
+As you know, nongeneric types are capable of containing any combination of items, as the members of
+these containers (again, such as the ArrayList) are prototyped to receive System.Objects. 
+
+For example,
+assume an ArrayList contains a variety of items, only a subset of which are numerical. If you want to
+obtain a subset that contains only numerical data, you can do so using OfType<T>(), since it filters out
+
+each element whose type is different from the given type during the iterations:
+static void OfTypeAsFilter()
+{
+// Extract the ints from the ArrayList.
+ArrayList myStuff = new ArrayList();
+myStuff.AddRange(new object[] { 10, 400, 8, false, new Car(), "string data" });
+
+var myInts = myStuff.OfType<int>();
+// Prints out 10, 400, and 8.
+foreach (int i in myInts)
+{
+Console.WriteLine("Int value: {0}", i);
+}
+}

@@ -1,0 +1,27 @@
+ASSIGNMENT 2 QUE4
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class myclass1
+{
+public: void disp1()
+		{ 
+			cout<<"disp1"<<endl;
+		}
+};
+class myclass2
+{
+public: void disp2()
+		{ 
+			cout<<"disp2"<<endl;
+			myclass1 m1;
+			m1.disp1();
+		}
+};
+int main()
+{
+	myclass2 m2;
+	m2.disp2();
+	getch();
+}
+

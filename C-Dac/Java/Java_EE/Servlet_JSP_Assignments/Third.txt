@@ -1,0 +1,11 @@
+1) write a servlet,which will store the value in request attribute and forward it to jsp. In jsp u try to retrieve the same value from request attribute and display.
+
+2) write a jsp which will store a value in session. write a servlet which will try to access the same value from session attribute.
+(first run jsp and then servlet).
+
+
+
+3) write a jsp,which will store the value in request attribute and forward it to servlet. In servlet u try to retrieve the same value from request attribute and display.
+
+4) write a servlet which will store a value in session. write a jsp which will try to access the same value from session attribute.
+(first run servlet and then jsp).

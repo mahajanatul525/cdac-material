@@ -1,0 +1,7 @@
+// associate FileInputStream with BufferedInputStream
+
+BufferedInputStream bf=new BufferedInputStream(new FileInputStream("abc.txt"));
+
+
+
+bf.read(); // this read will call "fill()" to fill the buffer with FileInputStream data ( abc.txt ) and then we actually read one one byte from buffer.	

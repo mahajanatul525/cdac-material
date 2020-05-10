@@ -1,0 +1,24 @@
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 19\SimpleMultiThreadApp\bin\Debug\SimpleMultiThreadApp.exe
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 19\SimpleMultiThreadApp\bin\Debug\SimpleMultiThreadApp.pdb
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 19\SimpleMultiThreadApp\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 19\SimpleMultiThreadApp\obj\x86\Debug\SimpleMultiThreadApp.exe
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 19\SimpleMultiThreadApp\obj\x86\Debug\SimpleMultiThreadApp.pdb
+D:\dot_net\Day_wise\day6\Thread_new\05SimpleMultiThreadApp\obj\x86\Debug\SimpleMultiThreadApp.exe
+D:\dot_net\Day_wise\day6\Thread_new\05SimpleMultiThreadApp\obj\x86\Debug\SimpleMultiThreadApp.pdb
+D:\dot_net\Day_wise\day6\Thread_new\05SimpleMultiThreadApp\bin\Debug\SimpleMultiThreadApp.exe
+D:\dot_net\Day_wise\day6\Thread_new\05SimpleMultiThreadApp\bin\Debug\SimpleMultiThreadApp.pdb
+D:\dot_net\Day_wise\day6\Thread_new\05SimpleMultiThreadApp\obj\x86\Debug\SimpleMultiThreadApp.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day6\05Thread_new\05SimpleMultiThreadApp\obj\x86\Debug\SimpleMultiThreadApp.exe
+D:\dot_net\Day_wise\day6\05Thread_new\05SimpleMultiThreadApp\obj\x86\Debug\SimpleMultiThreadApp.pdb
+D:\dot_net\Day_wise\day6\05Thread_new\05SimpleMultiThreadApp\bin\Debug\SimpleMultiThreadApp.exe
+D:\dot_net\Day_wise\day6\05Thread_new\05SimpleMultiThreadApp\bin\Debug\SimpleMultiThreadApp.pdb
+D:\dot_net\Day_wise\day6\05Thread_new\05SimpleMultiThreadApp\obj\x86\Debug\SimpleMultiThreadApp.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day6\07Thread_new\05SimpleMultiThreadApp\obj\x86\Debug\SimpleMultiThreadApp.exe
+D:\dot_net\Day_wise\day6\07Thread_new\05SimpleMultiThreadApp\obj\x86\Debug\SimpleMultiThreadApp.pdb
+D:\dot_net\Day_wise\day6\07Thread_new\00TComp_ex_thread\08SimpleMultiThreadApp\obj\x86\Debug\SimpleMultiThreadApp.exe
+D:\dot_net\Day_wise\day6\07Thread_new\00TComp_ex_thread\08SimpleMultiThreadApp\obj\x86\Debug\SimpleMultiThreadApp.pdb
+C:\Users\practice\Desktop\Dot_net\day6\07Thread_new\04TComp_ex_thread\08SimpleMultiThreadApp\obj\x86\Debug\SimpleMultiThreadApp.exe
+C:\Users\practice\Desktop\Dot_net\day6\07Thread_new\04TComp_ex_thread\08SimpleMultiThreadApp\obj\x86\Debug\SimpleMultiThreadApp.pdb
+C:\Users\practice\Desktop\Dot_net\day6\07Thread_new\04TComp_ex_thread\08SimpleMultiThreadApp\bin\Debug\SimpleMultiThreadApp.exe
+C:\Users\practice\Desktop\Dot_net\day6\07Thread_new\04TComp_ex_thread\08SimpleMultiThreadApp\bin\Debug\SimpleMultiThreadApp.pdb
+C:\Users\practice\Desktop\Dot_net\day6\07Thread_new\04TComp_ex_thread\08SimpleMultiThreadApp\obj\x86\Debug\SimpleMultiThreadApp.csprojResolveAssemblyReference.cache

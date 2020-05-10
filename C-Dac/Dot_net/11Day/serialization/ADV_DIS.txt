@@ -1,0 +1,33 @@
+Advantages and Disadvantages of Binary Serialization
+
+One of the major advantages of using Binary Serialization in the managed environment is that the object can be de-serialized from the same data you serialized it to. Besides, the other advantage of Binary Serialization is enhanced performance as it is faster and even more powerful in the sense that it provides support for complex objects, read only properties and even circular references. However, the downside to this is that it is not easily portable to another platform.
+
+
+
+
+
+
+SOAP Serialization
+The SOAP protocol is ideal for communicating between applications that use heterogeneous 
+architectures. In order to use SOAP serialization in .NET we have to add a reference toSystem.Runtime.Serialization.Formatters.Soap in the application. The basic advantage of SOAP serialization is portability. The SoapFormatter serializes objects into SOAP messages or parses SOAP messages and extracts serialized objects from the message. The following code listing shows how we can implement serialization using the SOAP protocol:
+
+
+
+
+
+
+
+
+XML Serialization
+According to MSDN, "XML serialization converts (serializes) the public fields and properties of an object or the parameters and returns values of methods, into an XML stream that conforms to a specific XML Schema definition language (XSD) document. XML serialization results in strongly typed classes with public properties and fields that are converted to a serial format (in this case, XML) for storage or transport. Because XML is an open standard, the XML stream can be processed by any application, as needed, regardless of platform." Implementing XML Serialization in .NET is quite simple. The basic class that we need to use is theXmlSerializer for both serialization and de-serialization. The Web Services use the SOAP protocol for communication and the return types and the parameters are all serialized using the XmlSerializer class. XML Serialization is however, much slower compared to Binary serialization. We can set a property as an XML attribute 
+
+Advantages of XML Serialization
+The advantages of XML Serialization are as follows:
+1.	XML based
+2.	Support for cross platforms
+3.	Easily readable and editable
+
+
+
+
+

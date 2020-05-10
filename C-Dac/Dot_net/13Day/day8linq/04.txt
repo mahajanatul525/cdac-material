@@ -1,0 +1,22 @@
+The Role of Immediate Execution
+When you need to evaluate a LINQ expression from outside the confines of foreach logic, you are able to
+call any number of extension methods defined by the Enumerable type as ToArray<T>(),
+
+ToDictionary<TSource,TKey>(), and ToList<T>(). These methods will cause a LINQ query to execute at
+the exact moment you call them, to obtain a snapshot of the data. 
+
+After you have done so, the snapshot of data may be independently manipulated:
+static void ImmediateExecution()
+{
+int[] numbers = { 10, 20, 30, 40, 1, 2, 3, 8 };
+// Get data RIGHT NOW as int[].
+int[] subsetAsIntArray =
+(from i in numbers where i < 10 select i).ToArray<int>();
+
+// Get data RIGHT NOW as List<int>.
+List<int> subsetAsListOfInts =
+(from i in numbers where i < 10 select i).ToList<int>();
+}
+
+Notice that the entire LINQ expression is wrapped within parentheses to cast it into the correct
+underlying type (whatever that might be) in order to call the extension methods of Enumerable.

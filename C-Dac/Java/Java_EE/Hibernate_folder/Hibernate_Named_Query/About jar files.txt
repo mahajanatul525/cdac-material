@@ -1,0 +1,1 @@
+set of jar files same as normal set. instead of "ejb3.persistence...jar" put "javax.pesistence.jar". this is especially for "NamedQuery" annotation.

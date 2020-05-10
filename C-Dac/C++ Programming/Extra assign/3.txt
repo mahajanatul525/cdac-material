@@ -1,0 +1,60 @@
+/* Create a base class Advertisement. Declare pure virtual function “void publish()” in it. 			
+Define following sub classes for this class.                       			A) TV  b) Banner  c) NewsPaper		                                       	
+	in main function, create an array of pointer to "Advertisement" and store addresses of all the child classes.
+now traverse through the array and check using dynamic cast , if array contains "Banner" , then only invoke "publish()" .( RTTI).*/
+
+#include<iostream>
+using namespace std;
+class Advertisement
+{
+public:
+	virtual void publish()=0;
+};
+class TV: public Advertisement
+{
+	void publish()
+	{
+		cout<<"in tv"<<endl;
+	}
+};
+class Banner: public Advertisement
+{
+	void publish()
+	{
+		cout<<"in Banner"<<endl;
+	}
+};
+class Newspaper: public Advertisement
+{
+	void publish()
+	{
+		cout<<"in Newspaper"<<endl;
+	}
+};
+void show(Advertisement *ptr)
+{
+	if(dynamic_cast<Banner*>(ptr))
+	{
+		ptr->publish();
+	}
+	else
+	{
+		cout<<"not in banner"<<endl;
+	}
+
+}
+void main()
+{
+	int i;
+	Advertisement* a[3];
+	a[0]=new TV;
+	a[1]=new Banner;
+	a[2]=new Newspaper;
+	for(i=0;i<3;i++)
+	{
+		show( a[i] );
+	}
+	getchar();
+}
+
+

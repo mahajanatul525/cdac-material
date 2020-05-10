@@ -1,0 +1,7 @@
+You'll always get mscoree.dll loaded, that's the bootstrapper for the default CLR host. 
+
+It is an unmanaged DLL. Every .NET assembly contains a wee bit of native code, just a jump into that DLL.
+
+ It does however get loaded by recent Windows versions directly, the OS loader has .NET awareness built-in. You can see it in the Debug + Modules window when you turn on the unmanaged debugging option, Project + Properties, Debug tab. 
+
+You'll then also see mscorjit.dll, mscorwks.dll and msvcr80.dll, three other chunks of native code that are required to run managed code. Respectively the just-in-time compiler, the CLR and the C-runtime support library. They have different DLL names in .NET 4.

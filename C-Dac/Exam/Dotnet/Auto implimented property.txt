@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class employee
+    {
+       static int _accid;
+        double _balance;
+        int acc;
+        public String Name
+        {
+            get;
+            set;
+        }
+       public  employee(String name, double bal)
+        {
+            Name = name;
+            _balance = bal;
+            acc = ++_accid;
+        }
+        public int Accid
+        {
+            get
+            {
+                return acc;
+            }
+        }
+        public double Balance
+        {
+            get
+            {
+                return _balance;
+            }
+        }
+         public void disp()
+        {
+            Console.WriteLine("{0}  {1}  {2}", acc, Name, _balance);
+        }
+
+
+       
+
+    }
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            employee e1 = new employee("ATUL",100000.00);
+            employee e2 = new employee("Sourabh", 200000.00);
+            employee e3 = new employee("Mohit", 300000.00);
+            employee e4 = new employee("Ajay", 400000.00);
+            employee e5 = new employee("Rahul", 500000.00);
+            employee e6 = new employee("Mahesh", 600000.00);
+            e1.disp();
+            e2.disp();
+            e3.disp();
+            e4.disp();
+            e5.disp();
+            e6.disp();
+        }
+    }
+}

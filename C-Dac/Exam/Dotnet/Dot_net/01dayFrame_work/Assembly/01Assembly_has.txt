@@ -1,0 +1,16 @@
+Assemblies are the building blocks of .NET Framework applications. During the compile time Metadata is created with Microsoft Intermediate Language (MSIL) and stored in a file called Assembly Manifest . Both Metadata and Microsoft Intermediate Language (MSIL) together wrapped in a Portable Executable (PE) file. Assembly Manifest contains information about itself. This information is called Assembly Manifest, it contains information about the members, types, references and all the other data that the runtime needs for execution.
+
+
+Net Assembly Contents
+
+A .NET static assembly can consist of following elements:
+
+a) Assembly Manifest - The Metadata that describes the assembly and its contents
+
+b) Type Metadata - Defines all types, their properties and methods.
+
+c) MSIL - Microsoft intermediate language
+
+d) A set of Resources - All other resources like icons, images etc.
+
+Only the assembly manifest is required, but either types or resources are needed to give the assembly in any meaningful functionality.

@@ -1,0 +1,109 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+
+// Defined within System.Xml.dll.
+using System.Xml.Serialization;
+using System.IO;
+
+namespace SimpleSerialize
+{
+    #region Types to serialize
+
+
+    [Serializable]
+    public class employee
+    {
+        string name;
+        int sal;
+        public employee() { }//xml require parameterless constructor
+        public employee(string nm, int sal)
+        {
+            Name = nm;
+            Salary = sal;
+        }
+
+        public String Name { get { return name; } set { name = value; } }
+
+        public int Salary
+        {
+            get { return sal; }
+            set { sal = value; }
+        }
+
+    }
+
+    #endregion
+
+    class Program
+    {
+        // Be sure to import the System.Xml.Serialization
+        // and System.IO namespaces.
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***** Fun with Object Serialization *****\n");
+            employee e = new employee();
+
+            List<employee> myEmp = new List<employee>();
+            myEmp.Add(new employee("raj", 7000));
+            myEmp.Add(new employee("geeta", 9000));
+
+
+
+            // Save as SOAP.
+            SaveAsXmlFormat(myEmp, @"..\xmlemp.xml");
+
+            string fn = @"..\xmlemp.xml";
+            LoadFromFile(fn);
+
+
+            Console.ReadLine();
+        }
+
+
+
+
+        #region Save as XML
+        // Be sure to import System.Runtime.Serialization.Formatters.Soap
+        // and reference System.Runtime.Serialization.Formatters.Soap.dll.
+        #region Save as XML
+        static void SaveAsXmlFormat(object objGraph, string fileName)
+        {
+            // Save object to a file named CarData.xml in XML format.
+            XmlSerializer xmlFormat = new XmlSerializer(typeof(List<employee>));
+
+            using (Stream fStream = new FileStream(fileName,
+              FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                xmlFormat.Serialize(fStream, objGraph);
+            }
+            Console.WriteLine("=> Saved car in XML format!");
+        }
+
+        #endregion
+
+        #endregion
+
+
+        static void LoadFromFile(string fn)
+        {
+
+            // read object to a file named CarData.soap in SOAP format.
+            XmlSerializer xmlFormat = new XmlSerializer(typeof(List<employee>));
+            using (Stream fStream = new FileStream(fn,FileMode.Open,FileAccess.Read))
+            {
+                fStream.Position = 0;
+                List<employee> obj = (List<employee>)xmlFormat.Deserialize(fStream);
+                foreach (employee e in obj)
+                    Console.WriteLine("{0}  {1}", e.Name, e.Salary);
+            }
+
+        }
+
+    }
+
+}

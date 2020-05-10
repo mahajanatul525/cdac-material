@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+   <h:head>
+      <title>JSF tutorial</title>		
+      <h:outputStylesheet library="css" name="styles.css"  /> 	
+   </h:head>
+   <h:body> 
+   <h2>DataTable Example</h2>
+   <h:form>
+      <h:dataTable value="#{empbean.employees}" var="empl"
+         styleClass="employeeTable"
+         headerClass="employeeTable-header"
+         rowClasses="employeeTable-odd-row,employeeTable-even-row">
+         <h:column>    				
+            <f:facet name="header">Name</f:facet>    				
+            <h:inputText value="#{empl.name}"
+               size="10" rendered="#{empl.canedit}" />
+            <h:outputText value="#{empl.name}"
+               rendered="#{not empl.canedit}" />
+         </h:column>
+         <h:column>
+            <f:facet name="header">Designation</f:facet>
+            <h:inputText value="#{empl.designation}" 
+               size="20" rendered="#{empl.canedit}" />
+            <h:outputText value="#{empl.designation}" 
+               rendered="#{not empl.canedit}" />
+         </h:column>
+         
+         <h:column>
+            <f:facet name="header">Salary</f:facet>
+            <h:inputText value="#{empl.salary}" 
+               size="5" rendered="#{empl.canedit}" />
+            <h:outputText value="#{empl.salary}" 
+               rendered="#{not empl.canedit}" />
+         </h:column>
+         <h:column>
+            <f:facet name="header">Edit</f:facet>
+               <h:commandButton value="Edit" 
+                  action="#{empbean.editEmployee}">        
+                   <f:setPropertyActionListener 
+                     target="#{empbean.employee}" value="#{empl}" /> 
+               </h:commandButton>
+         </h:column>
+      </h:dataTable>  
+	  <br/>
+	<h:commandButton value="Save Employees"
+          action="#{empbean.saveEmployees}" />	  
+   </h:form>
+   </h:body>
+</html>

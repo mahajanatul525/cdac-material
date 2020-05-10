@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication7
+{
+  class shape
+  {
+      public int Height{get;set;}
+      public int Width{get;set;}
+      public int Area{get;set;}
+
+      public virtual void area(int x, int y) { }
+      
+  }
+
+  class tringle:shape
+  {
+      public override void area(int x, int y)
+    {
+ 	     Area=(int)((x*y)*(0.5));
+          Console.WriteLine("tringle-->{0}",Area);
+    }
+  }
+
+  class rect : shape
+  {
+      public override void area(int x, int y)
+      {
+          Area = x * y;
+          Console.WriteLine("ract-->{0}", Area);
+      }
+
+      public void disp()
+      {
+          Console.WriteLine("mai hu rectangle aur aap kon hai");
+      }
+  }
+
+  class entry
+  {
+      public static void Main()
+      {
+          shape[] sp = new shape[2];
+
+          sp[0] = new tringle();
+          sp[1] = new rect();
+         // sp[0].area(10, 20);
+        //  ((rect)sp[1]).disp();
+
+
+       for (int i = 0; i < sp.Length; i++)
+        {
+              sp[i].area(10, 20);
+              if (sp[i] is rect)
+              {
+                  ((rect)sp[i]).disp();
+              }
+       }
+         
+        }
+      }
+  }
+
+
+
+}

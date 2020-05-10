@@ -1,0 +1,15 @@
+D:\asp_net_trining_examples\31cookies\bin\31cookies.dll
+D:\asp_net_trining_examples\31cookies\bin\31cookies.pdb
+D:\asp_net_trining_examples\31cookies\obj\Debug\ResolveAssemblyReference.cache
+D:\asp_net_trining_examples\31cookies\obj\Debug\31cookies.dll
+D:\asp_net_trining_examples\31cookies\obj\Debug\31cookies.pdb
+D:\dot_net\Day_wise\day13asp\31Cookies\31cookies\bin\31cookies.dll
+D:\dot_net\Day_wise\day13asp\31Cookies\31cookies\bin\31cookies.pdb
+D:\dot_net\Day_wise\day13asp\31Cookies\31cookies\obj\Debug\31cookies.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day13asp\31Cookies\31cookies\obj\Debug\31cookies.dll
+D:\dot_net\Day_wise\day13asp\31Cookies\31cookies\obj\Debug\31cookies.pdb
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\31Cookies\31cookies\bin\31cookies.dll
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\31Cookies\31cookies\bin\31cookies.pdb
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\31Cookies\31cookies\obj\Debug\31cookies.csprojResolveAssemblyReference.cache
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\31Cookies\31cookies\obj\Debug\31cookies.dll
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\31Cookies\31cookies\obj\Debug\31cookies.pdb

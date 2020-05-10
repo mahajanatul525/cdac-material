@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int a,b,c,d, max, sum, pflag=0, sflag=0;
+	printf("Enter length of four sides\n");
+	scanf("%d%d%d%d", &a, &b, &c, &d );
+	if(a>b&&a>c&&a>d)
+		{
+			max=a;
+			sum=b+c+d;
+		}
+	else if(b>c&&b>d)
+		{
+			max=b;
+			sum=a+c+d;
+		}
+	else if(c>d)
+		{
+			max=c;
+			sum=a+b+d;
+		}
+	else
+		{
+			max=d;
+			sum=a+b+c;
+		}
+	if(max<=sum)
+		pflag=1;
+	if(a==b&&b==c&&c==d&&d&&a)
+		sflag=1;
+	printf("\nPolygon status= %d", pflag);
+	printf("\nsquare status= %d", sflag);
+	getch();
+}

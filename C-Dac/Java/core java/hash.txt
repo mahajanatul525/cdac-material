@@ -1,0 +1,32 @@
+b) create a HashMap.
+store  prn no. and students name of 10 students inside the HashMap.
+display it using iterator.
+
+=============================
+package mypack;
+
+import java.util.*;
+
+public class hash {
+
+	public static void main(String[] args)
+	{
+		Map <Integer,String> m=new HashMap <Integer,String>();
+		m.put(1,"a");
+		m.put(2,"b");
+		m.put(3,"c");
+		m.put(4,"d");
+		m.put(5,"e");
+		Set s=m.entrySet();
+		Iterator i=s.iterator();
+		while(i.hasNext())
+		{
+			Map.Entry m1=(Map.Entry)i.next();
+			System.out.println(m1.getKey());
+			System.out.println(m1.getValue());
+		//	System.out.println(i.next());
+		}
+
+	}
+
+}

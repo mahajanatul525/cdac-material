@@ -1,0 +1,11 @@
+log4j:WARN No appenders could be found for logger (org.hibernate.cfg.annotations.Version).
+log4j:WARN Please initialize the log4j system properly.
+Hibernate: insert into STUDENT (STUDENT_NAME) values (?)
+Hibernate: insert into PHONE (PHONE_NUMBER, PHONE_TYPE) values (?, ?)
+Hibernate: insert into PHONE (PHONE_NUMBER, PHONE_TYPE) values (?, ?)
+Hibernate: insert into STUDENT_PHONE (STUDENT_STUDENT_ID, studentPhoneNumbers_PHONE_ID) values (?, ?)
+Hibernate: insert into STUDENT_PHONE (STUDENT_STUDENT_ID, studentPhoneNumbers_PHONE_ID) values (?, ?)
+Hibernate: select student0_.STUDENT_ID as STUDENT1_0_0_, student0_.STUDENT_NAME as STUDENT2_0_0_ from STUDENT student0_ where student0_.STUDENT_ID=?
+1
+abc
+in catch	org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: mypack.Student.studentPhoneNumbers, no session or session was closed

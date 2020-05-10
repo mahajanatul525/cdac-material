@@ -1,0 +1,21 @@
+//when runnable is implemented there is a need of creating object of thread class 
+package multithreading;
+
+public class th1implements runnable
+{
+	public void run()
+	{
+		for(char i=65;i<75;i++)
+		{
+			System.out.println("Hello"+i+"\t"+Thread.currentThread());
+		}
+	}
+	public static void main(String args[])
+	{
+		th1 t1=new th1();//target object
+		Thread t2=new Thread(t1);
+		Thread t3=new Thread(t1);
+		t2.start();
+		t3.start();
+	}
+}

@@ -1,0 +1,105 @@
+body{
+	padding:0;
+	line-height: 1.5em;
+	background: #782609 url(images/hotel_body_bg.jpg) repeat-x;
+	font-size: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#wrapper
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:1080px;
+	height:500px;
+}
+#hotel_maincontainer{
+	width: 100%; 
+	height:auto;
+	float: left;
+	/*border:1px solid black;*/
+	padding:2px,2px,2px,2px;
+}
+#hotel_topsection{
+	padding:3px,5px,5px,5px;
+	background: url(images/hotel_header.jpg) no-repeat;
+	width:auto;
+	height: 18%; /*Height of top section*/
+	/*border:1px solid black;*/
+}
+#hotel_secondtopsection{
+	height:auto; /*Height of 2ndtop section*/
+	width:auto;
+	/*background: url(images/hotel_form-bg.jpg) repeat;*/
+	padding-left:12%;
+	padding-top:4px;
+	/*border:1px solid black;*/
+	
+}
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+#hotel_right_column {
+	float: right;
+	width: 17%;
+	height:auto;
+	margin-top:1px;
+	/*border:1px solid black;*/
+}
+#hotel_right_column1 {
+	float: left;
+	width: 96%;
+	height:auto;
+	padding-top:1px;
+	padding-right: 1px;
+	padding-left:3px;
+	margin-top:auto;
+	/*border:1px solid black;*/
+}
+#hotel_right_column2 {
+	float: left;
+	width: 96%;
+	height:auto;
+	padding-top:1px;
+	padding-right:1px;
+	padding-left:3px;
+	margin-top:auto;
+	/*border:1px solid black;*/
+}
+#hotel_left_column {
+	float: left;
+	width: 18%;
+	height:auto;
+	padding:2px,2px,2px,2px;
+	/*border:1px solid black;*/
+}
+#hotel_info_container {
+	overflow:hidden;
+	margin-left:197px;
+	margin-top:1px;
+	width: 64%;
+	height:70%;
+	/*border:1px solid black;*/
+
+	/*background: url(images/info.jpg) repeat;*/
+}
+#hotel_footer{
+	margin-top:2px;
+	float: left;
+	width: 100%;
+	padding-top:15px;
+	padding-bottom:15px;
+	height: auto;
+	color: #fff;
+	text-align: right;
+	font-size: 10px;
+	background: url(images/hotel_footer_bg.jpg) repeat-x;
+	/*border:1px solid black;*/
+}

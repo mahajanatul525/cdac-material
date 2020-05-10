@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication26
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] mymovies = { "ironman 1", "ironman 2", "ironman 3", "avenger", "avenger 1", "thor" };
+
+            IEnumerable<string> i = from j in mymovies where j.Contains("ironman") select j;
+
+            foreach (string s in i)
+            {
+                Console.WriteLine(s);
+
+            }
+            Console.ReadKey();
+
+        }
+
+
+
+    }
+}

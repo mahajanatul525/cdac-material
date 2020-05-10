@@ -1,0 +1,853 @@
+Question 1
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Which of the following is false about struct and class in C++?
+Select one:
+a. The members of a struct are public by default, while in class, they are private by default
+b. A class supports all the access specifiers like private, protected and public
+c. Struct and class are otherwise functionally equivalent
+d. A struct cannot have protected access specifier Correct
+Feedback
+Your answer is correct.
+The correct answer is: A struct cannot have protected access specifier
+Question 2
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will happen to the following code?
+
+#include<iostream.h>
+
+void main()
+
+{
+
+      int *ptr=new int;
+
+      delete []ptr;
+
+}
+
+
+Select one:
+a. Neither compilation nor Runtime Error Correct
+b. Compilation Error
+c. Runtime Error
+Feedback
+Your answer is correct.
+The correct answer is: Neither compilation nor Runtime Error
+Question 3
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+References are allocated memory
+
+Select one:
+a. True
+b. False Correct
+Feedback
+Your answer is correct.
+
+The correct answer is: False
+Question 4
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+what will happen to the following code ?
+
+
+#include<iostream.h>
+
+            void main()
+
+            {
+
+            for(int i=0;i<5;i++)
+
+            {
+
+            cout<<endl<<i;
+
+            }
+
+for(int i=5;  ;i++)
+
+            {
+
+            cout<<endl<<i;
+
+            }
+
+            }
+
+
+Select one:
+a. infinite loop because there is no condition in second for loop Incorrect
+b. it will print 0 to 9
+c. compilation error
+Feedback
+Your answer is incorrect.
+The correct answer is: compilation error
+Question 5
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What is the output of the program?
+
+#include <iostream.h>
+
+void main ()
+
+{
+
+for(int j = 1, sum = 0; j < 5; j++)
+
+sum += j;
+
+sum = j;
+
+cout << sum;
+
+}
+
+
+
+Select one:
+a. 5 Correct
+b. 10
+c. 6
+d. Compilation error. Undefined variable sum and j
+Feedback
+Your answer is correct.
+The correct answer is: 5
+Question 6
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will happen to the following code ?
+
+#include <iostream.h>
+
+const int a=20;
+
+void main()
+
+{
+
+            int *ptr;
+
+            const int* retA();
+
+            ptr=retA();
+
+            cout<<*ptr;
+
+}
+
+const int* retA()
+
+{
+
+            return &a;
+
+}
+
+
+Select one:
+a. compilation error
+b. neither warning nor compilation error Incorrect
+c. warning
+Feedback
+Your answer is incorrect.
+The correct answer is: compilation error
+Question 7
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+In case of function overloading
+
+Select one:
+a. return type must be different, arguments may or may not be different
+b. both return type and arguments must be different
+c. arguments must be different , return type may or may not be different Correct
+d. both return type and arguments must be same
+Feedback
+Your answer is correct.
+
+The correct answer is: arguments must be different , return type may or may not be different
+Question 8
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+void main()
+
+{
+
+          char *p="Hello";
+
+          char *q=p;
+
+          q="Good Bye";
+
+          cout<<p<<”\t”<<q;
+
+}
+
+Select one:
+a. Hello     Good Bye Correct
+b. Error: Lvalue Reqd.
+c. Good Bye     Good Bye
+Feedback
+Your answer is correct.
+
+The correct answer is: Hello     Good Bye
+Question 9
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Default arguments can be given in the beginning or in between also.
+Select one:
+a. False
+b. True Incorrect
+Feedback
+Your answer is incorrect.
+The correct answer is: False
+Question 10
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Given              
+
+    #include<iostream.h>
+
+       void main()
+
+       {
+
+                int *ptr=new int;
+
+               delete ptr;
+
+               //Some other C++ Statements....
+
+       }
+
+ 
+
+In the above code after  “ delete ptr “  statement, the situation becomes
+
+
+Select one:
+a. Memory Leak
+b. None of these
+c. Dangling Pointer Correct
+Feedback
+Your answer is correct.
+The correct answer is: Dangling Pointer
+Question 11
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+const int a=124;
+
+void main()
+
+{
+
+          const int* sample();
+
+          int *p;
+
+          p=sample();
+
+}
+
+const int* sample()
+
+{        return (&a);
+
+}
+
+Select one:
+a. Neither Warning nor Error Incorrect
+b. Warning
+c. Compilation Error
+Feedback
+Your answer is incorrect.
+
+The correct answer is: Compilation Error
+Question 12
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+void main()
+
+       {
+
+          int a=30;
+
+          f();
+
+      }
+
+void f()
+
+{
+
+          int b=30;
+
+}
+
+Select one:
+a. Successful output
+b. Compilation Error Correct
+c. Warning
+Feedback
+Your answer is correct.
+
+The correct answer is: Compilation Error
+Question 13
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+what will  happen to the following program ?                                                                                                                                                            #include<iostream.h>
+
+                void main()
+
+{
+
+                int *ptr=new int;
+
+                delete ptr;
+
+                ptr=0;
+
+                delete ptr;
+
+}                               
+Select one:
+a. compilation error
+b. neither compilation error nor runtime error Correct
+c. runtime error
+Feedback
+Your answer is correct.
+The correct answer is: neither compilation error nor runtime error
+Question 14
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+what will happen to the following code ?
+
+#include<iostream.h>
+
+void main()
+
+{
+
+      int a=30;
+
+      f();
+
+}
+
+void f()
+
+{
+
+      int b=30;
+
+}
+
+
+Select one:
+a. Compilation Error
+b. Warning
+c. Successful output Incorrect
+Feedback
+Your answer is incorrect.
+The correct answer is: Compilation Error
+Question 15
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+void main()
+
+{
+
+          int i=5;
+
+          int &j=i;
+
+          int p=10;
+
+          j=p;
+
+         p=20;
+
+         cout<<endl<<i<<endl<<j;
+
+}
+
+Select one:
+a. 5, 10 Incorrect
+b. 10, 10
+c. 10, 5
+d. 20, 20
+Feedback
+Your answer is incorrect.
+
+The correct answer is: 10, 10
+Question 16
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+void  main()                                                                                  
+
+{                                                                                             
+
+char * const t=”hello”;
+
+t=”world”;
+
+}
+
+Select one:
+a. Neither Runtime Error or Compilation Error
+b. Compilation Error Correct
+c. Runtime Error
+Feedback
+Your answer is correct.
+
+The correct answer is: Compilation Error
+Question 17
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+what is the output ?
+
+#include <stdio.h>
+
+float cal (float value)
+
+{
+
+return (3 * value);
+
+}
+
+void main()
+
+{
+
+int a = 10;
+
+float b = cal ("123");
+
+}
+
+
+Select one:
+a. 369 Incorrect
+b. 123
+c. None
+d. Compilation error - Cannot convert from char to float
+Feedback
+Your answer is incorrect.
+The correct answer is: Compilation error - Cannot convert from char to float
+Question 18
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What is the output of the program?
+
+#include <iostream.h>
+
+main()
+
+{
+
+int a=5, b=10;
+
+if (a=b)
+
+cout<<"Hi";
+
+else
+
+cout<<"Hello";
+
+cout<<"Bye"<<a;
+
+}
+
+
+Select one:
+a. Compilation Error
+b. HiBye10
+c. HelloBye10 Incorrect
+d. Bye10
+Feedback
+Your answer is incorrect.
+The correct answer is: HiBye10
+Question 19
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+int& disp()
+
+{
+
+          int num=10;
+
+          return num;
+
+}
+
+void main()
+
+{
+
+   disp()=30;
+
+}
+
+Select one:
+a. Warning
+b. No Error, No Warning
+c. Compilation Error Incorrect
+Feedback
+Your answer is incorrect.
+
+The correct answer is: Warning
+Question 20
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will happen to the following code  while compiling ?                                            int&  retVal()                                                                         
+
+{                                                                                                             
+
+int cnt=20;                                                                                      
+
+return cnt;                                                                 
+
+}
+
+Select one:
+a. Error
+b. No Error Incorrect
+c. Warning
+Feedback
+Your answer is incorrect.
+
+The correct answer is: Warning
+Question 21
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Function overloading and operator overloading comes under
+Select one:
+a. Run time polymorphism Incorrect
+b. Compile time polymorphism
+c. Both a and b are correct
+d. None of the above
+Feedback
+Your answer is incorrect.
+The correct answer is: Compile time polymorphism
+Question 22
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+what will happen to the following code ?
+
+ 
+
+#include<iostream.h>
+
+       void main()
+
+       {
+
+       for(int i=0;i<5;i++)
+
+{
+
+int a=0;
+
+a++;
+
+}
+
+cout<<endl<<a;
+
+}
+
+
+Select one:
+a. it will print 5
+b. it will print garbage value
+c. compilation error
+d. it will print 1 Incorrect
+Feedback
+Your answer is incorrect.
+The correct answer is: compilation error
+Question 23
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+what will happen to the following code?
+
+#include<iostream.h>
+
+void main()
+
+{
+
+            int *ptr=new int;
+
+            delete ptr;
+
+            delete ptr;
+
+}
+
+
+Select one:
+a. Runtime Error
+b. Neither compilation nor Runtime Error Incorrect
+c. Compilation Error
+Feedback
+Your answer is incorrect.
+The correct answer is: Runtime Error
+Question 24
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What is the output of the following?
+
+#include <iostream.h>
+
+int add(int, int = 5, int = 10);
+
+void main()                                                                                                                                                                                                        {
+
+cout << add(10) << " " << add(10, 20) << " " << add(10, 20, 30);
+
+}                                                                                                                                                                                                                                  
+
+int add(int a, int b, int c)
+
+{
+
+return a + b + c;
+
+}
+
+
+Select one:
+a. 15 30 60
+b. compilation error Incorrect
+c. 20 40 60
+d. 25 40 60
+Feedback
+Your answer is incorrect.
+The correct answer is: 25 40 60
+Question 25
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+ what is the output ?
+
+#include<iostream.h>
+
+const int a=124;
+
+void main()
+
+{
+
+   const int* sample();
+
+   int * const  p=sample();
+
+}
+
+const int* sample()
+
+{  return (&a);
+
+}
+
+
+Select one:
+a. runtime error
+b. compile time error Correct
+c. neither compilation nor runtime error
+Feedback
+Your answer is correct.
+The correct answer is: compile time error
+Question 26
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+cin and cout are present in 
+
+Select one:
+a. conio.h
+b. iostream.h Correct
+c. stdio.h
+Feedback
+Your answer is correct.
+
+The correct answer is: iostream.h
+Question 27
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What is the output of the program?
+
+#include <iostream.h>
+
+inline int max(int x, int y)
+
+{
+
+return(x > y ? x : y);
+
+}
+
+void main()
+
+{
+
+int(* max_func)(int,int)=max;
+
+cout << max_func(75,33);
+
+}
+
+
+Select one:
+a. None of the above
+b. 75 Correct
+c. 33
+d. Error - Undefined symbol max_func
+Feedback
+Your answer is correct.
+The correct answer is: 75
+Question 28
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+#include<iostream.h>
+
+void main()
+
+{      
+
+            char t[]="String functions are simple";
+
+            int len=strlen(t);
+
+            cout<<len;
+
+}
+
+
+Select one:
+a. successful output
+b. Compilation Error  Correct
+c. Warning
+Feedback
+Your answer is correct.
+The correct answer is: Compilation Error
+Question 29
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will be the output of the following code 
+ #include
+ #define MAXROW 3 
+#define MAXCOL 4 
+void main()
+{
+ int (*p) [MAXCOL];
+p=new int[MAXROW][MAXCOL]; 
+cout<<<<endl<<sizeof(p)<<endl<<sizeof(*p);
+}
+
+Select one:
+a. 2(under Dos) or 4(under Linux or windows) 8(under Dos) or 16(under Linux or windows) Correct
+b. compilation error
+c. 4(under Dos) or 8(under Linux or windows) 8(under Dos) or 16(under Linux or windows)
+d. runtime error
+Feedback
+Your answer is correct.
+The correct answer is: 2(under Dos) or 4(under Linux or windows) 8(under Dos) or 16(under Linux or windows)
+Question 30
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Given
+
+#include<iostream.h>
+
+void disp()
+
+{
+
+        int *ptr=new int;
+
+}
+
+void main()
+
+{
+
+        disp();
+
+}
+
+ 
+
+In the above code after disp() method is over, the situation becomes
+
+
+Select one:
+a. Memory Leak Correct
+b. None of these
+c. Dangling Poiner
+Feedback
+Your answer is correct.
+The correct answer is: Memory Leak

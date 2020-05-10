@@ -1,0 +1,7 @@
+index.jsp
+	two links
+
+		java
+		c++
+
+when u click on java or c++ control goes to VitaController class which will add modules in ArrayList , based on which link u have selected (@RequestMapping), and store it in a "ModelAndView" object. now controller will forward the request to course.jsp which will display the ArrayList.

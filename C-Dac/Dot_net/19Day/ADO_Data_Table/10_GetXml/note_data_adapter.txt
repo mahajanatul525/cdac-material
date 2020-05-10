@@ -1,0 +1,97 @@
+The example shown below 
+1. Creates an instance of SqlDataAdapter, passing in the required parameters (SqlCommandText and the Connection object)
+
+2. Creates an instance of DataSet object. A DataSet is an in-memory data store, that can store tables, just like a database.
+
+3. The Fill() method of the SqlDataAdapter class is then invoked. This method does most of the work. It opens the connection to the database, executes the sql command, fills the dataset with the data, and closes the connection. Opening and closing connections is handled for us. The connection is kept open only as long as it is needed.
+
+4. The dataset object, is then set as the datasource of the GridView1 control
+
+5. Finally the DataBind() method is called, which binds the data to the control.
+
+
+string ConnectionString = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
+
+
+
+using (SqlConnection connection = new SqlConnection(ConnectionString))
+{
+    // Create an instance of SqlDataAdapter. Spcify the command and the connection
+
+    SqlDataAdapter dataAdapter = new SqlDataAdapter("select * from tblProductInventory", connection);
+    // Create an instance of DataSet, which is an in-memory datastore for storing tables
+
+    DataSet dataset = new DataSet();
+    // Call the Fill() methods, which automatically opens the connection, executes the command 
+    // and fills the dataset with data, and finally closes the connection.
+
+    dataAdapter.Fill(dataset);
+
+    GridView1.DataSource = dataset;
+    GridView1.DataBind();
+} 
+
+
+  
+
+Executing a stored procedure using SqlDataAdapter:
+Create procedure spGetProductInventory 
+as
+Begin
+ Select ProductId, ProductName, UnitPrice 
+ from tblProductInventory
+End
+
+If you want to execute stored procedure spGetProductInventory, using the SqlDataAdapter, just specify the name of the procedure instead of the in-line sql statement.
+
+
+SqlDataAdapter dataAdapter = new SqlDataAdapter("spGetProductInventory", connection);
+dataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create a text box and button on button click
+
+
+
+To execute stored procedure spGetProductInventoryById, we need to associate parameter @ProductId to the SqlDataAdapeter object's SelectCommand as shown below.
+
+string ConnectionString = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
+using (SqlConnection connection = new SqlConnection(ConnectionString))
+{
+    // Create an instance of SqlDataAdapter, specifying the stored procedure 
+    // and the connection object to use
+    SqlDataAdapter dataAdapter = new SqlDataAdapter("spGetProductInventoryById", connection);
+    // Specify the command type is an SP
+    dataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+    // Associate the parameter with the stored procedure
+    dataAdapter.SelectCommand.Parameters.AddWithValue("@ProductId", 1);
+    DataSet dataset = new DataSet();
+    dataAdapter.Fill(dataset);
+
+    GridView1.DataSource = dataset;
+    GridView1.DataBind();
+} 
+
+
+
+
+
+you can also have  SqlDataAdapter with parameterless constructor
+  SqlDataAdapter dataAdapter = new SqlDataAdapter();
+ dataAdapter.SelectCommand = new SqlCommand("spGetProductInventoryById", connection);
+ dataAdapter.SelectCommand.CommandType =CommandType.StoredProcedure;
+dataAdapter.SelectCommand.Parameters.AddWithValue("@ProductId", TextBox1.Text);

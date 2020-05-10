@@ -1,0 +1,34 @@
+7)select cname,s.sname from customers c join salespeople s on c.snum=s.snum 
+where c.snum=s.snum;
+
+27) select count(distinct snum) from orders where odate=current_date()
+
+17)select sum(amt) from orders group by odate having sum(amt)>(2000+max(amt
+
+37)select amt from orders having amt>(select avg(amt) from orders where odate='10/04/96');
+
+47)
+select sname from salespeople where city='Barcelona' or city='London';
+
+
+57)
+select case when city='Rome' then cname
+when rating>100 and city!='Rome' then cname
+end cname 
+from customers where case when city='Rome' then cname
+when rating>100 and city!='Rome' then cname
+end is not null;
+
+67)
+select onum,odate,amt from orders;
+
+77)
+select s.sname,o.onum,o.cnum from salespeople s join orders o on s.snum=o.snum group by s.sname having count(o.cnum)>1;
+
+
+87)
+SELECT * FROM ORDERS
+where (amt < 1000 OR NOT (odate = 10/03/1996 AND cnum >2003));
+
+97)
+select s.sname,c.cname,s.comm,c.rating from salespeople s  join customers c on s.snum=c.snum where s.comm>0.11 and c.rating<250;

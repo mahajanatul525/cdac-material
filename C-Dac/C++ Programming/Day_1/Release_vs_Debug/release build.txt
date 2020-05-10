@@ -1,0 +1,18 @@
+Understanding Release Builds
+
+You commonly develop your program by using debug builds. 
+
+By the time you are ready to create a release build: 
+
+All your code should be in place,
+
+
+Your code’s logic should be correct,algorithms are adequate etc.
+
+
+By default, a release build uses optimizations. i.e the compiler will not produce symbolic debugging information. The absence of symbolic debugging information, along with the fact that code is not generated for TRACE and ASSERT calls, means that the size of your executable file is reduced and will therefore be faster.
+
+
+
+
+

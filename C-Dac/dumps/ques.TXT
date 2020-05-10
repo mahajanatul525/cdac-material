@@ -1,0 +1,822 @@
+
+Question 1
+Incorrect
+Mark 0.00 out of 1.00
+Question text
+
+Data is read from the server or sent to the server by ______________ requests.
+Select one:
+a. JavaScript
+b. iFrame
+c. XMLHttp Object
+d. HttpXML Object Incorrect
+Feedback
+The correct answer is:
+
+XMLHttp Object
+.
+Question 2
+Incorrect
+Mark 0.00 out of 1.00
+Question text
+
+How can you make a list that lists the items with circles?
+Select one:
+a. <ul>
+b. <ol> Incorrect
+c. <list>
+d. <dl>
+Feedback
+The correct answer is:
+
+<ul>
+.
+Question 3
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+What is the correct HTML for referring to an external style sheet?
+Select one:
+a. <stylesheet>mystyle.css</stylesheet>
+b. @import URL(“mystyle.css); Correct
+c. <style src="mystyle.css">
+d. None of the above
+Feedback
+The correct answer is:
+
+@import URL(“mystyle.css);
+.
+Question 4
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+The ______ is a set of numbers that specifies the location of a computer on the Internet.
+Select one:
+a. TCP/IP
+b. URL
+c. HTTP
+d. IP address Correct
+Feedback
+The correct answer is:
+
+IP address
+.
+Question 5
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+CSS can be defined for entire pages by simply adding what to the head section?
+Select one:
+a. Script
+b. Class structure
+c. Style definition Correct
+d. None of the above
+Feedback
+The correct answer is:
+
+Style definition
+.
+Question 6
+Incorrect
+Mark 0.00 out of 1.00
+Question text
+
+What are the genral syntax for inline image?
+Select one:
+a. <src=img> Incorrect
+b. <img src=file >
+c. <img=file>
+d. <src=image>
+Feedback
+The correct answer is:
+
+<img src=file >
+.
+Question 7
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+Which one of the following is not a valid e-mail address?
+Select one:
+a. joe@example.com
+b. john@yahoo.com
+c. john@yahoo@.com Correct
+d. john@php.net
+Feedback
+The correct answer is:
+
+john@yahoo@.com
+.
+Question 8
+Incorrect
+Mark 0.00 out of 1.00
+Question text
+
+Which of the following is NOT done with JavaScript?
+Select one:
+a. RGB Colors
+b. Browser Detection Incorrect
+c. Form Validation
+d. None of the above
+Feedback
+The correct answer is:
+
+RGB Colors
+.
+Question 9
+Incorrect
+Mark 0.00 out of 1.00
+Question text
+
+Which of the following can you NOT specify with the window.open method?
+Select one:
+a. Which browser buttons and menus Incorrect
+b. Email address
+c. Size and position of the new window
+d. None of the above
+Feedback
+The correct answer is:
+
+Email address
+.
+Question 10
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+What is the correct syntax for referring to an external script called "xxx.js"?
+Select one:
+a. <script src="xxx.js"> Correct
+b. <script name="xxx.js">
+c. <script href="xxx.js">
+d. <script path="xxx.js">
+Feedback
+The correct answer is:
+
+<script src="xxx.js">
+.
+Question 11
+Incorrect
+Mark 0.00 out of 1.00
+Question text
+
+_________ is Javascript's default object
+Select one:
+a. Form
+b. Window
+c. Document
+d. Browser Incorrect
+Feedback
+The correct answer is:
+
+Window
+.
+Question 12
+Incorrect
+Mark 0.00 out of 1.00
+Question text
+
+Adding _top to a link within a frameset does what?
+Select one:
+a. loads the page into the current window Incorrect
+b. cancels all frames, loads in full browser window
+c. loads page in parent frame
+d. None of the above
+Feedback
+The correct answer is:
+
+cancels all frames, loads in full browser window
+.
+Question 13
+Incorrect
+Mark 0.00 out of 1.00
+Question text
+
+The PHP syntax is most similar to:
+Select one:
+a. Java Incorrect
+b. Perl and C
+c. JavaScript
+d. VBScript
+Feedback
+The correct answer is:
+
+Perl and C
+.
+Question 14
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+How do you get information from a form that is submitted using the "get" method?
+Select one:
+a. Request.querystring
+b. $_POST[];
+c. Request.form
+d. $_GET[]; Correct
+Feedback
+The correct answer is:
+
+$_GET[];
+.
+Question 15
+Incorrect
+Mark 0.00 out of 1.00
+Question text
+
+What is the correct way to include the file "time.inc" ?
+Select one:
+a. <?php require("time.inc"); ?>
+b. <?php include_file("time.inc"); ?>
+c. <% include file="time.inc" %> Incorrect
+d. <!--include file="time.inc"-->
+Feedback
+The correct answer is:
+
+<?php require("time.inc"); ?>
+.
+Question 16
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+What is the correct way to create a function in PHP?
+Select one:
+a. new_function myFunction()
+b. create myFunction()
+c. sub myFunction()
+d. function myFunction() Correct
+Feedback
+The correct answer is:
+
+function myFunction()
+.
+Question 17
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+What is the correct way to open the file "time.txt" as readable?
+Select one:
+a. fopen("time.txt","r+");
+b. open("time.txt");
+c. fopen("time.txt","r"); Correct
+d. open("time.txt","read");
+Feedback
+The correct answer is:
+
+fopen("time.txt","r");
+.
+Question 18
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+What is a correct way to add a comment in PHP?
+Select one:
+a. /*…*/ Correct
+b. *\..\*
+c. <comment>…</comment>
+d. <!--…-->
+Feedback
+The correct answer is:
+
+/*…*/
+.
+Question 19
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+Which one of these variables has an illegal name?
+Select one:
+a. $my_Var
+b. $myVar
+c. $my-Var Correct
+d. None of the above
+Feedback
+The correct answer is:
+
+$my-Var
+.
+Question 20
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+Which of the following tags is not a valid way to begin and end a PHP code block?
+Select one:
+a. <%      %>
+b. <?php ?>
+c. <!      !> Correct
+d. <?      ?>
+Feedback
+The correct answer is:
+
+<!      !>
+.
+Question 21
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+What is the best way to iterate through the $myarray array, assuming you want to modify the value of each element as you do?
+<?php
+    $myarray = array ("My String","Another String",  "Hi, Mom!");
+?>
+Select one:
+a. Using a foreach loop Correct
+b. There is no way to accomplish this goal
+c. Using a do…while loop
+d. Using a while loop
+e. Using a for loop
+Feedback
+The correct answer is:
+
+Using a foreach loop
+.
+Question 22
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+Relative path makes your hyperlinks
+Select one:
+a. Portable Correct
+b. Uniform
+c. Concrete
+d. None of the above
+Feedback
+The correct answer is:
+
+Portable
+.
+Question 23
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+How can the index.php script access the email form element of the following HTML form?
+<form action="index.php" method="post">
+<input type="text" name="email"/>
+</form>
+Select one:
+a. $_POST['email'] Correct
+b. $_SESSION['text’]
+c. $_GET['email']
+d. $_POST['text']
+Feedback
+The correct answer is:
+
+$_POST['email']
+.
+Question 24
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+If no expiration time is explicitly set for a cookie, what happens to it?
+Select one:
+a. It expires right away
+b. It never expires
+c. It expires at the end of the user’s browser session Correct
+d. It is not set
+Feedback
+The correct answer is:
+
+It expires at the end of the user’s browser session
+.
+Question 25
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+Array values are keyed by ______ values (called indexed arrays) or using ______ values  (called associative arrays). Of course, these key methods can be combined as well.
+Select one:
+a. Even number, string
+b. String, Boolean
+c. Float, string
+d. Integer, string Correct
+Feedback
+The correct answer is:
+
+Integer, string
+.
+Question 26
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+Which parameters would you pass to fopen() in order to open a file for reading and writing?
+Select one:
+a. a+ Correct
+b. w
+c. k
+d. r
+Feedback
+The correct answer is:
+
+a+
+.
+Question 27
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+What does PHP stand for?
+Select one:
+a. PHP: Hypertext Preprocessor Correct
+b. Personal Hypertext Processor
+c. Personal Home Page
+d. Private Home Page
+Feedback
+The correct answer is:
+
+PHP: Hypertext Preprocessor
+.
+Question 28
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+How do you write "Hello World" in PHP
+Select one:
+a. echo "Hello World"; Correct
+b. document.Write("Hello World");
+c. "Hello World";
+d. None of the above
+Feedback
+The correct answer is:
+
+echo "Hello World";
+.
+Question 29
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+All variables in PHP start with which symbol?
+Select one:
+a. *
+b. &
+c. !
+d. $ Correct
+Feedback
+The correct answer is:
+
+$
+.
+Question 30
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+What is the correct way to end a PHP statement?
+Select one:
+a. </php>
+b. ; (semicolon) Correct
+c. New Line
+d. . (dot)
+Feedback
+The correct answer is:
+
+; (semicolon)
+.
+Question 31
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+What does XML stand for?
+Select one:
+a. X-Markup Language
+b. eXtensible Markup Language Correct
+c. Example Markup Language
+d. eXtra Modern Link
+Feedback
+The correct answer is:
+
+eXtensible Markup Language
+.
+Question 32
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+What is the correct syntax of the declaration which defines the XML version?
+Select one:
+a. None of the above
+b. <xml version="1.0" />
+c. <?xml version="1.0"?> Correct
+d. <?xml version="1.0" />
+Feedback
+The correct answer is:
+
+<?xml version="1.0"?>
+.
+Question 33
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+Which statement is true?
+Select one:
+a. All the statements are true Correct
+b. All XML elements must have a closing tag
+c. All XML elements must be lower case
+d. All XML documents must have a DTD
+Feedback
+The correct answer is:
+
+All the statements are true
+.
+Question 34
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+Is it easier to process XML than HTML?
+Select one:
+a. No
+b. Cannot Say
+c. Yes Correct
+d. Sometime
+Feedback
+The correct answer is:
+
+Yes
+.
+Question 35
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+Which of the following programs support XML or XML applications?
+Select one:
+a. Internet Explorer
+b. Netscape
+c. Real Player
+d. Both A and B Correct
+Feedback
+The correct answer is:
+
+Both A and B
+.
+Question 36
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+Comment in XML document is given by
+Select one:
+a. <!-- --> Correct
+b. <!-- --!>
+c. </-- -- >
+d. <?-- -->
+Feedback
+The correct answer is:
+
+<!-- -->
+.
+Question 37
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+Which of the following strings are a correct XML name?
+Select one:
+a. _myElement Correct
+b. my Element
+c. 1myElement
+d. None of the above
+Feedback
+The correct answer is:
+
+_myElement
+.
+Question 38
+Not answered
+Marked out of 1.00
+Question text
+
+Valid XML document means (most appropriate)
+Select one:
+a. the document has root element
+b. the document contains at least one or more root element
+c. Each element must nest inside any enclosing element property
+d. the XML document has DTD associated with it & it complies with that DTD
+Feedback
+The correct answer is:
+
+the XML document has DTD associated with it & it complies with that DTD
+.
+Question 39
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+XML uses the features of
+Select one:
+a. XHTML
+b. VML
+c. HTML
+d. SGML Correct
+Feedback
+The correct answer is:
+
+SGML
+.
+Question 40
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+What does DTD stand for?
+Select one:
+a. Direct Type Definition
+b. Document Type Definition Correct
+c. Dynamic Type Definition
+d. Do The Dance
+Feedback
+The correct answer is:
+
+Document Type Definition
+.
+Question 41
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+DTD includes the specifications about the markup that can be used within the document, the specifications consists of all EXCEPT
+Select one:
+a. the browser name Correct
+b. the attributes for elements
+c. element declarations
+d. child elements
+Feedback
+The correct answer is:
+
+the browser name
+.
+Question 42
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+Which of the following XML documents are well-formed?
+Select one:
+a. <firstElement>some text goes here
+<secondElement>another text goes here</secondElement>
+</firstElement> Correct
+b. <firstElement>some text goes here
+<secondElement> another text goes here</firstElement>
+</secondElement>
+c. <firstelement>some text goes here</firstElement>
+<secondElement>another text goes here</secondElement>
+d. </firstElement>some text goes here
+</secondElement>another text goes here<secondElement>
+<firstElement>
+Feedback
+The correct answer is:
+
+<firstElement>some text goes here
+<secondElement>another text goes here</secondElement>
+</firstElement>
+.
+Question 43
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+How can we make attributes have multiple values:
+Select one:
+a. attributes cannot have multiple values Correct
+b. <myElement myAttribute="value1" myAttribute="value2"/>
+c. <myElement myAttribute="value1, value2"/>
+d. <myElement myAttribute="value1 value2"/>
+Feedback
+The correct answer is:
+
+attributes cannot have multiple values
+.
+Question 44
+Not answered
+Marked out of 1.00
+Question text
+
+The use of a DTD in XML development is:
+Select one:
+a. a good guide to populating a templates to be filled in when generating an XML document automatically
+b. no longer necessary after the XML editor has been customized
+c. required when validating XML documents
+d. used to direct conversion using an XSLT processor
+Feedback
+The correct answer is:
+
+required when validating XML documents
+.
+Question 45
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+Disadvantages of DTD are
+(i) DTDs are not extensible
+(ii) DTDs are not in to support for namespaces
+(iii) there is no provision to specify exact number of occurrences of elements
+
+Select one:
+a. (i),(ii),(iii) are correct Correct
+b. (i) is correct
+c. (ii),(iii) are correct
+d. (i),(ii) are correct
+Feedback
+The correct answer is:
+
+(i),(ii),(iii) are correct
+.
+Question 46
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+To create a sequence in XML schemas, we use the
+Select one:
+a. <xsd:single> element
+b. <xsd:multi> element
+c. <xsd:choice> element
+d. <xsd:sequence> element Correct
+Feedback
+The correct answer is:
+
+<xsd:sequence> element
+.
+Question 47
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+For XML document to be valid
+Select one:
+a. document validity has no relationship with well formedness
+b. document need not to be well formed
+c. document need to be well formed also
+d. document need to be well formed & valid Correct
+Feedback
+The correct answer is:
+
+document need to be well formed & valid
+.
+Question 48
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+The attribute used to define a new namespace is
+Select one:
+a. XmlNs
+b. XMLNS
+c. xmlns Correct
+d. XmlNameSpace
+Feedback
+The correct answer is:
+
+xmlns
+.
+Question 49
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+The syntax for writing the minimum occurrence for an element is
+Select one:
+a. <xsd:elements name=” note” min=” 0” />
+b. <xsd:elements name=” note” minOccur=”0” />
+c. <xsd:elements name=” note” minOccurs=” 0” /> Correct
+d. <xsd:element name=” note” min=” 0” />
+Feedback
+The correct answer is:
+
+<xsd:elements name=” note” minOccurs=” 0” />
+.
+Question 50
+Correct
+Mark 1.00 out of 1.00
+Question text
+
+HTML elements must always properly nest.
+Select one:
+True
+False Correct
+Feedback
+The correct answer is 'False'.
+Finish review
+
+Show one page at a timeFinish review
+
+You are logged in as Rupali Salgar (Logout)
+DAC-A-AUG-2012

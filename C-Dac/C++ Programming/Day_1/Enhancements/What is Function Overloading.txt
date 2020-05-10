@@ -1,0 +1,21 @@
+Function overloading
+	defining more than one function with the same name but with the different arguments. Return type is not imp.
+
+	different
+
+		a) types
+		b) number
+		c) order
+
+types
+
+void disp(int)
+void disp(double)
+
+number
+void disp(int,int);
+void disp(int,int,int);
+
+order
+void disp(char,int);
+void disp(int,char);

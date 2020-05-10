@@ -1,0 +1,15 @@
+<html><head><script>
+function call()
+{var a=document.frm.t;
+alert(a);
+alert(a.value);}
+function c()
+{alert(document.frm.t.value)
+}
+</script></head><body>
+<form name="frm" action="a.html" onsubmit="return false">
+name<input name="t"/>
+<input type="submit"/>
+<input type="button" onclick="c()"/>
+</form></body>
+</html>

@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+class a
+{
+int num;
+public:
+	a(int a)
+	{num=a;
+	}
+	friend ostream& operator << (ostream &,a &);
+};
+
+ostream& operator << (ostream &ab,a &p)
+{
+	return ab<<p.num<<endl;
+}
+
+template<class type1>
+void disp(type1 a)
+{
+cout<<a<<endl;
+}
+
+void main()
+{
+	a b(10);
+	disp(b);
+	disp(20);
+	disp('z');
+	disp("abc");
+	disp(30.10);
+	getchar();
+}

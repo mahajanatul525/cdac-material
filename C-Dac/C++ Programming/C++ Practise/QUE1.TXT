@@ -1,0 +1,24 @@
+ASS2 QUE1
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class myclass
+{
+private: int num;
+public: myclass(int);
+			~myclass();
+};
+myclass::myclass (int t)
+{
+num=t;
+cout<<"in def non arg"<<num<<endl;
+}
+myclass::~myclass ()
+{
+	cout<<"in destructor"<<endl;
+}
+void main()
+{
+	myclass m[3]={10,20,30};
+	getch();
+}

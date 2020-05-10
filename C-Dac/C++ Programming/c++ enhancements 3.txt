@@ -1,0 +1,604 @@
+Question 1
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Will following code work ?
+
+#include<iostream.h>
+
+int * const fun()
+
+{
+
+static int num=40;
+
+return &num;
+
+}
+
+void main()
+
+{
+
+int * const ptr=fun();
+
+}
+
+Select one:
+a. Yes
+b. No Incorrect
+Feedback
+Your answer is incorrect.
+
+The correct answer is: Yes
+Question 2
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+What will happen ?
+
+#include<iostream.h>
+
+int val=100;
+
+void main()
+
+{
+
+      int val=40;
+
+      {
+
+                  int val=50;
+
+                  cout<<::val;
+
+      }
+
+}
+
+Select one:
+a. output 100
+b. output 40
+c. compilation error
+d. output 50
+Feedback
+Your answer is incorrect.
+
+The correct answer is: output 100
+Question 3
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Will following code work ?
+
+#include<iostream.h>
+
+void main()
+
+{
+
+const int num=60;
+
+int const *const ptr=&num;
+
+}
+
+Select one:
+a. Yes Correct
+b. No
+Feedback
+Your answer is correct.
+
+The correct answer is: Yes
+Question 4
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will happen ?
+
+#include<iostream.h>
+
+void disp(int a=0,int b,int c)
+
+{
+
+cout<<a<<"\t"<<b<<"\t"<<c<<endl;
+
+}
+
+void main()
+
+{
+
+disp(10,20);
+
+}
+
+Select one:
+a. output   0  10  20
+b. error
+c. output  10  20  0 Incorrect
+d. output  10 10  20
+Feedback
+Your answer is incorrect.
+
+The correct answer is: error
+Question 5
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+inline functions can be  replaced at function call at the time of
+
+Select one:
+a. compiletime
+b. runtime Incorrect
+c. unpredictable
+d. preprocessing
+Feedback
+Your answer is incorrect.
+
+The correct answer is: compiletime
+Question 6
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will happen ?
+
+#include<iostream.h>
+
+void main()
+
+{
+
+int num2=50;
+
+const int &ref=num2;
+
+}
+
+Select one:
+a. warning
+b. error
+c. it will work Correct
+Feedback
+Your answer is correct.
+
+The correct answer is: it will work
+Question 7
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Will following code work ?
+
+#include<iostream.h>
+
+void main()
+
+{
+
+int &ref=40;
+
+}
+
+Select one:
+a. No Correct
+b. Yes
+Feedback
+Your answer is correct.
+
+The correct answer is: No
+Question 8
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Will following code work ?
+
+#include<iostream.h>
+
+void main()
+
+{
+
+const int num;
+
+int const *ptr=&num;
+
+}
+
+Select one:
+a. Yes Incorrect
+b. No
+Feedback
+Your answer is incorrect.
+
+The correct answer is: No
+Question 9
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will happen ?
+
+#include<iostream.h>
+
+int * const fun()
+
+{
+
+int num=40;
+
+return &num;
+
+}
+
+void main()
+
+{
+
+const int * ptr=fun();
+
+}
+
+Select one:
+a. neither warning nor compilation error Incorrect
+b. Warning
+c. error
+Feedback
+Your answer is incorrect.
+
+The correct answer is: Warning
+Question 10
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Will following code work ?
+
+#include<iostream.h>
+
+const int * fun()
+
+{
+
+static int num=40;
+
+return &num;
+
+}
+
+void main()
+
+{
+
+const int *ptr;
+
+ptr=fun();
+
+}
+
+Select one:
+a. No
+b. Yes Correct
+Feedback
+Your answer is correct.
+
+The correct answer is: Yes
+Question 11
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Will following code work ?
+
+#include<iostream.h>
+
+void main()
+
+{
+
+const int &k=400;
+
+}
+
+Select one:
+a. No Incorrect
+b. Yes
+Feedback
+Your answer is incorrect.
+
+The correct answer is: Yes
+Question 12
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will happen ?
+
+#include<iostream.h>
+
+void main()
+
+{
+
+for(int x=0;x<4;x++)
+
+{
+
+//some statements
+
+}
+
+for(int x=0;x<9;x++)
+
+{
+
+//some statements
+
+}
+
+}
+
+Select one:
+a. warning
+b. neither warning nor compilation error
+c. compilation error Incorrect
+Feedback
+Your answer is incorrect.
+
+The correct answer is: neither warning nor compilation error
+Question 13
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Malloc can call constructor , new can not call constructor?
+Select one:
+a. False Correct
+b. True
+Feedback
+Your answer is correct.
+
+The correct answer is: False
+Question 14
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will happen ?
+
+#include<iostream.h>
+
+void main()
+
+{
+
+      disp();
+
+}
+
+void disp()
+
+{
+
+      cout<<"in disp";
+
+}
+
+Select one:
+a. runtime error
+b. warning
+c. compilation error
+d. neither compilation nor warning Incorrect
+Feedback
+Your answer is incorrect.
+
+The correct answer is: compilation error
+Question 15
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will happen ?
+
+#include<iostream.h>
+
+void main()
+
+{
+
+int num=40;
+
+int &ref;
+
+ref=num;
+
+ref++;
+
+cout<<endl<<num;
+
+}
+
+Select one:
+a. output 40
+b. output 41 Incorrect
+c. warning
+d. error
+Feedback
+Your answer is incorrect.
+
+The correct answer is: error
+Question 16
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will happen ?
+
+#include<iostream>
+
+void main()
+
+{
+
+for(int x=0;x<4;x++)
+
+{
+
+//some statements
+
+}
+
+for(x=0;x<9;x++)
+
+{
+
+// some statements
+
+}
+
+}
+
+Select one:
+a. warning
+b. compilation error Correct
+c. neither warning nor compilation error
+Feedback
+Your answer is correct.
+
+The correct answer is: compilation error
+Question 17
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will happen ?
+
+#include<iostream.h>
+
+void main()
+
+{
+
+      int *ptr=new int;
+
+      *ptr=30;
+
+      cout<<endl<<*ptr<<endl;
+
+}
+
+Select one:
+a. output:30
+b. warning
+c. compilation error
+d. runtime error Incorrect
+Feedback
+Your answer is incorrect.
+
+The correct answer is: output:30
+Question 18
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Will following code work ?
+
+#include<iostream.h>
+
+const int * fun()
+
+{
+
+static int num=40;
+
+return &num;
+
+}
+
+void main()
+
+{
+
+int *ptr;
+
+ptr=fun();
+
+}
+
+Select one:
+a. Yes Incorrect
+b. No
+Feedback
+Your answer is incorrect.
+
+The correct answer is: No
+Question 19
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Will following code work ?
+
+#include<iostream.h>
+
+int * const fun()
+
+{
+
+static int num=40;
+
+return &num;
+
+}
+
+void main()
+
+{
+
+const int * ptr=fun();
+
+}
+
+Select one:
+a. No
+b. Yes Correct
+Feedback
+Your answer is correct.
+
+The correct answer is: Yes
+Question 20
+Incorrect
+Mark 0.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What will happen ?
+
+#include<iostream.h>
+
+void main()
+
+{
+
+const int num2=50;
+
+int &ref=num2;
+
+}
+
+Select one:
+a. it will work Incorrect
+b. error
+c. warning
+Feedback
+Your answer is incorrect.
+
+The correct answer is: error

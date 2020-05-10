@@ -1,0 +1,33 @@
+<html>
+	<head>
+	<script>
+	function read()
+	{
+		alert("inside red");
+		
+		if(document.frm.mu.checked)
+		{	
+			alert("inside if");
+			
+			document.getElementById("dd").innerHTML=a=document.frm.mu.checked;
+		}
+	}
+	</script>
+		
+		
+	</head>
+	<body>
+	<form name="frm">
+		
+		MUMBAI<input type="checkbox" name="mu" /><BR>
+		PUNE<input type="checkbox" name="pune"/><BR>
+		DELHI<input type="checkbox" name="delhi"/><BR>
+		BANGLURU<input type="checkbox" name="bang"/><BR>
+		<input type="button" onclick="read()">
+		<div id="dd"></div>
+		</form>
+	
+	</body>
+	
+	
+<html>

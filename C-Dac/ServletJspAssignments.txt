@@ -1,0 +1,367 @@
+
+PoojaServ
+/*
+ * 1) in JSP create <option> i.e. drop-down list.
+values should be java,C++, Oracle.
+when user will select, a particular option and click on submit button, request should go to servlet.
+In servlet u read the request parameter.
+if the value is "java" forward to j2se.jsp,
+if the value is "C++" forward to cplusplus.jsp
+if the value is "oracle" forward to ora.jsp*/
+
+import java.io.*;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class PoojaServ
+ */
+@WebServlet("/PoojaServ")
+public class PoojaServ extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	//	PrintWriter out = response.getWriter();
+		String name=request.getParameter("sel");
+	//	out.println(name);
+	
+		try
+		{	
+			if(name.equals("Java")){
+			RequestDispatcher rd=request.getRequestDispatcher("Java.jsp");
+			rd.forward(request,response);
+					}
+			else if(name.equals("C++")){
+				RequestDispatcher rd=request.getRequestDispatcher("Cpp.jsp");
+				rd.forward(request,response);
+				}
+			else if(name.equals("Oracle")){
+				RequestDispatcher rd=request.getRequestDispatcher("Oracle.jsp");
+				rd.forward(request,response);
+}		
+	}
+		catch(Exception ee)
+		{
+			System.out.println("in forwarding"+ee);
+		}
+
+	
+	}
+
+}
+
+
+Jsp
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="PoojaServ" method="GET">
+<select name ="sel" size ="3">
+<option value ="Java">Java</option>
+<option value="C++">C++</option>
+<option value="Oracle">Oracle</option>
+</select>
+<input type="submit"/>
+</form>
+
+
+
+</body>
+</html>
+
+
+
+
+
+/*
+It is a program of Servlet->Jsp
+
+in your servlet,
+Retrieve the loc from dept table.
+store these loc's in ArrayList
+
+store ArrayList inside request attribute and forward the request to jsp.
+
+in jsp page
+retrieve  the ArrayList from request attribute and display the contents of that ArrayList.
+*/
+
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+import java.io.*;
+
+import javax.servlet.http.*;
+
+import java.util.*;
+import java.sql.*;
+
+
+@WebServlet("/SQLassg")
+public class SQLassg extends HttpServlet {
+Connection con;
+	
+	@Override
+	public void init(){
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			String ss="jdbc:mysql://localhost:3306/mydb";
+			con=DriverManager.getConnection(ss,"root","root");
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	
+	public void service(HttpServletRequest request,HttpServletResponse response)
+	{
+		try{						
+			PreparedStatement pst = con.prepareStatement("select name from prod");
+			ResultSet rst=pst.executeQuery();
+			ArrayList<String> a = new ArrayList<String>();
+			//Iterator i = a.iterator();
+			while(rst.next()){
+				String nam=rst.getString("name");
+				a.add(nam);
+				
+
+			}
+			request.setAttribute("key", a);
+			RequestDispatcher rd = request.getRequestDispatcher("Ninad.jsp");
+			rd.forward(request, response);
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+}
+
+
+JSP
+
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%@ page import ="java.io.*" %>
+<%
+PrintWriter pw = response.getWriter();
+pw.println(request.getAttribute("key"));
+
+%>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+Second
+
+
+Servlet1
+/*
+It is a program of Servlet->Jsp
+
+in your servlet,
+Retrieve the loc from dept table.
+store these loc's in ArrayList
+
+store ArrayList inside request attribute and forward the request to jsp.
+
+in jsp page
+retrieve  the ArrayList from request attribute and display the contents of that ArrayList.
+*/
+
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+import java.io.*;
+
+import javax.servlet.http.*;
+
+import java.util.*;
+import java.sql.*;
+
+
+@WebServlet("/SQLassg")
+public class SQLassg extends HttpServlet {
+Connection con;
+	
+	@Override
+	public void init(){
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			String ss="jdbc:mysql://localhost:3306/mydb";
+			con=DriverManager.getConnection(ss,"root","root");
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	
+	public void service(HttpServletRequest request,HttpServletResponse response)
+	{
+		try{						
+			PreparedStatement pst = con.prepareStatement("select name from prod");
+			ResultSet rst=pst.executeQuery();
+			ArrayList<String> a = new ArrayList<String>();
+			//Iterator i = a.iterator();
+			while(rst.next()){
+				String nam=rst.getString("name");
+				a.add(nam);
+
+			}
+			request.setAttribute("key", a);
+			RequestDispatcher rd = request.getRequestDispatcher("Ninad.jsp");
+			rd.forward(request, response);
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+}
+
+
+
+JSP1
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%@ page import ="java.io.*,java.util.*,javax.servlet.http.*" %>
+<%
+PrintWriter pw = response.getWriter();
+ArrayList a1=(ArrayList)request.getAttribute("key");
+Iterator i=a1.iterator();
+pw.println("<form action='SecondServ' method='get'>");
+while(i.hasNext()){
+	//String productName =(String)i.next();	
+pw.println("<input type='checkbox' name='ch[]' value='"+i.next()+"'/><br/>");
+}
+pw.println("<input type= submit name='addToCart' value='Add To Cart'/></form>");
+%>
+
+
+
+</body>
+</html>
+
+
+
+Servlet2
+
+
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet("/SecondServ")
+public class SecondServ extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       public void doGet(HttpServletRequest request,HttpServletResponse response)
+       {
+    	   try
+    	   {
+    		   ArrayList<String> a5 = new ArrayList<String>();
+    		   String s[]=request.getParameterValues("ch[]");
+    		 PrintWriter pw=response.getWriter(); 
+    		 for (int i=0; i<s.length; i++){
+    		 //pw.println(s[i]+"<br/>");
+    		 a5.add(s[i]);
+    		 }
+    		 HttpSession session = request.getSession();
+    		 session.setAttribute("key1", a5);
+    		 RequestDispatcher rd1= request.getRequestDispatcher("Bill.jsp");
+    		 rd1.forward(request,response);
+    		}
+    	   catch(Exception e)
+    	   {
+    		   
+    	   }
+       }
+   
+}
+
+
+
+JSP2
+
+
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%@ page import ="java.io.*,java.util.*,javax.servlet.http.*" %>
+<%
+ArrayList a6= (ArrayList)session.getAttribute("key1");
+
+Iterator i = a6.iterator();
+while(i.hasNext()){
+	PrintWriter pw = response.getWriter();
+	pw.println(i.next()+"<br/>");
+}
+%>
+//${requestScope.key1}
+</body>
+</html>
+

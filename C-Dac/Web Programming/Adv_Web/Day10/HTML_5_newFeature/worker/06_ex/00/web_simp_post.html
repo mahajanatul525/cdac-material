@@ -1,0 +1,12 @@
+<output id="re"></output>
+
+
+<script>
+var worker = new Worker('doWork.js');
+
+worker.addEventListener('message', function(e) {
+  document.getElementById("re").innerHTML=('Worker said: ', e.data);
+}, false);
+
+worker.postMessage('Hello World');
+</script>

@@ -1,0 +1,38 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class book
+{
+private: int bookid;
+		 char*bookname;
+		 int price;
+public: void disp()
+		{ cout<<bookid<<bookname<<price<<endl;
+
+		}
+		book(int bi,char*bn,int bp)
+			{
+				bookid=bi;
+				bookname=new char(strlen(bn+1));
+				strcpy(bookname,bn);
+				price=bp;
+				cout<<"in const"<<endl;
+		}
+		~book()
+		{
+		cout<<"in dest"<<endl;
+		}
+};
+void main()
+{
+	book b(101,"c",200);
+	book b1(102,"c++",400);
+	book *b2=new book(103,"java",500);
+	b.disp();
+	b1.disp();
+	b2->disp();
+	getch();
+	delete b2;
+
+
+}

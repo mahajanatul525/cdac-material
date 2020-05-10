@@ -1,0 +1,2 @@
+create a class template inside the namespace "mysp" and distribute it.
+now use this class template in some application.

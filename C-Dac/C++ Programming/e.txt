@@ -1,0 +1,14 @@
+E-Mart
+
+FrontEnd; Angular Js
+Middle tier:WCF Rest Full API
+BackEnd:
+
+
+E-Mart is a web-based project which is made for remote-shopping or shopping through Internet.User is provided with registration and Login links.
+After successful login the product categories are shown along with the necessary links to order.
+
+
+
+
+

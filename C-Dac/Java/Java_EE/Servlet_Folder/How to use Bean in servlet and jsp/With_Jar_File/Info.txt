@@ -1,0 +1,6 @@
+place the jar file inside "myapp\WEB-INF\lib"
+
+while compiling servlet set the classpath of "jar file".
+no problem while running servlet because web container will get package from "jar" file.
+
+jsp file should be according to "CallerBean.jsp".

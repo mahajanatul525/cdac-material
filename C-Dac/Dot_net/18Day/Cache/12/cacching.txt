@@ -1,0 +1,112 @@
+
+learn about
+1. Caching a DataSet
+2. Check to see if the DataSet exists in the cache, and load data from the cache.
+3. Clearing the cache
+
+We will be using tblProductInventory table for this demo. Sql script to the create the table populate it with some sample data.
+Create table tblProductInventory 
+(
+ ProductId int identity primary key,
+ ProductName nvarchar(50),
+ UnitPrice int
+)
+
+Insert into tblProductInventory values('iPhone',350)
+Insert into tblProductInventory values('Apple Laptops',1250)
+Insert into tblProductInventory values('Books',110)
+Insert into tblProductInventory values('Acer Laptops',1150)
+Insert into tblProductInventory values('iPads',450) 
+
+
+  
+
+Create an asp.net web application project, and add the following database connectionstring to the web.config file.
+<connectionStrings>
+  <add name="DBCS"
+  connectionString="data source=.; database=Sample_Test_DB; Integrated Security=SSPI"
+  providerName="System.Data.SqlClient" />
+</connectionStrings>
+
+Drag and drop 2 button controls, a label and a gridview control onto the webform.
+1. Set the ID of the first button control to btnLoadData and Text to Load Data
+2. Set the ID of the second button control to btnClearnCache and Text to Clear Cache
+3. Set the ID of the label control to lblMessage and remove the Text property
+4. Set the ID of the GridView to gvProducts
+
+At this stage the HTML of your webform, should be as shown below.
+<asp:Button ID="btnLoadData" runat="server" Text="Load Data" 
+    onclick="btnLoadData_Click" />
+<asp:Button ID="btnClearnCache" runat="server" Text="Clear Cache" 
+    onclick="btnClearnCache_Click" />
+<br />
+<br />
+<asp:Label ID="lblMessage" runat="server"></asp:Label>
+<br />
+<br />
+<asp:GridView ID="gvProducts" runat="server">
+</asp:GridView> 
+
+
+  
+
+Now, copy and paste the following code in the code behind page
+protected void btnLoadData_Click(object sender, EventArgs e)
+{
+    // Check if the DataSet is present in the cache
+    if (Cache["Data"] == null)
+    {
+        // If the dataset is not in the cache load data from the database into the DataSet
+        string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+        using (SqlConnection connection = new SqlConnection(CS))
+        {
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("Select * from tblProductInventory", connection);
+            DataSet dataset = new DataSet();
+            dataAdapter.Fill(dataset);
+
+            gvProducts.DataSource = dataset;
+            gvProducts.DataBind();
+
+            // Store the DataSet in the Cache
+            Cache["Data"] = dataset;
+            lblMessage.Text = "Data loaded from the Database";
+        }
+    }
+    // If the DataSet is in the Cache
+    else 
+    {
+        // Retrieve the DataSet from the Cache and type cast to DataSet
+        gvProducts.DataSource = (DataSet)Cache["Data"];
+        gvProducts.DataBind();
+        lblMessage.Text = "Data loaded from the Cache";
+    }
+}
+
+protected void btnClearnCache_Click(object sender, EventArgs e)
+{
+    // Check if the DataSet is present in the cache
+    if (Cache["Data"] != null)
+    {
+        // Remove the DataSet from the Cache
+        Cache.Remove("Data");
+        lblMessage.Text = "DataSet removed from the cache";
+    }
+    // If the DataSet is not in the Cache
+    else
+    {
+        lblMessage.Text = "There is nothing in the cache to remove";
+    }
+}
+
+Now, run the application. The first time you click Load Data button, the data will be loaded from the database, as we don't have the DataSet in the Cache yet. Once the Data is loaded into the DataSet. The DataSet is then cached. If you click the Load Data button now, then the Data will be loaded from the cache. At this point we don't need to have any connection to the Database. 
+
+To prove this stop the sql server service on your machine.
+1. In the run window, type services.msc and press enter key
+2. In the services window, find SQL Server service
+3. Right click on the SQL Server service and stop it.
+
+Since we have stopped the service, sql server is no longer running on our machine. Now click the Load Data button. The data will be loaded from the cache. Now, clear the cache, by click on Clear Cache button. This will remove the DataSet from the cache. Now, try to load the data by clicking on Load Data button. Since, the DataSet is no longer present in the cache, and the sql server service is not running you will receive an error stating - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) 
+
+Start the service, and click the Load Data button. The data should now be loaded and cached. 
+
+ 

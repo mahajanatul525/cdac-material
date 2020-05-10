@@ -1,0 +1,49 @@
+use mydb;
+ drop table emp;
+ create table emp(empid int unique, ename char(10),salary int,deptid int);
+ insert into emp (empid,ename,salary) values (1,"Vikas",1600),(2,"Atul",700),(3,"Dipesh",1900),(4,"Prashant",950);
+ select * from emp where salary between 500 and 1300;
+ drop table dept;
+ create table dept(deptid int primary key,dname char(5));
+insert into dept (deptid,dname)values(1,'HR'),(2,'IT');
+drop table emp;
+create table emp(empid int unique, ename char(10),salary int,deptid int,foreign key f (deptid) references dept(deptid));
+insert into emp (empid,ename,salary,deptid) values (1,"Vikas",1600,1),(2,"Atul",700,2),(3,"Dipesh",1900,1),(4,"Prashant",950,2);
+ select * from emp;
+ select * from dept;
+ select * from emp where deptid=1;
+ select * from emp join dept on dname='HR';
+ drop table emp;
+ drop table dept;
+ select * from emp join dept on emp.deptid=dept.deptid where dept.dname='HR';
+ show tables;
+ 
+ #Q3 Display the name of all the dept and count of all the employees in that dept.
+  select d.dname,count(d.deptid) count from dept d left join emp e on d.deptid=e.deptid group by d.dname; 
+ 
+ #4.Display the name , deptname and  salary of the employee whose salary is highest.
+ 
+ select ename,salary,dname from emp join dept on emp.deptid=dept.deptid order by salary desc limit 1; 
+ 
+ 
+ #5. Display the name , deptname and  salary of the employee whose salary is lowest.
+ select ename,salary,dname from emp join dept on emp.deptid=dept.deptid order by salary  limit 1; 
+ 
+ #6. Display the name , deptname of employee whose salary is second highest.
+ select *from(select ename,salary,dname from emp join dept on emp.deptid=dept.deptid order by salary desc limit 2)a order by salary limit 1; 
+ 
+ #7. display the name, deptname of top five earning employees.
+ select ename,salary,dname from emp join dept on emp.deptid=dept.deptid order by salary desc limit 3; 
+ 
+ #8. Display the deptname, name of top 5 earning employees from each dept.
+ select *from(select ename,salary,dname from emp join dept on emp.deptid=dept.deptid order by salary)a group by salary limit 2; 
+ 
+ 
+ 
+ #9.Display the avg salary of each dept.
+ select dname, avg(salary) from emp  join dept  on emp.deptid=dept.deptid group by dname; 
+ 
+ #10.Display the min and max salary of each dept.
+ select dname, min(salary),max(salary) from emp  join dept  on emp.deptid=dept.deptid group by dname; 
+ 
+ 

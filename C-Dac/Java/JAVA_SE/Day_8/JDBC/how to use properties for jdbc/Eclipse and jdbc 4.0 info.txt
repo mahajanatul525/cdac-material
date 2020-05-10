@@ -1,0 +1,17 @@
+According to jdbc 4.0 , no need explicitly load the "jdbc driver" using 
+Class.forName("drivername")
+	or
+DriverManager.registerDriver(new driverclassname)
+
+instead u need to
+
+a) create following directory structure inside "src" of eclipse.
+
+	META-INF
+		services
+
+b) inside "services" folder , create the file by the name , "java.sql.Driver".
+
+c) in this file write the name of driver class  e.g.  com.mysql.jdbc.Driver  or oracle.jdbc.driver.OracleDriver
+
+d) your java class can be inside "mypack".

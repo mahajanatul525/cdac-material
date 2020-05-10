@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content" content-type="text/html" charset="UTF-8">
+<script>
+function chk(b)
+{alert(b)
+alert(localStorage["mtext"])
+if(localStorage["mtext"]!="undefine")
+{
+a=localStorage["mtext"];
+alert(a);
+b.document.body.style.color=a;
+}
+alert(b.document.body)
+}
+
+function store(input)
+{
+localStorage.clear();
+
+localStorage.setItem("mtext", input.value);
+
+document.getElementById("b").style.color=localStorage["mtext"];
+
+
+alert(localStorage["mtext"])
+
+}
+
+
+
+
+
+</script>
+</head>
+<body id="b" onload="chk(this)">
+as
+<form method="get">
+color:<input type="radio" id="r1" name="col" value="red"  onclick="store(this)"/>red
+
+<input type="radio" name="col" id="r1" value="blue" onclick="store(this)"/>blue
+<input type="submit"/>
+
+</form>
+</body>
+</html>

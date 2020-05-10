@@ -1,0 +1,32 @@
+Using Abstract Classes
+Sometimes you will want to create a base class that defines only a generalized form that will
+be shared by all of its derived classes, leaving it to each derived class to fill in the details.
+Such a class determines the nature of the methods that the derived classes must implement,
+but does not, itself, provide an implementation of one or more of these methods. One way
+this situation can occur is when a base class is unable to create a meaningful implementation
+for a method.
+
+
+An abstract method is created by specifying the abstract type modifier. An abstract
+method contains no body and is, therefore, not implemented by the base class. Thus, a
+derived class must override it—it cannot simply use the version defined in the base class.
+As you can probably guess, an abstract method is automatically virtual, and there is no
+need to use the virtual modifier. In fact, it is an error to use virtual and abstract together.
+
+
+The abstract modifier can be used only on
+instance methods. It cannot be applied to static methods. Properties and indexers can also
+be abstract.
+
+
+
+A class that contains one or more abstract methods must also be declared as abstract by
+preceding its class declaration with the abstract specifier. Since an abstract class does not
+define a complete implementation, there can be no objects of an abstract class. Thus, attempting
+to create an object of an abstract class by using new will result in a compile-time error.
+
+
+When a derived class inherits an abstract class, it must implement all of the abstract
+methods in the base class. If it doesn’t, then the derived class must also be specified as
+abstract. Thus, the abstract attribute is inherited until such time as a complete implementation
+is achieved.

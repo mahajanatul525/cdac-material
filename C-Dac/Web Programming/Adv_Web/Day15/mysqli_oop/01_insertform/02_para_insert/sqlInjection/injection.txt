@@ -1,0 +1,1 @@
+k'; Delete from MyGuests;Select * from MyGuests where firstname like 'k

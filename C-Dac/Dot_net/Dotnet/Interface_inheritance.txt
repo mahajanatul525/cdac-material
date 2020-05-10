@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication10
+{
+    interface A
+    {
+        void method1();
+        void method2();
+    }
+    interface B:A
+    {
+        void method3();
+    }
+
+    class C : B
+    {
+        public void method1()
+        {
+            Console.WriteLine("inside method 1");
+        }
+        public void method2()
+        {
+            Console.WriteLine("inside method 2");
+        }
+        public void method3()
+        {
+            Console.WriteLine("inside method 3");
+        }
+    }
+    class entry
+    {
+        static void Main()
+        {
+            C c =new C();
+            c.method1();
+            c.method2();
+            c.method3();
+        }
+    }
+
+
+}

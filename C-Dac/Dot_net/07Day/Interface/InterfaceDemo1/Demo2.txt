@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication12
+{   interface I1
+    { void A(); }
+   interface I2
+    { void A(); }
+    class C : I1, I2
+    {
+	public void A() //observe it is public and member of class
+        {
+            Console.WriteLine("C.A()");
+        }
+
+        void I1.A() //observe private and not member of class
+        {
+            Console.WriteLine("I1.A()");
+        }
+    }
+
+   class Program
+    {
+        static void Main(string[] args)
+       {
+           C x = new C();
+           I1 i1 = x; //even if do not type cast will it work????   yes  
+           I2 i2 = x;
+
+           i1.A();
+           i2.A();
+           x.A();
+
+
+        }
+    }
+}

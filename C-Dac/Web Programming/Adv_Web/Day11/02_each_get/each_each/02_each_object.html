@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><style>
+.topnav {color:red;}
+</style><script src="jquery-1.9.1.js"></script>
+<script>var s = 0;
+var obj = {foo: 1, bar: 2}
+for (var item in obj) {
+    sum += obj[ item ];
+}
+alert("dd"+s);
+</script></head><body><script>
+$(document).ready(function() {
+var sum = 0;
+var obj = {foo: 1,    bar: 2}
+var sum = 0;
+ $.each( obj, function( key, value ) {
+	alert(key +"="+value)
+    sum += value;
+});
+ console.log( sum ); // 
+alert("sum="+sum);
+});
+</script>
+</body>
+</html>
+

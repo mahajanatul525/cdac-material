@@ -1,0 +1,82 @@
+
+Query 4:
+select s.snum,s.sname,o.odate,max(o.amt) 
+from salespeople s 
+join 
+orders o 
+on 
+s.snum=o.snum 
+group by o.odate, s.snum;
+
+
+Query 14:
+select sname,comm 
+from salespeople 
+where city='london';
+
+
+Query 24:
+select snum,odate,max(amt) 
+from orders o
+ where odate='1996-10-03'
+ group by snum;
+
+
+Query 34:
+select snum,sname,comm,city 
+from salespeople;
+
+
+Query 44:
+select c.cnum, s.snum,(s.comm*o.amt)total,c.rating 
+from salespeople s 
+join 
+orders o 
+on
+s.snum=o.snum 
+join 
+customers c 
+on 
+s.snum=c.snum  
+where c.rating>100
+ order by c.cnum;
+
+
+Query 54:
+select onum,odate,amt from orders where odate='1996-10-03' or odate='1996-10-04';
+
+select onum,odate,amt from orders where odate in('1996-10-03','1996-10-04');
+
+
+Query 64:
+select s.sname,c.cname 
+from salespeople s 
+join 
+customers c 
+on 
+s.snum=c.snum 
+group by s.sname 
+having max(c.cname)>max(s.sname);
+
+
+Query 74:
+ select s.snum,s.sname,o.odate,count(o.onum) 
+from salespeople s 
+join 
+orders o 
+on 
+s.snum=o.snum 
+group by o.odate, s.snum 
+having count(o.onum)>=1;
+
+
+Query 84:
+select onum,amt,snum 
+from orders 
+where snum= (select snum from orders  where cnum=2001);
+
+
+Query 94:
+select snum,sname,city,comm 
+from salespeople 
+where comm  between 0.12 and 0.14;

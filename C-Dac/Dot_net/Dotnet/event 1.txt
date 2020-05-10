@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication18
+{
+    delegate void errormsg();
+
+    class myclass
+    {
+        public event errormsg emsg;
+
+        public void onevent()
+        {
+            if (emsg != null)
+            {
+                emsg();
+            }
+        }
+    }
+
+    class entryclass
+    {
+        static void handle()
+        {
+            Console.WriteLine("event aala re...");
+
+        }
+        static void Main()
+        {
+            myclass m = new myclass();
+
+            m.emsg += new errormsg(handle);
+            m.onevent();
+        }
+    }
+}

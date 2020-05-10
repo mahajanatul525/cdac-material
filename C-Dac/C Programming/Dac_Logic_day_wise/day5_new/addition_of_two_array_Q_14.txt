@@ -1,0 +1,42 @@
+/*Q22.take two array from the user separated by space atleast one of them should be of 20 inlength.
+and none of them is more than 40 in length. 
+and it should gives the new o/p array followed by new line with sum of above array
+sample input :999       11111111111111111111
+o/p  11111111111111112110*/
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{int i,k,j,d=0,c[20];
+ int a[]={1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+	int b[]={9,9,9};
+	
+for(i=19,j=19,k=2;k>=0;i--,j--,k--)
+{
+	           c[j]=a[i]+b[k]+d;
+               if (c[j]>=10)
+	               { 
+	              d=c[j]/10;
+                  c[j]=c[j]%10;
+			       }
+				 
+}
+         
+for(i=16;i>=0;i--,j--)
+{             c[j]=a[i]+d;
+               
+              if (c[j]>=10)
+	             { 
+	           d=c[j]/10;
+			   c[j]=c[j]%10;
+                  }
+			  else d=0;
+
+
+}
+printf("ADDITION OF TWO ARRAY IS\t");
+for(i=0;i<20;i++)
+printf( "%d",c[i]);
+getche();
+
+}

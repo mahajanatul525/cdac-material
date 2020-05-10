@@ -1,0 +1,28 @@
+.page{
+height:1000px;
+width:800px;
+	margin:5px 50px auto 50px;
+	border:2px solid blue;
+}
+
+.pad{
+	paddng:7px 7px 7px 7px;
+}
+
+.banner{border:1.5px dotted red;
+height:120px;
+}
+
+.container{border:2px dashed red;
+height:500px;
+margin:1px 1px 1px 1px;
+}
+
+.navi{
+float:left;
+height:500px;
+width:120px;
+border:2px solid red;
+}
+
+.content{color:blue}

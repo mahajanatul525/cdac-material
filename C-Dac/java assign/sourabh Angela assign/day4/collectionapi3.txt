@@ -1,0 +1,45 @@
+3333333333333333333333333333333333333333
+abstract class Game
+{
+abstract void play();
+{
+}
+}
+
+
+class Football extends Game
+{
+void play()
+{
+System.out.println("inside football");
+}
+}
+
+class Cricket extends Game
+{
+void play()
+{
+System.out.println("inside Cricket");
+}
+}
+
+class Tennis extends Game
+{
+void play()
+{
+System.out.println("inside Tennis");
+}
+}
+
+public class GamesDemo
+{
+public static void main(String []args)
+{
+Game arr[]=new Game[3];
+arr[0]=new Football();
+arr[1]=new Cricket();
+arr[2]=new Tennis();
+
+arr[1].play();
+}
+}

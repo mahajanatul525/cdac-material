@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication12
+{
+
+    interface I1
+    { void A(); }
+
+    interface I2
+    { void A(); }
+
+
+    class C : I1, I2
+    {
+        void I1.A()
+        {
+            Console.WriteLine("I2.A()");
+        }
+    }
+
+
+   class Program
+    {
+        static void Main(string[] args)
+       {
+           C x = new C();
+           I1 i1 = (I1)x; //even if do not type cast will it work????   yes  
+           I2 i2 = (I2)x;
+
+           i1.A();
+           i2.A();
+           x.A();
+
+
+        }
+    }
+}

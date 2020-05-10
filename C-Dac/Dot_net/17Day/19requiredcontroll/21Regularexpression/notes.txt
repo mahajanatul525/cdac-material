@@ -1,0 +1,21 @@
+
+This is a very powerful validation control. This control is used to check if the value of an associated input control matches the pattern specified by a regular expression. The only property that is specific to the RegularExpressionValidator is ValidationExpression.
+
+RegularExpressionValidator control in asp.net 
+
+
+  
+
+This example, checks if the input mataches the pattern of an email address
+<asp:TextBox ID="txtEmail" runat="server" Width="150px">
+</asp:TextBox>
+<asp:RegularExpressionValidator ID="RegularExpressionValidatorEmail" runat="server" 
+ControlToValidate="txtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+ErrorMessage="Invalid Email" ForeColor="Red"></asp:RegularExpressionValidator> 
+
+
+  
+
+By default client side validation is turned on. To disable client side validation set EnableClientScript o false. This property is supported by all validation controls. 
+
+To disable validation control set Enabled propety to false. 

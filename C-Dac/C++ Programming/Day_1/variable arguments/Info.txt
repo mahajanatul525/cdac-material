@@ -1,0 +1,14 @@
+printf  accepts variable no. of arguments.
+
+we can write functions, which can take variable no. of arguments.
+
+This is possible using three macros available in "stdarg.h" called, va_list, va_start and va_arg.
+
+These macros provide a method for accessing the arguments of the function when a function takes a fixed no.of arguments followed by a variable no. of arguments.
+
+
+va_list is used to represent the pointer, which can point to the list of optional arguments.
+
+va_start is used to initialize a pointer to the beginning of the list of optional arguments.
+
+va_arg is used to advance the pointer to the next argument.

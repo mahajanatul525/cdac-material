@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "useassembly", "useassembly\useassembly.csproj", "{29E1F426-A111-438C-9E0D-C2F3E1D4B5D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "meth_lib", "meth_lib\meth_lib.csproj", "{F02D7714-5780-414E-B29E-AA6E7C692B50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29E1F426-A111-438C-9E0D-C2F3E1D4B5D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E1F426-A111-438C-9E0D-C2F3E1D4B5D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E1F426-A111-438C-9E0D-C2F3E1D4B5D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E1F426-A111-438C-9E0D-C2F3E1D4B5D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F02D7714-5780-414E-B29E-AA6E7C692B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F02D7714-5780-414E-B29E-AA6E7C692B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F02D7714-5780-414E-B29E-AA6E7C692B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F02D7714-5780-414E-B29E-AA6E7C692B50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,62 @@
+import java.io.*;
+import java.util.*;
+import static java.lang.System.*;
+
+class Employee implements Serializable
+{
+	int empid;
+	String empname;
+	int salary;
+	String des;
+	public Employee()
+	{
+		System.out.println("in no arg");
+	}
+	public Employee(int empid,String empname,int salary,String des)
+	{
+		this.empid=empid;
+		this.empname=empname;
+		this.salary=salary;
+		this.des=des;
+	}
+	public void disp()
+	{
+		System.out.println(empid+"\t"+empname+"\t"+salary+"\t"+des);
+	}
+	@Override
+	public String toString()
+	{
+		return (empid+"\t"+empname+"\t"+salary+"\t"+des);
+	}
+}
+public class Ass4 
+{
+   public static void main(String args[])
+   {
+	ArrayList<Employee>a1=new ArrayList<Employee>();
+	Employee e1=new Employee(1,"Prashant",45000,"Devloper");
+    Employee e2=new Employee(1,"Anurag",55000,"CTO");
+    a1.add(e1);
+    a1.add(e2);
+    try(FileOutputStream fo=new FileOutputStream("F:\\abc.txt"))
+    {
+    	ObjectOutputStream o=new ObjectOutputStream(fo);
+    		o.writeObject(a1);
+    }
+    catch(Exception e)
+    {
+    	e.printStackTrace();
+    }
+    try(FileInputStream fi=new FileInputStream("F:\\abc.txt"))
+    {
+    	ObjectInputStream oi=new ObjectInputStream(fi);
+    	ArrayList<Employee>j=(ArrayList<Employee>)oi.readObject();
+    	System.out.println(j);
+    }
+    catch(Exception a)
+    {
+    	a.printStackTrace();
+    }
+   } 
+     
+}

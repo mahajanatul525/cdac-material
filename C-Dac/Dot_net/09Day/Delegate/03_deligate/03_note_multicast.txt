@@ -1,0 +1,18 @@
+Multicasting
+One of the most exciting features of a delegate is its support for multicasting.
+ In simple
+terms, multicasting is the ability to create an invocation list, or chain, of methods that will be
+automatically called when a delegate is invoked. Such a chain is very easy to create. 
+
+Simply
+instantiate a delegate, and then use the + or += operator to add methods to the chain. 
+
+
+To
+remove a method, use – or – =. 
+
+If the delegate returns a value, then the value returned by
+the last method in the list becomes the return value of the entire delegate invocation. Thus,
+a delegate that makes use of multicasting will often have a         void           return type.
+
+

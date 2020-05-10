@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SampleModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="SampleModelStoreContainer">
+    <EntitySet Name="tblDepartment" EntityType="SampleModel.Store.tblDepartment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblEmployee" EntityType="SampleModel.Store.tblEmployee" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__tblEmploy__Depar__4CA06362" Association="SampleModel.Store.FK__tblEmploy__Depar__4CA06362">
+      <End Role="tblDepartment" EntitySet="tblDepartment" />
+      <End Role="tblEmployee" EntitySet="tblEmployee" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblEmployee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="10" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepartmentId" Type="int" />
+  </EntityType>
+  <Association Name="FK__tblEmploy__Depar__4CA06362">
+    <End Role="tblDepartment" Type="SampleModel.Store.tblDepartment" Multiplicity="0..1" />
+    <End Role="tblEmployee" Type="SampleModel.Store.tblEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartment">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblEmployee">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+            xmlns:f="http://java.sun.com/jsf/core"
+             xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+ 
+     <head><title>JSF ValueChangeEvent</title></head>
+
+<body>
+<h3>JSF ValueChangeEvent Example</h3>
+
+ <h:form>
+  
+  <h:outputLabel for ="name" value="Enter module:"/>
+           <h:inputText id ="name" value="#{accbean.modname}" onchange="this.form.submit()">
+               <f:valueChangeListener type = "mypack.MyListener1"/> 
+           </h:inputText>
+                      <br>
+                      </br>
+                       <h:outputLabel for ="name1" value="Topic is:"/>
+                       <h:inputText id ="top" binding="#{accbean.top}"/>
+     
+     </h:form>              
+</body>
+</html> 

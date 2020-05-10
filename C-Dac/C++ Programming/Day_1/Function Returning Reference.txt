@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+struct mystruct
+{
+	int num;
+}m={10};
+
+mystruct& getMyStruct()
+{
+	return m;
+}
+void main()
+{
+	cout<<getMyStruct().num<<endl;
+		// or
+	mystruct &ref=getMyStruct();
+	cout<<ref.num<<endl;
+}

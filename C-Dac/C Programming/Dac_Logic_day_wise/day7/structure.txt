@@ -1,0 +1,138 @@
+
+
+/* Q1.	Define a structure called cricket that will describe the following information
+Player name
+Team name
+Batting average
+Using cricket, declare an array player with 10 elements and write a program to read the information	about all the 10 players and 
+print a team wise list containing names of players with their batting average.
+*/
+
+#include<string.h>
+#include<stdio.h>
+#include<conio.h>
+struct cricket
+{
+	char pname[10],tname[10];
+	int avg;
+}e[10];
+struct cricket t;
+void main()
+{
+	int i,j;
+	printf("\n enter player name,team,avg:\n\n");
+	for(i=0;i<10;i++)
+		scanf("%s %s %d",&e[i].pname,&e[i].tname,&e[i].avg);
+	printf("\n\n");
+	for(i=0;i<9;i++)
+	{
+		for(j=0;j<9-i;j++)
+		{
+			if(strcmp(e[j].tname,e[j+1].tname)>0)
+			{
+				t=e[j];
+				e[j]=e[j+1];
+				e[j+1]=t;
+			}
+		}
+	}
+	for(i=0;i<10;i++)
+		printf("%s\t%s\t%d\n",e[i].pname,e[i].tname,e[i].avg);
+	getche();
+}
+
+
+
+day 7 Q2.	Define a structure called student that will describe the following information
+	Name
+	Div
+	%obtain
+        Using studentt, declare an array marksheet with 10 elements and write a program
+        to read the information	about all the 10 students and print a division  wise list 
+        containing names of student with their % obtain
+
+
+*/
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+struct student
+{
+	char name[4];
+	char div[1];
+	int per;
+}s[4];
+struct student t;
+void main()
+{
+	int i,j;
+	printf("Enter the name,division and percent obtained:\n");	
+	for(i=0;i<4;i++)
+		scanf("%s %s %d",s[i].name,&s[i].div,&s[i].per);
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3-i;j++)
+		{
+			if(strcmp(s[j].div,s[j+1].div)>0)
+			{	t=s[j];
+				s[j]=s[j+1];
+				s[j+1]=t;
+			}
+		}
+	}
+	printf("\n sorted data is:");
+	for(i=0;i<4;i++)
+		printf("\n%s %s %d\n",s[i].name,s[i].div,s[i].per);
+	getche();
+}
+
+
+Q3 define following structure
+struct emp
+{
+	char ecode[5];
+	char name[20];
+	int age;
+	char dept[30];
+	int basic;
+};
+ask user how many employees he wants to store.
+accordingly allocate memory and accepts values from user. if he wish to add more records allow him to do so.
+Now accept an "ecode" from user. Traverse through the array and find out whether record is there or not. If it is there display all the details of that employee. otherwise give appropriate message.
+
+
+
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+struct employee
+{
+	char ecode[5];
+	char name[20];
+	int age;
+	char dept[30];
+	int basic;
+} e1[2];
+
+void main() 
+{
+	int i,j,k,n,f,m;
+	char ec[5];
+	for(i=0;i<2;i++)
+	{
+		printf("Enter ecode name age department basic\n");
+		scanf("%s%s%d%s%d",&e1[i].ecode,&e1[i].name,&e1[i].age,&e1[i].dept,&e1[i].basic);	
+	}
+	printf("Enter ecode\n");
+	scanf("%s",&ec);
+	for(j=0;j<2;j++)
+	{
+		if(strcmp(ec,e1[j].ecode)==0)
+			printf("%s %s %d %s %d\n",e1[j].ecode,e1[j].name,e1[j].age,e1[j].dept,e1[j].basic);	
+
+	}
+	getch();
+}
+	
+

@@ -1,0 +1,33 @@
+Variations on the Main() Method
+By default, Visual Studio will generate a Main() method that has a void return value and an array of
+string types as the single input parameter. This is not the only possible form of Main(), however.
+
+ It is
+permissible to construct your application’s entry point using any of the following signatures (assuming it
+is contained within a C# class or structure definition):
+
+
+
+// int return type, array of strings as the parameter.
+static int Main(string[] args)
+{
+// Must return a value before exiting!
+return 0;
+}
+
+
+
+// No return type, no parameters.
+static void Main()
+{
+}
+
+
+
+// int return type, no parameters.
+static int Main()
+{
+
+// Must return a value before exiting!
+return 0;
+}

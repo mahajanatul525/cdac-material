@@ -1,0 +1,395 @@
+Q1. Accept string from user , accept a character from user and count the occurrence of 
+    the same
+
+ans:
+
+#include<stdio.h>
+void main()
+{
+	char str[10],ch;
+	int i,count=0;
+	puts("Enter string : ");
+	gets(str);
+	printf("Enter character : ");
+	scanf("%c",&ch);
+
+	for(i=0;str[i]!='\0';i++)
+	{
+		if(str[i]==ch)
+		{
+			count++;
+		}
+	}
+
+	printf("Given character occured %d times",count);
+
+}
+
+
+
+Q2. Accept string and check if it is palindrome or not eg(nitin)
+
+ans:
+
+#include<stdio.h>
+void main()
+{
+	char str1[10],str2[10];
+	int i,j,flag=0,l;
+	puts("Enter string1 : ");
+	gets(str1);
+	l=strlen(str1);
+
+	for(i=l-1,j=0;i>=0;j++,i--)
+	{
+		str2[j]=str1[i];
+	}
+
+	str2[j]='\0';
+
+	for(i=0;str1[i]!='\0';i++)
+	{
+		if(str1[i]!=str2[i])
+		{
+			flag=1;
+			break;
+		}
+	}
+
+	if(flag==0)
+		printf("\nPalindrome");
+	else if(flag==1)
+		printf("\nNot palindrome");
+
+}
+
+
+
+Q3. Accept a string and reverse it.
+
+ans:
+
+#include<stdio.h>
+void main()
+{
+	char str1[10],str2[10];
+	int i,j,l;
+	puts("\nEnter string1 : ");
+	gets(str1);
+	l=strlen(str1);
+
+	for(i=l-1,j=0;i>=0;j++,i--)
+	{
+		str2[j]=str1[i];
+	}
+
+	str2[j]='\0';
+	printf("\n%s",str2);
+
+}
+
+
+
+Q4. Accept a sentence from user and count number of words
+
+ans:
+
+#include<stdio.h>
+void main()
+{
+	char str1[30];
+	int i=0,count=0;
+	puts("\nEnter string1 : ");
+	gets(str1);
+
+	while(str1[i]!='\0')
+	{
+		if(str1[i]==' ')
+			count++;
+		i++;
+	}
+
+	printf("count of words = %d",count+1);
+
+}
+
+
+
+Q5. Accept  two string append 1st one with the second one
+
+ans:
+
+#include<stdio.h>
+void main()
+{
+	char str1[20],str2[10];
+	int i,j;
+	puts("Enter string1 : ");
+	gets(str1);
+	puts("Enter string2 : ");
+	gets(str2);
+
+	for(i=0;str1[i]!='\0';i++)
+	{
+		;
+	}
+
+	for(j=0;str2[j]!='\0';j++)
+	{
+		str1[i]=str2[j];
+		i++;
+	}
+
+	str1[i]='\0';
+	printf("%s",str1);
+}
+
+
+
+Q6. Accept two string and check both are same or not
+
+ans:
+
+#include<stdio.h>
+void main()
+{
+	char str1[5],str2[5];
+	int i,flag=0                                                                                                                                                          ;
+	puts("Enter string1 : ");
+	gets(str1);
+	puts("Enter string2 : ");
+	gets(str2);
+
+	for(i=0;str1[i]!='\0';i++)
+	{
+		if(str1[i]!=str2[i])
+		{
+			printf("Not same");
+			flag=1;
+			break;
+		}
+	}
+
+	if(flag==0)
+		printf("same");
+
+}
+
+
+
+Q7. Accept 5 name from user and print their name in ascending order
+
+ans:
+
+#include<stdio.h>
+void main()
+{
+	int i,j,n=5;
+	char ch[5][10],t[10];
+	printf("\nEnter the names =\n");
+
+	for(i=0;i<5;i++)
+	{
+		scanf("%s",ch[i]);
+	}
+
+	printf("Given names =\n");
+
+	for(i=0;i<5;i++)
+	{
+		printf("%s\n",ch[i]);
+	}
+
+	for(i=0;i<n-1;i++)
+	{
+		for(j=0;j<n-1-i;j++)
+		{
+			if(strcmp(ch[j],ch[j+1])>0)
+			{
+				strcpy(t,ch[j]);
+				strcpy(ch[j],ch[j+1]);
+				strcpy(ch[j+1],t);
+			}
+		}
+	}
+
+	printf("Ascending Order =\n");
+
+	for(i=0;i<5;i++)
+	{
+		printf("%s\n",ch[i]);
+	}
+
+}
+
+
+
+Q8. Accept 5 name from user , accept a name  from user and check that name is there in 
+    array or not
+
+ans:
+
+#include<stdio.h>
+void main()
+{
+	int i,n=5,flag=0;
+	char ch[5][10],t[10];
+	printf("\nEnter the names =\n");
+
+	for(i=0;i<5;i++)
+	{
+		scanf("%s",ch[i]);
+	}
+
+	printf("Given names =\n");
+
+	for(i=0;i<5;i++)
+	{
+		printf("%s\n",ch[i]);
+	}
+
+	printf("Enter the name to be searched => ");
+	scanf("%s",t);
+
+	for(i=0;i<n-1;i++)
+	{
+		if(strcmp(ch[i],t)==0)
+		{
+			flag=1;
+		}
+
+	}
+
+	if(flag==1)
+		printf("Name is present");
+	else
+		printf("Name is not present");
+
+}
+
+
+
+
+Q9. Accept a string accept a character and delete all occurrence of that character Write
+    a program to extract the portion of a string and print the extracted string. Assume 
+    that m characters are extracted, starting from n character
+
+ans:
+
+#include<stdio.h>
+void main()
+{
+	char str[15];
+	char ch;
+	int i,j,m,n,flag=0;
+	printf("\nEnter the string => ");
+	scanf("%s",str);
+	printf("Given string = %s",str);
+
+
+	printf("\nEnter the number of characters to be extracted = ");
+	scanf("%d",&m);
+
+	printf("Enter the starting index = ");
+	scanf("%d",&n);
+
+	printf("Extracted string = ");
+
+	for(i=n,j=0;j<m;i++,j++)
+	{
+		printf("%c",str[i]);
+	}
+
+	printf("\nEnter the character to be deleted = ");
+	scanf("%s",&ch);
+
+	printf("New string = ");
+
+	for(i=0;str[i]!='\0';i++)
+	{
+		if(str[i]==ch)
+		{
+			flag=1;
+		}
+		if(flag==1)
+		{
+			str[i]=str[++i];
+			flag=0;
+		}
+		printf("%c",str[i]);
+
+	}
+
+
+
+}
+Q10.	Accept a start and end range of a character,eg start A end F  (CDAC question)
+a.Ask user to enter any character between that range
+b.You have to print which character user has not entered
+c.Eg input start A end F entered character by user are BEF o/p ACD
+
+
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+void main()
+{
+
+	char ch1,ch2,a[5];
+	int i,j;
+	int flag=0;
+
+	printf("\nEnter lower range ");
+	scanf("%c %c",&ch1,&ch2);
+	
+	printf("Enter characters \n");
+	scanf("%s",a);
+
+
+	for(i=ch1;i<=ch2;i++)
+	{
+		flag=0;
+		
+		for(j=0;a[j]!='\0';j++)
+		{
+			if(i!=a[j])
+				continue;
+			else
+			{
+				flag=1;
+				break;
+			}
+		}
+		if(flag==0)
+			printf("\n%c",i);
+	}
+
+	getch();
+}
+
+/*Q11.	Read a five-letter word into the computer, then encode the word on a letter-by-letter basis by
+subtracting 30 from the numerical value that is used to represent each letter. Thus if the ASCII
+character set is being used, the letter a (which is represented by the value 97) would become a C
+(represented by the value 67), etc.
+Write out the encoded version of the word. Test the program with the following words: white, roses,
+Japan, zebra.*/
+
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+	char s[20], n[20];
+	int i,c;
+	printf("enter string:");
+	scanf("%s",s);
+	c=strlen(s);
+	for(i=0;i<c
+		;i++)
+	{
+	n[i]=s[i]-30;
+	printf("%c",n[i]);
+	}
+	getche();
+}

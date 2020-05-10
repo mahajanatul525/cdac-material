@@ -1,0 +1,29 @@
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 19\ThreadStats\bin\Debug\ThreadStats.exe
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 19\ThreadStats\bin\Debug\ThreadStats.pdb
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 19\ThreadStats\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 19\ThreadStats\obj\x86\Debug\ThreadStats.exe
+D:\Ketki_Data\dotnet\c#_Placement\c#5\Code\Chapter 19\ThreadStats\obj\x86\Debug\ThreadStats.pdb
+D:\dot_net\Day_wise\Code\Chapter 19\ThreadStats\obj\x86\Debug\ThreadStats.exe
+D:\dot_net\Day_wise\Code\Chapter 19\ThreadStats\obj\x86\Debug\ThreadStats.pdb
+D:\dot_net\Day_wise\Code\Chapter 19\ThreadStats\bin\Debug\ThreadStats.exe
+D:\dot_net\Day_wise\Code\Chapter 19\ThreadStats\bin\Debug\ThreadStats.pdb
+D:\dot_net\Day_wise\day6\Thread_new\04ThreadStats\obj\x86\Debug\ThreadStats.exe
+D:\dot_net\Day_wise\day6\Thread_new\04ThreadStats\obj\x86\Debug\ThreadStats.pdb
+D:\dot_net\Day_wise\day6\Thread_new\04ThreadStats\bin\Debug\ThreadStats.exe
+D:\dot_net\Day_wise\day6\Thread_new\04ThreadStats\obj\x86\Debug\ThreadStats.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day6\Thread_new\04ThreadStats\bin\Debug\ThreadStats.pdb
+D:\dot_net\Day_wise\day6\05Thread_new\04ThreadStats\obj\x86\Debug\ThreadStats.exe
+D:\dot_net\Day_wise\day6\05Thread_new\04ThreadStats\obj\x86\Debug\ThreadStats.pdb
+D:\dot_net\Day_wise\day6\05Thread_new\04ThreadStats\bin\Debug\ThreadStats.exe
+D:\dot_net\Day_wise\day6\05Thread_new\04ThreadStats\bin\Debug\ThreadStats.pdb
+D:\dot_net\Day_wise\day6\05Thread_new\04ThreadStats\obj\x86\Debug\ThreadStats.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day6\07Thread_new\04ThreadStats\obj\x86\Debug\ThreadStats.exe
+D:\dot_net\Day_wise\day6\07Thread_new\04ThreadStats\obj\x86\Debug\ThreadStats.pdb
+D:\dot_net\Day_wise\day6\07Thread_new\04ThreadStats\bin\Debug\ThreadStats.exe
+D:\dot_net\Day_wise\day6\07Thread_new\04ThreadStats\bin\Debug\ThreadStats.pdb
+D:\dot_net\Day_wise\day6\07Thread_new\04ThreadStats\obj\x86\Debug\ThreadStats.csprojResolveAssemblyReference.cache
+C:\Users\practice\Desktop\Dot_net\day6\07Thread_new\03ThreadStats\obj\x86\Debug\ThreadStats.exe
+C:\Users\practice\Desktop\Dot_net\day6\07Thread_new\03ThreadStats\obj\x86\Debug\ThreadStats.pdb
+C:\Users\practice\Desktop\Dot_net\day6\07Thread_new\03ThreadStats\bin\Debug\ThreadStats.exe
+C:\Users\practice\Desktop\Dot_net\day6\07Thread_new\03ThreadStats\bin\Debug\ThreadStats.pdb
+C:\Users\practice\Desktop\Dot_net\day6\07Thread_new\03ThreadStats\obj\x86\Debug\ThreadStats.csprojResolveAssemblyReference.cache

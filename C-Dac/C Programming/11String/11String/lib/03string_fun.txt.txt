@@ -1,0 +1,54 @@
+#include<stdio.h>
+void change(char *);
+void main()
+{
+char ch[]="vita";
+change(ch);
+puts(ch); //wjub
+}
+void change(char *c)
+{int count=0;
+char *p;
+p=c;
+printf("%s",*c);
+
+ while(*c!='\0')
+ {
+   *c=*c+1; //(*c)++
+ 
+  c++;
+ }
+printf("%s",*p);//wjub
+
+printf("%s",*s);//no out put
+
+}
+
+
+
+int change(char *);
+void main()
+{int a;
+char ch[]="vita";
+a=change(ch);
+printf("%d",a);
+}
+int change(char *c)
+{int count=0;
+
+ while(*c!='\0')
+ {
+   
+  count++;
+ }
+return count;
+}
+
+
+
+
+
+
+
+
+

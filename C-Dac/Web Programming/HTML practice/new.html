@@ -1,0 +1,28 @@
+<!doctype html>
+<html><head>
+<style>.cl{color:red}</style>
+
+<script>
+function call()
+{
+
+	var tt=document.frm.nm1;
+	
+	var a=document.frm.nm1.value;
+	if(a.length ==0)
+	{
+		document.getElementById("dd").innerHTML="name kasa kay empty asel bhava";
+	}
+}
+</script>
+</head>
+
+<body>
+<form name="frm">
+	<input type="text" name="nm1" value="enter 1no" id="no1"/>
+	<input type="text" name="nm2" value="enter 2no"id="no2"/>
+	<span id="dd" class="cl"></span>
+</form>
+</body>
+
+</html>

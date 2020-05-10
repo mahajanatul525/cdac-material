@@ -1,0 +1,2 @@
+accept student name and age.
+using hibernate save student object inside database.

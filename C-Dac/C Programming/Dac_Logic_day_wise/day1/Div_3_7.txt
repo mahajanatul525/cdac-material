@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int no;
+	printf("Enter no: ");
+	scanf("%d",&no);
+		if(no%3==0)
+			printf("\tThree");
+		if(no%7==0)
+			printf("\tSeven");
+		getche();
+
+
+}

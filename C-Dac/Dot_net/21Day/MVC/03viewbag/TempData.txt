@@ -1,0 +1,3 @@
+In MVC, there are no code behind file. 
+So, in order to use a particular data or value of a control we use sessions and TempData. 
+TempData is restricted only to single controller and so if we need the value in another controller we cannot access it whereas Session maintains the values throughout the application.

@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplicationstudent
+{   enum dept {Mkt, Adv, Admin }
+    class Employee
+    {  public string name;
+       public dept d;
+       public int salary;
+       public Employee(string name, int salary,dept d)
+       {   this.name = name;
+           this.salary = salary;
+           this.d = d;    }
+       public double netsalary()
+       {         return this.salary - (this.salary * 0.1);       }
+       public void display()
+       { Console.WriteLine("{0} {1} {2}",name, netsalary(),d); }
+    }
+    class Program
+    {   static void Main(string[] args)
+        {    Employee e1 = new Employee("Raj",8000,dept.Mkt);
+             e1.display();
+             Employee e2 = new Employee("Geeta", 70000,dept.Adv);
+             e2.display();
+        }
+    }
+}

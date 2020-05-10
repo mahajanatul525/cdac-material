@@ -1,0 +1,12 @@
+C:\Program Files\Microsoft SDKs\Windows\v6.0A\bin
+
+click on ildasm file
+
+open your exe file you will able to see some detail about class
+method
+etc
+
+open visualstudiocammand prompt
+
+type
+ildasm.exe it will open the window

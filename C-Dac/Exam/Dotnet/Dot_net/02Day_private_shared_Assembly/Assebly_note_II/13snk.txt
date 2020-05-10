@@ -1,0 +1,20 @@
+ What is .Net Strong Name
+
+Strong name consists of an Assemblys identity, that means the Assemblies can be assigned a cryptographic signature. The strong name guarantees the integrity of the assembly which prevents someone from taking over the name of the assembly.
+
+Strong Name includes the name of the
+ .net assembly, 
+version number, 
+culture identity, and 
+a public key token. 
+
+
+It is generated from an assembly file using the corresponding private key. Strong names guarantee name uniqueness by relying on unique key pairs.
+
+To create a key pair
+
+At the command prompt, type the following command:
+
+sn -k fileName
+
+In this command, file name is the name of the output file containing the key pair.

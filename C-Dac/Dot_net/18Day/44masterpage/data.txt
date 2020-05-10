@@ -1,0 +1,28 @@
+Master pages in asp.net allow you to create a consistent look and behaviour for all the pages in an asp.net web application.
+
+To create a master page
+1. Right click on the "Project Name" in "Solution Explorer", and select "Add - New Item"
+2. From the "Add New Item" dialog box, select "Master Page"
+3. Give your master page a name and click OK. 
+
+
+
+
+At this point, you should have a webform, with the following HTML.
+
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebFormsDemo.WebForm1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+</asp:Content>
+
+Points to remember
+
+1. html, head and body sections are not present on the content page, as they are already present on the master page, that this content page is subscribed to.
+
+2. Content pages are associated with master pages using "MasterPageFile" attribute of the "Page" directive
+
+3. Content control on a content page is linked to "ContentPlaceHolder" on the master page using "ContentPlaceHolderID" attribute of the "Content" control. Controls like textbox, button, gridview etc.. and any text that you want in the content page must be placed inside the content control. If you try to place anything outside of the content control, you would get an error - Only Content controls are allowed directly in a content page that contains Content controls.
+
+4. When you flip the content page to design mode, notice that, the region outside of the "ContentPlaceHolder" is greyed out and disabled. This is because on a content page, you should only be able to edit "Content" that is specific to that page.
+
+So, an asp.net master page allows us to define a common layout for all the pages in the application. Later, if we have to change something in the common layout, we only have to do it at one place, that is in the master page. 

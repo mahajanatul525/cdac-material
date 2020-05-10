@@ -1,0 +1,32 @@
+@CollectionOfElements
+	public Map<String, String> getProperties() {
+		return this.properties;
+	}
+
+in hibernate we have by default fetchtype - lazy=true
+
+output will be
+
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: SupportProperty.properties, no session or session was closed.
+
+this is because
+
+	after the session is closed,
+
+we are saying
+
+		System.out.println(p1.get("score")); 
+			System.out.println(p1.get("grade"));
+
+
+
+
+
+
+
+
+
+
+
+
+

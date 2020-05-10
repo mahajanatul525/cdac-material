@@ -1,0 +1,80 @@
+/*3) Define a class "Player" with following members
+	int id;
+	char *name;
+	char *country
+	int score
+	in the main function, u should be able to say	
+	Player p1(1,"sachin","india",200);
+	cout<<p1<<endl;
+	p1.disp();
+	Player p2=p1;	
+	cout<<p2<<endl;
+	Player p3;
+	p3=p1;*/
+
+#include<iostream>
+#include<string.h>
+using namespace std;
+class player
+{private:
+int id;
+	char *name;
+	char *country;
+	int score;
+public:
+	player()
+	{
+	}
+	player(int a,char *str1,char *str2,int b)
+	{
+		name=new char[strlen(str1)+1];
+		strcpy(name,str1);
+		country=new char[strlen(str2)+1];
+		strcpy(country,str2);
+	id=a;
+	score=b;
+	}
+	void display()
+	{
+		cout<<id<<endl;
+		cout<<name<<endl;
+		cout<<country<<endl<<score<<endl;
+	}
+	player(player &m)
+	{ name=m.name;
+	id=m.id;
+	score=m.score;
+	country=m.country;
+	}
+	/*~player()
+	{ 
+		delete []name;
+		delete []country;
+		cout<<"inside destructor";
+	}*/
+
+	friend ostream& operator<<(ostream &,player &);	
+	void operator=(player &n)
+	{ id=n.id;
+	  name=n.name;
+	  country=n.country;
+	  score=n.score; 
+	}
+
+};
+ostream& operator<<(ostream &o,player &ref)
+	{
+		o<<ref.id<<ref.name<<ref.country<<ref.score;
+		return o;
+	}
+void main()
+{
+	player p1(1,"sachin","india",200);
+	cout<<p1<<endl;
+	p1.display();
+	player p2=p1;	
+	cout<<p2<<endl;
+	player p3;
+	p3=p1;
+}
+		

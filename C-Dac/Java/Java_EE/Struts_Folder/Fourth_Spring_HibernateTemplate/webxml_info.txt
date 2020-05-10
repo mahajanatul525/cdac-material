@@ -1,0 +1,2 @@
+web.xml defines
+	controller class for struts2 and "ContextLoaderListener" class to make connection between struts2 and spring application.

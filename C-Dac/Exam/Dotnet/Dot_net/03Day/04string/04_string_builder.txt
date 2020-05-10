@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+
+
+namespace FunWithStrings
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***** Fun with Strings *****\n");
+            FunWithStringBuilder();
+
+            Console.ReadLine();
+        }
+
+        #region String builder
+        static void FunWithStringBuilder()
+        {
+            Console.WriteLine("=> Using the StringBuilder:");
+
+            // Make a StringBuilder with an initial size of 256.
+            StringBuilder sb = new StringBuilder("**** Fantastic Games ****", 256);
+
+            sb.Append("\n");
+            sb.AppendLine("hello world");
+            sb.AppendLine("Hello how r u?");
+            sb.AppendLine("you r " + "2");
+            sb.AppendLine("System Shock");
+            Console.WriteLine(sb.ToString());
+
+            sb.Replace("2", "Invisible War");
+            Console.WriteLine(sb.ToString());
+            Console.WriteLine("sb has {0} chars.", sb.Length);
+            Console.WriteLine();
+        }
+        #endregion
+    }
+}

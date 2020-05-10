@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AnonymousTypes
+{
+    class Program
+    {
+       
+        static void Main(string[] args)
+        {
+            var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", diam = 1 } };
+            Console.WriteLine(anonArray.GetType());
+        
+            foreach (var c in anonArray)
+            {   Console.WriteLine(c);
+
+            }
+            Console.ReadKey();
+        }
+    }
+}

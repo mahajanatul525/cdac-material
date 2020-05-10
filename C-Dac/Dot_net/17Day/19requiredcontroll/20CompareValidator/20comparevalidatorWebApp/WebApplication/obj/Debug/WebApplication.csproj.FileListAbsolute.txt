@@ -1,0 +1,10 @@
+D:\dot_net\Day_wise\day13asp\19requiredcontroll\20CompareValidator\WebApplication\WebApplication\bin\WebApplication.dll
+D:\dot_net\Day_wise\day13asp\19requiredcontroll\20CompareValidator\WebApplication\WebApplication\bin\WebApplication.pdb
+D:\dot_net\Day_wise\day13asp\19requiredcontroll\20CompareValidator\WebApplication\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day13asp\19requiredcontroll\20CompareValidator\WebApplication\WebApplication\obj\Debug\WebApplication.dll
+D:\dot_net\Day_wise\day13asp\19requiredcontroll\20CompareValidator\WebApplication\WebApplication\obj\Debug\WebApplication.pdb
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\19requiredcontroll\20CompareValidator\20comparevalidatorWebApp\WebApplication\bin\WebApplication.dll
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\19requiredcontroll\20CompareValidator\20comparevalidatorWebApp\WebApplication\bin\WebApplication.pdb
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\19requiredcontroll\20CompareValidator\20comparevalidatorWebApp\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\19requiredcontroll\20CompareValidator\20comparevalidatorWebApp\WebApplication\obj\Debug\WebApplication.dll
+C:\Users\practice\Desktop\Dot_net\ASP\ASPII\19requiredcontroll\20CompareValidator\20comparevalidatorWebApp\WebApplication\obj\Debug\WebApplication.pdb

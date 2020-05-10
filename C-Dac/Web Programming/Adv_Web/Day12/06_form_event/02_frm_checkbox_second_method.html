@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html><head><script src="jquery-1.9.1.js"></script>
+<script>$(document).ready(function() {
+$("#btn").click(function()
+{var sum=0;
+var s=$('input[name="ch1"]:checked').val()
+var s2= $('input[name="ch2"]:checked').val()
+alert(s);
+alert(s2);
+if(s)
+{ sum=sum+parseInt(s)}
+if(s2)
+{ sum=sum+parseInt(s2) }
+//$("#DD").append(sum);
+$("#DD").text("ans="+sum);
+});
+});
+</script></head><body><pre>
+<form id="frm" name="frm"action="a.html">
+C prog.<input  type="checkbox" name="ch1" value="200"/>200
+PHP<input  type="checkbox" name="ch2" value="450"/>450
+<input type="button" id="btn" value="get data"/>
+</form></pre>               
+<div id="DD">ans= </div>
+
+</body>
+</html>
+

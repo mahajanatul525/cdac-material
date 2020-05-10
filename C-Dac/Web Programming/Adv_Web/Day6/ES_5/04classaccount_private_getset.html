@@ -1,0 +1,32 @@
+<script>
+'use strict'
+class Account
+{   constructor(name,amt)
+  { this._name=name;
+   this._balance=amt;
+	  }
+	  get Aname(){ 
+	    alert("0")
+	  return this._name; }
+	 
+	  set Aname(value) { 
+	   alert(value+"1")
+	  this._name=value; }
+ 	
+	  get Abalance() { return this._balance; }
+	  
+ 	deposit(amt)
+	{this.balance+=amt;
+	}
+	toString()
+	{return this.Aname+ "  " +this.Abalance}
+}
+
+var obj1=new Account("raj",20000);
+console.log(obj1);
+document.write(obj1);
+obj1.Aname="geeta";
+console.log(obj1);
+document.write(obj1);
+
+</script>

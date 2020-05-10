@@ -1,0 +1,56 @@
+// An alternate way to start a thread. 
+ 
+using System; 
+using System.Threading; 
+ 
+class MyThread { 
+  public int Count; 
+  public Thread Thrd;  
+ 
+  public MyThread(string name) { 
+    Count = 0; 
+    Thrd = new Thread(this.Run);  
+    Thrd.Name = name; // set the name of the thread 
+    Thrd.Start(); // start the thread 
+  } 
+ 
+  // Entry point of thread. 
+  void Run() { 
+    Console.WriteLine(Thrd.Name + " starting."); 
+ 
+    do { 
+      Thread.Sleep(500); 
+      Console.WriteLine("In " + Thrd.Name + 
+                        ", Count is " + Count); 
+      Count++; 
+    } while(Count < 10); 
+ 
+    Console.WriteLine(Thrd.Name + " terminating."); 
+  } 
+} 
+ 
+class MultiThreadImproved { 
+  static void Main() { 
+    Console.WriteLine("Main thread starting."); 
+ 
+    // First, construct a MyThread object. 
+    MyThread mt = new MyThread("Child #1"); 
+ 
+    do { 
+      Console.Write("."); 
+      Thread.Sleep(100); 
+    } while (mt.Count != 10); 
+ 
+    Console.WriteLine("Main thread ending."); 
+  } 
+}
+
+/*it is possible to have a thread begin execution as soon as it is created. In the
+case of MyThread, this is done by instantiating a Thread object inside MyThread’s
+constructor. Second, there is no need for MyThread to store the name of the thread since
+Thread defines a property called Name that can be used for this purpose. Name is defined
+like this:
+public string Name { get; set; }
+Since Name is a read-write property, you can use it to set the name of a thread or to retrieve
+the thread’s name.
+Here is a version of the preceding program that makes these three improvements:*/

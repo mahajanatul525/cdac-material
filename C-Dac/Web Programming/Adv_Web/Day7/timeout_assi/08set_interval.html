@@ -1,0 +1,27 @@
+<!DOCTYPE html><head><script>
+var a=5;var t;
+function st()
+{ t=setInterval("call()",10000);
+}
+function call()
+{  document.getElementById("xx").value=a++;
+}
+function tp()
+{alert(t);
+clearInterval(t)
+}
+function go()
+{  alert("hi")
+}
+</script></head><body>
+<form name="frm">
+<input type="textbox" id="xx" name="nm" value="hi" />
+<input type="button"   value="start" onclick="st()"/>
+<input type="button" onclick="tp()" value="stop">
+<input type="button" onclick="go()" value="go">
+</form>
+</body>
+</html>
+
+
+

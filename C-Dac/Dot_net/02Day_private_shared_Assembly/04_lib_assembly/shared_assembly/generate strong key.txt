@@ -1,0 +1,9 @@
+right click on project in solution explorer
+click on properties 
+click on signing
+type name 
+save
+go to assembly file
+and add
+
+[assembly :AssemblyKeyFile("filename.snk")]

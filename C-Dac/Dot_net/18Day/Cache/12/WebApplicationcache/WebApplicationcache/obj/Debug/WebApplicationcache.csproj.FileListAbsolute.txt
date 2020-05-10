@@ -1,0 +1,10 @@
+D:\dot_net\Day_wise\day9\examples\12\WebApplicationcache\WebApplicationcache\bin\WebApplicationcache.dll
+D:\dot_net\Day_wise\day9\examples\12\WebApplicationcache\WebApplicationcache\bin\WebApplicationcache.pdb
+D:\dot_net\Day_wise\day9\examples\12\WebApplicationcache\WebApplicationcache\obj\Debug\WebApplicationcache.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day9\examples\12\WebApplicationcache\WebApplicationcache\obj\Debug\WebApplicationcache.dll
+D:\dot_net\Day_wise\day9\examples\12\WebApplicationcache\WebApplicationcache\obj\Debug\WebApplicationcache.pdb
+C:\Users\practice\Desktop\Dot_net\day9\examples\01_asp_ado\12\WebApplicationcache\WebApplicationcache\bin\WebApplicationcache.dll
+C:\Users\practice\Desktop\Dot_net\day9\examples\01_asp_ado\12\WebApplicationcache\WebApplicationcache\bin\WebApplicationcache.pdb
+C:\Users\practice\Desktop\Dot_net\day9\examples\01_asp_ado\12\WebApplicationcache\WebApplicationcache\obj\Debug\WebApplicationcache.csprojResolveAssemblyReference.cache
+C:\Users\practice\Desktop\Dot_net\day9\examples\01_asp_ado\12\WebApplicationcache\WebApplicationcache\obj\Debug\WebApplicationcache.dll
+C:\Users\practice\Desktop\Dot_net\day9\examples\01_asp_ado\12\WebApplicationcache\WebApplicationcache\obj\Debug\WebApplicationcache.pdb

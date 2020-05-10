@@ -1,0 +1,159 @@
+111111111111111111111111111111
+package tabelof;
+
+public class tabelof 
+{
+	int t=1;
+public void table (int n)
+{
+	for (int i=1; i<=10; i++)
+	{t=n*i;
+	System.out.println(t);}
+}
+
+
+	public static void main(String[] args) {
+		tabelof t1=new tabelof();
+		t1.table(8);
+		
+	
+	}
+
+}
+
+
+2222222222222222222222222222222222222
+package tabelof;
+
+public class tabelof 
+{
+	int i=1;
+public void table ()
+{
+	do	{
+	System.out.println(i);
+	i++;}
+	
+	while(i<=10);
+	
+}
+
+
+	public static void main(String[] args) {
+		tabelof t1=new tabelof();
+		t1.table();
+		
+	
+	}
+
+}
+
+
+
+88888888888888888888888888888888888888888888
+
+package assignments;
+
+public class sample1 {
+	int var1;
+	
+	public sample1(int k)
+	{var1=k;
+	System.out.println(var1);}
+
+	public static void main(String[] args) {
+		
+		new sample1(45);
+		
+	}
+
+}
+
+ 
+
+999999999999999999999999999999999999999
+package assignments;
+
+public class sample1 {
+	int var1;
+	int var2;
+	public sample1(int k,int n)
+	{
+		var1=k;
+		var2=n;
+	}
+
+	public sample1()
+	{
+		var1=10;
+		var2=20;		
+	}
+	public void disp()
+	{
+		System.out.println(var1);
+		System.out.println(var2);
+	}
+	public static void main(String[] args) {
+		
+		sample1 s= new sample1();
+		sample1 s1= new sample1(300,100);
+		s.disp();
+		s1.disp();
+		
+	}
+
+}
+
+101010101010101010101010101010101010101010
+
+package assignments;
+
+public class sample1 {
+	int var1;	
+	public sample1(int k)
+	{
+		var1=k;
+	}	
+	public void disp()
+	{
+		System.out.println(var1);
+	}
+	public static void main(String[] args) {
+		
+		sample1 s= new sample1(100);
+		sample1 ref=s;
+		s.disp();
+		ref.disp();		
+	}
+}
+
+1111111111111111111111111111111111111111111111111111111111111111
+
+
+package assignments;
+
+public class sample1 {
+	int var1;	
+	public sample1(int k)
+	{
+		var1=k;
+	}	
+	public void disp()
+	{
+		System.out.println(var1);
+	}
+	
+	public void fun(sample1 ref)
+	{
+		ref=new sample1(300);	
+		System.out.println(ref.var1);
+	}
+	public static void main(String[] args) {
+		
+		sample1 s= new sample1(200);
+		s.disp();
+		s.fun(s); 
+		s.disp();
+	}
+}
+

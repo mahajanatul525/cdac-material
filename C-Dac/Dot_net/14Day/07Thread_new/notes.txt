@@ -1,0 +1,38 @@
+Manually Creating Secondary Threads
+When you want to programmatically create additional threads to carry on some unit of work, follow this
+very predictable process when using the types of the System.Threading namespace:
+
+1. Create a method to be the entry point for the new thread.
+
+2. Create a new ParameterizedThreadStart (or ThreadStart)delegate, passing the
+address of the method defined in step 1 to the constructor.
+
+3. Create a Thread object, passing the ParameterizedThreadStart/ThreadStart
+delegate as a constructor argument.
+
+4. Establish any initial thread characteristics (name, priority, etc.).
+
+5. Call the Thread.Start() method. 
+
+
+This starts the thread at the method referenced by the delegate created in step 2 as soon as possible.
+
+As stated in step 2, you may make use of two distinct delegate types to “point to” the method that
+the secondary thread will execute.
+
+ The    ThreadStart     delegate can point to any method that takes no arguments and returns nothing. ie void 
+Demo:
+Thread backgroundThread =             new Thread(new ThreadStart(p.PrintNumbers));
+
+This delegate can be helpful when the method is designed to simply run in the background without further interaction.
+
+The obvious limitation of ThreadStart is that you are unable to pass in parameters for processing.
+
+
+However, the      ParameterizedThreadStart                        delegate type allows a single parameter of type System.Object.
+
+Given that anything can be represented as a System.Object, 
+
+you can pass in any number of parameters via a custom class or structure. 
+ Thread t = new Thread(new ParameterizedThreadStart(Add));
+Do note, however, that the ParameterizedThreadStart delegate can only point to methods that return void.

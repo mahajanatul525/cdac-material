@@ -1,0 +1,25 @@
+log4j:WARN No appenders could be found for logger (org.hibernate.cfg.annotations.Version).
+log4j:WARN Please initialize the log4j system properly.
+
+Hibernate: insert into sp (name) values (?)
+Hibernate: insert into sp_properties (sp_id, mapkey, element) values (?, ?, ?)
+Hibernate: insert into sp_properties (sp_id, mapkey, element) values (?, ?, ?)
+
+Hibernate: select supportpro0_.id as id0_, supportpro0_.name as name0_ from sp supportpro0_
+Hibernate: select properties0_.sp_id as sp1_0_, properties0_.element as element0_, properties0_.mapkey as mapkey0_ from sp_properties properties0_ where properties0_.sp_id=?
+
+After getProperties	
+p1 is not null
+50
+A
+it is all over
+
+
+
+
+
+
+
+
+
+

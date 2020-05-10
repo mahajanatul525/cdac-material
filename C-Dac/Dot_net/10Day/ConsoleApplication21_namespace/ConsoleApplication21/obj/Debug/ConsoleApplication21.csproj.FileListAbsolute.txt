@@ -1,0 +1,5 @@
+D:\DEMO_NET\ConsoleApplication21\ConsoleApplication21\bin\Debug\ConsoleApplication21.exe.config
+D:\DEMO_NET\ConsoleApplication21\ConsoleApplication21\bin\Debug\ConsoleApplication21.exe
+D:\DEMO_NET\ConsoleApplication21\ConsoleApplication21\bin\Debug\ConsoleApplication21.pdb
+D:\DEMO_NET\ConsoleApplication21\ConsoleApplication21\obj\Debug\ConsoleApplication21.exe
+D:\DEMO_NET\ConsoleApplication21\ConsoleApplication21\obj\Debug\ConsoleApplication21.pdb

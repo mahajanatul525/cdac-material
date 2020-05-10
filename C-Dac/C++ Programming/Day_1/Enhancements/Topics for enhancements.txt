@@ -1,0 +1,17 @@
+1) cin and cout
+endl vs \n
+2) variable declaration anywhere
+3) scope of variable
+4) function prototype must
+5) default arguments
+6) Function overloading (Rules, Name Mangling or Name Decoration)
+7) constant 
+8) constant pointer,pointer to constant, constant pointer to a constant
+9) inline functions
+10) reference
+11) call by reference
+12) reference to an array
+13)  returnning reference from a function ( Do not return automatic variable's reference from a function)
+14) const reference, reference to const var, reference to a pointer
+15) scope resolution operator
+16) new and delete 

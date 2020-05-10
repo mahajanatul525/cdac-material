@@ -1,0 +1,4 @@
+late binding in C++
+
+	a) pointer or reference to parent class
+	b) virtual method

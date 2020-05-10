@@ -1,0 +1,32 @@
+String
+
+Q1  Accept string from user , accept a character from user and count the occurrence of the same
+
+Q2  Accept string and check if it is palindrome or not eg(nitin)
+
+Q3  Accept a string and reverse it.
+
+Q4  Accept a sentence from user and count number of words
+
+Q5  Accept two string and check both are same or not
+
+Q6  Accept 5 name from user and print their name in ascending order
+
+Q7  Accept 5 name from user , accept a name  from user and check that name is there in array or not
+
+Q8  Accept a string accept a character and delete all occurrence of that character
+
+Q9  Accept a start and end range of a character,eg start A end F
+Ask user to enter any character between that range 
+You have to print which character user has not entered
+Eg input start A end F entered character by user are BEF o/p ACD
+
+Q10 Accept a paragraph from user Accept a word from user and count occurance of thet word.
+
+Q11 Accept a sentences from user, accept a word from user to search  and replace that word with new word accepted from user.
+
+eg: Welcome to Vita a DAc Center
+word to serch -Vita
+new word -Vidyanidhi
+
+o/p welcome to Vidyanidhi a Dac Center.

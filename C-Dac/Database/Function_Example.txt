@@ -1,0 +1,19 @@
+create  function usf_checkprime2 ( num int)
+returns varchar(100)
+begin
+ declare j int;
+ set j:=2;
+ myloop:loop
+   if j > (num/2) then
+   leave myloop;
+   end if;
+  if (num%j)=0 then
+ return concat(num,' is a prime number');
+   leave myloop;
+  end if;
+ set j:=j+1;
+end loop myloop;
+ return  concat(num,' is not a prime number');
+end;
+$$
+

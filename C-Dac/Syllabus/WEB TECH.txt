@@ -1,0 +1,332 @@
+   
+Web Programming concepts (16hrs)
+
+Architecture of the Web
+
+HTTP Protocols
+
+·         Difference HTTP1.0 and HTTP 1.1
+
+·         Stateless nature of the protocol
+
+·         Methods (GET, POST, HEAD, PUT, DELETE
+
+·         HTTP session
+
+·         Status codes
+
+·         Persistent connections
+
+·         HTTPS
+
+HTML
+
+·         Document Object Model (DOM)
+
+·         Elements
+
+·         Events
+
+HTML 5
+
+·         Elements
+
+·         Objects
+
+·         Events
+
+·         Canvas
+
+·         Audio & Video Support
+
+·         Geo-location Support
+
+CSS
+
+·         Styling HTML with CSS
+
+·         Inline Styling (Inline CSS)
+
+·         External Styling (External CSS)
+
+·         CSS Fonts
+
+·         The CSS Box Model
+
+·         The id Attribute
+
+·         The class Attribute
+
+·         HTML Style Tags
+
+JavaScript (52hrs)
+
+JavaScript
+
+Introduction to JavaScript
+
+Variable, statements, Operators, Comments, constructs, Functions, expressions
+
+Javascript console
+
+Scope, Events, Strings, String Methods, Numbers, Number Methods, Dates, Date Formats, Date Methods
+
+Arrays, Array Methods
+
+Booleans, Comparisons
+
+Control Structures
+
+Conditions, Switch,
+
+Loop For, Loop While, Break
+
+Functions, Function Definitions, Function Parameters, Function Invocation, Function Closures
+
+Objects, Object Definitions, Object Properties, Object Methods, Object Prototypes
+
+Object Oriented Programming
+
+·         Method       
+
+·         Constructor
+
+·         Inheritance
+
+·         Encapsulation
+
+·         Abstraction
+
+·         Polymorphism
+
+Javascript Validations
+
+Document Object Model, Document and Events (DOM Manipulation)
+
+HTML DOM, DOM Intro, DOM Methods, DOM Document, DOM Elements, DOM HTML, DOM CSS, DOM Animations, DOM Events, DOM EventListener, DOM Navigation, DOM Nodes, DOM Nodelist
+
+Debugging
+
+Type Conversion, Regular expressions,
+
+Errors, Debugging
+
+Forms, Forms Validation, Forms API
+
+JS Browser BOM, Window, Screen, Location, History, Navigator, Popup Alert, Timing, Cookies
+
+Javascript Windows
+
+Pushing code quality via JSLint tool
+
+Security in Java Script
+
+Jquery
+
+·         Basics of jQuery
+
+·         jquery selection and events
+
+·         jQuery Effects
+
+·         jquery traversal and manipulation
+
+·         Data attributes and templates
+
+·         jQuery Plugins
+
+·         Jquery / Google Web Toolkit
+
+Node.js
+
+·         Introduction to Node.js
+
+·         Node modules
+
+·         Developing node.js web application
+
+·         Event-driven I/O server-side JavaScript
+
+Express
+
+·         Introduction to Express
+
+·         First Express Application
+
+·         Application, Request and Response Objects
+
+·         Implementing MVC Pattern
+
+·         Express application configuration
+
+·         Rendering Views
+
+AngularJS
+
+·         Introduction to AngularJS
+
+·         Structuring AngularJS application
+
+·         MVC in AngularJS
+
+·         AngularJS routing
+
+·         AngularJS services
+
+Testing Web Applications
+
+·         Introduction to JavaScript Testing
+
+·         Testing Express Applications
+
+·         Testing AngularJS Applications
+
+PHP (16hrs)
+
+Introduction to PHP
+
+Working with arrays
+
+Functions
+
+Forms
+
+Handling date and Times
+
+Working with Files
+
+Session and state management
+
+Database operations from PHP
+
+XML & Web Security (16hrs)
+
+XML
+
+·         Introduction to XML
+
+·         XML Validation
+
+·         Reason for XML
+
+·         XML Tree Structure
+
+·         XML DOM
+
+·         XML DTD
+
+·         XML Schema
+
+·         XML style language
+
+·         XML and XSLT
+
+·         XML Parsing
+
+·         XML parsers (DOM & SAX)
+
+·         XML WSDL
+
+·         RSS Feed
+
+Web Security
+
+·         SQL Injection
+
+·         Cross-Site Scripting (XSS)
+
+·         Security standards (OWASP)
+
+AJAX (4 hrs)
+
+Introduction to Ajax
+
+Web services and Ajax
+
+Ajax using HTML, CSS, JavaScript
+
+Ajax Framework and DOM       
+
+XMLHttpRequest
+
+Ajax Architecture
+
+Working with JSON (8hrs)
+
+JSON – Introduction
+
+Need of JSON
+
+JSON Syntax Rules
+
+JSON Data - a Name and a Value,
+
+JSON Objects,
+
+JSON Arrays,
+
+JSON Uses JavaScript Syntax,
+
+JSON Files
+
+JSON & Security Concerns, Cross Site Request Forgery (CSRF), Injection Attacks,
+
+JS XMLHttpRequest functions
+
+JavaScript XMLHttpRequest & Web APIs
+
+JSON & Client Side Frameworks
+
+JSON & Server Side Frameworks
+
+Replacing XML with JSON
+
+JSON parsing
+
+AJAX using JSON and jQuery
+
+Responsive Web Design (4hrs)
+
+Introduction
+
+The Best Experience for All Users
+
+·         Desktop
+
+·         Tablet
+
+·         Mobile
+
+Bootstrap
+
+Overview of Bootstrap
+
+Need to use Bootstrap
+
+Bootstrap Grid System, Grid Classes, Basic Structure of a Bootstrap Grid
+
+Typography
+
+Tables, Images, Jumbotron, Wells, Alerts, Buttons, Button Groups, Badges/Labels, Progress Bars, Pagination, List Groups, Panels, Dropdowns, Collapse, Tabs/Pills, Navbar, Forms, Inputs
+
+Bootstrap Grids, Grid System, Stacked/Horizontal
+
+Bootstrap Themes, Templates
+
+Introduction to Drupal (4hrs)
+
+Drupal Basics, Content Management System, Content Management Framework, Web Application Framework
+
+Drupal Workflow, Bootstrap, hooks, callbacks, output
+
+Modules (Core and Contributed), Nodes, Blocks, Regions.
+
+The Admin Interface (Overview)
+
+Content Management, Site Building, Site Configuration, User Management, Reports, Help 
+
+Content Translation
+
+User Contributed Modules
+
+Layouts in Drupal, File Systems

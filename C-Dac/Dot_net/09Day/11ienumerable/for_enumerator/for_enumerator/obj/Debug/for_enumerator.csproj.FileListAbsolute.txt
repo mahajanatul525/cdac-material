@@ -1,0 +1,17 @@
+D:\dot_net\Day_wise\day3\ienumerable\for_enumerator\for_enumerator\bin\Debug\for_enumerator.exe.config
+D:\dot_net\Day_wise\day3\ienumerable\for_enumerator\for_enumerator\bin\Debug\for_enumerator.exe
+D:\dot_net\Day_wise\day3\ienumerable\for_enumerator\for_enumerator\bin\Debug\for_enumerator.pdb
+D:\dot_net\Day_wise\day3\ienumerable\for_enumerator\for_enumerator\obj\Debug\for_enumerator.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day3\ienumerable\for_enumerator\for_enumerator\obj\Debug\for_enumerator.exe
+D:\dot_net\Day_wise\day3\ienumerable\for_enumerator\for_enumerator\obj\Debug\for_enumerator.pdb
+D:\dot_net\Day_wise\day3\11ienumerable\for_enumerator\for_enumerator\bin\Debug\for_enumerator.exe.config
+D:\dot_net\Day_wise\day3\11ienumerable\for_enumerator\for_enumerator\obj\Debug\for_enumerator.exe
+D:\dot_net\Day_wise\day3\11ienumerable\for_enumerator\for_enumerator\obj\Debug\for_enumerator.pdb
+D:\dot_net\Day_wise\day3\11ienumerable\for_enumerator\for_enumerator\bin\Debug\for_enumerator.exe
+D:\dot_net\Day_wise\day3\11ienumerable\for_enumerator\for_enumerator\bin\Debug\for_enumerator.pdb
+C:\Users\practice\Desktop\Dot_net\day3\11ienumerable\for_enumerator\for_enumerator\bin\Debug\for_enumerator.exe.config
+C:\Users\practice\Desktop\Dot_net\day3\11ienumerable\for_enumerator\for_enumerator\obj\Debug\for_enumerator.exe
+C:\Users\practice\Desktop\Dot_net\day3\11ienumerable\for_enumerator\for_enumerator\obj\Debug\for_enumerator.pdb
+C:\Users\practice\Desktop\Dot_net\day3\11ienumerable\for_enumerator\for_enumerator\bin\Debug\for_enumerator.exe
+C:\Users\practice\Desktop\Dot_net\day3\11ienumerable\for_enumerator\for_enumerator\bin\Debug\for_enumerator.pdb
+C:\Users\practice\Desktop\Dot_net\day3\11ienumerable\for_enumerator\for_enumerator\obj\Debug\for_enumerator.csprojResolveAssemblyReference.cache

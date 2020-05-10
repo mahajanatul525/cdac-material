@@ -1,0 +1,13 @@
+interface iinter
+{
+void meth();
+
+}
+iinter r;
+var x=typeof(iinter).BaseType
+if(x==null)
+
+
+or
+Type t = typeof(ICloneable).BaseType;
+Console.WriteLine(t == null);

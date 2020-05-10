@@ -1,0 +1,4 @@
+
+The panel control is used as a container for other controls. A panel control is very handy, when you want to group controls, and then show or hide, all the controls in the group. Panel control, is also very useful, when adding controls to the webform dynamically. We will discuss about, adding controls dynamically using panel control in the next
+
+In this we will discuss about, using the Panel control to group controls, and then toggle their visibility, using the Panel control's Visible property. 

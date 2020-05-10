@@ -1,0 +1,1 @@
+if u r on eclipse, then after making changes to "tomcat-users.xml", delete the server on eclipse and create it again.

@@ -1,0 +1,6 @@
+After Context
+MyClass no-arg const
+welcome
+Creating another bean
+MyClass no-arg const
+null

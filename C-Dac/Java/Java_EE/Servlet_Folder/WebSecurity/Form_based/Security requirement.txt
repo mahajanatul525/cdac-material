@@ -1,0 +1,47 @@
+in tomcat-users.xml
+<tomcat-users>
+
+	<role rolename="Guest"/>
+<user username="guru" password="coder" roles="Guest"/>
+
+</tomcat-users>
+
+in DD
+
+<servlet>
+	<servlet-name>FS</servlet-name>
+	<servlet-class>FirstServ</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>FS</servlet-name>
+	<url-pattern>/FS</url-pattern>
+</servlet-mapping>
+
+<login-config>
+<auth-method>FORM</auth-method>
+<form-login-config>
+
+
+<form-login-page>/Login.html</form-login-page>
+<form-error-page>/Error.html</form-error-page>
+</form-login-config>
+</login-config>
+<security-role><role-name>Guest</role-name> 
+</security-role>
+
+<security-constraint>
+<web-resource-collection>
+<web-resource-name>myresource1</web-resource-name>
+<url-pattern>/FS</url-pattern>
+<http-method>GET</http-method>
+</web-resource-collection>
+<auth-constraint>
+<role-name>Guest</role-name>
+</auth-constraint>
+
+
+
+
+
+
+</security-constraint>

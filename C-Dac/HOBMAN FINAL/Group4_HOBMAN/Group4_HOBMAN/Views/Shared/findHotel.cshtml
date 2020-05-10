@@ -1,0 +1,56 @@
+﻿@using System.Collections
+
+@*<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>*@
+<script>
+    $(function(){
+        $.ajax({
+            type: "get",
+            contentType:"application/json; charset=utf-8",
+            url: "@Url.Action("Getstates","Home")",
+            datatype:"JSON",
+            success: function (data) {
+                $.each(data, function (index,value) {
+                     $('#dropdownstate').append('<option value="' + value.state_id + '">' + value.state_name + '</option>');
+                });
+            },
+            
+            error: function ajaxError(response) {
+                alert(response.status + ' ' + response.statusText);}
+        });
+        $('#dropdownstate').change(function(){
+           $('#dropdowncity').empty();
+           
+            $.ajax({
+                type: "get",
+                contentType: "application/json; charset=utf-8",
+                url: "@Url.Action("Getcitybystateid","Home")", datatype: "JSON",
+                data:{state_id:$('#dropdownstate').val()},
+                success:function(data)
+                {$.each(data,function(index,value){$('#dropdowncity').append('<option value="'+value.city_id+'">'+value.city_name+'</option>');});
+                },
+                error: function ajaxError(response) {
+                    alert(response.status + ' ' + response.statusText);
+                }
+            });
+        });
+    });
+    </script>
+                 
+               
+<div>
+    @using(Html.BeginForm("find","home")){
+      
+        <table>
+    <tr>
+        <td>@Html.DropDownList("dropdownstate", new SelectList(string.Empty, "value", "Text"), "Select State", new {@class="dropdown btn btn-primary dropdown-toggle", @style="width:auto;"})</td>
+    </tr>
+    <tr>
+        <td>@Html.DropDownList("dropdowncity", new SelectList(string.Empty, "value", "Text"), "Select City", new {@class="dropdown btn btn-primary dropdown-toggle", @style="width:auto;"})</td>  
+    </tr>
+    <tr>
+        <td><input type="submit" class="btn btn-default btn-xl button " /></td>      
+    </tr>
+    </table>
+    }
+</div>

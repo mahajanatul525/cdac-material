@@ -1,0 +1,110 @@
+import java.util.ArrayList;
+import java.util.*;
+import java.util.Scanner;
+
+class course implements Comparable<course>
+{
+	String name;
+	int id;
+	int fees;
+	int dur;
+
+	public course(int id,String name,int fees,int dur)
+	{
+		this.name=name;
+		this.fees=fees;
+		this.dur=dur;
+		this.id=id;
+		
+	}
+	
+	public void disp()
+	{
+		System.out.println(id+""+name+""+dur+""+fees);
+	}
+
+	@Override
+	public String toString() {
+		return "course [name=" + name + ", id=" + id + ", fees=" + fees + ", dur=" + dur + "]";
+	}
+	@Override
+	public int compareTo(course e)
+	{
+		if(fees>e.fees)
+			return 1; 
+		else if(fees<e.fees)
+			return -1;
+		else
+			return 0;
+		
+	}
+	
+}
+
+
+public class atul {
+	
+	public static void main()
+	{
+		List<course> list= new ArrayList<course>();
+		course java=new course(1,"java",12,2000);
+		course cpp=new course(1,"cpp",12,2000);
+		course html=new course(1,"html",12,2000);
+		
+		System.out.println("1.add\n2.remove\n3.see all\n4.exit");
+		Scanner sc=new Scanner(System.in);
+		int no=sc.nextInt();
+		
+		switch(no)
+		{
+		case 1:
+		{
+			list.add(java);
+			list.add(cpp);
+			list.add(html);
+			System.out.println("added");
+		}
+		case 2:
+		{
+			System.out.println("1.to delete java");
+			System.out.println("2.to delete cpp");
+			System.out.println("3.to delete html");
+			int choice=sc.nextInt();
+			
+			if(choice==1)
+			{
+				list.remove(java);
+				System.out.println(list);
+			}
+			else if(choice==2)
+			{
+				list.remove(cpp);
+				System.out.println(list);
+			}
+			else if(choice==3)
+			{
+				list.remove(html);
+				System.out.println(list);
+			}
+			else
+				System.out.println("enter valid choice");
+			
+		}
+		case 3:
+		{
+			Iterator ir=list.iterator();
+			while(ir.hasNext())
+			{
+				((course)ir.next()).disp();
+			}
+		}
+		case 4:
+			Collections.sort(list);
+		}
+	}
+		
+		
+		
+	
+
+}

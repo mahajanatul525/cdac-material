@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+            xmlns:f="http://java.sun.com/jsf/core"
+             xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+ 
+     <head><title>JSF Hello World</title></head>
+     <body>
+    
+<h:form>
+        <h:panelGrid columns="2">
+           <h:outputLabel for ="name" value="Enter Name:"/>
+           <h:inputText id ="name" value="#{personbeanaction.person.name}"/>
+           <h:outputLabel for ="age" value="Enter age:"/>
+           <h:inputText id ="age" value="#{personbeanaction.person.age}"/>
+           <h:commandButton action="#{personbeanaction.addPerson}" value="Submit"/>
+           </h:panelGrid>
+       </h:form>
+ 
+
+</body>
+</html>

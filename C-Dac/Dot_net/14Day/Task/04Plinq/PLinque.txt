@@ -1,0 +1,36 @@
+
+Parallel LINQ
+
+Parallel LINQ is the parallel implementation of LINQ to objects. PLINQ implements the full set of LINQ standard query operators as extension methods and defines additional operators for parallel operations. PLINQ queries operate on any in-memory IEnumerable/IEnumerable<T> data source and have deferred execution. It partitions the data source into segments, and then executes the query on each segment on separate worker threads in parallel. The System.Linq.ParallelEnumerable exposes PLINQ's functionality and implements all the standard LINQ operators in addition with operators specific to parallel execution.
+
+A query is executed in parallel when user calls the AsParallel extension method. All the subsequent operations  are bound to the ParallelEnumerable implementation.
+
+var source = Enumerable.Range(1, 10000);
+
+// Opt-in to PLINQ with AsParallel
+var evenNums = from num in source.AsParallel()
+               where Compute(num) > 0
+               select num;
+PLINQ infrastructure analyzes the overall structure of a query at runtime and executes the query in parallel or sequentially based on the analysis. You can use the WithExecutionMode<TSource> and ParallelExecutionMode enumeration to enforce the PLINQ to use the parallel algorithm. Although PLINQ query operators revert to sequential mode automatically when required, for user-defined query operators the AsSequential operator can be used to revert back to sequential mode
+
+In order to preserve the order of the source sequence in the results PLINQ provides the AsOrdered extension method for this purpose. The sequence is still processed in parallel but the results are buffered to maintain the order. This extra maintenance causes an ordered query to be slow compared to the default AsUnordered<TSource> sequence.
+Hide   Copy Code
+evenNums = from num in numbers.AsParallel().AsOrdered()
+           where num % 2 == 0
+           select num;
+PLINQ queries use deferred execution and the operations are not executed until query is enumerated using a foreach. However, foreach itself does not run in parallel and requires the output from all parallel tasks be merged back into the thread on which the loop is running. For faster query execution when order preservation is not required, PLINQ provides the ForAll operator to parallelize processing of the results from query.
+
+var nums = Enumerable.Range(10, 10000);
+
+var query = from num in nums.AsParallel()
+            where num % 10 == 0
+            select num;
+
+// Process the results as each thread completes
+// and add them to a System.Collections.Concurrent.ConcurrentBag(Of Int)
+// which can safely accept concurrent add operations
+query.ForAll((e) => concurrentBag.Add(Compute(e)));
+
+PLINQ queries also support cancellation as is supported by Task. The WithCancellation operator accepts the cancellation token instance as argument. When the IsCancellationRequested property is set on the token, PLINQ will stop processing on all threads and throw an OperationCancelledException.
+
+PLINQ wraps the exceptions thrown by multiple threads while executing a query into an AggregateException type and marshals the exception back to the calling thread. Only one try-catch block is required on the calling thread.

@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+struct student
+{ char name[20];
+ int m1,m2,m3,total;
+};
+
+struct student d1;
+printf("enter name m1,m2,m3");
+scanf("%s %d %d %d",d1.name,&d1.m1,&d1.m2,&d1.m3);
+
+d1.total=d1.m1+d1.m2+d1.m3;
+printf("%s %d",d1.name,d1.total);
+
+}

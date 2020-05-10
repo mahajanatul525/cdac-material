@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+//System.Numerics.dll
+// BigInteger lives here! 
+// You must reference System.Numerics.dll to use this namesapce. 
+
+
+namespace BasicDataTypes
+{
+    class Program
+    {
+        static void Main( string[] args )
+        {
+            Console.WriteLine("***** Fun with Basic Data Types *****\n");
+          NewingDataTypes();
+                  
+            Console.ReadLine();
+        }
+
+        #region Data type declarations
+        
+        static void NewingDataTypes()
+        {
+            Console.WriteLine("=> Using new to create variables:");
+            bool b = new bool();              // Set to false.
+            int i = new int();                // Set to 0.
+            double d = new double();          // Set to 0.
+            d = 12.0;
+            Double pd = new Double();
+            pd = 12.0;
+            DateTime dt = new DateTime();     // Set to 1/1/0001 12:00:00 AM
+            Console.WriteLine("{0}, {1}, {2}, {3} {4}", b, i, d,pd, dt); //false 0 12 12 01/01/0001 00:00:00
+            Console.WriteLine("12.Equals(12) = {0}", d.Equals(pd));//true
+            Console.WriteLine("12==12 = {0}", d == pd);//true
+            Console.WriteLine();
+        }
+
+        #endregion
+
+        
+       }
+}

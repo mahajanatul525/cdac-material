@@ -1,0 +1,21 @@
+class emp
+{
+private static int cnt=10;
+static void cal()
+{
+System.out.println(cnt);
+}
+}
+
+public class myassign1 
+{
+public static void main(String args[])
+{ 
+ emp.cal();
+ emp tt=new emp();
+ tt.cal();
+}
+}
+
+
+

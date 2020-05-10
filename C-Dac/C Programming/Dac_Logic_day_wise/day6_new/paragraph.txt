@@ -1,0 +1,25 @@
+/*Q13 suppose you have entered the paragraph as input and used “#” to end the paragraph.
+now gives the count of occurance of all alphabets in para from “a” to “z” each alphabet and its occurance should display as the output*/
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+	char s[500];
+	int i,j,c=0,flag=0;
+	printf("\nenter para\n");
+	gets(s);
+	for(i='a';i<='z';i++)
+ {
+			c=0;
+		    for(j=0;j!='#';j++)
+		         if(i==s[j])
+			           c++; 
+			   printf("\n %c is %d times",i,c);
+	     	         
+		           
+					
+}
+
+	getche();
+}

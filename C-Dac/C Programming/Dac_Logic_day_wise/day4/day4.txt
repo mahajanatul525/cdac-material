@@ -1,0 +1,304 @@
+Q1. Give choice to user
+    a.	square
+    b.	Cube
+    c.	exit
+    as per user choice display result if user enter invalid choice give appropriate 
+    message.
+
+ans:
+
+#include<stdio.h>
+void main()
+{
+	char ch;
+	int n;
+	printf("\nEnter choice : a. square\t b. cube\t c. exit\n");
+	scanf("%c",&ch);
+	if(ch=='a' || ch=='A' || ch=='b' || ch=='B')
+	{
+		 printf("\nEnter no. = ");
+		 scanf("%d",&n);
+	}
+	switch(ch)
+	{
+		case 'a':
+		case 'A': printf("Square = %d",n*n);
+			  break;
+
+		case 'b':
+		case 'B': printf("Cube = %d",n*n*n);
+			  break;
+
+		case 'c':
+		case 'C': exit(0);
+
+		default: printf("You have entered invalid choice");
+	}
+
+}
+
+
+Q2. Do the same example above but you program should not exit unless user enter choice 
+    “c”
+
+ans:
+
+#include<stdio.h>
+void main()
+{
+	char ch;
+	int n;
+	do
+	{
+		printf("\nEnter choice : a. square\t b. cube\t c. exit => ");
+		scanf("%c",&ch);
+		if(ch=='a' || ch=='A' || ch=='b' || ch=='B')
+		{
+		 	printf("\nEnter no. = ");
+		 	scanf("%d",&n);
+		}
+		switch(ch)
+		{
+			case 'a':
+			case 'A': printf("Square = %d\n",n*n);
+			  	  break;
+
+			case 'b':
+			case 'B': printf("Cube = %d\n",n*n*n);
+			  	  break;
+
+			case 'c':
+			case 'C': exit(0);
+		}
+	} while(ch!='c' || ch!='C');
+}
+
+
+
+Q3. Accept date month and year from user and print date in formate dd-mmm-yyyy
+    a.	Eg. Input 12/3/2012  o/p 12 january 2012
+
+ans:
+
+#include<stdio.h>
+void main()
+{
+	int a,b,c;
+	printf("\nEnter Date, Month, Year => ");
+	scanf("%d %d %d",&a, &b, &c);
+	printf("Entered Date = > %d/%d/%d",a,b,c);
+	switch(b)
+	{
+		case 1 :printf("\nDate = %d January %d",a,c);
+			break;
+
+		case 2 :printf("\nDate = %d February %d",a,c);
+			break;
+
+		case 3 :printf("\nDate = %d March %d",a,c);
+			break;
+
+		case 4 :printf("\nDate = %d April %d",a,c);
+			break;
+
+		case 5 :printf("\nDate = %d May %d",a,c);
+			break;
+
+		case 6 :printf("\nDate = %d June %d",a,c);
+			break;
+
+		case 7 :printf("\nDate = %d July %d",a,c);
+			break;
+
+		case 8 :printf("\nDate = %d August %d",a,c);
+			break;
+
+		case 9 :printf("\nDate = %d September %d",a,c);
+			break;
+
+		case 10 :printf("\nDate = %d October %d",a,c);
+			 break;
+
+		case 11 :printf("\nDate = %d November %d",a,c);
+			 break;
+
+		case 12 :printf("\nDate = %d December %d",a,c);
+			 break;
+
+		default: printf("\nYou have entered invalid date");
+	}
+}
+
+
+
+Q4. give choice to user
+    1.+
+    2.*
+    3./
+    4. exit
+    as per user choice display result if user enter invalid choice give appropriate 
+    message.
+
+ans:
+
+#include<stdio.h>
+void main()
+{
+	char ch;
+	int a,b;
+	printf("\nEnter choice : a. Addition\t b. Multiplication\t c. Division\t d.exit => ");
+	scanf("%c",&ch);
+	if(ch=='a' || ch=='A' || ch=='b' || ch=='B' || ch=='c' || ch=='C')
+	{
+		 printf("\nEnter number a and b = ");
+		 scanf("%d %d",&a,&b);
+	}
+	switch(ch)
+	{
+		case 'a':
+		case 'A': printf("Adddition = %d\n",a+b);
+			  break;
+
+		case 'b':
+		case 'B': printf("Multiplication = %d\n",a*b);
+			  break;
+
+		case 'c':
+		case 'C': printf("Division =%d\n",a/b);
+			  break;
+
+		case 'd':
+		case 'D': exit(0);
+
+		default: printf("You have entered invalid choice");
+	}
+}
+
+
+Recursive function :
+
+Q1. Find factorial of a number
+
+ans:
+
+#include<stdio.h>
+int rec(int);
+void main()
+{
+	int no,f;
+	printf("\nEnter number = ");
+	scanf("%d",&no);
+	f=rec(no);
+	printf("Factorial of number = %d",f);
+}
+
+int rec(int x)
+{
+	int f;
+	if(x==1)
+		return 1;
+	else
+	{
+		f=x*rec(x-1);
+		return f;
+	}
+}
+
+
+
+Q2. Find binary of a number
+
+ans:
+
+#include<stdio.h>
+void binary(int num)
+{
+	int bin;
+	if(num<=0)
+	   return;
+	bin=num%2;
+	binary(num/2);
+	printf("%d",bin);
+}
+
+void main()
+{
+	int no;
+	printf("\nEnter no = ");
+	scanf("%d",&no);
+	printf("Binary number : ");
+	binary(no);
+}
+
+
+
+Q3. Find Fibonacci series
+
+ans:
+
+#include<stdio.h>
+void fib(int);
+void main()
+{
+	int t;
+	printf("\nEnter term = ");
+	scanf("%d",&t);
+	if(t==0)
+		printf("Enter valid term");
+	else if(t==1)
+		printf("0");
+	else if(t==2)
+		printf("0\t1");
+	else
+	{
+		printf("0\t1");
+		fib(t);
+	}
+}
+
+void fib(int n)
+{
+	static int x=0, y=1;
+	int c;
+	c = x + y;
+	printf("\t%d",c);
+	x=y;
+	y=c;
+	n--;
+	if(n>2)
+	fib(n);
+}
+
+
+
+
+
+#include<stdio.h>
+
+Q5. Accept a number from user and do sum of digit
+
+ans:
+
+#include<stdio.h>
+void sumdigit(int);
+int sum;
+void main()
+{
+	int no;
+	printf("\nEnter number = ");
+	scanf("%d",&no);
+	sumdigit(no);
+	printf("sum = %d",sum);
+}
+
+void sumdigit(int n)
+{
+	int r;
+	if(n==0)
+		return;
+	r = n % 10;
+	sum = sum + r;
+	sumdigit(n/10);
+}
+
+

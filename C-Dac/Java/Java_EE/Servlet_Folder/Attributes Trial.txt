@@ -1,0 +1,135 @@
+		Trial1
+
+	request.setAttribute("book","java");
+
+	
+		Trial2
+
+	pw.println(request.getAttribute("book");
+
+
+first run "Trial1" and then "Trial2". You should get null.
+
+			Trial3
+
+	request.setAttribute("book","java");
+	// servletcontext and RequestDispatcher
+	rd.forward(request,response);
+	
+			Trial4
+	
+	pw.println(request.getAttribute("book");
+
+
+first run "Trial3" and You should get "java"
+
+
+			Trial5
+
+	request.setAttribute("book","java");
+	response.sendRedirect("Trial6");
+	
+			Trial6
+	
+	pw.println(request.getAttribute("book");
+
+
+first run "Trial5" and You should get null.
+
+
+		Trial7
+
+	session.setAttribute("user","scott");
+	
+	
+		Trial8
+	
+	pw.println(session.getAttribute("user");
+
+
+first run "Trial7",then "Trial8" . You should get "scott".
+
+now close the browser and run "Trial8" , you should get null
+
+
+
+		Trial9
+ServletContext context=getServletContext();
+	context.setAttribute("database","oracle");
+	
+	
+		Trial10
+ServletContext context=getServletContext();	
+	pw.println(context.getAttribute("database");
+
+
+first run "Trial9",then "Trial10" . You should get "oracle".
+
+now close the browser and run "Trial10" , you will still get "oralce"
+
+now close the tomcat and run "Trial10" , you will get null
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

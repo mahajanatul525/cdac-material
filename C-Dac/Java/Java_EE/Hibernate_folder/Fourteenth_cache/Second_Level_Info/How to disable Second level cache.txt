@@ -1,0 +1,4 @@
+@Entity
+//@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
+@Table(name = "Product")
+public class Product {

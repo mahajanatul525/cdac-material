@@ -1,0 +1,75 @@
+import java.io.*;
+import java.util.*;
+import static java.lang.System.*;
+public class Myclass implements Serializable
+{	
+	int a;	
+	Myclass(int a)
+	{
+		this.a=a;	
+	}
+	/*int get()
+	{
+		return a;
+	}*/
+	public String toString()
+	{
+		return ("Marks"+"\t"+ a);
+		
+	}
+	
+	public static void main(String args[])
+	{
+		Myclass m1=new Myclass(1);	
+		Myclass m2=new Myclass(2);
+		Myclass m3=new Myclass(3);
+		Myclass m4=new Myclass(4);
+		Myclass m5=new Myclass(5);
+		/*System.out.println(m1.get());
+		System.out.println(m2.get());
+		System.out.println(m3.get());
+		System.out.println(m4.get());
+		System.out.println(m5.get());		
+		
+		*/ArrayList<Myclass>a1=new ArrayList<Myclass>();  
+		a1.add(m1);
+		a1.add(m2);
+		a1.add(m3);
+		a1.add(m4);
+		a1.add(m5);
+		
+		try(FileOutputStream fo=new FileOutputStream("F:\\abc.txt"))
+		{
+			try(ObjectOutputStream o=new ObjectOutputStream(fo))
+			{
+			o.writeObject(a1);
+			}
+			catch(Exception a)
+			{
+				a.printStackTrace();
+			}
+		}
+		catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+			
+		try(FileInputStream fi=new FileInputStream("F:\\abc.txt"))
+		{
+			ObjectInputStream oi=new ObjectInputStream(fi);
+			
+		ArrayList<Myclass>x=(ArrayList<Myclass>)oi.readObject();			
+		System.out.println(x);	
+			
+		}
+		catch(Exception e)
+		{
+		
+			e.printStackTrace();
+		}
+	
+
+}
+}
+
+

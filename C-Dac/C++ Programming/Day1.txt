@@ -1,0 +1,344 @@
+1) using cin and cout, accept name,address,age of a person and print it.
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+int main()
+{
+    int age;
+    char name[20],address[30];
+    cout<<"Enter name:";
+    cin>>name;
+    cout<<"Enter address:";
+    cin>>address;
+    cout<<"Enter age:";
+    cin>>age;
+
+    cout<<endl<<"Name:"<<name;
+    cout<<endl<<"Address:"<<address;
+    cout<<endl<<"Age:"<<age;
+    return 0;
+}
+
+
+2) write a function which can accept minimum 3 characters and maximum 5 characters and display them.
+#include <iostream>
+using namespace std;
+int main()
+{
+    void num(int ,int ,int ,int =0,int =0);
+    num(10,20,30);
+    num(10,20,30,40);
+    num(10,20,30,40,50);
+    return 0;
+}
+
+void num(int a,int b,int c,int d,int e)
+{
+    cout<<a<<"\t"<<b<<"\t"<<c<<"\t"<<d<<"\t"<<e<<"\t"<<endl;
+}
+
+
+3) create following structure
+struct book
+{
+	char bid[5];
+	char name[30];
+	int price;
+};
+ask user how many records he wants to create and accordingly allocate memory.
+accept values from user and display.
+( Hint :-  use  "new" operator)
+
+#include <iostream>
+
+using namespace std;
+struct book
+{
+	char bid[5];
+	char name[30];
+	int price;
+};
+
+int main()
+{
+    int n;
+    cout<<"Enter no:";
+    cin>>n;
+    book *b=new book[n];
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Enter id:";
+        cin>>b[i].bid;
+        cout<<"Enter name:";
+        cin>>b[i].name;
+        cout<<"Enter price:";
+        cin>>b[i].price;
+    }
+    for(int i=0;i<n;i++)
+    {
+        cout<<b[i].bid<<"\t";
+        cout<<b[i].name<<"\t";
+        cout<<b[i].price<<"\n";
+    }
+}
+
+
+
+4)write a function which will return reference of structure.
+( note:- any structure of ur choice u can define )
+
+#include <iostream>
+using namespace std;
+struct book
+{
+	char bid[5];
+	char name[30];
+	int price;
+}b;
+book& getBook();
+int main()
+{
+    book t={"xyz","Let us C++",456};
+    getBook()=t;
+    cout<<"Id:"<<b.bid<<"\nName:"<<b.name<<"\nPrice:"<<b.price;
+    return 0;
+}
+
+book& getBook()
+{
+    return b;
+}
+
+
+
+5)write a function which takes 3 arguments
+variable, pointer and a reference.(any datatype)
+invoke this function and show how "call by value","call by address" and "call by reference" will work.
+
+#include <iostream>
+using namespace std;
+void VAR(int ,int *,int &);
+int main()
+{
+    int a=1,b=1,c=1;
+    cout<<"a="<<a<<"\nb="<<b<<"\nc="<<c<<endl<<endl;
+    VAR(a,&b,c);
+    cout<<"a="<<a<<"\nb="<<b<<"\nc="<<c<<endl<<endl;
+    return 0;
+}
+
+void VAR(int a,int *b,int &c)
+{
+    a++;
+    (*b)++;
+    c++;
+}
+
+
+
+6)define 3 different structures and initialize their members.
+now write 3 different functions,but with the same name.
+these functions will accept each structure respectively and display their members.
+
+#include <iostream>
+using namespace std;
+struct book
+{
+    int id;
+    char name[10];
+};
+struct student
+{
+    int age;
+    int id;
+    char name[10];
+};
+struct emp
+{
+    char quali[10];
+    char name[10];
+};
+
+void getdata(book);
+void getdata(student);
+void getdata(emp);
+int main()
+{
+    book b={5,"Let us c"};
+    student s={25,16,"xyz"};
+    emp e={"BE","ABC"};
+    getdata(b);
+    getdata(s);
+    getdata(e);
+    return 0;
+}
+
+void getdata(book b)
+{
+    cout<<"ID:"<<b.id<<"\tName:"<<b.name<<endl;
+}
+void getdata(student s)
+{
+    cout<<"ID:"<<s.id<<"\tage:"<<s.age<<"\tName:"<<s.name<<endl;
+}
+void getdata(emp e)
+{
+    cout<<"Qualification:"<<e.quali<<"\tName:"<<e.name<<endl;
+}
+
+
+
+7)define 2 functions
+a) function which accepts another function as an argument
+( using pointer to function )
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    void a();
+    void b(void (*)());
+    b(a);
+}
+
+void a()
+{
+    cout<<"a";
+}
+
+void b(void (*c)())
+{
+    c();
+}
+
+
+b) function which accepts another function as an argument
+( using reference to function )
+	try to invoke both the functions and display the output.
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    void a();
+    void b(void (&)());
+    b(a);
+}
+
+void a()
+{
+    cout<<"a";
+}
+
+void b(void (&ref)())
+{
+    ref();
+}
+	
+	
+8)accept 2 numbers and swap them using references.
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    void swap(int &,int &);
+    int a=2,b=3;
+    cout<<"a="<<a<<"\tb="<<b;
+    swap(a,b);
+    cout<<"\na="<<a<<"\tb="<<b;
+}
+
+void swap(int &a,int &b)
+{
+    int t;
+    t=a;
+    a=b;
+    b=t;
+}
+
+
+9)accept 2 names and swap them using references.
+
+
+
+10) create an Entity "Employee" using structure
+with members and member functions.
+now access it using
+a) array 
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+
+struct emp
+{
+    int id;
+    char name[10];
+};
+
+int main()
+{
+    int n;
+    cout<<"Enter n:";
+    cin>>n;
+    emp e[n];
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Enter name:";
+        cin>>e[i].name;
+        cout<<"Enter id:";
+        cin>>e[i].id;
+    }
+    for(int i=0;i<n;i++)
+    {
+        cout<<endl<<e[i].id<<"\t"<<e[i].name;
+    }
+}
+
+b) DMA
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+
+struct emp
+{
+    int id;
+    char name[10];
+};
+
+int main()
+{
+    int n;
+    emp *e;
+    cout<<"Enter n:";
+    cin>>n;
+    e=new emp[n];
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Enter name:";
+        cin>>e[i].name;
+        cout<<"Enter id:";
+        cin>>e[i].id;
+    }
+    for(int i=0;i<n;i++)
+    {
+        cout<<endl<<e[i].id<<"\t"<<e[i].name;
+    }
+}
+
+11) create a library in c in which,
+write a function which will accept 2 numbers and return the difference between 2 numbers
+write appropriate header file.
+
+write c++ client code to access this library.
+
+

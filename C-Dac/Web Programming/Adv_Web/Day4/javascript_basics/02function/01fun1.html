@@ -1,0 +1,26 @@
+<html><head><title>hello</title><script> 
+//"use strict"
+var x; //global variable
+function call()
+{ a=5; //global variable
+var c=7; //local variable
+document.write("welcome");
+alert("hi");
+x=9;
+}
+</script>
+</head>
+<body> <script>
+//document.write(a);
+// uninitialized variable as function call is not done yet
+call();
+document.write(a); //5  as it is define after function call
+//document.write("with var"+c); //out of scope
+document.write(x);
+</script>
+
+
+
+
+</body>
+</html>

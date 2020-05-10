@@ -1,0 +1,50 @@
+<html>
+<head>
+<script src="jquery-1.9.1.js"></script>
+<script>
+
+$(document).ready(function () {
+
+   
+
+function go(){
+alert("hi")
+var today=new Date()
+var h=today.getHours()
+var m=today.getMinutes()
+var s=today.getSeconds()
+
+
+// add a zero in front of numbers<10
+/*m=checkTime(m)
+s=checkTime(s)
+h=checkTime(h)*/
+ $('#txt').text(h+":"+m+":"+s);
+ 
+ 
+ t=setTimeout("go()",500);
+
+}
+
+});
+
+
+
+
+
+/*function checkTime(i)
+{
+if (i<10) 
+  {i="0" + i}
+  return i
+}
+
+});*/
+</script>
+</head>
+
+<body>
+<div id="txt"></div>
+</body>
+</html>
+

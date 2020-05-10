@@ -1,0 +1,31 @@
+var data = localStorage.myData;
+localStorage.myData = "This is my data"; 
+
+
+var data = localStorage["myData"];
+localStorage[“myData”] = "This is my data"; 
+
+
+localStorage.setItem("mytext", input.value);
+localStorage.getItem("mytext");
+
+localStorage.removeItem("myData");
+
+
+localStorage.clear(); // remove all stored data
+
+
+var numValues = localStorage.length; 
+
+
+var data = localStorage.key(0)
+
+
+for (var i=0,key,value;i<localStorage.length;i++) {
+
+key = localStorage.key(i);
+value = localStorage.getItem(key);
+alert(value)
+alert(key)
+
+}

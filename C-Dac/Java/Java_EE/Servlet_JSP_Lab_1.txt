@@ -1,0 +1,24 @@
+1) create a table "Employee"
+empid int
+empname varchar
+desig varchar
+dept varchar
+
+create a jsp "Emp.jsp" which will accept all the above details through form. on submit control should go to "EmpServ" servlet which will store all these details inside "Employee" table.
+
+2)
+	create a class "Student" in "pack1" package with following members
+  int prnno
+   String name
+String address
+
+
+ create a table "Student"
+prnno int
+name varchar
+address varchar
+
+store 5 records.
+
+create a servlet "StudentServ" which will retrieve all the records from "Student" table, while traversing through the ResultSet create objects of "Student" class per record and store them in ArrayList. now store this ArrayList inside request attribute and forward the request to "Stud.jsp".
+"Stud.jsp" will use JSTL tag "foreach" in order to traverse through the ArrayList.

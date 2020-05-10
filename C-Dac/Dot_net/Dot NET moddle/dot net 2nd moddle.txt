@@ -1,0 +1,294 @@
+Choose the correct statement about structures in C#.NET?
+Select one:
+a. A structure can be empty Incorrect
+b. Structures can implement an interface but they cannot inherit from another structure
+c. Structures can be declared within a procedure
+d. Structure members cannot be declared as private
+Feedback
+The correct answer is: Structures can implement an interface but they cannot inherit from another structure
+Question 2
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Choose the correct output for given set of code?
+enum color:int
+{
+    red,
+    green,
+    blue = 5,
+    cyan,
+    pink = 10,
+    brown
+}
+console.writeline((int)color.green);
+console.writeline((int)color.brown);
+
+Select one:
+a. 1 5
+b. 2 11 Incorrect
+c. 2 10
+d. 1 11
+Feedback
+The correct answer is: 1 11
+Question 3
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Which of the following is a correct statement about the C#.NET code given below?
+ 
+struct book
+{
+    private String name;
+    private int pages;
+    private Single price;
+}
+book b = new book();
+
+Select one:
+a. When the program terminates, variable b will get garbage collected
+b. When the program terminates, variable b will get garbage collected
+c. The structure variable ‘b’ will be created on the stack Correct
+d. New structure can be inherited from struct book
+Feedback
+The correct answer is: The structure variable ‘b’ will be created on the stack
+Question 4
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+1. Select output for the following set of code. static void Main(string[] args) { int a = 5; int b = 10; int c; Console.WriteLine(c = ++ a + b ++); Console.WriteLine(b); Console.ReadLine(); }
+Select one:
+a. 15, 11
+b. 11, 10
+c. 16, 10
+d. 16, 11 Correct
+Feedback
+The correct answer is: 16, 11
+Question 5
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Which datatype should be more preferred for storing a simple number like 35 to improve execution speed of a program?
+Select one:
+a. short
+b. sbyte
+c. int Incorrect
+d. long
+Feedback
+The correct answer is: sbyte
+Question 6
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+What is the Size of ‘Char’ datatype?
+Select one:
+a. 16 bit
+b. 8 bit Incorrect
+c. 20 bit
+d. 12 bit
+Feedback
+The correct answer is: 16 bit
+Question 7
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+When does a structure variable get destroyed?
+Select one:
+a. When no reference refers to it,it will get garbage collected Incorrect
+b. Depends on either we free its memory using free() or delete()
+c. Depends on whether it is created using new or without new operator
+d. As variable goes out of the scope
+Feedback
+The correct answer is: As variable goes out of the scope
+Question 8
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+What will be the output of the given set of code?
+ 
+ class maths
+ {
+     public int length;
+     public int breadth;
+     public  maths(int x)
+     {
+         length = x + 1;
+     }
+     public maths(int x, int y)
+     {
+         length = x + 2;
+     }
+ }
+ class Program
+ {
+     static void Main(string[] args)
+     {
+         maths m = new maths(6);
+         maths k = new maths(6, 2);
+         Console.WriteLine(m.length);
+         Console.WriteLine(k.length);
+         Console.ReadLine();
+     }
+ }
+
+Select one:
+a. 8, 8 Incorrect
+b. 8, 10
+c. 0, 2
+d. 7, 8
+Feedback
+The correct answer is: 7, 8
+Question 9
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Choose the correct output for the C#.NET code given below?
+enum days:int
+
+{
+
+    sunday = -3,
+
+    monday,
+
+    tuesday
+
+}
+
+Console.WriteLine((int)days.sunday);
+
+Console.WriteLine((int)days.monday);
+
+Console.WriteLine((int)days.tuesday);
+
+
+Select one:
+a. -3 0 1
+b. 0 1 2 Incorrect
+c. -3 -2 -1
+d. sunday monday tuesday
+Feedback
+The correct answer is: -3 -2 -1
+Question 10
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+How many Bytes are stored by ‘Long’ Datatype in C# .net?
+Select one:
+a. 2
+b. 8 Correct
+c. 4
+d. 1
+Feedback
+The correct answer is: 8
+Question 11
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Correct Declaration of Values to variables ‘a’ and ‘b’?
+Select one:
+a. int a = 42; b = 40;
+b. int a = 32, b = 40.6;
+c. int a = b = 42;
+d. int a = 32; int b = 40; Correct
+Feedback
+The correct answer is: int a = 32; int b = 40;
+Question 12
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Arrange the following datatype in order of increasing magnitude sbyte, short, long, int.
+Select one:
+a. short < int < sbyte < long
+b. long < short < int < sbyte
+c. sbyte < short < int < long
+d. short < sbyte < int < long Incorrect
+Feedback
+The correct answer is: sbyte < short < int < long
+Question 13
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Which among the following cannot be used as a datatype for an enum in C#.NET?
+Select one:
+a. short Incorrect
+b. int
+c. double
+Feedback
+The correct answer is: double
+Question 14
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+What will be the output of the given set of code?
+ 
+ class maths
+ {
+     public int length;
+     public int breadth;
+     public maths(int x, int y)
+     {
+         length = x;
+         breadth = y;
+         Console.WriteLine(x + y);
+     }
+     public maths(double x, int y)
+     {
+         length = (int)x;
+         breadth = y;
+         Console.WriteLine(x * y);
+     }
+ }
+class Program
+{
+    static void Main(string[] args)
+    {
+        maths m = new maths(20, 40);
+        maths k = new maths(12.0, 12);
+        Console.ReadLine();
+    }
+}
+
+Select one:
+a. 60, 0
+b. 60, 144
+c. 60, 144.0
+d. 60, 24 Incorrect
+Feedback
+The correct answer is: 60, 144
+Question 15
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Correct the output for the C#.NET code given below?
+enum letters
+{
+    a,
+    b,
+    c
+}
+letters l;
+l = letters.a;
+Console.writeline(l);
+advertisements
+
+Select one:
+a. 0
+b. letters.a
+c. a Correct
+d. -1
+Feedback
+The correct answer is: a

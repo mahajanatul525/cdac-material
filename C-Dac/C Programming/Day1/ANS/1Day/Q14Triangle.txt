@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int a,b,c, rh1, rh2, rh3;
+	printf("Enter value of a, b & c : ");
+	scanf("%d%d%d",&a, &b, &c);
+	if((a<(b+c)) & (b<(a+c)) & (c<(a+b)))
+		{
+			printf("\tValid Triangle\n\t");
+			rh1=(a*a)+(b*b);
+			rh2=(b*b)+(c*c);
+			rh3=(a*a)+(c*c);
+			if((c*c)==rh1 | (a*a)==rh2 | (b*b)==rh3)
+				printf("it is a Right angle triangle");
+			else if(a==b | b==c | c==a)
+				printf("it is an Isosceles triangle");
+			else if(a==b & b==c & c==a)
+				printf("it is an Equilateral triangle");
+			else
+				printf("it is a not Special triangle");
+		}
+	else
+		printf("\tInvalid Triangle");
+	getch();
+}

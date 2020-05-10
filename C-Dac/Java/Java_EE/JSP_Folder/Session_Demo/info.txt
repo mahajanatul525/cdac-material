@@ -1,0 +1,1 @@
+SessionDemo2.jsp is to get the existing session only.

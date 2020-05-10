@@ -1,0 +1,52 @@
+JavaScript Display Possibilities
+JavaScript can "display" data in different ways:
+
+Writing into an alert box, using window.alert().
+Writing into the HTML output using document.write().
+Writing into an HTML element, using innerHTML.
+Writing into the browser console, using console.log().
+
+Using document.write() after an HTML document is fully loaded, will delete all existing HTML:
+
+JavaScript Statements
+JavaScript statements are composed of:
+
+Values, Operators, Expressions, Keywords, and Comments.
+
+JavaScript Values
+The JavaScript syntax defines two types of values: Fixed values and variable values.
+
+Fixed values are called literals. Variable values are called variables.
+
+Strings are text, written within double or single quotes
+
+JavaScript uses the var keyword to declare variables.
+
+An equal sign is used to assign values to variables.
+
+Code after double slashes // or between /* and */ is treated as a comment.
+
+A variable declared without a value will have the value undefined.
+
+If you re-declare a JavaScript variable, it will not lose its value.
+
+The variable carName will still have the value "Volvo" after the execution of these statements:
+
+Example
+var carName = "Volvo";
+var carName;
+
+
+Accessing Object Properties
+You can access object properties in two ways:
+
+objectName.propertyName
+or
+
+objectName["propertyName"]
+Extracting String Parts
+There are 3 methods for extracting a part of a string:
+
+slice(start, end)//negative is allowed
+substring(start, end)//negative is not allowed,
+substr(start, length)//negative is not allowed same as slice

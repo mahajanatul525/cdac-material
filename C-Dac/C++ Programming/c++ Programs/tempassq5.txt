@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+
+template <class type>
+class Myclass
+{
+type ab;
+public:
+	Myclass(type k)
+	{
+		ab=k;
+	}
+	void disp()
+	{
+		cout<<ab<<endl;
+	}
+	int size()
+	{
+		return sizeof(ab);
+	}
+};
+
+void main()
+{
+	Myclass<int>m1(10);
+	m1.disp();
+	int p=m1.size();
+	cout<<p<<endl;
+	Myclass<char>m2('Z');
+	m2.disp();
+	int p2=m2.size();
+	cout<<p2<<endl;
+	Myclass<double>m3(10.56);
+	m3.disp();
+	int p3=m3.size();
+	cout<<p3<<endl;
+	getchar();
+}

@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplicationstudent
+{
+    class student
+    {    public int m1, m2;
+        public string name;
+        public double per;
+        public double percent()
+        {        return (m1 + m2) * 100 / 200.00;        }
+        public void display()
+        {per= percent();
+        Console.WriteLine("{0} {1}", name, per);
+        }
+    }
+    class Program
+    {   static void Main(string[] args)
+        {    student d1 = new student();
+            d1.name = Console.ReadLine();
+           d1.m1= int.Parse(Console.ReadLine());
+           d1.m2 = int.Parse(Console.ReadLine());
+           d1.display();
+        }
+    }
+}

@@ -1,0 +1,73 @@
+Q15. Find out minimum string sequence (CDAC question)
+     I/P Specification        : in given String in check 1 how many time occurs minimum. 
+     if no any 1 in string then print  -1.
+
+	O/P Specification      :   Print hte number.
+
+	1 ) Sample I/P
+
+		11000100001111111
+
+		O/P
+
+		1
+
+	2 ) Sample I/P
+
+		0001111111
+
+		O/P
+
+		7
+
+ans:
+
+#include <stdio.h>
+#include<conio.h>
+void main()
+{
+	int arr[20],c=0,h=0,m=0,i;
+
+	for(i=0;i<10;i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+
+	for(i=0;i<10;i++)
+	{
+		printf("%d",arr[i]);
+	}
+
+	for(i=0;i<10;i++)
+	{
+		if(arr[i]==1)
+		{
+			c++;
+		}
+		else
+		{
+			if(c!=0)
+			{
+				if(m==0)
+					m=c;
+				else
+					h=c;
+
+				if(m>h)
+				{
+					h=c;
+				}
+				c=0;
+			}
+		}
+	}
+
+	if(h==0 && c==0 && m==0)
+		printf("\n-1");
+	else if(m>h)
+		printf("\n%d",h);
+	else
+		printf("\n%d",m);
+
+	getche();
+}

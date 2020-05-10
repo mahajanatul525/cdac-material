@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<HTML><HEAD><title>attribute</title>
+<style>
+
+p.group4[title*="match"] {background-color: red;}
+</style>
+
+</head>
+<body>
+<p class="group4" title="This should matchend">This should be red.</p>
+<p class="group4" title="This won't match-end!">This shouldn't be red.</p>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+class demoOb
+{
+demoOb()
+{
+System.out.println("inside no arg");
+}
+public static void main(String args[])
+{
+demoOb d=new demoOb();
+System.out.println(d);
+demoOb e=d;
+System.out.println(e);
+d=new demoOb();
+System.out.println(d);
+}
+}

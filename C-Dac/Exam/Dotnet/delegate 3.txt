@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication13
+{
+    delegate int str(int a,int b);
+    class calculator
+    {
+        static int sum(int a, int b)
+        {
+            return a + b;
+        }
+
+        int mul(int a, int b)
+        {
+            return a * b;
+        }
+
+        static void Main()
+        {
+            str add = sum;
+            int x = add(10, 20);//new syntax
+            Console.WriteLine("addtion is {0}", x);
+            calculator c=new calculator();
+            str mul = c.mul;
+            int y = mul(10, 10);
+            Console.WriteLine("multiplication is {0}", y);
+        }
+    }
+
+}

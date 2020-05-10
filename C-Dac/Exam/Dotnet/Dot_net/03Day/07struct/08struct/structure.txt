@@ -1,0 +1,59 @@
+When to use structure
+-if data type size is < 16byte
+-no inhritance required
+-every instance is a seperate copy
+-it is value type loaded to stack
+-A struture can be instanciated with the help of new key word
+-A structure can not be inherited from class
+-A class can not be inhrited from structure
+-A  structure can not  have       parameterless constructor
+-A structure have parameterised constructor provided it asigne value for all its member
+-A structure can have fields methods,property and event.
+-A structure can    impliment interface.
+-A structure member are generaly public
+-A method should not be marked as virtual,abstract,override and seal
+-A structure is copy to another instance -a copy is made.
+
+
+
+
+
+
+Structs are value types, not reference types. This means they are stored either in the stack or inline
+(if they are part of another object that is stored on the heap) and have the same lifetime restrictions
+as the simple data types.
+
+
+? Structs do not support inheritance.
+
+? There are some differences in the way constructors work for structs. In particular, the compiler always supplies a default no - parameter constructor, which you are not permitted to replace
+
+
+Structures cannot inherit other structures or classes or be used as a base for other structures
+or classes. (All structures do, however, implicitly inherit System.ValueType, which inherits
+object.) 
+
+However, a structure can implement one or more interfaces. 
+
+These are specified after
+the structure name using a comma-separated list. Like classes, structure members include
+methods, fields, indexers, properties, operator methods, and events. Structures can also define
+constructors, but not destructors. 
+
+
+
+However, you cannot define a default (parameterless)
+constructor for a structure. 
+
+The reason for this is that a default constructor is automatically
+defined for all structures, and this default constructor can’t be changed. 
+
+
+The default constructor
+initializes the fields of a structure to their default value. 
+
+
+Since structures do not support
+inheritance, structure members cannot be specified as abstract, virtual, or protected.
+A structure object can be created using new in the same way as a class object, but it is
+not required. 

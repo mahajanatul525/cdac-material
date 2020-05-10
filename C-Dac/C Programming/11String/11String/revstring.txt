@@ -1,0 +1,39 @@
+//reverse string using array
+#include<stdio.h>
+
+void main()
+{
+
+int i,j,len,start;
+char str[20];
+char rev[20];
+printf("enter string");
+gets(str);
+
+ len=strlen(str);
+start=len-1;
+
+//rev(ster);
+printf("%d",start);
+
+
+
+	for(j=0;j<len;j++,start--)
+	{
+	//	printf("%c",str[start]);
+	rev[j]=str[start];
+
+//printf("%c",rev[j]);
+	}
+	rev[j]='\0';
+	
+	
+	printf("%s",rev);
+}
+
+
+
+
+
+
+

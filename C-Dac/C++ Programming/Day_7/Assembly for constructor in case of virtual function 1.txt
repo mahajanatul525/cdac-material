@@ -1,0 +1,194 @@
+#include<iostream>
+#include<malloc.h>
+using namespace std;
+class base
+{
+public:
+	base()
+	{
+		cout<<"in base no-arg constr"<<endl;
+	}
+	virtual void disp1()
+	{
+		cout<<"in base disp1"<<endl;
+	}
+	virtual void disp2()
+	{
+		cout<<"in base disp2"<<endl;
+	}
+};
+class sub: public base
+{
+public:
+	sub()
+	{
+		cout<<"in sub no-arg costructor"<<endl;
+	}
+	void disp1()
+	{
+		cout<<"in sub disp1"<<endl;
+	}
+	void disp2()
+	{
+		cout<<"in sub disp2"<<endl;
+	}
+};
+void main()
+{
+	base *b=new sub;
+	b->disp1(); // late binding
+	b->disp2(); // late binding
+}
+
+
+/*
+
+
+; 39   : 	b->disp1(); // late binding
+
+	mov	eax, DWORD PTR _b$[ebp]
+	mov	edx, DWORD PTR [eax]
+	mov	esi, esp
+	mov	ecx, DWORD PTR _b$[ebp]
+	mov	eax, DWORD PTR [edx]
+	call	eax
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+
+; 40   : 	b->disp2(); // late binding
+
+	mov	eax, DWORD PTR _b$[ebp]
+	mov	edx, DWORD PTR [eax]
+	mov	esi, esp
+	mov	ecx, DWORD PTR _b$[ebp]
+	mov	eax, DWORD PTR [edx+4]
+	call	eax
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+
+; 41   : }
+
+
+
+*/
+
+
+/*
+
+_TEXT	SEGMENT
+_this$ = -8						; size = 4
+??0sub@@QAE@XZ PROC					; sub::sub, COMDAT
+; _this$ = ecx
+
+; 23   : 	sub()
+
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 204				; 000000ccH
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-204]
+	mov	ecx, 51					; 00000033H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	ecx, DWORD PTR _this$[ebp]
+	call	??0base@@QAE@XZ				; base::base
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [eax], OFFSET ??_7sub@@6B@
+
+; 24   : 	{
+; 25   : 		cout<<"in sub no-arg costructor"<<endl;
+
+	mov	esi, esp
+	mov	eax, DWORD PTR __imp_?endl@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@1@AAV21@@Z
+	push	eax
+	push	OFFSET ??_C@_0BJ@BKKIEMPP@in?5sub?5no?9arg?5costructor?$AA@
+	mov	ecx, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+	push	ecx
+	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+	add	esp, 8
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+
+; 26   : 	}
+
+	mov	eax, DWORD PTR _this$[ebp]
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 204				; 000000ccH
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+??0sub@@QAE@XZ ENDP					; sub::sub
+_TEXT	ENDS
+
+
+*/
+
+
+/*
+
+_TEXT	SEGMENT
+_this$ = -8						; size = 4
+??0base@@QAE@XZ PROC					; base::base, COMDAT
+; _this$ = ecx
+
+; 7    : 	base()
+
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 204				; 000000ccH
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-204]
+	mov	ecx, 51					; 00000033H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [eax], OFFSET ??_7base@@6B@
+
+; 8    : 	{
+; 9    : 		cout<<"in base no-arg constr"<<endl;
+
+	mov	esi, esp
+	mov	eax, DWORD PTR __imp_?endl@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@1@AAV21@@Z
+	push	eax
+	push	OFFSET ??_C@_0BG@OCGIPLCO@in?5base?5no?9arg?5constr?$AA@
+	mov	ecx, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+	push	ecx
+	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+	add	esp, 8
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+
+; 10   : 	}
+
+	mov	eax, DWORD PTR _this$[ebp]
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 204				; 000000ccH
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+??0base@@QAE@XZ ENDP					; base::base
+_TEXT	ENDS
+
+*/

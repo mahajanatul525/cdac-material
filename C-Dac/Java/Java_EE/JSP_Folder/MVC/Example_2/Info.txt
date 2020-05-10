@@ -1,0 +1,1 @@
+copy image files inside "webcontent".

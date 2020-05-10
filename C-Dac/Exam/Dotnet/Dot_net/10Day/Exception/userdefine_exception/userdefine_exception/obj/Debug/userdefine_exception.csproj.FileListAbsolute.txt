@@ -1,0 +1,8 @@
+D:\dot_net\Day_wise\day4\Exception\userdefine_exception\userdefine_exception\bin\Debug\userdefine_exception.exe.config
+D:\dot_net\Day_wise\day4\Exception\userdefine_exception\userdefine_exception\bin\Debug\userdefine_exception.exe
+D:\dot_net\Day_wise\day4\Exception\userdefine_exception\userdefine_exception\bin\Debug\userdefine_exception.pdb
+D:\dot_net\Day_wise\day4\Exception\userdefine_exception\userdefine_exception\obj\Debug\userdefine_exception.exe
+D:\dot_net\Day_wise\day4\Exception\userdefine_exception\userdefine_exception\obj\Debug\userdefine_exception.pdb
+C:\Users\practice\Desktop\Dot_net\day4\Exception\userdefine_exception\userdefine_exception\bin\Debug\userdefine_exception.exe.config
+C:\Users\practice\Desktop\Dot_net\day4\Exception\userdefine_exception\userdefine_exception\obj\Debug\userdefine_exception.exe
+C:\Users\practice\Desktop\Dot_net\day4\Exception\userdefine_exception\userdefine_exception\obj\Debug\userdefine_exception.pdb

@@ -1,0 +1,338 @@
+1
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Which of these can be overloaded?
+Select one:
+a. Methods
+b. Constructors
+c. Both Correct
+Feedback
+The correct answer is: Both
+Question 2
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What could be the output for the set of code?
+ 
+class overload
+  {
+      public int x;
+      int y;
+      public int add(int a)
+      {
+          x = a + 1;
+          return x;
+      }
+      public int add(int a, int b)
+      {
+          x = a + 2;
+          return x;
+      }
+  }   
+  class Program
+  {
+      static void Main(string[] args)
+      {
+          overload obj = new overload();
+          overload obj1 = new overload();
+          int a = 0;
+          obj.add(6);
+          obj1.add(6, 2);
+          Console.WriteLine(obj.x);
+          Console.WriteLine(obj1.x);
+          Console.ReadLine();
+      }
+  }
+Select one:
+a. 8 8
+b. 7 8 Correct
+c. 0 2
+d. 8 10
+Feedback
+The correct answer is: 7 8
+Question 3
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+Consider a class maths and we had a property called as sum.b is a reference to a maths object and we want the statement b.sum = 10 to fail.Which of the follwing is the correct solution to ensure this functionality?
+Select one:
+a. Declare sum property with both get and set accessors
+b. Declare sum property with only get accessor Incorrect
+c. None of the mentioned
+d. Declare sum property with get, set and normal accessors
+Feedback
+The correct answer is: Declare sum property with get, set and normal accessors
+Question 4
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+The process of defining two or more methods within the same class that have same name but different parameters list?
+Select one:
+a. method overloading Correct
+b. None of the mentioned
+c. Encapsulation
+d. method overriding
+Feedback
+The correct answer is: method overloading
+Question 5
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Consider a class maths and we had a property called as sum.b which is the reference to a maths object and we want the statement Console.WriteLine(b.sum)to fail.Which among the following is the correct solution to ensure this functionality?
+Select one:
+a. Declares sum property with both set and get accessor
+b. Declares sum property with both set, get and normal accessor
+c. Declares sum property with only get accessor
+d. Declares sum property with only set accessor Correct
+Feedback
+The correct answer is: Declares sum property with only set accessor
+Question 6
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Select the correct statement about properties of read and write in C#.NET?
+Select one:
+a. A read only property will only have set accessor
+b. A property can simultaneously be read or write only
+c. A property can be either read only or write only Correct
+d. A write only property will only have get accessor
+Feedback
+The correct answer is: A property can be either read only or write only
+Question 7
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Which Conversion function of ‘Convert.TOInt32()’ and ‘Int32.Parse()’ is efficient? 1) Int32.Parse() is only used for strings and throws argument exception for null string 2) Convert.Int32() used for datatypes and returns directly ‘0’ for null string
+Select one:
+a. Both 1,2
+b. 2 Correct
+c. 1
+d. None of the mentioned
+Feedback
+The correct answer is: 2
+Question 8
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Consider a class maths and we had a property called as sum.b is a reference to a maths object and we want the code below to work.Which is the correct solution to ensure this functionality? b.maths = 10; Console.WriteLine(b.maths);
+Select one:
+a. Declare maths property with get and set accessors Correct
+b. Declare maths property with only get, set and normal accessors
+c. Declare maths property with only get accessors
+d. Declare maths property with only set accessors
+Feedback
+The correct answer is: Declare maths property with get and set accessors
+Question 9
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+What is the process of defining a method in terms of itself, that is a method that calls itself?
+Select one:
+a. Abstraction
+b. Encapsulation
+c. Recursion Correct
+d. Polymorphism
+Feedback
+The correct answer is: Recursion
+Question 10
+Incorrect
+Mark -0.25 out of 1.00
+ Not flaggedFlag question
+Question text
+What will be the output of following snippet of code?
+ 
+ class number
+ {
+     private int num1;
+     private int num2;
+     public int anumber
+     {    get
+         {             return num1;         }
+         set
+         {             num1 = value;         }
+     }
+     public int anumber1
+     {
+         get
+         {       return num2;         }
+         set
+         {     num2 = value;         }
+     }
+ }
+ class Program
+ {
+     public static void Main(string[] args)
+     {
+         number p = new number();
+         p.anumber = 20;
+         number k = new number();
+         k.anumber1 = 40;
+         int m = p.anumber;
+         int t = k.anumber1;
+         int r = p.anumber + k.anumber1;
+         Console.WriteLine("number = " +m);
+         Console.WriteLine("number = " +t);
+         Console.WriteLine("sum = " +r);
+         Console.ReadLine();
+     }
+   }
+Select one:
+a. 0
+b. 60
+c. None of these
+d. Compile time error Incorrect
+Feedback
+The correct answer is: 60
+Question 11
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+What will be the output of the following snippet of code?
+ 
+ class number
+ {
+     int length = 50;
+     public int number1
+     {
+         get
+         {
+             return length;
+         }
+         set
+         {
+             length = value;
+         }
+     }
+ }
+ class Program
+ {
+     public static void Main(string[] args)
+     {
+         number p = new number();
+         p.number1 = p.number1 + 40;
+         int k = p.number1 * 3 / 9;
+         Console.WriteLine(k);
+         Console.ReadLine();
+     }
+ }
+Select one:
+a. 0
+b. Compile time error
+c. 180
+d. 30
+Feedback
+The correct answer is: 30
+Question 12
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+What will be the output of the following snippet of code?
+ 
+class number
+  {
+      int length = 60;
+      public int number1
+      {
+          get
+          {
+              return length;
+          }
+      }
+  }
+  class Program
+  {
+      public static void Main(string[] args)
+      {
+          number p = new number();
+          int l;
+          l = p.number1 + 40;
+          int k = l * 3 / 4;
+          Console.WriteLine(k);
+          Console.ReadLine();
+      }
+  }
+Select one:
+a. 0
+b. 80
+c. 75
+d. 30
+Feedback
+The correct answer is: 75
+Question 13
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+ What could be the output of the following set of code?
+ class Program
+ {
+     static void Main(string[] args)
+     {
+         Console.WriteLine( vol(10));
+         Console.WriteLine( vol(2.5f,  5));
+         Console.WriteLine( vol( 5l,  4,  5));
+         Console.ReadLine();
+     }
+     static int vol(int x)
+     {
+         return(x * x * x);
+     }
+     static float vol(float r,  int h)
+     {
+         return(3.14f * r * r * h);
+     }
+     static long vol(long l, int b, int h)
+     {
+         return(l * b * h);
+     }
+ }
+Select one:
+a. 0 0 100
+b. 1000 98.125 100
+c. compile time error
+d. 1000 0 100
+Feedback
+The correct answer is: 1000 98.125 100
+Question 14
+Not answered
+Marked out of 1.00
+ Not flaggedFlag question
+Question text
+What will be the output for the set of code?
+ 
+ static void Main(string[] args)
+ {
+     int i = 5;
+     int j  = 6;
+     add(ref i);
+     add(6);
+     Console.WriteLine(i);
+     Console.ReadLine();
+ }
+ static void add(ref int x)
+ {
+     x = x * x;
+ }
+ static void add(int x)
+ {
+     Console.WriteLine(x * x * x);
+ }
+Select one:
+a. 216 0
+b. Compile time error
+c. 216 25
+d. 25 0
+Feedback
+The correct answer is: 216 25

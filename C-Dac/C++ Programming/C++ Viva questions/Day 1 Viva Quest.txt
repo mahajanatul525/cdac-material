@@ -1,0 +1,17 @@
+1) difference bet'n cin,cout and scanf,printf ?
+2) which operators are used with cin and cout respectively ?
+3) explain inline functions. how are they different from macros?
+4) what are default arguments?
+5) what is function overloading ? name Mangling
+6) what does header file contain ?
+7) what flexibility C++ gives in terms of variable decl or def.
+8) if anything is declared and not defined what will happen ?
+9) what is the rule for const member ?
+10) use of scope resolution operator
+11) what is DMA ? need of DMA.
+12) in case of DMA memory is allocated in which area ?
+13) difference new and malloc
+14) difference delete and free
+15) Memory Leak - solution
+16) Dangling Pointer - solution
+

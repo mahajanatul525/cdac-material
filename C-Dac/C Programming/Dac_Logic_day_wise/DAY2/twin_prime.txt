@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int  a,i,flag=0,s,e;
+printf("Enter range: ");
+scanf("%d %d",&s,&e);
+printf("Twine prime no are: ");
+	for(a=s;a+2<=e;a++)
+	for(i=2;i<=a+2;i++)
+	{   flag=0;
+		if(a%i==0 && (a+2)%i==0)
+		{
+			flag=1;
+			break;
+
+		}
+
+		if(flag==0)
+		printf("%d %d\t",a,a+2);
+		
+	}
+	
+	
+			getche();
+
+
+}

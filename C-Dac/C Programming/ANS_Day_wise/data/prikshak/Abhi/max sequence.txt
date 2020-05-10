@@ -1,0 +1,53 @@
+Write a complete program to find the length of maximum subsequence of '1' in the given string as '0' & '1' 
+if there is no subsequence of '1' print '-1'
+
+
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+int main()
+
+{
+        int n=0, len ,t;
+        int currcount = 0;
+        int maxcount=0;
+
+        char *ch=(char*)malloc(sizeof(char)*100);
+       
+        scanf("%s",ch);
+        
+        len=strlen(ch);
+
+        while(n<len)
+        {
+                currcount=0;
+                if
+                (ch[n]=='1')
+
+                {
+                        currcount++;
+                        t=n+1;
+                        while(ch[t]=='1')
+                        {
+                                currcount++;
+                                t++;
+                        }
+                if
+                (currcount > maxcount)
+                maxcount=currcount;
+
+                }
+                n++;
+        }
+        if(maxcount!=0)
+        
+        printf("%d \n",maxcount);
+     
+    else
+        printf("-1");  
+        free(ch);
+        return 0;
+}

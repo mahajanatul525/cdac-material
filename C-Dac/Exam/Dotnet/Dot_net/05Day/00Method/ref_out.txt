@@ -1,0 +1,43 @@
+Use ref
+The ref parameter modifier causes C# to create a call-by-reference, rather than a call-byvalue.
+The ref modifier is specified when the method is declared and when it is called. 
+
+
+
+
+Here is one important point to understand about ref: An argument passed by ref must
+be assigned a value prior to the call. The reason is that the method that receives such an
+argument assumes that the parameter refers to a valid value. Thus, using ref, you cannot
+use a method to give an argument an initial value.
+
+
+Let’s begin with a simple example
+
+
+Using ref, it is now possible to write a method that exchanges the values of its two
+value-type arguments. For example, here is a program that contains a method called
+Swap( ) that exchanges the values of the two integer arguments with which it is called:
+// Swap two values.
+using System;
+class ValueSwap {
+// This method now changes its arguments.
+public void Swap(ref int a, ref int b) {
+int t;
+
+t = a;
+a = b;
+b = t;
+}
+}
+class ValueSwapDemo {
+static void Main() {
+ValueSwap ob = new ValueSwap();
+int x = 10, y = 20;
+Console.WriteLine("x and y before call: " + x + " " + y);
+ob.Swap(ref x, ref y);
+Console.WriteLine("x and y after call: " + x + " " + y);
+}
+}
+The output from this program is shown here:
+x and y before call: 10 20
+x and y after call: 20 10

@@ -1,0 +1,3 @@
+Hibernate template
+@Autowired
+DAO

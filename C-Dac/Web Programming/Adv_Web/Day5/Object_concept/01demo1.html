@@ -1,0 +1,13 @@
+<script>
+'use strict'
+function funclass(nm,ag)
+{
+this.name=nm;
+this.age=ag
+alert(this)
+return this;
+}
+var x=funclass("mona",30);
+alert(x.constructor)
+alert(x.name)
+</script>

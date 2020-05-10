@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication13
+{
+    class car : IComparable
+    {
+        public String Name { get; set; }
+        public int Price { get; set; }
+
+      
+         public int CompareTo(object ob)
+        {
+            car c = (car)ob;
+            if (ob != null)
+            {
+                return this.Price.CompareTo(c.Price);
+            }
+            else 
+                throw new Exception("error");
+
+        }
+    }
+    class entry
+    {
+        public static void Main()
+        {
+            car c1 = new car(){Name="maruti",Price=100000};
+            car c2 = new car { Name = "XUV", Price = 500000 };
+            car c3 = new car { Name = "ford", Price = 1000000 };
+            car c4 = new car { Name = "RENO", Price = 2000000 };
+
+            car[] c = new car[4];
+            c[0] = c1;
+            c[1] = c2;
+            c[2] = c3;
+            c[3] = c4;
+
+            Array.Sort(c);
+            foreach (car i in c)
+            {
+                Console.WriteLine("CAR NAME:= {0}  PRICE:= {1}", i.Name, i.Price);
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,47 @@
+/*Q12 PAN DIGIT
+I/P Specification
+first digit is limit and string in input. Given string in find pan digit or not…means limit in check the natural number in any seuqnce.
+
+O/P Spcification
+
+if string pan digit then print TRUE/FALSE.
+
+Sample I/P
+
+5
+12345
+23541
+01234
+54621
+12346
+
+O/P
+TRUE
+TRUE
+FALSE
+FALSE
+FALSE*/
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{int i,l,flag=1;
+  char s[10];
+printf("\nEnter limit:");
+  scanf("%d",&l);
+  printf("enter string:");
+  scanf("%s",s);
+  
+  if(strlen(s)==l)
+  for(i=0;s[i]!='\0';i++)
+	  if(s[i]>=1&s[i]<=l)
+		{  printf("%d %c",i,s[i]);
+		continue;}
+	  else {flag=0;
+	  break;}
+	  if(flag==0)
+		  printf("\nFalse");
+	  else printf("\nTrue");
+	  getche();
+}
+

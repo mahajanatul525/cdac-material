@@ -1,0 +1,9 @@
+SortedList represents a collection of key/value pairs that are sorted by the keys and are accessible by key 
+
+. The capacity of a SortedList object is the number of elements the SortedList can hold. 
+
+
+As elements are added to a SortedList, the capacity is automatically increased as required through reallocation.
+
+
+SortedList<TKey, TValue> uses less memory than SortedDictionary<TKey, TValue>.

@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+
+int rev(int );
+void main()
+{
+	int a;
+         printf("ENter  a no");
+		scanf("%d",&a);
+		printf("%d",rev(a));
+	
+	getch();
+	
+}
+
+int rev(int a)
+{  
+	int r,rev1=0;
+	while(a!=0)
+	{
+
+	r=a%10;
+	rev1=rev1*10+r;
+	a=a/10;
+	}
+	return rev1;	
+}

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="e_tourModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="e_tourModelStoreContainer">
+    <EntitySet Name="Bill" EntityType="e_tourModel.Store.Bill" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cost" EntityType="e_tourModel.Store.Cost" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Dates" EntityType="e_tourModel.Store.Dates" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Itenary" EntityType="e_tourModel.Store.Itenary" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Registration" EntityType="e_tourModel.Store.Registration" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tour" EntityType="e_tourModel.Store.Tour" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Bill_ToTable" Association="e_tourModel.Store.FK_Bill_ToTable">
+      <End Role="Registration" EntitySet="Registration" />
+      <End Role="Bill" EntitySet="Bill" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Bill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmailID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Contact" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SubCatID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="CatID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="StartDate" Type="date" Nullable="false" />
+    <Property Name="EndDate" Type="date" Nullable="false" />
+    <Property Name="NDays" Type="int" Nullable="false" />
+    <Property Name="TAdultCost" Type="float" Nullable="false" />
+    <Property Name="TChildCost" Type="float" />
+    <Property Name="CatName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FCost" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cost">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CatID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SubCatID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="AdultCost" Type="float" Nullable="false" />
+    <Property Name="ChildCost" Type="float" />
+    <Property Name="CWB" Type="float" />
+    <Property Name="CatName" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Dates">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="StartDate" Type="date" Nullable="false" />
+    <Property Name="EndDate" Type="date" Nullable="false" />
+    <Property Name="CatID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubCatID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="CatName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="NDays" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Itenary">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubCatID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Itn" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CatName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="CatID" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Registration">
+    <Key>
+      <PropertyRef Name="EmailID" />
+    </Key>
+    <Property Name="EmailID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Contact" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tour">
+    <Key>
+      <PropertyRef Name="CatID" />
+      <PropertyRef Name="SubCatID" />
+      <PropertyRef Name="CatName" />
+    </Key>
+    <Property Name="CatID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SubCatID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="CatName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ImgPath" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="YN" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Bill_ToTable">
+    <End Role="Registration" Type="e_tourModel.Store.Registration" Multiplicity="1" />
+    <End Role="Bill" Type="e_tourModel.Store.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registration">
+        <PropertyRef Name="EmailID" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="EmailID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<conio.h>
+ void main()
+ {
+    float p,rate,time,si;
+    clrscr();
+    printf("Enter principal:\n");
+    scanf("%f",&p);
+    printf("enter rate:\n");
+    scanf("%f",&rate);
+    printf("enter time:\n");
+    scanf("%f",&time);
+    si=(p*rate*time)/100;
+    printf("simple intrest is:%f\n",si);
+ getch();
+}

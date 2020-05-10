@@ -1,0 +1,19 @@
+1) pointer to constant
+2) constant pointer
+3) constant pointer to a constant
+4) how to access external variable before its definition ?
+5) what is reference ?How to create ? 
+6) reference vs pointer
+7) in which case u will use reference and in which pointer?
+8) can we have a function call on left side of an expression ?
+9) why it is not recommended to return reference or pointer to auto variable?
+10) can we have array of references ?
+11) what is the use of const reference ?
+12) can a const reference refer to const member ?
+	can a non-const reference refer to const member ?
+13) what is the difference bet'n structure of C and C++ ?
+14) what is linkage ?
+linkage refers only to elements that have addresses at link or load time. 
+15) internal linkage and external linkage .
+14) what do u mean by alternate linkage ?
+15) what do u mean by typesafe linkage ?

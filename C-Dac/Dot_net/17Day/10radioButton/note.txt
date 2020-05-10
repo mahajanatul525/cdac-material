@@ -1,0 +1,20 @@
+Radio Button control is used, when you want the user to select only one option from the available choices. For example, the gender of a person. A person can be Male or Female. He cannot be both. So, if the user has first selected Male, and if tries to select Female, the initial Male selection he made should automatically get de-selected. Another example, would be when you want the user to select his or her favourite colour.
+
+In short, if you want to provide the user with mutually exclusive options, then choose a Radio Button Control.
+
+
+
+Important Properties of the Radio Button Control
+
+Checked - This is a boolean property, that is used to check if the button is checked or not.
+
+Text - This is string property used to get or set the text associated with the radio button control
+
+TextAlign - right or left. On which side of the radio button the text should appear
+
+AutoPostBack - Set this property to true, if you want the webform to be posted immediately when the checked status of the radio button changes.
+
+Group Name - By default, the individual radio button selections, are not mutually exclusive. If you have a group of radio buttons, and if you want the selections among the group to be mutually exclusive, then use the same group name for all the radio button controls.
+
+Events:
+CheckedChanged - This event is fired when the checked status of the radio button control is changed.

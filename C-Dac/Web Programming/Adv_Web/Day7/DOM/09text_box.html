@@ -1,0 +1,21 @@
+<html><head><script>
+function readtext()
+{var a=document.getElementById("nm")
+var b=document.getElementById("cpy")
+//alert(a);
+//alert(a.value)
+//alert(a.value.length);
+var pp=document.getElementById("pp");
+pp.innerHTML+=a.value;
+
+//alert(document.getElementById("pp").childNodes[0].nodeValue);
+}
+</script></head><body>
+<p id="pp">hello</p>
+<form name="frm">
+<input type="text" id="nm"/>
+<input type="button"  value="read" onclick="readtext()">
+<input type="text" id="cpy"/>
+</form>
+</body>
+</html>

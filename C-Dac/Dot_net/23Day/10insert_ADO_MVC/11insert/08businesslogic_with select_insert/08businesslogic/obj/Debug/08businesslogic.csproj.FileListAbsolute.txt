@@ -1,0 +1,90 @@
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\08businesslogic.dll
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\08businesslogic.pdb
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\EntityFramework.dll
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\Microsoft.Web.Infrastructure.dll
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\System.Web.Helpers.dll
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\System.Web.Mvc.dll
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\System.Web.Providers.dll
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\System.Web.Razor.dll
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\System.Web.WebPages.Deployment.dll
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\System.Web.WebPages.dll
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\System.Web.WebPages.Razor.dll
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\EntityFramework.xml
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\System.Web.Helpers.xml
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\System.Web.Mvc.xml
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\System.Web.Razor.xml
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\System.Web.WebPages.xml
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\System.Web.WebPages.Deployment.xml
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\System.Web.WebPages.Razor.xml
+D:\practice_dotnet\web\08businesslogic\08businesslogic\obj\Debug\08businesslogic.csprojResolveAssemblyReference.cache
+D:\practice_dotnet\web\08businesslogic\08businesslogic\obj\Debug\08businesslogic.dll
+D:\practice_dotnet\web\08businesslogic\08businesslogic\obj\Debug\08businesslogic.pdb
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\Businesslayer.dll
+D:\practice_dotnet\web\08businesslogic\08businesslogic\bin\Businesslayer.pdb
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\08businesslogic.dll
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\08businesslogic.pdb
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\Businesslayer.dll
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\EntityFramework.dll
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\Microsoft.Web.Infrastructure.dll
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\System.Web.Helpers.dll
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\System.Web.Mvc.dll
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\System.Web.Providers.dll
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\System.Web.Razor.dll
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\System.Web.WebPages.Deployment.dll
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\System.Web.WebPages.dll
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\System.Web.WebPages.Razor.dll
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\Businesslayer.pdb
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\EntityFramework.xml
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\System.Web.Helpers.xml
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\System.Web.Mvc.xml
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\System.Web.Razor.xml
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\System.Web.WebPages.xml
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\System.Web.WebPages.Deployment.xml
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\bin\System.Web.WebPages.Razor.xml
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\obj\Debug\08businesslogic.csprojResolveAssemblyReference.cache
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\obj\Debug\08businesslogic.dll
+D:\practice_dotnet\web\08businesslogic_with select\08businesslogic\obj\Debug\08businesslogic.pdb
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\obj\Debug\08businesslogic.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\obj\Debug\08businesslogic.dll
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\08businesslogic.dll
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\08businesslogic.pdb
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\EntityFramework.dll
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\Microsoft.Web.Infrastructure.dll
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.Helpers.dll
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.Mvc.dll
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.Providers.dll
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.Razor.dll
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.WebPages.Deployment.dll
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.WebPages.dll
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.WebPages.Razor.dll
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\Businesslayer.pdb
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\EntityFramework.xml
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.Helpers.xml
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.Mvc.xml
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.Razor.xml
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.WebPages.xml
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.WebPages.Deployment.xml
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.WebPages.Razor.xml
+D:\dot_net\Day_wise\mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\obj\Debug\08businesslogic.pdb
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\08businesslogic.dll
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\08businesslogic.pdb
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\EntityFramework.dll
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\Microsoft.Web.Infrastructure.dll
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.Helpers.dll
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.Mvc.dll
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.Providers.dll
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.Razor.dll
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.WebPages.Deployment.dll
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.WebPages.dll
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.WebPages.Razor.dll
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\Businesslayer.pdb
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\EntityFramework.xml
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.Helpers.xml
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.Mvc.xml
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.Razor.xml
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.WebPages.xml
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.WebPages.Deployment.xml
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\bin\System.Web.WebPages.Razor.xml
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\obj\Debug\08businesslogic.csprojResolveAssemblyReference.cache
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\obj\Debug\08businesslogic.dll
+D:\dot_net\Day_wise\day15mvc\examples\10insert\11insert\08businesslogic_with select_insert\08businesslogic\obj\Debug\08businesslogic.pdb

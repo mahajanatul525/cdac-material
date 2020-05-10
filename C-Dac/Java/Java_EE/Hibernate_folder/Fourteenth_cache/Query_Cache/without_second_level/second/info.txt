@@ -1,0 +1,8 @@
+ Session session2=factory.openSession();  
+			    Product emp3=(Product)session2.load(Product.class,1);  
+			    System.out.println(emp3);
+			    session2.close();
+			    Session session3=factory.openSession();
+			    Query q2=session3.createQuery("from Product k where k.id=1");
+
+data is not available even in first level because new session is created

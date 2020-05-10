@@ -1,0 +1,18 @@
+
+
+The Common Language Runtime (CLR) is a an Execution Environment . Common Language Runtime (CLR)'s main tasks are
+ to convert the .NET Managed Code to native code , manage running code like a Virtual Machine and also 
+controls the interaction with the Operating System.
+
+Common Language Runtime (CLR) manages 
+Thread executions, 
+Memory  Management that is allocation of Objects and Buffers , 
+Garbage Collection (GC) - Clean up the unused Objects and buffers ,
+Exception Handling,
+
+ Common Type System (CTS) that is all .NET language that conforms to the Common Language Specification (CLS) have the same primitive Data Types, 
+
+Code safety verifications - code can be verified to ensure type safety,
+ Language integration that is Common Language Runtime (CLR) follow a set of specification called Common Language Specification (CLS) , this will ensure the interoperability between languages, 
+
+Integrated security and other system services.

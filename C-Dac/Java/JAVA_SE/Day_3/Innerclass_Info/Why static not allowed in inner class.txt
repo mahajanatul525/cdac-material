@@ -1,0 +1,18 @@
+The idea behind inner classes is to operate in the context of the enclosing instance. Somehow, allowing static variables and methods contradicts this motivation.
+
+Because those inner classes are "instance" inner classes. That is, they are like an instance attribute of the enclosing object.
+
+Since they're "instance" classes, it doesn't make any sense to allow static features, for static in meant to work without an instance in first place.
+
+By design they are associated with an instance of the outer class and are not supposed to be used in a different way. If you want static members, you can always make the nested class static. 
+
+Static block is executed during class initialization, and you cannot initialize a non-static inner class without having an instance of the enclosing class, that's the reason.
+
+Inner classes are associated with the instance of the enclosing class.. They are like other instance attributes of the enclosing class.. Now, it doesn't make sense to embed a static field in a non-static context.. However, if you declare them as Compile Time Constants they would be allowed.
+
+On the other hand, had your inner class been static, that is actually a nested class, then you can declare your field static, as they will still be associated with the class, so you can access them even before enclosing class in instantiated..
+
+Because static declarations is associated with Class if you declare it inside inner class it will get associated with instance rather than class.
+
+Non static inner classes are members of Object. And for members initialization only happens when instance of object is created. If static variables were allowed then initialization would have happened before creation of instance.
+

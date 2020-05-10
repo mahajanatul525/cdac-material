@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	long int i,no,n,sum=0,r,j,f;
+	printf("\nEnter no = ");
+	scanf("%d",&no);
+	n=no;
+	while(n!=0)
+	{
+		r=n%10;
+		for(f=1,j=2;j<=r;j++)
+		{
+			f=f*j;
+		}
+		sum=sum+f;
+		n=n/10;
+	}
+
+	if(i==sum)
+		printf("Special number");
+	else
+		printf("Not a special number");
+	getche();
+
+}

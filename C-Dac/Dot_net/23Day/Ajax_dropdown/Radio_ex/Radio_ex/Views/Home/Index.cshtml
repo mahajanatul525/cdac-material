@@ -1,0 +1,70 @@
+﻿@model Radio_ex.Models.company
+@using System.Collections
+@{
+    ViewBag.Title = "Index";
+}
+@{
+AjaxOptions op=new AjaxOptions {
+    Url = Url.Action("disp"),
+        LoadingElementId = "loading",
+        LoadingElementDuration = 1000,
+        OnSuccess = "processData"
+    };
+}
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script type="text/javascript">
+    function processData(data) {
+        var target = $("#tableBody");
+        target.empty();
+        alert(data);
+        alert(data.length)
+        for (var i = 0; i < data.length; i++) {
+            var person = data[i];
+            target.append("<tr><td>" + person.Id + "</td><td>"
+                + person.Name  + "</td><td>" + person.Age
+                + "</td></tr>");
+        }
+    }
+    function go(){alert(err)}
+     </script>
+<script>
+    $(document).ready(function() {
+        $("#dd").change(function () {
+            v = $("#dd").val();
+
+            alert("hi")
+            alert(v)
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("disp","Home")",
+                data: { k: v },
+                success: processData,
+                error:go}    )
+
+    })
+    
+});
+
+
+    </script>
+
+
+<div id="loading">loading............</div>
+
+<Table id="tableBody">
+
+    </Table>
+<h2>Index</h2>
+
+    @Html.DropDownListFor(m=>m.GetEmp,new SelectList(Model.GetEmp, "Id", "Name"),new{ id="dd"})
+@* @using (Ajax.BeginForm(op))
+     {
+         @Html.DropDownList("selectedId", "Select Department")
+
+
+
+         <button type="submit">ddd</button>
+    }*@
+
+ 

@@ -1,0 +1,10 @@
+By default, if you turn on CustomErrors, the behavior of the HandleErrorAttribute is to redirect you to the default Error page.
+Setting up the Custom Errors page
+Setup of the Custom Errors page is easy. We simply turn on the CustomErrors in the web.config.
+
+custom-errors-on
+
+ <system.web>
+    <customErrors mode="On"></customErrors>
+
+    <compilation debug="true" targetFramework="4.5" />

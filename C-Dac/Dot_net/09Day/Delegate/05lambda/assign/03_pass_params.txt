@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication14
+{
+    delegate int addition(int x, int y);
+    class myclass
+    {
+        public int add(int p, int q)
+        {
+            return p + q;
+        }
+        public int mul(int p, int q)
+        {
+            return p * q;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            myclass m = new myclass();
+
+
+            addition a =(p,q)=>{ return (p + q);  };
+                    a  += (n,l) => { return (n * l); };
+            Console.WriteLine(a(5, 9));
+            #region
+            //anonymous
+           // addition a = delegate(int p, int q) { int r; r = p + q; return r; };
+            //a += delegate(int p, int q) { int r; r = p * q; return r; };
+           // Console.WriteLine(a.GetInvocationList().Length);
+            //int invo = a(3, 5);
+            //Console.WriteLine(invo);
+            #endregion
+            #region
+            //deligate
+            // addition a = m.add;
+            //addition b = m.mul;
+            //addition tot = a + b;
+            // int r = tot(3, 5);
+            //Console.WriteLine(r);
+            #endregion
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,111 @@
+﻿@model Hobman.booking_details
+
+@{
+    ViewBag.Title = "Index1";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    
+<title></title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Classic Hotel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="~/Content/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="~/Content/css/style1.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="~/Content/css/jquery-ui.css" />
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<!-- start-smoth-scrolling -->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+	<!-- start-smoth-scrolling -->
+</head>
+<body>
+
+<div class="booking">
+	<div class="container">
+		<h2 class="tittle-one">BOOKING</h2>
+			<div class="reservation-form">
+                <div class="col-md-4 reservation-right"></div>
+				<div class="col-md-4 reservation-right">
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+       @Html.ValidationSummary(true)
+           	
+						<h4>Booking details</h4>
+						 <div class="editor-label">
+                @Html.LabelFor(u=>u.hotel_id)
+                </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u=>u.hotel_id)
+                  @Html.ValidationMessageFor(u=>u.hotel_id)
+               
+                </div>
+						<div class="editor-label">
+                @Html.LabelFor(u=>u.customer_id)
+                </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u=>u.customer_id)
+                @Html.ValidationMessageFor(u=>u.customer_id)
+
+                </div>
+						<div class="editor-label">
+                @Html.LabelFor(u=>u.check_in_date)
+                </div>
+            <div class="editor-field">
+                @{
+                   Html.RenderPartial("_Leftcalander");   
+                 }
+            @Html.TextBoxFor(u=>u.check_in_date, new { @id = "txtPlace",@name="txtPlace" })
+                @Html.ValidationMessageFor(u=>u.check_in_date)
+                </div>
+                            <div class="editor-label">
+                               @Html.LabelFor(u=>u.check_out_date)
+                </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u=>u.check_out_date)
+                @Html.ValidationMessageFor(u=>u.check_out_date)
+                </div>
+                            <div class="editor-label">
+                    @Html.LabelFor(u=>u.no_of_rooms)
+                </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u=>u.no_of_rooms)
+                @Html.ValidationMessageFor(u=>u.no_of_rooms)
+                </div>
+    <input type="submit" value="Book" name="submit" />
+}
+                    
+					
+				</div>
+				
+			</div>
+	</div>
+</div>
+
+</body>
+</html>

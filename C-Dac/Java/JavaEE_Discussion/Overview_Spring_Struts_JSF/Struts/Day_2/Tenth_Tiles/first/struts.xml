@@ -1,0 +1,34 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  	   <package name="mypack"  namespace="/" extends="struts-default">
+        <result-types>
+<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+</result-types>
+
+        <action name="login">
+            <result type="tiles">login</result>
+        </action>
+        <action name="register">
+            <result type="tiles">register</result>
+        </action>
+        <action name="shopping">
+            <result type="tiles">shopping</result>
+        </action>
+        <action name="bill">
+            <result type="tiles">bill</result>
+        </action>
+        <action name="home">
+            <result>/index.jsp</result>
+        </action>
+    </package>
+</struts>
+
+
+
+
+
+
+

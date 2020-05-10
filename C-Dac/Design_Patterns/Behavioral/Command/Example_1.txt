@@ -1,0 +1,59 @@
+		Command       // command interface
+			execute()
+
+LunchCommand implements Command
+	execute
+		lunch.makeLunch()
+
+
+DinnerCommand implements Command
+	execute
+		dinner.makeDinner()
+
+public class Lunch 
+
+	public void makeLunch(){}
+
+public class Dinner 
+
+	public void makeDinner(){}
+
+
+MealInvoker {
+
+	Command command;
+
+	public MealInvoker(Command command) {
+		this.command = command;
+	}
+
+	public void invoke() {
+		command.execute();
+	}
+
+}
+
+
+client code
+
+
+Lunch lunch = new Lunch(); // receiver
+		Command lunchCommand = new LunchCommand(lunch); // concrete command
+
+		Dinner dinner = new Dinner(); // receiver
+		Command dinnerCommand = new DinnerCommand(dinner); // concrete command
+
+		MealInvoker mealInvoker = new MealInvoker(lunchCommand); // invoker
+		mealInvoker.invoke();
+
+		mealInvoker = new MealInvoker(dinnerCommand); // invoker
+		mealInvoker.invoke();
+
+
+
+
+
+
+
+	
+

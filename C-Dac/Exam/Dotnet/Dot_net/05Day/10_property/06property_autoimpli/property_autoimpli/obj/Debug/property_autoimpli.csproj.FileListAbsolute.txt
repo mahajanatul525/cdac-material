@@ -1,0 +1,15 @@
+D:\Ketki_Data\Day_wise\day1\10_property\property_autoimpli\property_autoimpli\bin\Debug\property_autoimpli.exe
+D:\Ketki_Data\Day_wise\day1\10_property\property_autoimpli\property_autoimpli\bin\Debug\property_autoimpli.pdb
+D:\Ketki_Data\Day_wise\day1\10_property\property_autoimpli\property_autoimpli\obj\Debug\ResolveAssemblyReference.cache
+D:\Ketki_Data\Day_wise\day1\10_property\property_autoimpli\property_autoimpli\obj\Debug\property_autoimpli.exe
+D:\Ketki_Data\Day_wise\day1\10_property\property_autoimpli\property_autoimpli\obj\Debug\property_autoimpli.pdb
+D:\Ketki_Data\dotnet\Day_wise\day1\10_property\06property_autoimpli\property_autoimpli\obj\Debug\property_autoimpli.exe
+D:\Ketki_Data\dotnet\Day_wise\day1\10_property\06property_autoimpli\property_autoimpli\obj\Debug\property_autoimpli.pdb
+\\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\06property_autoimpli\property_autoimpli\bin\Debug\property_autoimpli.exe.config
+\\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\06property_autoimpli\property_autoimpli\obj\Debug\property_autoimpli.exe
+\\param\Practice_K\dot_net\dotnet_notes\Day_wise\day1\10_property\06property_autoimpli\property_autoimpli\obj\Debug\property_autoimpli.pdb
+C:\Users\practice\Desktop\Dot_net\day1\10_property\06property_autoimpli\property_autoimpli\bin\Debug\property_autoimpli.exe.config
+C:\Users\practice\Desktop\Dot_net\day1\10_property\06property_autoimpli\property_autoimpli\obj\Debug\property_autoimpli.exe
+C:\Users\practice\Desktop\Dot_net\day1\10_property\06property_autoimpli\property_autoimpli\obj\Debug\property_autoimpli.pdb
+C:\Users\practice\Desktop\Dot_net\day1\10_property\06property_autoimpli\property_autoimpli\bin\Debug\property_autoimpli.exe
+C:\Users\practice\Desktop\Dot_net\day1\10_property\06property_autoimpli\property_autoimpli\bin\Debug\property_autoimpli.pdb

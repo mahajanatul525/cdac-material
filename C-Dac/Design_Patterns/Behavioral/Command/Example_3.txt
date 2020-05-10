@@ -1,0 +1,50 @@
+		Runnable     // command interface
+			run()
+
+Producer implements Runnable
+	run
+		monitor.set(i++)
+
+
+Consumer implements Runnable
+	run
+		monitor.get()
+
+class Monitor
+{
+	synchronized void set(int i){}
+
+	synchronized int get(){}
+}
+
+
+
+
+
+client code
+
+
+Monitor monitor=new Monitor(); // receiver
+		Runnable prod = new Producer(monitor); // concrete command
+
+		Runnable cust = new Customer(monitor); // concrete command 
+
+		ExecutorService exec=Executors.newFixedThreadPool(2); // invoker
+		exec.execute(prod);
+		exec.execute(cust);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+

@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+   int c,y,sum=0;  
+
+   for (c =0 ; c < 10; c++)
+   {
+      scanf("%d",&y);
+      sum = sum + y;
+   }
+
+   printf("%d",sum);
+
+   return 0;
+}

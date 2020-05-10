@@ -1,0 +1,10 @@
+The IsBackground Property
+As mentioned earlier, the .NET Framework defines two types of threads: foreground and
+background. The only difference between the two is that a process won’t end until all of its
+foreground threads have ended, but background threads are terminated automatically after
+all foreground threads have stopped. By default, a thread is created as a foreground thread.
+It can be changed to a background thread by using the IsBackground property defined by
+Thread, as shown here:
+public bool IsBackground { get; set; }
+To set a thread to background, simply assign IsBackground a true value. A value of false
+indicates a foreground thread.
