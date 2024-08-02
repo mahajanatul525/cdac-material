@@ -4,8 +4,25 @@ from datetime import datetime
 
 def convert_xlsb_to_csv(xlsb_file, csv_file):
     try:
+        # Read the xlsb file
         df = pd.read_excel(xlsb_file, engine='pyxlsb')
+        
+        # Get the total number of rows
+        total_rows = len(df)
+        
+        # Initialize an empty list to store rows
+        rows = []
+        
+        # Process each row
+        for i, row in df.iterrows():
+            rows.append(row)
+            # Print progress for rows
+            print(f'Converting {os.path.basename(xlsb_file)}: Row {i+1}/{total_rows}', end='\r')
+        
+        # Write to CSV
         df.to_csv(csv_file, index=False)
+        
+        print(f'\nCompleted converting {os.path.basename(xlsb_file)}')
         return True, None
     except Exception as e:
         return False, str(e)
@@ -25,7 +42,7 @@ def process_directory(directory):
             'error': error
         })
         
-        # Progress indicator
+        # Progress indicator for file processing
         print(f'Processing file {i}/{total_files}: {filename} - {"Success" if success else "Failed"}')
     
     return report
